@@ -1,0 +1,6 @@
+# python
+*.pyc
+# C/CPP
+a.out
+# Java
+*.class
