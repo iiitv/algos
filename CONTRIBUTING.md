@@ -1,8 +1,9 @@
-## How to contribute ?
+## How to contribute an implementation (code) ?
 
 * Have a look at open issues. They contain the list of algorithms we plan to be implemented. Pick an unassigned issue.
 * You can also create a new issue for an algorithm that is not in the list.
 * Make sure you are assigned for the issue. 
+* When assigned, also mention the languages you want to code in. So suppose if you don't want to code in a particular language, another person can be assigned to do so. 
 * Code the algorithm following the styleguide defined below.
 * Send a PR.
 
