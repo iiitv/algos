@@ -64,10 +64,9 @@ void quicksort(int ar_size, int *ar) {
     */
 }
 
-int main(){
+int main() {
 	int ar_size = 4, i;
-	int a[4];
-	a[0] = 2; a[1] = 3; a[2] = 0; a[3] = 4;
+	int a[4] = {2, 3, 0, 4};
 	quicksort(ar_size, a);
 
 	for (i=0; i<ar_size; i++){
@@ -75,4 +74,20 @@ int main(){
 	}
 	return 0;
 }
+```
+
+#### Python
+```python
+def quicksort(arr):
+    #
+    # Your implementation here...
+    #
+
+def main():
+    arr = [2, 3, 0, 4]
+    sorted_arr = quicksort(arr)
+    print(sorted_arr)
+    
+if __name__ == '__main__':
+    main()
 ```
