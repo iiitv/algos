@@ -4,6 +4,11 @@ Community (college) maintained list of algorithm implementations and codes.
 **For now, we are only accepting contributions from IIITV college students**.
 
 
+## Resources
+
+* [Popular Data Structures and Algorithms - Codechef](https://discuss.codechef.com/questions/48877/data-structures-and-algorithms)
+
+
 ## How to contribute ?
 
 * Pick an algorithm and create folder for it.
