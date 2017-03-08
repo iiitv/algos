@@ -18,7 +18,7 @@ def main():
     if index is None:
         print('Element not found in array')
     else:
-        print('Element found at index %s' %index)
+        print('Element found at index %s' % index)
 
 if __name__ == '__main__':
     main()
