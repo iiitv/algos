@@ -1,4 +1,4 @@
-## How to contribute an implementation (code) ?
+## How to contribute an implementation (code)?
 
 * Have a look at open issues. They contain the list of algorithms we plan to be implemented. Pick an unassigned issue.
 * You can also create a new issue for an algorithm that is not in the list.
@@ -14,8 +14,13 @@
 ## Suggesting an algorithm
 
 * First make sure you are not suggesting a duplicate.
-* If not, proceed and create the issue.
-* Please include at least one external link for the algorithm in the issue's body which explains the algorithm/problem in detail.
+* If not, proceed and create the issue. Make sure that you specify only one language in an issue. Create multiple issues for different languages.
+* Title of issue should be of the following format -
+    ```
+        Algorithm Name [Language]
+    ```
+    Also add corresponding language label (`lang-*`) to the issue.
+* Please include at least one external link for the algorithm in the issue's body for each issue. The link should explain the algorithm/problem in detail.
 
 
 <a name="cs"></a>
@@ -53,9 +58,10 @@
 #### C
 
 ```c
-void quicksort(int ar_size, int *  ar) {
-  // stuff
-  // stuff
+void quicksort(int ar_size, int *ar) {
+    /*
+        Your implementation here...
+    */
 }
 
 int main(){
@@ -70,4 +76,3 @@ int main(){
 	return 0;
 }
 ```
-
