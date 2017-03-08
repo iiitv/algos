@@ -31,6 +31,14 @@
 * No profanity.
 
 
+<a name="points"></a>
+
+## Standalone points
+
+* In some cases, C and C++ implementation will be similar. In that case, only the C implementation must be done.
+
+
+
 ## Samples
 
 #### C
