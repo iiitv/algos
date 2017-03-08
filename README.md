@@ -11,8 +11,10 @@ Community (college) maintained list of algorithm implementations and codes.
 
 ## How to contribute ?
 
-* Pick an algorithm and create folder for it.
-* Write your modular implementation of that algorithm.
+* Have a look at open issues. They contain the list of algorithms we plan to be implemented. Pick an unassigned issue.
+* You can also create a new issue for an algorithm that is not in the list.
+* Make sure you are assigned for the issue. 
+* Code the algorithm following the styleguide defined below.
 * Send a PR.
 
 
@@ -53,6 +55,6 @@ int main(){
 
 
 
-#### Credits
+## Credits
 
 Idea by [@Monal5031](https://github.com/Monal5031)
