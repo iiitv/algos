@@ -6,7 +6,9 @@ Community (college) maintained list of algorithm implementations and codes.
 
 ## Implemented Algorithms
 
-* [Linear Search](https://en.wikipedia.org/wiki/Linear_search) - [[Python](linear_search/linear_search.py)]
+| Algorithm | C | CPP | Java | Python |
+|:--------------|:----------------:|:----------------:|:----------------:|:-----------------:|
+| [Linear Search](https://en.wikipedia.org/wiki/Linear_search) | | | | [\[X\]](linear_search/linear_search.py) |
 
 
 ## Resources
