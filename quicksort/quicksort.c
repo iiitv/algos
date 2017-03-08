@@ -12,7 +12,7 @@ void quicksort(int ar_size, int *  ar) {
 			if ((prevind>-1) && (ar[i] < prevmax)){
 				temp = ar[i];
 				ar[i] = prevmax;
-				ar[ prevind ] = temp;
+				ar[prevind] = temp;
 				prevind = prevind+1;
 				prevmax = ar[prevind];
 			}
@@ -39,8 +39,7 @@ void quicksort(int ar_size, int *  ar) {
 
 int main(){
 	int ar_size = 4, i;
-	int a[4];
-	a[0] = 2; a[1] = 3; a[2] = 0; a[3] = 4;
+	int a[4] = {2, 3, 0, 4};
 	quicksort(ar_size, a);
 
 	for (i=0; i<ar_size; i++){
