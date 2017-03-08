@@ -11,12 +11,16 @@ Community (college) maintained list of algorithm implementations and codes.
 * Send a PR.
 
 
-## Styleguides
+## Code Styleguide
 
 * Code submitted should be modular. 
 * Don't use global variables.
+* Folder name of algorithm should match filename (excluding the extension).
+* Filename of code should be kept same as master function of the code to the best extent possible.
 * Prefer classes instead of multiple helper functions (where applicable).
 * Define `tester` code only in `main` routine.
+* Use meaningful variable names and comments.
+* No profanity.
 
 
 ## Samples
