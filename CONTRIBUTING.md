@@ -7,6 +7,17 @@
 * Send a PR.
 
 
+<a name="sa"></a>
+
+## Suggesting an algorithm
+
+* First make sure you are not suggesting a duplicate.
+* If not, proceed and create the issue.
+* Please include at least one external link for the algorithm in the issue's body which explains the algorithm/problem in detail.
+
+
+<a name="cs"></a>
+
 ## Code Styleguide
 
 * Code submitted should be modular. 

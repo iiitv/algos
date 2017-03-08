@@ -18,7 +18,9 @@ Community (college) maintained list of algorithm implementations and codes.
 
 ## Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.md)
+See [CONTRIBUTING.md](CONTRIBUTING.md).
+
+If you plan to suggest a new algorithm, please make sure to read [the guidelines](CONTRIBUTING.md#sa).
 
 
 ## Credits
