@@ -38,6 +38,13 @@
 * In some cases, C and C++ implementation will be similar. In that case, only the C implementation must be done.
 
 
+<a name="improving"></a>
+
+## Improving an implementation
+
+* If you feel you can improve upon an implementation, feel free to open an issue discussing the improvements.
+* If you are confident enough, you may directly open a PR with the required changes.
+
 
 ## Samples
 
