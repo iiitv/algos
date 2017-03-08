@@ -5,7 +5,8 @@
 * Make sure you are assigned for the issue. 
 * When assigned, also mention the languages you want to code in. So suppose if you don't want to code in a particular language, another person can be assigned to do so. 
 * Code the algorithm following the styleguide defined below.
-* Send a PR.
+* Send a PR. 
+* Be sure to not include any compiled binaries in the patch.
 
 
 <a name="sa"></a>
@@ -29,6 +30,7 @@
 * Define `tester` code only in `main` routine.
 * Use meaningful variable names and comments.
 * No profanity.
+* Use external libraries only when no other solution is possible/plausible.
 
 
 <a name="points"></a>
