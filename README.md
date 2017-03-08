@@ -12,6 +12,8 @@ List of implemented codes go here ....
 ## Resources
 
 * [Popular Data Structures and Algorithms - Codechef](https://discuss.codechef.com/questions/48877/data-structures-and-algorithms)
+* [Intro to Algorithms - Khan Academy](https://www.khanacademy.org/computing/computer-science/algorithms)
+* [Algorithms - Learneroo](https://www.learneroo.com/subjects/8)
 
 
 ## Contributing
