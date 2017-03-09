@@ -15,12 +15,13 @@ Community (college) maintained list of algorithm implementations and codes.
 
 ## Resources
 
-* [Popular Data Structures and Algorithms - Codechef](https://discuss.codechef.com/questions/48877/data-structures-and-algorithms)
 * [Intro to Algorithms - Khan Academy](https://www.khanacademy.org/computing/computer-science/algorithms)
 * [Algorithms - Learneroo](https://www.learneroo.com/subjects/8)
 * [Awesome-Algorithms](https://github.com/tayllan/awesome-algorithms)
-* [Stanford-ACM-Codes](https://github.com/jaehyunp/stanfordacm) - A list of codes written by previous Stanford ACM team members and coaches.
 * [Fundamentals of Algorithms - GeekforGeeks](http://www.geeksforgeeks.org/fundamentals-of-algorithms/)
+* [Popular Data Structures and Algorithms - Codechef](https://discuss.codechef.com/questions/48877/data-structures-and-algorithms)
+* [Stanford-ACM-Codes](https://github.com/jaehyunp/stanfordacm) - A list of codes written by previous Stanford ACM team members and coaches.
+
 
 
 ## Contributing
