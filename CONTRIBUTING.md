@@ -29,8 +29,9 @@
 
 * Code submitted should be modular. 
 * Don't use global variables.
-* Folder name of algorithm should match filename (excluding the extension).
-* Filename of code should be kept same as master function of the code to the best extent possible.
+* Use separate folders for each algorithm. Folder name should be in full lowercase. If the algorithm has multiple words, separate them by underscores. (eg `longest_common_subsequence`)
+* Filename should be derived from the folder name. (eg `longest_common_subsequence` becomes `longestCommonSubsequence.c` or `LongestCommonSubsequence.java`)
+* Name of master function of the code should be kept same as filename to the best extent possible.
 * Prefer classes instead of multiple helper functions (where applicable).
 * Define `tester` code only in `main` routine.
 * Use meaningful variable names and comments.
