@@ -3,7 +3,7 @@
 /*
 * first --> First number
 * second --> Second number
-* There are two implementations: Recursive (gcd_recursive) and Non-Recursive (gcd_iterative)
+* There are two implementations: Recursive (euclidean_gcd_recursive) and Non-Recursive (euclidean_gcd)
 */
 
 int euclidean_gcd_recursive(int first, int second) {
@@ -28,5 +28,5 @@ int main() {
         int answer_recursive = euclidean_gcd_recursive(first, second);
         int answer_iterative = euclidean_gcd(first, second);
         printf("GCD of %d and %d is : %d by recursive algo.\n", first, second, answer_recursive);
-        printf("GCD of %d and %d is : %d by Iterative algo.\n", first, second, answer_iterative);
+        printf("GCD of %d and %d is : %d by iterative algo.\n", first, second, answer_iterative);
 }
