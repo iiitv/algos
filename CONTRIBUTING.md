@@ -92,3 +92,23 @@ def main():
 if __name__ == '__main__':
     main()
 ```
+
+#### Java
+```java
+public class QuickSort {
+    
+    static void quickSort(int a[]) {
+        /*
+            Your implementation here...
+        */
+    }
+    
+    public static void main(String args[]) {
+        int arr[] = new int[] {2, 3, 0, 4};
+        quickSort(arr);
+        for(int element: arr) {
+            System.out.println(element);
+        }
+    }
+}
+```
