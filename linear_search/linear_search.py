@@ -20,5 +20,6 @@ def main():
     else:
         print('Element found at index %s' % index)
 
+
 if __name__ == '__main__':
     main()
