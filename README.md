@@ -9,6 +9,7 @@ Community (college) maintained list of algorithm implementations and codes.
 | Algorithm | C | CPP | Java | Python |
 |:--------------|:----------------:|:----------------:|:----------------:|:-----------------:|
 | [Linear Search](https://en.wikipedia.org/wiki/Linear_search) | | | | [\[X\]](linear_search/linear_search.py) |
+| [Longest Common Subsequence](http://www.geeksforgeeks.org/dynamic-programming-set-4-longest-common-subsequence) | [\[X\]](longest_common_subsequence/longestCommonSubsequence.c) | | | 
 | [Quicksort](https://en.wikipedia.org/wiki/Quicksort) | [\[X\]](quicksort/quicksort.c) | | | |
 
 
