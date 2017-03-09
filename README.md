@@ -6,8 +6,10 @@ Community (college) maintained list of algorithm implementations and codes.
 
 ## Implemented Algorithms
 
-* [Linear Search](https://en.wikipedia.org/wiki/Linear_search) - [[Python](linear_search/linear_search.py)]
-* [Quicksort](https://en.wikipedia.org/wiki/Quicksort) - [[C](quicksort/quicksort.c)]
+| Algorithm | C | CPP | Java | Python |
+|:--------------|:----------------:|:----------------:|:----------------:|:-----------------:|
+| [Linear Search](https://en.wikipedia.org/wiki/Linear_search) | | | | [\[X\]](linear_search/linear_search.py) |
+| [Quicksort](https://en.wikipedia.org/wiki/Quicksort) | [\[X\]](quicksort/quicksort.c) | | | |
 
 
 ## Resources
