@@ -37,6 +37,7 @@
 * Use meaningful variable names and comments.
 * No profanity.
 * Use external libraries only when no other solution is possible/plausible.
+* We have defined [skeleton codes](#samples) for some popular languages below. Please follow them whenever possible.
 
 
 <a name="points"></a>
@@ -53,6 +54,8 @@
 * If you feel you can improve upon an implementation, feel free to open an issue discussing the improvements.
 * If you are confident enough, you may directly open a PR with the required changes.
 
+
+<a name="samples"></a>
 
 ## Samples
 
