@@ -47,7 +47,7 @@ void quicksort(int ar_size, int * ar) {
 	}
 }
 
-int main(){
+int main() {
 	int ar_size = 4, i;
 	int a[4] = {2, 3, 0, 4};
 	quicksort(ar_size, a);
