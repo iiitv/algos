@@ -26,7 +26,7 @@ int main() {
         int first = 49;
         int second = 7;
         int answer_recursive = gcd_recursive(first, second);
-        int answer_iterative = gcd_iterative(first,second);
-        printf("GCD of %d and %d is : %d by recursive algo.\n",first,second,answer_recursive);
-        printf("GCD of %d and %d is : %d by Iterative algo.\n",first,second,answer_iterative);
+        int answer_iterative = gcd_iterative(first, second);
+        printf("GCD of %d and %d is : %d by recursive algo.\n", first, second, answer_recursive);
+        printf("GCD of %d and %d is : %d by Iterative algo.\n", first, second, answer_iterative);
 }
