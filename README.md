@@ -18,6 +18,7 @@ Community (college) maintained list of algorithm implementations and codes.
 * [Intro to Algorithms - Khan Academy](https://www.khanacademy.org/computing/computer-science/algorithms)
 * [Algorithms - Learneroo](https://www.learneroo.com/subjects/8)
 * [Awesome-Algorithms](https://github.com/tayllan/awesome-algorithms)
+* [Stanford-ACM-Codes](https://github.com/jaehyunp/stanfordacm) - A list of codes written by previous Stanford ACM team members and coaches.
 
 
 ## Contributing
