@@ -37,6 +37,7 @@
 * Use meaningful variable names and comments.
 * No profanity.
 * Use external libraries only when no other solution is possible/plausible.
+* We have defined [skeleton codes](#samples) for some popular languages below. Please follow them whenever possible.
 
 
 <a name="points"></a>
@@ -53,6 +54,8 @@
 * If you feel you can improve upon an implementation, feel free to open an issue discussing the improvements.
 * If you are confident enough, you may directly open a PR with the required changes.
 
+
+<a name="samples"></a>
 
 ## Samples
 
@@ -84,11 +87,33 @@ def quicksort(arr):
     # Your implementation here...
     #
 
+
 def main():
     arr = [2, 3, 0, 4]
     sorted_arr = quicksort(arr)
     print(sorted_arr)
+
     
 if __name__ == '__main__':
     main()
+```
+
+#### Java
+```java
+public class QuickSort {
+    
+    static void quickSort(int a[]) {
+        /*
+            Your implementation here...
+        */
+    }
+    
+    public static void main(String args[]) {
+        int arr[] = new int[] {2, 3, 0, 4};
+        quickSort(arr);
+        for(int element: arr) {
+            System.out.println(element);
+        }
+    }
+}
 ```
