@@ -3,9 +3,11 @@
 
 def euclidean_gcd_recursive(first, second):
 	"""
- 	:param first --> First number
- 	:param second --> Second number
-	"""
+    Calculates GCD of two numbers using Euclidean Recursive Algorithm
+    :param first: First number
+    :param second: Second number
+    :return: GCD of the numbers
+    """
 	if second == 0:
 		return first        # First becomes gcd if second becomes zero
 	else:
@@ -14,9 +16,11 @@ def euclidean_gcd_recursive(first, second):
 
 def euclidean_gcd(first, second):
 	"""
- 	:param first --> First number
- 	:param second --> Second number
-	"""
+    Calculates GCD of two numbers using Euclidean Iterative Algorithm
+    :param first: First number
+    :param second: Second number
+    :return: GCD of the numbers
+    """
 	while second != 0:		# Iterate till second becomes zero
 		temp = second 		# Temporary variable to hold value of second which is to be assigned to first later
 		second = first % second
