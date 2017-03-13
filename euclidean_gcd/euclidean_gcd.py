@@ -1,4 +1,8 @@
-#There are two implementations: Recursive (euclidean_gcd_recursive) and Non-Recursive (euclidean_gcd)
+""" 
+There are two implementations: 
+Recursive (euclidean_gcd_recursive) and 
+Non-Recursive (euclidean_gcd)
+"""
 
 
 def euclidean_gcd_recursive(first, second):
@@ -22,9 +26,9 @@ def euclidean_gcd(first, second):
     :return: GCD of the numbers
     """
 	while second != 0:		# Iterate till second becomes zero
-		temp = second 		# Temporary variable to hold value of second which is to be assigned to first later
+		temp = second 		# Temporary variable to hold value of second
 		second = first % second
-		first = temp
+		first = temp    # Temporary variable assigned to first
 	return first 		# When second becomes 0, first becomes gcd of both
 
 
