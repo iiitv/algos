@@ -1,7 +1,3 @@
-/**
- *
- * @author jsroyal
- */
 public class BinarySearch {
 
     public static void main(String[] args) {
@@ -11,7 +7,7 @@ public class BinarySearch {
         BinarySearch obj = new BinarySearch();
 
         for (i = 0; i < 5; i++) {
-            pos = obj.binary_search(arr, 6, search_arr[i]);
+            pos = obj.binarySearch(arr, 6, search_arr[i]);
 
             if (pos >= 0) {
                 System.out.println(search_arr[i] + "-> found at index : " + pos);
@@ -22,7 +18,7 @@ public class BinarySearch {
 
     }
 
-    public int binary_search(int arr[], int arr_size, int search_element) {
+    public int binarySearch(int arr[], int arr_size, int search_element) {
         int left = 0, right = arr_size - 1;
         while (left <= right) {
             int mid = (left + right) / 2;
