@@ -4,7 +4,7 @@
 
 void sieveOfEratosthenes(int n){
 	bool numbers[n+1];
-	int i,sqrt_n = sqrt(n)+1,j;
+	int i, sqrt_n = sqrt(n)+1, j;
 	
 	for (i = 0; i < n+1; i++){
 		numbers[i] = true;      // assigning every number "true" 
@@ -12,8 +12,7 @@ void sieveOfEratosthenes(int n){
 
 	for (i = 2; i < sqrt_n; i++){
 		if (numbers[i] == true){
-
-			for (j = 2*i; j < n+1; j=j+i){
+			for (j = 2*i; j < n+1; j = j+i){
 				numbers[j] = false;
 			}
 		}
