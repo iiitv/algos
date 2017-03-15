@@ -11,7 +11,7 @@ void sieveOfEratosthenes(int n){
 	}
 
 	for (i = 2; i < sqrt_n; i++){
-		if (numbers[i] == true){
+		if (numbers[i]){
 			for (j = 2*i; j < n+1; j = j+i){
 				numbers[j] = false;
 			}
@@ -19,7 +19,7 @@ void sieveOfEratosthenes(int n){
 	}
 
 	for (j=2; j < n; j++){
-		if (numbers[j] == true){
+		if (numbers[j]){
 			printf("%d ",j);
 		}
 	}
