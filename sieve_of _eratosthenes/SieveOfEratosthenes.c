@@ -7,7 +7,7 @@ void sieveOfEratosthenes(int n){
 	int i, sqrt_n = sqrt(n)+1, j;
 	
 	for (i = 0; i < n+1; i++){
-		numbers[i] = true;      // assigning every number "true" 
+		numbers[i] = true;      // assigning every number value "true" 
 	}
 
 	for (i = 2; i < sqrt_n; i++){
