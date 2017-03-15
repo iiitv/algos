@@ -21,14 +21,14 @@ void sieveOfEratosthenes(int n) {
 
 	for (j = 2; j < n; j++) {
 		if (primes[j]) {
-			printf("%d ",j);
+			printf("%d ", j);
 		}
 	}
 }
 
 int main() {
 	int n;
-	scanf("%d",&n);
+	scanf("%d", &n);
 	sieveOfEratosthenes(n);
 	return 0;
 }
