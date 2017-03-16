@@ -16,7 +16,7 @@ public class EuclideanGCD {
     }
 
     static int euclideanGCDRecursive(int first, int second) {
-        return (second == 0) ? first : euclideanGCDRecursive(second, (first % second))
+        return (second == 0) ? first : euclideanGCDRecursive(second, (first % second));
                 // First becomes GCD when second becomes zero
     }
 
