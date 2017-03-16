@@ -1,8 +1,8 @@
 public class BinarySearch {
 
-    static int binarySearch(int[] arr, int arrSize, int searchElement) {
+    static int binarySearch(int[] arr, int searchElement) {
         int left = 0;
-        int right = arrSize - 1;
+        int right = arr.length - 1;
         while (left <= right) {
             int mid = (left + right) / 2;
             if (arr[mid] == searchElement) { // Element found            
@@ -23,7 +23,7 @@ public class BinarySearch {
         int[] searchArr = new int[] {1, 35, 112, 324, 67};
         int pos;
         for (int i = 0; i < 5; i++) {
-            pos = binarySearch(arr, 6, searchArr[i]);
+            pos = binarySearch(arr, searchArr[i]);  //search key from  search array and get poistion 
             if (pos >= 0) {
                 System.out.println(searchArr[i] + "-> found at index : " + pos);
             } else {
