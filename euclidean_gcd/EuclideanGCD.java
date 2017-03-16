@@ -24,8 +24,10 @@ public class EuclideanGCD {
         int first = 25;
         int second = 5;
         int answerIterative = EuclideanGCD.euclideanGCD(first, second);
-        int answerIecursive = EuclideanGCD.euclideanGCDRecursive(first, second);
-        System.out.printf("GCD of %d and %d is : %d by recursive algo.\n", first, second, answerRecursive);
-        System.out.printf("GCD of %d and %d is : %d by iterative algo.\n", first, second, answerIterative);
+        int answerRecursive = EuclideanGCD.euclideanGCDRecursive(first, second);
+        System.out.printf("GCD of %d and %d is : %d by recursive algo.\n", first, 
+                                                                        second, answerRecursive);
+        System.out.printf("GCD of %d and %d is : %d by iterative algo.\n", first, 
+                                                                        second, answerIterative);
     }
 }
