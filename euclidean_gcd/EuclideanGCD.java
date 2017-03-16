@@ -20,7 +20,7 @@ public class EuclideanGCD {
                 // First becomes GCD when second becomes zero
     }
 
-    public static void main(String []args) {
+    public static void main(String[] args) {
         int first = 25;
         int second = 5;
         int answerIterative = EuclideanGCD.euclideanGCD(first, second);
