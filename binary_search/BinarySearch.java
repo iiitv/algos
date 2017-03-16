@@ -27,7 +27,7 @@ public class BinarySearch {
             if (pos >= 0) {
                 System.out.println(searchArr[i] + "-> found at index : " + pos);
             } else {
-                System.out.println(searchArr[i] + " -> not found");
+                System.out.println(searchArr[i] + "-> not found");
             }
         }
     }
