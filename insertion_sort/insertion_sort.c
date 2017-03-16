@@ -1,6 +1,6 @@
 /*
-*  *arr --> array to be sorted
-*  arr_size -- > size of array
+*  arr - array to be sorted
+*  arr_size - size of array
 */
 #include <stdio.h>
  
