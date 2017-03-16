@@ -22,7 +22,7 @@ public class BinarySearch {
         int[] arr = new int[] {1, 5, 35, 112, 258, 324};
         int[] searchArr = new int[] {1, 35, 112, 324, 67};
         int pos;
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < searchArr.length; i++) {
             pos = binarySearch(arr, searchArr[i]);  //search key and get poistion 
             if (pos >= 0) {
                 System.out.println(searchArr[i] + "-> found at index : " + pos);
