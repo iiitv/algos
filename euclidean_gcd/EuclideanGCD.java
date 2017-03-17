@@ -16,18 +16,18 @@ public class EuclideanGCD {
     }
 
     static int euclideanGCDRecursive(int first, int second) {
-        if(second == 0)
-            return first;       // First becomes gcd if second becomes zero
-        else
-            return euclideanGCDRecursive(second, (first % second));
+        return (second == 0) ? first : euclideanGCDRecursive(second, (first % second));
+                // First becomes GCD when second becomes zero
     }
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         int first = 25;
         int second = 5;
-        int answer_iterative = EuclideanGCD.euclideanGCD(first, second);
-        int answer_recursive = EuclideanGCD.euclideanGCDRecursive(first, second);
-        System.out.printf("GCD of %d and %d is : %d by recursive algo.\n", first, second, answer_recursive);
-        System.out.printf("GCD of %d and %d is : %d by iterative algo.\n", first, second, answer_iterative);
+        int answerIterative = EuclideanGCD.euclideanGCD(first, second);
+        int answerRecursive = EuclideanGCD.euclideanGCDRecursive(first, second);
+        System.out.printf("GCD of %d and %d is : %d by recursive algo.\n", first, 
+                                                                        second, answerRecursive);
+        System.out.printf("GCD of %d and %d is : %d by iterative algo.\n", first, 
+                                                                        second, answerIterative);
     }
 }
