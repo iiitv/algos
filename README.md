@@ -21,7 +21,6 @@ Community (college) maintained list of algorithm implementations and codes.
 | [Quicksort](https://en.wikipedia.org/wiki/Quicksort) | [\[X\]](quicksort/quicksort.c) | | | |
 
 
-
 ## Resources
 
 * [Algorithms - Learneroo](https://www.learneroo.com/subjects/8)
