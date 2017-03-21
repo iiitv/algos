@@ -1,6 +1,7 @@
 
 /* 
 
+   *   Implementation of famous dynamic programming problem
    *   Largest Sum Contiguous Subarray
    *   Kadane Algorithm 
    *   Time complexity  O(n)
