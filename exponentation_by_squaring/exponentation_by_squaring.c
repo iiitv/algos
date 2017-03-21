@@ -7,7 +7,7 @@
 */
 
 long int exponentation_by_squaring(int base, int power) {
-	if (power == 0)			// Base case1
+	if (power == 0)		// Base case1
 		return 1;
 	else if (power == 1)	// Base case2
 		return base;
