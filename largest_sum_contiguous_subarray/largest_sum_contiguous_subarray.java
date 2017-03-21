@@ -20,23 +20,23 @@ import java.io.PrintWriter;
 class largest_sum_contiguous_subarray{
 
 
-	 static int max_SubArray_Sum(int[] array){   //  maximum sum method implemention
-		int prev_Sum,current_Sum,i;
+	 static int maxSubarraySum(int[] array){   //  maximum sum method implemention
+		int prevSum,currentSum,i;
 
-		prev_Sum=array[0];						// initialize current sum amd previous sum
-		current_Sum=array[0];			 	
+		prevSum=array[0];						// initialize current sum amd previous sum
+		currentSum=array[0];			 	
 
 		for(i=1;i<array.length;i++){
-			current_Sum += array[i];				// add values in current sum
-			if(current_Sum<0){					// if current sum is negative , make it zero
-				current_Sum=0;
+			currentSum += array[i];				// add values in current sum
+			if(currentSum<0){					// if current sum is negative , make it zero
+				currentSum=0;
 			}else{
-				if (current_Sum > prev_Sum) {		// if current sum is greate than previous sum
-					prev_Sum=current_Sum;			// update previous sum
+				if (currentSum > prevSum) {		// if current sum is greate than previous sum
+					prevSum=currentSum;			// update previous sum
 				}
 			}
 		}
-		return prev_Sum;
+		return prevSum;
 	}
 
 
@@ -47,12 +47,13 @@ class largest_sum_contiguous_subarray{
 	
 			int[] array = {1,3,-7,1,1};     
 			
-			int max_sum=max_SubArray_Sum(array);  /// call method
+			int maxSum=maxSubarraySum(array);  /// call method
 		
 			pr.print("Maximum SubArray Sum:"+"\t");
-			pr.println(max_sum);                     // print output
+			pr.println(maxSum);                     // print output
 		
 	}
 }
+
 
 
