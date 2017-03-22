@@ -26,7 +26,7 @@ public class LargestSumContiguousSubarray {
 		return prevSum;
 	}
 
-	public static void main(String ar[]) {
+	public static void main(String[] ar) {
 		
 		int[] array = new int[] {1, 3, -7, 1, 1};
 		System.out.println("Largest Sum of Contiguous Subarray:" + "\t" + largestSumContiguousSubarray(array));
