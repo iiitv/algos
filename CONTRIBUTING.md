@@ -2,7 +2,10 @@
 
 * Have a look at open issues. They contain the list of algorithms we plan to be implemented. Pick an unassigned issue.
 * You can also create a new issue for an algorithm that is not in the list.
-* Make sure you are assigned for the issue. You can assign an unassigned issue to yourself.
+* Make sure you are assigned for the issue. You can assign an unassigned issue to yourself. 
+
+> If you are not able to assign an issue to yourself, it means you are not a IIITV member. Get an [invite here](https://github.com/iiitv/getmein). If you already part of IIITV org, then maybe you are not a part of [Members team](https://github.com/orgs/iiitv/teams/members). Go add yourself. If any problems, open an issue at [getmein](https://github.com/iiitv/getmein).
+
 * When assigned, also mention the languages you want to code in. So suppose if you don't want to code in a particular language, another person can be assigned to do so. 
 * Code the algorithm following the styleguide defined below.
 * Send a PR. 
