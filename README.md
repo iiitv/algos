@@ -16,6 +16,7 @@ Community (college) maintained list of algorithm implementations and codes.
 | [Insertion Sort](https://en.wikipedia.org/wiki/Insertion_sort) | [\[X\]](insertion_sort/insertion_sort.c) ||||
 | [Linear Search](https://en.wikipedia.org/wiki/Linear_search) | | | | [\[X\]](linear_search/linear_search.py) |
 | [Longest Common Subsequence](http://www.geeksforgeeks.org/dynamic-programming-set-4-longest-common-subsequence) | [\[X\]](longest_common_subsequence/longestCommonSubsequence.c) | | | |
+| [Largest Sum Contiguous Subarray](http://www.geeksforgeeks.org/largest-sum-contiguous-subarray/) | | | [\[X\]](largest_sum_contiguous_subarray/LargestSumContiguousSubarray.java) | |
 | [Merge Sort](https://www.khanacademy.org/computing/computer-science/algorithms/merge-sort/a/overview-of-merge-sort) | | | [\[X\]](merge_sort/MergeSort.java) | |
 | [Quick Select](https://en.wikipedia.org/wiki/Quickselect) | [\[X\]](quick_select/quick_select.c) | | | |
 | [Quicksort](https://en.wikipedia.org/wiki/Quicksort) | [\[X\]](quicksort/quicksort.c) | | | |
