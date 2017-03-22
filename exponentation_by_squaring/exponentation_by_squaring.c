@@ -6,8 +6,10 @@
 *  power - power of expression
 */
 
-long int exponentation_by_squaring(int base, int power) {
-	if (power == 0)		// Base case1
+long double exponentation_by_squaring(double base, int power) {
+    if (power < 0)		// Negative power case
+        return exponentation_by_squaring(1 / base, -power);
+	else if (power == 0)	// Base case1
 		return 1;
 	else if (power == 1)	// Base case2
 		return base;
@@ -18,8 +20,8 @@ long int exponentation_by_squaring(int base, int power) {
 }
 
 int main() {
-	int base = 2;
-	int power = 30;
-	printf("%d raised to %d is %ld\n", base, power, exponentation_by_squaring(base, power));
+	long double base = 2;
+	int power = -1;
+	printf("%LG raised to %d is %LG\n", base, power, exponentation_by_squaring(base, power));
 	return 0;
 }
