@@ -4,10 +4,11 @@
    *   Kadane Algorithm 
    *   Time complexity  O(n)
 */
+package largestSumContiguousSubarray;
 
-class LargestSumContiguousSubarray {
+public class LargestSumContiguousSubarray {
 
-	 static void maxSumSubArray(int[] array) {   //  maximum sum method implemention
+	private static void maxSumSubArray(int[] array) {   //  maximum sum method implemention
 		int prevSum;
 		int currentSum;
 		int i;
