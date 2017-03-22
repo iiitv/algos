@@ -5,7 +5,7 @@
    *   Time complexity  O(n)
 */
 
-public class LargestSumContiguousSubarray {
+class LargestSumContiguousSubarray {
 
 	 static void maxSumSubArray(int[] array) {   //  maximum sum method implemention
 		int prevSum;
