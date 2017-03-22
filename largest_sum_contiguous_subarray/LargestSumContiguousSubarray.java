@@ -4,7 +4,7 @@
    *   Kadane Algorithm 
    *   Time complexity  O(n)
 */
-package largestSumContiguousSubarray;
+package largestsum;
 
 public class LargestSumContiguousSubarray {
 
