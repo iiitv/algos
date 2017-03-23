@@ -1,12 +1,12 @@
 /* 
-   *   Implementation of famous dynamic programming problem
-   *   Largest Sum Contiguous Subarray 
-   *   Time complexity  O(n)
+ *   Implementation of famous dynamic programming problem
+ *   Largest Sum Contiguous Subarray 
+ *   Time complexity  O(n)
 */
 
 public class LargestSumContiguousSubarray {
 
-	static int largestSumContiguousSubarray(int[] array) {   //  maximum sum method implemention
+	public static int largestSumContiguousSubarray(int[] array) {   //  maximum sum method implemention
 		int prevSum;
 		int currentSum;
 		int i;
