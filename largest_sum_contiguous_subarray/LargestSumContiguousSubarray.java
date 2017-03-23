@@ -3,7 +3,7 @@
  *   Largest Sum Contiguous Subarray
  *   Kadane Algorithm 
  *   Time complexity  O(n)
-*/
+ */
 
 public class LargestSumContiguousSubarray {
 
@@ -24,10 +24,9 @@ public class LargestSumContiguousSubarray {
 		return prevSum;
 	}
 
-	public static void main(String ar[]) {
+	public static void main(String[] args) {
 		
 		int[] array = new int[] {-2, 1, -3, 4, -1, 2, 1, -5, 4};
 		System.out.println("Largest Sum of Contiguous Subarray:" + "\t" + largestSumContiguousSubarray(array));
-
 	}
 }
