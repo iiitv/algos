@@ -3,7 +3,6 @@
    *   Largest Sum Contiguous Subarray 
    *   Time complexity  O(n)
 */
-package largestsum;
 
 public class LargestSumContiguousSubarray {
 
