@@ -1,6 +1,7 @@
 /* 
  *   Implementation of famous dynamic programming problem
- *   Largest Sum Contiguous Subarray 
+ *   Largest Sum Contiguous Subarray
+ *   Kadane Algorithm 
  *   Time complexity  O(n)
 */
 
@@ -16,16 +17,17 @@ public class LargestSumContiguousSubarray {
 			currentSum += array[i];				// add values in current sum
 			if (currentSum < 0) {					// if current sum is negative , make it zero
 				currentSum = 0;
-			} else if (currentSum > prevSum) {		// if current sum is greate than previous sum
-					prevSum = currentSum;			// update previous sum
-				}
+			} else if (currentSum > prevSum) {   // if current sum is greate than previous sum
+				prevSum = currentSum;             // update previous sum
+			}    
 		}
 		return prevSum;
 	}
 
-	public static void main(String[] args) {
+	public static void main(String ar[]) {
 		
-		int[] array = new int[] {1, 3, -7, 1, 1};
+		int[] array = new int[] {-2, 1, -3, 4, -1, 2, 1, -5, 4};
 		System.out.println("Largest Sum of Contiguous Subarray:" + "\t" + largestSumContiguousSubarray(array));
+
 	}
 }
