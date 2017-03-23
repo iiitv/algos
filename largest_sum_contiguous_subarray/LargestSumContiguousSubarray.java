@@ -16,11 +16,9 @@ public class LargestSumContiguousSubarray {
 			currentSum += array[i];				// add values in current sum
 			if (currentSum < 0) {					// if current sum is negative , make it zero
 				currentSum = 0;
-			} else {
-				if (currentSum > prevSum) {		// if current sum is greate than previous sum
+			} else if (currentSum > prevSum) {		// if current sum is greate than previous sum
 					prevSum = currentSum;			// update previous sum
 				}
-			}
 		}
 		return prevSum;
 	}
