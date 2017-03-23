@@ -1,10 +1,12 @@
 # Algos
 
-Community (college) maintained list of algorithm implementations and codes.
+Community (college) maintained list of Algorithms and Data Structures implementations.
 **For now, we are only accepting contributions from IIITV college students**.
 
 [![Join the chat at https://gitter.im/iiitv/algos](https://badges.gitter.im/iiitv/algos.svg)](https://gitter.im/iiitv/algos?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![Code Climate](https://codeclimate.com/github/iiitv/algos/badges/gpa.svg)](https://codeclimate.com/github/iiitv/algos)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/c10c3fd13edb475ca1bf77d4291d54b4)](https://www.codacy.com/app/aviaryan/algos?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=iiitv/algos&amp;utm_campaign=Badge_Grade)
+
 
 ## Implemented Algorithms
 
@@ -23,6 +25,12 @@ Community (college) maintained list of algorithm implementations and codes.
 | [Sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes) | [\[X\]](sieve_of_eratosthenes/sieveOfEratosthenes.c) | | | |
 
 
+## Implemented Data Structures
+
+| Data Structure | C | CPP | Java | Python |
+|:--------------|:----------------:|:----------------:|:----------------:|:-----------------:|
+
+
 ## Resources
 
 * [Algorithms - Learneroo](https://www.learneroo.com/subjects/8)
@@ -38,7 +46,7 @@ Community (college) maintained list of algorithm implementations and codes.
 
 See [CONTRIBUTING.md](CONTRIBUTING.md).
 
-If you plan to suggest a new algorithm, please make sure to read [the guidelines](CONTRIBUTING.md#sa).
+If you plan to suggest a new algorithm or DS, please make sure to read [the guidelines](CONTRIBUTING.md#sa).
 
 
 ## Credits
