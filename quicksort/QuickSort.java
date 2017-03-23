@@ -3,10 +3,10 @@ public class QuickSort {
     static int partition(int[] a, int first, int last) {
         int pivot = a[last];
         while(first<last) {
-            while(a[first] < pivot) {
+            while(a[first] < pivot) { //from left move
                 first++;               
             }
-            while(a[last] > pivot) {
+            while(a[last] > pivot) {  //from right move
                 last--;
             }
             if(first <= last) {
