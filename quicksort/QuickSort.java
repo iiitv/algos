@@ -1,33 +1,33 @@
 public class QuickSort {
 
-    static int partition(int[] a, int first, int last) {
-        int pivot = a[last];
-        while(first<last) {
-            while(a[first] < pivot) { //from left move
-                first++;               
+    static int partition(int[] a, int l, int r) {
+        int pivot = a[r];
+        while (l < r) {
+            while (a[l] < pivot) { //from left move
+                l++;               
             }
-            while(a[last] > pivot) {  //from right move
-                last--;
+            while (a[r] > pivot) {  //from right move
+                r--;
             }
-            if(first <= last) {
-                int temp = a[first];
-                a[first] = a[last];
-                a[last] = temp;
+            if (l <= r) {
+                int temp = a[l];
+                a[l] = a[r];
+                a[r] = temp;
             }
         }
-        return first; //pivot index
+        return l; //pivot index
     }
 
-    static void quickSort(int[] a, int first, int last) {
-        if (first < last) {
-            int pi = partition(a,first,last);  //pi index of pivot
-            quickSort(a, first, pi-1);  //sort left of pivot
-            quickSort(a, pi, last);  //sort right of pivot               
+    static void quickSort(int[] a, int l, int r) {
+        if (l < r) {
+            int pi = partition(a, l, r);  //pi index of pivot
+            quickSort(a, l, pi-1);  //sort left of pivot
+            quickSort(a, pi, r);  //sort right of pivot               
         }
     }
 
     public static void main(String[] args) {
-        int[] arr = new int[]{2, 4, 9, 6, 7, 8};
+        int[] arr = new int[] {2, 4, 9, 6, 7, 8};
         quickSort(arr, 0, arr.length - 1);
         for (int element : arr) {
             System.out.println(element);
