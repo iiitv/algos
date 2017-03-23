@@ -4,9 +4,9 @@
    *   Time complexity  O(n)
 */
 
-class LargestSumContiguousSubarray {
+public class LargestSumContiguousSubarray {
 
-	private static int largestSumContiguousSubarray(int[] array) {   //  maximum sum method implemention
+	static int largestSumContiguousSubarray(int[] array) {   //  maximum sum method implemention
 		int prevSum;
 		int currentSum;
 		int i;
@@ -25,7 +25,7 @@ class LargestSumContiguousSubarray {
 		return prevSum;
 	}
 
-	public static void main(String[] ar) {
+	public static void main(String[] args) {
 		
 		int[] array = new int[] {1, 3, -7, 1, 1};
 		System.out.println("Largest Sum of Contiguous Subarray:" + "\t" + largestSumContiguousSubarray(array));
