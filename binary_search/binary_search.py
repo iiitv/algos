@@ -13,9 +13,9 @@ def binarySearchIterative (array, left, right, element):
 
 def binarySearchRecursive (array, left, right, element):
     if right >= left:
-        mid = int(left + (right - left)/2) # indices of a list must be integer 
+        mid = int(left + (right - left)/2)
         if array[mid] == element:
-            return mid   
+            return mid
         elif array[mid] > element:
             return binarySearchRecursive(array, left, mid-1, element)
         else:
@@ -43,6 +43,5 @@ def main():
       print ("Iterative Binary Search : Element is present at index",result)
   else:
 	    print ("Iterative Binary Search : Element is not present in array")
-	    
 if __name__ == '__main__':
     main()
