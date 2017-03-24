@@ -35,14 +35,14 @@ bool queen_is_safe(int board[SIDE][SIDE], int row, int col) {
     return true;
 }
 
-bool find_solution(int board[SIDE][SIDE], int col) {
+bool n_queen_solution(int board[SIDE][SIDE], int col) {
     if (col >= SIDE)
         return true;       // * return true,
 
     for (int i = 0; i < SIDE; i++) {
         if ( queen_is_safe(board, i, col) ) {
             board[i][col] = 1;                       // * A queen is placed on (i, col).
-            if ( find_solution(board, col + 1) )      // * Calling find_solution() to place the rest of the queens.
+            if ( n_queen_solution(board, col + 1) )      // * Calling n_queen_solution() to place the rest of the queens.
                 return true;
             else
                 board[i][col] = 0;                   // * Backtrack
@@ -55,7 +55,7 @@ int main() {
     int board[SIDE][SIDE];                  // * A chess board of rows = SIDE & columns = SIDE.
     memset(board, 0, sizeof(board));        // * Initially the board is empty, so all elements of 2-D array board are 0.
 
-    if ( find_solution(board, 0) == false ) {
+    if ( n_queen_solution(board, 0) == false ) {
         printf("No possible configuration exists.\n\n");
         return 0;
     }
