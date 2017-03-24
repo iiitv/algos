@@ -1,10 +1,12 @@
 # Algos
 
-Community (college) maintained list of algorithm implementations and codes.
+Community (college) maintained list of Algorithms and Data Structures implementations.
 **For now, we are only accepting contributions from IIITV college students**.
 
 [![Join the chat at https://gitter.im/iiitv/algos](https://badges.gitter.im/iiitv/algos.svg)](https://gitter.im/iiitv/algos?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![Code Climate](https://codeclimate.com/github/iiitv/algos/badges/gpa.svg)](https://codeclimate.com/github/iiitv/algos)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/c10c3fd13edb475ca1bf77d4291d54b4)](https://www.codacy.com/app/aviaryan/algos?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=iiitv/algos&amp;utm_campaign=Badge_Grade)
+
 
 ## Implemented Algorithms
 
@@ -14,12 +16,21 @@ Community (college) maintained list of algorithm implementations and codes.
 | [Coin Change Problem](http://www.algorithmist.com/index.php/Coin_Change) | [\[X\]](coin_change_problem/coin_change_problem.c) | | | |
 | [Euclidean GCD](https://en.wikipedia.org/wiki/Euclidean_algorithm) | [\[X\]](euclidean_gcd/euclidean_gcd.c) | | [\[X\]](euclidean_gcd/EuclideanGCD.java) | [\[X\]](euclidean_gcd/euclidean_gcd.py) |
 | [Insertion Sort](https://en.wikipedia.org/wiki/Insertion_sort) | [\[X\]](insertion_sort/insertion_sort.c) | | | [\[X\]](insertion_sort/insertion_sort.py) |
+| [k-NN](https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm) | | | | [\[X\]](k_nn/k_nn.py) |
+| [Largest Sum Contiguous Subarray](http://www.geeksforgeeks.org/largest-sum-contiguous-subarray/) | | | [\[X\]](largest_sum_contiguous_subarray/LargestSumContiguousSubarray.java) | |
 | [Linear Search](https://en.wikipedia.org/wiki/Linear_search) | | | | [\[X\]](linear_search/linear_search.py) |
 | [Longest Common Subsequence](http://www.geeksforgeeks.org/dynamic-programming-set-4-longest-common-subsequence) | [\[X\]](longest_common_subsequence/longestCommonSubsequence.c) | | | |
 | [Merge Sort](https://www.khanacademy.org/computing/computer-science/algorithms/merge-sort/a/overview-of-merge-sort) | | | [\[X\]](merge_sort/MergeSort.java) | |
 | [Quick Select](https://en.wikipedia.org/wiki/Quickselect) | [\[X\]](quick_select/quick_select.c) | | | |
 | [Quicksort](https://en.wikipedia.org/wiki/Quicksort) | [\[X\]](quicksort/quicksort.c) | | | |
 | [Sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes) | [\[X\]](sieve_of_eratosthenes/sieveOfEratosthenes.c) | | | |
+
+
+## Implemented Data Structures
+
+| Data Structure | C | CPP | Java | Python |
+|:--------------|:----------------:|:----------------:|:----------------:|:-----------------:|
+| [Stack](https://en.wikipedia.org/wiki/Stack_(abstract_data_type)) | | | | [\[X\]](stack/stack.py) |
 
 
 ## Resources
@@ -37,7 +48,7 @@ Community (college) maintained list of algorithm implementations and codes.
 
 See [CONTRIBUTING.md](CONTRIBUTING.md).
 
-If you plan to suggest a new algorithm, please make sure to read [the guidelines](CONTRIBUTING.md#sa).
+If you plan to suggest a new algorithm or DS, please make sure to read [the guidelines](CONTRIBUTING.md#sa).
 
 
 ## Credits
