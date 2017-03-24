@@ -1,6 +1,6 @@
 def insertionSort(alist):
     """
-    Performs a linear search
+    Performs a insertion sort
     :type alist: object
     """
     for index in range(1,len(alist)):
