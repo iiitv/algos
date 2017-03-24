@@ -7,7 +7,7 @@
 *  size : size of array
 */
 
-int linear_search(int *arr, int size, int search_element) {
+int linear_search(const int *arr, int size, int search_element) {
 
 	int i;
 	for (i = 0; i < size; i++) {
@@ -19,7 +19,7 @@ int linear_search(int *arr, int size, int search_element) {
 
 int main() {
 
-	int array[100],i;
+	int array[100], i;
 
 	// Initializing array with 1,2,....,100
 	for (i = 1; i <= 100; i++)
