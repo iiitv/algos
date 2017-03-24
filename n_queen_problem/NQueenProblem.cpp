@@ -10,18 +10,15 @@
 #include <stdio.h>
 #include <string.h>
 using namespace std;
-                                        /* ********************************* */
-#define side 8                          /* Size of the board = (side X side) */
-                                        /* ********************************* */
 
-/*
- * The Queen is safe, if
+#define side 8                          /* Size of the board = (side X side) */
+                              
+/* The Queen is safe, if
  * There's no other Queen in the same row.
  * There's no other Queen in the same column.
  * There's no other Queen in the same diagonal.
  */
-bool queen_is_safe(int board[side][side], int row, int col)
-{
+bool queen_is_safe(int board[side][side], int row, int col) {
     int i,j;
     for (i = 0; i < col; i++)
         if (board[row][i]==1)
@@ -38,14 +35,13 @@ bool queen_is_safe(int board[side][side], int row, int col)
     return true;
 }
 
-bool  find_solution(int board[side][side], int col)
-{
+bool find_solution(int board[side][side], int col) {
     if (col >= Size)
         return true;       // * return true,
 
     for (int i = 0; i < Size; i++)
     {
-        if ( Queen_Is_Safe(board, i, col) )
+        if ( queen_is_safe(board, i, col) )
         {
             board[i][col] = 1;                       // * A queen is placed on (i, col).
             if (find_solution(board, col + 1) )      // * Calling Find_solution() to place the rest of the queens.
@@ -54,12 +50,10 @@ bool  find_solution(int board[side][side], int col)
                 board[i][col] = 0;                   // * Backtrack
         }
     }
-
     return false;
 }
 
-int main()
-{
+int main() {
     int board[side][side];                  // * A chess board of rows = Size & columns = Size.
     memset(board, 0, sizeof(board));        // * Initially the board is empty, so all elements of 2-D array board are 0.
 
@@ -76,6 +70,5 @@ int main()
             cout<<board[i][j]<<"   ";
         cout<<"\n\n";
     }
-
     return 0;
 }
