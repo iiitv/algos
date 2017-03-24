@@ -5,7 +5,6 @@ def binarySearchIterative (array, left, right, element):
         mid = int(left + (right - left)/2);  # indices of a list must be integer
         if array[mid] == element:
             return mid
- 
         elif array[mid] < element:
             left = mid + 1
 
@@ -16,7 +15,7 @@ def binarySearchIterative (array, left, right, element):
 
 def binarySearchRecursive (array, left, right, element):
     if right >= left:
-        mid = int(left + (right - left)/2) 	# indices of a list must be integer 
+        mid = int(left + (right - left)/2) # indices of a list must be integer 
         if array[mid] == element:
             return mid
       
