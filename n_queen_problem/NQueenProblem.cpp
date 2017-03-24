@@ -42,7 +42,7 @@ bool find_solution(int board[side][side], int col) {
     for (int i = 0; i < side; i++) {
         if ( queen_is_safe(board, i, col) ) {
             board[i][col] = 1;                       // * A queen is placed on (i, col).
-            if (find_solution(board, col + 1) )      // * Calling Find_solution() to place the rest of the queens.
+            if (find_solution(board, col + 1) )      // * Calling find_solution() to place the rest of the queens.
                 return true;
             else
                 board[i][col] = 0;                   // * Backtrack
@@ -52,7 +52,7 @@ bool find_solution(int board[side][side], int col) {
 }
 
 int main() {
-    int board[side][side];                  // * A chess board of rows = Size & columns = Size.
+    int board[side][side];                  // * A chess board of rows = side & columns = side.
     memset(board, 0, sizeof(board));        // * Initially the board is empty, so all elements of 2-D array board are 0.
 
     if ( find_solution(board, 0) == false ) {
