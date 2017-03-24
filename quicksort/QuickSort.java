@@ -1,6 +1,6 @@
 public class QuickSort {
 
-    static int partition(int[] a, int l, int r) {
+    private static int partition(int[] a, int l, int r) {
         int pivot = a[r];
         while (l < r) {
             while (a[l] < pivot) { //from left move
@@ -10,7 +10,7 @@ public class QuickSort {
                 r--;
             }
             if (l <= r) {
-                int temp = a[l];
+                int temp = a[l];        
                 a[l] = a[r];
                 a[r] = temp;
             }
@@ -18,7 +18,7 @@ public class QuickSort {
         return l; //pivot index
     }
 
-    static void quickSort(int[] a, int l, int r) {
+    public static void quickSort(int[] a, int l, int r) {
         if (l < r) {
             int pi = partition(a, l, r);  //pi index of pivot
             quickSort(a, l, pi-1);  //sort left of pivot
