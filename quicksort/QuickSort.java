@@ -18,11 +18,11 @@ public class QuickSort {
         return l; //pivot index
     }
 
-    public static void quickSort(int[] a, int l, int r) {
-        if (l < r) {
-            int pi = partition(a, l, r);  //pi index of pivot
-            quickSort(a, l, pi-1);  //sort left of pivot
-            quickSort(a, pi, r);  //sort right of pivot               
+    public static void quickSort(int[] a, int left, int right) {
+        if (left < right) {
+            int pi = partition(a, left, right);  //pi index of pivot
+            quickSort(a, left, pi-1);  //sort left of pivot
+            quickSort(a, pi, right);  //sort right of pivot               
         }
     }
 
