@@ -34,18 +34,18 @@ def main():
     array.sort(key=int)
     # print ("Sorted Array :", array)
     element = randint(0, domain)  # i.e. a random element can be selected from domain
-    print("Element = ", element)
+    print('Element = ', element)
     length = len(array)
     result = binarySearchRecursive(array, 0, length - 1, element)
     if result != -1:
-        print("Recursive Binary Search : Element is present at index", result)
+        print('Recursive Binary Search : Element is present at index', result)
     else:
-        print("Recursive Binary Search : Element is not present in array")
+        print('Recursive Binary Search : Element is not present in array')
     result = binarySearchIterative(array, 0, length - 1, element)
     if result != -1:
-        print("Iterative Binary Search : Element is present at index", result)
+        print('Iterative Binary Search : Element is present at index', result)
     else:
-        print("Iterative Binary Search : Element is not present in array")
+        print('Iterative Binary Search : Element is not present in array')
 
 
 if __name__ == '__main__':
