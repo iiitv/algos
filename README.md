@@ -12,7 +12,7 @@ Community (college) maintained list of Algorithms and Data Structures implementa
 
 | Algorithm | C | CPP | Java | Python |
 |:--------------|:----------------:|:----------------:|:----------------:|:-----------------:|
-| [Binary Search](https://en.wikipedia.org/wiki/Binary_search_algorithm) | [\[X\]](binary_search/binary_search.c) | | [\[X\]](binary_search/BinarySearch.java) | |
+| [Binary Search](https://en.wikipedia.org/wiki/Binary_search_algorithm) | [\[X\]](binary_search/binary_search.c) | | [\[X\]](binary_search/BinarySearch.java) | [\[X\]](binary_search/binary_search.py) |
 | [Coin Change Problem](http://www.algorithmist.com/index.php/Coin_Change) | [\[X\]](coin_change_problem/coin_change_problem.c) | | | |
 | [Euclidean GCD](https://en.wikipedia.org/wiki/Euclidean_algorithm) | [\[X\]](euclidean_gcd/euclidean_gcd.c) | | [\[X\]](euclidean_gcd/EuclideanGCD.java) | [\[X\]](euclidean_gcd/euclidean_gcd.py) |
 | [Insertion Sort](https://en.wikipedia.org/wiki/Insertion_sort) | [\[X\]](insertion_sort/insertion_sort.c) ||||
