@@ -14,7 +14,6 @@ int linear_search(int *arr, int size, int search_element) {
 		if (arr[i] == search_element)
 			return i;				// Element found
 	}
-
 	return -1;						// Element not found
 }
 
