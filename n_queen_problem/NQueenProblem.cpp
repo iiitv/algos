@@ -11,14 +11,14 @@
 #include <string.h>
 using namespace std;
 
-#define side 8                          /* Size of the board = (side X side) */
+#define SIDE 8                          /* Size of the board = (SIDE X SIDE) */
                               
 /* The Queen is safe, if
  * There's no other Queen in the same row.
  * There's no other Queen in the same column.
  * There's no other Queen in the same diagonal.
  */
-bool queen_is_safe(int board[side][side], int row, int col) {
+bool queen_is_safe(int board[SIDE][SIDE], int row, int col) {
     int i,j;
     for (i = 0; i < col; i++)
         if (board[row][i]==1)
@@ -28,18 +28,18 @@ bool queen_is_safe(int board[side][side], int row, int col) {
         if (board[i][j]==1)
             return false;  // * return false, if there's another Queen present in the upper diagonal.
 
-    for (i=row, j=col; j>=0 && i<side; i++, j--)
+    for (i=row, j=col; j>=0 && i<SIDE; i++, j--)
         if (board[i][j]==1)
             return false;  // * return false, if there's another Queen present in the lower diagonal.
 
     return true;
 }
 
-bool find_solution(int board[side][side], int col) {
-    if (col >= side)
+bool find_solution(int board[SIDE][SIDE], int col) {
+    if (col >= SIDE)
         return true;       // * return true,
 
-    for (int i = 0; i < side; i++) {
+    for (int i = 0; i < SIDE; i++) {
         if ( queen_is_safe(board, i, col) ) {
             board[i][col] = 1;                       // * A queen is placed on (i, col).
             if ( find_solution(board, col + 1) )      // * Calling find_solution() to place the rest of the queens.
@@ -52,7 +52,7 @@ bool find_solution(int board[side][side], int col) {
 }
 
 int main() {
-    int board[side][side];                  // * A chess board of rows = side & columns = side.
+    int board[SIDE][SIDE];                  // * A chess board of rows = SIDE & columns = SIDE.
     memset(board, 0, sizeof(board));        // * Initially the board is empty, so all elements of 2-D array board are 0.
 
     if ( find_solution(board, 0) == false ) {
@@ -60,10 +60,10 @@ int main() {
         return 0;
     }
     // * Printing the answer.
-    cout<<endl<<"No. of queens = "<<side<<endl<<"Chess board size = "<<side<<" X "<<side<<endl<<endl<<endl;
+    cout<<endl<<"No. of queens = "<<SIDE<<endl<<"Chess board size = "<<SIDE<<" X "<<SIDE<<endl<<endl<<endl;
     
-   for (int i = 0; i < side; i++) {
-        for (int j = 0; j < side; j++)
+   for (int i = 0; i < SIDE; i++) {
+        for (int j = 0; j < SIDE; j++)
             cout<<board[i][j]<<"   ";
         cout<<"\n\n";
     }
