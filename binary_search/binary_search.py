@@ -3,7 +3,8 @@ from random import randint
 
 def binarySearchIterative(array, left, right, element):
     while left <= right:
-        mid = int(left + (right - left) / 2)  # indices of a list must be integer
+        mid = int(left + (right - left) / 2)
+        # indices of a list must be integer
         if array[mid] == element:
             return mid
         elif array[mid] < element:
@@ -33,7 +34,8 @@ def main():
     # print ("Array :", array)
     array.sort(key=int)
     # print ("Sorted Array :", array)
-    element = randint(0, domain)  # i.e. a random element can be selected from domain
+    element = randint(0, domain)
+    # i.e. a random element can be selected from domain
     print('Element = ', element)
     length = len(array)
     result = binarySearchRecursive(array, 0, length - 1, element)
