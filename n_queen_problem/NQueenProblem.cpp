@@ -60,7 +60,7 @@ int main() {
       return 0;
     }
     // * Printing the answer.
-    cout<<endl<<"No. of queens = Chess board size = "<<side<<" X "<<side<<endl<<endl<<endl;
+    cout<<endl<<"No. of queens = "<<side<<endl<<"Chess board size = "<<side<<" X "<<side<<endl<<endl<<endl;
     
    for (int i = 0; i < side; i++) {
         for (int j = 0; j < side; j++)
