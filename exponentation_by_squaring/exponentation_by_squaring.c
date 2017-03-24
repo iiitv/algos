@@ -6,7 +6,7 @@
 *  power - power of expression
 */
 
-long double exponentation_by_squaring(double base, int power) {
+long double exponentation_by_squaring(long double base, int power) {
     if (power < 0)		// Negative power case
         return exponentation_by_squaring(1 / base, -power);
     else if (power == 0)	// Base case1
