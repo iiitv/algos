@@ -21,6 +21,7 @@ Community (college) maintained list of Algorithms and Data Structures implementa
 | [Linear Search](https://en.wikipedia.org/wiki/Linear_search) | | | | [\[X\]](linear_search/linear_search.py) |
 | [Longest Common Subsequence](http://www.geeksforgeeks.org/dynamic-programming-set-4-longest-common-subsequence) | [\[X\]](longest_common_subsequence/longestCommonSubsequence.c) | | | |
 | [Merge Sort](https://www.khanacademy.org/computing/computer-science/algorithms/merge-sort/a/overview-of-merge-sort) | | | [\[X\]](merge_sort/MergeSort.java) | |
+| [Prime Factor](https://en.wikipedia.org/wiki/Prime_factor) | [\[X\]](prime_factor/prime_factor.c) | | | |
 | [Quick Select](https://en.wikipedia.org/wiki/Quickselect) | [\[X\]](quick_select/quick_select.c) | | | |
 | [Quicksort](https://en.wikipedia.org/wiki/Quicksort) | [\[X\]](quicksort/quicksort.c) | | | |
 | [Sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes) | [\[X\]](sieve_of_eratosthenes/sieveOfEratosthenes.c) | | | |
