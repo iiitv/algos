@@ -23,5 +23,9 @@ int main() {
     long double base = 2;
     int power = 31;
     printf("%LG raised to %d is %LG\n", base, power, exponentation_by_squaring(base, power));
+
+    base = 2;
+    power = -2;
+    printf("%LG raised to %d is %LG\n", base, power, exponentation_by_squaring(base, power));
     return 0;
 }
