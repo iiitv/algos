@@ -16,12 +16,12 @@ long double exponentation_by_squaring(double base, int power) {
     else if (power % 2 == 0)
         return exponentation_by_squaring(base * base, power / 2);
     else if (power % 2 == 1)
-        return exponentation_by_squaring(base * base, (power - 1) / 2);
+        return base * exponentation_by_squaring(base * base, (power - 1) / 2);
 }
 
 int main() {
     long double base = 2;
-    int power = -1;
+    int power = 31;
     printf("%LG raised to %d is %LG\n", base, power, exponentation_by_squaring(base, power));
     return 0;
 }
