@@ -6,13 +6,12 @@
  * A good example of recursion.
  * You can see the solution for various sizes by changing the value of Size in 13th line..
  */
-
 #include <iostream>
 #include <stdio.h>
 #include <string.h>
 using namespace std;
                                         /* ********************************* */
-#define Size 8                          /* Size of the board = (Size X Size) */
+#define side 8                          /* Size of the board = (side X side) */
                                         /* ********************************* */
 
 /*
@@ -21,8 +20,7 @@ using namespace std;
  * There's no other Queen in the same column.
  * There's no other Queen in the same diagonal.
  */
-
-bool Queen_Is_Safe(int board[Size][Size], int row, int col)
+bool queen_is_safe(int board[side][side], int row, int col)
 {
     int i,j;
     for (i = 0; i < col; i++)
@@ -33,14 +31,14 @@ bool Queen_Is_Safe(int board[Size][Size], int row, int col)
         if (board[i][j]==1)
             return false;  // * return false, if there's another Queen present in the upper diagonal.
 
-    for (i=row, j=col; j>=0 && i<Size; i++, j--)
+    for (i=row, j=col; j>=0 && i<side; i++, j--)
         if (board[i][j]==1)
             return false;  // * return false, if there's another Queen present in the lower diagonal.
 
     return true;
 }
 
-bool  Find_solution(int board[Size][Size], int col)
+bool  find_solution(int board[side][side], int col)
 {
     if (col >= Size)
         return true;       // * return true,
@@ -50,7 +48,7 @@ bool  Find_solution(int board[Size][Size], int col)
         if ( Queen_Is_Safe(board, i, col) )
         {
             board[i][col] = 1;                       // * A queen is placed on (i, col).
-            if (Find_solution(board, col + 1) )      // * Calling Find_solution() to place the rest of the queens.
+            if (find_solution(board, col + 1) )      // * Calling Find_solution() to place the rest of the queens.
                 return true;
             else
                 board[i][col] = 0;                   // * Backtrack
@@ -62,20 +60,19 @@ bool  Find_solution(int board[Size][Size], int col)
 
 int main()
 {
-    int board[Size][Size];                  // * A chess board of rows = Size & columns = Size.
+    int board[side][side];                  // * A chess board of rows = Size & columns = Size.
     memset(board, 0, sizeof(board));        // * Initially the board is empty, so all elements of 2-D array board are 0.
 
-    if ( Find_solution(board, 0) == false )
+    if ( find_solution(board, 0) == false )
     {
       printf("No possible configuration exists.");
       return 0;
     }
-
     // * Printing the answer.
-    cout<<endl<<"No. of queens = Chess board size = "<<Size<<endl<<endl<<endl;
-    for (int i = 0; i < Size; i++)
+    cout<<endl<<"No. of queens = Chess board size = "<<side<<" X "<<side<<endl<<endl<<endl;
+    for (int i = 0; i < side; i++)
     {
-        for (int j = 0; j < Size; j++)
+        for (int j = 0; j < side; j++)
             cout<<board[i][j]<<"   ";
         cout<<"\n\n";
     }
