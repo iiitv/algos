@@ -4,7 +4,7 @@
  * There can be a number of possible solutions for a specific board.
  * This implementation prints only one valid configuration, it can be extended to print all possible valid configurations.
  * A good example of recursion.
- * You can see the solution for various sizes by changing the value of Size in 13th line..
+ * You can see the solution for various sizes by changing the value of Size in 14th line..
  */
 #include <iostream>
 #include <stdio.h>
@@ -36,13 +36,11 @@ bool queen_is_safe(int board[side][side], int row, int col) {
 }
 
 bool find_solution(int board[side][side], int col) {
-    if (col >= Size)
+    if (col >= side)
         return true;       // * return true,
 
-    for (int i = 0; i < Size; i++)
-    {
-        if ( queen_is_safe(board, i, col) )
-        {
+    for (int i = 0; i < side; i++) {
+        if ( queen_is_safe(board, i, col) ) {
             board[i][col] = 1;                       // * A queen is placed on (i, col).
             if (find_solution(board, col + 1) )      // * Calling Find_solution() to place the rest of the queens.
                 return true;
@@ -57,15 +55,14 @@ int main() {
     int board[side][side];                  // * A chess board of rows = Size & columns = Size.
     memset(board, 0, sizeof(board));        // * Initially the board is empty, so all elements of 2-D array board are 0.
 
-    if ( find_solution(board, 0) == false )
-    {
+    if ( find_solution(board, 0) == false ) {
       printf("No possible configuration exists.");
       return 0;
     }
     // * Printing the answer.
     cout<<endl<<"No. of queens = Chess board size = "<<side<<" X "<<side<<endl<<endl<<endl;
-    for (int i = 0; i < side; i++)
-    {
+    
+   for (int i = 0; i < side; i++) {
         for (int j = 0; j < side; j++)
             cout<<board[i][j]<<"   ";
         cout<<"\n\n";
