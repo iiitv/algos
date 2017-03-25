@@ -4,3 +4,5 @@
 a.out
 # Java
 *.class
+# MacOS
+.DS_Store
