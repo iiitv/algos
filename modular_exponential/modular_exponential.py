@@ -1,0 +1,16 @@
+def mod_expo(_base, _pow, _mod):
+    res = 1  # Initialize result
+    _base = _base % _mod  # Update base if it is more than or equal _mod
+    while _pow > 0:
+        if _pow & 1:  # if _pow is odd multiply it with result
+            res = (res * _base) % _mod
+        _pow = _pow >> 1  # _pow must be even now
+        _base = (_base * _base) % _mod
+    return res
+
+
+if __name__ == '__main__':
+    base = int(input())
+    power = int(input())
+    mod = int(input())
+    print(mod_expo(base, power, mod))
