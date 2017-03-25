@@ -1,14 +1,11 @@
 #include <stdio.h>
-
 /*
 *  Algorithm to find a given number in an array
 *  *arr : given array to search in
 *  search_element : Element to be searched
 *  size : size of array
 */
-
 int linear_search(const int *arr, int size, int search_element) {
-
 	int i;
 	for (i = 0; i < size; i++) {
 		if (arr[i] == search_element)
@@ -18,7 +15,6 @@ int linear_search(const int *arr, int size, int search_element) {
 }
 
 int main() {
-
 	int array[100], i;
 
 	// Initializing array with 1,2,....,100
@@ -36,5 +32,5 @@ int main() {
 		else
 			printf("%d not found in the list\n", search[i]);
 	}
-
+	return 0;
 }
