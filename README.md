@@ -23,7 +23,7 @@ Community (college) maintained list of Algorithms and Data Structures implementa
 | [Merge Sort](https://www.khanacademy.org/computing/computer-science/algorithms/merge-sort/a/overview-of-merge-sort) | | | [\[X\]](merge_sort/MergeSort.java) | |
 | [Quick Select](https://en.wikipedia.org/wiki/Quickselect) | [\[X\]](quick_select/quick_select.c) | | | |
 | [Quicksort](https://en.wikipedia.org/wiki/Quicksort) | [\[X\]](quicksort/quicksort.c) | | | |
-| [Sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes) | [\[X\]](sieve_of_eratosthenes/sieveOfEratosthenes.c) | | | |
+| [Sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes) | [\[X\]](sieve_of_eratosthenes/sieveOfEratosthenes.c) | | | [\[X\]](sieve_of_eratosthenes/sieve_of_eratosthenes.py) |
 
 
 ## Implemented Data Structures
