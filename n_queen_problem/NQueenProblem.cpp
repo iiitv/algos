@@ -7,7 +7,7 @@
  * You can see the solution for various sizes by changing the value of Size in 13th line..
  */
 #include <iostream>
-#include <string.h>
+#include <cstring>
 using namespace std;
 
 #define SIDE 8                          /* Size of the board = (SIDE X SIDE) */
