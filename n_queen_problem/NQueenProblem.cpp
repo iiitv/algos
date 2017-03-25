@@ -4,15 +4,14 @@
  * There can be a number of possible solutions for a specific board.
  * This implementation prints only one valid configuration, it can be extended to print all possible valid configurations.
  * A good example of recursion.
- * You can see the solution for various sizes by changing the value of Size in 14th line..
+ * You can see the solution for various sizes by changing the value of Size in 13th line..
  */
 #include <iostream>
-#include <stdio.h>
-#include <string.h>
+#include <cstring>
 using namespace std;
 
 #define SIDE 8                          /* Size of the board = (SIDE X SIDE) */
-                              
+
 /* The Queen is safe, if
  * There's no other Queen in the same row.
  * There's no other Queen in the same column.
@@ -56,16 +55,17 @@ int main() {
     memset(board, 0, sizeof(board));        // * Initially the board is empty, so all elements of 2-D array board are 0.
 
     if ( n_queen_solution(board, 0) == false ) {
-        printf("No possible configuration exists.\n\n");
+        cout << "No possible configuration exists.\n\n";
         return 0;
     }
     // * Printing the answer.
-    cout<<endl<<"No. of queens = "<<SIDE<<endl<<"Chess board size = "<<SIDE<<" X "<<SIDE<<endl<<endl<<endl;
-    
+    cout << "\n No. of queens = " << SIDE << "\n";
+    cout << "\n Chess board size = " << SIDE << " X " << SIDE << "\n\n";
+
    for (int i = 0; i < SIDE; i++) {
         for (int j = 0; j < SIDE; j++)
-            cout<<board[i][j]<<"   ";
-        cout<<"\n\n";
+            cout << "   "<<board[i][j];
+        cout << "\n\n";
     }
     return 0;
 }
