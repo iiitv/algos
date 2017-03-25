@@ -55,7 +55,7 @@ int main() {
     memset(board, 0, sizeof(board));        // * Initially the board is empty, so all elements of 2-D array board are 0.
 
     if ( n_queen_solution(board, 0) == false ) {
-        cout<<"No possible configuration exists.\n\n";
+        cout << "No possible configuration exists.\n\n";
         return 0;
     }
     // * Printing the answer.
@@ -64,8 +64,8 @@ int main() {
 
    for (int i = 0; i < SIDE; i++) {
         for (int j = 0; j < SIDE; j++)
-            cout<<"   "<<board[i][j];
-        cout<<"\n\n";
+            cout << "   "<<board[i][j];
+        cout << "\n\n";
     }
     return 0;
 }
