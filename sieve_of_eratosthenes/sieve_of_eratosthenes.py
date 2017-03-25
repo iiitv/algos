@@ -1,7 +1,7 @@
 import math
 
 
-def sieve_of_erastosthenes(n):
+def sieve_of_eratosthenes(n):
     """
     Calculates prime numbers till a number n
     :param n: Number upto which to calculate primes
@@ -21,7 +21,7 @@ def sieve_of_erastosthenes(n):
 
 def main():
     n = int(input())
-    primes = sieve_of_erastosthenes(n)
+    primes = sieve_of_eratosthenes(n)
     for i in range(n+1):    # Printing primes
         if primes[i]:
             print(i)
