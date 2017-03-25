@@ -3,6 +3,7 @@ import random
 
 def binary_search(array, element):
     """
+    Performs Binary Search by Iterative Method
     :param array: Iterable of elements
     :param element: element to search
     :return: returns value of index of element (if found) else return None
@@ -23,6 +24,7 @@ def binary_search(array, element):
 
 def binary_search_recursive(array, left, right, element):
     """
+    Performs Binary Search by Iterative Method
     :param array: Iterable of elements
     :param left: start limit of array
     :param right: end limit of array
