@@ -1,4 +1,4 @@
-def mod_expo(_base, _pow, _mod):
+def mod_exponent(_base, _pow, _mod):
     res = 1  # Initialize result
     _base = _base % _mod  # Update base if it is more than or equal _mod
     while _pow > 0:
@@ -10,7 +10,7 @@ def mod_expo(_base, _pow, _mod):
 
 
 if __name__ == '__main__':
-    base = int(input())
-    power = int(input())
-    mod = int(input())
-    print(mod_expo(base, power, mod))
+    base = 2
+    power = 5
+    mod = 6
+    print(mod_exponent(base, power, mod))
