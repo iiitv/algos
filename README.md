@@ -25,7 +25,7 @@ Community (college) maintained list of Algorithms and Data Structures implementa
 | [Merge Sort](https://www.khanacademy.org/computing/computer-science/algorithms/merge-sort/a/overview-of-merge-sort) | | | [\[X\]](merge_sort/MergeSort.java) | |
 | [N-Queen Problem](https://en.wikipedia.org/wiki/Eight_queens_puzzle) | | [\[X\]](n_queen_problem/NQueenProblem.cpp) | | | |
 | [Quick Select](https://en.wikipedia.org/wiki/Quickselect) | [\[X\]](quick_select/quick_select.c) | | | |
-| [Quicksort](https://en.wikipedia.org/wiki/Quicksort) | [\[X\]](quicksort/quicksort.c) | | | |
+| [Quicksort](https://en.wikipedia.org/wiki/Quicksort) | [\[X\]](quicksort/quicksort.c) | | [\[X\]](quicksort/QuickSort.java) | |
 | [Sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes) | [\[X\]](sieve_of_eratosthenes/sieveOfEratosthenes.c) | | | |
 
 
