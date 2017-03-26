@@ -13,7 +13,7 @@ def main():
     base = 2
     power = 5
     mod = 6
-    print(mod_expo(base, power, mod))
+    print(mod_exponent(base, power, mod))
 
 
 if __name__ == '__main__':
