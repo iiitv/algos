@@ -22,7 +22,7 @@ def binary_search(array, element):
     return None
 
 
-def binary_search_recursive(array, left, right, element):
+def binary_search_recursive(array, element, left = 0, right = None):
     """
     Performs Binary Search by Iterative Method
     :param array: Iterable of elements
@@ -36,9 +36,9 @@ def binary_search_recursive(array, left, right, element):
         if array[mid] == element:
             return mid
         elif array[mid] > element:
-            return binary_search_recursive(array, left, mid - 1, element)
+            return binary_search_recursive(array, element, left, mid - 1)
         else:
-            return binary_search_recursive(array, mid + 1, right, element)
+            return binary_search_recursive(array, element, mid + 1, right)
     else:
         return None
 
@@ -54,7 +54,7 @@ def main():
     # i.e. a random element can be selected from domain
     print('Element = ', element)
     length = len(array)
-    result = binary_search_recursive(array, 0, length - 1, element)
+    result = binary_search_recursive(array, element, 0, length - 1)
     if result is None:
         print('Recursive Binary Search : Element not present in array')
     else:
