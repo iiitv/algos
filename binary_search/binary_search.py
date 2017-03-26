@@ -32,7 +32,7 @@ def binary_search_recursive(array, left, right, element):
     :return: returns value of index of element (if found) else return None
     """
     if right >= left:
-        mid = int(left + (right - left) / 2)
+        mid = int((right + left) / 2)
         if array[mid] == element:
             return mid
         elif array[mid] > element:
