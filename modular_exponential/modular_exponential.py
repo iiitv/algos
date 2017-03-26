@@ -1,11 +1,11 @@
-def mod_exponent(base_, pow_, mod_):
+def mod_expo(base, power, mod):
     res = 1  # Initialize result
-    base_ = base_ % mod_  # Update base if it is more than or equal mod_
-    while pow_ > 0:
-        if pow_ & 1:  # if pow_ is odd multiply it with result
-            res = (res * base_) % mod_
-        pow_ = pow_ >> 1  # _pow must be even now
-        base_ = (base_ * base_) % mod_
+    base = base % mod  # Update base if it is more than or equal mod_
+    while power > 0:
+        if power & 1:  # if pow_ is odd multiply it with result
+            res = (res * base) % mod
+        power = power >> 1  # _pow must be even now
+        base = (base * base) % mod
     return res
 
 
@@ -13,7 +13,7 @@ def main():
     base = int(input())
     power = int(input())
     mod = int(input())
-    print(mod_exponent(base, power, mod))
+    print(mod_expo(base, power, mod))
 
 
 if __name__ == '__main__':
