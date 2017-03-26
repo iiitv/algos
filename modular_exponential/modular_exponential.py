@@ -9,9 +9,13 @@ def mod_exponent(base_, pow_, mod_):
     return res
 
 
-if __name__ == '__main__':
+def main():
     base = int(input())
     power = int(input())
     mod = int(input())
     print(mod_exponent(base, power, mod))
+
+
+if __name__ == '__main__':
+    main()
 
