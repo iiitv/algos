@@ -2,6 +2,7 @@ class DepthFirstTraversal {
 
     public static int[] arr;    // DFS traversal path
     public static int k = 0;
+    
     public static void depthFirstTraversal(int a[][], int visited[], int i, int n) {
         arr[k] = i + 1;
         k++;
