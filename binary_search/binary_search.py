@@ -33,7 +33,7 @@ def binary_search_recursive(array, element, left=0, right=None):
     :param element: element to be searched
     :return: returns value of index of element (if found) else return None
     """
-    right = len(array) if right is None else right
+    right = len(array) - 1 if right is None else right
     if right >= left:
         mid = int((right + left) / 2)
         if array[mid] == element:
@@ -51,13 +51,12 @@ def main():
     domain = 100  # user can change it
     array = [randint(0, domain) for i in range(size)]
     # print ("Array :", array)
-    array.sort(key=int)
+    array.sort()
     # print ("Sorted Array :", array)
     element = randint(0, domain)
     # i.e. a random element can be selected from domain
     print('Element = ', element)
-    length = len(array)
-    result = binary_search_recursive(array, element, 0, length - 1)
+    result = binary_search_recursive(array, element)
     if result is None:
         print('Recursive Binary Search : Element not present in array')
     else:
