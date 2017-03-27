@@ -14,6 +14,16 @@ public class Huffman{
 		 head=makeTree();																															
 
 	}
+	public String getHuff(int num){
+		String ret;
+		Node temp=head;
+		while(temp.data!=num&&temp.left!=null&&temp.right.!=null){
+  			
+
+		}
+
+
+	}
 	public Node makeTree(){
 		int i=2;
 		Node newN= new Node(a[1].freq+a[0].freq);
