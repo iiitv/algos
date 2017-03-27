@@ -27,7 +27,7 @@ int largestSumContiguousSubarray(int length, int arr[]) {
 
 int main() {
     int arr[] = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
-    int length = sizeof(arr)/sizeof(arr[0]);
+    int length = sizeof(arr)/sizeof(arr[0]);    // Length(Size) of the array
     cout << "Largest Sum of Contiguous Subarray = " << largestSumContiguousSubarray(length, arr) << "\n";
     return 0;
 }
