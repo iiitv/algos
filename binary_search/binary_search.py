@@ -1,9 +1,10 @@
-import random
+from random import randint
 
 
 def binary_search(array, element):
     """
-    Performs Binary Search by Iterative Method
+    Perform Binary Search by Iterative Method.
+
     :param array: Iterable of elements
     :param element: element to search
     :return: returns value of index of element (if found) else return None
@@ -22,9 +23,10 @@ def binary_search(array, element):
     return None
 
 
-def binary_search_recursive(array, element, left = 0, right = None):
+def binary_search_recursive(array, element, left=0, right=None):
     """
-    Performs Binary Search by Iterative Method
+    Perform Binary Search by Iterative Method.
+
     :param array: Iterable of elements
     :param left: start limit of array
     :param right: end limit of array
@@ -47,11 +49,11 @@ def binary_search_recursive(array, element, left = 0, right = None):
 def main():
     size = 100  # user can change it
     domain = 100  # user can change it
-    array = [random.randint(0, domain) for i in range(size)]
+    array = [randint(0, domain) for i in range(size)]
     # print ("Array :", array)
     array.sort(key=int)
     # print ("Sorted Array :", array)
-    element = random.randint(0, domain)
+    element = randint(0, domain)
     # i.e. a random element can be selected from domain
     print('Element = ', element)
     length = len(array)
