@@ -14,12 +14,12 @@ int largestSumContiguousSubarray(int length, int arr[]) {
     prevSum = arr[0];						    // initialize current sum and previous sum
     currentSum = arr[0];
     for (i = 1; i < length; i++) {
-        currentSum += arr[i];				         // add values in current sum
+        currentSum += arr[i];				           // add values in current sum
         if (currentSum < 0) {					  // if current sum is negative , make it zero
             currentSum = 0;
         }
-        else if (currentSum > prevSum) {               // if current sum is great than previous sum
-            prevSum = currentSum;                      // update previous sum
+        else if (currentSum > prevSum) {                   // if current sum is great than previous sum
+            prevSum = currentSum;                          // update previous sum
         }
     }
     return prevSum;
