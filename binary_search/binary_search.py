@@ -22,7 +22,7 @@ def binary_search(array, element):
     return None
 
 
-def binary_search_recursive(array, element, left = 0, right = None):
+def binary_search_recursive(array, element, left=0, right=None):
     """
     Performs Binary Search by Iterative Method
     :param array: Iterable of elements
