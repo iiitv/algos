@@ -22,7 +22,7 @@ def binary_search(array, element):
     return None
 
 
-def binary_search_recursive(array, element, left=0, right=None):
+def binary_search_recursive(array, element, left = 0, right = None):
     """
     Performs Binary Search by Iterative Method
     :param array: Iterable of elements
@@ -31,6 +31,7 @@ def binary_search_recursive(array, element, left=0, right=None):
     :param element: element to be searched
     :return: returns value of index of element (if found) else return None
     """
+    right = len(array) if right is None else right
     if right >= left:
         mid = int((right + left) / 2)
         if array[mid] == element:
