@@ -1,4 +1,11 @@
+"""
+Modular Exponential
+"""
+
 def mod_exponent(base, power, mod):
+    """
+    function returns the [base ^ pow] % mod
+    """
     res = 1  # Initialize result
     base = base % mod  # Update base if it is more than or equal mod_
     while power > 0:
@@ -10,12 +17,14 @@ def mod_exponent(base, power, mod):
 
 
 def main():
-    base = 2
-    power = 5
-    mod = 6
+    """
+    Driver function
+    """
+    base = 42
+    power = 58
+    mod = 69
     print(mod_exponent(base, power, mod))
 
 
 if __name__ == '__main__':
     main()
-
