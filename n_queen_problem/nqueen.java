@@ -1,5 +1,4 @@
-import java.util.Arrays;
-import java.util.Scanner;
+import java.util.*;
  
 public class NQueen { 
   private static void placeQueenOnBoard(int Qi, int[] board) {
@@ -7,7 +6,8 @@ public class NQueen {
     //base case
     if (Qi == n) {
       System.out.println(Arrays.toString(board));
-    } else {
+    } 
+    else {
       //try to put the ith Queen (Qi) in all of the columns
       for (int column = 0; column < n; column++) {
         if (isSafePlace(column, Qi, board)) {
@@ -49,6 +49,5 @@ public class NQueen {
     int n = sc.nextInt();
     int[] board = new int[n]; 
     placeQueenOnBoard(0, board);
- 
   }
 }
