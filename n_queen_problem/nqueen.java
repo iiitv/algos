@@ -1,5 +1,5 @@
 import java.util.*;
- 
+
 public class NQueen { 
   private static void placeQueenOnBoard(int Qi, int[] board) {
     int n = board.length;
@@ -27,7 +27,6 @@ public class NQueen {
  
   //check if the column is safe place to put Qi (ith Queen)
   private static boolean isSafePlace(int column, int Qi, int[] board) {
- 
     //check for all previously placed queens
     for (int i = 0; i < Qi; i++) {
       if (board[i] == column) { // the ith Queen(previous) is in same column
