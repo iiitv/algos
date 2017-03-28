@@ -5,10 +5,10 @@ package Test;
 public class CountingSort {
     //Time Complexity O(n)
     //Constraints NO. must non negative
-    int a[];
-    int b[];
-    int c[];
-    public CountingSort(int A[]) {
+    int[] a;
+    int[] b;
+    int[] c;
+    public CountingSort(int[] A) {
         a=A;
         int max=a[0];
         for(int i=1;i<a.length;i++) {
