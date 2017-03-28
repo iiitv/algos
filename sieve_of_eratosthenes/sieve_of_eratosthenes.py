@@ -5,13 +5,12 @@ def sieve_of_eratosthenes(n):
     """
     Calculates prime numbers till a number n
     :param n: Number upto which to calculate primes
-    :param primes: A boolean List having all entries True
     :return: A boolean list contaning only primes
     """
     primes = [True] * (n+1)  # Setting all as True initially
     primes[0] = primes[1] = False  # Since 0 and 1 are not primes
-    sqrt_n = int(math.sqrt(n)) + 1
-    for i in range(2, sqrt_n+1, 1):
+    sqrt_n = math.ceil(math.sqrt(n))
+    for i in range(2, sqrt_n, 1):
         if primes[i]:
             for j in range(2*i, n+1, i):
                 primes[j] = False
