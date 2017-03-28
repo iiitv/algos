@@ -14,6 +14,7 @@ Community (college) maintained list of Algorithms and Data Structures implementa
 |:--------------|:----------------:|:----------------:|:----------------:|:-----------------:|
 | [Binary Search](https://en.wikipedia.org/wiki/Binary_search_algorithm) | [\[X\]](binary_search/binary_search.c) | | [\[X\]](binary_search/BinarySearch.java) | |
 | [Coin Change Problem](http://www.algorithmist.com/index.php/Coin_Change) | [\[X\]](coin_change_problem/coin_change_problem.c) | | | |
+| [Counting Sort](www.geeksforgeeks.org/counting-sort/)| | | [\[X\]](counting_sort/CountingSort.java) | |
 | [Euclidean GCD](https://en.wikipedia.org/wiki/Euclidean_algorithm) | [\[X\]](euclidean_gcd/euclidean_gcd.c) | | [\[X\]](euclidean_gcd/EuclideanGCD.java) | [\[X\]](euclidean_gcd/euclidean_gcd.py) |
 | [Exponentation by Squaring](https://en.wikipedia.org/wiki/Exponentiation_by_squaring) | [\[X\]](exponentation_by_squaring/exponentation_by_squaring.c) ||||
 | [Insertion Sort](https://en.wikipedia.org/wiki/Insertion_sort) | [\[X\]](insertion_sort/insertion_sort.c) | | | [\[X\]](insertion_sort/insertion_sort.py) |
