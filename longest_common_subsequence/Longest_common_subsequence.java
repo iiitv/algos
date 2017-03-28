@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class largestCommonSubsequence {
+public class LargestCommonSubsequence {
 	public static int maxSubArray(int [] a) {
 		int maxInt = 0;
 		int maxTill = 0;
