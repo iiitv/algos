@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class LargestSumSubArray {
+public class largestSumSubArray {
 	public static int MaxSubArray(int [] a) {
 		int length = a.length;
 		int maxInt = 0;
