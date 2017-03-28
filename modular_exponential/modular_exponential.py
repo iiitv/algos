@@ -4,9 +4,12 @@ Modular Exponential
 
 def mod_exponent(base, power, mod):
     """
+    Modular exponential of a number
+
     :param base : number which is going to be raised
     :param power : power to which the number is raised
     :param mod   : number by modulo has to be performed
+
     :return : number raised to power and modulo by mod [(base ^ power) % mod]
     """
     res = 1  # Initialize result
