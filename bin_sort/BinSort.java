@@ -8,20 +8,20 @@ public class BinSort {
     public BinSort(double A[]){
         a=A;
     }
-    public void binSort(){
+    public void binSort() {
         for(int i=0;i<a.length;i++){
           int ins=(int)(a[i]*10);
           if(b[ins]==null){
               b[ins]=new Node(a[i]);
           }
-          else{
+          else {
               boolean check =true;
               Node temp=b[ins];
               while(temp.next!=null){
                   if(a[i]>temp.next.data){
                       temp=temp.next;
                   }
-                  else{
+                  else {
                       if(a[i]<temp.data)
                           break;
                       Node newNode= new Node(a[i]);
@@ -31,12 +31,12 @@ public class BinSort {
                       break;
                      }
               }
-                  if(check){
-                      if(a[i]>=temp.data){
+                  if(check) {
+                      if(a[i]>=temp.data) {
                           Node newNode= new Node(a[i]);
                           temp.next=newNode;
                       }
-                      else{
+                      else {
                           double loc=temp.data;
                           temp.data=a[i];
                           Node newNode = new Node(loc);
@@ -44,27 +44,22 @@ public class BinSort {
                           temp.next=newNode;
                       }
                   }
-                  
               }
           }
-        
-        
         int j=0;
-        for(int i=0;i<10;i++){
-            while(b[i]!=null){
+        for(int i=0;i<10;i++) {
+            while(b[i]!=null) {
                 a[j++]=b[i].data;
                 b[i]=b[i].next;
             }
         }
-        
-        
     }
-    
 }
-class Node{
+
+class Node {
     double data;
     Node next;
-    public Node(double data){
+    public Node(double data) {
          this.data=data;
          next=null;
         }

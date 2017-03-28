@@ -8,10 +8,10 @@ public class CountingSort {
     int a[];
     int b[];
     int c[];
-    public CountingSort(int A[]){
+    public CountingSort(int A[]) {
         a=A;
         int max=a[0];
-        for(int i=1;i<a.length;i++){
+        for(int i=1;i<a.length;i++) {
             if(a[i]>max)
                 max=a[i];
         }
@@ -20,7 +20,7 @@ public class CountingSort {
     }
     public int[] cSort() {
         getC();
-        for(int i=a.length-1;i>=0;i--){
+        for(int i=a.length-1;i>=0;i--) {
             b[c[a[i]]-1]=a[i];
             c[a[i]]--;
         }
