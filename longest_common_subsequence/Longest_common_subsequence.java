@@ -1,37 +1,28 @@
 import java.util.*;
 
-class Function
-{
-	public int Max_SubArray(int [] a)
-	{
+public class LargestSumSubArray {
+	public static int MaxSubArray(int [] a) {
 		int length = a.length;
-		int max_int = 0 , max_till = 0;
-		for (int k = 0; k < length; k++) 
-		{
-			max_int = max_int + a[k];
-			if(max_till < max_int)
-			{
-				max_till = max_int;
+		int maxInt = 0;
+		int maxTill = 0;
+		for (int k = 0; k < length; k++) {
+			maxInt = maxInt + a[k];
+			if(maxTill < maxInt) {
+				maxTill = maxInt;
 			}
-			if(max_int < 0)
-			{
-				max_int = 0;
+			if(maxInt < 0) {
+				maxInt = 0;
 			}		
 		}
-		return max_till;
+		return maxTill;
 	}
-}
-class Largest_Sum_SubArray
-{
-	public static void main(String[] args) 
-	{
-		Function obj = new Function();
+	
+	public static void main(String[] args) {
 		Random rand = new Random();
 		int[] array = new int[100];
-		for(int u = 0;u < 100; u++) 
-		{
+		for(int u = 0; u < 100; u++) {
 			array[u] = rand.nextInt(100);	
 		}
-		System.out.println("largest sum subarray: " + obj.Max_SubArray(array));	
+		System.out.println ("largest sum subarray: " + MaxSubArray(array));	
 	}
 }
