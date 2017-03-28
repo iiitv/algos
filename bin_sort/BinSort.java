@@ -4,7 +4,7 @@
 
 public class BinSort {
     double[] a;
-    Node[] b = new Node [10];
+    Node[] b = new Node[10];
     public BinSort(double[] A){
         a=A;
     }
