@@ -2,16 +2,7 @@ import java.util.Arrays;
 import java.util.Scanner;
  
 
-public class nqueen {
- 
-  public static void main(String args[]) {
-    System.out.println("How many queens? ");
-    Scanner sc = new Scanner(System.in);
-    int n = sc.nextInt();
-    int[] board = new int[n]; 
-    placeQueenOnBoard(0, board);
- 
-  }
+public class NQueen {
  
   private static void placeQueenOnBoard(int Qi, int[] board) {
     int n = board.length;
@@ -51,5 +42,14 @@ public class nqueen {
       }
     }
     return true;
+  }
+ 
+   public static void main(String args[]) {
+    System.out.println("How many queens? ");
+    Scanner sc = new Scanner(System.in);
+    int n = sc.nextInt();
+    int[] board = new int[n]; 
+    placeQueenOnBoard(0, board);
+ 
   }
 }
