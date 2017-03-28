@@ -1,9 +1,7 @@
 import java.util.Arrays;
 import java.util.Scanner;
  
-
-public class NQueen {
- 
+public class NQueen { 
   private static void placeQueenOnBoard(int Qi, int[] board) {
     int n = board.length;
     //base case
@@ -35,6 +33,7 @@ public class NQueen {
       if (board[i] == column) { // the ith Queen(previous) is in same column
         return false;
       }
+     
       //the ith Queen is in diagonal
       //(r1, c1) - (r2, c1). if |r1-r2| == |c1-c2| then they are in diagonal
       if (Math.abs(board[i] - column) == Math.abs(i - Qi)) {
