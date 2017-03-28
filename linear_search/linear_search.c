@@ -22,7 +22,7 @@ int main() {
 		array[i-1] = i;
 
 	// Elements to be searched in the array
-	int search[5] = {12,55,34,102,78};
+	int search[5] = {12, 55, 34, 102, 78};
 
 	for (i = 0; i < 5; i++) {
 		int index = linear_search(array, 100, search[i]);
