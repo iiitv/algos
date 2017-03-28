@@ -3,9 +3,9 @@
 //constraints:- 0<=A[i]<1
 
 public class BinSort {
-    double a[];
-    Node b[] = new Node[10];
-    public BinSort(double A[]){
+    double[] a;
+    Node[] b = new Node [10];
+    public BinSort(double[] A){
         a=A;
     }
     public void binSort() {
