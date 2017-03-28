@@ -1,7 +1,4 @@
 
-package Test;
-
-
 public class CountingSort {
     //Time Complexity O(n)
     //Constraints NO. must non negative
