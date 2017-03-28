@@ -1,11 +1,10 @@
 import java.util.*;
 
-public class largestSumSubArray {
-	public static int MaxSubArray(int [] a) {
-		int length = a.length;
+public class largestCommonSubsequence {
+	public static int maxSubArray(int [] a) {
 		int maxInt = 0;
 		int maxTill = 0;
-		for (int k = 0; k < length; k++) {
+		for (int k = 0; k < a.length; k++) {
 			maxInt = maxInt + a[k];
 			if(maxTill < maxInt) {
 				maxTill = maxInt;
@@ -23,6 +22,6 @@ public class largestSumSubArray {
 		for(int u = 0; u < 100; u++) {
 			array[u] = rand.nextInt(100);	
 		}
-		System.out.println ("largest sum subarray: " + MaxSubArray(array));	
+		System.out.println ("largest sum subarray: " + maxSubArray(array));	
 	}
 }
