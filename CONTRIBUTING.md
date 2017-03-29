@@ -10,7 +10,7 @@
 * Code the algorithm/DS following the styleguide defined below.
 * Send a PR. 
 * Be sure to not include any compiled binaries in the patch.
-* While sending a PR make sure you follow one PR per issue rule.
+* While sending a PR make sure you follow one issue per PR rule.
 
 
 <a name="sa"></a>
