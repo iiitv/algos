@@ -7,6 +7,9 @@ public class NQueen {
     if (Qi == n) {
       System.out.println(Arrays.toString(board));
     } 
+    else if(n == 2 || n==3) {
+        System.out.println("No possible board.");
+      }
     else {
       //try to put the ith Queen (Qi) in all of the columns
       for (int column = 0; column < n; column++) {
