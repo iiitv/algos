@@ -9,15 +9,15 @@ import java.util.Random;
             		if(k < A[i])
             			k = A[i];
             	}
-       		 A = cSort(A, k);
+       		 A = countingSort(A, k);
         	for (int i = 0;i < A.length;i++)
         		System.out.print(A[i] + " ");
 	}
 	 
-	public static int[] cSort(int[] a, int k) {
+	public static int[] countingSort(int[] a, int k) {
 		int[] b = new int[a.length];
 		int[] c = new int[k+1];
-		 getC(a, c);
+		 countOccurences(a, c);
         	for (int i = a.length-1;i >= 0;i--) {
             		b[c[a[i]]-1] = a[i];
             		c[a[i]]--;
@@ -25,7 +25,7 @@ import java.util.Random;
         return b;	
 	}
 	 
-	private static void getC(int[] a, int[] c) {
+	private static void countOccurences(int[] a, int[] c) {
        		for(int i = 0;i < a.length;i++)
            		c[a[i]]++;
        		for(int i = 1;i < c.length;i++)
