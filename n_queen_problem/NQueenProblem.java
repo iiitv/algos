@@ -45,10 +45,8 @@ public class NQueen {
     return true;
   }
  
-   public static void main(String args[]) {
-    System.out.println("How many queens? ");
-    Scanner sc = new Scanner(System.in);
-    int n = sc.nextInt();
+  public static void main(String args[]) {
+    int n = 7; // Can be changed from 1 to 8
     int[] board = new int[n]; 
     placeQueenOnBoard(0, board);
   }
