@@ -1,9 +1,9 @@
 import java.util.Random;
  class CountingSort {
 	private static void countOccurences(int[] a, int[] c) {
-       		for(int i = 0;i < a.length;i++)
+		for(int i = 0;i < a.length;i++)
            		c[a[i]]++;
-       		for(int i = 1;i < c.length;i++)
+		for(int i = 1;i < c.length;i++)
            		c[i] = c[i-1] + c[i];
     	}
 	public static int[] countingSort(int[] a, int k) {
