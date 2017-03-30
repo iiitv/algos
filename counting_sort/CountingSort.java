@@ -25,7 +25,7 @@ import java.util.Random;
             		if(k < A[i])
             			k = A[i];
           	}
-       		A = countingSort(A, k);
+		A = countingSort(A, k);
         	for (int i = 0;i < A.length;i++)
         		System.out.print(A[i] + " ");
 	}
