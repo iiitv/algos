@@ -23,7 +23,7 @@ Community (college) maintained list of Algorithms and Data Structures implementa
 | [Longest Common Subsequence](http://www.geeksforgeeks.org/dynamic-programming-set-4-longest-common-subsequence) | [\[X\]](longest_common_subsequence/longestCommonSubsequence.c) | | | |
 | [Merge Sort](https://www.khanacademy.org/computing/computer-science/algorithms/merge-sort/a/overview-of-merge-sort) | | | [\[X\]](merge_sort/MergeSort.java) | |
 | [Modular Exponential](http://www.geeksforgeeks.org/modular-exponentiation-power-in-modular-arithmetic/) | | | | [\[X\]](modular_exponential/modular_exponential.py) |
-| [N-Queen Problem](https://en.wikipedia.org/wiki/Eight_queens_puzzle) | | [\[X\]](n_queen_problem/NQueenProblem.cpp) | | | |
+| [N-Queen Problem](https://en.wikipedia.org/wiki/Eight_queens_puzzle) | | [\[X\]](n_queen_problem/NQueenProblem.cpp) | [\[X\]](n_queen_problem/NQueenProblem.java) | |
 | [Prime Factor](https://en.wikipedia.org/wiki/Prime_factor) | [\[X\]](prime_factor/prime_factor.c) | | | |
 | [Quick Select](https://en.wikipedia.org/wiki/Quickselect) | [\[X\]](quick_select/quick_select.c) | | | |
 | [Quicksort](https://en.wikipedia.org/wiki/Quicksort) | [\[X\]](quicksort/quicksort.c) | | [\[X\]](quicksort/QuickSort.java) | |
