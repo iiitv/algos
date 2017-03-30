@@ -49,8 +49,7 @@ class DepthFirstTraversal {
                                  {1, 1, 0, 1, 0},
                                  {0, 0, 0, 0, 0},
                                  {0, 0, 1, 0, 0}};
-        depthFirstTraversal(a, visited, 0);
-        
+        depthFirstTraversal(a, visited, 0);        
         for (int element : arr) {
             if(element != -1)   //not direct connected 
             System.out.println(element);
