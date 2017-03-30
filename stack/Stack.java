@@ -12,7 +12,7 @@ class Stack<T> {
     private LinkedList<T> stack;
         
     public Stack() {   // Constructor to create empty Stack
-       	stack = new LinkedList<> ();
+        stack = new LinkedList<> ();
         size = 0;
     }
 
