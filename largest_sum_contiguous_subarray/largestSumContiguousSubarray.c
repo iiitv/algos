@@ -1,5 +1,5 @@
-#include<stdio.h>
-#include<stdlib.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 int largestSumContinousSubArray(int arr[], int size) {
 	int max_till = 0;
@@ -17,7 +17,7 @@ int largestSumContinousSubArray(int arr[], int size) {
 }
 
 int main() {
-	int array [10];
+	int array[10];
 	for (int k = 0; k < 10; k++) {
 		array[k] = rand() % 10;
 	}
