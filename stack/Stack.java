@@ -61,7 +61,7 @@ class Stack<T> {
     }
 }
 
-public class StackTest {    // Tester Class to check the working of Stack
+class StackTest {    // Tester Class to check the working of Stack
     public static void main(String[] args) {
         Stack<Integer> obj = new Stack<Integer>();
         // Adding elements for testing
