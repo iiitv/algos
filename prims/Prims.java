@@ -1,4 +1,4 @@
-class Prims {
+public class Prims {
 
     private static class primsMST {
         private static int[] generate(int[][] ar) {
