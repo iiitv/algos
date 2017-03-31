@@ -16,7 +16,7 @@ class Stack<T> {
         size = 0;
     }
 
-  	public void push(T data) { // Add element to Top of Stack
+    public void push(T data) { // Add element to Top of Stack
         stack.addLast(data);
         size++;
     }
