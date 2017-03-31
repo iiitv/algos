@@ -7,7 +7,7 @@ public class NQueen {
         if (Qi == n) {
             System.out.println(Arrays.toString(board));
         } 
-        else if(n == 2 || n==3) {
+        else if (n == 2 || n==3) {
             System.out.println("No possible board.");
         }
         else {
