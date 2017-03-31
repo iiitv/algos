@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class NQueen { 
+public class NQueenProblem { 
     private static void placeQueenOnBoard(int Qi, int[] board) {
         int n = board.length;
         //base case
