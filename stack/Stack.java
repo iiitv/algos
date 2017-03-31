@@ -23,7 +23,7 @@ class Stack<T> {
         
     public T pop() {    // Remove element from top of Stack
         if (size == 0) {
-            throw new NoSuchElementException();
+            throw new NoSuchElementException("Cannot Pop, Stack is empty");
         }
         size--;
         return stack.removeLast();
@@ -31,7 +31,7 @@ class Stack<T> {
        
     public T peek() {   // Get the element at the Top of Stack
         if (size == 0) {
-            throw new NoSuchElementException();
+            throw new NoSuchElementException("No element left to Peek");
         }
         size--;
         return stack.getLast();
@@ -43,7 +43,7 @@ class Stack<T> {
         
     public void displayStack() {    // Display Stack
         if (size == 0) {
-            throw new NoSuchElementException();
+            throw new NoSuchElementException("No element in Stack to Display");
         }
         for (int i = size-1;i >= 0;i--) {
                 System.out.print(stack.get(i) + " ");
