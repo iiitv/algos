@@ -22,26 +22,19 @@ class Stack<T> {
     }
         
     public T pop() {    // Remove element from top of Stack
-        T temp = null;
-        try {
-            temp = stack.removeLast();
-            size--;
+        if (size == 0) {
+            throw new NoSuchElementException();
         }
-        catch (NoSuchElementException exp) {
-            System.out.println("Stack is empty");
-        }
-        return temp;
+        size--;
+        return stack.removeLast();
     }
        
     public T peek() {   // Get the element at the Top of Stack
-        T temp = null;
-        try {
-            temp = stack.getLast();
+        if (size == 0) {
+            throw new NoSuchElementException();
         }
-        catch (NoSuchElementException exp) {
-            System.out.println("Stack is empty");
-        }
-        return temp;
+        size--;
+        return stack.getLast();
     }
         
     public int getSize() {  // Get size of Stack
@@ -49,16 +42,14 @@ class Stack<T> {
     }
         
     public void displayStack() {    // Display Stack
-        try {
-            for (int i = size-1;i >= 0;i--) {
+        if (size == 0) {
+            throw new NoSuchElementException();
+        }
+        for (int i = size-1;i >= 0;i--) {
                 System.out.print(stack.get(i) + " ");
-            }
-            System.out.println();
         }
-        catch (NoSuchElementException exp) {
-            System.out.println("Stack is empty");
-        }
-    }
+        System.out.println();
+    }    
 }
 
 class StackTest {    // Tester Class to check the working of Stack
@@ -83,6 +74,10 @@ class StackTest {    // Tester Class to check the working of Stack
         while(obj.getSize() != 0) { // Empty the stack
             obj.pop();
         }
+        try {
         obj.peek(); // Checking for peek() same can be done for pop()
+        } catch (NoSuchElementException exp) {
+            System.out.println("Stack is empty.");
+        }
     }
 }
