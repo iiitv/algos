@@ -56,7 +56,7 @@ class StackTest {    // Tester Class to check the working of Stack
     public static void main(String[] args) {
         Stack<Integer> obj = new Stack<Integer>();
         // Adding elements for testing
-        for (int i = 1;i <= 10;i++) {
+        for (int i = 1; i <= 10; i++) {
             obj.push(i);
         }
         // Displaying the Stack (Top first basis)
