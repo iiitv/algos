@@ -1,6 +1,6 @@
 import java.util.Random;
+
 class CountingSort {	//Time complexity = O(n) 
-	//Every number must be between 0 to k
 	private static void countOccurences(int[] a, int[] c) {	//Basically counting occurences of particular  number and store in its index
 		for (int i = 0; i < a.length; i++)	//Counting occurence of each number
            		c[a[i]]++;
@@ -23,8 +23,8 @@ class CountingSort {	//Time complexity = O(n)
         	Random rand = new Random();
         	for (int i = 0; i < A.length; i++) {
             		A[i] = rand.nextInt(100);
-            		if(k < A[i])
-            			k = A[i];
+            		if(k < A[i])		//Every number must be between 0 to k
+            			k = A[i];	//K is max number	
           	}
 		A = countingSort(A, k);
         	for (int i = 0; i < A.length; i++)
