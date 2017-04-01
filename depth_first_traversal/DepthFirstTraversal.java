@@ -6,7 +6,7 @@ class DepthFirstTraversal {
     public static int[] arr;
     public static int k = 0;
 
-    public static void depthFirstTraversal(int a[][], int[] visited,int source){
+    public static void depthFirstTraversal(int[][] a, int[] visited,int source){
         for (int i = 0; i < visited.length; i++) {
             visited[i] = -1;
         }
@@ -39,7 +39,7 @@ class DepthFirstTraversal {
     }
     
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         int n = 5;    //no. of vertic
         int[] visited = new int[n]; 
         arr = new int[n];
