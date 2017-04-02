@@ -1,18 +1,18 @@
-import java.util.*;
+import java.util.Scanner;
+import java.util.Arrays;
 
 public class NQueenProblem { 
     private static void placeQueenOnBoard(int Qi, int[] board) {
-        int n = board.length;
         //base case
-        if (Qi == n) {
+        if (Qi == board.length) {
             System.out.println(Arrays.toString(board));
         } 
-        else if (n == 2 || n==3) {
+        else if (board.length == 2 || board.length == 3) {
             System.out.println("No possible board.");
         }
         else {
         //try to put the ith Queen (Qi) in all of the columns
-            for (int column = 0; column < n; column++) {
+            for (int column = 0; column < board.length; column++) {
                 if (isSafePlace(column, Qi, board)) {
                     board[Qi] = column;
                     //then place remaining queens.
@@ -45,9 +45,9 @@ public class NQueenProblem {
         return true;
     }
  
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         int n = 7; // Can be changed from 1 to 8
         int[] board = new int[n]; 
         placeQueenOnBoard(0, board);
     }
-}
+}     
