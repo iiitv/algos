@@ -8,7 +8,7 @@
 #include <stdlib.h>
 
 void  max_heapify(int a[], int i, int heapsize) {
-    int tmp, largest;
+    int largest;
     int l = (2 * i) + 1;  // left child
     int r = (2 * i) + 2;  // Right child
     // Check if left child is larger than root.
@@ -22,7 +22,7 @@ void  max_heapify(int a[], int i, int heapsize) {
          largest = r ;
     // If root is not the largest.
     if (largest != i) {
-         tmp = a[i];
+         int tmp = a[i];
          a[i] = a[largest];
          a[largest] = tmp;
          max_heapify(a, largest, heapsize);
@@ -30,14 +30,14 @@ void  max_heapify(int a[], int i, int heapsize) {
 }
 
 void heap_sort(int a[], int heapsize) {
-    int i, tmp;
+    int i;
     // Building max heap.
     for (i = heapsize/2; i >= 0; i--) {
          max_heapify(a, i, heapsize);
     }
     // One by one extract an element from heap
     for (i = heapsize; i > 0; i--) {
-        tmp = a[i];
+        int tmp = a[i];
         a[i] = a[0];
         a[0] = tmp;
         heapsize--;
