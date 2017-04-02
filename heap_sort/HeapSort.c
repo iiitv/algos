@@ -27,7 +27,6 @@ void  max_heapify(int a[], int i, int heapsize) {
          a[largest] = tmp;
          max_heapify(a, largest, heapsize);
     }
-
 }
 
 void heap_sort(int a[], int heapsize) {
