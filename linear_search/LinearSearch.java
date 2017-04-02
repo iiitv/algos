@@ -2,7 +2,6 @@
 *  Linear Search algorithm searches for a given number in array
 *  Time complexity is O(n) , n is size of array
 */
-
 public class LinearSearch {
 
 	public static int linearSearch(int[] arr, int searchElement) {
