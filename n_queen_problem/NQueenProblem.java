@@ -1,14 +1,13 @@
-import java.util.Scanner;
 import java.util.Arrays;
 
 public class NQueenProblem { 
-    private static void placeQueenOnBoard(int Qi, int[] board) {
+    private static String placeQueenOnBoard(int Qi, int[] board) {
         //base case
         if (Qi == board.length) {
-            System.out.println(Arrays.toString(board));
+            return Arrays.toString(board);
         } 
         else if (board.length == 2 || board.length == 3) {
-            System.out.println("No possible board.");
+            return "No possible board.";
         }
         else {
         //try to put the ith Queen (Qi) in all of the columns
@@ -26,6 +25,7 @@ public class NQueenProblem {
                 }
             }
         }
+      return "";
     }
  
     //check if the column is safe place to put Qi (ith Queen)
