@@ -13,7 +13,7 @@ public class LinearSearch {
 		return -1;	// ELement not found
 	}
 
-	public static void main(String args[]) {
+	public static void main(String[] args) {
 		int[] array = new int[100];
 		// Initializing array with 1,2,....,100
 		for(int i = 1; i <= 100; i++)
