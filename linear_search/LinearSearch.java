@@ -6,11 +6,11 @@
 public class LinearSearch {
 
 	public static int linearSearch(int[] arr, int searchElement) {
-		for(int i = 0; i < arr.length; i++){
+		for(int i = 0; i < arr.length; i++) {
 			if(arr[i] == searchElement)
 				return i;	// Element found
 		}
-		return -1;	// ELement not found
+		return -1;	// Element not found
 	}
 
 	public static void main(String[] args) {
@@ -20,7 +20,7 @@ public class LinearSearch {
 			array[i-1] = i;
 		// Elements to be searched in the array
 		int[] search = {12,55,34,102,78};
-		for(int i = 0; i < 5; i++){
+		for(int i = 0; i < 5; i++) {
 			int index = linearSearch(array, search[i]);
 			if(index >= 0)
 				System.out.println(search[i] + " found at index " + index);
