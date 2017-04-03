@@ -45,7 +45,7 @@ class Stack<T> {
         if (size == 0) {
             throw new NoSuchElementException("No element in Stack to Display");
         }
-        for (int i = size-1;i >= 0;i--) {
+        for (int i = size-1; i >= 0; i--) {
                 System.out.print(stack.get(i) + " ");
         }
         System.out.println();
