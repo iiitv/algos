@@ -7,43 +7,43 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// root = index root of the subtree, a is an array, HEAPSIZE is size of heap
-void  max_heapify(int a[], int root, int HEAPSIZE) {
+// root = index root of the subtree, a is an array, heapsize is size of heap
+void  max_heapify(int a[], int root, int heapsize) {
     int largest;
     int l = (2 * root) + 1;  // left child
     int r = (2 * root) + 2;  // Right child
     // Check if left child is larger than root.
-    if ((l <= HEAPSIZE) && (a[l] > a[root]))
+    if ((l <= heapsize) && (a[l] > a[root]))
          largest = l;
     else
          largest = root;
     // Check if right child is larger than largest.
-    if ((r <= HEAPSIZE) && (a[r] > a[largest]))
+    if ((r <= heapsize) && (a[r] > a[largest]))
          largest = r ;
     // If root is not the largest.
     if (largest != root) {
          int tmp = a[root];
          a[root] = a[largest];
          a[largest] = tmp;
-         max_heapify(a, largest, HEAPSIZE);
+         max_heapify(a, largest, heapsize);
     }
 }
 
 // a is the array.
-void heap_sort(int a[], int HEAPSIZE) {
+void heap_sort(int a[], int heapsize) {
     int i;
     // Building max heap.
-    for (i = HEAPSIZE/2; i >= 0; i--) {
-         max_heapify(a, i, HEAPSIZE);
+    for (i = heapsize/2; i >= 0; i--) {
+         max_heapify(a, i, heapsize);
     }
     // One by one extract an element from heap
-    for (i = HEAPSIZE; i > 0; i--) {
+    for (i = heapsize; i > 0; i--) {
         int tmp = a[i];
         a[i] = a[0];
         a[0] = tmp;
-        HEAPSIZE--;
+        heapsize--;
         // Again build max heap with the reduced array.
-        max_heapify(a, 0, HEAPSIZE);
+        max_heapify(a, 0, heapsize);
     }
 }
 
@@ -51,12 +51,12 @@ int main() {
     int i, r;
     // Unsorted data
     int a[] = {10000, -999, 240, 1111111, 3, 2, 452, -65};
-    int SIZE = sizeof(a)/sizeof(a[0]);
+    int size = sizeof(a)/sizeof(a[0]);
     // Calling heap_sort function
-    heap_sort(a, SIZE-1);
+    heap_sort(a, size-1);
     printf("After Sorting:\t");
 
-    for (i = 0; i < SIZE; i++)
+    for (i = 0; i < size; i++)
         printf("%d ", a[i]);
 
     return 0;
