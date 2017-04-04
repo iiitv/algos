@@ -51,7 +51,7 @@ int main() {
     int i, r;
     // Unsorted data
     int a[] = {10000, -999, 240, 1111111, 3, 2, 452, -65};
-    int SIZE = sizeof(a)/sizeof(a[0]-1);
+    int SIZE = sizeof(a)/sizeof(a[0]);
     // Calling heap_sort function
     heap_sort(a, SIZE-1);
     printf("After Sorting:\t");
