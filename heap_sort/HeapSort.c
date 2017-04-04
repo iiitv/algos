@@ -4,26 +4,26 @@
  * Space complexity: O(1).
  */
 
-#include<stdio.h>
+#include <stdio.h>
 #include <stdlib.h>
 
-//i is the root of subtree, a is an array, HEAPSIZE is size of heap
-void  max_heapify(int a[], int i, int HEAPSIZE) {
+// root = index root of the subtree, a is an array, HEAPSIZE is size of heap
+void  max_heapify(int a[], int root, int HEAPSIZE) {
     int largest;
-    int l = (2 * i) + 1;  // left child
-    int r = (2 * i) + 2;  // Right child
+    int l = (2 * root) + 1;  // left child
+    int r = (2 * root) + 2;  // Right child
     // Check if left child is larger than root.
-    if ((l <= HEAPSIZE) && (a[l] > a[i]))
+    if ((l <= HEAPSIZE) && (a[l] > a[root]))
          largest = l;
     else
-         largest = i;
-    // Check if right child is larger than root.
+         largest = root;
+    // Check if right child is larger than largest.
     if ((r <= HEAPSIZE) && (a[r] > a[largest]))
          largest = r ;
     // If root is not the largest.
-    if (largest != i) {
-         int tmp = a[i];
-         a[i] = a[largest];
+    if (largest != root) {
+         int tmp = a[root];
+         a[root] = a[largest];
          a[largest] = tmp;
          max_heapify(a, largest, HEAPSIZE);
     }
@@ -48,9 +48,10 @@ void heap_sort(int a[], int HEAPSIZE) {
 }
 
 int main() {
-    int i, r, SIZE = 8;
+    int i, r;
     // Unsorted data
     int a[] = {10000, -999, 240, 1111111, 3, 2, 452, -65};
+    int SIZE = sizeof(a)/sizeof(a[0]-1);
     // Calling heap_sort function
     heap_sort(a, SIZE-1);
     printf("After Sorting:\t");
