@@ -17,7 +17,7 @@ Community (college) maintained list of Algorithms and Data Structures implementa
 | [Counting Sort](www.geeksforgeeks.org/counting-sort/)| | | [\[X\]](counting_sort/CountingSort.java) | |
 | [Euclidean GCD](https://en.wikipedia.org/wiki/Euclidean_algorithm) | [\[X\]](euclidean_gcd/euclidean_gcd.c) | | [\[X\]](euclidean_gcd/EuclideanGCD.java) | [\[X\]](euclidean_gcd/euclidean_gcd.py) |
 | [Exponentation by Squaring](https://en.wikipedia.org/wiki/Exponentiation_by_squaring) | [\[X\]](exponentation_by_squaring/exponentation_by_squaring.c) ||||
-| [Heap Sort](https://en.wikipedia.org/wiki/Heapsort) | [\[X\]](heap_sort/HeapSort.c) | | | |
+| [Heap Sort](https://en.wikipedia.org/wiki/Heapsort) | [\[X\]](heap_sort/heap_sort.c) | | | |
 | [Insertion Sort](https://en.wikipedia.org/wiki/Insertion_sort) | [\[X\]](insertion_sort/insertion_sort.c) | | | [\[X\]](insertion_sort/insertion_sort.py) |
 | [k-NN](https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm) | | | | [\[X\]](k_nn/k_nn.py) |
 | [Largest Sum Contiguous Subarray](http://www.geeksforgeeks.org/largest-sum-contiguous-subarray/) | [\[X\]](largest_sum_contiguous_subarray/largestSumContiguousSubarray.c) | | [\[X\]](largest_sum_contiguous_subarray/LargestSumContiguousSubarray.java) | |
