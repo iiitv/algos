@@ -3,7 +3,6 @@
 * T defines the type of Linked List to be created
 */
 
-import java.lang.IndexOutOfBoundsException;
 import java.util.NoSuchElementException;
 
 // Class to create a Node that contains data and pointer to next Node 
@@ -209,7 +208,7 @@ class LinkedListTest {     // Test Class to check working of Linked List
 
         // Testing Exceptions thrown
         try {
-            int temp = list.removeLast();
+            list.removeLast();
         } catch (NoSuchElementException e) {
             System.out.println("List Empty");
         }
