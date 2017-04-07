@@ -39,14 +39,14 @@ class LinkedList<T> {
     
     // Method to add an element to the end of the Linked List
     public void addLast (T input) {
-        if(head == null) {     
+        if (head == null) {     
             Node<T> newNode = new Node<T>(input);
             head = newNode;
             sizeOfList = 1;
         }
         else {
             Node<T> temp = head;     
-            while(temp.next != null)
+            while (temp.next != null)
                 temp = temp.next;    
             Node<T> newNode = new Node<T>(input);
             temp.next = newNode;    
@@ -56,10 +56,10 @@ class LinkedList<T> {
     
     // Method to add an element at a given index
     public void add(T input, int index) {
-        if(index < 0 || index > sizeOfList)     
+        if (index < 0 || index > sizeOfList)     
             throw new IndexOutOfBoundsException("Invalid Index");    
         Node<T> temp = head;
-        if(index == 0)
+        if (index == 0)
             addFront(input);
         else {
             for (int i = 0; i < index-1; i++)  
@@ -73,7 +73,7 @@ class LinkedList<T> {
     
     // Method to remove the front element from the Linked List
     public T removeFront() {
-        if(isEmpty())     
+        if (isEmpty())     
             throw new NoSuchElementException();
         T removedElement = head.data; 
         head = head.next;     
@@ -83,16 +83,16 @@ class LinkedList<T> {
     
     // Method to remove the last element from the Linked List
     public T removeLast() {
-        if(isEmpty())
+        if (isEmpty())
             throw new NoSuchElementException();
         T removedElement;
-        if(head.next == null) {    
+        if (head.next == null) {    
             removedElement = head.data;
             head = null;
         }
         else {    
             Node<T> temp = head;
-            while(temp.next.next != null)   
+            while (temp.next.next != null)   
                 temp = temp.next;
             removedElement = temp.next.data;   
             temp.next = null;  
@@ -103,11 +103,11 @@ class LinkedList<T> {
     
     // Method to remove element at specific index from the Linked List
     public T remove(int index) {
-        if(isEmpty())
+        if (isEmpty())
             throw new NoSuchElementException();
-        if(index < 0 || index > sizeOfList)
+        if (index < 0 || index > sizeOfList)
             throw new IndexOutOfBoundsException("Invalid Index");
-        if(index > 0) {
+        if (index > 0) {
             Node<T> temp = head;
             for (int i = 0; i < index-1; i++) 
                 temp = temp.next;       
@@ -122,8 +122,8 @@ class LinkedList<T> {
     // Method to search a element in the Linked List returns its index i
     public int search(T input) {
         Node<T> temp = head;
-        for(int i = 0; i < sizeOfList; i++) {
-            if(temp.data == input)
+        for (int i = 0; i < sizeOfList; i++) {
+            if (temp.data == input)
                 return i;   
             else
                 temp = temp.next;
@@ -134,9 +134,9 @@ class LinkedList<T> {
     // Method to display the Linked List
     public void display() {
         Node<T> temp = head;
-        if(temp != null) {
+        if (temp != null) {
             System.out.print("[");
-            while(temp != null) {
+            while (temp != null) {
                 System.out.print(temp.data+", ");
                 temp = temp.next;
             }
@@ -192,13 +192,13 @@ class LinkedListTest {     // Test Class to check working of Linked List
         
         // Searching for an element in the Linked List
         int found = list.search(5);
-        if(found >= 0)
+        if (found >= 0)
             System.out.println("Element found at index: "+list.search(5));
         else
             System.out.println("Element not found");
         
         // Checking size of list and whether it is empty
-        if(list.isEmpty())
+        if (list.isEmpty())
             System.out.println("List is empty");
         else
             System.out.println("List is not empty, Size of list: "+list.size());
