@@ -200,7 +200,7 @@ class AVL{
     }
 }
 
-public class AvlTree{
+public class AVLTree{
     public static void main(String[] args) {
         AVL s = new AVL();        
         s.insert(10);
