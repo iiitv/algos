@@ -1,11 +1,11 @@
 import java.util.*;
-import java.lang.*;
+
 
 class AVLNode {
-    AVLNode right;
-    AVLNode left;
-    int data;
-    int height;
+    public AVLNode right;
+    public AVLNode left;
+    public int data;
+    public int height;
     AVLNode(int num) {
         data = num;
         left = null;
@@ -28,7 +28,7 @@ class AVL{
         root = null;
     }
     
-    int height(AVLNode root) {
+    public int height(AVLNode root) {
         if(root == null)
             return 0; 
         return root.height; 
@@ -138,7 +138,7 @@ class AVL{
     public void delete(int k) {
         if (isEmpty())
             System.out.println("Tree Empty");
-        else if (search(k) == false)
+        else if (!search(k))
             System.out.println("Sorry " + k + " is not present");
         else{
             root = delete(root, k);
@@ -146,9 +146,11 @@ class AVL{
         }
     }
     private AVLNode delete(AVLNode root, int k) {
-        AVLNode p, p2, n;
+        AVLNode p;
+        AVLNode n;
         if (root.data == k) {
-            AVLNode left, right;
+            AVLNode left; 
+            AVLNode right;
             left = root.left;
             right = root.right;
             if (left == null && right == null)
@@ -200,7 +202,6 @@ class AVL{
 
 public class AvlTree{
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
         AVL s = new AVL();        
         s.insert(10);
         s.insert(14);
@@ -210,10 +211,10 @@ public class AvlTree{
         s.insert(2);
         s.insert(1);
         s.insert(7);
-        s.inorder();   
-        System.out.println(s.search(7)); 
-        s.delete(1);
-        System.out.println(s.search(1)); 
-        s.inorder();
+        s.inorder();    // Printing in inorder
+        System.out.println(s.search(7));    // Searching 7 
+        s.delete(1);    // Deleting 1
+        System.out.println(s.search(1));    // Searching 1
+        s.inorder();    // Printing in inorder, again 
     }
 }
