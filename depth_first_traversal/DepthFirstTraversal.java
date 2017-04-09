@@ -8,9 +8,9 @@ public class DepthFirstTraversal {
     public static int[] arr;
     public static int k = 0;
     // Array  of lists for Adjacency List Representation
-    private static LinkedList<Integer>[] adj;
+    public static LinkedList<Integer>[] adj;
     
-    DepthFirstTraversal(int v) {
+    public static void DepthFirstTraversal(int v) {
         adj = new LinkedList[v];
         for (int i = 0; i < v; ++i) {
             adj[i] = new LinkedList();
@@ -45,7 +45,7 @@ public class DepthFirstTraversal {
     }
 
     public static void main(String[] args) {
-        DepthFirstTraversal g = new DepthFirstTraversal(4);
+        DepthFirstTraversal(4);
         arr = new int[4];
         addEdge(0, 1);
         addEdge(0, 2);
