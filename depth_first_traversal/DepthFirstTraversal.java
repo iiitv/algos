@@ -7,12 +7,10 @@ public class DepthFirstTraversal {
 
     public static int[] arr;
     public static int k = 0;
-    private static int V;   // No. of vertices 
     // Array  of lists for Adjacency List Representation
     private static LinkedList<Integer>[] adj;
     
     DepthFirstTraversal(int v) {
-        V = v;
         adj = new LinkedList[v];
         for (int i = 0; i < v; ++i) {
             adj[i] = new LinkedList();
@@ -23,7 +21,7 @@ public class DepthFirstTraversal {
     private static void addEdge(int v, int w) {
         adj[v].add(w);  
     }
-    
+
     // A function used by DFS
     private static void depthFirstTraversal(int v, Set visited) {
         // Mark the current node as visited 
@@ -39,7 +37,7 @@ public class DepthFirstTraversal {
         }
     }
 
-    public static void DFS(int v) {        
+    public static void dFS(int v) {        
         // false by default in java)
         Set<Integer> visited = new HashSet();
         // Call the recursive helper function to print DFS traversal
@@ -56,7 +54,7 @@ public class DepthFirstTraversal {
         addEdge(2, 3);
         addEdge(3, 0);
         System.out.println("Depth First Traversal starting from vertex 2");
-        DFS(3);
+        dFS(2);
 
         for (int element : arr) {            
             System.out.println(element);            
