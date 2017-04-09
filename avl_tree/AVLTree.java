@@ -1,5 +1,8 @@
-import java.util.*;
-
+/*
+*  Following is the implementation of AVL Tree.
+*  The time complexity of AVL insert and delete operations is O(Logn).
+*  Space complexity is O(n).
+*/
 
 class AVLNode {
     public AVLNode right;
