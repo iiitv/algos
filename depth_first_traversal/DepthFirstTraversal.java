@@ -8,15 +8,8 @@ public class DepthFirstTraversal {
     public static int[] arr;
     public static int k = 0;
     // Array  of lists for Adjacency List Representation
-    public static LinkedList<Integer>[] adj;
+    public static LinkedList<Integer>[] adj;    
     
-    public static void DepthFirstTraversal(int v) {
-        adj = new LinkedList[v];
-        for (int i = 0; i < v; ++i) {
-            adj[i] = new LinkedList();
-        }
-    }
-
     //Function to add an edge into the DepthFirstTraversal
     private static void addEdge(int v, int w) {
         adj[v].add(w);  
@@ -45,8 +38,12 @@ public class DepthFirstTraversal {
     }
 
     public static void main(String[] args) {
-        DepthFirstTraversal(4);
-        arr = new int[4];
+    	int n = 4;
+        adj = new LinkedList[n];
+        for (int i = 0; i < n; ++i) {
+            adj[i] = new LinkedList();
+        }
+        arr = new int[n];
         addEdge(0, 1);
         addEdge(0, 2);
         addEdge(1, 2);
