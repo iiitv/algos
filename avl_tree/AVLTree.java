@@ -53,7 +53,7 @@ class AVL{
         AVLNode temp = y.right;
         y.right = root;
         root.left = temp;
-        root.height= 1 + Math.max(height(root.left), height(root.right));    
+        root.height = 1 + Math.max(height(root.left), height(root.right));    
         y.height = 1 + Math.max(height(y.left), height(y.right));   
         return y;
     } 
@@ -63,7 +63,7 @@ class AVL{
         AVLNode temp = y.left;
         y.left = root;
         root.right = temp;
-        root.height= 1 + Math.max(height(root.left), height(root.right));    
+        root.height = 1 + Math.max(height(root.left), height(root.right));    
         y.height = 1 + Math.max(height(y.left), height(y.right));   
         return y;
     } 
@@ -165,7 +165,7 @@ class AVL{
                     p = p.left;
                 }
                 root.data = p.data; 
-                root.right= delete(right, p.data);
+                root.right = delete(right, p.data);
             }
         }
         else if (k < root.data) {
