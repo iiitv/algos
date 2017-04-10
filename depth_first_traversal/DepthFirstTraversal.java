@@ -5,22 +5,19 @@ import java.util.Set;
 
 public class DepthFirstTraversal {
 
-    public static int[] arr;
-    public static int k = 0;
     // Array  of lists for Adjacency List Representation
-    public static LinkedList<Integer>[] adj;    
-    
+    public static LinkedList<Integer>[] adj;
+
     //Function to add an edge into the DepthFirstTraversal
     private static void addEdge(int v, int w) {
-        adj[v].add(w);  
+        adj[v].add(w);
     }
 
     // A function used by DFS
     private static void depthFirstTraversal(int v, Set visited) {
         // Mark the current node as visited 
         visited.add(v);
-        arr[k] = v;
-        k++;        
+        System.out.println(v);
         Iterator<Integer> i = adj[v].listIterator();
         while (i.hasNext()) {
             int n = i.next();
@@ -30,20 +27,22 @@ public class DepthFirstTraversal {
         }
     }
 
-    public static void dFS(int v) {        
+    public static void dFS(int v) {
         // false by default in java)
         Set<Integer> visited = new HashSet();
         // Call the recursive helper function to print DFS traversal
         depthFirstTraversal(v, visited);
     }
 
-    public static void main(String[] args) {
-    	int n = 4;
+    public static void initEdges(int n) {
         adj = new LinkedList[n];
         for (int i = 0; i < n; ++i) {
             adj[i] = new LinkedList();
         }
-        arr = new int[n];
+    }
+
+    public static void main(String[] args) {
+        initEdges(4);
         addEdge(0, 1);
         addEdge(0, 2);
         addEdge(1, 2);
@@ -52,9 +51,5 @@ public class DepthFirstTraversal {
         addEdge(3, 0);
         System.out.println("Depth First Traversal starting from vertex 2");
         dFS(2);
-
-        for (int element : arr) {            
-            System.out.println(element);            
-        }
     }
 }
