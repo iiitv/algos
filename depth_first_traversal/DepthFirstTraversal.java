@@ -27,7 +27,7 @@ public class DepthFirstTraversal {
         }
     }
 
-    public static void dFS(int v) {
+    public static void dfs(int v) {
         // false by default in java)
         Set<Integer> visited = new HashSet();
         // Call the recursive helper function to print DFS traversal
@@ -50,6 +50,6 @@ public class DepthFirstTraversal {
         addEdge(2, 3);
         addEdge(3, 0);
         System.out.println("Depth First Traversal starting from vertex 2");
-        dFS(2);
+        dfs(2);
     }
 }
