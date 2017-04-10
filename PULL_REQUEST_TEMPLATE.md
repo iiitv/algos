@@ -13,4 +13,4 @@ PRs which don't agree to all the points mentioned below will be rejected.
 - [ ] I have followed the [coding guidelines](https://github.com/iiitv/algos/blob/master/CONTRIBUTING.md#cs) for this project.
 - [ ] My code follows the [skeleton code structure](https://github.com/iiitv/algos/blob/master/CONTRIBUTING.md#sample).
 - [ ] This pull request has a descriptive title. For example, `Added {Algorithm/DS name} [{Language}]`, not `Update README.md` or `Added new code`.
-- [ ] This pull request shall be closed if I fail to update it in a period of 7 days or more.
+- [ ] This pull request will be closed if I fail to update it even once in a continuous timespan of 7 days.
