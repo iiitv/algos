@@ -1,7 +1,6 @@
 public class InsertionSort {
 	
 	private static void insertionSort(int[] arr) {
-		
 		for (int i = 1; i < arr.length; i++) {
 			int j = i - 1;
 			int key = arr[i];	// Element to be compared
@@ -17,12 +16,11 @@ public class InsertionSort {
 		}
 	}
 	
-	public static void main(String args[]) {
-		
+	public static void main(String[] args) {
 		int[] arr = {12, 11, 13, 5, 6};
 		insertionSort(arr);
 		
-		for (int x: arr)				// Printing sorted array
+		for (int x: arr)	// Printing sorted array
 			System.out.print(x+" ");
 	}
 }
