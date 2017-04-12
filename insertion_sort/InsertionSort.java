@@ -20,7 +20,8 @@ public class InsertionSort {
 		int[] arr = {12, 11, 13, 5, 6};
 		insertionSort(arr);
 		
-		for (int x: arr)	// Printing sorted array
+		for (int x: arr) {	// Printing sorted array
 			System.out.print(x+" ");
+		}
 	}
 }
