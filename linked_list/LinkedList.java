@@ -18,13 +18,13 @@ class Node<T> {
 }
 
 // Class containing methods to be performed on Linked List
-class LinkedList_<T> {
+class LinkedList<T> {
     
     private Node<T> head;     // Pointer to first node of the Linked List
     private int sizeOfList = 0;     // Size of the Linked List
     
     // Constructor to create an empty Linked List
-    public LinkedList_() { 
+    public LinkedList() { 
         head = null;
     }
     
@@ -152,12 +152,10 @@ class LinkedList_<T> {
     public boolean isEmpty() {
         return sizeOfList == 0;
     }
-}
 
-class LinkedList {     // Test Class to check working of Linked List
     public static void main(String[] args) {
 
-        LinkedList_<Integer> list = new LinkedList_<Integer>();     // Creating an empty Linked List
+        LinkedList<Integer> list = new LinkedList<Integer>();     // Creating an empty Linked List
         
         // Adding element to the list
         list.addFront(3);
