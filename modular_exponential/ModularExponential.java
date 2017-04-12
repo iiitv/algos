@@ -5,7 +5,7 @@ public class ModularExponential {
 		BigInteger result = BigInteger.ONE;
 		base = base % mod;
 		while(power > 0) {
-			if(power % 2 == 1) { // i.e. if power is odd it will return 1 (true), else flase
+			if(power % 2 == 1) { 
 				result = result.multiply(BigInteger.valueOf(base));
 				result = result.mod(BigInteger.valueOf(mod));
 			}
