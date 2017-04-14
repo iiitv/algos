@@ -141,19 +141,20 @@ class AVL{
         return found;
     }
      
-    public void inorder() {
+    public void printPreorder() {
       
-        inorder(root);
+        printPreorder(root);
     }
      
-    private void inorder(AVLNode root) {
+    private void printPreorder(AVLNode root) {
       
         if (root != null) {
-            inorder(root.left);
             System.out.print(root.data + " ");
-            inorder(root.right);
+            printPreorder(root.left);
+            printPreorder(root.right);
         }
     }
+   
     public void delete(int k) {
       
         if (isEmpty())
@@ -165,6 +166,7 @@ class AVL{
             System.out.println(k + " deleted from the tree");
         }
     }
+    
     private AVLNode delete(AVLNode root, int k) {
         
         AVLNode p;
@@ -233,10 +235,10 @@ public class AVLTree{
         s.insert(2);
         s.insert(1);
         s.insert(7);
-        s.inorder();    // Printing in inorder
+        s.printPreorder();    // Printing in inorder
         System.out.println(s.search(7));    // Searching 7 
         s.delete(1);    // Deleting 1
         System.out.println(s.search(1));    // Searching 1
-        s.inorder();    // Printing in inorder, again 
+        s.printPreorder();    // Printing in inorder, again 
     }
 }
