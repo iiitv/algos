@@ -10,7 +10,6 @@ class AVLNode {
     public int data;
     public int height;
     AVLNode(int num) {
-       
         data = num;
         left = null;
         right = null;
@@ -18,12 +17,10 @@ class AVLNode {
     }
     
     public void setLeft(AVLNode temp) {
-       
         left = temp;
     }
     
     public void setRight(AVLNode temp) {
-       
         right = temp;
     }
 }
@@ -31,36 +28,30 @@ class AVLNode {
 class AVL{
     private AVLNode root;
     public AVL() {
-       
         root = null;
     }
     
     public int height(AVLNode root) {
-       
         if (root == null)
             return 0; 
         return root.height; 
     }
 
     public boolean isEmpty() {
-       
         return root == null;
     }
     
     public int getBalance(AVLNode root) {
-       
         if (root == null)
             return 0;
         return height(root.left) - height(root.right); 
     }
 
     public void insert(int data) {
-        
         root = insert(root, data);
     }
     
     private AVLNode rightRotate(AVLNode root) {
-        
         AVLNode y = root.left;  
         AVLNode temp = y.right;
         y.right = root;
@@ -71,7 +62,6 @@ class AVL{
     } 
       
     private AVLNode leftRotate(AVLNode root) {
-        
         AVLNode y = root.right;  
         AVLNode temp = y.left;
         y.left = root;
@@ -82,7 +72,6 @@ class AVL{
     } 
     
     private AVLNode insert(AVLNode root, int data) {
-        
         if (root == null) {
             root = new AVLNode(data);
         }
@@ -92,7 +81,7 @@ class AVL{
              }
               else if (data > root.data) {
                 root.right = insert(root.right, data);
-            } 
+             } 
               else {
                     return root;
               }        
@@ -119,12 +108,10 @@ class AVL{
     }
     
     public boolean search(int val) { 
-   
         return search(root, val);
     }
     
     private boolean search(AVLNode root, int val) {
-    
         boolean found = false;
         while ((root != null) && !found) {
             int rval = root.data;
@@ -142,12 +129,10 @@ class AVL{
     }
      
     public void printPreorder() {
-      
         printPreorder(root);
     }
      
     private void printPreorder(AVLNode root) {
-      
         if (root != null) {
             System.out.print(root.data + " ");
             printPreorder(root.left);
@@ -156,7 +141,6 @@ class AVL{
     }
    
     public void delete(int k) {
-      
         if (isEmpty())
             System.out.println("Tree Empty");
         else if (!search(k))
@@ -168,7 +152,6 @@ class AVL{
     }
     
     private AVLNode delete(AVLNode root, int k) {
-        
         AVLNode p;
         AVLNode n;
         if (root.data == k) {
@@ -225,7 +208,6 @@ class AVL{
 
 public class AVLTree{
     public static void main(String[] args) {
-     
         AVL s = new AVL();        
         s.insert(10);
         s.insert(14);
@@ -235,10 +217,10 @@ public class AVLTree{
         s.insert(2);
         s.insert(1);
         s.insert(7);
-        s.printPreorder();    // Printing in inorder
+        s.printPreorder();    // Printing in preorder
         System.out.println(s.search(7));    // Searching 7 
         s.delete(1);    // Deleting 1
         System.out.println(s.search(1));    // Searching 1
-        s.printPreorder();    // Printing in inorder, again 
+        s.printPreorder();    // Printing in preorder, again 
     }
 }
