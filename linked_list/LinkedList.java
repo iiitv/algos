@@ -7,8 +7,8 @@ import java.util.NoSuchElementException;
 
 // Class to create a Node that contains data and pointer to next Node 
 class Node<T> {
-    T data;     // Data of type T
-    Node<T> next;     // Pointer to next Node
+    public T data;     // Data of type T
+    public Node<T> next;     // Pointer to next Node
 
     // Constructor to create a Node
     public Node(T input) {  
