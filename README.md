@@ -39,6 +39,7 @@ Community (college) maintained list of Algorithms and Data Structures implementa
 | Data Structure | C | CPP | Java | Python |
 |:--------------|:----------------:|:----------------:|:----------------:|:-----------------:|
 | [Stack](https://en.wikipedia.org/wiki/Stack_(abstract_data_type)) | | | [\[X\]](stack/Stack.java) | [\[X\]](stack/stack.py) |
+| [Linked List](https://en.wikipedia.org/wiki/Linked_list) | | | [\[X\]](linked_list/LinkedList.java) | |
 
 
 ## Resources
