@@ -190,7 +190,7 @@ class LinkedList<T> {
         // Searching for an element in the Linked List
         int found = list.search(5);
         if (found >= 0)
-            System.out.println("Element found at index: "+list.search(5));
+            System.out.println("Element found at index: " + list.search(5));
         else
             System.out.println("Element not found");
         
@@ -198,7 +198,7 @@ class LinkedList<T> {
         if (list.isEmpty())
             System.out.println("List is empty");
         else
-            System.out.println("List is not empty, Size of list: "+list.size());
+            System.out.println("List is not empty, Size of list: " + list.size());
 
         // Emptying the LinkedList
         while (!list.isEmpty())
