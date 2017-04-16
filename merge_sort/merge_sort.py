@@ -1,13 +1,14 @@
 def merge(array, left, right):
     """
     Perform Merge Operation between arrays.
-
+    Time Complexity: Theta(nLogn)
+    Auxiliary Space: O(n)
     :param array: Iterable of elements
     :param left: left limit for merge sort
     :param right: right limit for merge sort
     :return: no returns, merges arrays.
     """
-    mid = int((left + right )/ 2)
+    mid = int((left + right) / 2)
     s1 = int(mid - left + 1)
     s2 = int(right - mid)
     l = [0] * s1
@@ -41,25 +42,27 @@ def merge(array, left, right):
         j = j + 1
 
 
-def sort(array, left, right):
-	"""
-    Perform Merge Sort.
-
+def merge_sort(array, left, right):
+    """
+    Perform sort using merge function.
+    Time Complexity : O(nlog(n)).
+    Space Complexity : O(n).
     :param array: Iterable of elements
     :param left: left limit for merge sort
     :param right: right limit for merge sort
     :return: no returns, sorts array
-   	"""
-	if(left < right):
-		mid = int((left + right) / 2)
-		sort(array, left, mid)
-		sort(array, mid + 1, right)
-		merge(array, left, right)
+    """
+    if(left < right):
+        mid = int((left + right) / 2)
+        merge_sort(array, left, mid)
+        merge_sort(array, mid + 1, right)
+        merge(array, left, right)
+
 
 def main():
     a = [15, 19, 18, 26, 456, 87, 45]
-    sort(a, 0, len(a) - 1)
+    merge_sort(a, 0, len(a) - 1)
     print(a)
 
 if __name__ == '__main__':
-	main()
+    main()
