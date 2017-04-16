@@ -24,8 +24,8 @@ def merge(array, left, right):
     while r:
         array[k] = r.pop(0)
         k += 1
- 
- 
+
+
 def merge_sort(array, left, right):
     """
     Perform sort using merge function.
@@ -41,8 +41,8 @@ def merge_sort(array, left, right):
         merge_sort(array, left, mid)
         merge_sort(array, mid + 1, right)
         merge(array, left, right)
- 
- 
+
+
 def main():
     a = [15, 19, 18, 26, 456, 87, 45, -1, 558897984]
     merge_sort(a, 0, len(a) - 1)
