@@ -18,7 +18,6 @@ def merge(array, left, right):
         else:
             array[k] = r.pop(0)
         k += 1
- 
     while l:
         array[k] = l.pop(0)
         k += 1
