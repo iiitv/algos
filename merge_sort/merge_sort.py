@@ -47,9 +47,6 @@ def main():
     a = [15, 19, 18, 26, 456, 87, 45, -1, 558897984]
     merge_sort(a, 0, len(a) - 1)
     print(a)
- 
- 
+
 if __name__ == '__main__':
     main()
-
-    
