@@ -17,6 +17,6 @@ func main() {
     if index == -1 {
         fmt.Println("Number not found")
     } else {
-        fmt.Println("10 found at index ", index)
+        fmt.Println("10 found at index", index)
     }
 }
