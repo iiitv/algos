@@ -10,7 +10,7 @@ Community (college) maintained list of Algorithms and Data Structures implementa
 
 ## Implemented Algorithms
 
-| Algorithm | C | CPP | Java | Python | Golang |  
+| Algorithm | C | CPP | Java | Python | Golang |
 |:--------------|:----------------:|:----------------:|:----------------:|:-----------------:|:-----------------:|
 | [Binary Search](https://en.wikipedia.org/wiki/Binary_search_algorithm) | [\[X\]](binary_search/binary_search.c) | | [\[X\]](binary_search/BinarySearch.java) | [\[X\]](binary_search/binary_search.py) | |
 | [Coin Change Problem](http://www.algorithmist.com/index.php/Coin_Change) | [\[X\]](coin_change_problem/coin_change_problem.c) | | | | |
@@ -36,7 +36,7 @@ Community (college) maintained list of Algorithms and Data Structures implementa
 
 ## Implemented Data Structures
 
-| Data Structure | C | CPP | Java | Python | Golang |  
+| Data Structure | C | CPP | Java | Python | Golang |
 |:--------------|:----------------:|:----------------:|:----------------:|:-----------------:|:-----------------:|
 | [Binary Search Tree](https://en.wikipedia.org/wiki/Binary_search_tree) | | | [\[X\]](binary_search_tree/BinarySearchTree.java) | | |
 | [Linked List](https://en.wikipedia.org/wiki/Linked_list) | | | [\[X\]](linked_list/LinkedList.java) | | |
