@@ -5,10 +5,10 @@ import (
         "math"
 )
 
-// N = Limit, change N to check primes till N
+// N = Limit, change N to get all primes <= N
 const N = 20
 
-// SieveOfEratosthenes Main algorithm, bool type
+// SieveOfEratosthenes returns bool array primes
 func SieveOfEratosthenes()[N + 1] bool {
     var primes[N + 1] bool
     sqrtOfn := int(math.Floor(math.Sqrt(N)) + 1)
