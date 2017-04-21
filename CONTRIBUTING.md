@@ -121,3 +121,23 @@ public class QuickSort {
     }
 }
 ```
+
+#### Golang
+
+```go
+package main
+
+import "fmt"
+
+// QuickSort sorts an array using QuickSort algorithm
+func QuickSort(array []int) []int {
+    // Your implementation here
+    return array
+}
+
+func main() {
+    array := []int{2, 3, 0, 4}
+    sortedArray := QuickSort(array)
+    fmt.Println(sortedArray)
+}
+```
