@@ -4,7 +4,10 @@ Thanks for considering contributing to this ever-growing list of algorithm and d
 Your contribution is valuable.
 In order to help us evaluate PRs better, we ask you to have a look at the following declaration and check the points you agree with. ( [x] )
 PRs which don't agree to all the points mentioned below will be rejected. 
+Also make sure that this PR corresponds to one and only one issue. Write the issue number in the space provided below.
 -->
+
+Fixes #{ISSUE_NUMBER}
 
 
 #### By submitting this pull request I confirm I've read and complied with the below declarations.
