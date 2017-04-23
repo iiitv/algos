@@ -5,19 +5,16 @@ import (
 	"math"
 )
 
-// N = Limit, change N to get all primes <= N
-const N = 20
-
 // SieveOfEratosthenes returns bool array primes
-func SieveOfEratosthenes() [N + 1]bool {
-	var primes [N + 1]bool
-	sqrtOfn := int(math.Floor(math.Sqrt(N)) + 1)
+func SieveOfEratosthenes(n int) []bool {
+	primes := make([]bool, n+1)
+	sqrtOfN := int(math.Floor(math.Sqrt(float64(n))) + 1)
 	for j := range primes {
 		primes[j] = true
 	}
-	for i := 2; i <= sqrtOfn; i++ {
+	for i := 2; i <= sqrtOfN; i++ {
 		if primes[i] {
-			for j := 2 * i; j < N+1; j += i {
+			for j := 2 * i; j < n+1; j += i {
 				primes[j] = false
 			}
 		}
@@ -26,9 +23,10 @@ func SieveOfEratosthenes() [N + 1]bool {
 }
 
 func main() {
-	var primes [N + 1]bool
-	primes = SieveOfEratosthenes()
-	for i := 2; i <= N; i++ {
+	// Change the value of n to get all primes <= n
+	n := 29
+	primes := SieveOfEratosthenes(n)
+	for i := 2; i <= n; i++ {
 		if primes[i] {
 			fmt.Println(i)
 		}
