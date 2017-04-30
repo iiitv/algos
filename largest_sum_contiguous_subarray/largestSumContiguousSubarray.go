@@ -21,5 +21,5 @@ func largestSumContinousSubArray(arr []int) int {
 
 func main() {
 	array := []int{-2, -3, 3, -1, -2, 1, 5, -3}
-	fmt.Println(largestSumContinousSubArray(array[:]))
+	fmt.Println(largestSumContinousSubArray(array))
 }
