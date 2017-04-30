@@ -21,7 +21,7 @@ Community (college) maintained list of Algorithms and Data Structures implementa
 | [Heap Sort](https://en.wikipedia.org/wiki/Heapsort) | [\[X\]](heap_sort/heap_sort.c) | | [\[X\]](heap_sort/HeapSort.java) | | |
 | [Insertion Sort](https://en.wikipedia.org/wiki/Insertion_sort) | [\[X\]](insertion_sort/insertion_sort.c) | | [\[X\]](insertion_sort/InsertionSort.java)| [\[X\]](insertion_sort/insertion_sort.py) | |
 | [k-NN](https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm) | | | | [\[X\]](k_nn/k_nn.py) | |
-| [Largest Sum Contiguous Subarray](http://www.geeksforgeeks.org/largest-sum-contiguous-subarray/) | [\[X\]](largest_sum_contiguous_subarray/largestSumContiguousSubarray.c) | | [\[X\]](largest_sum_contiguous_subarray/LargestSumContiguousSubarray.java) | | |
+| [Largest Sum Contiguous Subarray](http://www.geeksforgeeks.org/largest-sum-contiguous-subarray/) | [\[X\]](largest_sum_contiguous_subarray/largestSumContiguousSubarray.c) | | [\[X\]](largest_sum_contiguous_subarray/LargestSumContiguousSubarray.java) | | [\[X\]](largest_sum_contiguous_subarray/largestSumContiguousSubarray.go) |
 | [Linear Search](https://en.wikipedia.org/wiki/Linear_search) | [\[X\]](linear_search/linear_search.c) | | [\[X\]](linear_search/LinearSearch.java) | [\[X\]](linear_search/linear_search.py) | [\[X\]](linear_search/linear-search.go) | |
 | [Longest Common Subsequence](http://www.geeksforgeeks.org/dynamic-programming-set-4-longest-common-subsequence) | [\[X\]](longest_common_subsequence/longestCommonSubsequence.c) | | | | |
 | [Merge Sort](https://www.khanacademy.org/computing/computer-science/algorithms/merge-sort/a/overview-of-merge-sort) | [\[X\]](merge_sort/merge_sort.c) | | [\[X\]](merge_sort/MergeSort.java) | [\[X\]](merge_sort/merge_sort.py) | |
