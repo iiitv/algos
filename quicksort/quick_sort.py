@@ -1,16 +1,22 @@
 def median(a, i, j, k):
     """
-    Returns Median of 3 integers from array a.
+    Return median of 3 integers from array a.
     :param a: Iterable of elements
-    :param i: index of element of set, whose meadian is to be returned
-    :param j: index of element of set, whose meadian is to be returned
-    :param k: index element of set, whose meadian is to be returned
-    :return: returns the value of index median of a[i], a[j], a[k].
+    :param i: start element index
+    :param j: end element index
+    :param k: middle element index
+    :return: return median of values at indices i, j and k.
     """
     if a[i] > a[j]:
-        return j if a[j] < a[k] else k
+        if a[j] > a[k]:
+            return j
+        else:
+            return k
     else:
-        return i if a[i] < a[k] else k
+        if a[i] > a[k]:
+            return i
+        else:
+            return k
 
 
 def partition(array, l, r):
@@ -19,40 +25,41 @@ def partition(array, l, r):
     Time Complexity: Theta(nLogn)
     Auxiliary Space: O(n)
     :param array: Iterable of elements
-    :param l: left limit of array
+    :param l: pivot value for array
     :param r: right limit of array
-    :return: return q (partition index) value for function, used in partitioning of array.
+    :return: return q value for function, used in partitioning of array.
     """
     i = l - 1
-    pivot_index = median(array, l, r, (l + r) // 2)
-    pivot = array[pivot_index]
-    for j in range(l, r+1):
+    pivot_index = median(array, l, r, (l+r) // 2)
+    array[pivot_index], array[r] = array[r], array[pivot_index]
+    pivot = array[r]
+    for j in range(l, r):
         if array[j] <= pivot:
             i += 1
             array[i], array[j] = array[j], array[i]
     i += 1
-    array[i], array[r] = array[r], array[i]
+    array[r], array[i] = array[i], array[r]
     return i
 
 
-def quick_sort(array, pivot, right):
+def quick_sort(array, left, right):
     """
     Perform sort using partition function.
     Time Complexity : O(nlog(n)).
     Space Complexity : O(n).
     :param array: Iterable of elements
-    :param pivot: used as left limit of quick sort
+    :param left: used as left limit of quick sort
     :param right: right limit for quick sort
     :return: no returns, sorts array
     """
-    if pivot < right:
-        q = partition(array, pivot, right)
-        quick_sort(array, pivot, q - 1)
-        quick_sort(array, q, right)
+    if left < right:
+        q = partition(array, left, right)
+        quick_sort(array, left, q - 1)
+        quick_sort(array, q + 1, right)
 
 
 def main():
-    a = [15, 19, 18, 26, 456, 87, 45, 480, 5]
+    a = [1, 2, 1, 2, 3, 1, 2, 2, 1]
     quick_sort(a, 0, len(a) - 1)
     print(a)
 
