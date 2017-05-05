@@ -10,18 +10,14 @@ import tensorflow as tf
 
 
 # Create model with on hidden layer between input and output
-def multilayer_perceptron(x, weights, biases):
-    
+def multilayer_perceptron(x, weights, biases):  
     layer_1 = tf.add(tf.matmul(x, weights['h1']), biases['b1'])
     layer_1 = tf.nn.relu(layer_1)
-    
     # Output layer with linear activation
     out_layer = tf.matmul(layer_1, weights['out']) + biases['out']
     return out_layer
 
-
-def main():
-	
+def main():	
 	learning_rate = 0.001 #Learning rate for the Descent and optimizatiom
 	training_epochs = 15 #no of loops the training step runs
 	batch_size = 100 # Size of code chunks used for training prpose
@@ -64,22 +60,23 @@ def main():
 	        total_batch = int(mnist.train.num_examples/batch_size)
 	        # Loop over all batches
 	        for i in range(total_batch):
-	            batch_x, batch_y = mnist.train.next_batch(batch_size)
-	            # Run optimization op (backprop) and cost op (to get loss value)
-	            _, c = sess.run([optimizer, cost], feed_dict={x: batch_x,
-	                                                          y: batch_y})
-	            # Compute average loss of total batch
-	            avg_cost += c / total_batch
+	        	batch_x, batch_y = mnist.train.next_batch(batch_size)
+	            	# Run optimization op (backprop) and cost op (to get loss value)
+	        	_, c = sess.run([optimizer, cost], feed_dict={x: batch_x,y: batch_y})	                                                          
+	            	# Compute average loss of total batch
+	            	avg_cost += c / total_batch
+			i=i+1
 	        # Display logs per epoch step
 	        if epoch % display_step == 0:
 	            print("Epoch:", '%04d' % (epoch+1), "cost=", \
 	                "{:.9f}".format(avg_cost))
 	    print("Optimization Finished!")
 	
-	    # Test model by checking y_pred with y _given 
+	    # Test model by checking y_pred with y _given
 	    correct_prediction = tf.equal(tf.argmax(pred, 1), tf.argmax(y, 1))
 	    # Calculate accuracy
 	    accuracy = tf.reduce_mean(tf.cast(correct_prediction, "float"))
-	    print("Accuracy:", accuracy.eval({x: mnist.test.images, y: mnist.test.labels}))	
+	    print("Accuracy:", accuracy.eval({x: mnist.test.images, y: mnist.test.labels}))
+
 if __name__ == '__main__':
     main()
