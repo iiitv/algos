@@ -60,12 +60,10 @@ def main():
 	        total_batch = int(mnist.train.num_examples/batch_size)
 	        # Loop over all batches
 	        for i in range(total_batch):
-	        	batch_x, batch_y = mnist.train.next_batch(batch_size)
-	            	# Run optimization op (backprop) and cost op (to get loss value)
-	        	_, c = sess.run([optimizer, cost], feed_dict={x: batch_x,y: batch_y})	                                                          
-	            	# Compute average loss of total batch
-	            	avg_cost += c / total_batch
-			i=i+1
+	            batch_x, batch_y = mnist.train.next_batch(batch_size)
+	            _, c = sess.run([optimizer, cost], feed_dict={x: batch_x,y: batch_y})
+	            avg_cost += c / total_batch
+		    i=i+1
 	        # Display logs per epoch step
 	        if epoch % display_step == 0:
 	            print("Epoch:", '%04d' % (epoch+1), "cost=", \
