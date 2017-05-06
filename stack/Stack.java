@@ -18,12 +18,12 @@ class Stack<T> {
         stack.addLast(data);
     }
 
-    public T pop() throws NoSuchElementException{    // Remove element from top of Stack
+    public T pop() throws NoSuchElementException {    // Remove element from top of Stack
         return stack.removeLast();
     }
 }
 
-public class StackTest {    // Tester Class to check the working of Stack
+class StackTest {    // Tester Class to check the working of Stack
     public static void main(String[] args) {
         Stack<Integer> obj = new Stack<>();
         System.out.println("Putting element in the stack.");
@@ -33,11 +33,11 @@ public class StackTest {    // Tester Class to check the working of Stack
         }
         System.out.println("\nPoping elements out of stack.");
         while(true) { // Remove the elements till stack is empty,
-            try{
+            try {
                 Integer curr_element = obj.pop();
                 System.out.println("Popped " + curr_element);
             }
-            catch(NoSuchElementException nsee){
+            catch(NoSuchElementException nsee) {
                 System.out.println("Stack is empty now.");
                 break;
             }
