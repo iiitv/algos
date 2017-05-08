@@ -7,7 +7,7 @@
 import java.util.LinkedList;
 import java.util.NoSuchElementException;
 
-class Stack<T> {
+public class Stack<T> {
     private LinkedList<T> stack;
 
     public Stack() {   // Constructor to create empty Stack
@@ -21,9 +21,7 @@ class Stack<T> {
     public T pop() throws NoSuchElementException {    // Remove element from top of Stack
         return stack.removeLast();
     }
-}
-
-class StackTest {    // Tester Class to check the working of Stack
+    
     public static void main(String[] args) {
         Stack<Integer> obj = new Stack<>();
         System.out.println("Putting element in the stack.");
