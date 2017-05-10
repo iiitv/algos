@@ -12,6 +12,7 @@ Community (college) maintained list of Algorithms and Data Structures implementa
 
 | Algorithm | C | CPP | Java | Python |
 |:--------------|:----------------:|:----------------:|:----------------:|:-----------------:|
+| [Bin Sort](http://www.geeksforgeeks.org/bucket-sort-2/) | | | [/[/X]](bin_sort/BinSort.java)||
 | [Binary Search](https://en.wikipedia.org/wiki/Binary_search_algorithm) | [\[X\]](binary_search/binary_search.c) | | [\[X\]](binary_search/BinarySearch.java) | [\[X\]](binary_search/binary_search.py) |
 | [Coin Change Problem](http://www.algorithmist.com/index.php/Coin_Change) | [\[X\]](coin_change_problem/coin_change_problem.c) | | | |
 | [Counting Sort](www.geeksforgeeks.org/counting-sort/)| | | [\[X\]](counting_sort/CountingSort.java) | |
