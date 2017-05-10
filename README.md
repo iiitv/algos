@@ -1,7 +1,6 @@
 # Algos
 
 Community (college) maintained list of Algorithms and Data Structures implementations.
-**For now, we are only accepting contributions from IIITV college students**.
 
 [![Join the chat at https://gitter.im/iiitv/algos](https://badges.gitter.im/iiitv/algos.svg)](https://gitter.im/iiitv/algos?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![Code Climate](https://codeclimate.com/github/iiitv/algos/badges/gpa.svg)](https://codeclimate.com/github/iiitv/algos)
