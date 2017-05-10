@@ -19,7 +19,6 @@
     ```
         Algorithm/DS Name [Language]
     ```
-    Also add corresponding language label (`lang-*`) to the issue.
 * Please include at least one external link for the algorithm/DS in the issue's body for each issue. The link should explain the algorithm/problem/DS in detail.
 
 
