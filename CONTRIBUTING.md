@@ -2,11 +2,7 @@
 
 * Have a look at open issues. They contain the list of algorithms/DS we plan to be implemented. Pick an unassigned issue.
 * You can also create a new issue for an algorithm that is not in the list.
-* Make sure you are assigned for the issue. You can assign an unassigned issue to yourself. 
-
-> If you are not able to assign an issue to yourself, it means you are not a IIITV member. Get an [invite here](https://github.com/iiitv/getmein). If you already part of IIITV org, then maybe you are not a part of [Members team](https://github.com/orgs/iiitv/teams/members). Go add yourself. If any problems, open an issue at [getmein](https://github.com/iiitv/getmein).
-
-* When assigned, also mention the languages you want to code in. So suppose if you don't want to code in a particular language, another person can be assigned to do so. 
+* Make sure you are assigned for the issue.
 * Code the algorithm/DS following the styleguide defined below.
 * Send a PR. 
 * Be sure to not include any compiled binaries in the patch.
@@ -23,7 +19,6 @@
     ```
         Algorithm/DS Name [Language]
     ```
-    Also add corresponding language label (`lang-*`) to the issue.
 * Please include at least one external link for the algorithm/DS in the issue's body for each issue. The link should explain the algorithm/problem/DS in detail.
 
 
@@ -119,5 +114,25 @@ public class QuickSort {
             System.out.println(element);
         }
     }
+}
+```
+
+#### Golang
+
+```go
+package main
+
+import "fmt"
+
+// QuickSort sorts an array using QuickSort algorithm
+func QuickSort(array []int) []int {
+    // Your implementation here
+    return array
+}
+
+func main() {
+    array := []int{2, 3, 0, 4}
+    sortedArray := QuickSort(array)
+    fmt.Println(sortedArray)
 }
 ```
