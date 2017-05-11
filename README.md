@@ -9,7 +9,6 @@ Community (college) maintained list of Algorithms and Data Structures implementa
 
 ## Implemented Algorithms
 
-<<<<<<< HEAD
 | Algorithm | C | CPP | Java | Python | Golang |
 |:--------------|:----------------:|:----------------:|:----------------:|:-----------------:|:-----------------:|
 | [Bin Sort](www.geeksforgeeks.org/bucket-sort-2)| | |[\[X\]](bin_sort/BinSort.java)| | |
