@@ -13,3 +13,8 @@ use_spaces = True
 [Golint]
 files = **/*.go
 bears = GoLintBear
+
+# gofmt
+[Gofmt]
+files = **/*.go
+bears = GofmtBear
