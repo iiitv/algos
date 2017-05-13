@@ -1,0 +1,10 @@
+# coafile for this project
+# please add more settings beneath
+# Local fixing
+# coala --apply-patches -n
+
+# python files should only use spaces
+[Python Spacing]
+files = **/*.py
+bears = SpaceConsistencyBear
+use_spaces = True

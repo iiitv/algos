@@ -25,11 +25,11 @@ def euclidean_gcd(first, second):
     :param second: Second number
     :return: GCD of the numbers
     """
-    while second != 0:		# Iterate till second becomes zero
-        temp = second 		# Temporary variable to hold value of second
+    while second != 0:      # Iterate till second becomes zero
+        temp = second       # Temporary variable to hold value of second
         second = first % second
         first = temp    # Temporary variable assigned to first
-    return first 		# When second becomes 0, first becomes gcd of both
+    return first        # When second becomes 0, first becomes gcd of both
 
 
 def main():
