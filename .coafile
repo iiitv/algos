@@ -8,3 +8,8 @@
 files = **/*.py
 bears = SpaceConsistencyBear
 use_spaces = True
+
+# golint
+[Golint]
+files = **/*.go
+bears = GoLintBear

@@ -1,7 +1,18 @@
 language: python
 python:
   - "3.6"
+env:
+  GOPATH: $HOME/go
+  PATH: $GOPATH/bin:$PATH
+
 install:
+  - sudo apt-get update
+  - sudo apt-get install golang-go
+  - go get -u github.com/golang/lint/golint
+  - cd $GOPATH/src/github.com/golang/lint
+  - go install .
   - pip install coala-bears
+  - cd $TRAVIS_BUILD_DIR
+
 script:
   - coala --ci
