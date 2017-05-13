@@ -2,8 +2,6 @@ language: python
 python:
   - "3.6"
 install:
-  - sudo apt-get update
-  - sudo apt-get install indent
   - pip install coala-bears
 script:
   - coala --ci
