@@ -8,3 +8,10 @@
 files = **/*.py
 bears = SpaceConsistencyBear
 use_spaces = True
+
+# C indent settings
+# Can add more checks here
+[C Indent]
+files = **/*.c
+bears = GNUIndentBear
+use_spaces = False
