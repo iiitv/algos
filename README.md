@@ -14,8 +14,8 @@ Community (college) maintained list of Algorithms and Data Structures implementa
 | [Bin Sort](www.geeksforgeeks.org/bucket-sort-2)| | |[\[X\]](bin_sort/BinSort.java)| | |
 | [Binary Search](https://en.wikipedia.org/wiki/Binary_search_algorithm) | [\[X\]](binary_search/binary_search.c) | | [\[X\]](binary_search/BinarySearch.java) | [\[X\]](binary_search/binary_search.py) | |
 | [Coin Change Problem](http://www.algorithmist.com/index.php/Coin_Change) | [\[X\]](coin_change_problem/coin_change_problem.c) | | | | |
+| [Counting Sort](http://www.geeksforgeeks.org/counting-sort/)| [\[X\]](counting_sort/counting_sort.c) | | [\[X\]](counting_sort/CountingSort.java) | | |
 | [Depth First Traversal](http://www.geeksforgeeks.org/depth-first-traversal-for-a-graph/) | | | [\[X\]](depth_first_traversal/DepthFirstTraversal.java) | | |
-| [Counting Sort](www.geeksforgeeks.org/counting-sort/)| | | [\[X\]](counting_sort/CountingSort.java) | | |
 | [Euclidean GCD](https://en.wikipedia.org/wiki/Euclidean_algorithm) | [\[X\]](euclidean_gcd/euclidean_gcd.c) | | [\[X\]](euclidean_gcd/EuclideanGCD.java) | [\[X\]](euclidean_gcd/euclidean_gcd.py) | |
 | [Exponentation by Squaring](https://en.wikipedia.org/wiki/Exponentiation_by_squaring) | [\[X\]](exponentation_by_squaring/exponentation_by_squaring.c) |||| |
 | [Heap Sort](https://en.wikipedia.org/wiki/Heapsort) | [\[X\]](heap_sort/heap_sort.c) | | [\[X\]](heap_sort/HeapSort.java) | | |
@@ -31,6 +31,7 @@ Community (college) maintained list of Algorithms and Data Structures implementa
 | [Prims](https://en.wikipedia.org/wiki/Prim%27s_algorithm) | | | [\[X\]](prims/Prims.java) | | |
 | [Quick Select](https://en.wikipedia.org/wiki/Quickselect) | [\[X\]](quick_select/quick_select.c) | | | | |
 | [Quicksort](https://en.wikipedia.org/wiki/Quicksort) | [\[X\]](quicksort/quicksort.c) | | [\[X\]](quicksort/QuickSort.java) | [\[X\]](quicksort/quick_sort.py) | |
+| [Rod Cutting Problem](http://www.geeksforgeeks.org/dynamic-programming-set-13-cutting-a-rod/) | | |[\[X\]](rod_cutting_problem/RodCutting.java) | | |
 | [Sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes) | [\[X\]](sieve_of_eratosthenes/sieveOfEratosthenes.c) | | | [\[X\]](sieve_of_eratosthenes/sieve_of_eratosthenes.py) | [\[X\]](sieve_of_eratosthenes/sieve_of_eratosthenes.go) |
 =======
 | Algorithm | C | CPP | Java | Python |
