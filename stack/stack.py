@@ -2,9 +2,6 @@ class Stack(object):
     def __init__(self):
         self._list = []
 
-    def __str__(self):
-        raise Exception("Not allowed to view stack contents")
-
     def push(self, item):
         self._list.append(item)
 
