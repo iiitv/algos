@@ -3,7 +3,7 @@ class Stack(object):
         self._list = []
 
     def __str__(self):
-        raise Exception("Not allowed to view stack contents")	
+        raise Exception("Not allowed to view stack contents")
 
     def push(self, item):
         self._list.append(item)
