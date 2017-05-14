@@ -40,6 +40,5 @@ class LongestCommonSubsequence
 		String s1="applebanana";
 		String s2="alphabet";
 		System.out.println(lcs(s1, s2));
-		System.out.println();
 	}
 }
