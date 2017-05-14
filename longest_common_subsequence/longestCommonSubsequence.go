@@ -5,7 +5,8 @@ import (
 	"math"
 )
 
-// longestCommonSubsequence driver function
+// Time complexity : O(len(str1)*len(str2))
+// longestCommonSubsequence returns length of the LCS
 func longestCommonSubsequence(str1, str2 string) int {
 	len1 := len(str1)
 	len2 := len(str2)
@@ -27,6 +28,7 @@ func longestCommonSubsequence(str1, str2 string) int {
 	return lcs[len1][len2]
 }
 
+// Driver function to test above algorithm
 func main() {
 	str1 := "mohit"
 	str2 := "mokyit"
