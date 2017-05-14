@@ -17,7 +17,7 @@ def main():
     # Push and print
     for i in range(10):
         st.push(i)
-        print("Pushed ",i)
+        print("Pushed ", i)
     st.push('Hello World')
 
     # Pop
@@ -31,6 +31,6 @@ def main():
             print('Exception: {0}'.format(e))
             break
 
+
 if __name__ == '__main__':
     main()
-
