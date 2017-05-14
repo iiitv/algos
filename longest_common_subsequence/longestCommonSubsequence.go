@@ -28,8 +28,7 @@ func longestCommonSubsequence(str1, str2 string) int {
 }
 
 func main() {
-	var str1, str2 string
-	fmt.Scanln(&str1)
-	fmt.Scanln(&str2)
+	str1 := "mohit"
+	str2 := "mokyit"
 	fmt.Println(longestCommonSubsequence(str1, str2))
 }
