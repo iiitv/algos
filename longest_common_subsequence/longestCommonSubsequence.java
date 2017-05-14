@@ -3,6 +3,7 @@ class LongestCommonSubsequence
 {
 	//Function that returns Longest Common Subsequence of two strings
 	//Time Complexity - O( len(str1) * len(str2) ) 
+	//Spacce Complexity - O( (len(str1)+1)*(len(str2)+1) )
 	private static String lcs(String str1, String str2)
 	{
 		int [][] arr=new int[str1.length()+1][str2.length()+1];
