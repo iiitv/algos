@@ -1,4 +1,4 @@
-public class longestCommonSubsequence {
+public class LongestCommonSubsequence {
 	//Function that returns Longest Common Subsequence of two strings
 	//Time Complexity - O( len(str1) * len(str2) ) 
 	//Space Complexity - O( len(str1)*len(str2) )
