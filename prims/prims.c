@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <string.h>
 
-# define SIZE 5
-# define INFINITY 32767
+#define SIZE 5
+#define INFINITY 1000
 
 // This function finds the minimal spanning tree by Prim's Algorithm
 void prims(int G[SIZE][SIZE], int *parent) {
@@ -18,7 +18,8 @@ void prims(int G[SIZE][SIZE], int *parent) {
                 if (G[i][j] && ((select[i] && !select[j]) || (!select[i] && select[j]))) {
                     if (G[i][j] < min_dist) {  //obtained edge with minimum wt 
                         min_dist = G[i][j];
-                        parent[j] = i;
+						v1 = i;
+                        parent[j] = v1;
                         v2 = j;   //picking up those vertices
                     }
                 }
@@ -28,7 +29,7 @@ void prims(int G[SIZE][SIZE], int *parent) {
     }
 }
 
-void main() {
+int main() {
     int G[SIZE][SIZE] = {{0, 2, 0, 6, 0},
                          {2, 0, 3, 8, 5},
                          {0, 3, 0, 0, 7},
@@ -41,5 +42,6 @@ void main() {
     printf("Edge\tWeight\n");
     prims(G,parent);
     for (i = 1; i < SIZE; ++i)
-        printf("%d - %d\t%d \n", parent[i], i, G[i][parent[i]]);
+      printf("%d - %d\t%d \n", parent[i], i, G[i][parent[i]]);
+    return 0;
 }
