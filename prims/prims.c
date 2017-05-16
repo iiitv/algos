@@ -41,5 +41,5 @@ void main() {
     printf("Edge\tWeight\n");
     prims(G,parent);
     for (i = 1; i < SIZE; ++i)
-      printf("%d - %d\t%d \n", parent[i], i, G[i][parent[i]]);
+        printf("%d - %d\t%d \n", parent[i], i, G[i][parent[i]]);
 }
