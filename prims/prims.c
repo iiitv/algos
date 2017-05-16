@@ -7,7 +7,7 @@
 // This function finds the minimal spanning tree by Prim's Algorithm
 void prims(int G[SIZE][SIZE], int *parent) {
     int select[SIZE], i, j, k;
-    int	v1 = 0, v2 = 0;
+    int v1 = 0, v2 = 0;
     for (i = 0; i < SIZE; ++i)  // Initialize the selected vertices list
         select[i] = 0;
     select[0] = 1;
