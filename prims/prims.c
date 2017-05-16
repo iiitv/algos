@@ -20,7 +20,7 @@ void prims(int G[SIZE][SIZE], int *parent) {
                         min_dist = G[i][j];
                         v1 = i;
                         parent[j] = v1;
-				        v2 = j;   //picking up those vertices
+                        v2 = j;  //picking up those vertices
                     }
                 }
             }
