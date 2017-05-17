@@ -25,7 +25,7 @@ void prims(int G[SIZE][SIZE], int *parent) {
                 }
             }
         }
-        select[v1] = select[v2] = 0; 
+        select[v1] = select[v2] = 1; 
     }
 }
 
