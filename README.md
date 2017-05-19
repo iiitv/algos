@@ -71,5 +71,5 @@ Idea by [@Monal5031](https://github.com/Monal5031)
 
 * [Avi Aryan](https://github.com/aviaryan)
 * [Pratyush Singh](https://github.com/singhpratyush)
-Only project maintainers should merge a PR. Other members can add their reviews to a PR but the merging should be done by only a project maintainer.
 
+Only project maintainers should merge a PR. Other members can add their reviews to a PR but the merging should be done by only a project maintainer.
