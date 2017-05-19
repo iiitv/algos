@@ -15,6 +15,21 @@ import java.util.Set;
 
 public class Dijkstra {
 
+    public int[][] graph;
+    public Node[] nodes;
+    
+    public static class Node {
+        public Node parent;
+        public int cost;
+        public int id;
+
+        public Node(Node parent, int cost, int id) {
+            this.parent = parent;
+            this.cost = cost;
+            this.id = id;
+        }
+    }
+ 
     public Dijkstra() {
         graph = new int[][]{{0, 4, 0, 0, 0, 0, 0, 8, 0},
                 {4, 0, 8, 0, 0, 0, 0, 11, 0},
@@ -28,22 +43,6 @@ public class Dijkstra {
         };
         nodes = new Node[graph.length];
     }
-
-    static class Node {
-        Node parent;
-        int cost;
-        int id;
-
-        public Node(Node parent, int cost, int id) {
-            this.parent = parent;
-            this.cost = cost;
-            this.id = id;
-        }
-    }
-
-    public int[][] graph;
-
-    Node[] nodes;
 
     public static void main(String[] args) {
 
