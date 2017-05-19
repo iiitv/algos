@@ -15,6 +15,7 @@ Community (college) maintained list of Algorithms and Data Structures implementa
 | [Coin Change Problem](http://www.algorithmist.com/index.php/Coin_Change) | [\[X\]](coin_change_problem/coin_change_problem.c) | | | | |
 | [Counting Sort](http://www.geeksforgeeks.org/counting-sort/)| [\[X\]](counting_sort/counting_sort.c) | | [\[X\]](counting_sort/CountingSort.java) | | |
 | [Depth First Traversal](http://www.geeksforgeeks.org/depth-first-traversal-for-a-graph/) | | | [\[X\]](depth_first_traversal/DepthFirstTraversal.java) | | |
+| [Dijkstra Algorithm](https://en.wikipedia.org/wiki/Dijkstra's_algorithm/) | | |[\[X\]](dijkstra/Dijkstra.java) | | |
 | [Euclidean GCD](https://en.wikipedia.org/wiki/Euclidean_algorithm) | [\[X\]](euclidean_gcd/euclidean_gcd.c) | | [\[X\]](euclidean_gcd/EuclideanGCD.java) | [\[X\]](euclidean_gcd/euclidean_gcd.py) | |
 | [Exponentation by Squaring](https://en.wikipedia.org/wiki/Exponentiation_by_squaring) | [\[X\]](exponentation_by_squaring/exponentation_by_squaring.c) |||| |
 | [Heap Sort](https://en.wikipedia.org/wiki/Heapsort) | [\[X\]](heap_sort/heap_sort.c) | | [\[X\]](heap_sort/HeapSort.java) | | |
