@@ -1,36 +1,30 @@
 import java.util.*;
 
-//Time Complexity O(n)-> avg case and O(n^2)-> Worst Case
-//constraints:- 0<=A[i]<1
-public class BinSort {
-	public static void main(String[] args) {
-		Node[] b = new Node[10];
-		Random ran = new Random();
-		int n = 100;
-		double[] a = new double[n];
-		for (int i = 0; i < n; i++) {
-			a[i] = ran.nextDouble();
-		}
-		binSort(b, a);
-		for (int i = 0; i < n; i++)
-			System.out.print(a[i] + " ");
-		System.out.println(" ");
-	}
+class Node {
+	double data;
+	Node next;
 
+	public Node(double data) {
+		this.data = data;
+		next = null;
+	}
+}
+
+// Time Complexity O(n)-> avg case and O(n^2)-> Worst Case
+// constraints:- 0<=A[i]<1
+public class BinSort {
 	public static void binSort(Node[] b, double[] a) {
 		for (int i = 0; i < a.length; i++) {
 			int ins = (int) (a[i] * 10);
 			if (b[ins] == null) {
 				b[ins] = new Node(a[i]);
-			} 
-			else {
+			} else {
 				boolean check = true;
 				Node temp = b[ins];
 				while (temp.next != null) {
 					if (a[i] > temp.next.data) {
 						temp = temp.next;
-					} 
-					else {
+					} else {
 						if (a[i] < temp.data)
 							break;
 						Node newNode = new Node(a[i]);
@@ -44,8 +38,7 @@ public class BinSort {
 					if (a[i] >= temp.data) {
 						Node newNode = new Node(a[i]);
 						temp.next = newNode;
-					} 
-					else {
+					} else {
 						double loc = temp.data;
 						temp.data = a[i];
 						Node newNode = new Node(loc);
@@ -67,15 +60,19 @@ public class BinSort {
 
 	}
 
-}
-
-class Node {
-	double data;
-	Node next;
-
-	public Node(double data) {
-		this.data = data;
-		next = null;
+	public static void main(String[] args) {
+		Node[] b = new Node[10];
+		Random ran = new Random();
+		int n = 100;
+		double[] a = new double[n];
+		for (int i = 0; i < n; i++) {
+			a[i] = ran.nextDouble();
+		}
+		binSort(b, a);
+		for (int i = 0; i < n; i++)
+			System.out.print(a[i] + " ");
+		System.out.println(" ");
 	}
+
 }
 
