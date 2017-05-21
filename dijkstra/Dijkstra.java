@@ -55,7 +55,7 @@ public class Dijkstra {
         System.out.println("Shortest Distance from " + source + " to " + destination + "  is " + dijkstra.nodes[destination].cost);
         Node temp = dijkstra.nodes[destination];
         System.out.println("Path is ");
-        while(temp.parent!=null) {
+        while(temp.parent != null) {
             System.out.print(temp.id + " <--- ");
             temp = temp.parent;
         }
