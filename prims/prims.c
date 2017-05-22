@@ -2,7 +2,7 @@
 #include <string.h>
 
 #define SIZE 5
-#define INFINITY 9999
+#define INFINITY 32767
 
 // This function finds the minimal spanning tree by Prim's Algorithm
 void prims(int G[SIZE][SIZE], int *parent) {
