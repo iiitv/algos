@@ -3,9 +3,9 @@ public class LongestCommonSubsequence {
 	//Time Complexity - O( len(str1) * len(str2) ) 
 	//Space Complexity - O( len(str1)*len(str2) )
 	private static String longestCommonSubsequence(String str1, String str2) {
-		int [][] arr = new int[str1.length() + 1][str2.length() + 1];
-		for (int i = str1.length()-1; i >= 0; i--) {
-			for (int j = str2.length()-1; j >= 0; j--) {
+		int[][] arr = new int[str1.length() + 1][str2.length() + 1];
+		for (int i = str1.length() - 1; i >= 0; i--) {
+			for (int j = str2.length() - 1; j >= 0; j--) {
 				if (str1.charAt(i) == str2.charAt(j))
 					arr[i][j] = arr[i + 1][j + 1] + 1;
 				else
