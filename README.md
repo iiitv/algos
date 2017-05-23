@@ -27,7 +27,7 @@ Community (college) maintained list of Algorithms and Data Structures implementa
 | [Modular Exponential](http://www.geeksforgeeks.org/modular-exponentiation-power-in-modular-arithmetic/) | | | [\[X\]](modular_exponential/ModularExponential.java) | [\[X\]](modular_exponential/modular_exponential.py) | |
 | [N-Queen Problem](https://en.wikipedia.org/wiki/Eight_queens_puzzle) | | [\[X\]](n_queen_problem/NQueenProblem.cpp) | | | | |
 | [Prime Factor](https://en.wikipedia.org/wiki/Prime_factor) | [\[X\]](prime_factor/prime_factor.c) | | | | |
-| [Prims](https://en.wikipedia.org/wiki/Prim%27s_algorithm) | | | [\[X\]](prims/Prims.java) | | |
+| [Prims](https://en.wikipedia.org/wiki/Prim%27s_algorithm) | [\[X\]](prims/prims.c) | | [\[X\]](prims/Prims.java) | | |
 | [Quick Select](https://en.wikipedia.org/wiki/Quickselect) | [\[X\]](quick_select/quick_select.c) | | | | |
 | [Quicksort](https://en.wikipedia.org/wiki/Quicksort) | [\[X\]](quicksort/quicksort.c) | | [\[X\]](quicksort/QuickSort.java) | [\[X\]](quicksort/quick_sort.py) | |
 | [Rod Cutting Problem](http://www.geeksforgeeks.org/dynamic-programming-set-13-cutting-a-rod/) | | |[\[X\]](rod_cutting_problem/RodCutting.java) | | |
