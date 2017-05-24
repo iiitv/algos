@@ -6,10 +6,12 @@ public class LongestCommonSubsequence {
 		int[][] arr = new int[str1.length() + 1][str2.length() + 1];
 		for (int i = str1.length() - 1; i >= 0; i--) {
 			for (int j = str2.length() - 1; j >= 0; j--) {
-				if (str1.charAt(i) == str2.charAt(j))
+				if (str1.charAt(i) == str2.charAt(j)) {
 					arr[i][j] = arr[i + 1][j + 1] + 1;
-				else
+				}
+				else {
 					arr[i][j] = Math.max(arr[i + 1][j], arr[i][j + 1]);
+				}
 			}
 		}
 		String res = "";
@@ -21,10 +23,12 @@ public class LongestCommonSubsequence {
 				i++;
 				j++;
 			}
-			else if (arr[i + 1][j] >= arr[i][j + 1])
+			else if (arr[i + 1][j] >= arr[i][j + 1]) {
 				i++;
-			else
+			}
+			else {
 				j++;
+			}
 		}
 		return res;
 	}
