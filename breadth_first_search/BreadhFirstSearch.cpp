@@ -1,5 +1,10 @@
+// Program to print Breadth First Traversal of a Graph
+// Time Complexity : O( no_of_vertices + no_of_edges)
+// Space Complexity : O( no_of_vertices + no_of_edges)
+
 #include <iostream>
 #include <list>
+
 using namespace std;
 
 class Graph {
@@ -7,48 +12,51 @@ class Graph {
 	list<int> *adjlist;
 	public :
 
-	Graph(int V) {
-		v = V;
-		adjlist = new list<int>[V];
+	// Constructor Function
+	Graph(int v) {
+		this->v = v;
+		adjlist = new list<int>[v];
 	}
 
+	// Function to add edge from source node to dest node
 	void addEdge (int source, int dest) {
 		adjlist[source].push_back(dest);
 	}
 
+	// Function to print Breadth First Traversal of graph starting from source node
 	void breadthFirstSearch (int source) {
 		bool *visited = new bool[v];
-		list<int> queue;
+		list<int> node_queue;
 
 		visited[source] = true;
-		queue.push_back(source);
+		node_queue.push_back(source);
 
 		list<int>::iterator itr;
-		while (!queue.empty()) {
-			source = queue.front();
-			queue.pop_front();
-			cout<<source<<"->";
+		while (!node_queue.empty()) {
+			source = node_queue.front();
+			node_queue.pop_front();
+			cout << source << "->";
 
-			for(itr = adjlist[source].begin(); itr != adjlist[source].end(); itr++) {
+			for(itr = adjlist[source].begin(); itr != adjlist[source].end(); ++itr) {
 				if(!visited[*itr]) {
 					visited[*itr] = true;
-					queue.push_back(*itr);
+					node_queue.push_back(*itr);
 				}
 			}
 		}
 	}
-} ;
+};
 
 int main () {
-	Graph G(4);
-	G.addEdge(0, 1);
-	G.addEdge(0, 2);
-	G.addEdge(1, 2);
-	G.addEdge(2, 0);
-	G.addEdge(2, 3);
-	G.addEdge(3, 3);
+	Graph testGraph(4);
+	testGraph.addEdge(0, 1);
+	testGraph.addEdge(0, 2);
+	testGraph.addEdge(1, 2);
+	testGraph.addEdge(2, 0);
+	testGraph.addEdge(2, 3);
+	testGraph.addEdge(3, 3);
 
-	cout<<"BFS starting from vertex 2 is "<<endl;
-	G.breadthFirstSearch(2);
+	cout << "BFS starting from vertex 2 is " << endl;
+	testGraph.breadthFirstSearch(2);
 	return 0;
 }
