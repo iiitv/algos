@@ -1,8 +1,8 @@
 import java.util.*;
 
 class Node {
-	double data;
-	Node next;
+	private double data;
+	private Node next;
 
 	public Node(double data) {
 		this.data = data;
@@ -69,8 +69,9 @@ public class BinSort {
 			a[i] = ran.nextDouble();
 		}
 		binSort(b, a);
-		for (int i = 0; i < n; i++)
+		for (int i = 0; i < n; i++) {
 			System.out.print(a[i] + " ");
+		}
 		System.out.println(" ");
 	}
 
