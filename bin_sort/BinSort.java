@@ -1,8 +1,8 @@
-import java.util.*;
+import java.util.Random;
 
-class Node {
-	private double data;
-	private Node next;
+private class Node {
+	double data;
+	Node next;
 
 	public Node(double data) {
 		this.data = data;
@@ -46,10 +46,8 @@ public class BinSort {
 						temp.next = newNode;
 					}
 				}
-
 			}
 		}
-
 		int j = 0;
 		for (int i = 0; i < 10; i++) {
 			while (b[i] != null) {
@@ -57,7 +55,6 @@ public class BinSort {
 				b[i] = b[i].next;
 			}
 		}
-
 	}
 
 	public static void main(String[] args) {
@@ -74,6 +71,5 @@ public class BinSort {
 		}
 		System.out.println(" ");
 	}
-
 }
 
