@@ -1,8 +1,8 @@
 import java.util.Random;
 
-private class Node {
-	double data;
-	Node next;
+class Node {
+	public double data;
+	public Node next;
 
 	public Node(double data) {
 		this.data = data;
