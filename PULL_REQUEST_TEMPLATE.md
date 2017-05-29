@@ -12,6 +12,7 @@ Fixes #{ISSUE_NUMBER}
 
 #### By submitting this pull request I confirm I've read and complied with the below declarations.
 
+- [ ] I am a member of [IIITV](https://github.com/iiitv) and a member of Members team.
 - [ ] I have read the [Contribution guidelines](https://github.com/iiitv/algos/blob/master/CONTRIBUTING.md) and I am confident that my PR reflects them.
 - [ ] I have followed the [coding guidelines](https://github.com/iiitv/algos/blob/master/CONTRIBUTING.md#cs) for this project.
 - [ ] My code follows the [skeleton code structure](https://github.com/iiitv/algos/blob/master/CONTRIBUTING.md#sample).
