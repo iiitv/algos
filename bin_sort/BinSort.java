@@ -15,7 +15,7 @@ class Node {
 public class BinSort {
 	public static void binSort(Node[] b, double[] a) {
 		for (int i = 0; i < a.length; i++) {
-			int ins = (int) (a[i] * 10);
+			int ins = (int) (a[i] * b.length);
 			if (b[ins] == null) {
 				b[ins] = new Node(a[i]);
 			} else {
@@ -49,7 +49,7 @@ public class BinSort {
 			}
 		}
 		int j = 0;
-		for (int i = 0; i < 10; i++) {
+		for (int i = 0; i < b.length; i++) {
 			while (b[i] != null) {
 				a[j++] = b[i].data;
 				b[i] = b[i].next;
