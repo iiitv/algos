@@ -2,7 +2,7 @@ package com.company;
 
 import java.util.*;
 
-public class breadthFirstTraversal {
+public class BreadthFirstTraversal {
 
     // Array  of lists for Adjacency List Representation
     public static LinkedList<Integer>[] adj;
