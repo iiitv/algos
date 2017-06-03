@@ -1,8 +1,6 @@
-package com.company;
-
 import java.util.*;
 
-public class BreadthFirstTraversal {
+public class BreadthFirstSearch {
 
     // Array  of lists for Adjacency List Representation
     public static LinkedList<Integer>[] adj;
@@ -12,7 +10,7 @@ public class BreadthFirstTraversal {
         adj[source].add(w);
     }
 
-    public static ArrayList breadthFirstTraversal(int source, int destination) {
+    public static ArrayList breadthFirstSearch(int source, int destination) {
         // false by default in java)
         ArrayList arrayList = new ArrayList();
         Set<Integer> visited = new HashSet();
@@ -59,8 +57,8 @@ public class BreadthFirstTraversal {
         addEdge(2, 1);
         addEdge(2, 3);
         addEdge(3, 3);
-        System.out.println("Breadth First Traversal starting from source to destination");
-        ArrayList arrayList = breadthFirstTraversal(1,3);
+        System.out.println("Breadth First Search starting from source to destination");
+        ArrayList arrayList = breadthFirstSearch(1,3);
         System.out.println(arrayList);
     }
 }
