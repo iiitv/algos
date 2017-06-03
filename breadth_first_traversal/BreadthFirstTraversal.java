@@ -1,9 +1,8 @@
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.Set;
+package com.company;
 
-public class BreadthFirstSearch {
+import java.util.*;
+
+public class breadthFirstTraversal {
 
     // Array  of lists for Adjacency List Representation
     public static LinkedList<Integer>[] adj;
@@ -13,8 +12,9 @@ public class BreadthFirstSearch {
         adj[source].add(w);
     }
 
-    private static void breadthFirstTraversal(int source, int destination) {
+    public static ArrayList breadthFirstTraversal(int source, int destination) {
         // false by default in java)
+        ArrayList arrayList = new ArrayList();
         Set<Integer> visited = new HashSet();
         // Mark the current node as visited
         visited.add(source);
@@ -22,13 +22,13 @@ public class BreadthFirstSearch {
         queue.add(source);
         while (queue.size() != 0) {
             source = queue.poll();
-            System.out.println(source);
+            arrayList.add(source);
             Iterator<Integer> i = adj[source].listIterator();
             int flag = 0;
             while (i.hasNext()) {
                 int n = i.next();
                 if (n == destination) {
-                    System.out.println(n);
+                    arrayList.add(n);
                     flag = 1;
                     break;
                 }
@@ -41,7 +41,8 @@ public class BreadthFirstSearch {
                 break;
             }
         }
-    }   
+        return arrayList;
+    }
 
     public static void initEdges(int n) {
         adj = new LinkedList[n];
@@ -59,6 +60,7 @@ public class BreadthFirstSearch {
         addEdge(2, 3);
         addEdge(3, 3);
         System.out.println("Breadth First Traversal starting from source to destination");
-        breadthFirstTraversal(1,3);
+        ArrayList arrayList = breadthFirstTraversal(1,3);
+        System.out.println(arrayList);
     }
 }
