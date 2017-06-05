@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class AVL_Tree {
+public class AvlTree {
 
 	public static void main(String[] args) {
 		AVL avl = new AVL();
@@ -23,10 +23,9 @@ public class AVL_Tree {
 				avl.del(d);
 				break;
 			case 3:
-				if(avl.isEmpty()){
+				if (avl.isEmpty()) {
 					System.out.println("null");
-				}
-				else{
+				} else {
 					avl.prntIn(avl.root);
 					System.out.println(" ");
 				}
@@ -157,9 +156,11 @@ class AVL {
 		}
 		return node;
 	}
-	public boolean isEmpty(){
+
+	public boolean isEmpty() {
 		return root == null;
 	}
+
 	public void prntIn(NodeAVL node) {
 		if (node == null)
 			return;
@@ -202,7 +203,7 @@ class AVL {
 	}
 
 	private void del(NodeAVL node, int data) {
-		if (node.right == null && node.left == null){
+		if (node.right == null && node.left == null) {
 			System.out.println("Element you wanna delete not exist");
 			return;
 		}
@@ -289,6 +290,4 @@ class NodeAVL {
 		right = null;
 	}
 }
-
-
 
