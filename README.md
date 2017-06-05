@@ -11,7 +11,7 @@ Community (college) maintained list of Algorithms and Data Structures implementa
 
 | Algorithm | C | CPP | Java | Python | Golang |
 |:--------------|:----------------:|:----------------:|:----------------:|:-----------------:|:-----------------:|
-| [Bin Sort](http://www.cdn.geeksforgeeks.org/bucket-sort-2/)| | |[\[X\]](bin_sort/BinSort.java)| | |
+| [Bin Sort](http://www.cdn.geeksforgeeks.org/bucket-sort-2/)| | | [\[X\]](bin_sort/BinSort.java)| | |
 | [Binary Search](https://en.wikipedia.org/wiki/Binary_search_algorithm) | [\[X\]](binary_search/binary_search.c) | | [\[X\]](binary_search/BinarySearch.java) | [\[X\]](binary_search/binary_search.py) | |
 | [Coin Change Problem](http://www.algorithmist.com/index.php/Coin_Change) | [\[X\]](coin_change_problem/coin_change_problem.c) | | | | |
 | [Counting Sort](http://www.geeksforgeeks.org/counting-sort/)| [\[X\]](counting_sort/counting_sort.c) | | [\[X\]](counting_sort/CountingSort.java) | | |
@@ -40,6 +40,7 @@ Community (college) maintained list of Algorithms and Data Structures implementa
 
 | Data Structure | C | CPP | Java | Python | Golang |
 |:--------------|:----------------:|:----------------:|:----------------:|:-----------------:|:-----------------:|
+| [AVL Tree](https://en.wikipedia.org/wiki/AVL_tree)| | |[\[X\]](avl_tree/AVL_Tree.java) | | |
 | [Binary Search Tree](https://en.wikipedia.org/wiki/Binary_search_tree) | | | [\[X\]](binary_search_tree/BinarySearchTree.java) | | |
 | [Linked List](https://en.wikipedia.org/wiki/Linked_list) | | | [\[X\]](linked_list/LinkedList.java) | | |
 | [Stack](https://en.wikipedia.org/wiki/Stack_(abstract_data_type)) | | | [\[X\]](stack/Stack.java) | [\[X\]](stack/stack.py) | |
