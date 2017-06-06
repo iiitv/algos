@@ -46,14 +46,14 @@ public class AvlTree {
 class AVL {
 	public NodeAVL root = null;
 
-	public void insert(int data) {
+	public void insert(int data) {//call these method when we wanna insert an element in the tree;
 		if (root == null) {
 			root = new NodeAVL(data);
 		} else
 			root = insert(root, data);
 	}
 
-	private NodeAVL insert(NodeAVL node, int data) {
+	private NodeAVL insert(NodeAVL node, int data) {//These method takes care of rotation needed after insertion
 		if (node == null) {
 			node = new NodeAVL(data);
 			return node;
@@ -142,7 +142,7 @@ class AVL {
 		return temp;
 	}
 
-	public NodeAVL isRotate(NodeAVL node) {
+	public NodeAVL isRotate(NodeAVL node) { // This Method see if there is nessesity for rotation and if there is need, it do suitable rotation
 		if (node.hRight - node.hLeft >= 2) {
 			if (node.right.hRight - node.right.hLeft >= 1)
 				node = rotateRR(node);
@@ -173,7 +173,7 @@ class AVL {
 		}
 	}
 
-	public void del(int data) {
+	public void del(int data) { // we call these method to delete the node if its exist.
 		if (root.data == data) {
 			NodeAVL temp = root.right;
 			if (root.left == null && root.right == null)
@@ -202,7 +202,7 @@ class AVL {
 			del(root, data);
 	}
 
-	private void del(NodeAVL node, int data) {
+	private void del(NodeAVL node, int data) {	// These is the method to delete node
 		if (node.right == null && node.left == null) {
 			System.out.println("Element you wanna delete not exist");
 			return;
@@ -254,7 +254,7 @@ class AVL {
 		node = isRotate(node);
 	}
 
-	public int go(NodeAVL node) {
+	public int go(NodeAVL node) {// These method is special method while comes in play when we have to delete a node which have both childeren.
 		if (node.left.left == null) {
 			int data;
 			if (node.left != null)
@@ -290,4 +290,3 @@ class NodeAVL {
 		right = null;
 	}
 }
-
