@@ -8,7 +8,7 @@ using namespace std;
 // Best case complexity = O(nlog(n))
 
 vector<int> shellSort(vector<int> data) {
-    for (int i = data.size() / 2; i > 0; i /= 2) {
+    for (int i = static_cast<int>(data.size() / 2); i > 0; i /= 2) {
         for (int j = i; j < data.size(); j++) {
             for (int k = j - i; k >= 0; k -= i) {
                 if (data[k+i] >= data[k]) {
