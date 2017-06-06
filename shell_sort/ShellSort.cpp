@@ -7,9 +7,9 @@ using namespace std;
 // Worst case time complexity = O(n^2)
 // Best case complexity = O(nlog(n))
 
-vector<int> ShellSort(vector<int> data) {
-    for (int i = floor(data.size() / 2); i > 0; i /= 2) {
-        for (int j = i; j < floor(data.size()); j++) {
+vector<int> shellSort(vector<int> data) {
+    for (int i = data.size() / 2; i > 0; i /= 2) {
+        for (int j = i; j < data.size(); j++) {
             for (int k = j - i; k >= 0; k -= i) {
                 if (data[k+i] >= data[k]) {
                     break;
@@ -29,7 +29,7 @@ int main() {
         cout << item << " ";
     }
     cout << '\n' << "Sorted data:" << '\n';
-    data = ShellSort(data);
+    data = shellSort(data);
     for (auto item : data) {
         cout << item << " ";
     }
