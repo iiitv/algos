@@ -2,6 +2,9 @@
 #include <vector>
 #include <cmath>
 
+// Use '-std=c++11' or higher flag while compiling
+// g++ -std=c++11 -o ShellSort ShellSort.cpp
+
 using namespace std;
 
 // Worst case time complexity = O(n^2)
