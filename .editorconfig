@@ -4,13 +4,13 @@ root = true
 end_of_line = lf
 insert_final_newline = true
 
-[*.go]
+[{*.go, *.c, *.cpp}]
 charset = utf-8
 indent_style = tab
 tab_width = 4
 trim_trailing_whitespace = true
 
-[*.py]
+[{*.py, *.java}]
 charset = utf-8
 indent_style = space
 indent_size = 4
