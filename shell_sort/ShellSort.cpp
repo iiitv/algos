@@ -25,17 +25,19 @@ vector<int> shellSort(vector<int> data) {
 	return data;
 }
 
-int main() {
-	vector<int> data = {1000, 45, -45, 121, 47, 45, 65, 121, -1, 103, 45, 34};
-	cout << "Data to be sorted:" << '\n';
-	for (auto item : data) {
-		cout << item << " ";
-	}
-	cout << '\n' << "Sorted data:" << '\n';
-	data = shellSort(data);
+void print(vector<int> data) {
 	for (auto item : data) {
 		cout << item << " ";
 	}
 	cout << '\n';
+}
+
+int main() {
+	vector<int> data = {1000, 45, -45, 121, 47, 45, 65, 121, -1, 103, 45, 34};
+	cout << "Data to be sorted:" << '\n';
+	print(data);
+	cout << "Sorted data:" << '\n';
+	data = shellSort(data);
+	print(data);
 	return 0;
 }
