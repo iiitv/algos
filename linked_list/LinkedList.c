@@ -8,7 +8,10 @@ struct Node {
 
 //  Creatig node
 struct Node* getNewNode(int data) {
-	struct Node *nw_node = (struct Node*) malloc(sizeof(struct Node));	//  nw_node a Node to be added
+	struct Node *nw_node = NULL;
+	while (nw_node == NULL) {
+		nw_node = (struct Node*) malloc(sizeof(struct Node));	//  nw_node a Node to be added
+	}
 	nw_node->d = data;
 	nw_node->next = NULL;
 	return nw_node;
@@ -147,7 +150,6 @@ int search(struct Node **start, int data) {
 	} else {
 		return -1;
 	}
-	printf("\n");
 }
 
 void searchResult(int d, int pos) {
