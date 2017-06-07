@@ -48,5 +48,6 @@ def main():
     merge_sort(a, 0, len(a) - 1)
     print(a)
 
+
 if __name__ == '__main__':
     main()
