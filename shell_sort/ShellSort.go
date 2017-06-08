@@ -1,10 +1,11 @@
 package main
 
+// ShellSort function returns sorted data
+
 import "fmt"
 
 // Worst case time complexity = O(n^2)
 // Best case complexity = O(nlog(n))
-// ShellSort returns sorted data
 func ShellSort(data []int) []int {
 	for i := len(data) / 2; i > 0; i /= 2 {
 		for j := i; j < len(data); j++ {
