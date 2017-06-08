@@ -32,8 +32,9 @@
 * Filename should be derived from the folder name. (eg `longest_common_subsequence` becomes `longestCommonSubsequence.c` or `LongestCommonSubsequence.java`)
 * Name of master function of the code should be kept same as filename to the best extent possible.
 * Prefer classes instead of multiple helper functions (where applicable).
+* Currently we are accepting contributions in C, C++, Java, Python, GO but other languages may be considered after a discussion.
 * Define `tester` code only in `main` routine.
-* Use meaningful variable names and comments.
+* Use meaningful variable, methods/function names and comments.
 * No profanity.
 * Use external libraries only when no other solution is possible/plausible.
 * We have defined [skeleton codes](#samples) for some popular languages below. Please follow them whenever possible.
