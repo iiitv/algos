@@ -4,8 +4,8 @@ import "fmt"
 
 // Worst case time complexity = O(n^2)
 // Best case complexity = O(nlog(n))
-// shellSort returns sorted data
-func shellSort(data []int) []int {
+// ShellSort returns sorted data
+func ShellSort(data []int) []int {
 	for i := len(data) / 2; i > 0; i /= 2 {
 		for j := i; j < len(data); j++ {
 			for k := j - i; k >= 0; k -= i {
@@ -24,6 +24,6 @@ func shellSort(data []int) []int {
 func main() {
 	data := []int{1000, 45, -45, 121, 47, 45, 65, 121, -1, 103, 45, 34}
 	fmt.Println("Data to be sorted: ", data)
-	data = shellSort(data)
+	data = ShellSort(data)
 	fmt.Println("Sorted data:", data)
 }
