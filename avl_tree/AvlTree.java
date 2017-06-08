@@ -1,44 +1,50 @@
 import java.util.Scanner;
+import java.util.NoSuchElementException;
+import java.util.InputMismatchException;
 
 public class AvlTree {
 
 	public static void main(String[] args) {
 		AVL avl = new AVL();
-		int a;
 		Scanner inp = new Scanner(System.in);
 		while (true) {
-			System.out.println("\nTo insert an element Enter 1");
-			System.out.println("To delete an element Enter 2");
-			System.out.println("To print AVL tree preorder Enter 3");
-			System.out.println("To EXIT Enter 4");
-
-			a = inp.nextInt();
-			switch (a) {
-			case 1:
-				int in = inp.nextInt();
-				avl.insert(in);
-				break;
-			case 2:
-				int d = inp.nextInt();
-				avl.del(d);
-				break;
-			case 3:
-				if (avl.isEmpty()) {
-					System.out.println("null");
-				} else {
-					avl.prntIn(avl.root);
-					System.out.println(" ");
+			try {
+				System.out.println("\nTo insert an element Enter 1");
+				System.out.println("To delete an element Enter 2");
+				System.out.println("To print AVL tree preorder Enter 3");
+				System.out.println("To EXIT Enter 4");
+				int a = inp.nextInt();
+				switch (a) {
+				case 1:
+					int in = inp.nextInt();
+					avl.insert(in);
+					break;
+				case 2:
+					int d = inp.nextInt();
+					avl.del(d);
+					break;
+				case 3:
+					if (avl.isEmpty()) {
+						System.out.println("null");
+					} else {
+						avl.prntIn(avl.root);
+						System.out.println(" ");
+					}
+					break;
+				case 4:
+					break;
+				default:
+					System.out.println("Sorry input number is not valid ");
+					break;
 				}
-				break;
-			case 4:
-				break;
-			default:
-				System.out.println("Sorry input number is not valid ");
-				break;
-			}
-			if (a == 4) {
+				if (a == 4) {
+					break;
+				}
+			} catch (InputMismatchException e) {
+				System.out.println("Input not valid!!!\nplease Integers numbers only");
 				break;
 			}
+
 		}
 	}
 }
@@ -46,14 +52,16 @@ public class AvlTree {
 class AVL {
 	public NodeAVL root = null;
 
-	public void insert(int data) {//call these method when we wanna insert an element in the tree;
+	public void insert(int data) {
+		// call these method when you wanna insert an element in the tree;
 		if (root == null) {
 			root = new NodeAVL(data);
 		} else
 			root = insert(root, data);
 	}
 
-	private NodeAVL insert(NodeAVL node, int data) {//These method takes care of rotation needed after insertion
+	private NodeAVL insert(NodeAVL node, int data) {
+		// These method takes care of rotation needed after insertion
 		if (node == null) {
 			node = new NodeAVL(data);
 			return node;
@@ -142,7 +150,9 @@ class AVL {
 		return temp;
 	}
 
-	public NodeAVL isRotate(NodeAVL node) { // This Method see if there is nessesity for rotation and if there is need, it do suitable rotation
+	public NodeAVL isRotate(NodeAVL node) {
+		// This Method see if there is nessesity for rotation and if
+		// there is need, it'll do suitable rotation
 		if (node.hRight - node.hLeft >= 2) {
 			if (node.right.hRight - node.right.hLeft >= 1)
 				node = rotateRR(node);
@@ -173,7 +183,8 @@ class AVL {
 		}
 	}
 
-	public void del(int data) { // we call these method to delete the node if its exist.
+	public void del(int data) {
+		// we call these method to delete the node if its exist
 		if (root.data == data) {
 			NodeAVL temp = root.right;
 			if (root.left == null && root.right == null)
@@ -195,17 +206,17 @@ class AVL {
 					root.hRight = 0;
 				else
 					root.hRight = Math.max(root.right.hLeft, root.right.hLeft);
-				// System.out.print(root.data);
 				root = isRotate(root);
 			}
 		} else
 			del(root, data);
 	}
 
-	private void del(NodeAVL node, int data) {	// These is the method to delete node
+	private void del(NodeAVL node, int data) {
+		// These is the method to delete node if it exist
+		// Otherwise it throws an exception
 		if (node.right == null && node.left == null) {
-			System.out.println("Element you wanna delete not exist");
-			return;
+			throw new NoSuchElementException("element you wanna delete not exist");
 		}
 		if (node.right != null && node.right.data == data) {
 			NodeAVL del = node.right;
@@ -254,7 +265,10 @@ class AVL {
 		node = isRotate(node);
 	}
 
-	public int go(NodeAVL node) {// These method is special method while comes in play when we have to delete a node which have both childeren.
+	public int go(NodeAVL node) {
+		// These method is special method which comes
+		// in play when we have to delete a node
+		// which have both childeren.
 		if (node.left.left == null) {
 			int data;
 			if (node.left != null)
