@@ -112,7 +112,7 @@ struct Node* deleteAtPos(struct Node **start, int pos) {
 			return NULL;
 			} else {
 			struct Node* tmp = temp->next;
-		    temp->next = temp->next->next;	// Replacing address of position 'pos' with  node next to 'pos'
+		    	temp->next = temp->next->next;	// Replacing address of position 'pos' with  node next to 'pos'
 			return tmp;
 		}
 	}
