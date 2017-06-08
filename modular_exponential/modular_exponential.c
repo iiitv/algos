@@ -1,7 +1,7 @@
 #include <stdio.h>
  
 // Time Complexity : O(log (power)) 
-long long modularExponential(int base, long power, long long mod) {
+long long modularExponential(long long base, long power, long long mod) {
     long long answer = 1;    
     base = base % mod;   
     while (power) {
@@ -15,7 +15,7 @@ long long modularExponential(int base, long power, long long mod) {
 }
 
 int main() {
-   int base = 2;
+   long long base = 2;
    long power = 10;
    long long mod = 100000;
    printf("%lld\n", modularExponential(base, power, mod));
