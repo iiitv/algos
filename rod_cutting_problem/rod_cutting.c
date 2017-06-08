@@ -8,10 +8,10 @@
 #include <stdio.h>
 #include <string.h>
 
-#define max(a, b) (a > b)? a : b;
+#define max(a, b) (a > b) ? a : b;
 
 int rod_cutting(const int *prices) {
-    int i, j;
+    unsigned int i, j;
     unsigned int n = sizeof(prices);
     int new_prices[n + 1];
     memset(new_prices, 0, n + 1);
