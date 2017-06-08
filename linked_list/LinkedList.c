@@ -9,8 +9,9 @@ struct Node {
 //  Creatig node
 struct Node* getNewNode(int data) {
 	struct Node *nw_node = NULL;
-	while (nw_node == NULL) {
-		nw_node = (struct Node*) malloc(sizeof(struct Node));	//  nw_node a Node to be added
+	nw_node = (struct Node*) malloc(sizeof(struct Node));	//  nw_node a Node to be added
+	if (nw_node == NULL) {
+		return NULL;
 	}
 	nw_node->d = data;
 	nw_node->next = NULL;
@@ -60,8 +61,8 @@ int addAtPos(struct Node **start, struct Node* nw_node, int pos) {
 		if (i != pos-1) {
 			return 0;
 		} else {
-		    nw_node->next = temp->next;		// Placing address of next node to nw_node->next
-		    temp->next = nw_node;		// Assiging address of nw_node in list after temp node.
+			nw_node->next = temp->next;		// Placing address of next node to nw_node->next
+			temp->next = nw_node;		// Assiging address of nw_node in list after temp node.
 			return 1;
 		}
 	}
@@ -109,7 +110,7 @@ struct Node* deleteAtPos(struct Node **start, int pos) {
 		if (i != pos-1) {
 			printf("Invalid Index\n\n");
 			return NULL;
-		} else {
+			} else {
 			struct Node* tmp = temp->next;
 		    temp->next = temp->next->next;	// Replacing address of position 'pos' with  node next to 'pos'
 			return tmp;
@@ -124,11 +125,11 @@ void traverse(struct Node **start) {
 		printf("Linked List is Empty");
 	} else {
 		struct Node* temp = *start;		// temp node to go through each node
-		while (temp->next!= NULL) {
-			printf(" %d ->",temp->d);
+		while (temp->next != NULL) {
+			printf(" %d ->", temp->d);
 			temp = temp->next;
 		}
-		printf("%d",temp->d);
+		printf("%d", temp->d);
 	}
 	printf("\n\n");
 }
@@ -154,9 +155,9 @@ int search(struct Node **start, int data) {
 
 void searchResult(int d, int pos) {
 	if(pos == -1) { 
-		printf("Element %d is not in list\n",d);
+		printf("Element %d is not in list\n", d);
 	} else {
-		printf("Element %d is found at position %d\n",d,pos);
+		printf("Element %d is found at position %d\n", d, pos);
 	}
 	printf("\n");
 }
@@ -165,7 +166,7 @@ void deleteResult(struct Node** node) {
 	if(*node == NULL) {
 		printf("Deletion is unsuccessfull\n");
 	} else {
-		printf("Node %d is deleted\n",(*node)->d);
+		printf("Node %d is deleted\n", (*node)->d);
 		free(*node);
 	}
 	printf("\n");
@@ -175,37 +176,49 @@ void insertResult(int res, int d) {
 	if(res == 0) {
 		printf("Invalid Index\n");
 	} else {
-		printf("Element %d is inserted\n",d);
+		printf("Element %d is inserted\n", d);
 	}
 	printf("\n");
 }
 
 int main() {
-	struct Node *start=NULL;
+	struct Node *start = NULL;
 	struct Node *node;
 	int res;
 	// Adding element to the list
-	res = addFront(&start, getNewNode(23));
-	insertResult(res, 12);
+	if (getNewNode(23) != NULL) {
+		res = addFront(&start, getNewNode(23));
+		insertResult(res, 12);
+	}
 	traverse(&start);
 
 	// Adding elements at the end
-	res = addLast(&start, getNewNode(25));
-	insertResult(res, 25);
-	res = addLast(&start, getNewNode(46));
-	insertResult(res, 46);
+	if (getNewNode(25) != NULL) {
+		res = addLast(&start, getNewNode(25));
+		insertResult(res, 25);
+	}
+	if (getNewNode(46) != NULL) {
+		res = addLast(&start, getNewNode(46));
+		insertResult(res, 46);
+	}
 	traverse(&start);
 
 	// Adding elements to front
-	res = addFront(&start, getNewNode(12));
-	insertResult(res, 12);
-	res = addFront(&start, getNewNode(11));
-	insertResult(res, 11);
+	if (getNewNode(12) != NULL) {
+		res = addFront(&start, getNewNode(12));
+		insertResult(res, 12);	
+	}
+	if (getNewNode(11) != NULL) {
+		res = addFront(&start, getNewNode(11));
+		insertResult(res, 11);	
+	}
 	traverse(&start);
 
 	// Adding element at a given index (Adding 14 at index 3)
-	res = addAtPos(&start, getNewNode(14), 3);
-	insertResult(res, 14);
+	if (getNewNode(14) != NULL) {
+		res = addAtPos(&start, getNewNode(14), 3);
+		insertResult(res, 14);	
+	}
 	traverse(&start);
 
 	// Removing First Element
