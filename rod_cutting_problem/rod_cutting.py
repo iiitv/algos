@@ -21,8 +21,7 @@ def rod_cutting(price, rod_len):
     for i in range(1, rod_len + 1):
         max_val = -1
         for j in range(i):
-            max_val = max(max_val, price[j] + opt_price[i - j - 1])
-        opt_price[i] = max_val
+            opt_price[i] = max(max(opt_price), price[j] + opt_price[i - j - 1])
     return opt_price[rod_len]
 
 
