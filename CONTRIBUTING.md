@@ -34,7 +34,7 @@
 * Prefer classes instead of multiple helper functions (where applicable).
 * Currently we are accepting contributions in C, C++, Java, Python and Go but other languages may be considered after a discussion.
 * Define `tester` code only in `main` routine.
-* Use meaningful variable, methods/function names and comments.
+* Use meaningful variable, method and function names and comments.
 * No profanity.
 * Use external libraries only when no other solution is possible/plausible.
 * We have defined [skeleton codes](#samples) for some popular languages below. Please follow them whenever possible.
