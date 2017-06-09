@@ -1,3 +1,11 @@
+"""
+    This module calculate optimized solution for rod_cutting
+    by function rod_cutting() with arguments as defined
+    in main()
+
+"""
+
+
 def rod_cutting(price, rod_len):
     """
     Computes maximum money that can be earned by cutting
