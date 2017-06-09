@@ -1,6 +1,6 @@
 /*
-*  Given a rod of length n length unit and an array of prices that contains prices of all pieces of size smaller than n. 
-*  Determine the maximum new_pricesue obtainable by cutting up the rod and selling the pieces.
+*  Given a rod of length n and an array of prices that contains prices of all pieces of size smaller than n. 
+*  Determine the maximum new_prices obtainable by cutting up the rod and selling the pieces.
 *  Time Complexity: O(n^2)
 *  Space Complexity: O(n)
 */
