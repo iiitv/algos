@@ -1,8 +1,7 @@
 """
-    This module calculate optimized solution for rod_cutting
+    This module calculates optimized solution for rod cutting
     by function rod_cutting() with arguments as defined
     in main()
-
 """
 
 
@@ -14,9 +13,7 @@ def rod_cutting(price, rod_len):
     Time Complexity : O(rod_len^2)
     Space Complexity : O(rod_len)
     :param price: List in which price[i] denotes price of rod of length i.
-    :param opt_price: List whose ith element is solution for rod of length i.
     :param rod_len: Total length of rod to be considered for optimal amount.
-    :param max_val: This variable is temporary optimal price.
     :return: returns optimal solution for rod of length rod_len.
     """
     opt_price = [0] * (rod_len + 1)
@@ -32,9 +29,6 @@ def rod_cutting(price, rod_len):
 def main():
     """
     Main Function of this program.
-
-    :param price: List in which price[i] denotes price of rod of length i.
-    :param rod_length : Length for rod, whose optimal solution is needed.
     """
     price = [1, 5, 8, 9, 10, 17, 17, 20, 24, 30]
     rod_length = 4
