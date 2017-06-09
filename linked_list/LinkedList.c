@@ -119,12 +119,12 @@ struct Node* deleteAtPos(struct Node **start, int pos) {
 }
 
 //  To traverse whole list
-void traverse(struct Node **start) {
+void traverse(struct Node *start) {
     printf("Linked List\n");
-	if(*start == NULL) {
+	if(start == NULL) {
 		printf("Linked List is Empty");
 	} else {
-		struct Node* temp = *start;		// temp node to go through each node
+		struct Node* temp = start;		// temp node to go through each node
 		while (temp->next != NULL) {
 			printf(" %d ->", temp->d);
 			temp = temp->next;
@@ -135,8 +135,8 @@ void traverse(struct Node **start) {
 }
 
 //  To search an element
-int search(struct Node **start, int data) {
-	struct Node* temp = *start;
+int search(struct Node *start, int data) {
+	struct Node* temp = start;
 	int found = 0, i = 1;
 	while (temp->next != NULL) {
 		if(temp->d == data) {
@@ -190,7 +190,7 @@ int main() {
 		res = addFront(&start, getNewNode(23));
 		insertResult(res, 12);
 	}
-	traverse(&start);
+	traverse(start);
 
 	// Adding elements at the end
 	if (getNewNode(25) != NULL) {
@@ -201,7 +201,7 @@ int main() {
 		res = addLast(&start, getNewNode(46));
 		insertResult(res, 46);
 	}
-	traverse(&start);
+	traverse(start);
 
 	// Adding elements to front
 	if (getNewNode(12) != NULL) {
@@ -212,35 +212,35 @@ int main() {
 		res = addFront(&start, getNewNode(11));
 		insertResult(res, 11);	
 	}
-	traverse(&start);
+	traverse(start);
 
 	// Adding element at a given index (Adding 14 at index 3)
 	if (getNewNode(14) != NULL) {
 		res = addAtPos(&start, getNewNode(14), 3);
 		insertResult(res, 14);	
 	}
-	traverse(&start);
+	traverse(start);
 
 	// Removing First Element
 	node = deleteFirst(&start);
 	deleteResult(&node);
-	traverse(&start);
+	traverse(start);
 
 	// search
-	res = search(&start, 14);
+	res = search(start, 14);
 	searchResult(14, res);
-	res = search(&start, 12);
+	res = search(start, 12);
 	searchResult(12, res);
 	
 	// Removing Last Element
 	node = deleteLast(&start);
 	deleteResult(&node);
-	traverse(&start);
+	traverse(start);
 
 	// Removing an element from a index
 	node = deleteAtPos(&start, 17);
 	deleteResult(&node);
-	traverse(&start);
+	traverse(start);
 	return 0;
 	
 }
