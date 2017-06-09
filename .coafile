@@ -24,6 +24,16 @@ bears = GofmtBear
 files = **/*.py
 bears = PEP8Bear
 
+# Pylint for Docstrings
+[pylint]
+files = **/*.py
+bears = PyLintBear
+
+# Haskell
+[haskell]
+files = **/*.hs
+bears = HaskellLintBear
+
 # yaml
 [yml]
 files = **/*.yml
