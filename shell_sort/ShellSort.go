@@ -18,7 +18,6 @@ func ShellSort(data []int) []int {
 		}
 	}
 	return data
-
 }
 
 func main() {
