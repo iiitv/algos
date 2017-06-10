@@ -17,4 +17,5 @@ install:
 
 script:
   - coala --ci
+  - pylint --generate-rcfile > ~/.pylintrc
   - pylint --extension-pkg-whitelist=numpy
