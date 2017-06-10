@@ -1,66 +1,26 @@
 import java.util.Scanner;
 import java.util.NoSuchElementException;
 import java.util.InputMismatchException;
+import java.util.Random;
 
 public class AvlTree {
 
 	public static void main(String[] args) {
 		AVL avl = new AVL();
-		Scanner inp = new Scanner(System.in);
-		while (true) {
-			try {
-				System.out.println("\nTo insert an element Enter 1");
-				System.out.println("To delete an element Enter 2");
-				System.out.println("To print AVL tree preorder Enter 3");
-				System.out.println("To EXIT Enter 4");
-				int a = inp.nextInt();
-				switch (a) {
-				case 1:
-					int in = inp.nextInt();
-					avl.insert(in);
-					break;
-				case 2:
-					int d = inp.nextInt();
-					avl.del(d);
-					break;
-				case 3:
-					if (avl.isEmpty()) {
-						System.out.println("null");
-					} else {
-						avl.prntIn(avl.root);
-						System.out.println(" ");
-					}
-					break;
-				case 4:
-					break;
-				default:
-					System.out.println("Sorry input number is not valid ");
-					break;
-				}
-				if (a == 4) {
-					break;
-				}
-			} catch (InputMismatchException e) {
-				System.out.println("Input not valid!!!\nplease Integers numbers only");
-				break;
-			}
-
+		Random rand = new Random();
+		int inp = 10000;
+		for (int i = 0; i < inp; i++) {
+			avl.root = avl.insert(avl.root, rand.nextInt(10000));
 		}
+		avl.delNode(avl.root, 1);
+		avl.prntIn(avl.root);
 	}
 }
 
 class AVL {
 	public NodeAVL root = null;
 
-	public void insert(int data) {
-		// call these method when you wanna insert an element in the tree;
-		if (root == null) {
-			root = new NodeAVL(data);
-		} else
-			root = insert(root, data);
-	}
-
-	private NodeAVL insert(NodeAVL node, int data) {
+	public NodeAVL insert(NodeAVL node, int data) {
 		// These method takes care of rotation needed after insertion
 		if (node == null) {
 			node = new NodeAVL(data);
@@ -183,8 +143,12 @@ class AVL {
 		}
 	}
 
-	public void del(int data) {
-		// we call these method to delete the node if its exist
+	public void delNode(NodeAVL node, int data) {
+		// These is the method to delete node if it exist
+		// Otherwise it throws an exception
+		if (root == null) {
+			throw new NoSuchElementException("AVL Tree is Empty!!!");
+		}
 		if (root.data == data) {
 			NodeAVL temp = root.right;
 			if (root.left == null && root.right == null)
@@ -199,7 +163,7 @@ class AVL {
 					root.right.left = root.left;
 					root = root.right;
 				} else {
-					dta = go(temp);
+					dta = transverseLeftmost(temp);
 					root.data = dta;
 				}
 				if (root.right == null)
@@ -208,13 +172,8 @@ class AVL {
 					root.hRight = Math.max(root.right.hLeft, root.right.hLeft);
 				root = isRotate(root);
 			}
-		} else
-			del(root, data);
-	}
 
-	private void del(NodeAVL node, int data) {
-		// These is the method to delete node if it exist
-		// Otherwise it throws an exception
+		}
 		if (node.right == null && node.left == null) {
 			throw new NoSuchElementException("element you wanna delete not exist");
 		}
@@ -231,7 +190,7 @@ class AVL {
 				if (temp.left == null)
 					node.right = node.right.right;
 				else
-					del.data = go(temp);
+					del.data = transverseLeftmost(temp);
 				del.hRight = Math.max(del.right.hLeft, del.right.hRight);
 			}
 		} else if (node.left != null && node.left.data == data) {
@@ -246,17 +205,17 @@ class AVL {
 				NodeAVL temp = del.right;
 				if (temp.left == null)
 					node.left = node.left.right;
-				del.data = go(temp);
+				del.data = transverseLeftmost(temp);
 				del.hRight = Math.max(del.right.hLeft, del.right.hRight);
 			}
 		} else if (node.data > data) {
-			del(node.left, data);
+			delNode(node.left, data);
 			if (node.left == null)
 				node.hLeft = 0;
 			else
 				node.hLeft = Math.max(node.left.hLeft, node.left.hRight) + 1;
 		} else if (node.data < data) {
-			del(node.right, data);
+			delNode(node.right, data);
 			if (node.right == null)
 				node.hRight = 0;
 			else
@@ -265,7 +224,7 @@ class AVL {
 		node = isRotate(node);
 	}
 
-	public int go(NodeAVL node) {
+	public int transverseLeftmost(NodeAVL node) {
 		// These method is special method which comes
 		// in play when we have to delete a node
 		// which have both childeren.
@@ -279,7 +238,7 @@ class AVL {
 			return data;
 		}
 		node = node.left;
-		int data = go(node);
+		int data = transverseLeftmost(node);
 		if (node.left == null)
 			node.hLeft = 0;
 		else
