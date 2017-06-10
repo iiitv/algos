@@ -47,7 +47,7 @@ func (ll *LinkedList) Add(newVal int) {
 // RemoveFirst removes the first element from the LinkedList Time Complexity: O(1)
 func (ll *LinkedList) RemoveFirst() (val int, err error) {
 	if ll.length == 0 {
-		return 0, errors.New("There is nothing to remove!")
+		return 0, errors.New("there is nothing to remove")
 	} else if ll.length == 1 {
 		val = ll.root.value
 		ll.root = nil
@@ -78,7 +78,7 @@ func (ll *LinkedList) ToSlice() []int {
 // PeekLast returns the last element of the LinkedList, without removing it Time Complexity: O(1)
 func (ll *LinkedList) PeekLast() (val int, err error) {
 	if ll.length == 0 {
-		return 0, errors.New("There is nothing to peek!")
+		return 0, errors.New("there is nothing to peek")
 	} else if ll.length == 1 {
 		val = ll.root.value
 	} else {
