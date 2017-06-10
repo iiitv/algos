@@ -14,7 +14,7 @@ import java.util.Arrays;
  * n: Value to find the change for
  */
 public class CoinChange {
-	static int CoinChangeProblem(int[] C, int m, int n) {
+	static int coinChangeProblem(int[] C, int m, int n) {
 		int[] possibilities = new int[n+1];
 		Arrays.fill(possibilities, 0);
 		possibilities[0] = 1;
