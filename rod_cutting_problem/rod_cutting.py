@@ -5,7 +5,7 @@
 """
 
 
-def rod_cutting(price, rod_len = None):
+def rod_cutting(price, rod_len=None):
     """
     Computes maximum money that can be earned by cutting
     a rod of length rod_len (Bottom-Up Approach).
