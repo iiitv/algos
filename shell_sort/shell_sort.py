@@ -24,10 +24,8 @@ def shell_sort(array):
 
     return array
 
-
 def main():
     sample_arr = [1, -312, 4, 12, 3, 17, 2542, 20, 18]
-    assert sorted(sample_arr) == shell_sort(sample_arr)
     print(shell_sort(sample_arr))
 
 if __name__ == '__main__':
