@@ -1,4 +1,4 @@
-def shell_sort(array: []):
+def shell_sort(array):
     """
     Sorts the given array of integers using the Shell Sort algorithm
     Time Complexity : O((len(array))^2)
