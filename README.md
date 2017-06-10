@@ -14,7 +14,7 @@ Community (college) maintained list of Algorithms and Data Structures implementa
 |:--------------|:----------------:|:----------------:|:----------------:|:-----------------:|:-----------------:|
 | [Bin Sort](http://www.cdn.geeksforgeeks.org/bucket-sort-2/)| | |[\[X\]](bin_sort/BinSort.java)| | |
 | [Binary Search](https://en.wikipedia.org/wiki/Binary_search_algorithm) | [\[X\]](binary_search/binary_search.c) | | [\[X\]](binary_search/BinarySearch.java) | [\[X\]](binary_search/binary_search.py) | |
-| [Coin Change Problem](http://www.algorithmist.com/index.php/Coin_Change) | [\[X\]](coin_change_problem/coin_change_problem.c) | | | | |
+| [Coin Change Problem](http://www.algorithmist.com/index.php/Coin_Change) | [\[X\]](coin_change_problem/coin_change_problem.c) | |[\[X\]](coin_change_problem/CoinChange.java) | | |
 | [Counting Sort](http://www.geeksforgeeks.org/counting-sort/)| [\[X\]](counting_sort/counting_sort.c) | | [\[X\]](counting_sort/CountingSort.java) | | |
 | [Depth First Traversal](http://www.geeksforgeeks.org/depth-first-traversal-for-a-graph/) | | | [\[X\]](depth_first_traversal/DepthFirstTraversal.java) | | |
 | [Dijkstra Algorithm](https://en.wikipedia.org/wiki/Dijkstra's_algorithm/) | [\[X\]](dijkstra/dijkstra.c) | | [\[X\]](dijkstra/Dijkstra.java) | | |
