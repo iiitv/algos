@@ -8,6 +8,7 @@ env:
 install:
   - sudo apt-get update
   - sudo apt-get install golang-go
+  - sudo apt-get install ghc-mod hlint
   - go get -u github.com/golang/lint/golint
   - cd $GOPATH/src/github.com/golang/lint
   - go install .
