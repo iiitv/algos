@@ -1,7 +1,8 @@
-package linked_list
+package linkedlist
 
 import "errors"
 
+// List is a A general List interface
 type List interface {
 	Add(newVal int)
 	Len() int
@@ -15,22 +16,18 @@ type linkedListNode struct {
 	next *linkedListNode
 }
 
+// LinkedList is a singly-linked LinkedList
 type LinkedList struct {
 	root *linkedListNode
 	tail *linkedListNode
 	length int
 }
 
-/*
-	Returns the length of the LinkedList
-*/
-func (l *LinkedList) Len() int { return l.length }
+// Len returns the length of the LinkedList
+func (ll *LinkedList) Len() int { return ll.length }
 
 
-/*
-	Adds a new element to the LinkedList
-	Time Complexity: O(1)
-*/
+// Add adds a new element to the LinkedList Time Complexity: O(1)
 func (ll *LinkedList) Add(newVal int) {
 	newNode := new(linkedListNode)
 	newNode.value = newVal
@@ -48,10 +45,7 @@ func (ll *LinkedList) Add(newVal int) {
 	ll.length++
 }
 
-/*
-	Removes the first element from the LinkedList
-	Time Complexity: O(1)
-*/
+// RemoveFirst removes the first element from the LinkedList Time Complexity: O(1)
 func (ll *LinkedList) RemoveFirst() (val int, err error) {
 	if ll.length == 0 {
 		return 0, errors.New("There is nothing to remove!")
@@ -71,12 +65,9 @@ func (ll *LinkedList) RemoveFirst() (val int, err error) {
 	return
 }
 
-/*
-	Converts the LinkedList to a Slice
-	Time Complexity: O(n)
- */
+// ToSlice converts the LinkedList to a Slice Time Complexity: O(n)
 func (ll *LinkedList) ToSlice() []int {
-	sliceList := make([]int, 0)
+	var sliceList []int
 
 	for currNode := ll.root; currNode != nil; currNode = currNode.next {
 		sliceList = append(sliceList, currNode.value)
@@ -85,10 +76,7 @@ func (ll *LinkedList) ToSlice() []int {
 	return sliceList
 }
 
-/*
-	Returns the last element of the LinkedList, without removing it
-	Time Complexity: O(1)
-*/
+// PeekLast returns the last element of the LinkedList, without removing it Time Complexity: O(1)
 func (ll* LinkedList) PeekLast() (val int, err error) {
 	if ll.length == 0 {
 		return 0, errors.New("There is nothing to peek!")
@@ -101,16 +89,14 @@ func (ll* LinkedList) PeekLast() (val int, err error) {
 	return val, nil
 }
 
-/*
-	Returns the first element of the LinkedList, without removing it
-	Time Complexity: O(1)
-*/
+// PeekFirst returns the first element of the LinkedList, without removing it Time Complexity: O(1)
 func (ll* LinkedList) PeekFirst() (val int, err error) {
 	if ll.length == 0 {
-		return 0, errors.New("There is nothing to peek!")
-	} else {
-		val = ll.root.value
+		return 0, errors.New("there is nothing to peek")
 	}
+
+	val = ll.root.value
 
 	return val, nil
 }
+
