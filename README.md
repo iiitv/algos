@@ -17,7 +17,7 @@ Community (college) maintained list of Algorithms and Data Structures implementa
 | [Coin Change Problem](http://www.algorithmist.com/index.php/Coin_Change) | [\[X\]](coin_change_problem/coin_change_problem.c) | | | | |
 | [Counting Sort](http://www.geeksforgeeks.org/counting-sort/)| [\[X\]](counting_sort/counting_sort.c) | | [\[X\]](counting_sort/CountingSort.java) | | |
 | [Depth First Traversal](http://www.geeksforgeeks.org/depth-first-traversal-for-a-graph/) | | | [\[X\]](depth_first_traversal/DepthFirstTraversal.java) | | |
-| [Dijkstra Algorithm](https://en.wikipedia.org/wiki/Dijkstra's_algorithm/) | | |[\[X\]](dijkstra/Dijkstra.java) | | |
+| [Dijkstra Algorithm](https://en.wikipedia.org/wiki/Dijkstra's_algorithm/) | [\[X\]](dijkstra/dijkstra.c) | | [\[X\]](dijkstra/Dijkstra.java) | | |
 | [Euclidean GCD](https://en.wikipedia.org/wiki/Euclidean_algorithm) | [\[X\]](euclidean_gcd/euclidean_gcd.c) | | [\[X\]](euclidean_gcd/EuclideanGCD.java) | [\[X\]](euclidean_gcd/euclidean_gcd.py) | |
 | [Exponentation by Squaring](https://en.wikipedia.org/wiki/Exponentiation_by_squaring) | [\[X\]](exponentation_by_squaring/exponentation_by_squaring.c) |||| |
 | [Heap Sort](https://en.wikipedia.org/wiki/Heapsort) | [\[X\]](heap_sort/heap_sort.c) | | [\[X\]](heap_sort/HeapSort.java) | | |
@@ -33,8 +33,8 @@ Community (college) maintained list of Algorithms and Data Structures implementa
 | [Prims](https://en.wikipedia.org/wiki/Prim%27s_algorithm) | [\[X\]](prims/prims.c) | | [\[X\]](prims/Prims.java) | | |
 | [Quick Select](https://en.wikipedia.org/wiki/Quickselect) | [\[X\]](quick_select/quick_select.c) | | | | |
 | [Quicksort](https://en.wikipedia.org/wiki/Quicksort) | [\[X\]](quicksort/quicksort.c) | | [\[X\]](quicksort/QuickSort.java) | [\[X\]](quicksort/quick_sort.py) | |
-| [Rod Cutting Problem](http://www.geeksforgeeks.org/dynamic-programming-set-13-cutting-a-rod/) | [\[X\]](rod_cutting_problem/rod_cutting.c) | | [\[X\]](rod_cutting_problem/RodCutting.java) | | |
-| [Shell Sort](https://en.wikipedia.org/wiki/Shellsort) | | [\[X\]](shell_sort/ShellSort.cpp) | | | [\[X\]](shell_sort/shell_sort.go) |
+| [Rod Cutting Problem](http://www.geeksforgeeks.org/dynamic-programming-set-13-cutting-a-rod/) | [\[X\]](rod_cutting_problem/rod_cutting.c) | | [\[X\]](rod_cutting_problem/RodCutting.java) | [\[X\]](rod_cutting_problem/rod_cutting.py) | |
+| [Shell Sort](https://en.wikipedia.org/wiki/Shellsort) | | [\[X\]](shell_sort/ShellSort.cpp) | | [\[X\]](/shell_sort/shell_sort.py) | [\[X\]](shell_sort/shell_sort.go) |
 | [Sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes) | [\[X\]](sieve_of_eratosthenes/sieveOfEratosthenes.c) | | | [\[X\]](sieve_of_eratosthenes/sieve_of_eratosthenes.py) | [\[X\]](sieve_of_eratosthenes/sieve_of_eratosthenes.go) |
 
 
