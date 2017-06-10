@@ -13,19 +13,18 @@ type List interface {
 
 type linkedListNode struct {
 	value int
-	next *linkedListNode
+	next  *linkedListNode
 }
 
 // LinkedList is a singly-linked LinkedList
 type LinkedList struct {
-	root *linkedListNode
-	tail *linkedListNode
+	root   *linkedListNode
+	tail   *linkedListNode
 	length int
 }
 
 // Len returns the length of the LinkedList
 func (ll *LinkedList) Len() int { return ll.length }
-
 
 // Add adds a new element to the LinkedList Time Complexity: O(1)
 func (ll *LinkedList) Add(newVal int) {
@@ -77,7 +76,7 @@ func (ll *LinkedList) ToSlice() []int {
 }
 
 // PeekLast returns the last element of the LinkedList, without removing it Time Complexity: O(1)
-func (ll* LinkedList) PeekLast() (val int, err error) {
+func (ll *LinkedList) PeekLast() (val int, err error) {
 	if ll.length == 0 {
 		return 0, errors.New("There is nothing to peek!")
 	} else if ll.length == 1 {
@@ -90,7 +89,7 @@ func (ll* LinkedList) PeekLast() (val int, err error) {
 }
 
 // PeekFirst returns the first element of the LinkedList, without removing it Time Complexity: O(1)
-func (ll* LinkedList) PeekFirst() (val int, err error) {
+func (ll *LinkedList) PeekFirst() (val int, err error) {
 	if ll.length == 0 {
 		return 0, errors.New("there is nothing to peek")
 	}
@@ -99,4 +98,3 @@ func (ll* LinkedList) PeekFirst() (val int, err error) {
 
 	return val, nil
 }
-
