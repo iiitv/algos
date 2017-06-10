@@ -18,3 +18,28 @@ bears = GoLintBear
 [Gofmt]
 files = **/*.go
 bears = GofmtBear
+
+# python lint
+[pep8]
+files = **/*.py
+bears = PEP8Bear
+
+# Pylint for Docstrings
+[pylint]
+files = **/*.py
+bears = PyLintBear
+
+# Haskell
+[haskell]
+files = **/*.hs
+bears = HaskellLintBear
+
+# hlint
+[hlint]
+files = **/*.hs
+bears = GhcModBear
+
+# yaml
+[yml]
+files = **/*.yml
+bears = YAMLLintBear
