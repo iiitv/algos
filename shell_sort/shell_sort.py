@@ -2,7 +2,7 @@ def shell_sort(array):
     """
     Sorts the given array of integers using the Shell Sort algorithm
     """
-    
+
     # calculate the gap using Knuth's formula
     gap = 1
     while gap < len(array) // 3:
