@@ -1,5 +1,8 @@
-
 def shell_sort(array):
+    """
+    Sorts the given array of integers using the Shell Sort algorithm
+    """
+    
     # calculate the gap using Knuth's formula
     gap = 1
     while gap < len(array) // 3:
@@ -24,9 +27,11 @@ def shell_sort(array):
 
     return array
 
+
 def main():
     sample_arr = [1, -312, 4, 12, 3, 17, 2542, 20, 18]
     print(shell_sort(sample_arr))
+
 
 if __name__ == '__main__':
     main()
