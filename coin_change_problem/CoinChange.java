@@ -14,10 +14,9 @@ import java.util.Arrays;
  * m: Number of types of coins
  * n: Value to find the change for
  */
-public class CoinChange 
-{
-    static int coin_change_problem(int C[], int m, int n)
-    {
+public class CoinChange {
+	
+    static int coin_change_problem(int[] C, int m, int n){
 	int[] possibilities = new int[n+1];
         Arrays.fill(possibilities, 0);
         possibilities[0] = 1;
@@ -33,7 +32,7 @@ public class CoinChange
         return possibilities[n];
     }
     public static void main(String[] args) {
-        int coin[] = {2, 5, 3, 6};
+        int[] coin = {2, 5, 3, 6};
 	int n = 10, m = coin.length;
 	System.out.println(coin_change_problem(coin, m, n));
     }
