@@ -1,6 +1,5 @@
 import java.util.Scanner;
 import java.util.NoSuchElementException;
-import java.util.InputMismatchException;
 import java.util.Random;
 
 public class AvlTree {
@@ -8,17 +7,25 @@ public class AvlTree {
 	public static void main(String[] args) {
 		AVL avl = new AVL();
 		Random rand = new Random();
-		int inp = 10000;
+		int inp = 10;
+		System.out.println(avl.isEmpty());
 		for (int i = 0; i < inp; i++) {
-			avl.root = avl.insert(avl.root, rand.nextInt(10000));
+			avl.root = avl.insert(avl.root, rand.nextInt(100));
 		}
-		avl.delNode(avl.root, 1);
+		avl.prntIn(avl.root);
+		System.out.println(" ");
+		System.out.println(avl.isEmpty());
+		avl.delNode(avl.root,avl.root.data);
 		avl.prntIn(avl.root);
 	}
 }
 
 class AVL {
-	public NodeAVL root = null;
+	public NodeAVL root;
+
+	public AVL(){
+		root = null;
+	}
 
 	public NodeAVL insert(NodeAVL node, int data) {
 		// These method takes care of rotation needed after insertion
@@ -44,7 +51,7 @@ class AVL {
 		return node;
 	}
 
-	public NodeAVL rotateLR(NodeAVL node) {
+	private NodeAVL rotateLR(NodeAVL node) {
 		NodeAVL sec = node.left;
 		NodeAVL temp = sec.right;
 		node.left = temp;
@@ -65,7 +72,7 @@ class AVL {
 		return temp;
 	}
 
-	public NodeAVL rotateRL(NodeAVL node) {
+	private NodeAVL rotateRL(NodeAVL node) {
 		NodeAVL sec = node.right;
 		NodeAVL temp = sec.left;
 		node.right = temp;
@@ -86,7 +93,7 @@ class AVL {
 		return temp;
 	}
 
-	public NodeAVL rotateLL(NodeAVL node) {
+	private NodeAVL rotateLL(NodeAVL node) {
 		NodeAVL temp = node.left;
 		node.left = temp.right;
 		temp.right = node;
@@ -98,7 +105,7 @@ class AVL {
 		return temp;
 	}
 
-	public NodeAVL rotateRR(NodeAVL node) {
+	private NodeAVL rotateRR(NodeAVL node) {
 		NodeAVL temp = node.right;
 		node.right = temp.left;
 		temp.left = node;
@@ -172,12 +179,11 @@ class AVL {
 					root.hRight = Math.max(root.right.hLeft, root.right.hLeft);
 				root = isRotate(root);
 			}
-
 		}
-		if (node.right == null && node.left == null) {
+		else if (node.right == null && node.left == null) {
 			throw new NoSuchElementException("element you wanna delete not exist");
 		}
-		if (node.right != null && node.right.data == data) {
+		else if (node.right != null && node.right.data == data) {
 			NodeAVL del = node.right;
 			if (del.right == null && del.left == null)
 				node.right = null;
@@ -224,7 +230,7 @@ class AVL {
 		node = isRotate(node);
 	}
 
-	public int transverseLeftmost(NodeAVL node) {
+	private int transverseLeftmost(NodeAVL node) {
 		// These method is special method which comes
 		// in play when we have to delete a node
 		// which have both childeren.
