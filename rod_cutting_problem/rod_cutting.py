@@ -29,7 +29,7 @@ def main():
     Main Function of this program.
     """
     price = [1, 5, 8, 9, 10, 17, 17, 20, 24, 30]
-    rod_length = 4
+    rod_length = len(price)
     print(rod_cutting(price, rod_length))
 
 
