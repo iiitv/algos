@@ -5,7 +5,7 @@
 """
 
 
-def rod_cutting(price, rod_len):
+def rod_cutting(price, rod_len = None):
     """
     Computes maximum money that can be earned by cutting
     a rod of length rod_len (Bottom-Up Approach).
@@ -16,6 +16,7 @@ def rod_cutting(price, rod_len):
     :param rod_len: Total length of rod to be considered for optimal amount.
     :return: returns optimal solution for rod of length rod_len.
     """
+    rod_len = len(price) if rod_len is None else rod_len
     opt_price = [0] * (rod_len + 1)
 
     for i in range(1, rod_len + 1):
@@ -29,8 +30,9 @@ def main():
     Main Function of this program.
     """
     price = [1, 5, 8, 9, 10, 17, 17, 20, 24, 30]
-    rod_length = len(price)
+    rod_length = 4
     print(rod_cutting(price, rod_length))
+    print(rod_cutting(price))
 
 
 if __name__ == '__main__':
