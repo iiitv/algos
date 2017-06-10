@@ -5,24 +5,22 @@
 """
 
 
-def rod_cutting(price, rod_len=None):
+def rod_cutting(price):
     """
     Computes maximum money that can be earned by cutting
     a rod of length rod_len (Bottom-Up Approach).
 
-    Time Complexity : O(rod_len^2)
-    Space Complexity : O(rod_len)
+    Time Complexity : O((len(price))^2)
+    Space Complexity : O(len(price))
     :param price: List in which price[i] denotes price of rod of length i.
-    :param rod_len: Total length of rod to be considered for optimal amount.
     :return: returns optimal solution for rod of length rod_len.
     """
-    rod_len = len(price) if rod_len is None else rod_len
-    opt_price = [0] * (rod_len + 1)
+    opt_price = [0] * (len(price) + 1)
 
-    for i in range(1, rod_len + 1):
+    for i in range(1, len(price) + 1):
         opt_price[i] = max(
                     [-1] + [price[j] + opt_price[i - j - 1] for j in range(i)])
-    return opt_price[rod_len]
+    return opt_price[len(price)]
 
 
 def main():
@@ -30,8 +28,6 @@ def main():
     Main Function of this program.
     """
     price = [1, 5, 8, 9, 10, 17, 17, 20, 24, 30]
-    rod_length = 4
-    print(rod_cutting(price, rod_length))
     print(rod_cutting(price))
 
 
