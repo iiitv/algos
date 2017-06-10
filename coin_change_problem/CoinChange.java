@@ -24,7 +24,7 @@ public class CoinChange {
 	// For all coins,
 	// Update array if the current coin is capable of
         // incrementing the possibility
-        for(int i = 0;i < m; i++){
+        for(int i = 0; i < m; i++){
             for(int j = C[i]; j <= n; j++){
                 possibilities[j] += possibilities[j - C[i]];
             }
