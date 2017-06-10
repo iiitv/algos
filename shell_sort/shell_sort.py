@@ -1,4 +1,4 @@
-def shell_sort(array):
+def shell_sort(array: [int]):
     """
     Sorts the given array of integers using the Shell Sort algorithm
     """
