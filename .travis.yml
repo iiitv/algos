@@ -17,3 +17,4 @@ install:
 
 script:
   - coala --ci
+  - python --extension-pkg-whitelist=numpy
