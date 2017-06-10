@@ -1,4 +1,3 @@
-import java.util.Scanner;
 import java.util.NoSuchElementException;
 import java.util.Random;
 
@@ -17,6 +16,8 @@ public class AvlTree {
 		System.out.println(avl.isEmpty());
 		avl.delNode(avl.root,avl.root.data);
 		avl.prntIn(avl.root);
+		System.out.println(" ");
+		avl.delNode(avl.root,1111);
 	}
 }
 
@@ -117,7 +118,7 @@ class AVL {
 		return temp;
 	}
 
-	public NodeAVL isRotate(NodeAVL node) {
+	private NodeAVL isRotate(NodeAVL node) {
 		// This Method see if there is nessesity for rotation and if
 		// there is need, it'll do suitable rotation
 		if (node.hRight - node.hLeft >= 2) {
