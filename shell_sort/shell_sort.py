@@ -1,6 +1,10 @@
-def shell_sort(array: [int]):
+def shell_sort(array: []):
     """
     Sorts the given array of integers using the Shell Sort algorithm
+    Time Complexity : O((len(array))^2)
+    Space Complexity : O(len(array))
+    :param array: A List of integers.
+    :return: returns the array sorted
     """
 
     # calculate the gap using Knuth's formula
