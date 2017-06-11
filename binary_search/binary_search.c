@@ -13,10 +13,9 @@
  * @r - right index of array.
  * @ele - element to be searched.
  */
-int recursive_binary_search(const int *ar, int l, int r, int ele)
-{
-	if (r >= l)
-    	{
+int recursive_binary_search(const int *ar, int l, int r, int ele){
+	if (r >= l){
+		
 		int mid = l + (r - l)/2;    //calculate mid point of the array
 		
 		// If the element is present at the middle itself
@@ -61,7 +60,7 @@ int main() {
 		search_arr[] = {1, 35, 112, 324, 67},
 		pos, i, pos_rec;
 
-	for (i = 0 ; i < 5 ; i ++) {
+	for (i = 0 ; i < 5 ; i++) {
 		pos = binary_search(arr, 6, search_arr[i]);
 		pos_rec = recursive_binary_search(arr, 0, 5, search_arr[i]);
 		
