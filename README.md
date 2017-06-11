@@ -40,7 +40,7 @@ Community (college) maintained list of Algorithms and Data Structures implementa
 
 | Data Structure | C | CPP | Java | Python | Golang |
 |:--------------|:----------------:|:----------------:|:----------------:|:-----------------:|:-----------------:|
-| [AVL Tree](https://en.wikipedia.org/wiki/AVL_tree)| | |[\[X\]](avl_tree/AVL_Tree.java) | | |
+| [AVL Tree](http://www.geeksforgeeks.org/avl-tree-set-1-insertion)| | |[\[X\]](avl_tree/AvlTree.java) | | |
 | [Binary Search Tree](https://en.wikipedia.org/wiki/Binary_search_tree) | | | [\[X\]](binary_search_tree/BinarySearchTree.java) | | |
 | [Linked List](https://en.wikipedia.org/wiki/Linked_list) | | | [\[X\]](linked_list/LinkedList.java) | | |
 | [Stack](https://en.wikipedia.org/wiki/Stack_(abstract_data_type)) | | | [\[X\]](stack/Stack.java) | [\[X\]](stack/stack.py) | |
