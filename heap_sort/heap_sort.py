@@ -28,6 +28,25 @@ def right_child_index(i):
     return left_child_index(i) + 1
 
 
+def get_children_of_node(a, i):
+    """
+    :param a: list
+        List organized as heap, i.e for each node i:
+            left children is at position 2(i + 1) - 1
+            right children is at position 2(i + 1))
+    :param i: int
+        Index of parent node in array (that is organized as heap)
+    :return: (left children index, left children node) and
+        (right children index, right children node)
+    """
+
+    l = left_child_index(i)  # index and value of children
+    l_val = a[l] if l in range(len(a)) else None
+    r = right_child_index(i)
+    r_val = a[r] if r in range(len(a)) else None
+    return (l, l_val), (r, r_val)
+
+
 def max_heapify(a, i):
     """
     :param a: list
@@ -40,11 +59,7 @@ def max_heapify(a, i):
         List organized as max-heap.
     """
 
-    l = left_child_index(i)  # position and value of children
-    l_val = a[l] if l in range(len(a)) else None
-    r = right_child_index(i)
-    r_val = a[r] if r in range(len(a)) else None
-
+    (l, l_val), (r, r_val) = get_children_of_node(a, i)
     largest_i = i  # find index of largest value among a[i] and its children
     if l_val is not None and l_val > a[i]:
         largest_i = l
@@ -52,7 +67,7 @@ def max_heapify(a, i):
     if r_val is not None and r_val > a[largest_i]:
         largest_i = r
 
-    if largest_i != i:
+    if largest_i != i:  # swap only if it's needed
         a[largest_i], a[i] = a[i], a[largest_i]  # swap
         return max_heapify(a, largest_i)
 
@@ -64,7 +79,7 @@ def heap_sort(a):
     :param a: list
         List of objects with an order
     :return: list
-        Sorted list with heap_sort algorithm
+        Sorted list with heap sort algorithm
     """
 
     for i in range(len(a) // 2, 0, -1):
