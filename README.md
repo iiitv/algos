@@ -6,6 +6,7 @@ Community (college) maintained list of Algorithms and Data Structures implementa
 [![Code Climate](https://codeclimate.com/github/iiitv/algos/badges/gpa.svg)](https://codeclimate.com/github/iiitv/algos)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/c10c3fd13edb475ca1bf77d4291d54b4)](https://www.codacy.com/app/aviaryan/algos?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=iiitv/algos&amp;utm_campaign=Badge_Grade)
 [![Build Status](https://travis-ci.org/iiitv/algos.svg?branch=master)](https://travis-ci.org/iiitv/algos)
+[![js-happiness-style](https://cdn.rawgit.com/JedWatson/happiness/master/badge.svg)](https://github.com/JedWatson/happiness)
 
 
 ## Implemented Algorithms

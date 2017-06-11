@@ -34,6 +34,11 @@ bears = HaskellLintBear
 files = **/*.hs
 bears = GhcModBear
 
+# JavaScript
+[happiness]
+files = **/*.js
+bears = HappinessLintBear
+
 # yaml
 [yml]
 files = **/*.yml
