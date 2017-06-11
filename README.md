@@ -6,6 +6,7 @@ Community (college) maintained list of Algorithms and Data Structures implementa
 [![Code Climate](https://codeclimate.com/github/iiitv/algos/badges/gpa.svg)](https://codeclimate.com/github/iiitv/algos)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/c10c3fd13edb475ca1bf77d4291d54b4)](https://www.codacy.com/app/aviaryan/algos?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=iiitv/algos&amp;utm_campaign=Badge_Grade)
 [![Build Status](https://travis-ci.org/iiitv/algos.svg?branch=master)](https://travis-ci.org/iiitv/algos)
+[![js-happiness-style](https://cdn.rawgit.com/JedWatson/happiness/master/badge.svg)](https://github.com/JedWatson/happiness)
 
 
 ## Implemented Algorithms
@@ -13,7 +14,7 @@ Community (college) maintained list of Algorithms and Data Structures implementa
 | Algorithm | C | CPP | Java | Python | Golang |
 |:--------------|:----------------:|:----------------:|:----------------:|:-----------------:|:-----------------:|
 | [Bin Sort](http://www.cdn.geeksforgeeks.org/bucket-sort-2/)| | |[\[X\]](bin_sort/BinSort.java)| | |
-| [Binary Search](https://en.wikipedia.org/wiki/Binary_search_algorithm) | [\[X\]](binary_search/binary_search.c) | | [\[X\]](binary_search/BinarySearch.java) | [\[X\]](binary_search/binary_search.py) | |
+| [Binary Search](https://en.wikipedia.org/wiki/Binary_search_algorithm) | [\[X\]](binary_search/binary_search.c) | | [\[X\]](binary_search/BinarySearch.java) | [\[X\]](binary_search/binary_search.py) | [\[X\]](binary_search/binary_search.go) |
 | [Coin Change Problem](http://www.algorithmist.com/index.php/Coin_Change) | [\[X\]](coin_change_problem/coin_change_problem.c) | | | | |
 | [Counting Sort](http://www.geeksforgeeks.org/counting-sort/)| [\[X\]](counting_sort/counting_sort.c) | | [\[X\]](counting_sort/CountingSort.java) | | |
 | [Depth First Traversal](http://www.geeksforgeeks.org/depth-first-traversal-for-a-graph/) | | | [\[X\]](depth_first_traversal/DepthFirstTraversal.java) | | |
@@ -42,6 +43,7 @@ Community (college) maintained list of Algorithms and Data Structures implementa
 
 | Data Structure | C | CPP | Java | Python | Golang |
 |:--------------|:----------------:|:----------------:|:----------------:|:-----------------:|:-----------------:|
+| [AVL Tree](http://www.geeksforgeeks.org/avl-tree-set-1-insertion)| | |[\[X\]](avl_tree/AvlTree.java) | | |
 | [Binary Search Tree](https://en.wikipedia.org/wiki/Binary_search_tree) | | | [\[X\]](binary_search_tree/BinarySearchTree.java) | | |
 | [Linked List](https://en.wikipedia.org/wiki/Linked_list) | | | [\[X\]](linked_list/LinkedList.java) | | [\[X\]](linked_list/linked_list.go) |
 | [Stack](https://en.wikipedia.org/wiki/Stack_(abstract_data_type)) | | | [\[X\]](stack/Stack.java) | [\[X\]](stack/stack.py) | [\[X\]](stack/stack.go) |
