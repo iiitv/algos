@@ -6,10 +6,12 @@ Community (college) maintained list of Algorithms and Data Structures implementa
 [![Code Climate](https://codeclimate.com/github/iiitv/algos/badges/gpa.svg)](https://codeclimate.com/github/iiitv/algos)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/c10c3fd13edb475ca1bf77d4291d54b4)](https://www.codacy.com/app/aviaryan/algos?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=iiitv/algos&amp;utm_campaign=Badge_Grade)
 [![Build Status](https://travis-ci.org/iiitv/algos.svg?branch=master)](https://travis-ci.org/iiitv/algos)
+
 [![js-happiness-style](https://cdn.rawgit.com/JedWatson/happiness/master/badge.svg)](https://github.com/JedWatson/happiness)
 
 
 ## Implemented Algorithms
+
 
 | Algorithm | C | CPP | Java | Python | Golang |
 |:--------------|:----------------:|:----------------:|:----------------:|:-----------------:|:-----------------:|
@@ -41,12 +43,12 @@ Community (college) maintained list of Algorithms and Data Structures implementa
 
 ## Implemented Data Structures
 
-| Data Structure | C | CPP | Java | Python | Golang |
-|:--------------|:----------------:|:----------------:|:----------------:|:-----------------:|:-----------------:|
-| [AVL Tree](http://www.geeksforgeeks.org/avl-tree-set-1-insertion)| | |[\[X\]](avl_tree/AvlTree.java) | | |
-| [Binary Search Tree](https://en.wikipedia.org/wiki/Binary_search_tree) | | | [\[X\]](binary_search_tree/BinarySearchTree.java) | | |
-| [Linked List](https://en.wikipedia.org/wiki/Linked_list) | | | [\[X\]](linked_list/LinkedList.java) | | |
-| [Stack](https://en.wikipedia.org/wiki/Stack_(abstract_data_type)) | | | [\[X\]](stack/Stack.java) | [\[X\]](stack/stack.py) | [\[X\]](stack/stack.go) |
+| Data Structure | C | CPP | Java | Python | Golang | JavaScript |
+|:--------------|:----------------:|:----------------:|:----------------:|:-----------------:|:-----------------:|:-----------------:|
+| [AVL Tree](http://www.geeksforgeeks.org/avl-tree-set-1-insertion)| | |[\[X\]](avl_tree/AvlTree.java) | | | |
+| [Binary Search Tree](https://en.wikipedia.org/wiki/Binary_search_tree) | | | [\[X\]](binary_search_tree/BinarySearchTree.java) | | | |
+| [Linked List](https://en.wikipedia.org/wiki/Linked_list) | | | [\[X\]](linked_list/LinkedList.java) | | | |
+| [Stack](https://en.wikipedia.org/wiki/Stack_(abstract_data_type)) | | | [\[X\]](stack/Stack.java) | [\[X\]](stack/stack.py) | [\[X\]](stack/stack.go) | [\[X\]](stack/stack.js) |
 
 
 ## Resources
