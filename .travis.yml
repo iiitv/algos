@@ -2,8 +2,6 @@ dist: trusty
 language: python
 python:
   - "3.6"
-node_js:
-  - "7"
 
 env:
   GOPATH: $HOME/go
@@ -15,6 +13,8 @@ install:
   - sudo apt-get install ghc-mod hlint
   - curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -
   - sudo apt-get install -y nodejs
+  - echo "Node "`node -v`
+  - echo "npm v"`npm -v`
   - sudo npm install -g happiness
   - go get -u github.com/golang/lint/golint
   - cd $GOPATH/src/github.com/golang/lint
