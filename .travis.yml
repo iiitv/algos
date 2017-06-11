@@ -2,7 +2,7 @@ language: python
 python:
   - "3.6"
 node_js:
-    - "7"
+  - "7"
 
 env:
   GOPATH: $HOME/go
@@ -12,7 +12,8 @@ install:
   - sudo apt-get update
   - sudo apt-get install golang-go
   - sudo apt-get install ghc-mod hlint
-  - sudo apt-get install npm
+  - curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -
+  - sudo apt-get install -y nodejs
   - sudo npm install -g happiness
   - go get -u github.com/golang/lint/golint
   - cd $GOPATH/src/github.com/golang/lint
