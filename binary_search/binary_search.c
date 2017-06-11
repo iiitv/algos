@@ -13,7 +13,7 @@
  r - right index of array.
  ele - element to be searched.
  */
- int binarySearch(const int *ar, int l, int r, int ele)
+ int recursive_binary_search(const int *ar, int l, int r, int ele)
  {
     if (r >= l)
     {
@@ -21,11 +21,15 @@
   
          // If the element is present at the middle itself
          
-         if (ar[mid] == ele){  return mid;   }
+         if (ar[mid] == ele){  
+		 return mid;   
+	 }
   
          // If element is smaller than mid, then it can only be present
          // in left subarray
-         if (ar[mid] > ele){ return binarySearch(ar, l, mid-1, ele);}
+         if (ar[mid] > ele){ 
+		 return binarySearch(ar, l, mid-1, ele);
+	 }
   
          // Else the element can only be present in right subarray
          return binarySearch(ar, mid+1, r, ele);
@@ -60,7 +64,7 @@ int main() {
 
 	for (i = 0 ; i < 5 ; i ++) {
 		pos = binary_search(arr, 6, search_arr[i]);
-		pos_rec = BinarySearch(arr, 0, 5, search_arr[i]);
+		pos_rec = recursive_binary_search(arr, 0, 5, search_arr[i]);
 		
 		if (pos >= 0)
 			printf("%d found at index %d.\n", search_arr[i], pos);
