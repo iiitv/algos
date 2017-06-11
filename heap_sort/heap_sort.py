@@ -67,10 +67,10 @@ def heap_sort(a):
         Sorted list with heap_sort algorithm
     """
 
-    for i in range(int(len(a) / 2), 0, -1):
+    for i in range(len(a) // 2, 0, -1):
         a = max_heapify(a, i)  # create max-heap
 
-    for i in range(int(len(a) / 2), 0, -1):
+    for i in range(len(a) // 2, 0, -1):
         a[0], a[i] = a[i], a[0]  # swap first and last item
         a = max_heapify(a, i)
 
