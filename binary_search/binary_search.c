@@ -16,7 +16,7 @@
 int recursive_binary_search(const int *ar, int l, int r, int ele) {
 	if (r >= l) {
 		
-		int mid = l + (r - l)/2;    //calculate mid point of the array
+		int mid = l + (r - l) / 2;    //calculate mid point of the array
 		
 		// If the element is present at the middle itself
 		if (ar[mid] == ele) {  
@@ -26,11 +26,11 @@ int recursive_binary_search(const int *ar, int l, int r, int ele) {
 		// If element is smaller than mid, then it can only be present
 		// in left subarray
 		if (ar[mid] > ele) { 
-			return binarySearch(ar, l, mid-1, ele);
+			return binarySearch(ar, l, mid - 1, ele);
 		}
 		
 		// Else the element can only be present in right subarray
-		return binarySearch(ar, mid+1, r, ele);
+		return binarySearch(ar, mid + 1, r, ele);
 	}
 	
 	// We reach here when element is not present in array
