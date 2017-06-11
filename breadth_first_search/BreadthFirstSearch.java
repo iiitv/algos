@@ -59,7 +59,7 @@ public class BreadthFirstSearch <T> {
         obj.addEdge(2, 1);
         obj.addEdge(2, 3);
         System.out.println("Breadth First Search starting from source to destination");
-        ArrayList arrayList = obj.breadthFirstSearch(1,3);
+        ArrayList arrayList = breadthFirstSearch(1, 3);
         System.out.println(arrayList);
     }
 }
