@@ -9,6 +9,7 @@ install:
   - sudo apt-get update
   - sudo apt-get install golang-go
   - sudo apt-get install ghc-mod hlint
+  - sudo apt-get install nodejs
   - sudo npm install -g happiness
   - go get -u github.com/golang/lint/golint
   - cd $GOPATH/src/github.com/golang/lint
