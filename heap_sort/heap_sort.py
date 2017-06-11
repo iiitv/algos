@@ -47,6 +47,27 @@ def get_children_of_node(a, i):
     return (l, l_val), (r, r_val)
 
 
+def find_largest_in_family(a, i):
+    """
+    :param a: list
+        List organized as heap, i.e for each node i:
+            left children is at position 2(i + 1) - 1
+            right children is at position 2(i + 1))
+    :param i: int
+        Index of parent node in array (that is organized as heap)
+    :return: index of largest value among parent and children
+    """
+
+    (l, l_val), (r, r_val) = get_children_of_node(a, i)
+    largest_i = i  # find index of largest value among a[i] and its children
+    if l_val is not None and l_val > a[i]:
+        largest_i = l
+
+    if r_val is not None and r_val > a[largest_i]:
+        largest_i = r
+
+    return largest_i
+
 def max_heapify(a, i):
     """
     :param a: list
@@ -59,14 +80,7 @@ def max_heapify(a, i):
         List organized as max-heap.
     """
 
-    (l, l_val), (r, r_val) = get_children_of_node(a, i)
-    largest_i = i  # find index of largest value among a[i] and its children
-    if l_val is not None and l_val > a[i]:
-        largest_i = l
-
-    if r_val is not None and r_val > a[largest_i]:
-        largest_i = r
-
+    largest_i = find_largest_in_family(a, i)  # find largest node
     if largest_i != i:  # swap only if it's needed
         a[largest_i], a[i] = a[i], a[largest_i]  # swap
         return max_heapify(a, largest_i)
