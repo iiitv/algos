@@ -33,6 +33,6 @@ public class CoinChange {
 		int[] coin = {2, 5, 3, 6};
 		int n = 10;
 		int m = coin.length;
-		System.out.println(coin_change_problem(coin, m, n));
+		System.out.println(coinChangeProblem(coin, m, n));
 	}
 }
