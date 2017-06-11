@@ -256,8 +256,8 @@ class AVL {
 }
 
 class NodeAVL {
-	public int hLeft;
-	public int hRight;
+	protected int hLeft;
+	protected int hRight;
 	public int data;
 	public NodeAVL left;
 	public NodeAVL right;
