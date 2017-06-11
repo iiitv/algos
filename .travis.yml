@@ -16,6 +16,7 @@ install:
   - cd $GOPATH/src/github.com/golang/lint
   - go install .
   - pip install coala-bears
+  - curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
   - cd $TRAVIS_BUILD_DIR
 
 script:
