@@ -13,19 +13,19 @@
  * @r - right index of array.
  * @ele - element to be searched.
  */
-int recursive_binary_search(const int *ar, int l, int r, int ele){
-	if (r >= l){
+int recursive_binary_search(const int *ar, int l, int r, int ele) {
+	if (r >= l) {
 		
 		int mid = l + (r - l)/2;    //calculate mid point of the array
 		
 		// If the element is present at the middle itself
-		if (ar[mid] == ele){  
+		if (ar[mid] == ele) {  
 			return mid;   
 		}
 		
 		// If element is smaller than mid, then it can only be present
 		// in left subarray
-		if (ar[mid] > ele){ 
+		if (ar[mid] > ele) { 
 			return binarySearch(ar, l, mid-1, ele);
 		}
 		
