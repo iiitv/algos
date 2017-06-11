@@ -1,3 +1,10 @@
+/*
+*  Following implementation of sieve of eratosthenes returns a boolean array which contains true is its index is prime
+*  less than or equal to a number n.
+*  Space complexity : O(n).
+*  Time complexity : O(n).
+*/
+
 public class SieveOfEratosthenes {
 
 	public static boolean[] sieveOfEratosthenes(int n) {
