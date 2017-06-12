@@ -29,6 +29,26 @@ def insertion_sort(a):
     return a
 
 
+def get_buckets(a, bucket_size):
+    """
+    :param a: list
+        List of objects with an order
+    :param bucket_size: int
+        Size of buckets to fill
+    :return: list
+        List of buckets to sort array with
+    """
+
+    min_v, max_v = min(a), max(a)  # min and max values in array
+    bucket_count = int(math.floor((max_v - min_v) / bucket_size)) + 1
+    buckets = [[] for _ in range(bucket_count)]  # initialize buckets
+    for x in a:  # distribute values into buckets
+        buckets[
+            int(math.floor((x - min_v) / bucket_size))
+        ].append(x)
+    return buckets
+
+
 def bin_sort(a, bucket_size=16):
     """
     :param a: list
@@ -42,16 +62,7 @@ def bin_sort(a, bucket_size=16):
     if len(a) == 0:  # trivial case
         return a
 
-    min_v, max_v = min(a), max(a)  # min and max values in array
-
-    bucket_count = int(math.floor((max_v - min_v) / bucket_size)) + 1
-    buckets = [[] for _ in range(bucket_count)]  # initialize buckets
-
-    for i in range(0, len(a)):  # distribute values into buckets
-        buckets[
-            int(math.floor((a[i] - min_v) / bucket_size))
-        ].append(a[i])
-
+    buckets = get_buckets(a, bucket_size)  # get buckets
     a = []
     for i in range(0, len(buckets)):  # sort each bucket ...
         buckets[i] = insertion_sort(buckets[i])  # insertion sort
