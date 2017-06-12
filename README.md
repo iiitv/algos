@@ -57,10 +57,10 @@ Community (college) maintained list of Algorithms and Data Structures implementa
 |:--------------|:----------------|
 | C |<pre>`gcc [filename.c]`<br>`./filename.out  # unix`<br>`./filename.exe  # windows`</pre>|
 | CPP |<pre>`g++ [filename.cpp]`<br>`./filename.out # unix`<br>`filename.exe # windows`</pre>|
-| Java |<pre>`javac [filename.java]`<br>`java filename`<br>`# windows # unix`</pre>|
-| Python |<pre>`# for python version upto 3`<br>`python [filename.py]`<br>`# for python version above 3`<br>`python3 [filename.py]`<br>`# windows # unix`</pre>|
-| Golang |<pre>`go run [filename.go]`<br>`# windows # unix`</pre>|
-| JavaScript |<pre>`node [filename.js]`<br>`# windows # unix`</pre>|
+| Java |<pre>`javac [filename.java]`<br>`java filename`</pre>|
+| Python |<pre>`# for python version upto 3`<br>`python [filename.py]`<br>`# for python version above 3`<br>`python3 [filename.py]`</pre>|
+| Golang |<pre>`go run [filename.go]`</pre>|
+| JavaScript |<pre>`node [filename.js]`</pre>|
 
 
 
