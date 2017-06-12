@@ -55,23 +55,12 @@ Community (college) maintained list of Algorithms and Data Structures implementa
 
 | Language | Steps |
 |:--------------|:----------------|
-| C |`gcc [filename.c]`|
-||`./filename.out  # unix`|
-||`./filename.exe  # windows`|
-| CPP |`g++ [filename.cpp]`|
-||`./filename.out # unix`|
-||`filename.exe # windows`|
-| Java |`javac [filename.java]`|
-||`java filename # windows # unix`|
-| Python |`# for python version < 3`|
-||`python [filename.py]`|
-||`# for python version > 3`|
-||`python3 [filename.py]`|
-||`# windows # unix`|
-| Golang |`go run [filename.go]`|
-||`# windows # unix`|
-| JavaScript |`node [filename.js]`|
-||`# windows # unix`|
+| C |<pre>`gcc [filename.c]`<br>`./filename.out  # unix`<br>`./filename.exe  # windows`</pre>|
+| CPP |<pre>`g++ [filename.cpp]`<br>`./filename.out # unix`<br>`filename.exe # windows`</pre>|
+| Java |<pre>`javac [filename.java]`<br>`java filename`<br>`# windows # unix`</pre>|
+| Python |<pre>`# for python version upto 3`<br>`python [filename.py]`<br>`# for python version above 3`<br>`python3 [filename.py]`<br>`# windows # unix`</pre>|
+| Golang |<pre>`go run [filename.go]`<br>`# windows # unix`</pre>|
+| JavaScript |<pre>`node [filename.js]`<br>`# windows # unix`</pre>|
 
 
 
