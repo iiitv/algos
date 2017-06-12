@@ -1,6 +1,6 @@
 """
 Following is the implementation of bin sort algorithm.
-It will sort the input array with time complexity H(N + K)
+It will sort the input array with time complexity 0(N + K)
 N being the size of array, K being the number of buckets.
 Space complexity is at worst O(NK).
 """
