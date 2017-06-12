@@ -36,7 +36,7 @@ Community (college) maintained list of Algorithms and Data Structures implementa
 | [Prims](https://en.wikipedia.org/wiki/Prim%27s_algorithm) | [\[X\]](prims/prims.c) | | [\[X\]](prims/Prims.java) | | | |
 | [Quick Select](https://en.wikipedia.org/wiki/Quickselect) | [\[X\]](quick_select/quick_select.c) | | | | | |
 | [Quicksort](https://en.wikipedia.org/wiki/Quicksort) | [\[X\]](quicksort/quicksort.c) | | [\[X\]](quicksort/QuickSort.java) | [\[X\]](quicksort/quick_sort.py) | | |
-| [Rod Cutting Problem](http://www.geeksforgeeks.org/dynamic-programming-set-13-cutting-a-rod/) | [\[X\]](rod_cutting_problem/rod_cutting.c) | | [\[X\]](rod_cutting_problem/RodCutting.java) | [\[X\]](rod_cutting_problem/rod_cutting.py) | | |
+| [Rod Cutting Problem](http://www.geeksforgeeks.org/dynamic-programming-set-13-cutting-a-rod/) | [\[X\]](rod_cutting_problem/rod_cutting.c) | | [\[X\]](rod_cutting_problem/RodCutting.java) | [\[X\]](rod_cutting_problem/rod_cutting.py) | [\[X\]](rod_cutting_problem/rod_cutting.go) | |
 | [Shell Sort](https://en.wikipedia.org/wiki/Shellsort) | | [\[X\]](shell_sort/ShellSort.cpp) | | [\[X\]](/shell_sort/shell_sort.py) | [\[X\]](shell_sort/shell_sort.go) | |
 | [Sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes) | [\[X\]](sieve_of_eratosthenes/sieveOfEratosthenes.c) | | [\[X\]](sieve_of_eratosthenes/SieveOfEratosthenes.java) | [\[X\]](sieve_of_eratosthenes/sieve_of_eratosthenes.py) | [\[X\]](sieve_of_eratosthenes/sieve_of_eratosthenes.go) | |
 
@@ -49,6 +49,18 @@ Community (college) maintained list of Algorithms and Data Structures implementa
 | [Binary Search Tree](https://en.wikipedia.org/wiki/Binary_search_tree) | | | [\[X\]](binary_search_tree/BinarySearchTree.java) | | | |
 | [Linked List](https://en.wikipedia.org/wiki/Linked_list) | | | [\[X\]](linked_list/LinkedList.java) | | | |
 | [Stack](https://en.wikipedia.org/wiki/Stack_(abstract_data_type)) | | | [\[X\]](stack/Stack.java) | [\[X\]](stack/stack.py) | [\[X\]](stack/stack.go) | [\[X\]](stack/stack.js) |
+
+
+## How to run them
+
+| Language | Steps |
+|:--------------|:----------------|
+| C |<pre>gcc [filename.c]<br>./a.out  # unix<br>a.exe  # windows</pre>|
+| CPP |<pre>g++ [filename.cpp]<br>./a.out # unix<br>a.exe # windows</pre>|
+| Java |<pre>javac [filename.java]<br>java [filename]</pre>|
+| Python |<pre>python [filename.py]</pre>|
+| Golang |<pre>go run [filename.go]</pre>|
+| JavaScript |<pre>node [filename.js]</pre>|
 
 
 ## Resources
