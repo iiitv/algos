@@ -62,8 +62,8 @@ int main() {
 	int i;
 
 	for (i = 0 ; i < 5 ; i++) {
-		pos = binary_search(arr, 6, search_arr[i]);
 		
+		pos = binary_search(arr, 6, search_arr[i]);
 		if (pos >= 0) {
 			printf("%d found at index %d.\n", search_arr[i], pos);
 		}
@@ -72,8 +72,7 @@ int main() {
 		}
 		
 		pos = binary_search_recursive(arr, 0, 5, search_arr[i]);
-		
-		if(pos_rec >= 0) {
+		if (pos >= 0) {
 			printf("%d found at index %d, recursively\n", search_arr[i], pos);
 		}
 		else {
