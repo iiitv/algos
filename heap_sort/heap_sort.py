@@ -41,9 +41,9 @@ def get_children_of_node(a, i):
     """
 
     l = left_child_index(i)  # index and value of children
-    l_val = a[l] if l in range(len(a)) else None
+    l_val = a[l] if 0 <= l < len(a) else None
     r = right_child_index(i)
-    r_val = a[r] if r in range(len(a)) else None
+    r_val = a[r] if 0 <= r < len(a) else None
     return (l, l_val), (r, r_val)
 
 
