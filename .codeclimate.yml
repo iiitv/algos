@@ -7,14 +7,14 @@ engines:
         enabled: false  # matches in different files
     config:
       languages:
-      - javascript
-      - python
+        - javascript
+        - python
   fixme:
     enabled: true
   radon:
     enabled: true
 ratings:
   paths:
-  - "**.js"
-  - "**.py"
+    - "**.js"
+    - "**.py"
 exclude_paths: []
