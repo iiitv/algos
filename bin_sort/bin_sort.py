@@ -38,7 +38,7 @@ def get_buckets(a, bucket_size):
 
     min_v, max_v = min(a), max(a)  # min and max values in array
     bucket_count = (max_v - min_v) // bucket_size + 1
-    buckets = [[] for _ in range(bucket_count)]  # initialize buckets
+    buckets = [[] for _ in range(bucket_count)]   # initialize buckets
     for x in a:  # distribute values into buckets
         buckets[
             (x - min_v) // bucket_size
@@ -61,10 +61,8 @@ def bin_sort(a, bucket_size=16):
 
     buckets = get_buckets(a, bucket_size)  # get buckets
     a = []
-    for i in range(0, len(buckets)):  # sort each bucket ...
-        buckets[i] = insertion_sort(buckets[i])  # insertion sort
-        a += buckets[i]  # ... and place back into array
-
+    for bucket in buckets:  # sort each bucket ...
+        a += insertion_sort(bucket)  # ... and place back into array
     return a
 
 
