@@ -1,6 +1,9 @@
-package linkedlist
+package main
 
-import "errors"
+import (
+	"errors"
+	"fmt"
+)
 
 // List is a A general List interface
 type List interface {
@@ -97,4 +100,16 @@ func (ll *LinkedList) PeekFirst() (val int, err error) {
 	val = ll.root.value
 
 	return val, nil
+}
+
+func main() {
+	var ll LinkedList
+	ll.Add(10)
+	ll.Add(15)
+	ll.Add(25)
+	first, err := ll.RemoveFirst()
+	for err == nil {
+		fmt.Println(first)
+		first, err = ll.RemoveFirst()
+	}
 }
