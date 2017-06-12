@@ -6,9 +6,6 @@ Space complexity is at worst O(NK).
 """
 
 
-import math
-
-
 def insertion_sort(a):
     """
     :param a: list
@@ -40,11 +37,11 @@ def get_buckets(a, bucket_size):
     """
 
     min_v, max_v = min(a), max(a)  # min and max values in array
-    bucket_count = int(math.floor((max_v - min_v) / bucket_size)) + 1
+    bucket_count = (max_v - min_v) // bucket_size + 1
     buckets = [[] for _ in range(bucket_count)]  # initialize buckets
     for x in a:  # distribute values into buckets
         buckets[
-            int(math.floor((x - min_v) / bucket_size))
+            (x - min_v) // bucket_size
         ].append(x)
     return buckets
 
@@ -66,9 +63,7 @@ def bin_sort(a, bucket_size=16):
     a = []
     for i in range(0, len(buckets)):  # sort each bucket ...
         buckets[i] = insertion_sort(buckets[i])  # insertion sort
-
-        for x in buckets[i]:  # ... and place back into array
-            a.append(x)
+        a += buckets[i]  # ... and place back into array
 
     return a
 
