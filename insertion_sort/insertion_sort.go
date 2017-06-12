@@ -11,7 +11,7 @@ func InsertionSort(data []int) []int {
 		j := i - 1
 		for j >= 0 && data[j] > key {
 			data[j+1] = data[j]
-			j--;
+			j--
 		}
 		data[j+1] = key
 	}
