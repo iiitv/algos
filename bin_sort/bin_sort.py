@@ -40,9 +40,7 @@ def get_buckets(a, bucket_size):
     bucket_count = (max_v - min_v) // bucket_size + 1
     buckets = [[] for _ in range(bucket_count)]   # initialize buckets
     for x in a:  # distribute values into buckets
-        buckets[
-            (x - min_v) // bucket_size
-        ].append(x)
+        buckets[(x - min_v) // bucket_size].append(x)
     return buckets
 
 
@@ -68,9 +66,8 @@ def bin_sort(a, bucket_size=16):
 
 def main():
     """
-    :return: void
-        Sorts sample list with bin sort algorithm,
-        then prints sorted list
+    Sorts sample list with bin sort algorithm,
+    then prints sorted list
     """
 
     unsorted_list = [
