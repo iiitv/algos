@@ -15,14 +15,12 @@ void depth_first_search(int ar[5][5], int *visited, int start, int size) {
 	printf("node: %d\n", start);
 	
 	for ( int j=0; j<size; j++) {
-      if(ar[start][j] == 1 && visited[j]==0) {
-					
+		if(ar[start][j] == 1 && visited[j]==0) {
+			
 			depth_first_search(ar, visited, j, size);
 			
-		}
-			
+		}		
 	}
-	
 }
 
 int main() {
