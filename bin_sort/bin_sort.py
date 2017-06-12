@@ -38,9 +38,9 @@ def get_buckets(a, bucket_size):
 
     min_v, max_v = min(a), max(a)  # min and max values in array
     bucket_count = (max_v - min_v) // bucket_size + 1
-    buckets = [[] for _ in range(bucket_count)]   # initialize buckets
+    buckets = [[] for _ in range(int(bucket_count))]   # initialize buckets
     for x in a:  # distribute values into buckets
-        buckets[(x - min_v) // bucket_size].append(x)
+        buckets[int((x - min_v) // bucket_size)].append(x)
     return buckets
 
 
@@ -71,9 +71,9 @@ def main():
     """
 
     unsorted_list = [
-        437230, 851821, 184681, 173673, 13306, 768361, 431982, 956700, 65143,
-        556681, 198208, 983511, 170469, 313978, 552536, 334818, 527289,
-        959491, 303675, 532988
+        4372.30, 851821, 184.681, 173673, 133.06, 768361, 431.982, 9567.00,
+        5566.81, 1982.08, 983511, 170.469, 313978, 552536, 3348.18, 527289,
+        95.9491, 303675, 532988, 65143
     ]
 
     sorted_list = bin_sort(unsorted_list)
