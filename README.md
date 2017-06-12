@@ -50,6 +50,7 @@ Community (college) maintained list of Algorithms and Data Structures implementa
 | [Linked List](https://en.wikipedia.org/wiki/Linked_list) | | | [\[X\]](linked_list/LinkedList.java) | | | |
 | [Stack](https://en.wikipedia.org/wiki/Stack_(abstract_data_type)) | | | [\[X\]](stack/Stack.java) | [\[X\]](stack/stack.py) | [\[X\]](stack/stack.go) | [\[X\]](stack/stack.js) |
 
+
 ## How to run them
 | Language | Steps |
 |:--------------|:----------------:|
