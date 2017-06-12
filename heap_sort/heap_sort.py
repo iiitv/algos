@@ -107,7 +107,13 @@ def heap_sort(a):
     return a
 
 
-if __name__ == '__main__':
+def main():
+    """
+    :return: void
+        Sorts sample list with heap sort algorithm,
+        then prints sorted list
+    """
+
     unsorted_list = [
         437230, 851821, 184681, 173673, 13306, 768361, 431982, 956700, 65143,
         556681, 198208, 983511, 170469, 313978, 552536, 334818, 527289,
@@ -116,3 +122,6 @@ if __name__ == '__main__':
 
     sorted_list = heap_sort(unsorted_list)
     print(sorted_list)
+
+if __name__ == '__main__':
+    main()
