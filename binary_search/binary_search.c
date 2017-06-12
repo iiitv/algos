@@ -26,11 +26,11 @@ int binary_search_recursive(const int *ar, int l, int r, int ele) {
 		// If element is smaller than mid, then it can only be present
 		// in left subarray
 		if (ar[mid] > ele) { 
-			return binarySearch(ar, l, mid - 1, ele);
+			return binary_search_recursive(ar, l, mid - 1, ele);
 		}
 		
 		// Else the element can only be present in right subarray
-		return binarySearch(ar, mid + 1, r, ele);
+		return binary_search_recursive(ar, mid + 1, r, ele);
 	}
 	
 	// We reach here when element is not present in array
@@ -57,7 +57,7 @@ int binary_search(const int *arr, int arr_size, int search_element) {
 
 int main() {
 	int arr[] = {1, 5, 35, 112, 258, 324};
-	int search_arr[] = {1, 35, 112, 324, 67},
+	int search_arr[] = {1, 35, 112, 324, 67};
 	int i;
 
 	for (i = 0 ; i < 5 ; i++) {
@@ -66,16 +66,14 @@ int main() {
 		pos = binary_search(arr, 6, search_arr[i]);
 		if (pos >= 0) {
 			printf("%d found at index %d.\n", search_arr[i], pos);
-		}
-		else {
+		} else {
 			printf("%d not found.\n", search_arr[i]);
 		}
 		
 		pos = binary_search_recursive(arr, 0, 5, search_arr[i]);
 		if (pos >= 0) {
 			printf("%d found at index %d, recursively\n", search_arr[i], pos);
-		}
-		else {
+		} else {
 			printf("%d not found.\n", search_arr[i]);
 		}
 	}
