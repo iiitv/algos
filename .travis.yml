@@ -1,6 +1,8 @@
+dist: trusty
 language: python
 python:
   - "3.6"
+
 env:
   GOPATH: $HOME/go
   PATH: $GOPATH/bin:$PATH
@@ -8,6 +10,10 @@ env:
 install:
   - sudo apt-get update
   - sudo apt-get install golang-go
+  - sudo apt-get install ghc-mod hlint
+  - curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -
+  - sudo apt-get install -y nodejs
+  - sudo npm install -g happiness
   - go get -u github.com/golang/lint/golint
   - cd $GOPATH/src/github.com/golang/lint
   - go install .

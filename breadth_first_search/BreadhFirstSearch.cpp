@@ -44,6 +44,7 @@ class Graph {
 				}
 			}
 		}
+		free(visited);
 	}
 };
 
