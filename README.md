@@ -51,9 +51,14 @@ Community (college) maintained list of Algorithms and Data Structures implementa
 | [Stack](https://en.wikipedia.org/wiki/Stack_(abstract_data_type)) | | | [\[X\]](stack/Stack.java) | [\[X\]](stack/stack.py) | [\[X\]](stack/stack.go) | [\[X\]](stack/stack.js) |
 
 ## How to run them
-| `gcc -o [filename.c]` | `g++ [filename.cpp] -o [filename]` | `javac [filename.java]` | `python [filename.py]` | `go run [filename.go]` | `node [filename.js]` |
-|:----------------:|:----------------:|:----------------:|:-----------------:|:-----------------:|:-----------------:|
-| C | CPP | Java | Python | Golang | JavaScript |
+| Language | Steps |
+|:--------------|:----------------:|
+| C | `gcc -o [filename.c]` |
+| CPP | `g++ [filename.cpp] -o [filename]` |
+| Java | `javac [filename.java]` |
+| Python | `python [filename.py]` |
+| Golang | `go run [filename.go]` |
+| JavaScript |  `node [filename.js]` |
 
 
 
