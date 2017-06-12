@@ -12,6 +12,7 @@ Community (college) maintained list of Algorithms and Data Structures implementa
 
 ## Implemented Algorithms
 
+
 | Algorithm | C | CPP | Java | Python | Golang | JavaScript |
 |:--------------|:----------------:|:----------------:|:----------------:|:-----------------:|:-----------------:|:-----------------:|
 | [Bin Sort](http://www.cdn.geeksforgeeks.org/bucket-sort-2/)| | |[\[X\]](bin_sort/BinSort.java)| | | |
@@ -37,7 +38,7 @@ Community (college) maintained list of Algorithms and Data Structures implementa
 | [Quicksort](https://en.wikipedia.org/wiki/Quicksort) | [\[X\]](quicksort/quicksort.c) | | [\[X\]](quicksort/QuickSort.java) | [\[X\]](quicksort/quick_sort.py) | | |
 | [Rod Cutting Problem](http://www.geeksforgeeks.org/dynamic-programming-set-13-cutting-a-rod/) | [\[X\]](rod_cutting_problem/rod_cutting.c) | | [\[X\]](rod_cutting_problem/RodCutting.java) | [\[X\]](rod_cutting_problem/rod_cutting.py) | | |
 | [Shell Sort](https://en.wikipedia.org/wiki/Shellsort) | | [\[X\]](shell_sort/ShellSort.cpp) | | [\[X\]](/shell_sort/shell_sort.py) | [\[X\]](shell_sort/shell_sort.go) | |
-| [Sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes) | [\[X\]](sieve_of_eratosthenes/sieveOfEratosthenes.c) | |[\[X\]](sieve_of_eratosthenes/SieveOfEratosthenes.java) | [\[X\]](sieve_of_eratosthenes/sieve_of_eratosthenes.py) | [\[X\]](sieve_of_eratosthenes/sieve_of_eratosthenes.go) | |
+| [Sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes) | [\[X\]](sieve_of_eratosthenes/sieveOfEratosthenes.c) | | [\[X\]](sieve_of_eratosthenes/SieveOfEratosthenes.java) | [\[X\]](sieve_of_eratosthenes/sieve_of_eratosthenes.py) | [\[X\]](sieve_of_eratosthenes/sieve_of_eratosthenes.go) | |
 
 
 ## Implemented Data Structures
@@ -52,7 +53,7 @@ Community (college) maintained list of Algorithms and Data Structures implementa
 ## How to run them
 | C | CPP | Java | Python | Golang | JavaScript |
 |:----------------:|:----------------:|:----------------:|:-----------------:|:-----------------:|:-----------------:|
-|`gcc -o [filename.c]`| `g++ [filename.cpp] -o [filename]`| `javac [filename.java]`| `python [filename.py]`| `go run [filename.go]`| `node [filename.js]`
+|`gcc -o [filename.c]`| `g++ [filename.cpp] -o [filename]`| `javac [filename.java]`| `python [filename.py]`| `go run [filename.go]`| `node [filename.js]`|
 
 
 
