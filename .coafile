@@ -38,8 +38,3 @@ bears = GhcModBear
 [happiness]
 files = **/*.js
 bears = HappinessLintBear
-
-# yaml
-[yml]
-files = **/*.yml
-bears = YAMLLintBear

@@ -1,5 +1,5 @@
 /*
-*  Following Algorithm sorts the given array in worst case time complexity O(n*log(n)) 
+*  Following Algorithm sorts the given array in worst case time complexity O(n*log(n))
 *  and space complexity O(n), n being size of array.
 */
 
@@ -54,7 +54,7 @@ int main() {
 	int arr[] = {7, 10, 14, 1, 2, 6, 17, 0};
 	int size = sizeof(arr) / sizeof(arr[0]);
 	merge_sort(arr, 0, size - 1);
-	for (i = 0; i < n; i++) {
+	for (i = 0; i < size; i++) {
 		printf("%d ", arr[i]);
 	}
 	return 0;
