@@ -56,7 +56,7 @@ Community (college) maintained list of Algorithms and Data Structures implementa
 | Language | Steps |
 |:--------------|:----------------|
 | C |<pre>gcc [filename.c]<br>./a.out  # unix<br>a.exe  # windows</pre>|
-| CPP |<pre>g++ [filename.cpp]<br>./filename.out # unix<br>filename.exe # windows</pre>|
+| CPP |<pre>g++ [filename.cpp]<br>./a.out # unix<br>a.exe # windows</pre>|
 | Java |<pre>javac [filename.java]<br>java [filename]</pre>|
 | Python |<pre>python [filename.py]</pre>|
 | Golang |<pre>go run [filename.go]</pre>|
