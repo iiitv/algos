@@ -14,6 +14,7 @@ Community (college) maintained list of Algorithms and Data Structures implementa
 
 
 
+
 | Algorithm | C | CPP | Java | Python | Golang |
 |:--------------|:----------------:|:----------------:|:----------------:|:-----------------:|:-----------------:|
 | [Bin Sort](http://www.cdn.geeksforgeeks.org/bucket-sort-2/)| | |[\[X\]](bin_sort/BinSort.java)| | |
@@ -43,13 +44,14 @@ Community (college) maintained list of Algorithms and Data Structures implementa
 
 
 
+
 ## Implemented Data Structures
 
 | Data Structure | C | CPP | Java | Python | Golang | JavaScript |
 |:--------------|:----------------:|:----------------:|:----------------:|:-----------------:|:-----------------:|:-----------------:|
 | [AVL Tree](http://www.geeksforgeeks.org/avl-tree-set-1-insertion)| | |[\[X\]](avl_tree/AvlTree.java) | | | |
 | [Binary Search Tree](https://en.wikipedia.org/wiki/Binary_search_tree) | | | [\[X\]](binary_search_tree/BinarySearchTree.java) | | | |
-| [Linked List](https://en.wikipedia.org/wiki/Linked_list) | | | [\[X\]](linked_list/LinkedList.java) | | | |
+| [Linked List](https://en.wikipedia.org/wiki/Linked_list) | | | [\[X\]](linked_list/LinkedList.java) | | [\[X\]](linked_list/linked_list.go) | |
 | [Stack](https://en.wikipedia.org/wiki/Stack_(abstract_data_type)) | | | [\[X\]](stack/Stack.java) | [\[X\]](stack/stack.py) | [\[X\]](stack/stack.go) | [\[X\]](stack/stack.js) |
 
 
