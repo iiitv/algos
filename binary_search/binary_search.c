@@ -58,11 +58,11 @@ int binary_search(const int *arr, int arr_size, int search_element) {
 int main() {
 	int arr[] = {1, 5, 35, 112, 258, 324};
 	int search_arr[] = {1, 35, 112, 324, 67},
-	int pos;
 	int i;
 
 	for (i = 0 ; i < 5 ; i++) {
 		
+		int pos;
 		pos = binary_search(arr, 6, search_arr[i]);
 		if (pos >= 0) {
 			printf("%d found at index %d.\n", search_arr[i], pos);
