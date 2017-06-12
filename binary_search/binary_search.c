@@ -13,7 +13,7 @@
  * @r - right index of array.
  * @ele - element to be searched.
  */
-int recursive_binary_search(const int *ar, int l, int r, int ele) {
+int binary_search_recursive(const int *ar, int l, int r, int ele) {
 	if (r >= l) {
 		
 		int mid = l + (r - l) / 2;    //calculate mid point of the array
@@ -56,23 +56,29 @@ int binary_search(const int *arr, int arr_size, int search_element) {
 }
 
 int main() {
-	int arr[] = {1, 5, 35, 112, 258, 324},
-		search_arr[] = {1, 35, 112, 324, 67},
-		pos, i, pos_rec;
+	int arr[] = {1, 5, 35, 112, 258, 324};
+	int search_arr[] = {1, 35, 112, 324, 67},
+	int pos;
+	int i;
 
 	for (i = 0 ; i < 5 ; i++) {
 		pos = binary_search(arr, 6, search_arr[i]);
-		pos_rec = recursive_binary_search(arr, 0, 5, search_arr[i]);
 		
-		if (pos >= 0)
+		if (pos >= 0) {
 			printf("%d found at index %d.\n", search_arr[i], pos);
-		else
+		}
+		else {
 			printf("%d not found.\n", search_arr[i]);
+		}
 		
-		if(pos_rec >= 0)
+		pos = recursive_binary_search(arr, 0, 5, search_arr[i]);
+		
+		if(pos_rec >= 0) {
 			printf("%d found at index %d, recursively\n", search_arr[i], pos);
-		else
+		}
+		else {
 			printf("%d not found.\n", search_arr[i]);
+		}
 	}
 
 	return 0;
