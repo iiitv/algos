@@ -10,10 +10,10 @@ func InsertionSort(data []int) []int {
 		key := data[i]
 		j := i - 1
 		for j >= 0 && data[j] > key {
-			data[j + 1] = data[j]
+			data[j+1] = data[j]
 			j--;
 		}
-		data[j + 1] = key
+		data[j+1] = key
 	}
 	return data
 }
