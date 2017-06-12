@@ -53,6 +53,18 @@ Community (college) maintained list of Algorithms and Data Structures implementa
 | [Stack](https://en.wikipedia.org/wiki/Stack_(abstract_data_type)) | | | [\[X\]](stack/Stack.java) | [\[X\]](stack/stack.py) | [\[X\]](stack/stack.go) | [\[X\]](stack/stack.js) |
 
 
+## How to run them
+
+| Language | Steps |
+|:--------------|:----------------|
+| C |<pre>gcc [filename.c]<br>./a.out  # unix<br>a.exe  # windows</pre>|
+| CPP |<pre>g++ [filename.cpp]<br>./a.out # unix<br>a.exe # windows</pre>|
+| Java |<pre>javac [filename.java]<br>java [filename]</pre>|
+| Python |<pre>python [filename.py]</pre>|
+| Golang |<pre>go run [filename.go]</pre>|
+| JavaScript |<pre>node [filename.js]</pre>|
+
+
 ## Resources
 
 * [Algorithms - Learneroo](https://www.learneroo.com/subjects/8)
