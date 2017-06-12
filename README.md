@@ -24,7 +24,7 @@ Community (college) maintained list of Algorithms and Data Structures implementa
 | [Euclidean GCD](https://en.wikipedia.org/wiki/Euclidean_algorithm) | [\[X\]](euclidean_gcd/euclidean_gcd.c) | | [\[X\]](euclidean_gcd/EuclideanGCD.java) | [\[X\]](euclidean_gcd/euclidean_gcd.py) | | |
 | [Exponentation by Squaring](https://en.wikipedia.org/wiki/Exponentiation_by_squaring) | [\[X\]](exponentation_by_squaring/exponentation_by_squaring.c) |||| | |
 | [Heap Sort](https://en.wikipedia.org/wiki/Heapsort) | [\[X\]](heap_sort/heap_sort.c) | | [\[X\]](heap_sort/HeapSort.java) | [\[X\]](heap_sort/heap_sort.py) | | |
-| [Insertion Sort](https://en.wikipedia.org/wiki/Insertion_sort) | [\[X\]](insertion_sort/insertion_sort.c) | | [\[X\]](insertion_sort/InsertionSort.java)| [\[X\]](insertion_sort/insertion_sort.py) | | |
+| [Insertion Sort](https://en.wikipedia.org/wiki/Insertion_sort) | [\[X\]](insertion_sort/insertion_sort.c) | | [\[X\]](insertion_sort/InsertionSort.java)| [\[X\]](insertion_sort/insertion_sort.py) | [\[X\]](insertion_sort/insertion_sort.go) | |
 | [k-NN](https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm) | | | | [\[X\]](k_nn/k_nn.py) | | |
 | [Largest Sum Contiguous Subarray](http://www.geeksforgeeks.org/largest-sum-contiguous-subarray/) | [\[X\]](largest_sum_contiguous_subarray/largestSumContiguousSubarray.c) | | [\[X\]](largest_sum_contiguous_subarray/LargestSumContiguousSubarray.java) | | [\[X\]](largest_sum_contiguous_subarray/largestSumContiguousSubarray.go) | |
 | [Linear Search](https://en.wikipedia.org/wiki/Linear_search) | [\[X\]](linear_search/linear_search.c) | | [\[X\]](linear_search/LinearSearch.java) | [\[X\]](linear_search/linear_search.py) | [\[X\]](linear_search/linear-search.go) | |
