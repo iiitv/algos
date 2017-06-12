@@ -30,7 +30,7 @@ Community (college) maintained list of Algorithms and Data Structures implementa
 | [Linear Search](https://en.wikipedia.org/wiki/Linear_search) | [\[X\]](linear_search/linear_search.c) | | [\[X\]](linear_search/LinearSearch.java) | [\[X\]](linear_search/linear_search.py) | [\[X\]](linear_search/linear-search.go) | |
 | [Longest Common Subsequence](http://www.geeksforgeeks.org/dynamic-programming-set-4-longest-common-subsequence) | [\[X\]](longest_common_subsequence/longestCommonSubsequence.c) | | [\[X\]](longest_common_subsequence/LongestCommonSubsequence.java) | | [\[X\]](longest_common_subsequence/longestCommonSubsequence.go) | |
 | [Merge Sort](https://www.khanacademy.org/computing/computer-science/algorithms/merge-sort/a/overview-of-merge-sort) | [\[X\]](merge_sort/merge_sort.c) | | [\[X\]](merge_sort/MergeSort.java) | [\[X\]](merge_sort/merge_sort.py) | | |
-| [Modular Exponential](http://www.geeksforgeeks.org/modular-exponentiation-power-in-modular-arithmetic/) | [\[X\]](modular_exponential/modular_exponential.c) | | [\[X\]](modular_exponential/ModularExponential.java) | [\[X\]](modular_exponential/modular_exponential.py) | | |
+| [Modular Exponential](http://www.geeksforgeeks.org/modular-exponentiation-power-in-modular-arithmetic/) | [\[X\]](modular_exponential/modular_exponential.c) | | [\[X\]](modular_exponential/ModularExponential.java) | [\[X\]](modular_exponential/modular_exponential.py) | [\[X\]](modular_exponential/modular_exponential.go) | |
 | [N-Queen Problem](https://en.wikipedia.org/wiki/Eight_queens_puzzle) | | [\[X\]](n_queen_problem/NQueenProblem.cpp) | [\[X\]](n_queen_problem/NQueenProblem.java) | | | |
 | [Prime Factor](https://en.wikipedia.org/wiki/Prime_factor) | [\[X\]](prime_factor/prime_factor.c) | | | | | |
 | [Prims](https://en.wikipedia.org/wiki/Prim%27s_algorithm) | [\[X\]](prims/prims.c) | | [\[X\]](prims/Prims.java) | | | |
@@ -47,7 +47,7 @@ Community (college) maintained list of Algorithms and Data Structures implementa
 |:--------------|:----------------:|:----------------:|:----------------:|:-----------------:|:-----------------:|:-----------------:|
 | [AVL Tree](http://www.geeksforgeeks.org/avl-tree-set-1-insertion)| | |[\[X\]](avl_tree/AvlTree.java) | | | |
 | [Binary Search Tree](https://en.wikipedia.org/wiki/Binary_search_tree) | | | [\[X\]](binary_search_tree/BinarySearchTree.java) | | | |
-| [Linked List](https://en.wikipedia.org/wiki/Linked_list) | | | [\[X\]](linked_list/LinkedList.java) | | | |
+| [Linked List](https://en.wikipedia.org/wiki/Linked_list) | | | [\[X\]](linked_list/LinkedList.java) | | [\[X\]](linked_list/linked_list.go) | |
 | [Stack](https://en.wikipedia.org/wiki/Stack_(abstract_data_type)) | | | [\[X\]](stack/Stack.java) | [\[X\]](stack/stack.py) | [\[X\]](stack/stack.go) | [\[X\]](stack/stack.js) |
 
 
