@@ -26,7 +26,7 @@ public class BreadthFirstSearch <T> {
             int flag = 0;
             while (i.hasNext()) {
                 T n = i.next();
-                if (n.equals (destination)) {
+                if (n.equals(destination)) {
                     bfsPath.add(n);
                     flag = 1;
                     break;
