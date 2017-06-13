@@ -9,3 +9,6 @@
 .DS_Store
 # coala
 *.orig
+
+# Jetbrains
+.idea/

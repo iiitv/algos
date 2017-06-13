@@ -1,24 +1,21 @@
 dist: trusty
-language: python
-python:
-  - "3.6"
+sudo: required
+language: node_js
+node_js:
+  "7"
 
 env:
   GOPATH: $HOME/go
   PATH: $GOPATH/bin:$PATH
 
 install:
-  - sudo apt-get update
-  - sudo apt-get install golang-go
-  - sudo apt-get install ghc-mod hlint
-  - curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -
-  - sudo apt-get install -y nodejs
-  - sudo npm install -g happiness
-  - go get -u github.com/golang/lint/golint
-  - cd $GOPATH/src/github.com/golang/lint
-  - go install .
-  - pip install coala-bears
-  - cd $TRAVIS_BUILD_DIR
+  - ./.bin/install_apt.sh
+  - ./.bin/install_go.sh
+  - ./.bin/install_npm.sh
+  - pip3 install -r pip3-requirements.txt
+  - pip2 install -r pip2-requirements.txt
 
 script:
+  - ./.bin/test_running.sh
   - coala --ci
+  - editorconfig-tools check **/*
