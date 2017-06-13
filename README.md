@@ -15,7 +15,7 @@ Community (college) maintained list of Algorithms and Data Structures implementa
 
 | Algorithm | C | CPP | Java | Python | Golang | JavaScript |
 |:--------------|:----------------:|:----------------:|:----------------:|:-----------------:|:-----------------:|:-----------------:|
-| [Bin Sort](http://www.cdn.geeksforgeeks.org/bucket-sort-2/)| | |[\[X\]](bin_sort/BinSort.java)| | | |
+| [Bin Sort](http://www.cdn.geeksforgeeks.org/bucket-sort-2/)| | |[\[X\]](bin_sort/BinSort.java) | [\[X\]](bin_sort/bin_sort.py) | | |
 | [Binary Search](https://en.wikipedia.org/wiki/Binary_search_algorithm) | [\[X\]](binary_search/binary_search.c) | | [\[X\]](binary_search/BinarySearch.java) | [\[X\]](binary_search/binary_search.py) | [\[X\]](binary_search/binary_search.go) | |
 | [Coin Change Problem](http://www.algorithmist.com/index.php/Coin_Change) | [\[X\]](coin_change_problem/coin_change_problem.c) | | | | | |
 | [Counting Sort](http://www.geeksforgeeks.org/counting-sort/)| [\[X\]](counting_sort/counting_sort.c) | | [\[X\]](counting_sort/CountingSort.java) | | | |
@@ -24,14 +24,14 @@ Community (college) maintained list of Algorithms and Data Structures implementa
 | [Euclidean GCD](https://en.wikipedia.org/wiki/Euclidean_algorithm) | [\[X\]](euclidean_gcd/euclidean_gcd.c) | | [\[X\]](euclidean_gcd/EuclideanGCD.java) | [\[X\]](euclidean_gcd/euclidean_gcd.py) | | |
 | [Exponentation by Squaring](https://en.wikipedia.org/wiki/Exponentiation_by_squaring) | [\[X\]](exponentation_by_squaring/exponentation_by_squaring.c) |||| | |
 | [Heap Sort](https://en.wikipedia.org/wiki/Heapsort) | [\[X\]](heap_sort/heap_sort.c) | | [\[X\]](heap_sort/HeapSort.java) | [\[X\]](heap_sort/heap_sort.py) | | |
-| [Insertion Sort](https://en.wikipedia.org/wiki/Insertion_sort) | [\[X\]](insertion_sort/insertion_sort.c) | | [\[X\]](insertion_sort/InsertionSort.java)| [\[X\]](insertion_sort/insertion_sort.py) | | |
+| [Insertion Sort](https://en.wikipedia.org/wiki/Insertion_sort) | [\[X\]](insertion_sort/insertion_sort.c) | | [\[X\]](insertion_sort/InsertionSort.java)| [\[X\]](insertion_sort/insertion_sort.py) | [\[X\]](insertion_sort/insertion_sort.go) | |
 | [k-NN](https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm) | | | | [\[X\]](k_nn/k_nn.py) | | |
 | [Largest Sum Contiguous Subarray](http://www.geeksforgeeks.org/largest-sum-contiguous-subarray/) | [\[X\]](largest_sum_contiguous_subarray/largestSumContiguousSubarray.c) | | [\[X\]](largest_sum_contiguous_subarray/LargestSumContiguousSubarray.java) | | [\[X\]](largest_sum_contiguous_subarray/largestSumContiguousSubarray.go) | |
 | [Linear Search](https://en.wikipedia.org/wiki/Linear_search) | [\[X\]](linear_search/linear_search.c) | | [\[X\]](linear_search/LinearSearch.java) | [\[X\]](linear_search/linear_search.py) | [\[X\]](linear_search/linear-search.go) | |
 | [Longest Common Subsequence](http://www.geeksforgeeks.org/dynamic-programming-set-4-longest-common-subsequence) | [\[X\]](longest_common_subsequence/longestCommonSubsequence.c) | | [\[X\]](longest_common_subsequence/LongestCommonSubsequence.java) | | [\[X\]](longest_common_subsequence/longestCommonSubsequence.go) | |
 | [Merge Sort](https://www.khanacademy.org/computing/computer-science/algorithms/merge-sort/a/overview-of-merge-sort) | [\[X\]](merge_sort/merge_sort.c) | | [\[X\]](merge_sort/MergeSort.java) | [\[X\]](merge_sort/merge_sort.py) | | |
-| [Modular Exponential](http://www.geeksforgeeks.org/modular-exponentiation-power-in-modular-arithmetic/) | [\[X\]](modular_exponential/modular_exponential.c) | | [\[X\]](modular_exponential/ModularExponential.java) | [\[X\]](modular_exponential/modular_exponential.py) | | |
-| [N-Queen Problem](https://en.wikipedia.org/wiki/Eight_queens_puzzle) | | [\[X\]](n_queen_problem/NQueenProblem.cpp) | [\[X\]](n_queen_problem/NQueenProblem.java) | | | |
+| [Modular Exponential](http://www.geeksforgeeks.org/modular-exponentiation-power-in-modular-arithmetic/) | [\[X\]](modular_exponential/modular_exponential.c) | | [\[X\]](modular_exponential/ModularExponential.java) | [\[X\]](modular_exponential/modular_exponential.py) | [\[X\]](modular_exponential/modular_exponential.go) | |
+| [N-Queen Problem](https://en.wikipedia.org/wiki/Eight_queens_puzzle) | | [\[X\]](n_queen_problem/NQueenProblem.cpp) | [\[X\]](n_queen_problem/NQueenProblem.java) | [\[X\]](n_queen_problem/n_queen_problem.py) | | |
 | [Prime Factor](https://en.wikipedia.org/wiki/Prime_factor) | [\[X\]](prime_factor/prime_factor.c) | | | | | |
 | [Prims](https://en.wikipedia.org/wiki/Prim%27s_algorithm) | [\[X\]](prims/prims.c) | | [\[X\]](prims/Prims.java) | | | |
 | [Quick Select](https://en.wikipedia.org/wiki/Quickselect) | [\[X\]](quick_select/quick_select.c) | | | | | |
@@ -47,8 +47,8 @@ Community (college) maintained list of Algorithms and Data Structures implementa
 |:--------------|:----------------:|:----------------:|:----------------:|:-----------------:|:-----------------:|:-----------------:|
 | [AVL Tree](http://www.geeksforgeeks.org/avl-tree-set-1-insertion)| | |[\[X\]](avl_tree/AvlTree.java) | | | |
 | [Binary Search Tree](https://en.wikipedia.org/wiki/Binary_search_tree) | | | [\[X\]](binary_search_tree/BinarySearchTree.java) | | | |
-| [Linked List](https://en.wikipedia.org/wiki/Linked_list) | | | [\[X\]](linked_list/LinkedList.java) | | | |
-| [Stack](https://en.wikipedia.org/wiki/Stack_(abstract_data_type)) | | | [\[X\]](stack/Stack.java) | [\[X\]](stack/stack.py) | [\[X\]](stack/stack.go) | [\[X\]](stack/stack.js) |
+| [Linked List](https://en.wikipedia.org/wiki/Linked_list) | | | [\[X\]](linked_list/LinkedList.java) | | [\[X\]](linked_list/linked_list.go) | |
+| [Stack](https://en.wikipedia.org/wiki/Stack_(abstract_data_type)) | [\[X\]](stack/stack.c) | | [\[X\]](stack/Stack.java) | [\[X\]](stack/stack.py) | [\[X\]](stack/stack.go) | [\[X\]](stack/stack.js) |
 
 
 ## How to run them
