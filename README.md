@@ -35,7 +35,7 @@ Community (college) maintained list of Algorithms and Data Structures implementa
 | [Prime Factor](https://en.wikipedia.org/wiki/Prime_factor) | [\[X\]](prime_factor/prime_factor.c) | | | | | |
 | [Prims](https://en.wikipedia.org/wiki/Prim%27s_algorithm) | [\[X\]](prims/prims.c) | | [\[X\]](prims/Prims.java) | | | |
 | [Quick Select](https://en.wikipedia.org/wiki/Quickselect) | [\[X\]](quick_select/quick_select.c) | | | | | |
-| [Quicksort](https://en.wikipedia.org/wiki/Quicksort) | [\[X\]](quicksort/quicksort.c) | | [\[X\]](quicksort/QuickSort.java) | [\[X\]](quicksort/quick_sort.py) | | |
+| [Quicksort](https://en.wikipedia.org/wiki/Quicksort) | [\[X\]](quicksort/quicksort.c) | | [\[X\]](quicksort/QuickSort.java) | [\[X\]](quicksort/quick_sort.py) | [\[X\]](quicksort/quick_sort.go) | |
 | [Rod Cutting Problem](http://www.geeksforgeeks.org/dynamic-programming-set-13-cutting-a-rod/) | [\[X\]](rod_cutting_problem/rod_cutting.c) | | [\[X\]](rod_cutting_problem/RodCutting.java) | [\[X\]](rod_cutting_problem/rod_cutting.py) | [\[X\]](rod_cutting_problem/rod_cutting.go) | |
 | [Shell Sort](https://en.wikipedia.org/wiki/Shellsort) | | [\[X\]](shell_sort/ShellSort.cpp) | | [\[X\]](/shell_sort/shell_sort.py) | [\[X\]](shell_sort/shell_sort.go) | |
 | [Sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes) | [\[X\]](sieve_of_eratosthenes/sieveOfEratosthenes.c) | | [\[X\]](sieve_of_eratosthenes/SieveOfEratosthenes.java) | [\[X\]](sieve_of_eratosthenes/sieve_of_eratosthenes.py) | [\[X\]](sieve_of_eratosthenes/sieve_of_eratosthenes.go) | |
