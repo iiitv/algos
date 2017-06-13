@@ -4,8 +4,8 @@ import "fmt"
 
 // ModularExponential computes x^y
 // Time Complexity : O(log(power))
-func ModularExponential(base int, power int, mod int) int {
-	result := 1
+func ModularExponential(base int64, power int, mod int64) int64 {
+	result := int64(1)
 	base = base % mod
 	for power > 0 {
 		if power%2 == 1 {
@@ -18,8 +18,6 @@ func ModularExponential(base int, power int, mod int) int {
 }
 
 func main() {
-	base := 2
-	power := 11
-	mod := 1000
+	base, power, mod := int64(2), 20, int64(100000)
 	fmt.Println(ModularExponential(base, power, mod))
 }
