@@ -1,17 +1,17 @@
 #include <stdio.h>
- 
-// Time Complexity : O(log (power)) 
+
+// Time Complexity : O(log (power))
 long long modularExponential(long long base, long power, long long mod) {
-    long long answer = 1;    
-    base = base % mod;   
-    while (power) {
-        if (power & 1) {
-            answer = (answer * base) % mod;
-        }
-        power = power >> 1;
-        base = (base * base) % mod;  
-    }
-    return answer;
+	long long answer = 1;
+	base = base % mod;
+	while (power) {
+		if (power & 1) {
+			answer = (answer * base) % mod;
+		}
+		power = power >> 1;
+		base = (base * base) % mod;
+	}
+	return answer;
 }
 
 int main() {
