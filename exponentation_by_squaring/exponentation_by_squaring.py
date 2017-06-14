@@ -7,7 +7,7 @@ def exponentation_by_squaring(base, power):
     """
 
     if power < 0:  # Negative powers
-        return exponentation_by_squaring(1 / base, -power)
+        return exponentation_by_squaring(1. / base, -power)
     elif power == 0:  # Base case
         return 1
     elif power % 2 == 0:
@@ -23,8 +23,8 @@ def main():
 
     base = 2
     power = 3
-    print(base, 'raised to', power, 'is',
-          exponentation_by_squaring(base, power))
+    print(str(base) + ' raised to ' + str(power) + ' is ' +
+          str(exponentation_by_squaring(base, power)))
 
 
 if __name__ == '__main__':
