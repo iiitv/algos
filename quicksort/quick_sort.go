@@ -33,8 +33,8 @@ func partitionArray(data []int, beg int, end int, pivotIndex int) int {
 // Time complexity : O(n log n)
 // Space Complexity : O(n)
 func QuickSort(data []int, begin int, end int) {
-	var pivotIndex int
 	if begin < end {
+		var pivotIndex int
 		pivotIndex = partitionArray(data, begin, end, pivotIndex)
 		QuickSort(data, begin, pivotIndex-1)
 		QuickSort(data, pivotIndex+1, end)
