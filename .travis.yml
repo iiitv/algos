@@ -18,4 +18,4 @@ install:
 script:
   - ./.bin/test_running.sh
   - coala --ci
-  - editorconfig-tools check **/*
+  - editorconfig-tools check **/* | grep " failed "
