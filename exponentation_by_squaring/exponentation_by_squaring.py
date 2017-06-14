@@ -23,7 +23,8 @@ def main():
 
     base = 2
     power = 3
-    print(base, 'raised to', power, 'is', exponentation_by_squaring(base, power))
+    print(base, 'raised to', power, 'is',
+          exponentation_by_squaring(base, power))
 
 
 if __name__ == '__main__':
