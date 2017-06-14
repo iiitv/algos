@@ -3,29 +3,30 @@ package main
 import "fmt"
 
 // partitionArray finds the pivot index
-func partitionArray(data []int, beg int, end int, pivotIndex *int) {
+func partitionArray(data []int, beg int, end int, pivotIndex int) int {
 	left, right := beg, end
-	*pivotIndex = left
+	pivotIndex = left
 	for true {
-		for data[*pivotIndex] <= data[right] && *pivotIndex != right {
+		for data[pivotIndex] <= data[right] && pivotIndex != right {
 			right--
 		}
-		if *pivotIndex == right {
+		if pivotIndex == right {
 			break
-		} else if data[*pivotIndex] > data[right] {
-			data[right], data[*pivotIndex] = data[*pivotIndex], data[right]
-			*pivotIndex = right
+		} else if data[pivotIndex] > data[right] {
+			data[right], data[pivotIndex] = data[pivotIndex], data[right]
+			pivotIndex = right
 		}
-		for data[*pivotIndex] >= data[left] && *pivotIndex != left {
+		for data[pivotIndex] >= data[left] && pivotIndex != left {
 			left++
 		}
-		if *pivotIndex == left {
+		if pivotIndex == left {
 			break
-		} else if data[*pivotIndex] < data[left] {
-			data[left], data[*pivotIndex] = data[*pivotIndex], data[left]
-			*pivotIndex = left
+		} else if data[pivotIndex] < data[left] {
+			data[left], data[pivotIndex] = data[pivotIndex], data[left]
+			pivotIndex = left
 		}
 	}
+	return pivotIndex
 }
 
 // QuickSort sorts data by quicksort algorithm
@@ -34,7 +35,7 @@ func partitionArray(data []int, beg int, end int, pivotIndex *int) {
 func QuickSort(data []int, begin int, end int) {
 	var pivotIndex int
 	if begin < end {
-		partitionArray(data, begin, end, &pivotIndex)
+		pivotIndex = partitionArray(data, begin, end, pivotIndex)
 		QuickSort(data, begin, pivotIndex-1)
 		QuickSort(data, pivotIndex+1, end)
 	}
