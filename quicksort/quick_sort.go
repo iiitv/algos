@@ -3,9 +3,9 @@ package main
 import "fmt"
 
 // partitionArray finds the pivot index
-func partitionArray(data []int, beg int, end int, pivotIndex int) int {
+func partitionArray(data []int, beg int, end int) int {
 	left, right := beg, end
-	pivotIndex = left
+	pivotIndex := left
 	for true {
 		for data[pivotIndex] <= data[right] && pivotIndex != right {
 			right--
@@ -33,9 +33,8 @@ func partitionArray(data []int, beg int, end int, pivotIndex int) int {
 // Time complexity : O(n log n)
 // Space Complexity : O(n)
 func QuickSort(data []int, begin int, end int) {
-	var pivotIndex int
 	if begin < end {
-		pivotIndex = partitionArray(data, begin, end, pivotIndex)
+		pivotIndex := partitionArray(data, begin, end)
 		QuickSort(data, begin, pivotIndex-1)
 		QuickSort(data, pivotIndex+1, end)
 	}
