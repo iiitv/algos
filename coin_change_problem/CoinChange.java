@@ -14,7 +14,7 @@ import java.util.Arrays;
  * n: Value to find the change for
  */
 public class CoinChange {
-	private static int coinChangeProblem(int[] C, int m, int n) {
+	public static int coinChangeProblem(int[] C, int m, int n) {
 		int[] possibilities = new int[n+1];
 		Arrays.fill(possibilities, 0);
 		possibilities[0] = 1;
@@ -22,13 +22,14 @@ public class CoinChange {
 		// For all coins,
 		// Update array if the current coin is capable of
 		// incrementing the possibility
-		for(int i = 0; i < m; i++){
-			for(int j = C[i]; j <= n; j++){
+		for (int i = 0; i < m; i++){
+			for (int j = C[i]; j <= n; j++){
 				possibilities[j] += possibilities[j - C[i]];
 			}
 		}
 		return possibilities[n];
 	}
+	
 	public static void main(String[] args) {
 		int[] coin = {2, 5, 3, 6};
 		int n = 10;
