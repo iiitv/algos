@@ -10,11 +10,10 @@
 import java.util.Arrays;
 /*
  * coin: Array containing value of coins
- * m: Number of types of coins
  * n: Value to find the change for
  */
 public class CoinChange {
-	public static int coinChangeProblem(int[] C, int m, int n) {
+	public static int coinChangeProblem(int[] C, int n) {
 		int[] possibilities = new int[n+1];
 		Arrays.fill(possibilities, 0);
 		possibilities[0] = 1;
@@ -22,7 +21,7 @@ public class CoinChange {
 		// For all coins,
 		// Update array if the current coin is capable of
 		// incrementing the possibility
-		for (int i = 0; i < m; i++){
+		for (int i = 0; i < C.length; i++){
 			for (int j = C[i]; j <= n; j++){
 				possibilities[j] += possibilities[j - C[i]];
 			}
@@ -33,7 +32,6 @@ public class CoinChange {
 	public static void main(String[] args) {
 		int[] coin = {2, 5, 3, 6};
 		int n = 10;
-		int m = coin.length;
-		System.out.println(coinChangeProblem(coin, m, n));
+		System.out.println(coinChangeProblem(coin, n));
 	}
 }
