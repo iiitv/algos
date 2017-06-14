@@ -3,8 +3,7 @@ package main
 import "fmt"
 
 // partitionArray finds the pivot index
-func partitionArray(data []int, beg int, end int) int {
-	left, right := beg, end
+func partitionArray(data []int, left int, right int) int {
 	pivotIndex := left
 	for true {
 		for data[pivotIndex] <= data[right] && pivotIndex != right {
@@ -29,19 +28,23 @@ func partitionArray(data []int, beg int, end int) int {
 	return pivotIndex
 }
 
+func quickSort(data []int, begin int, end int) {
+	if begin < end {
+		pivotIndex := partitionArray(data, begin, end)
+		quickSort(data, begin, pivotIndex-1)
+		quickSort(data, pivotIndex+1, end)
+	}
+}
+
 // QuickSort sorts data by quicksort algorithm
 // Time complexity : O(n log n)
 // Space Complexity : O(n)
-func QuickSort(data []int, begin int, end int) {
-	if begin < end {
-		pivotIndex := partitionArray(data, begin, end)
-		QuickSort(data, begin, pivotIndex-1)
-		QuickSort(data, pivotIndex+1, end)
-	}
+func QuickSort(data []int) {
+	quickSort(data, 0, len(data)-1)
 }
 
 func main() {
 	data := []int{1, 1122002, 2, 88171, 6754, 79901, 119856, -312, 1, -2}
-	QuickSort(data, 0, len(data)-1)
+	QuickSort(data)
 	fmt.Println(data)
 }
