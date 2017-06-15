@@ -18,7 +18,7 @@ function main () {
 	for (let i = 1; i<=100; i++) {
 		A.push(i);
 	}
-	index = linearSearch(A, 12);
+	let index = linearSearch(A, 12);
 	if (index === -1) {
 		console.log('Element was not found');
 	} else {
