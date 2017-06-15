@@ -15,7 +15,7 @@ function linearSearch (arr, x) {
 
 function main () {
 	let A = [];
-	for (let i = 1; i<=100; i++) {
+	for (let i = 1; i <= 100; i++) {
 		A.push(i);
 	}
 	let index = linearSearch(A, 12);
