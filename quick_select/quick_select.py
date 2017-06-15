@@ -15,7 +15,7 @@ def partition(a, start, end):
 			i += 1
 			a[i], a[j] = a[j], a[i]
 	i += 1
-	a[i],a[end] = a[end],a[i]
+	a[i], a[end] = a[end], a[i]
 	return i;
 
 def quick_select(a, k):
@@ -24,12 +24,13 @@ def quick_select(a, k):
 	Time Complexity: o(n) for average case and o(n^2) for worst cases
 	param a: Array on which operation would perfom
 	param k: kth minimun element have to find
+	return: returns kth minimum value
 	"""
 	if a == None:
 		print "Array not exist"
 		return None
 	elif len(a) <= k:
-		print "Sorry k is greater than",len(a)-1
+		print "k is greater than",len(a)-1
 		return None
 	else:
 		start = 0
