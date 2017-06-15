@@ -18,3 +18,23 @@ bears = GoLintBear
 [Gofmt]
 files = **/*.go
 bears = GofmtBear
+
+# python lint
+[pep8]
+files = **/*.py
+bears = PEP8Bear
+
+# Haskell
+[haskell]
+files = **/*.hs
+bears = HaskellLintBear
+
+# hlint
+[hlint]
+files = **/*.hs
+bears = GhcModBear
+
+# JavaScript
+[happiness]
+files = **/*.js
+bears = HappinessLintBear

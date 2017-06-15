@@ -8,7 +8,15 @@ struct Node {
 
 //  Creatig node
 struct Node* getNewNode(int data) {
+<<<<<<< HEAD
 	struct Node *nw_node;
+=======
+<<<<<<< HEAD
+	struct Node *nw_node;
+=======
+	struct Node *nw_node = NULL;
+>>>>>>> 29c46ea59ff0f6163e736e453ba031a81699b865
+>>>>>>> b5ffcdbea81bdde735d7552551735840856b5fa7
 	nw_node = (struct Node*) malloc(sizeof(struct Node));	//  nw_node a Node to be added
 	if (nw_node == NULL) {
 		return NULL;
@@ -119,12 +127,27 @@ struct Node* deleteAtPos(struct Node **start, int pos) {
 }
 
 //  To traverse whole list
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> b5ffcdbea81bdde735d7552551735840856b5fa7
 void traverse(struct Node *start) {
     printf("Linked List\n");
 	if(start == NULL) {
 		printf("Linked List is Empty");
 	} else {
 		struct Node* temp = start;		// temp node to go through each node
+<<<<<<< HEAD
+=======
+=======
+void traverse(struct Node **start) {
+    printf("Linked List\n");
+	if(*start == NULL) {
+		printf("Linked List is Empty");
+	} else {
+		struct Node* temp = *start;		// temp node to go through each node
+>>>>>>> 29c46ea59ff0f6163e736e453ba031a81699b865
+>>>>>>> b5ffcdbea81bdde735d7552551735840856b5fa7
 		while (temp->next != NULL) {
 			printf(" %d ->", temp->d);
 			temp = temp->next;
@@ -135,8 +158,18 @@ void traverse(struct Node *start) {
 }
 
 //  To search an element
+<<<<<<< HEAD
 int search(struct Node *start, int data) {
 	struct Node* temp = start;
+=======
+<<<<<<< HEAD
+int search(struct Node *start, int data) {
+	struct Node* temp = start;
+=======
+int search(struct Node **start, int data) {
+	struct Node* temp = *start;
+>>>>>>> 29c46ea59ff0f6163e736e453ba031a81699b865
+>>>>>>> b5ffcdbea81bdde735d7552551735840856b5fa7
 	int found = 0, i = 1;
 	while (temp->next != NULL) {
 		if(temp->d == data) {
@@ -190,8 +223,17 @@ int main() {
 		res = addFront(&start, getNewNode(23));
 		insertResult(res, 12);
 	}
+<<<<<<< HEAD
 	traverse(start);
 	
+=======
+<<<<<<< HEAD
+	traverse(start);
+=======
+	traverse(&start);
+>>>>>>> 29c46ea59ff0f6163e736e453ba031a81699b865
+
+>>>>>>> b5ffcdbea81bdde735d7552551735840856b5fa7
 	// Adding elements at the end
 	if (getNewNode(25) != NULL) {
 		res = addLast(&start, getNewNode(25));
@@ -201,8 +243,17 @@ int main() {
 		res = addLast(&start, getNewNode(46));
 		insertResult(res, 46);
 	}
+<<<<<<< HEAD
 	traverse(start);
 	
+=======
+<<<<<<< HEAD
+	traverse(start);
+=======
+	traverse(&start);
+>>>>>>> 29c46ea59ff0f6163e736e453ba031a81699b865
+
+>>>>>>> b5ffcdbea81bdde735d7552551735840856b5fa7
 	// Adding elements to front
 	if (getNewNode(12) != NULL) {
 		res = addFront(&start, getNewNode(12));
@@ -212,35 +263,82 @@ int main() {
 		res = addFront(&start, getNewNode(11));
 		insertResult(res, 11);	
 	}
+<<<<<<< HEAD
 	traverse(start);
+=======
+<<<<<<< HEAD
+	traverse(start);
+=======
+	traverse(&start);
+>>>>>>> 29c46ea59ff0f6163e736e453ba031a81699b865
+>>>>>>> b5ffcdbea81bdde735d7552551735840856b5fa7
 
 	// Adding element at a given index (Adding 14 at index 3)
 	if (getNewNode(14) != NULL) {
 		res = addAtPos(&start, getNewNode(14), 3);
 		insertResult(res, 14);	
 	}
+<<<<<<< HEAD
 	traverse(start);
+=======
+<<<<<<< HEAD
+	traverse(start);
+=======
+	traverse(&start);
+>>>>>>> 29c46ea59ff0f6163e736e453ba031a81699b865
+>>>>>>> b5ffcdbea81bdde735d7552551735840856b5fa7
 
 	// Removing First Element
 	node = deleteFirst(&start);
 	deleteResult(&node);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> b5ffcdbea81bdde735d7552551735840856b5fa7
 	traverse(start);
 
 	// search
 	res = search(start, 14);
 	searchResult(14, res);
 	res = search(start, 12);
+<<<<<<< HEAD
+=======
+=======
+	traverse(&start);
+
+	// search
+	res = search(&start, 14);
+	searchResult(14, res);
+	res = search(&start, 12);
+>>>>>>> 29c46ea59ff0f6163e736e453ba031a81699b865
+>>>>>>> b5ffcdbea81bdde735d7552551735840856b5fa7
 	searchResult(12, res);
 	
 	// Removing Last Element
 	node = deleteLast(&start);
 	deleteResult(&node);
+<<<<<<< HEAD
 	traverse(start);
+=======
+<<<<<<< HEAD
+	traverse(start);
+=======
+	traverse(&start);
+>>>>>>> 29c46ea59ff0f6163e736e453ba031a81699b865
+>>>>>>> b5ffcdbea81bdde735d7552551735840856b5fa7
 
 	// Removing an element from a index
 	node = deleteAtPos(&start, 17);
 	deleteResult(&node);
+<<<<<<< HEAD
 	traverse(start);
+=======
+<<<<<<< HEAD
+	traverse(start);
+=======
+	traverse(&start);
+>>>>>>> 29c46ea59ff0f6163e736e453ba031a81699b865
+>>>>>>> b5ffcdbea81bdde735d7552551735840856b5fa7
 	return 0;
 	
 }
