@@ -191,7 +191,7 @@ int main() {
 		insertResult(res, 12);
 	}
 	traverse(start);
-
+	
 	// Adding elements at the end
 	if (getNewNode(25) != NULL) {
 		res = addLast(&start, getNewNode(25));
@@ -202,7 +202,7 @@ int main() {
 		insertResult(res, 46);
 	}
 	traverse(start);
-
+	
 	// Adding elements to front
 	if (getNewNode(12) != NULL) {
 		res = addFront(&start, getNewNode(12));
