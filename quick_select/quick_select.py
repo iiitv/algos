@@ -1,7 +1,7 @@
-def partition(a, start, end):
+def partition(array, start, end):
     """
     Perform Partition Operation on array a.
-    Time Complexity: o(nLogn)
+    Time Complexity: O(nLogn)
     Auxiliary Space: O(n)
     :param a: Iterable of elements
     :param start: pivot value for array
@@ -9,17 +9,17 @@ def partition(a, start, end):
     :return: return i value for function, used in partitioning of array.
     """
     i = start - 1
-    pivot = a[end]
+    pivot = array[end]
     for j in range(start, end):
-        if a[j] <= pivot:
+        if array[j] <= pivot:
             i += 1
-            a[i], a[j] = a[j], a[i]
+            array[i], array[j] = array[j], array[i]
     i += 1
-    a[i], a[end] = a[end], a[i]
+    array[i], array[end] = array[end], array[i]
     return i
 
 
-def quick_select(a, k):
+def quick_select(array, k):
     """
     Perform quick select operation i.e find kth minimum element from array
     Time Complexity: O(n) for average case and O(n^2) for worst cases
@@ -27,32 +27,33 @@ def quick_select(a, k):
     param k: kth minimun element have to find
     return: returns kth minimum value
     """
-    if a is not None and len(a) >= k:
+    if array is not None and len(array) >= k:
         start = 0
-        end = len(a) - 1
+        end = len(array) - 1
         is_found = False
-        while not is_found :
-            pos = partition(a, start, end)
+        while not is_found:
+            pos = partition(array, start, end)
             if pos == k:
                 is_found = True
-                return a[pos]
+                return array[pos]
             elif pos < k:
                 start = pos + 1
             else:
                 end = pos - 1
     else:
-    	return None
+        return None
+
 
 def main():
     a = [2, 4, 6, 2, 1, 4, 2, 7, 8, 9, 5, -4, 23, 0, 8]
     k = 10
     ans = quick_select(a, k)
     if a is None:
-        print ("Array doesn't exist")
+        print("Array doesn't exist")
     elif ans is not None:
-        print (ans)
+        print(ans)
     else:
-        print ("k is greater than size of array")
+        print("k is greater than size of array")
 
 
 if __name__ == '__main__':
