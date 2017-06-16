@@ -1,13 +1,11 @@
-import java.util.*;
+import java.util.Arrays;
+import java.util.ArrayList;
 
 public class PrimeFactor {
-    public static ArrayList<Integer> primeFactor(int n)
-    {
-        ArrayList<Integer> primeNo = new ArrayList<Integer>();
-        for (int i = 2; i <=n; i++)
-        {
-            if ( n % i == 0)
-            {
+    public static ArrayList<Integer> primeFactor(int n) {
+        ArrayList<Integer> primeNo = new ArrayList();
+        for (int i = 2; i <= n; i++) {
+            if ( n % i == 0) {
                 primeNo.add(i);
                 while (n % i == 0) {
                     n = n / i;
@@ -16,13 +14,15 @@ public class PrimeFactor {
         }
         return primeNo;
     }
-
-    public static void main(String[] args) {
+public static void main(String[] args) {
         int n = 8;
-        ArrayList<Integer> primes = primeFactor(n);
         System.out.println("Prime Factors are:");
-        for (Integer i : primeFactor(n))
-        {
+        for (Integer i : primeFactor(n)) {
             System.out.println(i);
         }
-    }}
+    }
+}
+
+
+
+
