@@ -63,7 +63,6 @@ Community (college) maintained list of Algorithms and Data Structures implementa
 | JavaScript |<pre>node [filename.js]</pre>|
 
 
-
 ## Resources
 
 * [Algorithms - Learneroo](https://www.learneroo.com/subjects/8)
