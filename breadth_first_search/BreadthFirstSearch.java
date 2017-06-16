@@ -1,65 +1,78 @@
-import java.util.*;
-
-public class BreadthFirstSearch <T> {
-
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Set;
+//Generic type BreadthFirstSearch implementation
+public class BreadthFirstSearch<T> {
     // HasMap  of lists for Adjacency List Representation
-    public HashMap<Integer, ArrayList<T>> adj;
-
-    //Function to add an edge into the breadthFirstTraversal
-    private void addEdge(int index, T destination) {
-        adj.get(index).add(destination);
+    public HashMap<T, ArrayList<T>> adj = new HashMap<T, ArrayList<T>> ();
+    //Function to add an edge
+    void addEdges (T source, T destination) {
+        if (adj.containsKey (source)) {
+            // update the adj-list
+            ArrayList<T> list = (ArrayList<T>) adj.get (source);
+            list.add (destination);
+            adj.put (source, list);
+        } else {
+            // init the adj-list
+            ArrayList<T> list = new ArrayList<> ();
+            list.add (destination);
+            adj.put (source, list);
+        }
     }
-
-    public ArrayList breadthFirstSearch(T index, T destination) {
-        // false by default in java)
-        ArrayList bfsPath = new ArrayList();
-        Set<T> visited = new HashSet();
+    // BreadthFirstSearch search function with return path in a list
+    public ArrayList<T> BreadthFirstSearch (T source, T destination) {
+        ArrayList<T> bfsPath = new ArrayList<> ();
         // Mark the current node as visited
-        visited.add(index);
-        ArrayList<T> queue = new ArrayList<> ();
-        queue.add(index);
-        while (queue.size() != 0) {
-            index = queue.remove(0);
-            bfsPath.add(index);
-            Iterator<T> i = adj.get(index).listIterator();
-            // after reach the target node break out the all loop
-            int flag = 0;
-            while (i.hasNext()) {
-                T n = i.next();
-                if (n.equals(destination)) {
-                    bfsPath.add(n);
-                    flag = 1;
-                    break;
-                }
-                if (!visited.contains(n)) {
-                    visited.add(n);    // mark as visited.
-                    queue.add(n);
-                }
-                if (flag == 1) {
-                    break;
+        Set<T> visited = new HashSet<> ();
+        //using the queue concept
+        ArrayList<T> queue = new ArrayList<>();
+        queue.add (source);
+        bfsPath.add (source);
+        visited.add (source);
+        int flag = 0;
+        while (!queue.isEmpty()) {
+            source = queue.get (0);
+            queue.remove (0);
+            ArrayList<T> temp = new ArrayList<>();
+            if (adj.containsKey(source) && adj.get(source).size() > 0) {
+                temp.addAll (adj.get (source));
+            }
+            for (int i = 0; i < temp.size(); i++) {
+                if (!visited.contains(temp.get(i))) {
+                    bfsPath.add(temp.get(i));
+                    if (temp.get(i) == destination){
+                        flag = 1;
+                        break;
+                    }
+                    queue.add(temp.get(i));
+                    visited.add(temp.get(i));
                 }
             }
+            if (flag == 1) {
+                break;
+            }
         }
+        if (flag == 0) {
+            return null;
+        }
+        //return the list
         return bfsPath;
     }
-    //init edges
-    public void initEdges(int n) {
-        adj = new HashMap<Integer, ArrayList<T>>();
-        for (int i = 0; i < n; i++) {
-            adj.put(i, new ArrayList<> ());
-        }
-    }
 
-    public static void main(String[] args) {
-        BreadthFirstSearch<Integer> obj = new BreadthFirstSearch<>();
-        obj.initEdges(4);
-        obj.addEdge(0, 1);
-        obj.addEdge(0, 3);
-        obj.addEdge(1, 2);
-        obj.addEdge(2, 1);
-        obj.addEdge(2, 3);
-        System.out.println("Breadth First Search starting from index to destination");
-        ArrayList bfsPath = obj.breadthFirstSearch(1, 3);
-        System.out.println(bfsPath);
+    public static void main (String[] args) {
+        BreadthFirstSearch<String> obj = new BreadthFirstSearch<> ();
+        obj.addEdges ("A", "B");
+        obj.addEdges ("A", "D");
+        obj.addEdges ("B", "C");
+        obj.addEdges ("C", "D");
+        ArrayList<String> path = new ArrayList<> ();
+        // find the path form source and destination
+        path = obj.BreadthFirstSearch ("A", "E");
+        if (path != null) {
+            System.out.println (obj.BreadthFirstSearch ("A", "E"));
+        }else {
+            System.out.println("Path not found");
+        }
     }
 }
