@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
-#include <math.h>     // for using square root 
-#include <stdbool.h>  // to include bool datatype 
+#include <math.h>     // for using square root
+#include <stdbool.h>  // to include bool datatype
 
 void sieveOfEratosthenes(int n, bool *primes) {
 	int i, sqrtOfn = sqrt(n)+1, j;
@@ -20,7 +20,7 @@ void sieveOfEratosthenes(int n, bool *primes) {
 
 int main() {
 	int n, k;
-	scanf("%d", &n);
+	n = 100;
 	bool primes[n+1];
 	sieveOfEratosthenes(n, primes);
 	for (k = 2; k < n; k++) {
