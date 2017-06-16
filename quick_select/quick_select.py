@@ -27,33 +27,29 @@ def quick_select(array, k):
     param k: kth minimun element have to find
     return: returns kth minimum value
     """
-    if array is not None and len(array) >= k:
-        start = 0
-        end = len(array) - 1
-        is_found = False
-        while not is_found:
-            pos = partition(array, start, end)
-            if pos == k:
-                is_found = True
-                return array[pos]
-            elif pos < k:
-                start = pos + 1
-            else:
-                end = pos - 1
-    else:
-        return None
+    start = 0
+    end = len(array) - 1
+    is_found = False
+    while not is_found:
+        pos = partition(array, start, end)
+        if pos == k:
+            is_found = True
+            return array[pos]
+        elif pos < k:
+            start = pos + 1
+        else:
+            end = pos - 1
 
 
 def main():
     a = [2, 4, 6, 2, 1, 4, 2, 7, 8, 9, 5, -4, 23, 0, 8]
     k = 10
-    ans = quick_select(a, k)
     if a is None:
         print("Array doesn't exist")
-    elif ans is not None:
-        print(ans)
-    else:
+    elif k >= len(a):
         print("k is greater than size of array")
+    else:
+        print(quick_select(a, k))
 
 
 if __name__ == '__main__':
