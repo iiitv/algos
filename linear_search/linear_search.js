@@ -14,11 +14,11 @@ function linearSearch (arr, x) {
 }
 
 function main () {
-	let A = [];
+	let data = [];
 	for (let i = 1; i <= 100; i++) {
-		A.push(i);
+		data.push(i);
 	}
-	let index = linearSearch(A, 12);
+	let index = linearSearch(data, 12);
 	if (index === -1) {
 		console.log('Element was not found');
 	} else {
