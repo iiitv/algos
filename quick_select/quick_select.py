@@ -31,7 +31,7 @@ def quick_select(a, k):
         print ("Array doesn't exist")
         return None
     elif len(a) <= k:
-        print ("k is greater than", len(a)-1)
+        print ("k is greater than", len(a) - 1)
         return None
     else:
         start = 0
@@ -43,16 +43,18 @@ def quick_select(a, k):
                 is_found = True
                 return a[pos]
             elif pos < k:
-                start = pos+1
+                start = pos + 1
             else:
-                end = pos-1
-    return 0
+                end = pos - 1
+    return None
 
 
 def main():
     a = [2, 4, 6, 2, 1, 4, 2, 7, 8, 9, 5, -4, 23, 0, 8]
     k = 10
-    print (quick_select(a, k))
+    ans = quick_select(a, k)
+    if ans is not None:
+        print (ans)
 
 
 if __name__ == '__main__':
