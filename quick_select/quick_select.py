@@ -28,14 +28,12 @@ def quick_select(a, k):
     return: returns kth minimum value
     """
     if a is None:
-        print ("Array doesn't exist")
         return None
     elif len(a) <= k:
-        print ("k is greater than", len(a) - 1)
         return None
     else:
         start = 0
-        end = len(a)-1
+        end = len(a) - 1
         is_found = False
         while not is_found :
             pos = partition(a, start, end)
@@ -53,8 +51,12 @@ def main():
     a = [2, 4, 6, 2, 1, 4, 2, 7, 8, 9, 5, -4, 23, 0, 8]
     k = 10
     ans = quick_select(a, k)
-    if ans is not None:
+    if a is None:
+        print ("Array doesn't exist")
+    elif ans is not None:
         print (ans)
+    else:
+        print ("k is greater than size of array")
 
 
 if __name__ == '__main__':
