@@ -7,7 +7,7 @@ public class BreadthFirstSearch<T> {
     // HasMap  of lists for Adjacency List Representation
     public HashMap<T, ArrayList<T>> adj = new HashMap<T, ArrayList<T>> ();
     //Function to add an edge
-    void addEdges (T source, T destination) {
+    public void addEdges (T source, T destination) {
         if (adj.containsKey (source)) {
             // update the adj-list
             ArrayList<T> list = (ArrayList<T>) adj.get (source);
@@ -21,7 +21,7 @@ public class BreadthFirstSearch<T> {
         }
     }
     // BreadthFirstSearch search function with return path in a list
-    public ArrayList<T> BreadthFirstSearch (T source, T destination) {
+    public ArrayList<T> breadthFirstSearch (T source, T destination) {
         ArrayList<T> bfsPath = new ArrayList<> ();
         // Mark the current node as visited
         Set<T> visited = new HashSet<> ();
@@ -68,9 +68,9 @@ public class BreadthFirstSearch<T> {
         obj.addEdges ("C", "D");
         ArrayList<String> path = new ArrayList<> ();
         // find the path form source and destination
-        path = obj.BreadthFirstSearch ("A", "E");
+        path = obj.breadthFirstSearch ("A", "E");
         if (path != null) {
-            System.out.println (obj.BreadthFirstSearch ("A", "E"));
+            System.out.println (path);
         }else {
             System.out.println("Path not found");
         }
