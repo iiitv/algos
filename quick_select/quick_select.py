@@ -44,7 +44,6 @@ def quick_select(a, k):
                 start = pos + 1
             else:
                 end = pos - 1
-    return None
 
 
 def main():
