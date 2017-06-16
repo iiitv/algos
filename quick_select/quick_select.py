@@ -27,11 +27,7 @@ def quick_select(a, k):
     param k: kth minimun element have to find
     return: returns kth minimum value
     """
-    if a is None:
-        return None
-    elif len(a) <= k:
-        return None
-    else:
+    if a is not None and len(a) >= k:
         start = 0
         end = len(a) - 1
         is_found = False
@@ -44,7 +40,8 @@ def quick_select(a, k):
                 start = pos + 1
             else:
                 end = pos - 1
-
+    else:
+    	return None
 
 def main():
     a = [2, 4, 6, 2, 1, 4, 2, 7, 8, 9, 5, -4, 23, 0, 8]
