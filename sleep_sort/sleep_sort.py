@@ -24,15 +24,15 @@ def sleeper(number, sorted_numbers):
     sorted_numbers.put(number)
 
 
-def sleep_sort(numbers, reversed=False):
+def sleep_sort(numbers, reverse=False):
     """
     Sorts the numbers using sleep sort algorithm.
     :param numbers: Iterable object containing numbers
-    :param reversed: Whether results need to be reversed
+    :param reverse: Whether results need to be reverse
     :returns: A generator with sorted numbers
     """
     threads = []
-    sorted_numbers = queue.LifoQueue() if reversed else queue.Queue()
+    sorted_numbers = queue.LifoQueue() if reverse else queue.Queue()
     for number in numbers:
         thread = threading.Thread(target=sleeper,
                                   args=(number, sorted_numbers))
@@ -50,7 +50,7 @@ def main():
     for number in sleep_sort(numbers):
         print(number)
     print("Descending order: ")
-    for number in sleep_sort(numbers, reversed=True):
+    for number in sleep_sort(numbers, reverse=True):
         print(number)
 
 
