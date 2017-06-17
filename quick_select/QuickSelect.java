@@ -12,7 +12,7 @@ public class QuickSelect {
         int temp = array[right];
         array[right] = array[pivotIndex];
         array[pivotIndex] = temp;
-        int storeIndex= left;
+        int storeIndex = left;
         while (left < right) {
             if (array[left] < pivotValue) {
                 temp = array[storeIndex];
@@ -37,7 +37,7 @@ public class QuickSelect {
      */
     public static int quickSelect(int[] array, int left, int right, int pos) {
         int pivotIndex;
-        if(pos < 0 || pos > array.length) {
+        if(pos < 0 || pos >= array.length) {
             throw new ArithmeticException("Please, give a valid position");
         }
         if (left == right) {
