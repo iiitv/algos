@@ -137,3 +137,23 @@ func main() {
     fmt.Println(sortedArray)
 }
 ```
+
+#### JavaScript
+
+```JavaScript
+function quickSort (arr) {
+	/*
+	Your implementation here
+	*/
+}
+
+function main () {
+	let input = [2, 3, 0, 4];
+	quickSort(input);
+	for (let x in input) {
+		console.log(input[x] + ' ');
+	}
+}
+
+main();
+```
