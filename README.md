@@ -16,7 +16,7 @@ Community (college) maintained list of Algorithms and Data Structures implementa
 | Algorithm | C | CPP | Java | Python | Golang | JavaScript |
 |:--------------|:----------------:|:----------------:|:----------------:|:-----------------:|:-----------------:|:-----------------:|
 | [Bin Sort](http://www.cdn.geeksforgeeks.org/bucket-sort-2/)| | |[:white_check_mark:](bin_sort/BinSort.java) | [:white_check_mark:](bin_sort/bin_sort.py) | | |
-| [Binary Search](https://en.wikipedia.org/wiki/Binary_search_algorithm) | [:white_check_mark:](binary_search/binary_search.c) | | [:white_check_mark:](binary_search/BinarySearch.java) | [:white_check_mark:](binary_search/binary_search.py) | [:white_check_mark:](binary_search/binary_search.go) | |
+| [Binary Search](https://en.wikipedia.org/wiki/Binary_search_algorithm) | [:white_check_mark:](binary_search/binary_search.c) | | [:white_check_mark:](binary_search/BinarySearch.java) | [:white_check_mark:](binary_search/binary_search.py) | [:white_check_mark:](binary_search/binary_search.go) | [:white_check_mark:](binary_search/binary_search.js) |
 | [Coin Change Problem](http://www.algorithmist.com/index.php/Coin_Change) | [:white_check_mark:](coin_change_problem/coin_change_problem.c) | | [:white_check_mark:](coin_change_problem/CoinChange.java) | [:white_check_mark:](coin_change_problem/coin_change_problem.py) | | |
 | [Counting Sort](http://www.geeksforgeeks.org/counting-sort/)| [:white_check_mark:](counting_sort/counting_sort.c) | | [:white_check_mark:](counting_sort/CountingSort.java) | | | |
 | [Depth First Traversal](http://www.geeksforgeeks.org/depth-first-traversal-for-a-graph/) | | | [:white_check_mark:](depth_first_traversal/DepthFirstTraversal.java) | | | |
