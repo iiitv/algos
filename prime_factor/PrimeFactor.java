@@ -13,7 +13,8 @@ public class PrimeFactor {
         }
         return primeNo;
     }
-public static void main(String[] args) {
+
+    public static void main(String[] args) {
         int n = 8;
         System.out.println("Prime Factors are:");
         for (Integer i : primeFactor(n)) {
@@ -21,3 +22,4 @@ public static void main(String[] args) {
         }
     }
 }
+                           
