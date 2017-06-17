@@ -231,13 +231,9 @@ int main() {
 	res = search(start, 14);
 	searchResult(14, res);
 	res = search(start, 12);
+	searchResult(12, res);
 	traverse(start);
 
-	// search
-	res = search(start, 14);
-	searchResult(14, res);
-	res = search(start, 12);
-	searchResult(12, res);
 	
 	// Removing Last Element
 	node = deleteLast(&start);
