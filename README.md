@@ -17,7 +17,7 @@ Community (college) maintained list of Algorithms and Data Structures implementa
 |:--------------|:----------------:|:----------------:|:----------------:|:-----------------:|:-----------------:|:-----------------:|
 | [Bin Sort](http://www.cdn.geeksforgeeks.org/bucket-sort-2/)| | |[:white_check_mark:](bin_sort/BinSort.java) | [:white_check_mark:](bin_sort/bin_sort.py) | | |
 | [Binary Search](https://en.wikipedia.org/wiki/Binary_search_algorithm) | [:white_check_mark:](binary_search/binary_search.c) | | [:white_check_mark:](binary_search/BinarySearch.java) | [:white_check_mark:](binary_search/binary_search.py) | [:white_check_mark:](binary_search/binary_search.go) | |
-| [Coin Change Problem](http://www.algorithmist.com/index.php/Coin_Change) | [:white_check_mark:](coin_change_problem/coin_change_problem.c) | | [:white_check_mark:](coin_change_problem/CoinChange.java) | | | |
+| [Coin Change Problem](http://www.algorithmist.com/index.php/Coin_Change) | [:white_check_mark:](coin_change_problem/coin_change_problem.c) | | [:white_check_mark:](coin_change_problem/CoinChange.java) | [:white_check_mark:](coin_change_problem/coin_change_problem.py) | | |
 | [Counting Sort](http://www.geeksforgeeks.org/counting-sort/)| [:white_check_mark:](counting_sort/counting_sort.c) | | [:white_check_mark:](counting_sort/CountingSort.java) | | | |
 | [Depth First Traversal](http://www.geeksforgeeks.org/depth-first-traversal-for-a-graph/) | | | [:white_check_mark:](depth_first_traversal/DepthFirstTraversal.java) | | | |
 | [Dijkstra Algorithm](https://en.wikipedia.org/wiki/Dijkstra's_algorithm/) | [:white_check_mark:](dijkstra/dijkstra.c) | | [:white_check_mark:](dijkstra/Dijkstra.java) | | | |
@@ -39,6 +39,7 @@ Community (college) maintained list of Algorithms and Data Structures implementa
 | [Rod Cutting Problem](http://www.geeksforgeeks.org/dynamic-programming-set-13-cutting-a-rod/) | [:white_check_mark:](rod_cutting_problem/rod_cutting.c) | | [:white_check_mark:](rod_cutting_problem/RodCutting.java) | [:white_check_mark:](rod_cutting_problem/rod_cutting.py) | [:white_check_mark:](rod_cutting_problem/rod_cutting.go) | |
 | [Shell Sort](https://en.wikipedia.org/wiki/Shellsort) | | [:white_check_mark:](shell_sort/ShellSort.cpp) | | [:white_check_mark:](/shell_sort/shell_sort.py) | [:white_check_mark:](shell_sort/shell_sort.go) | |
 | [Sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes) | [:white_check_mark:](sieve_of_eratosthenes/sieveOfEratosthenes.c) | | [:white_check_mark:](sieve_of_eratosthenes/SieveOfEratosthenes.java) | [:white_check_mark:](sieve_of_eratosthenes/sieve_of_eratosthenes.py) | [:white_check_mark:](sieve_of_eratosthenes/sieve_of_eratosthenes.go) | |
+| [Sleep Sort](http://www.geeksforgeeks.org/sleep-sort-king-laziness-sorting-sleeping/) | | | | [:white_check_mark:](sleep_sort/sleep_sort.py) | | |
 
 
 ## Implemented Data Structures
