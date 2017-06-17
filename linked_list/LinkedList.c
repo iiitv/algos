@@ -153,6 +153,7 @@ int search(struct Node *start, int data) {
 	}
 }
 
+// to print search result
 void searchResult(int d, int pos) {
 	if(pos == -1) { 
 		printf("Element %d is not in list\n", d);
