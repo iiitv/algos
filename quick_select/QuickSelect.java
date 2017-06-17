@@ -5,7 +5,6 @@ public class QuickSelect {
     * left      : left index of the partitioning subarray
     * right     : right index of the partitioning subarray
     * pivotIndex : pivot index from which partition has to done
-    * storeIndex : index of the last element of the left subarray
     * return    : the index of the last element of the left subarray
      */
     private static int partition(int[] array, int left, int right, int pivotIndex) {
@@ -34,7 +33,6 @@ public class QuickSelect {
     * left        : left index of the subarray
     * right       : right index of the subarray
     * pos         : position to find the element using quick sort
-    * pivotIndex  : pivot index
     * return      : the value of element at pos place in the sorted array
      */
     public static int quickSelect(int[] array, int left, int right, int pos) {
