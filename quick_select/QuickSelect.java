@@ -56,7 +56,7 @@ public class QuickSelect {
     }
 
     public static void main(String[] args) {
-        int array[] = {10, 5, 1, 6, 7, 3, 2, 4, 8, 9};
+        int[] array = {10, 5, 1, 6, 7, 3, 2, 4, 8, 9};
         System.out.println(quickSelect(array, 0, array.length - 1, 3));
     }
 
