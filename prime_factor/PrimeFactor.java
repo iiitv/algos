@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 
 public class PrimeFactor {
+
     public static ArrayList<Integer> primeFactor(int n) {
         ArrayList<Integer> primeNo = new ArrayList();
         for (int i = 2; i <= n; i++) {
@@ -21,5 +22,4 @@ public class PrimeFactor {
             System.out.println(i);
         }
     }
-}
-                           
+}                          
