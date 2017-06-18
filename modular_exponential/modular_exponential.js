@@ -13,8 +13,8 @@ function modularExponential (base, power, mod) {
 		if (power & 1) {
 			answer = (answer * base) % mod;
 	  }
-	power = power >> 1;
-	base = (base * base) % mod;
+		power = power >> 1;
+		base = (base * base) % mod;
 	}
 	return answer;
 }
