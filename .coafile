@@ -24,11 +24,6 @@ bears = GofmtBear
 files = **/*.py
 bears = PEP8Bear
 
-# Pylint for Docstrings
-[pylint]
-files = **/*.py
-bears = PyLintBear
-
 # Haskell
 [haskell]
 files = **/*.hs
@@ -39,7 +34,7 @@ bears = HaskellLintBear
 files = **/*.hs
 bears = GhcModBear
 
-# yaml
-[yml]
-files = **/*.yml
-bears = YAMLLintBear
+# JavaScript
+[happiness]
+files = **/*.js
+bears = HappinessLintBear
