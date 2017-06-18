@@ -35,7 +35,7 @@ Community (college) maintained list of Algorithms and Data Structures implementa
 | [N-Queen Problem](https://en.wikipedia.org/wiki/Eight_queens_puzzle) | | [:white_check_mark:](n_queen_problem/NQueenProblem.cpp) | [:white_check_mark:](n_queen_problem/NQueenProblem.java) | [:white_check_mark:](n_queen_problem/n_queen_problem.py) | | |
 | [Prime Factor](https://en.wikipedia.org/wiki/Prime_factor) | [:white_check_mark:](prime_factor/prime_factor.c) | | | | | |
 | [Prims](https://en.wikipedia.org/wiki/Prim%27s_algorithm) | [:white_check_mark:](prims/prims.c) | | [:white_check_mark:](prims/Prims.java) | | | |
-| [Quick Select](https://en.wikipedia.org/wiki/Quickselect) | [:white_check_mark:](quick_select/quick_select.c) | | | | | |
+| [Quick Select](https://en.wikipedia.org/wiki/Quickselect) | [:white_check_mark:](quick_select/quick_select.c) | | | [:white_check_mark:](quick_select/quick_select.py) | | |
 | [Quicksort](https://en.wikipedia.org/wiki/Quicksort) | [:white_check_mark:](quicksort/quicksort.c) | | [:white_check_mark:](quicksort/QuickSort.java) | [:white_check_mark:](quicksort/quick_sort.py) | [:white_check_mark:](quicksort/quick_sort.go) | |
 | [Rod Cutting Problem](http://www.geeksforgeeks.org/dynamic-programming-set-13-cutting-a-rod/) | [:white_check_mark:](rod_cutting_problem/rod_cutting.c) | | [:white_check_mark:](rod_cutting_problem/RodCutting.java) | [:white_check_mark:](rod_cutting_problem/rod_cutting.py) | [:white_check_mark:](rod_cutting_problem/rod_cutting.go) | |
 | [Shell Sort](https://en.wikipedia.org/wiki/Shellsort) | | [:white_check_mark:](shell_sort/ShellSort.cpp) | | [:white_check_mark:](/shell_sort/shell_sort.py) | [:white_check_mark:](shell_sort/shell_sort.go) | |
