@@ -38,7 +38,7 @@ public class QuickSelect {
     public static int quickSelect(int[] array, int left, int right, int pos) {
         int pivotIndex;
         if(pos < 0 || pos >= array.length) {
-            throw new ArithmeticException("ArrayIndexOutOfBoundException");
+            throw new IndexOutOfBoundsException("index: " + pos);
         }
         if (left == right) {
             return array[left];
