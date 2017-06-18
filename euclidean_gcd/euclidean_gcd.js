@@ -7,7 +7,7 @@ function euclidean_gcd_recursive(first, second) {
 }
 
 function euclidean_gcd(first, second) {
-	while(second != 0) {
+	while(second !== 0) {
 		let temp = second;
 		second = first % second;
 		first = temp;
