@@ -3,7 +3,7 @@ function euclideanGcdRecursive (first, second) {
 	Calculates GCD of two numbers using Euclidean Recursive Algorithm
 	:param first: First number
 	:param second: Second number
-	:return: GCD of the numbers 
+	:return: GCD of the numbers
 	*/
 	if (second === 0) {
 		return first;
@@ -17,7 +17,7 @@ function euclideanGcdIterative (first, second) {
 	Calculates GCD of two numbers using Euclidean Iterative Algorithm
 	:param first: First number
 	:param second: Second number
-	:return: GCD of the numbers 
+	:return: GCD of the numbers
 	*/
 	while (second !== 0) {
 		let temp = second;
