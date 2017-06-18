@@ -1,4 +1,4 @@
-function binarySearchIterative(arr, item) {
+function binarySearchIterative (arr, item) {
 	/*
 	Performs a binary search iteratively
 	:param arr: List of elements to search from
@@ -20,7 +20,7 @@ function binarySearchIterative(arr, item) {
 	return -1;
 }
 
-function binarySearchRecursive(arr, item, begin, end) {
+function binarySearchRecursive (arr, item, begin, end) {
 	/*
 	Performs a binary search recursively
 	:param arr: List of elements to search from
@@ -43,7 +43,7 @@ function binarySearchRecursive(arr, item, begin, end) {
 	}
 }
 
-function main() {
+function main () {
 	let arr = [2, 5, 6, 7, 8, 9, 10];
 	let item = 5;
 	if (binarySearchIterative(arr, item) === -1) {
