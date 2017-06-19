@@ -1,10 +1,10 @@
 #include<stdio.h>
 
 /* Algorithm to calculate x raised to power k very efficiently
-*  Can be used as a great alternative to normal pow function
-*  base - base of the expression
-*  power - power of expression
-*/
+ *  Can be used as a great alternative to normal pow function
+ *  base - base of the expression
+ *  power - power of expression
+ */
 
 long double exponentation_by_squaring(long double base, int power) {
 	if (power < 0) {  // Negative power case

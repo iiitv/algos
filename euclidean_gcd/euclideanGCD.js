@@ -4,7 +4,7 @@ function euclideanGCDRecursive (first, second) {
 	:param first: First number
 	:param second: Second number
 	:return: GCD of the numbers
-	*/
+	 */
 	if (second === 0) {
 		return first;
 	} else {
@@ -18,7 +18,7 @@ function euclideanGCDIterative (first, second) {
 	:param first: First number
 	:param second: Second number
 	:return: GCD of the numbers
-	*/
+	 */
 	while (second !== 0) {
 		let temp = second;
 		second = first % second;

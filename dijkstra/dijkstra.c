@@ -1,8 +1,8 @@
 /*
-*  Following implementation of dijsktra's algorithm prints the minimum distance from given source to destination using adjacency matrix.
-*  Time complexity : O(V^2).
-*  Space Complexity : O(V).
-*/
+ *  Following implementation of dijsktra's algorithm prints the minimum distance from given source to destination using adjacency matrix.
+ *  Time complexity : O(V^2).
+ *  Space Complexity : O(V).
+ */
 
 #include <stdio.h>
 #include <limits.h>	// For using INT_MAX
