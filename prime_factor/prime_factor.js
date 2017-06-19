@@ -4,7 +4,7 @@ function primeFactor (n) {
   :param n: Number whose prime factors are going to be found
   :returns: Array with the prime factors
   */
-  let primes = []
+  let primes = [];
   for (let i = 2; i <= Math.sqrt(n); i++) {
     if (n % i === 0) {
       primes.push(i);
