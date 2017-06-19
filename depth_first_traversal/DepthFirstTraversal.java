@@ -15,7 +15,7 @@ public class DepthFirstTraversal {
 
     // A function used by DFS
     private static void depthFirstTraversal(int v, Set visited) {
-        // Mark the current node as visited 
+        // Mark the current node as visited
         visited.add(v);
         System.out.println(v);
         Iterator<Integer> i = adj[v].listIterator();

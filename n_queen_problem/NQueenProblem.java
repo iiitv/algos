@@ -13,33 +13,41 @@ public class NQueenProblem {
         int i;
         int j;
         int boardLength = board[0].length;
-        for (i = 0; i < column; ++i)
-            if (board[row][i] == 1)
+        for (i = 0; i < column; ++i) {
+            if (board[row][i] == 1) {
                 return false;  // If there's another Queen present in the same row.
+            }
+        }
 
-        for (i = row, j = column; i >= 0 && j >= 0; --i, --j)
-            if (board[i][j] == 1)
+        for (i = row, j = column; i >= 0 && j >= 0; --i, --j) {
+            if (board[i][j] == 1) {
                 return false;  // If there's another Queen present in the upper diagonal.
+            }
+        }
 
-        for (i = row, j = column; j >= 0 && i < boardLength; ++i, --j)
-            if (board[i][j]==1)
+        for (i = row, j = column; j >= 0 && i < boardLength; ++i, --j) {
+            if (board[i][j]==1) {
                 return false;  // If there's another Queen present in the lower diagonal.
+            }
+        }
 
         return true;
     }
 
     private static boolean solveNQueen(int[][] board, int column) {
         int boardLength = board[0].length;
-        if (column >= boardLength)
+        if (column >= boardLength) {
             return true;
+        }
 
         for (int i = 0; i < boardLength; ++i) {
             if (isQueenSafe(board, i, column)) {
                 board[i][column] = 1;  // Place queen on (row, column) = (i, column).
-                if (solveNQueen(board, column + 1))  // Recurse for remaining board
+                if (solveNQueen(board, column + 1)) {  // Recurse for remaining board
                     return true;
-                else
+                } else {
                     board[i][column] = 0;
+                }
             }
         }
         return false;

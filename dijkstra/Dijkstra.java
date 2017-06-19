@@ -1,12 +1,12 @@
 /**
- Problem Statement: Implementation of Dijkstra Algorithm.
- Time Complexity: O(|V|^2)
- Space Complexity: O(|V|) for priority Queue.
+Problem Statement: Implementation of Dijkstra Algorithm.
+Time Complexity: O(|V|^2)
+Space Complexity: O(|V|) for priority Queue.
 
- Matrix representation is used here. Linked List representation would reduce time complexity to O(Elog(V)),
- if implemented using binary heaps.
+Matrix representation is used here. Linked List representation would reduce time complexity to O(Elog(V)),
+if implemented using binary heaps.
 
- */
+*/
 
 import java.util.Comparator;
 import java.util.HashSet;
@@ -17,7 +17,7 @@ public class Dijkstra {
 
     public int[][] graph;
     public Node[] nodes;
-    
+
     public static class Node {
         public Node parent;
         public int cost;
@@ -29,26 +29,27 @@ public class Dijkstra {
             this.id = id;
         }
     }
- 
+
     public Dijkstra() {
-        graph = new int[][]{{0, 4, 0, 0, 0, 0, 0, 8, 0},
-                {4, 0, 8, 0, 0, 0, 0, 11, 0},
-                {0, 8, 0, 7, 0, 4, 0, 0, 2},
-                {0, 0, 7, 0, 9, 14, 0, 0, 0},
-                {0, 0, 0, 9, 0, 10, 0, 0, 0},
-                {0, 0, 4, 14, 10, 0, 2, 0, 0},
-                {0, 0, 0, 0, 0, 2, 0, 1, 6},
-                {8, 11, 0, 0, 0, 0, 1, 0, 7},
-                {0, 0, 2, 0, 0, 0, 6, 7, 0}
-        };
+        graph = new int[][]{
+            {0, 4, 0, 0, 0, 0, 0, 8, 0},
+            {4, 0, 8, 0, 0, 0, 0, 11, 0},
+            {0, 8, 0, 7, 0, 4, 0, 0, 2},
+            {0, 0, 7, 0, 9, 14, 0, 0, 0},
+            {0, 0, 0, 9, 0, 10, 0, 0, 0},
+            {0, 0, 4, 14, 10, 0, 2, 0, 0},
+            {0, 0, 0, 0, 0, 2, 0, 1, 6},
+            {8, 11, 0, 0, 0, 0, 1, 0, 7},
+            {0, 0, 2, 0, 0, 0, 6, 7, 0}};
         nodes = new Node[graph.length];
     }
 
     public static void main(String[] args) {
 
         Dijkstra dijkstra = new Dijkstra();
-        for(int i = 0; i < dijkstra.nodes.length; i++)
+        for (int i = 0; i < dijkstra.nodes.length; i++) {
             dijkstra.nodes[i] = new Node(null, Integer.MAX_VALUE, i);
+        }
         int source = 0;
         int destination = 4;
         dijkstra.shortestPath(source, destination);
@@ -72,19 +73,19 @@ public class Dijkstra {
         });
         nodes[source].cost = 0;
         pQueue.add(nodes[source]);
-        while(!pQueue.isEmpty()) {
+        while (!pQueue.isEmpty()) {
             Node currVertex = pQueue.poll();
-            for(int i = 0; i < graph.length; i++) {
-                if(graph[currVertex.id][i]!=0 && !visited.contains(nodes[i]) ) {
-                    if(!pQueue.contains(nodes[i])) {
+            for (int i = 0; i < graph.length; i++) {
+                if (graph[currVertex.id][i]!=0 && !visited.contains(nodes[i]) ) {
+                    if (!pQueue.contains(nodes[i])) {
                         nodes[i].cost = currVertex.cost + graph[currVertex.id][i];
                         nodes[i].parent = currVertex;
                         pQueue.add(nodes[i]);
-                    }
-                    else {
+                    } else {
                         nodes[i].cost = Math.min(nodes[i].cost, currVertex.cost + graph[currVertex.id][i]);
-                        if(nodes[i].cost == currVertex.cost + graph[currVertex.id][i])
+                        if (nodes[i].cost == currVertex.cost + graph[currVertex.id][i]) {
                             nodes[i].parent = currVertex;
+                        }
                     }
                 }
             }
