@@ -20,9 +20,9 @@ function modularExponential (base, power, mod) {
 }
 
 function main () {
-	let base = 2;
-	let power = 10;
-	let mod = 100000;
+	let base = 3;
+	let power = 5;
+	let mod = 61;
 	let res = modularExponential(base, power, mod);
 	console.log('%d\n', res);
 }
