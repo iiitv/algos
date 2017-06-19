@@ -1,6 +1,7 @@
 /*
  * Worst case time complexity = O(n^2)
  * Best case complexity = O(nlog(n))
+ * @param {Array} data
  * returns sorted data
  */
 function shellSort (data) {
