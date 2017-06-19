@@ -8,11 +8,11 @@ function coinChangeProblem (coins, amount) {
     * :param amount: It is value which is to be obtained with coins.
     * :return: returns maximum number of ways amount can be arranged in.
 	*/
-	let possibilities =  new Array(amount+1);
+	let possibilities = new Array(amount+1);
 	possibilities.fill(0);
 	possibilities[0] = 1;
-	for (let i = 0; i < coins.length; i++){
-		for (let j = coins[i]; j <= amount; j++){
+	for (let i = 0; i < coins.length; i++) {
+		for (let j = coins[i]; j <= amount; j++) {
 			possibilities[j] += possibilities[j - coins[i]];
 		}
 	}
