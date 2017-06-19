@@ -1,8 +1,8 @@
 function exponentiationBySquaring (base, power) {
 	/*
-	Performs Exponential By Squaring.
-	:param base: Number that is going to be raised.
-	:param power: Power to which the number is raised.
+	Performs Exponentiation By Squaring.
+	:param base: Base of expression.
+	:param power: Power of expression.
 	:return: Returns (base ^ power).
 	*/
 	if (power < 0) { // When Power is Negative
