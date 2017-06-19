@@ -17,7 +17,7 @@ def coin_change_problem(coins, amount):
 
 
 def main():
-    coins = [1, 2, 5]
+    coins = [1, 2, 3]
     amount = 10
     print(coin_change_problem(coins, amount))
 
