@@ -13,7 +13,7 @@ function exponentiationBySquaring (base, power) {
 		return base;
 	} else if (power % 2 === 0) { // When Power is Even
 		return exponentiationBySquaring(base * base, power >> 1);
-	} else if (power & 1) { // When Power is Odd
+	} else { // When Power is Odd
 		return base * exponentiationBySquaring(base * base, (power - 1) >> 1);
 	}
 }
