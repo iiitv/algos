@@ -9,10 +9,8 @@ def largest_sum_contiguous_subarray(arr):
     max_next = 0
     for i in arr:
         max_next += i
-        if max_next > max_now:
-            max_now = max_next
-        if max_next < 0:
-            max_next = 0
+        max_now = max(max_next, max_now)
+        max_next = max(0, max_next)
     return max_now
 
 
