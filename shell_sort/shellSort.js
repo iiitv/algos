@@ -5,13 +5,14 @@
  * returns sorted data
  */
 function shellSort (data) {
+	let temp;
 	for (let i = Math.floor(data.length / 2); i > 0; i = Math.floor(i / 2)) {
 		for (let j = i; j < data.length; j++) {
 			for (let k = j - i; k >= 0; k -= i) {
 				if (data[k + i] >= data[k]) {
 					break;
 				} else {
-					var temp = data[k];
+					temp = data[k];
 					data[k] = data[k + i];
 					data[k + i] = temp;
 				}
