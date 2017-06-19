@@ -1,2 +1,2 @@
 happiness
-editorconfig-tools
+eclint
