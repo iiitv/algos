@@ -8,7 +8,7 @@ function binarySearchIterative (arr, item) {
 	let begin = 0;
 	let end = arr.length - 1;
 	while (begin <= end) {
-		let mid = (begin + end) / 2;
+		let mid = Math.floor((begin + end) / 2);
 		if (arr[mid] === item) {
 			return mid;
 		} else if (arr[mid] > item) {
@@ -30,7 +30,7 @@ function binarySearchRecursive (arr, item, begin, end) {
 	:return: returns index if element found else -1
 	*/
 	if (begin <= end) {
-		let mid = (begin + end) / 2;
+		let mid = Math.floor((begin + end) / 2);
 		if (arr[mid] === item) {
 			return mid;
 		} else if (arr[mid] > item) {
