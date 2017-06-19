@@ -1,5 +1,5 @@
 function primeFactor (n) {
-	/* 
+	/*
 	Finding all the prime factors of a given number
 	:param n: Number whose prime factors are going to be found
 	:returns: Array with prime numbers
@@ -9,7 +9,7 @@ function primeFactor (n) {
 		if (n % i === 0) {
 			primes.push(i);
 			while (n % i === 0) {
-				n = n / i;			
+				n = n / i;
 			}
 		}
 	}
