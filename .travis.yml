@@ -18,4 +18,4 @@ install:
 script:
   - ./.bin/test_running.sh
   - coala --ci
-  - if editorconfig-tools check **/* | grep " failed "; then false; else true; fi
+  - eclint check "**/*.{java,c,cpp,js}"

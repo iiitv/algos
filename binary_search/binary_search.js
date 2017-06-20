@@ -4,7 +4,7 @@ function binarySearchIterative (arr, item) {
 	:param arr: List of elements to search from
 	:param item: Element to search for
 	:return: returns index if element found else -1
-	*/
+	 */
 	let begin = 0;
 	let end = arr.length - 1;
 	while (begin <= end) {
@@ -28,7 +28,7 @@ function binarySearchRecursive (arr, item, begin, end) {
 	:param begin: Left limit of array
 	:param end: Right limit of array
 	:return: returns index if element found else -1
-	*/
+	 */
 	if (begin <= end) {
 		let mid = Math.floor((begin + end) / 2);
 		if (arr[mid] === item) {

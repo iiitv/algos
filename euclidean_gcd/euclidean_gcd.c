@@ -1,10 +1,10 @@
 #include<stdio.h>
 
 /*
-* first --> First number
-* second --> Second number
-* There are two implementations: Recursive (euclidean_gcd_recursive) and Non-Recursive (euclidean_gcd)
-*/
+ * first --> First number
+ * second --> Second number
+ * There are two implementations: Recursive (euclidean_gcd_recursive) and Non-Recursive (euclidean_gcd)
+ */
 
 int euclidean_gcd_recursive(int first, int second) {
 	if(second == 0) {

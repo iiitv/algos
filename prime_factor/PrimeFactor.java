@@ -22,4 +22,4 @@ public class PrimeFactor {
             System.out.println(i);
         }
     }
-} 
+}
