@@ -4,8 +4,8 @@ function sieveOfEratosthenes (n) {
 	* :param n: Number upto which to calculate primes
 	* :return: A boolean list contaning only primes
 	*/
-	let primes = new Array(n + 1);  // set all as true initially
-	primes.fill(true);
+	let primes = new Array(n + 1);  
+	primes.fill(true);  // set all as true initially
 	primes[0] = primes[1] = false;  // Handling case for 0 and 1
 	let sqrtn = Math.ceil(Math.sqrt(n));
 	for (let i = 2; i <= sqrtn; i++) {
