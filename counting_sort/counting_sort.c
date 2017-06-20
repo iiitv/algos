@@ -1,9 +1,9 @@
 /* Following algorithm sorts the input array in ascending order
-*  Time complexity is O(n+k)
-*  Auxiliary space is O(n+k)
-*  n is number of elements and k is the range of input
-*  max is the maximum element in array
-*/
+ *  Time complexity is O(n+k)
+ *  Auxiliary space is O(n+k)
+ *  n is number of elements and k is the range of input
+ *  max is the maximum element in array
+ */
 
 #include <stdio.h>
 #include <string.h>

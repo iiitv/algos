@@ -35,7 +35,7 @@ int main() {
 	int idx = prime_factors(no, primes);
 	printf("Prime Factors: ");  // printing of primes
 	for (int i = 0; i < idx; i++) {
-	   printf("%d ", primes[i]);
+		printf("%d ", primes[i]);
 	}
 	printf("\n");
 	return 0;
