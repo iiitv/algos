@@ -1,11 +1,9 @@
-/**
- Problem Statement: Implementation of Dijkstra Algorithm.
- Time Complexity: O(|V|^2)
- Space Complexity: O(|V|) for priority Queue.
-
- Matrix representation is used here. Linked List representation would reduce time complexity to O(Elog(V)),
- if implemented using binary heaps.
-
+/*
+ * Problem Statement: Implementation of Dijkstra Algorithm.
+ * Time Complexity: O(|V|^2)
+ * Space Complexity: O(|V|) for priority Queue.
+ * Matrix representation is used here. Linked List representation would reduce time complexity to O(Elog(V)),
+ * if implemented using binary heaps.
  */
 
 import java.util.Comparator;
@@ -17,7 +15,7 @@ public class Dijkstra {
 
     public int[][] graph;
     public Node[] nodes;
-    
+
     public static class Node {
         public Node parent;
         public int cost;
@@ -29,7 +27,7 @@ public class Dijkstra {
             this.id = id;
         }
     }
- 
+
     public Dijkstra() {
         graph = new int[][]{{0, 4, 0, 0, 0, 0, 0, 8, 0},
                 {4, 0, 8, 0, 0, 0, 0, 11, 0},
