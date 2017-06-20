@@ -7,7 +7,7 @@ import (
 // PrimeFactor finds all the prime factor of given number
 func PrimeFactor(n int) []int {
 	var primes []int
-	var sqrt = int(math.Sqrt(float64(n)))
+	sqrt := int(math.Sqrt(float64(n)))
 	for i := 2; i <= sqrt; i++ {
 		if n % i == 0 {
 			primes = append(primes, i)
@@ -23,7 +23,7 @@ func PrimeFactor(n int) []int {
 }
 
 func main () {
-	var n = 8
+	n := 8
 	fmt.Println("Prime Factors are :")
 	fmt.Println(PrimeFactor(n))
 }
