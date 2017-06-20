@@ -6,7 +6,7 @@ function sieveOfEratosthenes (n) {
 	*/
 	let primes = new Array(n + 1);  // set all as true initially
 	primes.fill(true);
-	primes[0] = primes[1] = false;  //Handling case for 0 and 1
+	primes[0] = primes[1] = false;  // Handling case for 0 and 1
 	let sqrtn = Math.ceil(Math.sqrt(n));
 	for (let i = 2; i <= sqrtn; i++) {
 		if (primes[i]) {
