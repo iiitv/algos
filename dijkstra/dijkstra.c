@@ -50,7 +50,7 @@ int dijkstra(const int graph[VERTICES][VERTICES], int souce, int destination) {
 int main() {
 	int source = 0;
 	int destination = 4;
-	int graph[VERTICES][VERTICES] = {
+	const int graph[VERTICES][VERTICES] = {
 		{0, 4, 0, 0, 0, 0, 0, 8},
 		{4, 0, 8, 0, 0, 0, 0, 11},
 		{0, 8, 0, 7, 0, 4, 0, 0},
