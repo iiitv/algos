@@ -10,7 +10,7 @@ public class ExponentiationBySquaring {
         if (power < 0) {	// Negative powers
             return exponentiationBySquaring(1.0 / base, -power);
         } else if (power == 0) {	// Base case 1
-        	return 1;
+            return 1;
         } else if (power == 1) {	// Base case 2
             return base;
         } else if (power % 2 == 0){	// Even powers
