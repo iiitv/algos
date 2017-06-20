@@ -16,7 +16,7 @@ def largest_sum_contiguous_subarray(arr):
 
 def main():
     arr = [-2, -3, 4, -1, -2, 1, 5, -3]
-    print('Maximum contiguous sum is ', largest_sum_contiguous_subarray(arr))
+    print('Maximum contiguous sum is', largest_sum_contiguous_subarray(arr))
 
 
 if __name__ == '__main__':
