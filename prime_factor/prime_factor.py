@@ -1,4 +1,6 @@
 import math
+
+
 def prime_factor(num):
     """
 
@@ -8,6 +10,7 @@ def prime_factor(num):
     :param start : checking number if it is a prime factor of number entered
     :param counter : checking the number of factors of start
     :param checker : checks if start is a prime number or not
+    :return : no returns
     """
     print ("Factors are:")
     start = 1
@@ -17,11 +20,11 @@ def prime_factor(num):
             checker = 1
             while checker <= math.sqrt(start):
                 if start % checker == 0:
-                    counter += counter
-                checker += checker
+                    counter += 1
+                checker += 1
             if counter == 2:
                 print (start)
-        start += start
+        start += 1
 
 
 def main():
