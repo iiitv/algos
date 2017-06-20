@@ -12,7 +12,7 @@ def prime_factor(num):
     :param checker : checks if start is a prime number or not
     :return : no returns
     """
-    print ("Factors are:")
+    print("Factors are:")
     start = 1
     while start <= num:
         counter = 0
@@ -23,7 +23,7 @@ def prime_factor(num):
                     counter += 1
                 checker += 1
             if counter == 2:
-                print (start)
+                print(start)
         start += 1
 
 
