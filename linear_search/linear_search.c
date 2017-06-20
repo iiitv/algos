@@ -1,10 +1,10 @@
 #include <stdio.h>
 /*
-*  Algorithm to find a given number in an array
-*  *arr : given array to search in
-*  search_element : Element to be searched
-*  size : size of array
-*/
+ *  Algorithm to find a given number in an array
+ *  *arr : given array to search in
+ *  search_element : Element to be searched
+ *  size : size of array
+ */
 int linear_search(const int *arr, int size, int search_element) {
 	int i;
 	for (i = 0; i < size; i++) {
