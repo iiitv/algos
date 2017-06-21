@@ -9,11 +9,11 @@ def prime_factor(num):
     :return : return a list of prime factors of number.
     """
     factor_list = []
-    sqrt_num = math.floor(math.sqrt(num)) + 1
+    sqrt_num = int(math.sqrt(num)) + 1
     for start in range(2, sqrt_num):
         if num % start == 0:
             factor_list.append(start)
-            while (num % start == 0):
+            while (num % start == 0)
                 num /= start
     return factor_list
 
