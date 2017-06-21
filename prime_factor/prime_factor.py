@@ -3,9 +3,9 @@ import math
 
 def prime_factor(num):
     """
-    Number whose prime factors we want to find
+    Finds the prime factors of a number
 
-    :param num : number whose prime factors we want to find  
+    :param num : number whose prime factors we want to find
     :return : return a list of prime factors of number
     """
     factor_list = []
