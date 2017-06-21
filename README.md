@@ -49,6 +49,7 @@ Community (college) maintained list of Algorithms and Data Structures implementa
 | [AVL Tree](http://www.geeksforgeeks.org/avl-tree-set-1-insertion)| | |[:white_check_mark:](avl_tree/AvlTree.java) | | | |
 | [Binary Search Tree](https://en.wikipedia.org/wiki/Binary_search_tree) | | | [:white_check_mark:](binary_search_tree/BinarySearchTree.java) | | | |
 | [Linked List](https://en.wikipedia.org/wiki/Linked_list) | | | [:white_check_mark:](linked_list/LinkedList.java) | | [:white_check_mark:](linked_list/linked_list.go) | |
+| [Red-Black Tree] (https://en.wikipedia.org/wiki/Red%E2%80%93black_tree) | | | | [:white_check_mark:](red_black_tree/rb_tree.py) | | |
 | [Stack](https://en.wikipedia.org/wiki/Stack_(abstract_data_type)) | [:white_check_mark:](stack/stack.c) | | [:white_check_mark:](stack/Stack.java) | [:white_check_mark:](stack/stack.py) | [:white_check_mark:](stack/stack.go) | [:white_check_mark:](stack/stack.js) |
 
 

@@ -2,7 +2,7 @@ import unittest
 import random
 from datetime import datetime
 
-from rb_tree import RedBlackTree, Node, BLACK, RED, NIL
+from rb_tree import RedBlackTree, Node, BLACK, RED
 NIL_LEAF = RedBlackTree.NIL_LEAF
 
 
@@ -67,25 +67,30 @@ class RbTreeTests(unittest.TestCase):
         tree = RedBlackTree()
         root = Node(value=10, color=BLACK, parent=None)
         # LEFT SUBTREE
-        node_m10 = Node(value=-10, color=RED, parent=root) #OK
-        node_6 = Node(value=6, color=BLACK, parent=node_m10) #OK
-        node_8 = Node(value=8, color=RED, parent=node_6, left=NIL_LEAF, right=NIL_LEAF) #OK
-        node_2 = Node(value=2, color=RED, parent=node_6, left=NIL_LEAF, right=NIL_LEAF) #OK
-        node_6.left = node_2 #OK
-        node_6.right = node_8 #OK
-        node_m20 = Node(value=-20, color=BLACK, parent=node_m10, left=NIL_LEAF, right=NIL_LEAF) #OK
-        node_m10.left = node_m20 #OK
-        node_m10.right = node_6 #OK
+        node_m10 = Node(value=-10, color=RED, parent=root)  # OK
+        node_6 = Node(value=6, color=BLACK, parent=node_m10)  # OK
+        node_8 = Node(value=8, color=RED, parent=node_6,
+                      left=NIL_LEAF, right=NIL_LEAF)  # OK
+        node_2 = Node(value=2, color=RED, parent=node_6,
+                      left=NIL_LEAF, right=NIL_LEAF)  # OK
+        node_6.left = node_2  # OK
+        node_6.right = node_8  # OK
+        node_m20 = Node(value=-20, color=BLACK, parent=node_m10,
+                        left=NIL_LEAF, right=NIL_LEAF)  # OK
+        node_m10.left = node_m20  # OK
+        node_m10.right = node_6  # OK
 
         # RIGHT SUBTREE
-        node_20 = Node(value=20, color=RED, parent=root) #OK
-        node_15 = Node(value=15, color=BLACK, parent=node_20, left=NIL_LEAF, right=NIL_LEAF) #OK
-        node_25 = Node(25, color=BLACK, parent=node_20, left=NIL_LEAF, right=NIL_LEAF) #OK
-        node_20.left = node_15 #OK
-        node_20.right = node_25 #OK
+        node_20 = Node(value=20, color=RED, parent=root)  # OK
+        node_15 = Node(value=15, color=BLACK, parent=node_20,
+                       left=NIL_LEAF, right=NIL_LEAF)  # OK
+        node_25 = Node(25, color=BLACK, parent=node_20,
+                       left=NIL_LEAF, right=NIL_LEAF)  # OK
+        node_20.left = node_15  # OK
+        node_20.right = node_25  # OK
 
-        root.left = node_m10 #OK
-        root.right = node_20 #OK
+        root.left = node_m10  # OK
+        root.right = node_20  # OK
 
         tree.root = root
         tree.add(4)
@@ -121,22 +126,31 @@ class RbTreeTests(unittest.TestCase):
 
     def test_recoloring_two(self):
         rb_tree = RedBlackTree()
-        root = Node(value=10, color=BLACK, parent=None, left=NIL_LEAF, right=NIL_LEAF)
+        root = Node(value=10, color=BLACK, parent=None,
+                    left=NIL_LEAF, right=NIL_LEAF)
         # left subtree
-        node_m10 = Node(value=-10, color=RED, parent=root, left=NIL_LEAF, right=NIL_LEAF)
-        node_m20 = Node(value=-20, color=BLACK, parent=node_m10, left=NIL_LEAF, right=NIL_LEAF)
-        node_6 = Node(value=6, color=BLACK, parent=node_m10, left=NIL_LEAF, right=NIL_LEAF)
+        node_m10 = Node(value=-10, color=RED, parent=root,
+                        left=NIL_LEAF, right=NIL_LEAF)
+        node_m20 = Node(value=-20, color=BLACK, parent=node_m10,
+                        left=NIL_LEAF, right=NIL_LEAF)
+        node_6 = Node(value=6, color=BLACK, parent=node_m10,
+                      left=NIL_LEAF, right=NIL_LEAF)
         node_m10.left = node_m20
         node_m10.right = node_6
 
         # right subtree
-        node_20 = Node(value=20, color=RED, parent=root, left=NIL_LEAF, right=NIL_LEAF)
-        node_15 = Node(value=15, color=BLACK, parent=node_20, left=NIL_LEAF, right=NIL_LEAF)
-        node_25 = Node(value=25, color=BLACK, parent=node_20, left=NIL_LEAF, right=NIL_LEAF)
+        node_20 = Node(value=20, color=RED, parent=root,
+                       left=NIL_LEAF, right=NIL_LEAF)
+        node_15 = Node(value=15, color=BLACK, parent=node_20,
+                       left=NIL_LEAF, right=NIL_LEAF)
+        node_25 = Node(value=25, color=BLACK, parent=node_20,
+                       left=NIL_LEAF, right=NIL_LEAF)
         node_20.left = node_15
         node_20.right = node_25
-        node_12 = Node(value=12, color=RED, parent=node_15, left=NIL_LEAF, right=NIL_LEAF)
-        node_17 = Node(value=17, color=RED, parent=node_15, left=NIL_LEAF, right=NIL_LEAF)
+        node_12 = Node(value=12, color=RED, parent=node_15,
+                       left=NIL_LEAF, right=NIL_LEAF)
+        node_17 = Node(value=17, color=RED, parent=node_15,
+                       left=NIL_LEAF, right=NIL_LEAF)
         node_15.left = node_12
         node_15.right = node_17
 
@@ -144,7 +158,6 @@ class RbTreeTests(unittest.TestCase):
         root.right = node_20
         rb_tree.root = root
         rb_tree.add(19)
-
 
         """
 
@@ -186,13 +199,17 @@ class RbTreeTests(unittest.TestCase):
         root = Node(value=10, color=BLACK, parent=None)
 
         # LEFT SUBTREE
-        node_m10 = Node(value=-10, color=BLACK, parent=root, left=NIL_LEAF, right=NIL_LEAF)
-        node_7 = Node(value=7, color=RED, parent=node_m10, left=NIL_LEAF, right=NIL_LEAF)
+        node_m10 = Node(value=-10, color=BLACK, parent=root,
+                        left=NIL_LEAF, right=NIL_LEAF)
+        node_7 = Node(value=7, color=RED, parent=node_m10,
+                      left=NIL_LEAF, right=NIL_LEAF)
         node_m10.right = node_7
 
         # RIGHT SUBTREE
-        node_20 = Node(value=20, color=BLACK, parent=root, left=NIL_LEAF, right=NIL_LEAF)
-        node_15 = Node(value=15, color=RED, parent=node_20, left=NIL_LEAF, right=NIL_LEAF)
+        node_20 = Node(value=20, color=BLACK, parent=root,
+                       left=NIL_LEAF, right=NIL_LEAF)
+        node_15 = Node(value=15, color=RED, parent=node_20,
+                       left=NIL_LEAF, right=NIL_LEAF)
         node_20.left = node_15
 
         root.left = node_m10
@@ -214,7 +231,8 @@ class RbTreeTests(unittest.TestCase):
         node_20 = node_15.right
         node_13 = node_15.left
 
-        self.assertEqual(node_15.color, BLACK)  # this should be the parent of both now
+        # this should be the parent of both now
+        self.assertEqual(node_15.color, BLACK)
         self.assertEqual(node_15.parent.value, 10)
 
         self.assertEqual(node_20.value, 20)
@@ -231,14 +249,18 @@ class RbTreeTests(unittest.TestCase):
 
     def test_left_rotation_no_sibling(self):
         rb_tree = RedBlackTree()
-        root = Node(value=10, color=BLACK, parent=None, left=NIL_LEAF, right=NIL_LEAF)
+        root = Node(value=10, color=BLACK, parent=None,
+                    left=NIL_LEAF, right=NIL_LEAF)
         # LEFT SUBTREE
-        node_7 = Node(value=7, color=BLACK, parent=root, left=NIL_LEAF, right=NIL_LEAF)
-        node_8 = Node(value=8, color=RED, parent=node_7, left=NIL_LEAF, right=NIL_LEAF)
+        node_7 = Node(value=7, color=BLACK, parent=root,
+                      left=NIL_LEAF, right=NIL_LEAF)
+        node_8 = Node(value=8, color=RED, parent=node_7,
+                      left=NIL_LEAF, right=NIL_LEAF)
         node_7.right = node_8
 
         # RIGHT SUBTREE
-        rightest = Node(value=20, color=BLACK, parent=root, left=NIL_LEAF, right=NIL_LEAF)
+        rightest = Node(value=20, color=BLACK, parent=root,
+                        left=NIL_LEAF, right=NIL_LEAF)
         root.left = node_7
         root.right = rightest
 
@@ -277,14 +299,19 @@ class RbTreeTests(unittest.TestCase):
 
     def test_right_rotation_no_sibling_left_subtree(self):
         rb_tree = RedBlackTree()
-        root = Node(value=10, color=BLACK, parent=None, left=NIL_LEAF, right=NIL_LEAF)
+        root = Node(value=10, color=BLACK, parent=None,
+                    left=NIL_LEAF, right=NIL_LEAF)
         # LEFT SUBTREE
-        node_m10 = Node(value=-10, color=BLACK, parent=root, left=NIL_LEAF, right=NIL_LEAF)
-        node_m11 = Node(value=-11, color=RED, parent=node_m10, left=NIL_LEAF, right=NIL_LEAF)
+        node_m10 = Node(value=-10, color=BLACK, parent=root,
+                        left=NIL_LEAF, right=NIL_LEAF)
+        node_m11 = Node(value=-11, color=RED, parent=node_m10,
+                        left=NIL_LEAF, right=NIL_LEAF)
         node_m10.left = node_m11
         # RIGHT SUBTREE
-        node_20 = Node(value=20, color=BLACK, parent=root, left=NIL_LEAF, right=NIL_LEAF)
-        node_15 = Node(value=15, color=RED, parent=node_20, left=NIL_LEAF, right=NIL_LEAF)
+        node_20 = Node(value=20, color=BLACK, parent=root,
+                       left=NIL_LEAF, right=NIL_LEAF)
+        node_15 = Node(value=15, color=RED, parent=node_20,
+                       left=NIL_LEAF, right=NIL_LEAF)
         node_20.left = node_15
 
         root.left = node_m10
@@ -330,19 +357,24 @@ class RbTreeTests(unittest.TestCase):
 
     def test_left_right_rotation_no_sibling(self):
         rb_tree = RedBlackTree()
-        root = Node(value=10, color=BLACK, parent=None, left=NIL_LEAF, right=NIL_LEAF)
+        root = Node(value=10, color=BLACK, parent=None,
+                    left=NIL_LEAF, right=NIL_LEAF)
         # LEFT PART
-        node_m10 = Node(value=-10, color=BLACK, parent=root, left=NIL_LEAF, right=NIL_LEAF)
-        node_7 = Node(value=7, color=RED, parent=node_m10, left=NIL_LEAF, right=NIL_LEAF)
+        node_m10 = Node(value=-10, color=BLACK, parent=root,
+                        left=NIL_LEAF, right=NIL_LEAF)
+        node_7 = Node(value=7, color=RED, parent=node_m10,
+                      left=NIL_LEAF, right=NIL_LEAF)
         node_m10.right = node_7
 
         # RIGHT PART
-        node_20 = Node(value=20, color=BLACK, parent=root, left=NIL_LEAF, right=NIL_LEAF)
-        node_15 = Node(value=15, color=RED, parent=node_20, left=NIL_LEAF, right=NIL_LEAF)
+        node_20 = Node(value=20, color=BLACK, parent=root,
+                       left=NIL_LEAF, right=NIL_LEAF)
+        node_15 = Node(value=15, color=RED, parent=node_20,
+                       left=NIL_LEAF, right=NIL_LEAF)
         node_20.left = node_15
 
-        root.left=node_m10
-        root.right=node_20
+        root.left = node_m10
+        root.right = node_20
 
         rb_tree.root = root
         rb_tree.add(17)
@@ -389,15 +421,20 @@ class RbTreeTests(unittest.TestCase):
 
     def test_right_left_rotation_no_sibling(self):
         rb_tree = RedBlackTree()
-        root = Node(value=10, color=BLACK, parent=None, left=NIL_LEAF, right=NIL_LEAF)
+        root = Node(value=10, color=BLACK, parent=None,
+                    left=NIL_LEAF, right=NIL_LEAF)
         # LEFT PART
-        nodem10 = Node(value=-10, color=BLACK, parent=root, left=NIL_LEAF, right=NIL_LEAF)
-        node_7 = Node(value=7, color=RED, parent=nodem10, left=NIL_LEAF, right=NIL_LEAF)
+        nodem10 = Node(value=-10, color=BLACK, parent=root,
+                       left=NIL_LEAF, right=NIL_LEAF)
+        node_7 = Node(value=7, color=RED, parent=nodem10,
+                      left=NIL_LEAF, right=NIL_LEAF)
         nodem10.right = node_7
 
         # RIGHT PART
-        node_20 = Node(value=20, color=BLACK, parent=root, left=NIL_LEAF, right=NIL_LEAF)
-        node_15 = Node(value=15, color=RED, parent=node_20, left=NIL_LEAF, right=NIL_LEAF)
+        node_20 = Node(value=20, color=BLACK, parent=root,
+                       left=NIL_LEAF, right=NIL_LEAF)
+        node_15 = Node(value=15, color=RED, parent=node_20,
+                       left=NIL_LEAF, right=NIL_LEAF)
         node_20.left = node_15
 
         root.left = nodem10
@@ -447,21 +484,29 @@ class RbTreeTests(unittest.TestCase):
         rb_tree = RedBlackTree()
         root = Node(value=10, color=BLACK, parent=None)
         # RIGHT SUBTREE
-        node_m10 = Node(value=-10, color=RED, parent=root, left=NIL_LEAF, right=NIL_LEAF)
-        node_m20 = Node(value=-20, color=BLACK, parent=node_m10, left=NIL_LEAF, right=NIL_LEAF)
+        node_m10 = Node(value=-10, color=RED, parent=root,
+                        left=NIL_LEAF, right=NIL_LEAF)
+        node_m20 = Node(value=-20, color=BLACK, parent=node_m10,
+                        left=NIL_LEAF, right=NIL_LEAF)
         node_m10.left = node_m20
-        node_6 = Node(value=6, color=BLACK, parent=node_m10, left=NIL_LEAF, right=NIL_LEAF)
+        node_6 = Node(value=6, color=BLACK, parent=node_m10,
+                      left=NIL_LEAF, right=NIL_LEAF)
         node_m10.right = node_6
-        node_1 = Node(value=1, color=RED, parent=node_6, left=NIL_LEAF, right=NIL_LEAF)
+        node_1 = Node(value=1, color=RED, parent=node_6,
+                      left=NIL_LEAF, right=NIL_LEAF)
         node_6.left = node_1
-        node_9 = Node(value=9, color=RED, parent=node_6, left=NIL_LEAF, right=NIL_LEAF)
+        node_9 = Node(value=9, color=RED, parent=node_6,
+                      left=NIL_LEAF, right=NIL_LEAF)
         node_6.right = node_9
 
         # LEFT SUBTREE
-        node_20 = Node(value=20, color=BLACK, parent=root, left=NIL_LEAF, right=NIL_LEAF)
-        node_15 = Node(value=15, color=RED, parent=node_20, left=NIL_LEAF, right=NIL_LEAF)
+        node_20 = Node(value=20, color=BLACK, parent=root,
+                       left=NIL_LEAF, right=NIL_LEAF)
+        node_15 = Node(value=15, color=RED, parent=node_20,
+                       left=NIL_LEAF, right=NIL_LEAF)
         node_20.left = node_15
-        node_30 = Node(value=30, color=RED, parent=node_20, left=NIL_LEAF, right=NIL_LEAF)
+        node_30 = Node(value=30, color=RED, parent=node_20,
+                       left=NIL_LEAF, right=NIL_LEAF)
         node_20.right = node_30
 
         root.left = node_m10
@@ -743,21 +788,28 @@ class RbTreeTests(unittest.TestCase):
 
     def test_right_left_rotation_after_recolor(self):
         rb_tree = RedBlackTree()
-        root = Node(value=10, color=BLACK, parent=None, left=NIL_LEAF, right=NIL_LEAF)
+        root = Node(value=10, color=BLACK, parent=None,
+                    left=NIL_LEAF, right=NIL_LEAF)
         node_10 = root
 
         # left subtree
-        node_5 = Node(value=5, color=BLACK, parent=root, left=NIL_LEAF, right=NIL_LEAF)
+        node_5 = Node(value=5, color=BLACK, parent=root,
+                      left=NIL_LEAF, right=NIL_LEAF)
 
         # right subtree
-        node_20 = Node(value=20, color=RED, parent=root, left=NIL_LEAF, right=NIL_LEAF)
-        node_15 = Node(value=15, color=BLACK, parent=node_20, left=NIL_LEAF, right=NIL_LEAF)
-        node_25 = Node(value=25, color=BLACK, parent=node_20, left=NIL_LEAF, right=NIL_LEAF)
+        node_20 = Node(value=20, color=RED, parent=root,
+                       left=NIL_LEAF, right=NIL_LEAF)
+        node_15 = Node(value=15, color=BLACK, parent=node_20,
+                       left=NIL_LEAF, right=NIL_LEAF)
+        node_25 = Node(value=25, color=BLACK, parent=node_20,
+                       left=NIL_LEAF, right=NIL_LEAF)
         node_20.left = node_15
         node_20.right = node_25
 
-        node_12 = Node(value=12, color=RED, parent=node_15, left=NIL_LEAF, right=NIL_LEAF)
-        node_17 = Node(value=17, color=RED, parent=node_15, left=NIL_LEAF, right=NIL_LEAF)
+        node_12 = Node(value=12, color=RED, parent=node_15,
+                       left=NIL_LEAF, right=NIL_LEAF)
+        node_17 = Node(value=17, color=RED, parent=node_15,
+                       left=NIL_LEAF, right=NIL_LEAF)
         node_15.left = node_12
         node_15.right = node_17
 
@@ -826,22 +878,31 @@ class RbTreeTests(unittest.TestCase):
 
     def test_right_rotation_after_recolor(self):
         rb_tree = RedBlackTree()
-        root = Node(value=10, color=BLACK, parent=None, left=NIL_LEAF, right=NIL_LEAF)
+        root = Node(value=10, color=BLACK, parent=None,
+                    left=NIL_LEAF, right=NIL_LEAF)
         node_10 = root
         # left subtree
-        node_m10 = Node(value=-10, color=RED, parent=root, left=NIL_LEAF, right=NIL_LEAF)
-        node_6 = Node(value=6, color=BLACK, parent=node_m10, left=NIL_LEAF, right=NIL_LEAF)
-        node_m20 = Node(value=-20, color=BLACK, parent=node_m10, left=NIL_LEAF, right=NIL_LEAF)
+        node_m10 = Node(value=-10, color=RED, parent=root,
+                        left=NIL_LEAF, right=NIL_LEAF)
+        node_6 = Node(value=6, color=BLACK, parent=node_m10,
+                      left=NIL_LEAF, right=NIL_LEAF)
+        node_m20 = Node(value=-20, color=BLACK, parent=node_m10,
+                        left=NIL_LEAF, right=NIL_LEAF)
         node_m10.left = node_m20
         node_m10.right = node_6
-        node_m21 = Node(value=-21, color=RED, parent=node_m20, left=NIL_LEAF, right=NIL_LEAF)
-        node_m19 = Node(value=-19, color=RED, parent=node_m20, left=NIL_LEAF, right=NIL_LEAF)
+        node_m21 = Node(value=-21, color=RED, parent=node_m20,
+                        left=NIL_LEAF, right=NIL_LEAF)
+        node_m19 = Node(value=-19, color=RED, parent=node_m20,
+                        left=NIL_LEAF, right=NIL_LEAF)
         node_m20.left = node_m21
         node_m20.right = node_m19
         # right subtree
-        node_20 = Node(value=20, color=BLACK, parent=root, left=NIL_LEAF, right=NIL_LEAF)
-        node_15 = Node(value=15, color=RED, parent=node_20, left=NIL_LEAF, right=NIL_LEAF)
-        node_25 = Node(value=25, color=RED, parent=node_20, left=NIL_LEAF, right=NIL_LEAF)
+        node_20 = Node(value=20, color=BLACK, parent=root,
+                       left=NIL_LEAF, right=NIL_LEAF)
+        node_15 = Node(value=15, color=RED, parent=node_20,
+                       left=NIL_LEAF, right=NIL_LEAF)
+        node_25 = Node(value=25, color=RED, parent=node_20,
+                       left=NIL_LEAF, right=NIL_LEAF)
         node_20.left = node_15
         node_20.right = node_25
 
@@ -912,9 +973,12 @@ class RbTreeTests(unittest.TestCase):
 
     def test_deletion_root(self):
         rb_tree = RedBlackTree()
-        root = Node(value=5, color=BLACK, parent=None, left=NIL_LEAF, right=NIL_LEAF)
-        left_child = Node(value=3, color=RED, parent=root, left=NIL_LEAF, right=NIL_LEAF)
-        right_child = Node(value=8, color=RED, parent=root, left=NIL_LEAF, right=NIL_LEAF)
+        root = Node(value=5, color=BLACK, parent=None,
+                    left=NIL_LEAF, right=NIL_LEAF)
+        left_child = Node(value=3, color=RED, parent=root,
+                          left=NIL_LEAF, right=NIL_LEAF)
+        right_child = Node(value=8, color=RED, parent=root,
+                           left=NIL_LEAF, right=NIL_LEAF)
         root.left = left_child
         root.right = right_child
         """
@@ -943,8 +1007,10 @@ class RbTreeTests(unittest.TestCase):
 
     def test_deletion_root_2_nodes(self):
         rb_tree = RedBlackTree()
-        root = Node(value=5, color=BLACK, parent=None, left=NIL_LEAF, right=NIL_LEAF)
-        right_child = Node(value=8, color=RED, parent=root, left=NIL_LEAF, right=NIL_LEAF)
+        root = Node(value=5, color=BLACK, parent=None,
+                    left=NIL_LEAF, right=NIL_LEAF)
+        right_child = Node(value=8, color=RED, parent=root,
+                           left=NIL_LEAF, right=NIL_LEAF)
         root.right = right_child
         rb_tree.root = root
         rb_tree.remove(5)
@@ -966,9 +1032,12 @@ class RbTreeTests(unittest.TestCase):
 
     def test_delete_single_child(self):
         rb_tree = RedBlackTree()
-        root = Node(value=5, color=BLACK, parent=None, left=NIL_LEAF, right=NIL_LEAF)
-        left_child = Node(value=1, color=RED, parent=root, left=NIL_LEAF, right=NIL_LEAF)
-        right_child = Node(value=6, color=RED, parent=root, left=NIL_LEAF, right=NIL_LEAF)
+        root = Node(value=5, color=BLACK, parent=None,
+                    left=NIL_LEAF, right=NIL_LEAF)
+        left_child = Node(value=1, color=RED, parent=root,
+                          left=NIL_LEAF, right=NIL_LEAF)
+        right_child = Node(value=6, color=RED, parent=root,
+                           left=NIL_LEAF, right=NIL_LEAF)
         root.left = left_child
         root.right = right_child
         rb_tree.root = root
@@ -993,27 +1062,38 @@ class RbTreeTests(unittest.TestCase):
 
     def test_delete_single_deep_child(self):
         rb_tree = RedBlackTree()
-        root = Node(value=20, color=BLACK, parent=None, left=NIL_LEAF, right=NIL_LEAF)
+        root = Node(value=20, color=BLACK, parent=None,
+                    left=NIL_LEAF, right=NIL_LEAF)
         # left subtree
-        node_10 = Node(value=10, color=BLACK, parent=None, left=NIL_LEAF, right=NIL_LEAF)
-        node_5 = Node(value=5, color=RED, parent=node_10, left=NIL_LEAF, right=NIL_LEAF)
-        node_15 = Node(value=15, color=RED, parent=node_10, left=NIL_LEAF, right=NIL_LEAF)
+        node_10 = Node(value=10, color=BLACK, parent=None,
+                       left=NIL_LEAF, right=NIL_LEAF)
+        node_5 = Node(value=5, color=RED, parent=node_10,
+                      left=NIL_LEAF, right=NIL_LEAF)
+        node_15 = Node(value=15, color=RED, parent=node_10,
+                       left=NIL_LEAF, right=NIL_LEAF)
         node_10.left = node_5
         node_10.right = node_15
         # right subtree
-        node_38 = Node(value=38, color=RED, parent=root, left=NIL_LEAF, right=NIL_LEAF)
-        node_28 = Node(value=28, color=BLACK, parent=node_38, left=NIL_LEAF, right=NIL_LEAF)
-        node_48 = Node(value=48, color=BLACK, parent=node_38, left=NIL_LEAF, right=NIL_LEAF)
+        node_38 = Node(value=38, color=RED, parent=root,
+                       left=NIL_LEAF, right=NIL_LEAF)
+        node_28 = Node(value=28, color=BLACK, parent=node_38,
+                       left=NIL_LEAF, right=NIL_LEAF)
+        node_48 = Node(value=48, color=BLACK, parent=node_38,
+                       left=NIL_LEAF, right=NIL_LEAF)
         node_38.left = node_28
         node_38.right = node_48
         # node_28 subtree
-        node_23 = Node(value=23, color=RED, parent=node_28, left=NIL_LEAF, right=NIL_LEAF)
-        node_29 = Node(value=29, color=RED, parent=node_28, left=NIL_LEAF, right=NIL_LEAF)
+        node_23 = Node(value=23, color=RED, parent=node_28,
+                       left=NIL_LEAF, right=NIL_LEAF)
+        node_29 = Node(value=29, color=RED, parent=node_28,
+                       left=NIL_LEAF, right=NIL_LEAF)
         node_28.left = node_23
         node_28.right = node_29
         # node 48 subtree
-        node_41 = Node(value=41, color=RED, parent=node_48, left=NIL_LEAF, right=NIL_LEAF)
-        node_49 = Node(value=49, color=RED, parent=node_48, left=NIL_LEAF, right=NIL_LEAF)
+        node_41 = Node(value=41, color=RED, parent=node_48,
+                       left=NIL_LEAF, right=NIL_LEAF)
+        node_49 = Node(value=49, color=RED, parent=node_48,
+                       left=NIL_LEAF, right=NIL_LEAF)
         node_48.left = node_41
         node_48.right = node_49
 
@@ -1044,21 +1124,29 @@ class RbTreeTests(unittest.TestCase):
         This must be the easiest deletion yet!
         """
         rb_tree = RedBlackTree()
-        root = Node(value=10, color=BLACK, parent=None, left=NIL_LEAF, right=NIL_LEAF)
+        root = Node(value=10, color=BLACK, parent=None,
+                    left=NIL_LEAF, right=NIL_LEAF)
         # Left subtree
-        node_5 = Node(value=5, color=RED, parent=root, left=NIL_LEAF, right=NIL_LEAF)
-        node_m5 = Node(value=-5, color=BLACK, parent=root, left=NIL_LEAF, right=NIL_LEAF)
-        node_7 = Node(value=7, color=BLACK, parent=node_5, left=NIL_LEAF, right=NIL_LEAF)
+        node_5 = Node(value=5, color=RED, parent=root,
+                      left=NIL_LEAF, right=NIL_LEAF)
+        node_m5 = Node(value=-5, color=BLACK, parent=root,
+                       left=NIL_LEAF, right=NIL_LEAF)
+        node_7 = Node(value=7, color=BLACK, parent=node_5,
+                      left=NIL_LEAF, right=NIL_LEAF)
         node_5.left = node_m5
         node_5.right = node_7
 
         # right subtree
-        node_35 = Node(value=35, color=RED, parent=root, left=NIL_LEAF, right=NIL_LEAF)
-        node_20 = Node(value=20, color=BLACK, parent=node_35, left=NIL_LEAF, right=NIL_LEAF)
-        node_38 = Node(value=38, color=BLACK, parent=node_35, left=NIL_LEAF, right=NIL_LEAF)
+        node_35 = Node(value=35, color=RED, parent=root,
+                       left=NIL_LEAF, right=NIL_LEAF)
+        node_20 = Node(value=20, color=BLACK, parent=node_35,
+                       left=NIL_LEAF, right=NIL_LEAF)
+        node_38 = Node(value=38, color=BLACK, parent=node_35,
+                       left=NIL_LEAF, right=NIL_LEAF)
         node_35.left = node_20
         node_35.right = node_38
-        node_36 = Node(value=36, color=RED, parent=node_38, left=NIL_LEAF, right=NIL_LEAF)
+        node_36 = Node(value=36, color=RED, parent=node_38,
+                       left=NIL_LEAF, right=NIL_LEAF)
         node_38.left = node_36
 
         root.left = node_5
@@ -1102,23 +1190,32 @@ class RbTreeTests(unittest.TestCase):
         This must be the easiest deletion yet!
         """
         rb_tree = RedBlackTree()
-        root = Node(value=10, color=BLACK, parent=None, left=NIL_LEAF, right=NIL_LEAF)
+        root = Node(value=10, color=BLACK, parent=None,
+                    left=NIL_LEAF, right=NIL_LEAF)
         # Left subtree
-        node_5 = Node(value=5, color=RED, parent=root, left=NIL_LEAF, right=NIL_LEAF)
-        node_m5 = Node(value=-5, color=BLACK, parent=root, left=NIL_LEAF, right=NIL_LEAF)
-        node_7 = Node(value=7, color=BLACK, parent=node_5, left=NIL_LEAF, right=NIL_LEAF)
+        node_5 = Node(value=5, color=RED, parent=root,
+                      left=NIL_LEAF, right=NIL_LEAF)
+        node_m5 = Node(value=-5, color=BLACK, parent=root,
+                       left=NIL_LEAF, right=NIL_LEAF)
+        node_7 = Node(value=7, color=BLACK, parent=node_5,
+                      left=NIL_LEAF, right=NIL_LEAF)
         node_5.left = node_m5
         node_5.right = node_7
-        node_6 = Node(value=6, color=RED, parent=node_7, left=NIL_LEAF, right=NIL_LEAF)
+        node_6 = Node(value=6, color=RED, parent=node_7,
+                      left=NIL_LEAF, right=NIL_LEAF)
         node_7.left = node_6
 
         # right subtree
-        node_35 = Node(value=35, color=RED, parent=root, left=NIL_LEAF, right=NIL_LEAF)
-        node_20 = Node(value=20, color=BLACK, parent=node_35, left=NIL_LEAF, right=NIL_LEAF)
-        node_38 = Node(value=38, color=BLACK, parent=node_35, left=NIL_LEAF, right=NIL_LEAF)
+        node_35 = Node(value=35, color=RED, parent=root,
+                       left=NIL_LEAF, right=NIL_LEAF)
+        node_20 = Node(value=20, color=BLACK, parent=node_35,
+                       left=NIL_LEAF, right=NIL_LEAF)
+        node_38 = Node(value=38, color=BLACK, parent=node_35,
+                       left=NIL_LEAF, right=NIL_LEAF)
         node_35.left = node_20
         node_35.right = node_38
-        node_36 = Node(value=36, color=RED, parent=node_38, left=NIL_LEAF, right=NIL_LEAF)
+        node_36 = Node(value=36, color=RED, parent=node_38,
+                       left=NIL_LEAF, right=NIL_LEAF)
         node_38.left = node_36
 
         root.left = node_5
@@ -1163,25 +1260,35 @@ class RbTreeTests(unittest.TestCase):
     def test_deletion_black_node_black_successor_right_red_child(self):
         """ fuck it i don't even know anymore """
         rb_tree = RedBlackTree()
-        root = Node(value=10, color=BLACK, parent=None, left=NIL_LEAF, right=NIL_LEAF)
+        root = Node(value=10, color=BLACK, parent=None,
+                    left=NIL_LEAF, right=NIL_LEAF)
         # left subtree
-        node_5 = Node(value=5, color=BLACK, parent=root, left=NIL_LEAF, right=NIL_LEAF)
-        node_m5 = Node(value=-5, color=BLACK, parent=node_5, left=NIL_LEAF, right=NIL_LEAF)
-        node_7 = Node(value=7, color=BLACK, parent=node_5, left=NIL_LEAF, right=NIL_LEAF)
+        node_5 = Node(value=5, color=BLACK, parent=root,
+                      left=NIL_LEAF, right=NIL_LEAF)
+        node_m5 = Node(value=-5, color=BLACK, parent=node_5,
+                       left=NIL_LEAF, right=NIL_LEAF)
+        node_7 = Node(value=7, color=BLACK, parent=node_5,
+                      left=NIL_LEAF, right=NIL_LEAF)
         node_5.left = node_m5
         node_5.right = node_7
         # right subtree
-        node_30 = Node(value=30, color=BLACK, parent=root, left=NIL_LEAF, right=NIL_LEAF)
-        node_20 = Node(value=20, color=BLACK, parent=node_30, left=NIL_LEAF, right=NIL_LEAF)
-        node_38 = Node(value=38, color=RED, parent=node_30, left=NIL_LEAF, right=NIL_LEAF)
+        node_30 = Node(value=30, color=BLACK, parent=root,
+                       left=NIL_LEAF, right=NIL_LEAF)
+        node_20 = Node(value=20, color=BLACK, parent=node_30,
+                       left=NIL_LEAF, right=NIL_LEAF)
+        node_38 = Node(value=38, color=RED, parent=node_30,
+                       left=NIL_LEAF, right=NIL_LEAF)
         node_30.left = node_20
         node_30.right = node_38
         # 38 subtree
-        node_32 = Node(value=32, color=BLACK, parent=node_38, left=NIL_LEAF, right=NIL_LEAF)
-        node_41 = Node(value=41, color=BLACK, parent=node_38, left=NIL_LEAF, right=NIL_LEAF)
+        node_32 = Node(value=32, color=BLACK, parent=node_38,
+                       left=NIL_LEAF, right=NIL_LEAF)
+        node_41 = Node(value=41, color=BLACK, parent=node_38,
+                       left=NIL_LEAF, right=NIL_LEAF)
         node_38.left = node_32
         node_38.right = node_41
-        node_35 = Node(value=35, color=RED, parent=node_32, left=NIL_LEAF, right=NIL_LEAF)
+        node_35 = Node(value=35, color=RED, parent=node_32,
+                       left=NIL_LEAF, right=NIL_LEAF)
         node_32.right = node_35
 
         root.left = node_5
@@ -1220,13 +1327,18 @@ class RbTreeTests(unittest.TestCase):
 
     def test_deletion_black_node_black_successor_no_child_case_4(self):
         rb_tree = RedBlackTree()
-        root = Node(value=10, color=BLACK, parent=None, left=NIL_LEAF, right=NIL_LEAF)
+        root = Node(value=10, color=BLACK, parent=None,
+                    left=NIL_LEAF, right=NIL_LEAF)
         # left subtree
-        node_m10 = Node(value=-10, color=BLACK, parent=root, left=NIL_LEAF, right=NIL_LEAF)
+        node_m10 = Node(value=-10, color=BLACK, parent=root,
+                        left=NIL_LEAF, right=NIL_LEAF)
         # right subtree
-        node_30 = Node(value=30, color=RED, parent=root, left=NIL_LEAF, right=NIL_LEAF)
-        node_20 = Node(value=20, color=BLACK, parent=node_30, left=NIL_LEAF, right=NIL_LEAF)
-        node_38 = Node(value=38, color=BLACK, parent=node_30, left=NIL_LEAF, right=NIL_LEAF)
+        node_30 = Node(value=30, color=RED, parent=root,
+                       left=NIL_LEAF, right=NIL_LEAF)
+        node_20 = Node(value=20, color=BLACK, parent=node_30,
+                       left=NIL_LEAF, right=NIL_LEAF)
+        node_38 = Node(value=38, color=BLACK, parent=node_30,
+                       left=NIL_LEAF, right=NIL_LEAF)
         node_30.left = node_20
         node_30.right = node_38
 
@@ -1273,13 +1385,18 @@ class RbTreeTests(unittest.TestCase):
 
     def test_deletion_black_node_no_successor_case_6(self):
         rb_tree = RedBlackTree()
-        root = Node(value=10, color=BLACK, parent=None, left=NIL_LEAF, right=NIL_LEAF)
+        root = Node(value=10, color=BLACK, parent=None,
+                    left=NIL_LEAF, right=NIL_LEAF)
         # left subtree
-        node_m10 = Node(value=-10, color=BLACK, parent=root, left=NIL_LEAF, right=NIL_LEAF)
+        node_m10 = Node(value=-10, color=BLACK, parent=root,
+                        left=NIL_LEAF, right=NIL_LEAF)
         # right subtree
-        node_30 = Node(value=30, color=BLACK, parent=root, left=NIL_LEAF, right=NIL_LEAF)
-        node_25 = Node(value=25, color=RED, parent=node_30, left=NIL_LEAF, right=NIL_LEAF)
-        node_40 = Node(value=40, color=RED, parent=node_30, left=NIL_LEAF, right=NIL_LEAF)
+        node_30 = Node(value=30, color=BLACK, parent=root,
+                       left=NIL_LEAF, right=NIL_LEAF)
+        node_25 = Node(value=25, color=RED, parent=node_30,
+                       left=NIL_LEAF, right=NIL_LEAF)
+        node_40 = Node(value=40, color=RED, parent=node_30,
+                       left=NIL_LEAF, right=NIL_LEAF)
         node_30.left = node_25
         node_30.right = node_40
 
@@ -1330,11 +1447,16 @@ class RbTreeTests(unittest.TestCase):
 
     def test_mirror_deletion_black_node_no_successor_case_6(self):
         rb_tree = RedBlackTree()
-        root = Node(value=10, color=BLACK, parent=None, left=NIL_LEAF, right=NIL_LEAF)
-        node_12 = Node(value=12, color=BLACK, parent=root, left=NIL_LEAF, right=NIL_LEAF)
-        node_5 = Node(value=5, color=BLACK, parent=root, left=NIL_LEAF, right=NIL_LEAF)
-        node_1 = Node(value=1, color=RED, parent=node_5, left=NIL_LEAF, right=NIL_LEAF)
-        node_7 = Node(value=7, color=RED, parent=node_5, left=NIL_LEAF, right=NIL_LEAF)
+        root = Node(value=10, color=BLACK, parent=None,
+                    left=NIL_LEAF, right=NIL_LEAF)
+        node_12 = Node(value=12, color=BLACK, parent=root,
+                       left=NIL_LEAF, right=NIL_LEAF)
+        node_5 = Node(value=5, color=BLACK, parent=root,
+                      left=NIL_LEAF, right=NIL_LEAF)
+        node_1 = Node(value=1, color=RED, parent=node_5,
+                      left=NIL_LEAF, right=NIL_LEAF)
+        node_7 = Node(value=7, color=RED, parent=node_5,
+                      left=NIL_LEAF, right=NIL_LEAF)
         node_5.left = node_1
         node_5.right = node_7
         root.left = node_5
@@ -1380,11 +1502,14 @@ class RbTreeTests(unittest.TestCase):
         the double black node upwards into a case 1 problem
         """
         rb_tree = RedBlackTree()
-        root = Node(value=10, color=BLACK, parent=None, left=NIL_LEAF, right=NIL_LEAF)
+        root = Node(value=10, color=BLACK, parent=None,
+                    left=NIL_LEAF, right=NIL_LEAF)
         # left subtree
-        node_m10 = Node(value=-10, color=BLACK, parent=root, left=NIL_LEAF, right=NIL_LEAF)
+        node_m10 = Node(value=-10, color=BLACK, parent=root,
+                        left=NIL_LEAF, right=NIL_LEAF)
         # right subtree
-        node_30 = Node(value=30, color=BLACK, parent=root, left=NIL_LEAF, right=NIL_LEAF)
+        node_30 = Node(value=30, color=BLACK, parent=root,
+                       left=NIL_LEAF, right=NIL_LEAF)
 
         root.left = node_m10
         root.right = node_30
@@ -1423,17 +1548,24 @@ class RbTreeTests(unittest.TestCase):
         will restructure the tree in such a way that a case 6 rotation becomes possible
         """
         rb_tree = RedBlackTree()
-        root = Node(value=10, color=BLACK, parent=None, left=NIL_LEAF, right=NIL_LEAF)
+        root = Node(value=10, color=BLACK, parent=None,
+                    left=NIL_LEAF, right=NIL_LEAF)
         # left subtree
-        node_m30 = Node(value=-30, color=BLACK, parent=root, left=NIL_LEAF, right=NIL_LEAF)
-        node_m40 = Node(value=-40, color=BLACK, parent=node_m30, left=NIL_LEAF, right=NIL_LEAF)
-        node_m20 = Node(value=-20, color=BLACK, parent=node_m30, left=NIL_LEAF, right=NIL_LEAF)
+        node_m30 = Node(value=-30, color=BLACK, parent=root,
+                        left=NIL_LEAF, right=NIL_LEAF)
+        node_m40 = Node(value=-40, color=BLACK, parent=node_m30,
+                        left=NIL_LEAF, right=NIL_LEAF)
+        node_m20 = Node(value=-20, color=BLACK, parent=node_m30,
+                        left=NIL_LEAF, right=NIL_LEAF)
         node_m30.left = node_m40
         node_m30.right = node_m20
         # right subtree
-        node_50 = Node(value=50, color=BLACK, parent=root, left=NIL_LEAF, right=NIL_LEAF)
-        node_30 = Node(value=30, color=RED, parent=node_50, left=NIL_LEAF, right=NIL_LEAF)
-        node_70 = Node(value=70, color=BLACK, parent=node_50, left=NIL_LEAF, right=NIL_LEAF)
+        node_50 = Node(value=50, color=BLACK, parent=root,
+                       left=NIL_LEAF, right=NIL_LEAF)
+        node_30 = Node(value=30, color=RED, parent=node_50,
+                       left=NIL_LEAF, right=NIL_LEAF)
+        node_70 = Node(value=70, color=BLACK, parent=node_50,
+                       left=NIL_LEAF, right=NIL_LEAF)
         node_50.left = node_30
         node_50.right = node_70
         node_15 = Node(value=15, color=BLACK, parent=node_30, left=NIL_LEAF, right=NIL_LEAF)
@@ -1541,21 +1673,30 @@ class RbTreeTests(unittest.TestCase):
         will restructure the tree in such a way that a case 6 rotation becomes possible
         """
         rb_tree = RedBlackTree()
-        root = Node(value=50, color=BLACK, parent=None, left=NIL_LEAF, right=NIL_LEAF)
+        root = Node(value=50, color=BLACK, parent=None,
+                    left=NIL_LEAF, right=NIL_LEAF)
         # left subtree
-        node_30 = Node(value=30, color=BLACK, parent=root, left=NIL_LEAF, right=NIL_LEAF)
-        node_20 = Node(value=20, color=BLACK, parent=node_30, left=NIL_LEAF, right=NIL_LEAF)
-        node_35 = Node(value=35, color=RED, parent=node_30, left=NIL_LEAF, right=NIL_LEAF)
+        node_30 = Node(value=30, color=BLACK, parent=root,
+                       left=NIL_LEAF, right=NIL_LEAF)
+        node_20 = Node(value=20, color=BLACK, parent=node_30,
+                       left=NIL_LEAF, right=NIL_LEAF)
+        node_35 = Node(value=35, color=RED, parent=node_30,
+                       left=NIL_LEAF, right=NIL_LEAF)
         node_30.left = node_20
         node_30.right = node_35
-        node_34 = Node(value=34, color=BLACK, parent=node_35, left=NIL_LEAF, right=NIL_LEAF)
-        node_37 = Node(value=37, color=BLACK, parent=node_35, left=NIL_LEAF, right=NIL_LEAF)
+        node_34 = Node(value=34, color=BLACK, parent=node_35,
+                       left=NIL_LEAF, right=NIL_LEAF)
+        node_37 = Node(value=37, color=BLACK, parent=node_35,
+                       left=NIL_LEAF, right=NIL_LEAF)
         node_35.left = node_34
         node_35.right = node_37
         # right subtree
-        node_80 = Node(value=80, color=BLACK, parent=root, left=NIL_LEAF, right=NIL_LEAF)
-        node_70 = Node(value=70, color=BLACK, parent=node_80, left=NIL_LEAF, right=NIL_LEAF)
-        node_90 = Node(value=90, color=BLACK, parent=node_80, left=NIL_LEAF, right=NIL_LEAF)
+        node_80 = Node(value=80, color=BLACK, parent=root,
+                       left=NIL_LEAF, right=NIL_LEAF)
+        node_70 = Node(value=70, color=BLACK, parent=node_80,
+                       left=NIL_LEAF, right=NIL_LEAF)
+        node_90 = Node(value=90, color=BLACK, parent=node_80,
+                       left=NIL_LEAF, right=NIL_LEAF)
         node_80.left = node_70
         node_80.right = node_90
 
@@ -1654,21 +1795,30 @@ class RbTreeTests(unittest.TestCase):
 
     def test_deletion_black_node_successor_case_2_then_4(self):
         rb_tree = RedBlackTree()
-        root = Node(value=10, color=BLACK, parent=None, left=NIL_LEAF, right=NIL_LEAF)
+        root = Node(value=10, color=BLACK, parent=None,
+                    left=NIL_LEAF, right=NIL_LEAF)
         # left subtree
-        node_m10 = Node(value=-10, color=BLACK, parent=root, left=NIL_LEAF, right=NIL_LEAF)
-        node_m20 = Node(value=-20, color=BLACK, parent=node_m10, left=NIL_LEAF, right=NIL_LEAF)
-        node_m5 = Node(value=-5, color=BLACK, parent=node_m10, left=NIL_LEAF, right=NIL_LEAF)
+        node_m10 = Node(value=-10, color=BLACK, parent=root,
+                        left=NIL_LEAF, right=NIL_LEAF)
+        node_m20 = Node(value=-20, color=BLACK, parent=node_m10,
+                        left=NIL_LEAF, right=NIL_LEAF)
+        node_m5 = Node(value=-5, color=BLACK, parent=node_m10,
+                       left=NIL_LEAF, right=NIL_LEAF)
         node_m10.left = node_m20
         node_m10.right = node_m5
         # right subtree
-        node_40 = Node(value=40, color=BLACK, parent=root, left=NIL_LEAF, right=NIL_LEAF)
-        node_20 = Node(value=20, color=BLACK, parent=node_40, left=NIL_LEAF, right=NIL_LEAF)
-        node_60 = Node(value=60, color=RED, parent=node_40, left=NIL_LEAF, right=NIL_LEAF)
+        node_40 = Node(value=40, color=BLACK, parent=root,
+                       left=NIL_LEAF, right=NIL_LEAF)
+        node_20 = Node(value=20, color=BLACK, parent=node_40,
+                       left=NIL_LEAF, right=NIL_LEAF)
+        node_60 = Node(value=60, color=RED, parent=node_40,
+                       left=NIL_LEAF, right=NIL_LEAF)
         node_40.left = node_20
         node_40.right = node_60
-        node_50 = Node(value=50, color=BLACK, parent=node_60, left=NIL_LEAF, right=NIL_LEAF)
-        node_80 = Node(value=80, color=BLACK, parent=node_60, left=NIL_LEAF, right=NIL_LEAF)
+        node_50 = Node(value=50, color=BLACK, parent=node_60,
+                       left=NIL_LEAF, right=NIL_LEAF)
+        node_80 = Node(value=80, color=BLACK, parent=node_60,
+                       left=NIL_LEAF, right=NIL_LEAF)
         node_60.left = node_50
         node_60.right = node_80
 
@@ -1752,21 +1902,30 @@ class RbTreeTests(unittest.TestCase):
 
     def test_mirror_deletion_black_node_successor_case_2_then_4(self):
         rb_tree = RedBlackTree()
-        root = Node(value=20, color=BLACK, parent=None, left=NIL_LEAF, right=NIL_LEAF)
+        root = Node(value=20, color=BLACK, parent=None,
+                    left=NIL_LEAF, right=NIL_LEAF)
         # left subtree
-        node_10 = Node(value=10, color=BLACK, parent=root, left=NIL_LEAF, right=NIL_LEAF)
-        node_8 = Node(value=8, color=RED, parent=node_10, left=NIL_LEAF, right=NIL_LEAF)
-        node_15 = Node(value=15, color=BLACK, parent=node_10, left=NIL_LEAF, right=NIL_LEAF)
+        node_10 = Node(value=10, color=BLACK, parent=root,
+                       left=NIL_LEAF, right=NIL_LEAF)
+        node_8 = Node(value=8, color=RED, parent=node_10,
+                      left=NIL_LEAF, right=NIL_LEAF)
+        node_15 = Node(value=15, color=BLACK, parent=node_10,
+                       left=NIL_LEAF, right=NIL_LEAF)
         node_10.left = node_8
         node_10.right = node_15
-        node_6 = Node(value=6, color=BLACK, parent=node_8, left=NIL_LEAF, right=NIL_LEAF)
-        node_9 = Node(value=9, color=BLACK, parent=node_8, left=NIL_LEAF, right=NIL_LEAF)
+        node_6 = Node(value=6, color=BLACK, parent=node_8,
+                      left=NIL_LEAF, right=NIL_LEAF)
+        node_9 = Node(value=9, color=BLACK, parent=node_8,
+                      left=NIL_LEAF, right=NIL_LEAF)
         node_8.left = node_6
         node_8.right = node_9
         # right subtree
-        node_30 = Node(value=30, color=BLACK, parent=root, left=NIL_LEAF, right=NIL_LEAF)
-        node_25 = Node(value=25, color=BLACK, parent=node_30, left=NIL_LEAF, right=NIL_LEAF)
-        node_35 = Node(value=35, color=BLACK, parent=node_30, left=NIL_LEAF, right=NIL_LEAF)
+        node_30 = Node(value=30, color=BLACK, parent=root,
+                       left=NIL_LEAF, right=NIL_LEAF)
+        node_25 = Node(value=25, color=BLACK, parent=node_30,
+                       left=NIL_LEAF, right=NIL_LEAF)
+        node_35 = Node(value=35, color=BLACK, parent=node_30,
+                       left=NIL_LEAF, right=NIL_LEAF)
         node_30.left = node_25
         node_30.right = node_35
 
@@ -1848,27 +2007,38 @@ class RbTreeTests(unittest.TestCase):
 
     def test_delete_tree_one_by_one(self):
         rb_tree = RedBlackTree()
-        root = Node(value=20, color=BLACK, parent=None, left=NIL_LEAF, right=NIL_LEAF)
+        root = Node(value=20, color=BLACK, parent=None,
+                    left=NIL_LEAF, right=NIL_LEAF)
         # left subtree
-        node_10 = Node(value=10, color=BLACK, parent=root, left=NIL_LEAF, right=NIL_LEAF)
-        node_5 = Node(value=5, color=RED, parent=node_10, left=NIL_LEAF, right=NIL_LEAF)
-        node_15 = Node(value=15, color=RED, parent=node_10, left=NIL_LEAF, right=NIL_LEAF)
+        node_10 = Node(value=10, color=BLACK, parent=root,
+                       left=NIL_LEAF, right=NIL_LEAF)
+        node_5 = Node(value=5, color=RED, parent=node_10,
+                      left=NIL_LEAF, right=NIL_LEAF)
+        node_15 = Node(value=15, color=RED, parent=node_10,
+                       left=NIL_LEAF, right=NIL_LEAF)
         node_10.left = node_5
         node_10.right = node_15
         # right subtree
-        node_38 = Node(value=38, color=RED, parent=root, left=NIL_LEAF, right=NIL_LEAF)
-        node_28 = Node(value=28, color=BLACK, parent=node_38, left=NIL_LEAF, right=NIL_LEAF)
-        node_48 = Node(value=48, color=BLACK, parent=node_38, left=NIL_LEAF, right=NIL_LEAF)
+        node_38 = Node(value=38, color=RED, parent=root,
+                       left=NIL_LEAF, right=NIL_LEAF)
+        node_28 = Node(value=28, color=BLACK, parent=node_38,
+                       left=NIL_LEAF, right=NIL_LEAF)
+        node_48 = Node(value=48, color=BLACK, parent=node_38,
+                       left=NIL_LEAF, right=NIL_LEAF)
         node_38.left = node_28
         node_38.right = node_48
         # node_28 subtree
-        node_23 = Node(value=23, color=RED, parent=node_28, left=NIL_LEAF, right=NIL_LEAF)
-        node_29 = Node(value=29, color=RED, parent=node_28, left=NIL_LEAF, right=NIL_LEAF)
+        node_23 = Node(value=23, color=RED, parent=node_28,
+                       left=NIL_LEAF, right=NIL_LEAF)
+        node_29 = Node(value=29, color=RED, parent=node_28,
+                       left=NIL_LEAF, right=NIL_LEAF)
         node_28.left = node_23
         node_28.right = node_29
         # node 48 subtree
-        node_41 = Node(value=41, color=RED, parent=node_48, left=NIL_LEAF, right=NIL_LEAF)
-        node_49 = Node(value=49, color=RED, parent=node_48, left=NIL_LEAF, right=NIL_LEAF)
+        node_41 = Node(value=41, color=RED, parent=node_48,
+                       left=NIL_LEAF, right=NIL_LEAF)
+        node_49 = Node(value=49, color=RED, parent=node_48,
+                       left=NIL_LEAF, right=NIL_LEAF)
         node_48.left = node_41
         node_48.right = node_49
 
@@ -2155,6 +2325,7 @@ class RbTreeTests(unittest.TestCase):
 
 # These tests take the bulk of the time for testing.
 class RbTreePerformanceTests(unittest.TestCase):
+
     def test_addition_performance(self):
         """
         Add 25,000 elements to the tree
@@ -2186,7 +2357,8 @@ class RbTreePerformanceTests(unittest.TestCase):
 
     def test_deletion_and_addition_performance(self):
         possible_values = list(range(-500000, 500000))
-        elements = list(set([random.choice(possible_values) for _ in range(25000)]))
+        elements = list(set([random.choice(possible_values)
+                             for _ in range(25000)]))
         first_part = elements[:len(elements)//2]
         second_part = elements[len(elements)//2:]
         deletion_part = first_part[len(first_part)//3:(len(first_part)//3)*2]
