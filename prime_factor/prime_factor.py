@@ -29,7 +29,7 @@ def main():
     Driver function
     """
     num = 1255
-    print("Prime Factors are :",prime_factor(num))
+    print("Prime Factors are :", prime_factor(num))
 
 
 if __name__ == '__main__':
