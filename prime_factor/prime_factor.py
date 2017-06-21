@@ -3,16 +3,12 @@ import math
 
 def prime_factor(num):
     """
-
     Prime factor of a number
 
-
-    :param start : checking number if it is a prime factor of number entered
-    :param counter : checking the number of factors of start
-    :param checker : checks if start is a prime number or not
-    :return : no returns
+    :param num : number whose prime factors we want to find  
+    :return : return a list of prime factors of number
     """
-    print("Factors are:")
+    factor_list = []
     start = 1
     while start <= num:
         counter = 0
@@ -23,8 +19,9 @@ def prime_factor(num):
                     counter += 1
                 checker += 1
             if counter == 2:
-                print(start)
+                factor_list.append(start)
         start += 1
+        return factor_list
 
 
 def main():
@@ -32,7 +29,8 @@ def main():
     Driver function
     """
     num = 1255
-    prime_factor(num)
+    print ("Prime Factors are :")
+    print (prime_factor(num))
 
 
 if __name__ == '__main__':
