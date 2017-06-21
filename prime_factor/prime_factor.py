@@ -3,7 +3,7 @@ import math
 
 def prime_factor(num):
     """
-    Prime factor of a number
+    Finds all the prime factor of a number
 
     :param num : number whose prime factors we want to find  
     :return : return a list of prime factors of number
