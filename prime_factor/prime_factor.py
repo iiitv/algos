@@ -13,7 +13,7 @@ def prime_factor(num):
     for start in range(2, sqrt_num):
         if num % start == 0:
             factor_list.append(start)
-            while (num % start == 0)
+            while (num % start == 0):
                 num /= start
     return factor_list
 
