@@ -5,12 +5,12 @@ public class BinarySearch {
         int right = arr.length - 1;
         while (left <= right) {
             int mid = (left + right) / 2;
-            if (arr[mid] == searchElement) { // Element found            
+            if (arr[mid] == searchElement) { // Element found
                 return mid;
             }
-            if (arr[mid] < searchElement) { // Look in right half            
+            if (arr[mid] < searchElement) { // Look in right half
                 left = mid + 1;
-            } else { // Look in left half            
+            } else { // Look in left half
                 right = mid - 1;
             }
         }
@@ -23,7 +23,7 @@ public class BinarySearch {
         int[] searchArr = new int[] {1, 35, 112, 324, 67};
         int pos;
         for (int i = 0; i < searchArr.length; i++) {
-            pos = binarySearch(arr, searchArr[i]);  //search key and get poistion 
+            pos = binarySearch(arr, searchArr[i]);  //search key and get poistion
             if (pos >= 0) {
                 System.out.println(searchArr[i] + "-> found at index : " + pos);
             } else {
