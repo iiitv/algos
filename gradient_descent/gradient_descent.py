@@ -27,7 +27,7 @@ def _hypothesis_value(data_input_tuple):
     :param data_input_tuple: Input tuple of a particular example
     :return: Value of hypothesis function at that point.
     Note that parameter input value is fixed as 1.
-    Also known as 'biased input' inn ML terminology and the parameter associated with it
+    Also known as 'biased input' in ML terminology and the parameter associated with it
     is known as 'biased parameter'.
     """
     hyp_val = 0
@@ -68,7 +68,7 @@ def summation_of_cost_derivative(index, end=m):
     :param index: index wrt derivative is being calculated
     :param end: value where summation ends, default is m, number of examples
     :return: Returns the summation of cost derivative
-    Note: If index is -1, this means we are calculcating summation wrt to biased parameter.
+    Note: If index is -1, this means we are calculating summation wrt to biased parameter.
     """
     summation_value = 0
     for i in range(end):
@@ -83,7 +83,7 @@ def get_cost_derivative(index):
     """
     :param index: index of the parameter vector wrt to derivative is to be calculated
     :return: derivative wrt to that index
-    Note: If index is -1, this means we are calculcating summation wrt to biased parameter.
+    Note: If index is -1, this means we are calculating summation wrt to biased parameter.
     """
     cost_derivative_value = summation_of_cost_derivative(index, m)/m
     return cost_derivative_value
