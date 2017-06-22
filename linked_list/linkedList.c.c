@@ -112,7 +112,7 @@ struct Node* deleteAtPos(struct Node **start, int pos) {
 			return NULL;
 			} else {
 			struct Node* tmp = temp->next;
-		    	temp->next = temp->next->next;	// Replacing address of position 'pos' with  node next to 'pos'
+				temp->next = temp->next->next;	// Replacing address of position 'pos' with  node next to 'pos'
 			return tmp;
 		}
 	}
@@ -120,7 +120,7 @@ struct Node* deleteAtPos(struct Node **start, int pos) {
 
 //  To traverse whole list
 void traverse(struct Node *start) {
-    printf("Linked List\n");
+	printf("Linked List\n");
 	if(start == NULL) {
 		printf("Linked List is Empty");
 	} else {
@@ -155,7 +155,7 @@ int search(struct Node *start, int data) {
 
 // to print search result
 void searchResult(int d, int pos) {
-	if(pos == -1) { 
+	if(pos == -1) {
 		printf("Element %d is not in list\n", d);
 	} else {
 		printf("Element %d is found at position %d\n", d, pos);
@@ -184,71 +184,64 @@ void insertResult(int res, int d) {
 
 int main() {
 	struct Node *start = NULL;
-	struct Node *node, *freeNode;
+	struct Node *newNode, *freeNode;
 	int res;
 	// Adding element to the list
-	node = getNewNode(23);
-	if (node != NULL) {
-		res = addFront(&start, node);
+	newNode = getNewNode(23);
+	if (newNode != NULL) {
+		res = addFront(&start, newNode);
 		insertResult(res, 12);
 	}
 	traverse(start);
-	
 	// Adding elements at the end
-	node = getNewNode(25);
-	if (node != NULL) {
-		res = addLast(&start, node);
+	newNode = getNewNode(25);
+	if (newNode != NULL) {
+		res = addLast(&start, newNode);
 		insertResult(res, 25);
 	}
-	node = getNewNode(46);
-	if (node != NULL) {
-		res = addLast(&start, node);
+	newNode = getNewNode(46);
+	if (newNode != NULL) {
+		res = addLast(&start, newNode);
 		insertResult(res, 46);
 	}
-	traverse(start);
-	
+	traverse(start);	
 	// Adding elements to front
-	node = getNewNode(12);
-	if (node != NULL) {
-		res = addFront(&start, node);
+	newNode = getNewNode(12);
+	if (newNode != NULL) {
+		res = addFront(&start, newNode);
 		insertResult(res, 12);	
 	}
-	node = getNewNode(11);
-	if (node != NULL) {
-		res = addFront(&start, node);
+	newNode = getNewNode(11);
+	if (newNode != NULL) {
+		res = addFront(&start, newNode);
 		insertResult(res, 11);	
 	}
 	traverse(start);
-
 	// Adding element at a given index (Adding 14 at index 3)
-	node = getNewNode(14);
-	if (node != NULL) {
-		res = addAtPos(&start, node, 3);
+	newNode = getNewNode(14);
+	if (newNode != NULL) {
+		res = addAtPos(&start, newNode, 3);
 		insertResult(res, 14);	
 	}
 	traverse(start);
-
 	// Removing First Element
 	freeNode = deleteFirst(&start);
 	deleteResult(&freeNode);
 	traverse(start);
-
-	// search
+	
+	// Search
 	res = search(start, 14);
 	searchResult(14, res);
 	res = search(start, 12);
 	searchResult(12, res);
 	traverse(start);
-
-	
 	// Removing Last Element
-	node = deleteLast(&start);
-	deleteResult(&node);
+	freeNode = deleteLast(&start);
+	deleteResult(&freeNode);
 	traverse(start);
-
 	// Removing an element from a index
-	node = deleteAtPos(&start, 17);
-	deleteResult(&node);
+	freeNode = deleteAtPos(&start, 17);
+	deleteResult(&freeNode);
 	traverse(start);
 	return 0;
 	
