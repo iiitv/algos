@@ -26,14 +26,14 @@ def _hypothesis_value(data_input_tuple):
     Calculates hypothesis function value for a given input
     :param data_input_tuple: Input tuple of a particular example
     :return: Value of hypothesis function at that point.
-    Note that parameter input value is fixed as 1.
-    Also known as 'biased input' in ML terminology and the parameter associated with it
-    is known as 'biased parameter'.
+    Note that there is an 'biased input' whose value is fixed as 1.
+    It is not explicitly mentioned in input data.. But, ML hypothesis functions use it.
+    So, we have to take care of it separately. Line 36 takes care of it. 
     """
     hyp_val = 0
     for i in range(len(parameter_vector) - 1):
-        hyp_val = hyp_val + data_input_tuple[i]*parameter_vector[i+1]
-    hyp_val = hyp_val + 1*parameter_vector[0]
+        hyp_val += data_input_tuple[i]*parameter_vector[i+1]
+    hyp_val += parameter_vector[0]
     return hyp_val
 
 
