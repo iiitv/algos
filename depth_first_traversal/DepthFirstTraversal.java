@@ -2,23 +2,25 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Set;
+import java.util.ArrayList;
+
 
 public class DepthFirstTraversal {
 
-    // Array  of lists for Adjacency List Representation
-    public static LinkedList<Integer>[] adj;
+    // ArrayList for Adjacency List Representation
+    public static ArrayList<LinkedList<Integer>> adj;
 
-    //Function to add an edge into the DepthFirstTraversal
+    // Function to add an edge into the DepthFirstTraversal
     private static void addEdge(int v, int w) {
-        adj[v].add(w);
+        adj.get(v).add(w);
     }
 
     // A function used by DFS
-    private static void depthFirstTraversal(int v, Set visited) {
-        // Mark the current node as visited 
+    private static void depthFirstTraversal(int v, Set<Integer> visited) {
+        // Mark the current node as visited
         visited.add(v);
         System.out.println(v);
-        Iterator<Integer> i = adj[v].listIterator();
+        Iterator<Integer> i = adj.get(v).listIterator();
         while (i.hasNext()) {
             int n = i.next();
             if (!visited.contains(n)) {
@@ -29,15 +31,15 @@ public class DepthFirstTraversal {
 
     public static void dfs(int v) {
         // false by default in java)
-        Set<Integer> visited = new HashSet();
+        Set<Integer> visited = new HashSet<Integer>();
         // Call the recursive helper function to print DFS traversal
         depthFirstTraversal(v, visited);
     }
 
     public static void initEdges(int n) {
-        adj = new LinkedList[n];
+        adj = new ArrayList<LinkedList<Integer>>();
         for (int i = 0; i < n; ++i) {
-            adj[i] = new LinkedList();
+            adj.add(new LinkedList<Integer>());
         }
     }
 

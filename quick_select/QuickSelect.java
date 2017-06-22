@@ -1,11 +1,11 @@
 public class QuickSelect {
     /*
-    * partition function
-    * array     : array on which partitioning has to be done
-    * left      : left index of the partitioning subarray
-    * right     : right index of the partitioning subarray
-    * pivotIndex : pivot index from which partition has to done
-    * return    : the index of the last element of the left subarray
+     * partition function
+     * array     : array on which partitioning has to be done
+     * left      : left index of the partitioning subarray
+     * right     : right index of the partitioning subarray
+     * pivotIndex : pivot index from which partition has to done
+     * return    : the index of the last element of the left subarray
      */
     private static int partition(int[] array, int left, int right, int pivotIndex) {
         int pivotValue = array[pivotIndex];
@@ -29,11 +29,11 @@ public class QuickSelect {
     }
 
     /*
-    * Quick Select function
-    * left        : left index of the subarray
-    * right       : right index of the subarray
-    * pos         : position to find the element using quick sort
-    * return      : the value of element at pos place in the sorted array
+     * Quick Select function
+     * left        : left index of the subarray
+     * right       : right index of the subarray
+     * pos         : position to find the element using quick sort
+     * return      : the value of element at pos place in the sorted array
      */
     public static int quickSelect(int[] array, int left, int right, int pos) {
         int pivotIndex;
