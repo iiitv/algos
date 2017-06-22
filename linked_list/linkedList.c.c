@@ -204,31 +204,30 @@ int main() {
 		res = addLast(&start, newNode);
 		insertResult(res, 46);
 	}
-	traverse(start);	
+	traverse(start);
 	// Adding elements to front
 	newNode = getNewNode(12);
 	if (newNode != NULL) {
 		res = addFront(&start, newNode);
-		insertResult(res, 12);	
+		insertResult(res, 12);
 	}
 	newNode = getNewNode(11);
 	if (newNode != NULL) {
 		res = addFront(&start, newNode);
-		insertResult(res, 11);	
+		insertResult(res, 11);
 	}
 	traverse(start);
 	// Adding element at a given index (Adding 14 at index 3)
 	newNode = getNewNode(14);
 	if (newNode != NULL) {
 		res = addAtPos(&start, newNode, 3);
-		insertResult(res, 14);	
+		insertResult(res, 14);
 	}
 	traverse(start);
 	// Removing First Element
 	freeNode = deleteFirst(&start);
 	deleteResult(&freeNode);
-	traverse(start);
-	
+	traverse(start);	
 	// Search
 	res = search(start, 14);
 	searchResult(14, res);
@@ -244,5 +243,5 @@ int main() {
 	deleteResult(&freeNode);
 	traverse(start);
 	return 0;
-	
+
 }
