@@ -249,6 +249,7 @@ int main() {
 	freeNode = deleteAtPos(&start, 17);
 	deleteResult(&freeNode);
 	traverse(start);
-	return 0;
+
 	printf("\n");
+	return 0;
 }
