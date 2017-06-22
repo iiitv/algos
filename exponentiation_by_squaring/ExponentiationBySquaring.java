@@ -5,7 +5,6 @@
 */
 
 public class ExponentiationBySquaring {
-
     public static double exponentiationBySquaring(double base, int power) {
         if (power < 0) {	// Negative powers
             return exponentiationBySquaring(1.0 / base, -power);
