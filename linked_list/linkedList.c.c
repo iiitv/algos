@@ -227,7 +227,7 @@ int main() {
 	// Removing First Element
 	freeNode = deleteFirst(&start);
 	deleteResult(&freeNode);
-	traverse(start);	
+	traverse(start);
 	// Search
 	res = search(start, 14);
 	searchResult(14, res);
@@ -243,5 +243,5 @@ int main() {
 	deleteResult(&freeNode);
 	traverse(start);
 	return 0;
-
+	printf("\n");
 }
