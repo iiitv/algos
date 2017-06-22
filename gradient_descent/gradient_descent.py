@@ -96,7 +96,7 @@ def run_gradient_descent():
     relative_error_limit = 0
     j = 0
     while True:
-        j = j+1
+        j += 1
         temp_parameter_vector = [0, 0, 0, 0]
         for i in range(0, len(parameter_vector)):
             cost_derivative = get_cost_derivative(i-1)
@@ -111,7 +111,7 @@ def run_gradient_descent():
 
 def test_gradient_descent():
     for i in range(len(test_data)):
-        print("Actual output value:",  output(i, 'test'))
+        print("Actual output value:", output(i, 'test'))
         print("Hypothesis output:", calculate_hypothesis_value(i, 'test'))
 
 
