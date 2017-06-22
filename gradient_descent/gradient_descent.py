@@ -28,7 +28,7 @@ def _hypothesis_value(data_input_tuple):
     :return: Value of hypothesis function at that point.
     Note that there is an 'biased input' whose value is fixed as 1.
     It is not explicitly mentioned in input data.. But, ML hypothesis functions use it.
-    So, we have to take care of it separately. Line 36 takes care of it. 
+    So, we have to take care of it separately. Line 36 takes care of it.
     """
     hyp_val = 0
     for i in range(len(parameter_vector) - 1):
