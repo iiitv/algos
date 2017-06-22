@@ -193,6 +193,7 @@ int main() {
 		insertResult(res, 12);
 	}
 	traverse(start);
+
 	// Adding elements at the end
 	newNode = getNewNode(25);
 	if (newNode != NULL) {
@@ -205,6 +206,7 @@ int main() {
 		insertResult(res, 46);
 	}
 	traverse(start);
+
 	// Adding elements to front
 	newNode = getNewNode(12);
 	if (newNode != NULL) {
@@ -217,6 +219,7 @@ int main() {
 		insertResult(res, 11);
 	}
 	traverse(start);
+
 	// Adding element at a given index (Adding 14 at index 3)
 	newNode = getNewNode(14);
 	if (newNode != NULL) {
@@ -224,20 +227,24 @@ int main() {
 		insertResult(res, 14);
 	}
 	traverse(start);
+
 	// Removing First Element
 	freeNode = deleteFirst(&start);
 	deleteResult(&freeNode);
 	traverse(start);
+
 	// Search
 	res = search(start, 14);
 	searchResult(14, res);
 	res = search(start, 12);
 	searchResult(12, res);
 	traverse(start);
+
 	// Removing Last Element
 	freeNode = deleteLast(&start);
 	deleteResult(&freeNode);
 	traverse(start);
+
 	// Removing an element from a index
 	freeNode = deleteAtPos(&start, 17);
 	deleteResult(&freeNode);
