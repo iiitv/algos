@@ -6,7 +6,7 @@ struct Node {
 	struct Node* next;	// pointer to same structure
 };
 
-//  Creatig node
+//  Creating node
 struct Node* getNewNode(int data) {
 	struct Node *nw_node;
 	nw_node = (struct Node*) malloc(sizeof(struct Node));	//  nw_node a Node to be added
@@ -184,47 +184,53 @@ void insertResult(int res, int d) {
 
 int main() {
 	struct Node *start = NULL;
-	struct Node *node;
+	struct Node *node, *freeNode;
 	int res;
 	// Adding element to the list
-	if (getNewNode(23) != NULL) {
-		res = addFront(&start, getNewNode(23));
+	node = getNewNode(23);
+	if (node != NULL) {
+		res = addFront(&start, node);
 		insertResult(res, 12);
 	}
 	traverse(start);
 	
 	// Adding elements at the end
-	if (getNewNode(25) != NULL) {
-		res = addLast(&start, getNewNode(25));
+	node = getNewNode(25);
+	if (node != NULL) {
+		res = addLast(&start, node);
 		insertResult(res, 25);
 	}
-	if (getNewNode(46) != NULL) {
-		res = addLast(&start, getNewNode(46));
+	node = getNewNode(46);
+	if (node != NULL) {
+		res = addLast(&start, node);
 		insertResult(res, 46);
 	}
 	traverse(start);
 	
 	// Adding elements to front
-	if (getNewNode(12) != NULL) {
-		res = addFront(&start, getNewNode(12));
+	node = getNewNode(12);
+	if (node != NULL) {
+		res = addFront(&start, node);
 		insertResult(res, 12);	
 	}
-	if (getNewNode(11) != NULL) {
-		res = addFront(&start, getNewNode(11));
+	node = getNewNode(11);
+	if (node != NULL) {
+		res = addFront(&start, node);
 		insertResult(res, 11);	
 	}
 	traverse(start);
 
 	// Adding element at a given index (Adding 14 at index 3)
-	if (getNewNode(14) != NULL) {
-		res = addAtPos(&start, getNewNode(14), 3);
+	node = getNewNode(14);
+	if (node != NULL) {
+		res = addAtPos(&start, node, 3);
 		insertResult(res, 14);	
 	}
 	traverse(start);
 
 	// Removing First Element
-	node = deleteFirst(&start);
-	deleteResult(&node);
+	freeNode = deleteFirst(&start);
+	deleteResult(&freeNode);
 	traverse(start);
 
 	// search
