@@ -15,6 +15,8 @@ def prime_factor(num):
             factor_list.append(start)
             while (num % start == 0):
                 num /= start
+    if num != 1:
+        factor_list.append(num)
     return factor_list
 
 
