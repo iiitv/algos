@@ -21,7 +21,7 @@ function sieveOfEratosthenes (n) {
 function main () {
 	let n = 319; // number till where we wish to find primes
 	let primes = sieveOfEratosthenes(n);
-	for (let i = 1; i <= n; i++) {
+	for (let i = 2; i <= n; i++) {
 		if (primes[i]) {
 			console.log(i);
 		}
