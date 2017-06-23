@@ -18,7 +18,7 @@ def longest_common_subsequence(seq1, seq2):
                 sequences[i][j] = max(sequences[i - 1][j], sequences[i][j - 1])
     prev_selected = sequences[len1][len2]
     lcs = [''] * (prev_selected + 1)
-    lcs[prev_selected] = '\0'	# End of line char
+    lcs[prev_selected] = '\0'  # End of line char
     i = len1
     j = len2
     while i > 0 and j > 0:
@@ -36,12 +36,12 @@ def longest_common_subsequence(seq1, seq2):
 
 def main():
     """
-    driver function for testing
+    Driver function for testing.
     """
     seq1 = 'iiitv/algos'
     seq2 = 'iiitv/Odyssy'
     print('longest common subsequence is',
-           longest_common_subsequence(seq1, seq2))
+          longest_common_subsequence(seq1, seq2))
 
 
 if __name__ == '__main__':
