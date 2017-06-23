@@ -7,9 +7,9 @@ using namespace std;
 /*
  * Function implementing sleep sort
  * args:
- * 		ar      : Initial array containing elements (unsorted)
- * 		ans     : sorted array elements vector
- * 		threads : vector containing threads for each array element
+ *		ar		: Initial array containing elements (unsorted)
+ *		ans		: sorted array elements vector
+ *		threads : vector containing threads for each array element
  */
 void sleep_sort(int ar[], vector<int> &ans) {
 	vector<thread> threads;
@@ -24,7 +24,11 @@ void sleep_sort(int ar[], vector<int> &ans) {
 	}
 }
 
-// Driver function
+/*
+ * Driver function
+ * For compilation of the code use -pthread
+ * compilation looks like : g++ sleep_sort.cpp -o sleep_sort -pthread
+ */
 int main() {
 	int ar[] = {8, 4, 9, 1};
 	vector<int> sorted_number;
