@@ -40,7 +40,8 @@ def main():
     """
     seq1 = 'iiitv/algos'
     seq2 = 'iiitv/Odyssy'
-    print('longest common subsequence is', longest_common_subsequence(seq1, seq2))
+    print('longest common subsequence is',
+           longest_common_subsequence(seq1, seq2))
 
 
 if __name__ == '__main__':
