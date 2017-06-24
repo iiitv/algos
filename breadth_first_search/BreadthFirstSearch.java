@@ -6,8 +6,7 @@ import java.util.Set;
 //Generic type BreadthFirstSearch implementation
 public class BreadthFirstSearch<T> {
     // HasMap  of lists for Adjacency List Representation
-    public HashMap<T, ArrayList<T>> adj = new HashMap<T, ArrayList<T>> ();
-   
+    public HashMap<T, ArrayList<T>> adj = new HashMap<T, ArrayList<T>> ();   
     //Function to add an edge
     public void addEdges (T source, T destination) {
         if (adj.containsKey (source)) {
@@ -21,8 +20,7 @@ public class BreadthFirstSearch<T> {
             list.add (destination);
             adj.put (source, list);
         }
-    }
-    
+    }    
     // BreadthFirstSearch search function with return path in a list
     public ArrayList<T> breadthFirstSearch (T source, T destination) {
         ArrayList<T> bfsPath = new ArrayList<> ();
