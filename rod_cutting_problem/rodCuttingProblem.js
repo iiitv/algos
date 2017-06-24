@@ -9,7 +9,7 @@ function rodCuttingProblem (price) {
 	Time Complexity	:	O(n ^ 2)
 	Space Complexity : O(n)
 	:param price:	Array in which price[i] denotes price	of rod of length i.
-	:return: returns optimal solution	for rod	of length n.
+	:return: returns maximum value obtainable by cutting up the rod and selling the pieces.
 	*/
 	let n = price.length;
 	let bestPrice = new Array(n + 1);
@@ -18,7 +18,7 @@ function rodCuttingProblem (price) {
 		bestPrice[i] = price[i - 1];
 	}
 	for (let i = 1; i <= n; i++) {
-		for (let j = i; j <= n + 1; j++) {
+		for (let j = i; j <= n; j++) {
 			bestPrice[j] = Math.max(bestPrice[j], bestPrice[j - i] + bestPrice[i]);
 		}
 	}
