@@ -15,7 +15,7 @@ echo ""
 echo "Testing C++ files..."
 for i in $(ls -1 **/*.cpp); do
     echo "    Compiling $i - g++ $i -lm -std=c++11"
-    g++ $i -lm -std=c++11
+    g++ $i -lm -pthread -std=c++11
     echo "    Running $i - ./a.out > /dev/null"
     ./a.out > /dev/null
     rm -f a.out
