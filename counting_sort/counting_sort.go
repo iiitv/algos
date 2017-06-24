@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 // CountingSort sorts the input array in ascending order
-// Time complexity is O(n)
+// Time complexity is O(len(data))
 func CountingSort(data []int) {
 	temp := make([]int, len(data))
 	max := 0
