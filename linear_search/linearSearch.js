@@ -4,7 +4,7 @@ function linearSearch (arr, x) {
 	:param arr: List of elements to search from
 	:param x: Element to search for
 	:return: Index if element found else -1
-	*/
+	 */
 	for (let it = 0; it < arr.length; it++) {
 		if (x === arr[it]) {
 			return it;

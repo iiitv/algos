@@ -1,8 +1,8 @@
 /*
-*  Following implementation of Stack uses LinkedList
-*  The last element of LinkedList is considered as the Top of Stack
-*  T defines the type of Stack we wish to create
-*/
+ *  Following implementation of Stack uses LinkedList
+ *  The last element of LinkedList is considered as the Top of Stack
+ *  T defines the type of Stack we wish to create
+ */
 
 import java.util.LinkedList;
 import java.util.NoSuchElementException;
@@ -21,7 +21,7 @@ public class Stack<T> {
     public T pop() throws NoSuchElementException {    // Remove element from top of Stack
         return stack.removeLast();
     }
-    
+
     public static void main(String[] args) {
         Stack<Integer> obj = new Stack<>();
         System.out.println("Putting element in the stack.");

@@ -15,9 +15,9 @@ long long modularExponential(long long base, long power, long long mod) {
 }
 
 int main() {
-   long long base = 2;
-   long power = 10;
-   long long mod = 100000;
-   printf("%lld\n", modularExponential(base, power, mod));
-   return 0;
+	long long base = 2;
+	long power = 10;
+	long long mod = 100000;
+	printf("%lld\n", modularExponential(base, power, mod));
+	return 0;
 }
