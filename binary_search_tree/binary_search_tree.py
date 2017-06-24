@@ -6,6 +6,7 @@ class Node(object):
     left : it is left child of the object
     right : It is right child of the object
     """
+
     def __init__(self, data):
         self.data = data
         self.left = None
@@ -171,10 +172,10 @@ class bst(object):
         if node is None:
             return
         elif node.left is None and node.right is None:
-            print(node.data, end = ' ')
+            print(node.data, end=' ')
         else:
             self.print_preorder(node.left)
-            print(node.data, end = ' ')
+            print(node.data, end=' ')
             self.print_preorder(node.right)
             if self.root == node:
                 print(' ')
