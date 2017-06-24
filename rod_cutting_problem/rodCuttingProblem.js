@@ -5,7 +5,7 @@
 
 function rodCuttingProblem (price) {
 	/*
-	Computes maximum money that can be earned by cutting a rod of length n (Bottom-Up Approach).
+		Computes maximum money that can be earned by cutting a rod of length n (Bottom-Up Approach).
     Time Complexity : O(n^2)
     Space Complexity : O(n)
     :param price: List in which price[i] denotes price of rod of length i.
@@ -15,12 +15,11 @@ function rodCuttingProblem (price) {
 	let best_price = new Array(n + 1);
 	best_price.fill(0);
 	for (let i = 1; i < best_price.length; i++) {
-		best_price[i] = price[i-1];
+		best_price[i] = price[i - 1];
 	}
-	console.log(best_price);
 	for (let i = 1; i <= n; i++) {
-		for (let j = i; j <= n+1; j++) {
-			best_price[j] = Math.max(best_price[j], best_price[j-i] + best_price[i]);
+		for (let j = i; j <= n + 1; j++) {
+			best_price[j] = Math.max(best_price[j], best_price[j - i] + best_price[i]);
 		}
 	}
 	return best_price[n];
