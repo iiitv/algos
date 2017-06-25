@@ -25,7 +25,7 @@ done
 echo ""
 echo "Testing Java files..."
 for i in $(ls -1 **/*.java); do
-    echo "    Compiling $i - javac $i -d ."
+    echo "    Compiling $i - javac -Werror -Xlint:all $i -d ."
     javac -Werror -Xlint:all $i -d .
     filename="${i##*/}"
     classname="${filename%.*}"
