@@ -19,6 +19,7 @@ void sleep_sort(int ar[], vector<int> &ans) {
 				ans.push_back(ar[i]);
 				});
 	}
+	
 	for (auto& th : threads) {
 		th.join();
 	}
@@ -27,7 +28,7 @@ void sleep_sort(int ar[], vector<int> &ans) {
 /*
  * Driver function
  * For compilation of the code use -pthread
- * compilation looks like : g++ sleep_sort.cpp -o sleep_sort -pthread
+ * compilation looks like : g++ -std=c++11 sleep_sort.cpp -o sleep_sort -pthread
  */
 int main() {
 	int ar[] = {8, 4, 9, 1};
