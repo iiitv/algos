@@ -1,7 +1,7 @@
 /*
-*  Following Algorithm sorts the given array in worst case time complexity O(n*log(n))
-*  and space complexity O(n), n being size of array.
-*/
+ *  Following Algorithm sorts the given array in worst case time complexity O(n*log(n))
+ *  and space complexity O(n), n being size of array.
+ */
 
 #include <stdio.h>
 

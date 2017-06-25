@@ -18,4 +18,4 @@ install:
 script:
   - ./.bin/test_running.sh
   - coala --ci
-  - editorconfig-tools check **/*
+  - eclint check "**/*.{java,c,cpp,js}"
