@@ -1,14 +1,14 @@
 /*
-* first --> First number
-* second --> Second number
-* There are two implementations:
-* Recursive(euclideanGCDRecursive) and Non-Recursive(euclideanGCD)
-*/
+ * first --> First number
+ * second --> Second number
+ * There are two implementations:
+ * Recursive(euclideanGCDRecursive) and Non-Recursive(euclideanGCD)
+ */
 
 public class EuclideanGCD {
     static int euclideanGCD(int first, int second) {
         while(second != 0) {        // Iterate till second becomes zero
-            int temp = second;      // Temporary variable to hold value of second 
+            int temp = second;      // Temporary variable to hold value of second
             second = first % second;
             first = temp;
         }
@@ -25,9 +25,9 @@ public class EuclideanGCD {
         int second = 5;
         int answerIterative = EuclideanGCD.euclideanGCD(first, second);
         int answerRecursive = EuclideanGCD.euclideanGCDRecursive(first, second);
-        System.out.printf("GCD of %d and %d is : %d by recursive algo.\n", first, 
+        System.out.printf("GCD of %d and %d is : %d by recursive algo.\n", first,
                                                                         second, answerRecursive);
-        System.out.printf("GCD of %d and %d is : %d by iterative algo.\n", first, 
+        System.out.printf("GCD of %d and %d is : %d by iterative algo.\n", first,
                                                                         second, answerIterative);
     }
 }

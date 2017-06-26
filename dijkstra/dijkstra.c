@@ -1,8 +1,8 @@
 /*
-*  Following implementation of dijsktra's algorithm prints the minimum distance from given source to destination using adjacency matrix.
-*  Time complexity : O(V^2).
-*  Space Complexity : O(V).
-*/
+ *  Following implementation of dijsktra's algorithm prints the minimum distance from given source to destination using adjacency matrix.
+ *  Time complexity : O(V^2).
+ *  Space Complexity : O(V).
+ */
 
 #include <stdio.h>
 #include <limits.h>	// For using INT_MAX
@@ -16,7 +16,7 @@
 int minimum_distance(const int min_distances[], const bool shortest_paths[]) {
 	int i;
 	int minimum = INFINITY, index;
-	for (int i = 0; i < VERTICES; ++i) {
+	for (i = 0; i < VERTICES; ++i) {
 		if (!shortest_paths[i] && min_distances[i] <= minimum) {
 			minimum = min_distances[i];
 			index = i;
@@ -50,7 +50,7 @@ int dijkstra(const int graph[VERTICES][VERTICES], int souce, int destination) {
 int main() {
 	int source = 0;
 	int destination = 4;
-	int graph[VERTICES][VERTICES] = { 
+	const int graph[VERTICES][VERTICES] = {
 		{0, 4, 0, 0, 0, 0, 0, 8},
 		{4, 0, 8, 0, 0, 0, 0, 11},
 		{0, 8, 0, 7, 0, 4, 0, 0},

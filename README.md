@@ -15,40 +15,42 @@ Community (college) maintained list of Algorithms and Data Structures implementa
 
 | Algorithm | C | CPP | Java | Python | Golang | JavaScript |
 |:--------------|:----------------:|:----------------:|:----------------:|:-----------------:|:-----------------:|:-----------------:|
-| [Bin Sort](http://www.cdn.geeksforgeeks.org/bucket-sort-2/)| | |[\[X\]](bin_sort/BinSort.java) | [\[X\]](bin_sort/bin_sort.py) | | |
-| [Binary Search](https://en.wikipedia.org/wiki/Binary_search_algorithm) | [\[X\]](binary_search/binary_search.c) | | [\[X\]](binary_search/BinarySearch.java) | [\[X\]](binary_search/binary_search.py) | [\[X\]](binary_search/binary_search.go) | |
-| [Coin Change Problem](http://www.algorithmist.com/index.php/Coin_Change) | [\[X\]](coin_change_problem/coin_change_problem.c) | | | | | |
-| [Counting Sort](http://www.geeksforgeeks.org/counting-sort/)| [\[X\]](counting_sort/counting_sort.c) | | [\[X\]](counting_sort/CountingSort.java) | | | |
-| [Depth First Traversal](http://www.geeksforgeeks.org/depth-first-traversal-for-a-graph/) | | | [\[X\]](depth_first_traversal/DepthFirstTraversal.java) | | | |
-| [Dijkstra Algorithm](https://en.wikipedia.org/wiki/Dijkstra's_algorithm/) | [\[X\]](dijkstra/dijkstra.c) | | [\[X\]](dijkstra/Dijkstra.java) | | | |
-| [Euclidean GCD](https://en.wikipedia.org/wiki/Euclidean_algorithm) | [\[X\]](euclidean_gcd/euclidean_gcd.c) | | [\[X\]](euclidean_gcd/EuclideanGCD.java) | [\[X\]](euclidean_gcd/euclidean_gcd.py) | | |
-| [Exponentation by Squaring](https://en.wikipedia.org/wiki/Exponentiation_by_squaring) | [\[X\]](exponentation_by_squaring/exponentation_by_squaring.c) |||| | |
-| [Heap Sort](https://en.wikipedia.org/wiki/Heapsort) | [\[X\]](heap_sort/heap_sort.c) | | [\[X\]](heap_sort/HeapSort.java) | [\[X\]](heap_sort/heap_sort.py) | | |
-| [Insertion Sort](https://en.wikipedia.org/wiki/Insertion_sort) | [\[X\]](insertion_sort/insertion_sort.c) | | [\[X\]](insertion_sort/InsertionSort.java)| [\[X\]](insertion_sort/insertion_sort.py) | [\[X\]](insertion_sort/insertion_sort.go) | |
-| [k-NN](https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm) | | | | [\[X\]](k_nn/k_nn.py) | | |
-| [Largest Sum Contiguous Subarray](http://www.geeksforgeeks.org/largest-sum-contiguous-subarray/) | [\[X\]](largest_sum_contiguous_subarray/largestSumContiguousSubarray.c) | | [\[X\]](largest_sum_contiguous_subarray/LargestSumContiguousSubarray.java) | | [\[X\]](largest_sum_contiguous_subarray/largestSumContiguousSubarray.go) | |
-| [Linear Search](https://en.wikipedia.org/wiki/Linear_search) | [\[X\]](linear_search/linear_search.c) | | [\[X\]](linear_search/LinearSearch.java) | [\[X\]](linear_search/linear_search.py) | [\[X\]](linear_search/linear-search.go) | |
-| [Longest Common Subsequence](http://www.geeksforgeeks.org/dynamic-programming-set-4-longest-common-subsequence) | [\[X\]](longest_common_subsequence/longestCommonSubsequence.c) | | [\[X\]](longest_common_subsequence/LongestCommonSubsequence.java) | | [\[X\]](longest_common_subsequence/longestCommonSubsequence.go) | |
-| [Merge Sort](https://www.khanacademy.org/computing/computer-science/algorithms/merge-sort/a/overview-of-merge-sort) | [\[X\]](merge_sort/merge_sort.c) | | [\[X\]](merge_sort/MergeSort.java) | [\[X\]](merge_sort/merge_sort.py) | | |
-| [Modular Exponential](http://www.geeksforgeeks.org/modular-exponentiation-power-in-modular-arithmetic/) | [\[X\]](modular_exponential/modular_exponential.c) | | [\[X\]](modular_exponential/ModularExponential.java) | [\[X\]](modular_exponential/modular_exponential.py) | [\[X\]](modular_exponential/modular_exponential.go) | |
-| [N-Queen Problem](https://en.wikipedia.org/wiki/Eight_queens_puzzle) | | [\[X\]](n_queen_problem/NQueenProblem.cpp) | [\[X\]](n_queen_problem/NQueenProblem.java) | | | |
-| [Prime Factor](https://en.wikipedia.org/wiki/Prime_factor) | [\[X\]](prime_factor/prime_factor.c) | | | | | |
-| [Prims](https://en.wikipedia.org/wiki/Prim%27s_algorithm) | [\[X\]](prims/prims.c) | | [\[X\]](prims/Prims.java) | | | |
-| [Quick Select](https://en.wikipedia.org/wiki/Quickselect) | [\[X\]](quick_select/quick_select.c) | | | | | |
-| [Quicksort](https://en.wikipedia.org/wiki/Quicksort) | [\[X\]](quicksort/quicksort.c) | | [\[X\]](quicksort/QuickSort.java) | [\[X\]](quicksort/quick_sort.py) | | |
-| [Rod Cutting Problem](http://www.geeksforgeeks.org/dynamic-programming-set-13-cutting-a-rod/) | [\[X\]](rod_cutting_problem/rod_cutting.c) | | [\[X\]](rod_cutting_problem/RodCutting.java) | [\[X\]](rod_cutting_problem/rod_cutting.py) | [\[X\]](rod_cutting_problem/rod_cutting.go) | |
-| [Shell Sort](https://en.wikipedia.org/wiki/Shellsort) | | [\[X\]](shell_sort/ShellSort.cpp) | | [\[X\]](/shell_sort/shell_sort.py) | [\[X\]](shell_sort/shell_sort.go) | |
-| [Sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes) | [\[X\]](sieve_of_eratosthenes/sieveOfEratosthenes.c) | | [\[X\]](sieve_of_eratosthenes/SieveOfEratosthenes.java) | [\[X\]](sieve_of_eratosthenes/sieve_of_eratosthenes.py) | [\[X\]](sieve_of_eratosthenes/sieve_of_eratosthenes.go) | |
+| [Bin Sort](http://www.cdn.geeksforgeeks.org/bucket-sort-2/)| | |[:white_check_mark:](bin_sort/BinSort.java) | [:white_check_mark:](bin_sort/bin_sort.py) | | |
+| [Binary Search](https://en.wikipedia.org/wiki/Binary_search_algorithm) | [:white_check_mark:](binary_search/binary_search.c) | | [:white_check_mark:](binary_search/BinarySearch.java) | [:white_check_mark:](binary_search/binary_search.py) | [:white_check_mark:](binary_search/binary_search.go) | [:white_check_mark:](binary_search/binarySearch.js) |
+| [Coin Change Problem](http://www.algorithmist.com/index.php/Coin_Change) | [:white_check_mark:](coin_change_problem/coin_change_problem.c) | | [:white_check_mark:](coin_change_problem/CoinChange.java) | [:white_check_mark:](coin_change_problem/coin_change_problem.py) | | [:white_check_mark:](coin_change_problem/coinChangeProblem.js) |
+| [Counting Sort](http://www.geeksforgeeks.org/counting-sort/)| [:white_check_mark:](counting_sort/counting_sort.c) | | [:white_check_mark:](counting_sort/CountingSort.java) | | [:white_check_mark:](counting_sort/counting_sort.go) | |
+| [Depth First Traversal](http://www.geeksforgeeks.org/depth-first-traversal-for-a-graph/) | | | [:white_check_mark:](depth_first_traversal/DepthFirstTraversal.java) | | | |
+| [Dijkstra Algorithm](https://en.wikipedia.org/wiki/Dijkstra's_algorithm) | [:white_check_mark:](dijkstra/dijkstra.c) | | [:white_check_mark:](dijkstra/Dijkstra.java) | [:white_check_mark:](dijkstra/dijkstra.py) | | |
+| [Euclidean GCD](https://en.wikipedia.org/wiki/Euclidean_algorithm) | [:white_check_mark:](euclidean_gcd/euclidean_gcd.c) | | [:white_check_mark:](euclidean_gcd/EuclideanGCD.java) | [:white_check_mark:](euclidean_gcd/euclidean_gcd.py) | | [:white_check_mark:](euclidean_gcd/euclideanGCD.js) |
+| [Exponentiation by Squaring](https://en.wikipedia.org/wiki/Exponentiation_by_squaring) | [:white_check_mark:](exponentiation_by_squaring/exponentiation_by_squaring.c) | | [:white_check_mark:](exponentiation_by_squaring/ExponentiationBySquaring.java) | [:white_check_mark:](exponentiation_by_squaring/exponentiation_by_squaring.py) | [:white_check_mark:](exponentiation_by_squaring/exponentiation_by_squaring.go) | [:white_check_mark:](exponentiation_by_squaring/exponentiationBySquaring.js) |
+| [Heap Sort](https://en.wikipedia.org/wiki/Heapsort) | [:white_check_mark:](heap_sort/heap_sort.c) | | [:white_check_mark:](heap_sort/HeapSort.java) | [:white_check_mark:](heap_sort/heap_sort.py) | | |
+| [Insertion Sort](https://en.wikipedia.org/wiki/Insertion_sort) | [:white_check_mark:](insertion_sort/insertion_sort.c) | | [:white_check_mark:](insertion_sort/InsertionSort.java)| [:white_check_mark:](insertion_sort/insertion_sort.py) | [:white_check_mark:](insertion_sort/insertion_sort.go) | |
+| [k-NN](https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm) | | | | [:white_check_mark:](k_nn/k_nn.py) | | |
+| [Largest Sum Contiguous Subarray](http://www.geeksforgeeks.org/largest-sum-contiguous-subarray/) | [:white_check_mark:](largest_sum_contiguous_subarray/largestSumContiguousSubarray.c) | | [:white_check_mark:](largest_sum_contiguous_subarray/LargestSumContiguousSubarray.java) | [:white_check_mark:](largest_sum_contiguous_subarray/largest_sum_contiguous_subarray.py) | [:white_check_mark:](largest_sum_contiguous_subarray/largestSumContiguousSubarray.go) | |
+| [Linear Search](https://en.wikipedia.org/wiki/Linear_search) | [:white_check_mark:](linear_search/linear_search.c) | | [:white_check_mark:](linear_search/LinearSearch.java) | [:white_check_mark:](linear_search/linear_search.py) | [:white_check_mark:](linear_search/linear-search.go) | [:white_check_mark:](linear_search/linearSearch.js) |
+| [Longest Common Subsequence](http://www.geeksforgeeks.org/dynamic-programming-set-4-longest-common-subsequence) | [:white_check_mark:](longest_common_subsequence/longestCommonSubsequence.c) | | [:white_check_mark:](longest_common_subsequence/LongestCommonSubsequence.java) | [:white_check_mark:](longest_common_subsequence/longest_common_subsequence.py) | [:white_check_mark:](longest_common_subsequence/longestCommonSubsequence.go) | |
+| [Merge Sort](https://www.khanacademy.org/computing/computer-science/algorithms/merge-sort/a/overview-of-merge-sort) | [:white_check_mark:](merge_sort/merge_sort.c) | | [:white_check_mark:](merge_sort/MergeSort.java) | [:white_check_mark:](merge_sort/merge_sort.py) | | |
+| [Modular Exponential](http://www.geeksforgeeks.org/modular-exponentiation-power-in-modular-arithmetic/) | [:white_check_mark:](modular_exponential/modular_exponential.c) | | [:white_check_mark:](modular_exponential/ModularExponential.java) | [:white_check_mark:](modular_exponential/modular_exponential.py) | [:white_check_mark:](modular_exponential/modular_exponential.go) | [:white_check_mark:](modular_exponential/modularExponential.js) |
+| [N-Queen Problem](https://en.wikipedia.org/wiki/Eight_queens_puzzle) | | [:white_check_mark:](n_queen_problem/NQueenProblem.cpp) | [:white_check_mark:](n_queen_problem/NQueenProblem.java) | [:white_check_mark:](n_queen_problem/n_queen_problem.py) | | |
+| [Prime Factor](https://en.wikipedia.org/wiki/Prime_factor) | [:white_check_mark:](prime_factor/prime_factor.c) | | [:white_check_mark:](prime_factor/PrimeFactor.java) | [:white_check_mark:](prime_factor/prime_factor.py) | [:white_check_mark:](prime_factor/prime_factor.go) | [:white_check_mark:](prime_factor/primeFactor.js) |
+| [Prims](https://en.wikipedia.org/wiki/Prim%27s_algorithm) | [:white_check_mark:](prims/prims.c) | | [:white_check_mark:](prims/Prims.java) | | | |
+| [Quick Select](https://en.wikipedia.org/wiki/Quickselect) | [:white_check_mark:](quick_select/quick_select.c) | | [:white_check_mark:](quick_select/QuickSelect.java) | [:white_check_mark:](quick_select/quick_select.py) | | |
+| [Quicksort](https://en.wikipedia.org/wiki/Quicksort) | [:white_check_mark:](quicksort/quicksort.c) | | [:white_check_mark:](quicksort/QuickSort.java) | [:white_check_mark:](quicksort/quick_sort.py) | [:white_check_mark:](quicksort/quick_sort.go) | |
+| [Rod Cutting Problem](http://www.geeksforgeeks.org/dynamic-programming-set-13-cutting-a-rod/) | [:white_check_mark:](rod_cutting_problem/rod_cutting.c) | | [:white_check_mark:](rod_cutting_problem/RodCutting.java) | [:white_check_mark:](rod_cutting_problem/rod_cutting.py) | [:white_check_mark:](rod_cutting_problem/rod_cutting.go) | |
+| [Shell Sort](https://en.wikipedia.org/wiki/Shellsort) | | [:white_check_mark:](shell_sort/ShellSort.cpp) | | [:white_check_mark:](/shell_sort/shell_sort.py) | [:white_check_mark:](shell_sort/shell_sort.go) | [:white_check_mark:](shell_sort/shellSort.js) |
+| [Sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes) | [:white_check_mark:](sieve_of_eratosthenes/sieveOfEratosthenes.c) | | [:white_check_mark:](sieve_of_eratosthenes/SieveOfEratosthenes.java) | [:white_check_mark:](sieve_of_eratosthenes/sieve_of_eratosthenes.py) | [:white_check_mark:](sieve_of_eratosthenes/sieve_of_eratosthenes.go) | [:white_check_mark:](sieve_of_eratosthenes/sieveOfEratosthenes.js) |
+| [Sleep Sort](http://www.geeksforgeeks.org/sleep-sort-king-laziness-sorting-sleeping/) | | [:white_check_mark:](sleep_sort/sleep_sort.cpp) | | [:white_check_mark:](sleep_sort/sleep_sort.py) | | |
 
 
 ## Implemented Data Structures
 
 | Data Structure | C | CPP | Java | Python | Golang | JavaScript |
 |:--------------|:----------------:|:----------------:|:----------------:|:-----------------:|:-----------------:|:-----------------:|
-| [AVL Tree](http://www.geeksforgeeks.org/avl-tree-set-1-insertion)| | |[\[X\]](avl_tree/AvlTree.java) | | | |
-| [Binary Search Tree](https://en.wikipedia.org/wiki/Binary_search_tree) | | | [\[X\]](binary_search_tree/BinarySearchTree.java) | | | |
-| [Linked List](https://en.wikipedia.org/wiki/Linked_list) | | | [\[X\]](linked_list/LinkedList.java) | | [\[X\]](linked_list/linked_list.go) | |
-| [Stack](https://en.wikipedia.org/wiki/Stack_(abstract_data_type)) | [\[X\]](stack/stack.c) | | [\[X\]](stack/Stack.java) | [\[X\]](stack/stack.py) | [\[X\]](stack/stack.go) | [\[X\]](stack/stack.js) |
+| [AVL Tree](http://www.geeksforgeeks.org/avl-tree-set-1-insertion)| | |[:white_check_mark:](avl_tree/AvlTree.java) | | | |
+| [Binary Search Tree](https://en.wikipedia.org/wiki/Binary_search_tree) | | | [:white_check_mark:](binary_search_tree/BinarySearchTree.java) | | | |
+| [Linked List](https://en.wikipedia.org/wiki/Linked_list) | | | [:white_check_mark:](linked_list/LinkedList.java) | | [:white_check_mark:](linked_list/linked_list.go) | |
+| [Stack](https://en.wikipedia.org/wiki/Stack_(abstract_data_type)) | [:white_check_mark:](stack/stack.c) | | [:white_check_mark:](stack/Stack.java) | [:white_check_mark:](stack/stack.py) | [:white_check_mark:](stack/stack.go) | [:white_check_mark:](stack/stack.js) |
+| [Trie](https://en.wikipedia.org/wiki/Trie) | | [:white_check_mark:](trie/trie.cpp) | | | | |
 
 
 ## How to run them
