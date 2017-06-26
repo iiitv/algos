@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class PrimeFactor {
 
     public static ArrayList<Integer> primeFactor(int n) {
-        ArrayList<Integer> primeNo = new ArrayList();
+        ArrayList<Integer> primeNo = new ArrayList<Integer>();
         for (int i = 2; i <= n; i++) {
             if (n % i == 0) {
                 primeNo.add(i);
