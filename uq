@@ -1,0 +1,2885 @@
+[33mcommit b99da59e0c7c8b211b9ae5cf84cf58ab456357c2[m
+Author: TarunISCO <201552063@iiitvadodara.ac.in>
+Date:   Fri Jun 16 16:27:40 2017 +0530
+
+    Extra line in readme removed
+
+ README.md | 1 [31m-[m
+ 1 file changed, 1 deletion(-)
+
+[33mcommit dc38cf88f45aae2c2272858d648dd97b374d1a76[m
+Author: TarunISCO <201552063@iiitvadodara.ac.in>
+Date:   Fri Jun 16 14:32:45 2017 +0530
+
+    replaced tabs with spaces
+
+ insertion_sort/insertion_sort.py | 30 [32m+++++++++++++++[m[31m---------------[m
+ 1 file changed, 15 insertions(+), 15 deletions(-)
+
+[33mcommit f7b1159c8f35ee586bace9db1c4de7a0dddf358c[m
+Author: TarunISCO <201552063@iiitvadodara.ac.in>
+Date:   Wed Jun 14 12:07:56 2017 +0530
+
+    issues in readme solved
+
+ README.md                        | 23 [32m+[m[31m----------------------[m
+ insertion_sort/insertion_sort.py |  4 [32m++[m[31m--[m
+ 2 files changed, 3 insertions(+), 24 deletions(-)
+
+[33mcommit 41c0283d05868ae7460b53f913644ceda7240649[m
+Author: TarunISCO <201552063@iiitvadodara.ac.in>
+Date:   Tue Jun 13 19:56:06 2017 +0530
+
+    unnecessary files removed
+
+ insertion_sort/insertion_sort.py | 30 [32m+++++++++++++++[m[31m---------------[m
+ 1 file changed, 15 insertions(+), 15 deletions(-)
+
+[33mcommit 620488803cd7b103abdeb6b25d28bbae41934321[m
+Merge: b0fd22d 7fdb1bf
+Author: TarunISCO <201552063@iiitvadodara.ac.in>
+Date:   Tue Jun 13 12:56:08 2017 +0530
+
+    unnecessory files removed
+
+[33mcommit 7fdb1bfefa2ec9880c65cd470224fde4a3a4e811[m
+Author: Aashutosh Rathi <aashutoshrathi@gmail.com>
+Date:   Tue Jun 13 12:10:05 2017 +0530
+
+    Added Modular Exponential [Go] (#267)
+    
+    * Added Modular Exponential [Go]
+    
+    changes suggested by travis
+    
+    comment edited
+    
+    Added Linked List [Go] (#232)
+    
+    * [Go] Added Linked List implementation
+    
+    * Added Go Linked List link to README.md
+    
+    * Modified linked_list.go to pass golint
+    
+    * Ran gofmt on linked_list.go
+    
+    * Fixed error messages to comply with gofmt bear
+    
+    * Added driver function to linked_list.go
+    
+    * changed int to int64
+
+ README.md                                  |  2 [32m+[m[31m-[m
+ modular_exponential/modular_exponential.go | 23 [32m+++++++++++++++++++++++[m
+ 2 files changed, 24 insertions(+), 1 deletion(-)
+
+[33mcommit 1460b68dbc12a26d066346df3859aeabd57a2063[m
+Author: Pratyush Singh <singh.pratyush96@gmail.com>
+Date:   Tue Jun 13 07:28:08 2017 +0530
+
+    Fix #268: Add Stack [C] (#270)
+
+ README.md     |  2 [32m+[m[31m-[m
+ stack/stack.c | 57 [32m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++[m
+ 2 files changed, 58 insertions(+), 1 deletion(-)
+
+[33mcommit d8e9189bf07a208b2dff98728cc46d9e3126356c[m
+Author: Monal Shadi <monalshadi16@gmail.com>
+Date:   Mon Jun 12 23:36:17 2017 +0530
+
+    Added Insertion Sort [Go] (#252)
+    
+    * Added Insertion Sort [Go] Fixed #242
+    
+    * fixed travis issues
+    
+    * semicolon remove => fixes travis build
+
+ README.md                        |  2 [32m+[m[31m-[m
+ insertion_sort/insertion_sort.go | 25 [32m+++++++++++++++++++++++++[m
+ 2 files changed, 26 insertions(+), 1 deletion(-)
+
+[33mcommit 303ddf5ee84c25e036fdafbbb961e9673b48520e[m
+Author: Stefano Fogarollo <sirfoga@protonmail.com>
+Date:   Mon Jun 12 20:03:56 2017 +0200
+
+    Added bin sort [python] (#261)
+    
+    * added bin sort [python]
+    
+    * added bin sort [python] entry in README
+    
+    * added get_buckets(..) helper method
+    
+    * Removed ugly math.floor(..) and a.append(..)
+    
+    * Prettified placing back buckets in array
+    
+    * fitted in one line buckets filling
+    
+    * restored use of int(..) to handle float inputs
+    
+    * fixed theta notation in alg complexity
+
+ README.md            |  2 [32m+[m[31m-[m
+ bin_sort/bin_sort.py | 84 [32m++++++++++++++++++++++++++++++++++++++++++++++++++++[m
+ 2 files changed, 85 insertions(+), 1 deletion(-)
+
+[33mcommit 96c07d0b8ddbcc7c1d0044c9ce91a43b1c8f90f9[m
+Author: Stanislav Kozlovski <familyguyuser192@windowslive.com>
+Date:   Mon Jun 12 20:59:42 2017 +0300
+
+    Added Linked List [Go] (#232)
+    
+    * [Go] Added Linked List implementation
+    
+    * Added Go Linked List link to README.md
+    
+    * Modified linked_list.go to pass golint
+    
+    * Ran gofmt on linked_list.go
+    
+    * Fixed error messages to comply with gofmt bear
+    
+    * Added driver function to linked_list.go
+
+ README.md                  |   2 [32m+[m[31m-[m
+ linked_list/linked_list.go | 115 [32m+++++++++++++++++++++++++++++++++++++++++++++[m
+ 2 files changed, 116 insertions(+), 1 deletion(-)
+
+[33mcommit a33f730390f9ec7a301218c29f2f13ced778b2f0[m
+Author: Shagun Khemka <shagun.khemka60@gmail.com>
+Date:   Mon Jun 12 20:11:11 2017 +0530
+
+    Added 'how to run them' in README.md (#251)
+    
+    * Added 'how to run them' in README.md
+    
+    Fixes #243
+
+ README.md | 12 [32m++++++++++++[m
+ 1 file changed, 12 insertions(+)
+
+[33mcommit fed2b09d806198a8147ac71e4e4c565dea649fc3[m
+Author: Aashutosh Rathi <aashutoshrathi@gmail.com>
+Date:   Mon Jun 12 19:18:45 2017 +0530
+
+    Added Rod Cutting [Go] (#263), fixes #254
+    
+    updated as per Travis
+    
+    updated as per Travis 2
+    
+    removed blank line
+
+ README.md                          |  2 [32m+[m[31m-[m
+ rod_cutting_problem/rod_cutting.go | 26 [32m++++++++++++++++++++++++++[m
+ 2 files changed, 27 insertions(+), 1 deletion(-)
+
+[33mcommit 6b96fbe9ffcd75448d0d4d8257f83557c87064be[m
+Author: Aashutosh Rathi <aashutoshrathi@gmail.com>
+Date:   Mon Jun 12 16:23:08 2017 +0530
+
+    Fix #255: Add Issue Template (#260)
+    
+    changes done
+
+ ISSUE_TEMPLATE.md | 11 [32m+++++++++++[m
+ 1 file changed, 11 insertions(+)
+
+[33mcommit 0817575140ea281e9fef1539e14fce4cab40ca0a[m
+Author: Stefano Fogarollo <sirfoga@protonmail.com>
+Date:   Mon Jun 12 12:50:18 2017 +0200
+
+    Fix #248: Add Heap Sort [Python] (#249)
+    
+    * Added Heap Sort [Python]
+    
+    * fixed pep8 in heap_sort/heap_sort.py
+    
+    * Fixed code style in len(array) // 2
+    
+    * Added entry in README.md
+    
+    * Added get_children_of_node()
+    
+    * Added find_largest_in_family(..)
+    
+    * fixed spurious non-pep8 line between methods
+    
+    * removed mistake empty file
+    
+    * changed range(..) to 0 <= .. <= len(..)
+    
+    * unsorted list  made visually better
+    
+    * removed global vars
+    
+    * fixed spurious non-pep8 line between methods
+
+ README.md              |   2 [32m+[m[31m-[m
+ heap_sort/heap_sort.py | 128 [32m+++++++++++++++++++++++++++++++++++++++++++++++++[m
+ 2 files changed, 129 insertions(+), 1 deletion(-)
+
+[33mcommit b0fd22d6c61b54342dba264ce357f31555023206[m
+Author: TarunISCO <201552063@iiitvadodara.ac.in>
+Date:   Mon Jun 12 15:11:08 2017 +0530
+
+    unnecessary files removed
+
+ breadth_first_search/BreadhFirstSearch     | Bin [31m22928[m -> [32m0[m bytes
+ breadth_first_search/BreadhFirstSearch.cpp |  63 [31m-----------------------------[m
+ 2 files changed, 63 deletions(-)
+
+[33mcommit 3540973bbda8897ecd1a9cb710ccc97cbd9bb518[m
+Author: TarunISCO <201552063@iiitvadodara.ac.in>
+Date:   Mon Jun 12 14:49:55 2017 +0530
+
+    indentation improved
+
+ .coafile                                       |  25 [32m+++[m
+ .codeclimate.yml                               |  20 [32m++[m
+ .editorconfig                                  |  30 [32m+++[m
+ .travis.yml                                    |   6 [32m+[m
+ CONTRIBUTING.md                                |   3 [32m+[m[31m-[m
+ PULL_REQUEST_TEMPLATE.md                       |   2 [32m+[m[31m-[m
+ README.md                                      |  65 [32m+++[m[31m---[m
+ avl_tree/AvlTree.java                          | 272 [32m+++++++++++++++++++++++++[m
+ bin_sort/BinSort.java                          |  75 [32m+++++++[m
+ binary_search/binary_search.c                  |  56 [32m++++[m[31m-[m
+ binary_search/binary_search.go                 |  31 [32m+++[m
+ breadth_first_search/BreadhFirstSearch         | Bin [31m0[m -> [32m22928[m bytes
+ breadth_first_search/BreadhFirstSearch.cpp     |   1 [32m+[m
+ dijkstra/dijkstra.c                            |  65 [32m++++++[m
+ insertion_sort/insertion_sort.py               |  10 [32m+[m[31m-[m
+ merge_sort/merge_sort.py                       |   1 [32m+[m
+ modular_exponential/modular_exponential.c      |  23 [32m+++[m
+ modular_exponential/modular_exponential.py     |   1 [32m+[m
+ n_queen_problem/NQueenProblem.java             |  64 [32m++++++[m
+ quicksort/quick_sort.py                        |   1 [32m+[m
+ rod_cutting_problem/rod_cutting.c              |  32 [32m+++[m
+ rod_cutting_problem/rod_cutting.py             |  36 [32m++++[m
+ shell_sort/ShellSort.cpp                       |  43 [32m++++[m
+ shell_sort/shell_sort.go                       |  28 [32m+++[m
+ shell_sort/shell_sort.py                       |  41 [32m++++[m
+ sieve_of_eratosthenes/SieveOfEratosthenes.java |  35 [32m++++[m
+ stack/stack.go                                 |  39 [32m++++[m
+ stack/stack.js                                 |  37 [32m++++[m
+ stack/stack.py                                 |   1 [32m+[m
+ 29 files changed, 1000 insertions(+), 43 deletions(-)
+
+[33mcommit 21dd266cef95a8f1c8f800f4a5c06daec4f8f801[m
+Author: Aashutosh Rathi <aashutoshrathi@gmail.com>
+Date:   Mon Jun 12 14:28:53 2017 +0530
+
+    fix type in PR template (#258)
+
+ PULL_REQUEST_TEMPLATE.md | 2 [32m+[m[31m-[m
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+[33mcommit fd8de740fccde6370b00701d449d80f7df389009[m
+Author: Harsh Khatore <HarshKhatore@users.noreply.github.com>
+Date:   Mon Jun 12 13:46:51 2017 +0530
+
+    Added RecursiveBinarySearch [ C ] (#246)
+    
+    * added binary_search.cpp
+    
+    A program in C++ to perform a recursive binary search.
+    
+    * Create README.md
+    
+    * Created binary_search.cpp
+    
+    C++ implementation of recursive binary search.
+    
+    * Deleted binary_search.cpp
+    
+    Adding this program to the recursive_binary_search directory.
+    
+    * Update binary_search.cpp
+    
+    Updated the program for recursive binary search [C++].
+    
+    * Updated the link for binary_search.cpp [C++]
+    
+    Updated the link for recursive binary search because it was added to a new directory.
+    
+    * Update BinarySearch.cpp
+    
+    Corrected the indentation according to the standards.
+    
+    * Updated binary_search.c [ C ]
+    
+    Added recursive implementation to binary_search.c [ C ]
+    
+    * Delete binary_search.cpp
+    
+    Added it to binary_search.c
+    
+    * Updated README.md
+    
+    Removed binary_search link for C++ because the file was merged with binary_search.c [ C ]
+    
+    * Update binary_search.c
+    
+    Updated the name of binarySearch function to recursive_binary_search
+    
+    * Update binary_search.c
+    
+    Corrected indentation in recursive_binary_search.c
+    
+    * Update binary_search.c
+    
+    Updated with proper brackets
+    
+    * Update binary_search.c
+    
+    Added required white spaces.
+    
+    * Updated binary_search.c
+    
+    Whitespace around binary operator
+    
+    * Update binary_search.c
+    
+    Corrected various syntactical inaccuracy
+    
+    * Update binary_search.c
+    
+    Corrected calling for recursive_binary_search function
+    
+    * Update binary_search.c
+    
+    Resolved the variable pos issue.
+    
+    * Update binary_search.c
+    
+    Resolved scope for variable pos
+    
+    * Update binary_search.c
+    
+    Resolved issues relating to format.
+
+ binary_search/binary_search.c | 56 [32m+++++++++++++++++++++++++++++++++++++[m[31m------[m
+ 1 file changed, 49 insertions(+), 7 deletions(-)
+
+[33mcommit 39de02d610ded1bacfb9dc5efae0b7888f360190[m
+Author: Monal Shadi <monalshadi16@gmail.com>
+Date:   Mon Jun 12 08:41:59 2017 +0530
+
+    Added Sieve of Eratosthenes [Java] (#245), fixes #234
+    
+    * Update CONTRIBUTING.md for mentioning accepted languages + 1 more (#218), fixes #216
+    
+    * Update CONTRIBUTING.md for mentioning accepted languages and meaningful function/method names.
+    
+    * Added Sieve of Eratosthenes [Java] Fixes #234
+    
+    * newline at end
+    
+    * added comments
+
+ README.md                                      |  3 [32m++[m[31m-[m
+ sieve_of_eratosthenes/SieveOfEratosthenes.java | 35 [32m++++++++++++++++++++++++++[m
+ 2 files changed, 37 insertions(+), 1 deletion(-)
+
+[33mcommit 4069dfdf202e23af43740e6f29e9ce1ba6d6f089[m
+Author: Avi Aryan <avi.aryan123@gmail.com>
+Date:   Mon Jun 12 07:18:27 2017 +0530
+
+    fix lint issues in .codecilmate.yml
+
+ .codeclimate.yml | 8 [32m++++[m[31m----[m
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+[33mcommit f44f7695a70af9bd3e4061cad94ba79a29e90762[m
+Author: Avi Aryan <avi.aryan123@gmail.com>
+Date:   Mon Jun 12 07:09:08 2017 +0530
+
+    add .codeclimate.yml
+
+ .codeclimate.yml | 20 [32m++++++++++++++++++++[m
+ 1 file changed, 20 insertions(+)
+
+[33mcommit 6ef09b1ba57ce4c93bd36094261d227c4361e2fd[m
+Author: Avi Aryan <avi.aryan123@gmail.com>
+Date:   Sun Jun 11 18:19:44 2017 +0530
+
+    fix mis-aligned badges
+
+ README.md | 1 [32m+[m
+ 1 file changed, 1 insertion(+)
+
+[33mcommit 643704b5221caab26f91d606b79f53a266ccaa60[m
+Author: Pratyush Singh <singh.pratyush96@gmail.com>
+Date:   Sun Jun 11 18:07:05 2017 +0530
+
+    Add Stack [JavaScript] (#240), fixes #239
+    
+    Edit .editorconfig for JS
+
+ .editorconfig  |  5 [32m+++++[m
+ README.md      | 64 [32m+++++++++++++++++++++++++++++[m[31m-----------------------------[m
+ stack/stack.js | 37 [32m+++++++++++++++++++++++++++++++++[m
+ 3 files changed, 74 insertions(+), 32 deletions(-)
+
+[33mcommit 297da0f966d3f1a8bbb4e3e4f5e2d7b7c22dfb9a[m
+Author: Aashutosh Rathi <aashutoshrathi@gmail.com>
+Date:   Sun Jun 11 14:53:04 2017 +0530
+
+    Fix #241: Add HappinessLintBear to .coafile (#244)
+    
+    * HappinessLintBear added
+    
+    * added badge and installed happiness
+    
+    * installed node.js to travis
+    
+    * nodeJS package install
+    
+    * nodeJS package install - 2
+    
+    * nodeJS package install - 3
+    
+    * nodeJS package install - 4
+    
+    * nodeJS package install - 5
+    
+    * nodeJS package install - 6
+    
+    * npm install
+    
+    * Create .travis.yml
+    
+    * Make dist as trusty
+    
+    * Remove node_js descriptor and add version log
+    
+    * Update .travis.yml
+
+ .coafile    | 5 [32m+++++[m
+ .travis.yml | 5 [32m+++++[m
+ README.md   | 1 [32m+[m
+ 3 files changed, 11 insertions(+)
+
+[33mcommit 7c61a361e55325d135057bb23b313c515ca7b466[m
+Author: Heet Sankesara <heetsankesara3@gmail.com>
+Date:   Sun Jun 11 13:53:06 2017 +0530
+
+    Added AVL Tree [Java] (#196)
+    
+    * Add AVL Tree[JAVA]
+    Add AVL tree
+    
+    Update Readme
+    
+    Update README.md
+    
+    Update README.md
+    
+    * Some Minor Changes
+    
+    * Some Minor changes
+    
+    * Throw Exceptions
+    
+    * Add Some Changes
+    
+    * Some minor Changes
+    
+    * Some changes according to @Monal5031
+    
+    * make some changes
+    
+    * Update README.md
+
+ README.md             |   1 [32m+[m
+ avl_tree/AvlTree.java | 272 [32m++++++++++++++++++++++++++++++++++++++++++++++++++[m
+ 2 files changed, 273 insertions(+)
+
+[33mcommit c7464c5a070f83f0ad5a5db855f9d87b84b1ffa8[m
+Author: Aashutosh Rathi <aashutoshrathi@gmail.com>
+Date:   Sun Jun 11 12:52:19 2017 +0530
+
+    Added Binary Search [Go] (#238)
+    
+    minor fixes
+    
+    Changes as per comments
+    
+    minor fix
+    
+    changes suggested by Travis
+    
+    file name changed
+
+ README.md                      |  2 [32m+[m[31m-[m
+ binary_search/binary_search.go | 31 [32m+++++++++++++++++++++++++++++++[m
+ 2 files changed, 32 insertions(+), 1 deletion(-)
+
+[33mcommit e9bf9779e96248d21ea4df2606a73a5c9dc708af[m
+Author: Pratyush Singh <singh.pratyush96@gmail.com>
+Date:   Sat Jun 10 23:21:10 2017 +0530
+
+    Fix #229: Remove pylint
+
+ .coafile | 5 [31m-----[m
+ 1 file changed, 5 deletions(-)
+
+[33mcommit 991ed3b55ca983425039be328dd2599bb25ac928[m
+Author: Monal Shadi <monalshadi16@gmail.com>
+Date:   Sat Jun 10 22:12:23 2017 +0530
+
+    Fix #197: Add Dijkstra [C] (#225)
+    
+    * Update CONTRIBUTING.md for mentioning accepted languages + 1 more (#218), fixes #216
+    
+    * Update CONTRIBUTING.md for mentioning accepted languages and meaningful function/method names.
+    
+    * Added Dijkstra [C]
+    Fixes #197
+    
+    * Made changes
+    
+    * Revert "Update CONTRIBUTING.md for mentioning accepted languages + 1 more (#218), fixes #216"
+    
+    This reverts commit fcc603849ceacb09366ad144a5b3d5a79a0efa15.
+
+ README.md           |  2 [32m+[m[31m-[m
+ dijkstra/dijkstra.c | 65 [32m+++++++++++++++++++++++++++++++++++++++++++++++++++++[m
+ 2 files changed, 66 insertions(+), 1 deletion(-)
+
+[33mcommit 836ec4a97086469a3b8d429537a6bc61f9169dde[m
+Author: Stanislav Kozlovski <familyguyuser192@windowslive.com>
+Date:   Sat Jun 10 19:36:39 2017 +0300
+
+    Fix #226: Add Shell Sort [Python] (#227)
+    
+    * #226 Adds Shell Sort [Python]
+    
+    * Shell Sort [Python] - removed assert statement and empty new line to comply with PEP8
+    
+    * Shell Sort [Python] - small code style changes
+    
+    * Removing trailing whitespace
+    
+    * Updated README.md to add shell sort
+    
+    * Added type hinting to shell sort
+    
+    * Updated shell_sort docstring and type hints
+    
+    * Removed type hinting so that its python 2 compatible
+
+ README.md                |  2 [32m+[m[31m-[m
+ shell_sort/shell_sort.py | 41 [32m+++++++++++++++++++++++++++++++++++++++++[m
+ 2 files changed, 42 insertions(+), 1 deletion(-)
+
+[33mcommit 28f6bb11694249299a2e079ff43f615fa12992bf[m
+Author: Aashutosh Rathi <aashutoshrathi@gmail.com>
+Date:   Sat Jun 10 20:39:10 2017 +0530
+
+    Fix #210: Add Rod Cutting [Python] (#219)
+    
+    * rod cutting [python] added
+    
+    * added spaces around binary operators
+    
+    updated as per linter suggestions
+    
+    * added module docstring
+    
+    * fixes
+    
+    * max over aggregated list taken
+    
+    * minor fix
+    
+    * final changes
+    
+    * Make the default value as the full size of rod
+    
+    * made default rod_len as full rod
+    
+    * fixed as per PEP8
+    
+    * changes as per review
+    
+    * minor fix
+    
+    * added new variable for len(price)
+
+ README.md                          |  2 [32m+[m[31m-[m
+ rod_cutting_problem/rod_cutting.py | 36 [32m++++++++++++++++++++++++++++++++++++[m
+ 2 files changed, 37 insertions(+), 1 deletion(-)
+
+[33mcommit e0faaffaadec8c99af9378d385a528bac16138fe[m
+Author: Aashutosh Rathi <aashutoshrathi@gmail.com>
+Date:   Sat Jun 10 20:33:13 2017 +0530
+
+    Fix #222: Add Haskell and Pylint to .coala (#223)
+    
+    * added haskell and pylint
+    
+    * GhcModBear added
+    
+    * add hlint check
+    
+    * adding numpy to whitelist try 1
+    
+    * adding numpy to whitelist try 2
+    
+    * adding numpy to whitelist try 3
+    
+    * Try 5
+    
+    * reverted attempts
+    
+    * reverted changes final
+
+ .coafile    | 15 [32m+++++++++++++++[m
+ .travis.yml |  1 [32m+[m
+ 2 files changed, 16 insertions(+)
+
+[33mcommit b405d3aad3d9f3ea883d508b993f25622326aee3[m
+Author: Monal Shadi <monalshadi16@gmail.com>
+Date:   Sat Jun 10 01:06:13 2017 +0530
+
+    Update CONTRIBUTING.md (#218), fixes #216
+    
+    * Update CONTRIBUTING.md for mentioning accepted languages and meaningful function/method names.
+
+ CONTRIBUTING.md | 3 [32m++[m[31m-[m
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+[33mcommit c67e482c194780d91a32b98471895b4e1a6ed264[m
+Author: Mohit Kumar Yadav <mohitkyadav@outlook.com>
+Date:   Fri Jun 9 11:32:16 2017 +0530
+
+    Added Shell Sort [Golang] (#217), fixes #203
+    
+    * Added Shel Sort [GoLang]
+    
+    * Function name changed to ShellSort
+    
+    * Exported function comment
+    
+    * Exported func comment on top
+    
+    * Removed empty line
+    
+    * Added changes to README
+    
+    Readme was restored by mistake in a rebase.
+    
+    * Renamed shell_sort.go
+
+ README.md                |  2 [32m+[m[31m-[m
+ shell_sort/shell_sort.go | 28 [32m++++++++++++++++++++++++++++[m
+ 2 files changed, 29 insertions(+), 1 deletion(-)
+
+[33mcommit 251dc20ca9c5597d9dfe357056abc22036e23ea4[m
+Author: Monal Shadi <monalshadi16@gmail.com>
+Date:   Fri Jun 9 08:51:24 2017 +0530
+
+    Fix #220: Remove typing errors in rod_cutting.c (#221)
+
+ rod_cutting_problem/rod_cutting.c | 4 [32m++[m[31m--[m
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+[33mcommit 2d5aa08485d955acf9284d8393f798193abff447[m
+Author: Monal Shadi <monalshadi16@gmail.com>
+Date:   Thu Jun 8 21:17:14 2017 +0530
+
+    Adding Rod Cutting [C] (#214), fixes #209
+    
+    * Add Rod Cutting Problem [C]
+    Fixes #209
+    
+    * changes
+
+ README.md                         |  2 [32m+[m[31m-[m
+ rod_cutting_problem/rod_cutting.c | 32 [32m++++++++++++++++++++++++++++++++[m
+ 2 files changed, 33 insertions(+), 1 deletion(-)
+
+[33mcommit 169fe1d0d75456e38e500b0b7bf6b0e4515b4e8c[m
+Author: Avi Aryan <avi.aryan123@gmail.com>
+Date:   Thu Jun 8 12:25:31 2017 +0530
+
+    Add Stack [Golang]
+    
+    Fixes #202
+
+ README.md      |  2 [32m+[m[31m-[m
+ stack/stack.go | 39 [32m+++++++++++++++++++++++++++++++++++++++[m
+ 2 files changed, 40 insertions(+), 1 deletion(-)
+
+[33mcommit f9856ba366256e7e4cb39a3c7904e5df31b2eca4[m
+Author: Aashutosh Rathi <aashutoshrathi@gmail.com>
+Date:   Thu Jun 8 07:00:03 2017 +0000
+
+    Added Modular Exponential [C] (#211), fixes #208
+    
+    * Mod Exp [C] added
+    
+    { added to if block
+    
+    * base marked as long long to avoid overflow
+
+ README.md                                 |  2 [32m+[m[31m-[m
+ modular_exponential/modular_exponential.c | 23 [32m+++++++++++++++++++++++[m
+ 2 files changed, 24 insertions(+), 1 deletion(-)
+
+[33mcommit 390fb9e89c2a005bce2637118b8d3cabfa7c0544[m
+Author: Monal Shadi <monalshadi16@gmail.com>
+Date:   Thu Jun 8 10:28:34 2017 +0530
+
+    Added travis CI badge to Readme
+    Fixed #206
+
+ README.md | 1 [32m+[m
+ 1 file changed, 1 insertion(+)
+
+[33mcommit 8c9ca7447dfb08a1f71a9f0d7e7dea8ef34a391c[m
+Author: Aashutosh Rathi <aashutoshrathi@gmail.com>
+Date:   Wed Jun 7 07:16:49 2017 -0700
+
+    Added .editorconfig (#205), fixes #199
+    
+    * .editorconfig added
+    
+    * added tab_width
+    
+    changed py acc to pep8
+    
+    * c/c++ and java added
+
+ .editorconfig | 25 [32m+++++++++++++++++++++++++[m
+ 1 file changed, 25 insertions(+)
+
+[33mcommit cc4a8ad0a315f271cc22bb26fbe9e0ead2bfd74b[m
+Author: Mohit Kumar Yadav <mohitkyadav@outlook.com>
+Date:   Wed Jun 7 10:04:26 2017 +0530
+
+    Added Shell Sort [CPP] (#198)
+    
+    * Added shell_sort
+    
+    * Removed `floor()`, following `lowerCamelCase`
+    
+    * safe integer casting
+    
+    * Added compiling description
+    
+    * using tab indentaion
+    
+    * pre-increment
+    
+    * Added print() function
+
+ README.md                |  3 [32m++[m[31m-[m
+ shell_sort/ShellSort.cpp | 43 [32m+++++++++++++++++++++++++++++++++++++++++++[m
+ 2 files changed, 45 insertions(+), 1 deletion(-)
+
+[33mcommit b7d216c9d1318afe78264bcf17607292842434fd[m
+Author: Monal Shadi <monalshadi16@gmail.com>
+Date:   Wed Jun 7 10:03:12 2017 +0530
+
+    Fixed Issues raised by PEP8Bear (#201)
+    
+    Fixes #200
+
+ merge_sort/merge_sort.py                   | 1 [32m+[m
+ modular_exponential/modular_exponential.py | 1 [32m+[m
+ quicksort/quick_sort.py                    | 1 [32m+[m
+ stack/stack.py                             | 1 [32m+[m
+ 4 files changed, 4 insertions(+)
+
+[33mcommit 4a3fc3c8afa02062d184ba92cffa18aa69523d46[m
+Author: Monal Shadi <monalshadi16@gmail.com>
+Date:   Wed Jun 7 09:03:32 2017 +0530
+
+    Fix #191: Add PEP8Bear and YAMLLintBear to .coafile (#194)
+    
+    Fixes #191
+
+ .coafile | 10 [32m++++++++++[m
+ 1 file changed, 10 insertions(+)
+
+[33mcommit d61b1a54408aa2144d1f5dbb5f1c1a1a66a25886[m
+Author: Monal Shadi <monalshadi16@gmail.com>
+Date:   Wed Jun 7 00:49:22 2017 +0530
+
+    Fix #119: Add N-Queen Problem [Java] (#188)
+    
+    Fixes #119
+
+ README.md                          |  2 [32m+[m[31m-[m
+ n_queen_problem/NQueenProblem.java | 64 [32m++++++++++++++++++++++++++++++++++++++[m
+ 2 files changed, 65 insertions(+), 1 deletion(-)
+
+[33mcommit 389a596ecfc945c126b7aac787e3bd90e4ba2193[m
+Author: Heet Sankesara <heetsankesara3@gmail.com>
+Date:   Fri Jun 2 08:10:09 2017 +0530
+
+    Added bin sort [Java] (#167), fixes #108
+    
+    * Added bin sort
+    
+    * Some indentation improvement
+    
+    * Del Bin Sort
+    
+    * Add Bin Sort
+    
+    * Change Readme.md
+    
+    * Update README.md
+    
+    * Change Readme.md
+    
+    * Change README.md
+    
+    * Improve some mistakes
+    
+    * Change Readme.md
+    
+    * Again Change Readme.md
+    
+    * Add Bin Sort
+    
+    * Some Changes
+    
+    * Update README.md
+    
+    * Improve some mistake
+    
+    * Update README.md according to @Monal5031
+    
+    * Change to Bottom Up approach
+    
+    * Some changes according to @singhpratyush
+    
+    * Remove unnecessary newlines
+    
+    * Some Minor changes
+    
+    * Changes according to previous reviews
+
+ README.md             |  1 [32m+[m
+ bin_sort/BinSort.java | 75 [32m+++++++++++++++++++++++++++++++++++++++++++++++++++[m
+ 2 files changed, 76 insertions(+)
+
+[33mcommit f4399094155b5d84c7d9d7efb9c42321983ff89e[m
+Author: TarunISCO <201552063@iiitvadodara.ac.in>
+Date:   Thu May 25 12:27:23 2017 +0530
+
+    modified
+
+ breadth_first_search/BreadhFirstSearch.cpp | 52 [32m+++++++++++++++++[m[31m-------------[m
+ 1 file changed, 30 insertions(+), 22 deletions(-)
+
+[33mcommit ba30f55d0da5f373421d46ffc3743d42feb1afba[m
+Author: TarunISCO <201552063@iiitvadodara.ac.in>
+Date:   Wed May 24 23:45:22 2017 +0530
+
+    Added Breadth First Search [C++]
+
+ breadth_first_search/BreadhFirstSearch.cpp | 54 [32m++++++++++++++++++++++++++++++[m
+ 1 file changed, 54 insertions(+)
+
+[33mcommit 89badd64d9628139ed50b6a50b94628963c29e94[m
+Author: Pratyush Singh <singh.pratyush96@gmail.com>
+Date:   Wed May 24 18:18:02 2017 +0530
+
+    Correct link to LCS Java in README
+
+ README.md | 2 [32m+[m[31m-[m
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+[33mcommit a33eb82b16cf10a6b204fefb4887d55e6db6d724[m
+Author: Tarun Bhardwaj <201552063@iiitvadodara.ac.in>
+Date:   Wed May 24 18:15:10 2017 +0530
+
+    Fix #168: Add longest common Subsequence [Java] (#180)
+    
+    * Added longest common Subsequence
+    
+    * please review again
+    
+    * please check again
+    
+    * hope final review now
+    
+    * check
+    
+    * is it acceptable now?
+    
+    * all changes done
+    
+    * made class public and formatting done
+    
+    * changed class name and file name
+    
+    * updated readme.md
+    
+    * updated readme.md
+    
+    * updated readme.md linear search
+    
+    * readme.md changed
+
+ README.md                                          |  4 [32m+[m[31m--[m
+ .../LongestCommonSubsequence.java                  | 41 [32m++++++++++++++++++++++[m
+ 2 files changed, 43 insertions(+), 2 deletions(-)
+
+[33mcommit f95de61b688926ed0fec9069ebd5974c539edc98[m
+Author: Prakash Rai <201551009@iiitvadodara.ac.in>
+Date:   Wed May 24 00:02:41 2017 +0530
+
+    Fix #181: Add Dijkstra Algorithm [Java] (#186)
+    
+    * Update Dijkstra.java
+    
+    * Added Dijkstra Algorithm
+    
+    * Updated Dijkstra.java
+
+ README.md              |  1 [32m+[m
+ dijkstra/Dijkstra.java | 94 [32m++++++++++++++++++++++++++++++++++++++++++++++++++[m
+ 2 files changed, 95 insertions(+)
+
+[33mcommit a9d846ee00f79cc17d3ce712b38e65c5ee67a10f[m
+Author: Himanshu Sharma <sharmahimanshu1911@gmail.com>
+Date:   Tue May 23 23:55:39 2017 +0530
+
+    Fix #184: Add prims [C] (#185)
+    
+    * Added prims
+    
+    * Indentation fixed
+    
+    * Indentation and Error fixed
+    
+    * Error fixed
+    
+    * variable error deleted
+    
+    * tabspace fixed
+    
+    * tabspace fixed
+    
+    * Indentation fixed
+    
+    * Runtime error fixed
+    
+    * int's max value changed
+    
+    * INT_MAX taken instead of INFINITY
+
+ README.md     |  2 [32m+[m[31m-[m
+ prims/prims.c | 47 [32m+++++++++++++++++++++++++++++++++++++++++++++++[m
+ 2 files changed, 48 insertions(+), 1 deletion(-)
+
+[33mcommit 6a144ba82f300b9ccda94d33479e8fc952ac1aad[m
+Author: Mohit Kumar Yadav <mohitkyadav@outlook.com>
+Date:   Mon May 15 17:44:40 2017 +0530
+
+    Added Longest Common Subsequence [Golang] (#178), fixes #170
+    
+    * Added Longest Common Subsequence [GoLang]
+    
+    *  Strings hardcoded
+    
+    * Update longestCommonSubsequence.go
+    
+    *  Strings hardcoded
+    Update longestCommonSubsequence.go
+
+ README.md                                          |  2 [32m+[m[31m-[m
+ .../longestCommonSubsequence.go                    | 36 [32m++++++++++++++++++++++[m
+ 2 files changed, 37 insertions(+), 1 deletion(-)
+
+[33mcommit 80fd1509b22378426212162ffe383e10a34da8ee[m
+Author: Monal Shadi <monalshadi16@gmail.com>
+Date:   Mon May 15 17:41:30 2017 +0530
+
+    add *.orig, *.exe, *.out to gitignore (#172), fixes #171
+
+ .gitignore | 5 [32m++++[m[31m-[m
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+[33mcommit 5d38945fba7133ca765de3519cbb771f746c049d[m
+Author: Prakash Rai <201551009@iiitvadodara.ac.in>
+Date:   Mon May 15 17:39:39 2017 +0530
+
+    Fix issues in Stack implementation [Python] (#174), fixes #125
+
+ stack/stack.py | 40 [32m+++++++[m[31m---------------------------------[m
+ 1 file changed, 7 insertions(+), 33 deletions(-)
+
+[33mcommit 12c542023d4bfe6e2e9dbcfea6a5233f38885918[m
+Author: Aashutosh Rathi <aashutoshrathi@gmail.com>
+Date:   Sun May 14 11:06:21 2017 +0530
+
+    Change HTTPS to HTTP for counting sort (#176)
+    
+    * Dead Link Fixed
+    
+    * HTTPS switched to HTTP
+    
+    * Fixes
+    
+    * Update README.md
+
+ README.md | 2 [32m+[m[31m-[m
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+[33mcommit 74a2e8beec5a99ea4bc29f2108acf4d09f337471[m
+Author: Aashutosh Rathi <aashutoshrathi@gmail.com>
+Date:   Sun May 14 10:36:40 2017 +0530
+
+    Dead Link Fixed (#175), fixes #173
+
+ README.md | 2 [32m+[m[31m-[m
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+[33mcommit 15e38f3564939522efb51e4926c68064d0a55800[m
+Author: Monal Shadi <monalshadi16@gmail.com>
+Date:   Sun May 14 06:21:53 2017 +0530
+
+    fixes #164: Add solution to counting sort [C] (#165)
+    
+    Fixed #164
+
+ README.md                     |  2 [32m+[m[31m-[m
+ counting_sort/counting_sort.c | 38 [32m++++++++++++++++++++++++++++++++++++++[m
+ 2 files changed, 39 insertions(+), 1 deletion(-)
+
+[33mcommit 6f9686af1000246ce8d89bd176ff7d5ed60c2d8f[m
+Author: Prakash Rai <201551009@iiitvadodara.ac.in>
+Date:   Sun May 14 06:18:48 2017 +0530
+
+    fixes #166: Add solution to rod cutting problem [Java] (#166)
+    
+    * Added Rod Cutting Problem [Java]
+    
+    * Update README.md
+
+ README.md                           |  1 [32m+[m
+ rod_cutting_problem/RodCutting.java | 26 [32m++++++++++++++++++++++++++[m
+ 2 files changed, 27 insertions(+)
+
+[33mcommit 206de85b7d22b5fe1a1e9677d7e9e4b5ebf3c7a0[m
+Author: Avi Aryan <avi.aryan123@gmail.com>
+Date:   Sat May 13 16:30:35 2017 +0530
+
+    [coala] add gofmt check
+
+ .coafile                       |  5 [32m+++++[m
+ linear_search/linear-search.go | 28 [32m++++++++++++++[m[31m--------------[m
+ 2 files changed, 19 insertions(+), 14 deletions(-)
+
+[33mcommit 8c9ac96cb397993efd3071c8d4038297403d28a3[m
+Author: Avi Aryan <avi.aryan123@gmail.com>
+Date:   Sat May 13 16:21:12 2017 +0530
+
+    [coala] add golint check
+    
+    commit 1c88fa9985b8d804eea1fe59c9ce4f947187b96a
+    Author: Avi Aryan <avi.aryan123@gmail.com>
+    Date:   Sat May 13 16:01:30 2017 +0530
+    
+        install golang in travis and install golint manually
+    
+    commit 7d40c06a388484e61b4917ad3784b7d110f6a320
+    Author: Avi Aryan <avi.aryan123@gmail.com>
+    Date:   Sat May 13 15:46:19 2017 +0530
+    
+        [coala] add golint check
+
+ .coafile    |  5 [32m+++++[m
+ .travis.yml | 11 [32m+++++++++++[m
+ 2 files changed, 16 insertions(+)
+
+[33mcommit c892617f5c9eca960334fd6345197e3825c44ec0[m
+Author: Avi Aryan <avi.aryan123@gmail.com>
+Date:   Sat May 13 15:32:23 2017 +0530
+
+    Revert "[coala] add C indent check"
+    
+    This reverts commit cca8d34852dddc70305c7d3d5e8ea018f53edd93.
+    
+    This is being done because GNU Indent is a very feature rich program and not suitable for checking if C code is indented using tabs or not.
+
+ .coafile    | 7 [31m-------[m
+ .travis.yml | 2 [31m--[m
+ 2 files changed, 9 deletions(-)
+
+[33mcommit cca8d34852dddc70305c7d3d5e8ea018f53edd93[m
+Author: Avi Aryan <avi.aryan123@gmail.com>
+Date:   Sat May 13 15:06:53 2017 +0530
+
+    [coala] add C indent check
+
+ .coafile    | 7 [32m+++++++[m
+ .travis.yml | 2 [32m++[m
+ 2 files changed, 9 insertions(+)
+
+[33mcommit 4c1e1c45a00ee56a4ce91f1f8d6eae9e875df089[m
+Author: Avi Aryan <avi.aryan123@gmail.com>
+Date:   Sat May 13 13:58:06 2017 +0530
+
+    add coala with travis integration
+
+ .coafile                       | 10 [32m++++++++++[m
+ .travis.yml                    |  7 [32m+++++++[m
+ euclidean_gcd/euclidean_gcd.py |  6 [32m+++[m[31m---[m
+ 3 files changed, 20 insertions(+), 3 deletions(-)
+
+[33mcommit 9715cb1fd771e8b196b3791c6afbe561223b8028[m
+Author: Pratyush Singh <singh.pratyush96@gmail.com>
+Date:   Thu May 11 03:13:50 2017 +0530
+
+    Remove label adding instruction for new issues
+
+ CONTRIBUTING.md | 1 [31m-[m
+ 1 file changed, 1 deletion(-)
+
+[33mcommit cf543bab2dc45a7270afd382249247c6c4a1d719[m
+Author: Pratyush Singh <singh.pratyush96@gmail.com>
+Date:   Thu May 11 03:05:09 2017 +0530
+
+    Change CONTIBUTING for global contributors
+
+ CONTRIBUTING.md | 6 [32m+[m[31m-----[m
+ 1 file changed, 1 insertion(+), 5 deletions(-)
+
+[33mcommit 982d68f87d43322da8378ec2ac49cf365d976b9c[m
+Author: Pratyush Singh <singh.pratyush96@gmail.com>
+Date:   Thu May 11 03:02:39 2017 +0530
+
+    Remove IIITV only from README
+
+ README.md | 1 [31m-[m
+ 1 file changed, 1 deletion(-)
+
+[33mcommit 353cee14bb56d96b71bb80ce613f5ecc538217a0[m
+Author: Prakash Rai <201551009@iiitvadodara.ac.in>
+Date:   Tue May 9 10:20:10 2017 +0530
+
+    Updated Stack.java (#161). Related #125
+    
+    * Updated Stack.java
+    
+    Removed peek()
+    Removed size
+    Removed getSize()
+    Removed displayStack()
+    
+    * Updated Stack.java
+    
+    * Update Stack.java
+
+ stack/Stack.java | 77 [32m++++++++++++++[m[31m------------------------------------------[m
+ 1 file changed, 19 insertions(+), 58 deletions(-)
+
+[33mcommit 5cd280b02f7010cf60dc0b6f6b345a9c9575487b[m
+Author: Aashutosh Rathi <aashutoshrathi@gmail.com>
+Date:   Mon May 8 20:38:19 2017 +0530
+
+    Added Randomized Pivot using 3 Pivot Technique in Quick Sort [Python] (#147). Closes #144
+    
+    * Quick Sort [Python] Randomize Pivot
+    
+    changed p to l
+    
+    Documentation of functions changed
+    
+    * Update quick_sort.py
+
+ quicksort/quick_sort.py | 45 [32m++++++++++++++++++++++++++++++++++[m[31m-----------[m
+ 1 file changed, 34 insertions(+), 11 deletions(-)
+
+[33mcommit cb970bf97e7247f6b0622e4736ef563640db8608[m
+Author: Monal Shadi <monalshadi16@gmail.com>
+Date:   Thu May 4 13:05:49 2017 +0530
+
+    Made changes in QuickSort.java. Closes #145
+    
+    Fixed #145
+
+ quicksort/QuickSort.java | 38 [32m+++++++++++++++++++[m[31m-------------------[m
+ 1 file changed, 19 insertions(+), 19 deletions(-)
+
+[33mcommit 3814db0a4b569ac3ebedd282534bcdf0828d4536[m
+Author: Mohit Kumar Yadav <mohitkyadav@outlook.com>
+Date:   Sun Apr 30 15:53:12 2017 +0530
+
+    Largest Sum Contiguous Subarray [Golang] (#157), fixes #156
+    
+    * Create largestSumContiguousSubarray.go
+    Added largestSumContiguousSubarray.go
+    fixed underscored variable declarations
+    
+    * Passing array
+    
+    passing array  as function param
+
+ README.md                                          |  2 [32m+[m[31m-[m
+ .../largestSumContiguousSubarray.go                | 25 [32m++++++++++++++++++++++[m
+ 2 files changed, 26 insertions(+), 1 deletion(-)
+
+[33mcommit 5908e8f8d923f3b5e89f2022b45aa4e6eff3a061[m
+Author: Avi Aryan <avi.aryan123@gmail.com>
+Date:   Sun Apr 23 16:19:49 2017 +0530
+
+    Add issue number to PR template
+
+ PULL_REQUEST_TEMPLATE.md | 3 [32m+++[m
+ 1 file changed, 3 insertions(+)
+
+[33mcommit 1c70465e6786fc4d1227627c3fe72ce1db8d0c77[m
+Author: Mohit Kumar Yadav <mohitkyadav@outlook.com>
+Date:   Sun Apr 23 16:16:17 2017 +0530
+
+    Added Sieve Of Eratosthenes [Golang] (#153), fixes #152
+    
+    * Create sieve_of_eratosthenes.go
+    
+    Created sieve_of_eratosthenes.go
+    
+    * Update sieve_of_eratosthenes.go
+    
+    Fixed some linting issues
+    Added Sieve Of Eratosthenes
+    Update sieve_of_eratosthenes.go
+    
+    Added comments
+    Update sieve_of_eratosthenes.go
+    
+    Trying to resolve codacy issues
+    Update sieve_of_eratosthenes.go
+    Update sieve_of_eratosthenes.go
+    
+    * add skeleton code for golang, fixes #154
+    
+    * Tested with golint
+    
+    * add skeleton code for golang, fixes #154
+    
+    * Update sieve_of_eratosthenes.go
+    
+    Corrected comments
+    
+    * Checked with GoSublime
+    
+    Corrected some linting errors
+    
+    * Improved
+
+ README.md                                      |  2 [32m+[m[31m-[m
+ sieve_of_eratosthenes/sieve_of_eratosthenes.go | 34 [32m++++++++++++++++++++++++++[m
+ 2 files changed, 35 insertions(+), 1 deletion(-)
+
+[33mcommit fa74d43c4827394f323133641e98521aade82b39[m
+Author: Avi Aryan <avi.aryan123@gmail.com>
+Date:   Sat Apr 22 01:13:21 2017 +0530
+
+    add skeleton code for golang, fixes #154
+
+ CONTRIBUTING.md | 22 [32m+++++++++++++++++++++[m[31m-[m
+ 1 file changed, 21 insertions(+), 1 deletion(-)
+
+[33mcommit 0d6ebbcb7f682cb3278fe12b76e88de149a2f911[m
+Author: Pratyush Singh <singh.pratyush96@gmail.com>
+Date:   Fri Apr 21 00:13:58 2017 +0530
+
+    Add Linear Search [Golang] (#151), fixes #150
+    
+    * Add Linear Search [Golang]. Closes #150
+    
+    * Remove space in print statement
+    
+    * Remove trailing space in README table header
+
+ README.md                      | 54 [32m+++++++++++++++++++++[m[31m---------------------[m
+ linear_search/linear-search.go | 22 [32m+++++++++++++++++[m
+ 2 files changed, 49 insertions(+), 27 deletions(-)
+
+[33mcommit 30c0e426b84c323f07c9459dbd9154e0f7d37219[m
+Author: Monal Shadi <monalshadi16@gmail.com>
+Date:   Thu Apr 20 23:39:24 2017 +0530
+
+    Added Binary Search Tree [Java] (#149), fixes #146
+    
+    Fixed #146
+
+ README.md                                |   3 [32m+[m[31m-[m
+ binary_search_tree/BinarySearchTree.java | 183 [32m+++++++++++++++++++++++++++++++[m
+ 2 files changed, 185 insertions(+), 1 deletion(-)
+
+[33mcommit 3c57b6f3c8e1c40feaed0860e0b8ca8f2cd22b48[m
+Author: Aashutosh Rathi <aashutoshrathi@gmail.com>
+Date:   Mon Apr 17 21:53:02 2017 +0530
+
+    [Refractor] Update Merge Sort to be more Pythonic
+    
+    Related: #137 #139
+    
+    Commits -
+    * Added Merge Sort [Python]
+    
+    * Added Merge Sort [Python]
+    
+    * Changed Merge Sort [Python]
+    
+    * Added new line
+    
+    * removed blank line
+    
+    * Update merge_sort.py
+    
+    * Update merge_sort.py
+
+ merge_sort/merge_sort.py | 52 [32m+++++++++++++++++[m[31m-------------------------------[m
+ 1 file changed, 18 insertions(+), 34 deletions(-)
+
+[33mcommit 679b2bc5df782e062cb0568c4b61244dcc0c3fc8[m
+Author: Aashutosh Rathi <aashutoshrathi@gmail.com>
+Date:   Mon Apr 17 21:49:07 2017 +0530
+
+    Added Quick Sort [Python] (#141). Closes #140
+    
+    removed brackets to make it more pythonish
+    
+    minor changes
+    
+    minor fixes
+    
+    removed extra file
+
+ README.md               |  2 [32m+[m[31m-[m
+ quicksort/quick_sort.py | 44 [32m++++++++++++++++++++++++++++++++++++++++++++[m
+ 2 files changed, 45 insertions(+), 1 deletion(-)
+
+[33mcommit 1bfc6360a85753ba54af84f879b3319da3763094[m
+Author: Aashutosh Rathi <aashutoshrathi@gmail.com>
+Date:   Sun Apr 16 22:33:11 2017 +0530
+
+    Added Merge Sort [Python] (#139), fixes #137
+    
+    * Added Merge Sort [Python]
+    
+    * Added Merge Sort [Python]
+
+ README.md                |  2 [32m+[m[31m-[m
+ merge_sort/merge_sort.py | 68 [32m++++++++++++++++++++++++++++++++++++++++++++++++[m
+ 2 files changed, 69 insertions(+), 1 deletion(-)
+
+[33mcommit 62f317d3d8bf2f1fabc07b9187707f4095c8a908[m
+Author: Piyush Pawar <piyushpawar25@gmail.com>
+Date:   Sat Apr 15 01:22:22 2017 +0530
+
+    Added Singly Linked List [Java] (#128). Closes #126
+    
+    * Added Linked List
+    
+    * Added spaces
+    
+    * Removed temp var and java.lang library
+    
+    * Changed name of main class
+    
+    * Methods class renamed
+    
+    * Changed main class
+    
+    * Updates
+    
+    * Added Spaces
+
+ README.md                   |   1 [32m+[m
+ linked_list/LinkedList.java | 215 [32m++++++++++++++++++++++++++++++++++++++++++++[m
+ 2 files changed, 216 insertions(+)
+
+[33mcommit 3793598dfc7f1dd8050517d4a076a10936ff4563[m
+Author: Monal Shadi <monalshadi16@gmail.com>
+Date:   Fri Apr 14 09:18:57 2017 +0530
+
+    Added Merge Sort [C] (#138). Closes #17
+    
+    Fixed #17
+
+ README.md               |  2 [32m+[m[31m-[m
+ merge_sort/merge_sort.c | 61 [32m+++++++++++++++++++++++++++++++++++++++++++++++++[m
+ 2 files changed, 62 insertions(+), 1 deletion(-)
+
+[33mcommit e6fd1056bd5ecac18e770e1820a5712f1e9faf9b[m
+Author: Aashutosh Rathi <aashutoshrathi@gmail.com>
+Date:   Wed Apr 12 15:00:48 2017 +0530
+
+    Added Modular Exponentiation [JAVA] (#136), closes #135
+    
+    * Updating
+    
+    * added mod expo
+    
+    * minor changes
+    
+    * Added Modular Exponentation [Java]
+    Fixed #135
+
+ README.md                                   |  2 [32m+[m[31m-[m
+ modular_exponential/ModularExponential.java | 24 [32m++++++++++++++++++++++++[m
+ 2 files changed, 25 insertions(+), 1 deletion(-)
+
+[33mcommit 9c3edc598d8f92dcb2439be47ec50b4b9f7a9ae2[m
+Author: Piyush Pawar <piyushpawar25@gmail.com>
+Date:   Wed Apr 12 14:58:03 2017 +0530
+
+    Added Insertion Sort [Java] (#134), closes #109
+    
+    * Added Insertion Sort
+    
+    * Removed blank lines
+    
+    * Updated Readme
+
+ README.md                         |  2 [32m+[m[31m-[m
+ insertion_sort/InsertionSort.java | 27 [32m+++++++++++++++++++++++++++[m
+ 2 files changed, 28 insertions(+), 1 deletion(-)
+
+[33mcommit 322733db515efb5ea59cdf5abf0625d32e06efb1[m
+Author: Avi Aryan <avi.aryan123@gmail.com>
+Date:   Wed Apr 12 09:55:14 2017 +0530
+
+    Added PR closing information (#133). Closes #130
+    
+    * chore: add PR closing information
+    
+    * docs: improve language
+
+ PULL_REQUEST_TEMPLATE.md | 3 [32m++[m[31m-[m
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+[33mcommit 59fe57c8ce8da96711004fadeee1fd876bee96ce[m
+Author: Jitendra Singh <jsroyal55@gmail.com>
+Date:   Wed Apr 12 00:08:37 2017 +0530
+
+    Added Depth First Traversal [Java] (#100), fixes #99
+    
+    * added quick sort in java
+    
+    * commenting
+    
+    * update with code conventions
+    
+    * declare public class : Codacy
+    
+    * rename varible
+    
+    * Added depth first traversal
+    
+    * link added
+    
+    * link added
+    
+    * link added
+    
+    * blank line space
+    
+    * implement using stack
+    
+    * remove extra line
+    
+    * bracket
+    
+    * space
+    
+    * Using list and set
+    
+    * fixed codacy
+    
+    * define public Constructor
+    
+    * update
+    
+    * update
+    
+    * dFS to dfs
+
+ README.md                                      |  1 [32m+[m
+ depth_first_traversal/DepthFirstTraversal.java | 55 [32m++++++++++++++++++++++++++[m
+ 2 files changed, 56 insertions(+)
+
+[33mcommit 43c80b4882e24180eafac14efa1d95ba87327618[m
+Author: Monal Shadi <monalshadi16@gmail.com>
+Date:   Fri Apr 7 17:01:02 2017 +0530
+
+    Added Heap Sort [Java] (#129). Closes #127
+    
+    Fixed #127
+
+ README.md               |  2 [32m+[m[31m-[m
+ heap_sort/HeapSort.java | 45 [32m+++++++++++++++++++++++++++++++++++++++++++++[m
+ 2 files changed, 46 insertions(+), 1 deletion(-)
+
+[33mcommit 1537e8c2e7a8780cbb32cc35c13b2594539098ac[m
+Author: Mohit Kumar Yadav <mohitkyadav@outlook.com>
+Date:   Fri Apr 7 11:09:56 2017 +0530
+
+    Added Heap sort [C] (#124), fixes #91
+    
+    * Added Heap sort [c]
+    
+    first commit
+    
+    * Added Heap sort [c]
+    
+    * Update HeapSort.c
+    
+    * Update HeapSort.c
+    
+    * Changes done.
+    
+    Added an extra blank line before "return 0".
+    Removed extra whitespace from line 53
+    Removed hard coded 7 from line 55
+    
+    * Update HeapSort.c
+    
+    No need to change "SIZE" everytime.
+    
+    * Update HeapSort.c
+    
+    No need to change "SIZE" every time.
+    Changed i to root in line no 11.
+    
+    * Rename HeapSort.c to heap_sort.c
+    
+    * Update heap_sort.c
+    
+    Small caps for SIZE and HEAPSIZE.
+    
+    * Changes requested by @Monal5031
+    
+    * Updated
+    
+    * Update README.md
+
+ README.md             |  1 [32m+[m
+ heap_sort/heap_sort.c | 60 [32m+++++++++++++++++++++++++++++++++++++++++++++++++++[m
+ 2 files changed, 61 insertions(+)
+
+[33mcommit c00703b107af6b19aa8660d7a50823a535883ede[m
+Author: Yash Ladha <201551061@iiitvadodara.ac.in>
+Date:   Tue Apr 4 02:57:51 2017 +0530
+
+    Added Prims [Java] (#118), closes #116
+    
+    * Added Prims [Java]
+    Closes #116
+    
+    * Removed Public before class
+    
+    * Added public
+    
+    * Minor changes
+
+ README.md        |  1 [32m+[m
+ prims/Prims.java | 74 [32m++++++++++++++++++++++++++++++++++++++++++++++++++++++++[m
+ 2 files changed, 75 insertions(+)
+
+[33mcommit ed57e01e15eb99ead41fb61c18bc53cfe9064471[m
+Author: Monal Shadi <monalshadi16@gmail.com>
+Date:   Tue Apr 4 02:55:53 2017 +0530
+
+    Added Stack [Java] (#117)
+    
+    * Added Stack implementation
+    
+    * new line at end
+    
+    * Removed extra tabspace
+    
+    * public keyword removed
+    
+    * Exception thrown from methods
+    
+    * minor indentation fixed
+    
+    * Descriptive messages in Exception
+    
+    * Minor spacing fix
+    
+    * spacing fixed
+
+ README.md        |  2 [32m+[m[31m-[m
+ stack/Stack.java | 83 [32m++++++++++++++++++++++++++++++++++++++++++++++++++++++++[m
+ 2 files changed, 84 insertions(+), 1 deletion(-)
+
+[33mcommit 91e6df6a1fd03454527fff008aa50c69c07417d1[m
+Author: Piyush Pawar <piyushpawar25@gmail.com>
+Date:   Mon Apr 3 23:45:43 2017 +0530
+
+    Added Linear Search [Java] (#123). Closes #122
+    
+    * Added Linear Search
+    
+    * changes updated
+    
+    * added spaces
+    
+    * Removed blank line
+
+ README.md                       |  2 [32m+[m[31m-[m
+ linear_search/LinearSearch.java | 30 [32m++++++++++++++++++++++++++++++[m
+ 2 files changed, 31 insertions(+), 1 deletion(-)
+
+[33mcommit 73888961b7e84261e1b8c508fcc57c2521bc5029[m
+Author: Heet Sankesara <heetsankesara3@gmail.com>
+Date:   Mon Apr 3 23:12:53 2017 +0530
+
+    Added Counting Sort [Java] (#114). Closes #101
+    
+    * Adding counting Sort
+    
+    * Updated Readme.md
+    
+    * new line at end
+    
+    * Changes according to @Monal5031
+    
+    * Fixed Indentations
+    
+    * Update CountingSort.java
+    
+    * Use Bottom down approach
+    
+    * Update CountingSort.java
+    
+    * Update CountingSort.java
+    
+    * Update CountingSort.java
+    
+    * solve alignment issues and  other....
+    
+    * Add Comments in Code
+    
+    * commit changes according to previous review
+    
+    * Update CountingSort.java
+
+ README.md                       |  1 [32m+[m
+ counting_sort/CountingSort.java | 33 [32m+++++++++++++++++++++++++++++++++[m
+ 2 files changed, 34 insertions(+)
+
+[33mcommit b232c7e4ad668974bffeda39a533d310592d391d[m
+Author: Divyesh Puri <divyeshpuri66@gmail.com>
+Date:   Sat Apr 1 01:18:33 2017 +0530
+
+    Added Largest Sum Contiguous SubArray [C] (#112), closes #111
+    
+    * Added  Largest  Sum Continous SubArray [C]
+    
+    * updated Readme.md
+    
+    * updated changes as per requested
+    
+    * updated
+    
+    * minor fixes
+
+ README.md                                          |  2 [32m+[m[31m-[m
+ .../largestSumContiguousSubarray.c                 | 25 [32m++++++++++++++++++++++[m
+ 2 files changed, 26 insertions(+), 1 deletion(-)
+
+[33mcommit 77b770472e8afb10fe2cbfe87437b983fdfb79b0[m
+Author: PiyushPawar17 <piyushpawar25@gmail.com>
+Date:   Wed Mar 29 23:16:02 2017 +0530
+
+    Added Linear Search [C] (#90), fixes #85
+    
+    * added linear search [C]
+    
+    * updated Readme
+    
+    * removed blank space
+    
+    * changes fixed
+    
+    * removed some blank lines
+    
+    * Update linear_search.c
+
+ README.md                     |  2 [32m+[m[31m-[m
+ linear_search/linear_search.c | 36 [32m++++++++++++++++++++++++++++++++++++[m
+ 2 files changed, 37 insertions(+), 1 deletion(-)
+
+[33mcommit 2e0cda63f475436bfa0d265b40efb2037fc3bcf8[m
+Author: Yash Ladha <201551061@iiitvadodara.ac.in>
+Date:   Wed Mar 29 23:09:14 2017 +0530
+
+    Added Modular Exponential [Python] (#97), closes #96
+    
+    * Added Modular Exponential[Python] Closes #96
+    
+    * Hard Coded Data
+    
+    * Changed Arguments name
+    
+    * Applied Skeleton Code Changes'
+    
+    * Changed Parameter names
+    
+    * Made Changes
+    
+    * Made Changes
+    
+    * Added docstring and Changed Values
+    
+    * Explained DocString
+    
+    * Explained DocString
+    
+    * Explained DocString
+    
+    * Removed Extra statements
+    
+    * Followed PEP8 guidelines
+
+ README.md                                  |  1 [32m+[m
+ modular_exponential/modular_exponential.py | 36 [32m++++++++++++++++++++++++++++++[m
+ 2 files changed, 37 insertions(+)
+
+[33mcommit bedb759762927526c6f979325f90383e27b85d5a[m
+Author: Monal Shadi <monalshadi16@gmail.com>
+Date:   Wed Mar 29 23:07:37 2017 +0530
+
+    updated CONTRIBUTING.md (#110), fixes #107
+    
+    * updated contributing.md
+    
+    * Updated Contributing.md
+
+ CONTRIBUTING.md | 1 [32m+[m
+ 1 file changed, 1 insertion(+)
+
+[33mcommit 6083242033aad801ae9893674184477cf9fd4678[m
+Author: Monal Shadi <monalshadi16@gmail.com>
+Date:   Wed Mar 29 04:37:01 2017 +0530
+
+    Added Sieve of Eratosthenes [Python] (#95), closes #94
+    
+    * added sieve-of-erastosthenes
+    
+    * Spelling fixes
+    
+    * changes fixed
+    
+    * removed duplicate file
+    
+    * Minor fixes
+    
+    * readme fixed
+    
+    * made specified changes
+    
+    * Changes Fixed
+
+ README.md                                      |  2 [32m+[m[31m-[m
+ sieve_of_eratosthenes/sieve_of_eratosthenes.py | 29 [32m++++++++++++++++++++++++++[m
+ 2 files changed, 30 insertions(+), 1 deletion(-)
+
+[33mcommit 5c2cd85fa56fdcf1cda8b3d660c50dbad34ee656[m
+Author: Aashutosh Rathi <aashutoshrathi@gmail.com>
+Date:   Wed Mar 29 03:53:39 2017 +0530
+
+    Added Binary Search [Python] (#89), closes #59
+    
+    * Binary Search [Python}
+    
+    * Added Binary Search [Python]
+    
+    * Added Binary Search
+    
+    * Added Binary Search [Python]
+    
+    * Update binary_search.py
+    
+    * Update binary_search.py
+    
+    * Added Binary Search [Python]
+    
+    * Added Binary Search [Python]
+    
+    * Added Binary Search [Python]
+    
+    * Added Binary Search [Python]
+    
+    * Added Binary Search [Python]
+    
+    * Added Binary Search [Python]
+    
+    * Added Binary Search [Python]
+    
+    * minor changes
+    
+    * Added Binary Search [Python]
+    
+    * patched default variables
+    
+    * Added Binary Search [Python]
+    
+    * added condition when right is None
+    
+    * Minor spacing changes
+    
+    * Added Binary Search [Python]
+    
+    * Added Binary Search [Python]
+
+ README.md                      |  2 [32m+[m[31m-[m
+ binary_search/binary_search.py | 72 [32m++++++++++++++++++++++++++++++++++++++++++[m
+ 2 files changed, 73 insertions(+), 1 deletion(-)
+
+[33mcommit 2145ca66f9528ec11a3e1463ee0a9e45bec4fdc2[m
+Author: Avi Aryan <avi.aryan123@gmail.com>
+Date:   Sat Mar 25 21:42:37 2017 +0530
+
+    docs: removed duplicate entry of Insertion Sort
+    
+    also added Mac DS_Store to gitignore
+
+ .gitignore | 2 [32m++[m
+ README.md  | 1 [31m-[m
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+
+[33mcommit ba21d9f4f70f74c83cefbd96720cbb3edf2defea[m
+Author: Yash Ladha <201551061@iiitvadodara.ac.in>
+Date:   Sat Mar 25 21:40:26 2017 +0530
+
+    Added Prime Factor [C] (#75) closes #26
+
+ README.md                   |  1 [32m+[m
+ prime_factor/prime_factor.c | 43 [32m+++++++++++++++++++++++++++++++++++++++++++[m
+ 2 files changed, 44 insertions(+)
+
+[33mcommit 599b16ba257365e8e88f5518080745e764d266ef[m
+Author: Jitendra Singh <jsroyal55@gmail.com>
+Date:   Sat Mar 25 21:35:27 2017 +0530
+
+    Added QuickSort [Java] (#83)
+    
+    * added quick sort in java
+    
+    * commenting
+    
+    * update with code conventions
+    
+    * declare public class : Codacy
+    
+    * rename varible
+
+ README.md                |  2 [32m+[m[31m-[m
+ quicksort/QuickSort.java | 36 [32m++++++++++++++++++++++++++++++++++++[m
+ 2 files changed, 37 insertions(+), 1 deletion(-)
+
+[33mcommit 343bab9a5e434b82f2046fb5debad5d9188c5359[m
+Author: Monal Shadi <monalshadi16@gmail.com>
+Date:   Sat Mar 25 19:46:07 2017 +0530
+
+    Added fast exponentation [C] (#67)
+    
+    * Added exponentation_by_squaring.c
+    
+    * Update exponentation_by_squaring.c
+    
+    * Negative power case added, return type long double
+    
+    * tabs and spaces fixed
+    
+    * Logic fixed, test-case changed
+    
+    * minor fix
+    
+    * -ve case added
+    
+    * Changes fixed
+
+ README.md                                          |  2 [32m++[m
+ .../exponentation_by_squaring.c                    | 31 [32m++++++++++++++++++++++[m
+ 2 files changed, 33 insertions(+)
+
+[33mcommit 45e6b7bc0eda01fbe4768551183ff723630b0890[m
+Author: Mohit Kumar Yadav <mohitkyadav@outlook.com>
+Date:   Sat Mar 25 14:33:36 2017 +0530
+
+    [refactor] Removed C methods from NQueenProblem.cpp (#92)
+    
+    * Some changes suggested by @singhpratyush
+    
+    Removed printf
+    extra space around <<
+    
+    I want to use memset so string.h can't be removed.
+    
+    * Update NQueenProblem.cpp
+    
+    * Update NQueenProblem.cpp
+
+ n_queen_problem/NQueenProblem.cpp | 18 [32m+++++++++[m[31m---------[m
+ 1 file changed, 9 insertions(+), 9 deletions(-)
+
+[33mcommit 3b3c1aeedb50c0895894a3ac88bd62e5e6a4cff7[m
+Author: Mohit Kumar Yadav <mohitkyadav@outlook.com>
+Date:   Sat Mar 25 12:55:35 2017 +0530
+
+    Added Backtracking algorithm (N-Queen Problem) [CPP] #87
+    
+    commit f7c6af7a8fc39d5ed114c07a38a6729dba37888e
+    Merge: 6ad43d3 edd810c
+    Author: Avi Aryan <avi.aryan123@gmail.com>
+    Date:   Sat Mar 25 12:54:12 2017 +0530
+    
+        Merge branch 'master' of https://github.com/mohitkyadav/algos into mohitkyadav-master
+    
+    commit edd810c4723b3cc219818070b7e626f71ac4271b
+    Author: Mohit Kumar Yadav <mohitkyadav@outlook.com>
+    Date:   Fri Mar 24 07:27:18 2017 -0700
+    
+        find_solution is now n_queen_solution
+    
+    commit d4266f291c4650e539f4dab3e25ea958e71aa29d
+    Author: Mohit Kumar Yadav <mohitkyadav@outlook.com>
+    Date:   Fri Mar 24 16:36:33 2017 +0530
+    
+        changed side to SIDE
+    
+    commit 39286ee472f7bcf7ddb093e5581573ab3d5fe9a3
+    Author: Mohit Kumar Yadav <mohitkyadav@outlook.com>
+    Date:   Fri Mar 24 16:31:16 2017 +0530
+    
+        indentation correction
+    
+    commit a10dcbeceb92969df88dade5c7473317fb7e9877
+    Author: Mohit Kumar Yadav <mohitkyadav@outlook.com>
+    Date:   Fri Mar 24 16:12:13 2017 +0530
+    
+        Update NQueenProblem.cpp
+    
+    commit 5ce3b8f889bd19102d1983a68cdd3a7eb46fceb7
+    Author: Mohit Kumar Yadav <mohitkyadav@outlook.com>
+    Date:   Fri Mar 24 16:04:05 2017 +0530
+    
+        Update NQueenProblem.cpp
+    
+    commit 266e21f2569e7678006cac7f7693b0b188956e29
+    Author: Mohit Kumar Yadav <mohitkyadav@outlook.com>
+    Date:   Fri Mar 24 16:02:05 2017 +0530
+    
+        Update README.md
+    
+    commit fb5e569450fcfb91717f70a1874aeb419d543d55
+    Author: Mohit Kumar Yadav <mohitkyadav@outlook.com>
+    Date:   Fri Mar 24 16:00:51 2017 +0530
+    
+        Update README.md
+    
+    commit 932c45b60070e19f926d3fb39c8bd199491bf5fa
+    Author: Mohit Kumar Yadav <mohitkyadav@outlook.com>
+    Date:   Fri Mar 24 15:59:01 2017 +0530
+    
+        Update README.md
+    
+    commit 35046b23d93fabec1323fddaaeb48c5421762941
+    Author: Mohit Kumar Yadav <mohitkyadav@outlook.com>
+    Date:   Fri Mar 24 15:52:36 2017 +0530
+    
+        Brackets are good...
+    
+    commit 5d33712b801e80569b2d54ae94396e9cb6998146
+    Author: Mohit Kumar Yadav <mohitkyadav@outlook.com>
+    Date:   Fri Mar 24 15:30:55 2017 +0530
+    
+        no double spaces, no capital letters
+    
+    commit 62f911e722237db7b34c5a6962dc4f295f3b1a70
+    Author: Mohit Kumar Yadav <mohitkyadav@outlook.com>
+    Date:   Fri Mar 24 15:23:18 2017 +0530
+    
+        a few changes
+    
+        Find_solution changed to find_solution.
+        "Size" variable is now "side".
+    
+    commit b293c4506ac2bd84dcbd8e72b6218adb27f371c0
+    Author: Mohit Kumar Yadav <mohitkyadav@outlook.com>
+    Date:   Thu Mar 23 13:43:54 2017 -0700
+    
+        !st commit
+    
+        Added N-Queen problem.
+
+ README.md                         |  1 [32m+[m
+ n_queen_problem/NQueenProblem.cpp | 71 [32m+++++++++++++++++++++++++++++++++++++++[m
+ 2 files changed, 72 insertions(+)
+
+[33mcommit 6ad43d3c559c67d0e4d64abfd1e49e6de88750b8[m
+Author: R@jeev <singhrajiv774@gmail.com>
+Date:   Fri Mar 24 22:39:07 2017 +0530
+
+    Added Insertion Sort [Python] (#86). Closes #84
+    
+    * first experiment in local branch
+    
+    * Experiment done
+    
+    * inertion_sort added
+    
+    * space removed
+    
+    * whitespace removed
+    
+    * indentent fixed
+    
+    * space fixed
+    
+    * delete extra file added
+    
+    * updated
+    
+    * re indent
+
+ README.md                        |  2 [32m+[m[31m-[m
+ insertion_sort/insertion_sort.py | 22 [32m++++++++++++++++++++++[m
+ 2 files changed, 23 insertions(+), 1 deletion(-)
+
+[33mcommit fef93c0214f247f9cbe11f60e38d8226b674cb6a[m
+Author: Pratyush Singh <singh.pratyush96@gmail.com>
+Date:   Fri Mar 24 17:07:09 2017 +0530
+
+    Added Stack [Python]. Closes #80
+
+ README.md      |  1 [32m+[m
+ stack/stack.py | 62 [32m++++++++++++++++++++++++++++++++++++++++++++++++++++++++++[m
+ 2 files changed, 63 insertions(+)
+
+[33mcommit 48c6bdba7a91373865a844ef0fe054f539ec64cf[m
+Author: Sandeep Kumar <sandeep201451066@users.noreply.github.com>
+Date:   Fri Mar 24 16:12:06 2017 +0530
+
+    Added Largest Sum Contiguous Subarray [Java] (#74). Closes #72
+    
+    * Added Largest Sum Contiguous Subarray
+    
+    * Added Largest Sum Contiguous Subarray
+    
+    * Update Largest Sum Contiguous Subarray
+    
+    * Updated Largest Sum Contiguous Subarray
+    
+    * updated Read me
+    
+    * Added Largest Sum Contiguous Subarray
+    
+    * Delete largest_sum_contiguous_subarray.java
+    
+    * Update LargestSumContiguousSubarray.java
+    
+    * Added Largest Sum Contiguous Subarray
+    
+    * Update LargestSumContiguousSubarray.java
+    
+    * Updated Read me file
+    
+    * Updates Largest Sum Contiguous Subarray
+    
+    * Update README.md
+    
+    * Updated Largest Sum Contiguous Subarray
+    
+    * Update LargestSumContiguousSubarray.java
+    
+    * Update LargestSumContiguousSubarray.java
+    
+    * Update LargestSumContiguousSubarray.java
+    
+    * Update LargestSumContiguousSubarray.java
+    
+    * Update LargestSumContiguousSubarray.java
+    
+    * Update LargestSumContiguousSubarray.java
+    
+    * Update LargestSumContiguousSubarray.java
+
+ README.md                                          |  1 [32m+[m
+ .../LargestSumContiguousSubarray.java              | 32 [32m++++++++++++++++++++++[m
+ 2 files changed, 33 insertions(+)
+
+[33mcommit 3f89a87ef7065c10dcd0a8b92d632a9f3968c57b[m
+Author: Pratyush Singh <singh.pratyush96@gmail.com>
+Date:   Sat Mar 18 21:45:59 2017 +0530
+
+    Added k-NN algorithm [Python]. Closes #41
+
+ README.md    |  1 [32m+[m
+ k_nn/k_nn.py | 95 [32m++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++[m
+ 2 files changed, 96 insertions(+)
+
+[33mcommit a0872ab9a9be364c8947d414b0b5c7a1df282a58[m
+Author: Avi Aryan <avi.aryan123@gmail.com>
+Date:   Wed Mar 22 23:11:13 2017 +0530
+
+    docs: Included DS in documents, fixes #69
+    
+    * docs: included DS with algorithms in the documents
+    
+    * docs: updated PR template, added a missing DS a/c review comments
+
+ CONTRIBUTING.md          | 12 [32m++++++[m[31m------[m
+ PULL_REQUEST_TEMPLATE.md |  4 [32m++[m[31m--[m
+ README.md                | 10 [32m++++++++[m[31m--[m
+ 3 files changed, 16 insertions(+), 10 deletions(-)
+
+[33mcommit f0c2c3b78a699254508274a672e0a6af8c5d6ab3[m
+Author: Avi Aryan <avi.aryan123@gmail.com>
+Date:   Wed Mar 22 12:07:31 2017 +0530
+
+    chore: integrated codacy, fixes #77
+
+ README.md | 2 [32m++[m
+ 1 file changed, 2 insertions(+)
+
+[33mcommit b579032aa768fced836f3b0a6e8f6786e1fdcd25[m
+Author: Avi Aryan <avi.aryan123@gmail.com>
+Date:   Wed Mar 22 08:11:24 2017 +0530
+
+    docs: added team membership information in CONTRIBUTING
+    
+    This will help people who are not a part of the org
+
+ CONTRIBUTING.md | 5 [32m++++[m[31m-[m
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+[33mcommit 6f63ca706068af0efa3c887dad4f7569c12b0ce6[m
+Author: jsroyal <jsroyal55@gmail.com>
+Date:   Tue Mar 21 19:09:07 2017 +0530
+
+    Added Merge Sort [Java], closes #64
+    
+    commit 13096073628edd75f26e2f77c6fd94c705001b41
+    Author: jsroyal <jsroyal55@gmail.com>
+    Date:   Sun Mar 19 19:13:36 2017 +0530
+    
+        update list
+    
+    commit e96b0cc076fdfac138ac00f1714e44c60c51b887
+    Author: jsroyal <jsroyal55@gmail.com>
+    Date:   Sat Mar 18 16:16:19 2017 +0530
+    
+        removed extra line
+    
+    commit 85fd2aff3ef48dd6b70e7c81527e7ef57aa07b97
+    Author: jsroyal <jsroyal55@gmail.com>
+    Date:   Sat Mar 18 15:59:55 2017 +0530
+    
+        adjust list in readme
+    
+    commit 5ec2ce7281da3afa12a108de649cbfb62659bc0b
+    Author: jsroyal <jsroyal55@gmail.com>
+    Date:   Sat Mar 18 11:34:28 2017 +0530
+    
+        delete binary file
+    
+    commit 7c8a34b36ca7e6eae460f134e57119ff9f114fbf
+    Merge: 8607954 f7baccb
+    Author: jsroyal <jsroyal55@gmail.com>
+    Date:   Sat Mar 18 11:27:04 2017 +0530
+    
+        merged
+    
+    commit f7baccb4e3d01b2e84be1f334dbc47c241ced605
+    Author: jsroyal <jsroyal55@gmail.com>
+    Date:   Sat Mar 18 10:54:50 2017 +0530
+    
+        added merge sort
+    
+    commit 860795406f0a36d108faf79309de1a3a18ba6518
+    Author: jsroyal <jsroyal55@gmail.com>
+    Date:   Fri Mar 17 18:49:27 2017 +0530
+    
+        added merge sort
+    
+    commit 447ec6947b4356a37b086035aa294b3b56c12b82
+    Author: jsroyal <jsroyal55@gmail.com>
+    Date:   Wed Mar 15 23:03:29 2017 +0530
+    
+        binary search in java
+
+ README.md                 |  1 [32m+[m
+ merge_sort/MergeSort.java | 56 [32m+++++++++++++++++++++++++++++++++++++++++++++++[m
+ 2 files changed, 57 insertions(+)
+
+[33mcommit df5b092ac1e6cf1833d25c7ab85632156b5eb047[m
+Author: Aashutosh Rathi <aashutoshrathi@gmail.com>
+Date:   Tue Mar 21 02:08:15 2017 +0530
+
+    Update sieveOfEratosthenes.c
+
+ sieve_of_eratosthenes/sieveOfEratosthenes.c | 24 [32m+++++++++++[m[31m-------------[m
+ 1 file changed, 11 insertions(+), 13 deletions(-)
+
+[33mcommit be22ff9a694277b7db6be3eb3718383c832e8b8d[m
+Author: Aashutosh Rathi <aashutoshrathi@gmail.com>
+Date:   Wed Mar 15 17:20:57 2017 +0530
+
+    Update sieveOfEratosthenes.c
+
+ sieve_of_eratosthenes/sieveOfEratosthenes.c | 4 [32m++[m[31m--[m
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+[33mcommit 81e83d978948994213976bdb3fb95970c8d31adf[m
+Author: Aashutosh Rathi <aashutoshrathi@gmail.com>
+Date:   Wed Mar 15 17:16:02 2017 +0530
+
+    Update sieveOfEratosthenes.c
+
+ sieve_of_eratosthenes/sieveOfEratosthenes.c | 4 [32m++[m[31m--[m
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+[33mcommit 5c212e76966b60b5fee2f91db1912441ffdbecf5[m
+Author: Aashutosh Rathi <aashutoshrathi@gmail.com>
+Date:   Wed Mar 15 17:08:32 2017 +0530
+
+    Update sieveOfEratosthenes.c
+
+ sieve_of_eratosthenes/sieveOfEratosthenes.c | 14 [32m+++++++[m[31m-------[m
+ 1 file changed, 7 insertions(+), 7 deletions(-)
+
+[33mcommit 143de99c188c3df766f3d50031af0b928abcf467[m
+Author: Aashutosh Rathi <aashutoshrathi@gmail.com>
+Date:   Wed Mar 15 16:21:41 2017 +0530
+
+    Update README.md
+
+ README.md | 2 [32m+[m[31m-[m
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+[33mcommit 6db1fdfd4a166aee65e4d6aaf9b5fd2b0bc1f049[m
+Author: Aashutosh Rathi <aashutoshrathi@gmail.com>
+Date:   Wed Mar 15 16:20:14 2017 +0530
+
+    Added Sieve Of Eratosthenes [C]
+
+ sieve_of_eratosthenes/sieveOfEratosthenes.c | 34 [32m+++++++++++++++++++++++++++++[m
+ 1 file changed, 34 insertions(+)
+
+[33mcommit acd4518b9ad21c9f67ca9bfbf13ab2afc0501354[m
+Author: Aashutosh Rathi <aashutoshrathi@gmail.com>
+Date:   Wed Mar 15 14:08:53 2017 +0530
+
+    Sieve_of_Eratosthenes/SieveOfEratosthenes.c
+
+ README.md | 1 [32m+[m
+ 1 file changed, 1 insertion(+)
+
+[33mcommit 63e2a9a3e6ccede5f0f43b785ccee6ff8bf84e3c[m
+Merge: 8416de9 079e736
+Author: Avi Aryan <avi.aryan123@gmail.com>
+Date:   Fri Mar 17 13:43:28 2017 +0530
+
+    Merge remote-tracking branch 'origin/coin-change-problem'
+
+[33mcommit 8416de9def01cd6b26c46214a14601cb10a39abf[m
+Author: Monal Shadi <monalshadi16@gmail.com>
+Date:   Fri Mar 17 13:40:05 2017 +0530
+
+    [refactor] Added ternary operator in EuclideanGCD.java (#58)
+    
+    * Added ternary operator in EuclideanGCD.java
+    
+    * Fixed variables and array brackets
+    
+    * Fixed semicolon
+    
+    * Line length fixed
+    
+    * Minor fix
+
+ euclidean_gcd/EuclideanGCD.java | 18 [32m+++++++++[m[31m---------[m
+ 1 file changed, 9 insertions(+), 9 deletions(-)
+
+[33mcommit 079e7364ea454cbac86844cc2f28edf5e285ad6b[m
+Author: Pratyush Singh <singh.pratyush96@gmail.com>
+Date:   Fri Mar 17 01:03:51 2017 +0530
+
+    Added Coin Change Problem [C]. Closes #9
+
+ README.md                                 |  1 [32m+[m
+ coin_change_problem/coin_change_problem.c | 45 [32m+++++++++++++++++++++++++++++++[m
+ 2 files changed, 46 insertions(+)
+
+[33mcommit ce3ccfa136defeac702af8c0c6c971b5faf0e731[m
+Author: Pratyush Singh <singh.pratyush96@gmail.com>
+Date:   Fri Mar 17 01:10:10 2017 +0530
+
+    Removed underscore in implemented algorithm table
+
+ README.md | 4 [32m++[m[31m--[m
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+[33mcommit 4733102643631fa49ba8a1a9d362c7aac10d0058[m
+Author: yashladha <yashladhapankajladha123@gmail.com>
+Date:   Wed Mar 15 19:11:18 2017 +0530
+
+    Added Quick Select [C]
+    
+    Closes https://github.com/iiitv/algos/issues/10
+
+ README.md                   |  1 [32m+[m
+ quick_select/quick_select.c | 62 [32m+++++++++++++++++++++++++++++++++++++++++++++[m
+ 2 files changed, 63 insertions(+)
+
+[33mcommit 05050bfe2e6a2a9f3630024cd720a6c5fda62354[m
+Author: Monal Shadi <monalshadi16@gmail.com>
+Date:   Thu Mar 16 22:15:58 2017 +0530
+
+    Added Insertion Sort [C] (#57). Closes #39
+    
+    * Added Insertion Sort
+    
+    * new line at end
+    
+    * Minor changes
+
+ README.md                       |  1 [32m+[m
+ insertion_sort/insertion_sort.c | 35 [32m+++++++++++++++++++++++++++++++++++[m
+ 2 files changed, 36 insertions(+)
+
+[33mcommit faad5a83e5c41a0f50a5bd90e625cbf4ba473a5a[m
+Merge: 50e74a3 5f00731
+Author: Pratyush Singh <singh.pratyush96@gmail.com>
+Date:   Thu Mar 16 21:42:37 2017 +0530
+
+    Merge java-sample-improvement
+
+[33mcommit 50e74a356256a3563988ce6978cad5b14dddc389[m
+Author: Jitendra Singh <jsroyal55@gmail.com>
+Date:   Thu Mar 16 21:40:47 2017 +0530
+
+    Added Binary Search [Java] (#55). Closes #54
+    
+    * binary search in java
+    
+    * changes made
+    
+    * file name update
+    
+    * Change accoding code of conduct
+    
+    * Added in java column
+    
+    * Changes code of conduct
+    
+    * remove redundant
+    
+    * reduce comment line
+    
+    * space remove and update link in readme
+    
+    * update
+
+ README.md                       |  2 [32m+[m[31m-[m
+ binary_search/BinarySearch.java | 34 [32m++++++++++++++++++++++++++++++++++[m
+ 2 files changed, 35 insertions(+), 1 deletion(-)
+
+[33mcommit 5f00731d657dd4408e6983f02a8c9db04239d0c3[m
+Author: Pratyush Singh <singh.pratyush96@gmail.com>
+Date:   Wed Mar 15 23:33:11 2017 +0530
+
+    docs: Changed Java code sample to correct array declaration
+
+ CONTRIBUTING.md | 6 [32m+++[m[31m---[m
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+[33mcommit c3c661bb868402ccc34daf15c5b4bc35807e7779[m
+Author: Monal Shadi <monalshadi16@gmail.com>
+Date:   Wed Mar 15 15:24:14 2017 +0530
+
+    [EuclideanGCD] [JAVA] Added implementation (#44). Closes #22
+    
+    * Added java implementation of Euclidean gcd
+    
+    * Minor Fixes
+    
+    * Minor Fixes
+    
+    * Extra blank line removed
+
+ README.md                       |  2 [32m+[m[31m-[m
+ euclidean_gcd/EuclideanGCD.java | 33 [32m+++++++++++++++++++++++++++++++++[m
+ 2 files changed, 34 insertions(+), 1 deletion(-)
+
+[33mcommit 73fcc3b65936ca937fdf4c91db6ff48d310bedf4[m
+Author: Aashutosh Rathi <aashutoshrathi@gmail.com>
+Date:   Wed Mar 15 13:37:06 2017 +0530
+
+    Updated dead links in PULL_REQUEST_TEMPLATE.md (#48)
+
+ PULL_REQUEST_TEMPLATE.md | 6 [32m+++[m[31m---[m
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+[33mcommit c450bab8af575f55e1793c113e19a4085fd76ca9[m
+Author: Pratyush Singh <singh.pratyush96@gmail.com>
+Date:   Wed Mar 15 13:29:42 2017 +0530
+
+    Added Binary Search [C] (#43)
+    
+    * [Binary Search] [C] Added implementation
+    
+    * [Binary Search] [C] Added entry to README
+
+ README.md                     |  1 [32m+[m
+ binary_search/binary_search.c | 40 [32m++++++++++++++++++++++++++++++++++++++++[m
+ 2 files changed, 41 insertions(+)
+
+[33mcommit d3f6116a9aa1dd7b82c7f8e7251686b237e0a42a[m
+Author: Monal Shadi <monalshadi16@gmail.com>
+Date:   Mon Mar 13 14:54:49 2017 +0530
+
+    Added euclidean_gcd [python] (#36). Closes #23
+    
+    * Entry added in README, euclidean_gcd.py added
+    
+    * newline at end
+    
+    * Line spacing corrected, \n removed
+    
+    * individual docstring, blank space removed
+    
+    * Standardized docstring as mentioned
+    
+    * Minor Fixes
+    
+    * Used Linting tool to fix errors
+
+ README.md                      |  2 [32m+[m[31m-[m
+ euclidean_gcd/euclidean_gcd.py | 47 [32m++++++++++++++++++++++++++++++++++++++++++[m
+ 2 files changed, 48 insertions(+), 1 deletion(-)
+
+[33mcommit 35aa1d1aca868ac7da264738324f362f617bab2d[m
+Author: Pratyush Singh <singh.pratyush96@gmail.com>
+Date:   Mon Mar 13 13:43:04 2017 +0530
+
+    README: Added badges
+
+ README.md | 2 [32m++[m
+ 1 file changed, 2 insertions(+)
+
+[33mcommit adcb82dc687ae017fd41d34467922279593ab63b[m
+Author: Pratyush Singh <singh.pratyush96@gmail.com>
+Date:   Fri Mar 10 03:06:55 2017 +0530
+
+    [Linear Search] [Python] Added line break
+
+ linear_search/linear_search.py | 1 [32m+[m
+ 1 file changed, 1 insertion(+)
+
+[33mcommit 0fc5b1112d246c47a11d42e9dde58f100ddaa413[m
+Author: Pratyush Singh <singh.pratyush96@gmail.com>
+Date:   Fri Mar 10 03:05:35 2017 +0530
+
+    docs: Add line spacing for Python code sample according to PEP8
+
+ CONTRIBUTING.md | 2 [32m++[m
+ 1 file changed, 2 insertions(+)
+
+[33mcommit a6011372d88b731b6ab33658135abed079e6a61d[m
+Author: Avi Aryan <avi.aryan123@gmail.com>
+Date:   Fri Mar 10 02:46:48 2017 +0530
+
+    docs: added PR template
+
+ CONTRIBUTING.md          |  3 [32m+++[m
+ PULL_REQUEST_TEMPLATE.md | 15 [32m+++++++++++++++[m
+ 2 files changed, 18 insertions(+)
+
+[33mcommit 9a3ea1256b2f35e7b6694d8556156ef8e420056b[m
+Author: Pratyush Singh <singh.pratyush96@gmail.com>
+Date:   Fri Mar 10 02:30:42 2017 +0530
+
+    Added java sample code to CONTRIBUTING.md. Closes #33 (#37)
+
+ CONTRIBUTING.md | 20 [32m++++++++++++++++++++[m
+ 1 file changed, 20 insertions(+)
+
+[33mcommit db5c8a13e95aaa1945254e89a50377bbdccf1f16[m
+Author: Lalit Kumar <lalitkumar.meena.lk@gmail.com>
+Date:   Fri Mar 10 02:17:39 2017 +0530
+
+    docs: Added GeeksForGeeks algorithms list (#35)
+    
+    * Update README.md
+    
+    Adding one more resource for Fundamentals of Algorithms
+    
+    * Update README.md
+    
+    Creating the alphabetical order of resources.
+    
+    * Update README.md
+    
+    Alphabetical order of resources.
+    
+    * Update README.md
+    
+    * Update README.md
+    
+    Adding the changes requested.
+
+ README.md | 6 [32m++++[m[31m--[m
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+
+[33mcommit 5de30bee020872a974dd4d2ffeeeadc565fdb457[m
+Author: Pratyush Singh <singh.pratyush96@gmail.com>
+Date:   Fri Mar 10 01:13:08 2017 +0530
+
+    [Euclidean GCD] [C] : Minor comment fix
+
+ euclidean_gcd/euclidean_gcd.c | 8 [32m++++[m[31m----[m
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+[33mcommit f8bf0b0c286f0c14ab3f43c89c7890cecaa94900[m
+Author: Monal Shadi <monalshadi16@gmail.com>
+Date:   Fri Mar 10 01:11:31 2017 +0530
+
+    Added gcd implementation [C] (#31)
+    
+    * Added gcd implementation
+    
+    * Blank spaces removed and tested for both now
+    
+    * Called iterative
+    
+    * spacingsc corrected
+    
+    * euclidean gcd added to READEME.md
+    
+    * Function name modified as file name
+    
+    * Entry in ascending order
+    
+    * I small case done and Comment corrected
+
+ README.md                     |  1 [32m+[m
+ euclidean_gcd/euclidean_gcd.c | 32 [32m++++++++++++++++++++++++++++++++[m
+ 2 files changed, 33 insertions(+)
+
+[33mcommit 76f0e48e498e46308d7141a6daba01c9d38351a7[m
+Author: Avi Aryan <avi.aryan123@gmail.com>
+Date:   Thu Mar 9 20:25:48 2017 +0530
+
+    docs: updated contributing guidelines
+
+ CONTRIBUTING.md | 5 [32m+++[m[31m--[m
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+[33mcommit 34af9a935d91687f8f59bf2393d0aa280481b7fb[m
+Author: Avi Aryan <avi.aryan123@gmail.com>
+Date:   Thu Mar 9 20:20:25 2017 +0530
+
+    docs: minor fix in table row definition
+
+ README.md | 2 [32m+[m[31m-[m
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+[33mcommit c91f902e139a24f6f71e53408236f819e9477130[m
+Author: Yash Ladha <201551061@iiitvadodara.ac.in>
+Date:   Thu Mar 9 20:18:35 2017 +0530
+
+    Include: Longest Common Subsequence in C (#32)
+    
+    * Include: Longest Common Subsequence in C
+    
+    * Applied Requested Changes
+
+ README.md                                          |  1 [32m+[m
+ .../longestCommonSubsequence.c                     | 37 [32m++++++++++++++++++++++[m
+ 2 files changed, 38 insertions(+)
+
+[33mcommit f074a6e0d51766fd883a44e3128f4b92cf62cd26[m
+Author: Monal Shadi <monalshadi16@gmail.com>
+Date:   Thu Mar 9 14:46:41 2017 +0530
+
+    README.md : Include Stanford-ACM codes repo link (#30)
+    
+    * Updated Readme.md
+    
+    * Updated Readme.md
+    
+    * Added Blank line
+
+ README.md | 1 [32m+[m
+ 1 file changed, 1 insertion(+)
+
+[33mcommit 02257d1ba60881baf653fb94a5f71ad3a9bd7548[m
+Author: Avi Aryan <avi.aryan123@gmail.com>
+Date:   Thu Mar 9 13:03:06 2017 +0530
+
+    Added quicksort C implementation (#16)
+    
+    * feat: added quicksort c implementation
+    
+    * docs: added entry to README
+    
+    * chore: optimized code
+    
+    * refactor: added comments
+    
+    * refactor: refactored code
+
+ README.md             |  1 [32m+[m
+ quicksort/quicksort.c | 59 [32m+++++++++++++++++++++++++++++++++++++++++++++++++++[m
+ 2 files changed, 60 insertions(+)
+
+[33mcommit d838d187b37834814f8bd69365f7aff3089604a6[m
+Merge: b3697c5 970976e
+Author: Avi Aryan <avi.aryan123@gmail.com>
+Date:   Thu Mar 9 02:56:26 2017 +0530
+
+    Merge pull request #25 from iiitv/python-sample
+    
+    docs: Added python sample code
+
+[33mcommit 970976eff3133af1c64e1c677d87a57f1078d7b3[m
+Author: Pratyush Singh <singh.pratyush96@gmail.com>
+Date:   Thu Mar 9 02:52:16 2017 +0530
+
+    docs: Added python sample code
+
+ CONTRIBUTING.md | 21 [32m++++++++++++++++++[m[31m---[m
+ 1 file changed, 18 insertions(+), 3 deletions(-)
+
+[33mcommit b3697c522d44efa770ed124a91188be9f6b6467a[m
+Merge: b006a36 52117d8
+Author: Pratyush Singh <singh.pratyush96@gmail.com>
+Date:   Thu Mar 9 02:38:26 2017 +0530
+
+    Merge pull request #24 from iiitv/tables-implementation
+    
+    Use tables in implementation section of README
+
+[33mcommit 52117d8399b389a7acd80a98e144011d47b8cf19[m
+Author: Avi Aryan <avi.aryan123@gmail.com>
+Date:   Thu Mar 9 02:36:58 2017 +0530
+
+    docs: left align algorithm column in implementation table
+
+ README.md | 2 [32m+[m[31m-[m
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+[33mcommit f54b0efcb71e5d0a56390731a4073689de633397[m
+Author: Avi Aryan <avi.aryan123@gmail.com>
+Date:   Thu Mar 9 02:31:13 2017 +0530
+
+    docs: languages as columns, center align items
+
+ README.md | 6 [32m+++[m[31m---[m
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+[33mcommit a26a67d1a9f9f7614154f268404665bd5d687051[m
+Author: Avi Aryan <avi.aryan123@gmail.com>
+Date:   Thu Mar 9 02:19:34 2017 +0530
+
+    docs: use tables in implementation
+
+ README.md | 4 [32m+++[m[31m-[m
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+[33mcommit b006a36ed1f9ec441bd5d87701402baf60738e6a[m
+Author: Pratyush Singh <singh.pratyush96@gmail.com>
+Date:   Thu Mar 9 01:58:33 2017 +0530
+
+    Added "different issue for different language" rule to CONTRIBUTING (#18)
+
+ CONTRIBUTING.md | 19 [32m++++++++++++[m[31m-------[m
+ 1 file changed, 12 insertions(+), 7 deletions(-)
+
+[33mcommit 6016f94c0f1f7e6716420892058a867983975c28[m
+Author: Avi Aryan <avi.aryan123@gmail.com>
+Date:   Thu Mar 9 01:45:30 2017 +0530
+
+    docs: updated contributing guidelines
+    
+    anyone can assign an issue to themselves if it is unassigned
+
+ CONTRIBUTING.md | 2 [32m+[m[31m-[m
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+[33mcommit bf28bd403fe335c0268c4068f95d9d8f9f7bbf76[m
+Author: Avi Aryan <avi.aryan123@gmail.com>
+Date:   Thu Mar 9 00:30:33 2017 +0530
+
+    chore: added gitignore
+
+ .gitignore | 6 [32m++++++[m
+ 1 file changed, 6 insertions(+)
+
+[33mcommit 9f56206c225a765a948c8bea57a3688ec3c1157d[m
+Author: Avi Aryan <avi.aryan123@gmail.com>
+Date:   Thu Mar 9 00:04:48 2017 +0530
+
+    docs: updated contributing guidelines
+
+ CONTRIBUTING.md | 4 [32m+++[m[31m-[m
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+[33mcommit 9990052cc1cc2913d0eb891d131a1b58c5d3c0af[m
+Author: Avi Aryan <avi.aryan123@gmail.com>
+Date:   Thu Mar 9 00:01:45 2017 +0530
+
+    docs: added points for improving an existing code
+
+ CONTRIBUTING.md | 7 [32m+++++++[m
+ 1 file changed, 7 insertions(+)
+
+[33mcommit aaee06631ff25b092b90c6b2345d6098bebc03a3[m
+Author: Avi Aryan <avi.aryan123@gmail.com>
+Date:   Wed Mar 8 23:46:52 2017 +0530
+
+    docs: added project maintainers
+
+ README.md | 8 [32m++++++++[m
+ 1 file changed, 8 insertions(+)
+
+[33mcommit 998dce17d8f20630066b538c4299a1bb7445aca9[m
+Author: Yash Ladha <201551061@iiitvadodara.ac.in>
+Date:   Wed Mar 8 23:38:52 2017 +0530
+
+    README.md: Include Awesome Algorithms (#14)
+
+ README.md | 1 [32m+[m
+ 1 file changed, 1 insertion(+)
+
+[33mcommit c2cf384f02dbf40afae919f5d7992cb24bee29a5[m
+Author: Avi Aryan <avi.aryan123@gmail.com>
+Date:   Wed Mar 8 23:33:09 2017 +0530
+
+    docs: added some helpful points for contributors
+
+ CONTRIBUTING.md | 8 [32m++++++++[m
+ 1 file changed, 8 insertions(+)
+
+[33mcommit 29bf7392e2da664a83ff6e199b22bc149b86b04d[m
+Author: Avi Aryan <avi.aryan123@gmail.com>
+Date:   Wed Mar 8 23:24:55 2017 +0530
+
+    docs: updated contributing guidelines
+
+ CONTRIBUTING.md | 3 [32m++[m[31m-[m
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+[33mcommit 2871d9551de41bfd299902b3df11ab22ac8b4ee1[m
+Author: Avi Aryan <avi.aryan123@gmail.com>
+Date:   Wed Mar 8 23:19:26 2017 +0530
+
+    docs: added guidelines to suggest an algorithm
+
+ CONTRIBUTING.md | 11 [32m+++++++++++[m
+ README.md       |  4 [32m+++[m[31m-[m
+ 2 files changed, 14 insertions(+), 1 deletion(-)
+
+[33mcommit 3eec6d915793cfd96911d3f116a983b28bec4e70[m
+Author: Pratyush Singh <singh.pratyush96@gmail.com>
+Date:   Wed Mar 8 23:17:39 2017 +0530
+
+    Added linear search implementation in Python (#6)
+    
+    * Added linear search implementation in Python
+    
+    * Added space after % in print
+    
+    * Added linear search to README
+
+ README.md                      |  2 [32m+[m[31m-[m
+ linear_search/linear_search.py | 24 [32m++++++++++++++++++++++++[m
+ 2 files changed, 25 insertions(+), 1 deletion(-)
+
+[33mcommit 1c8c4408607ff99280d4a9ae28b39b58fed380c7[m
+Author: Lalit Kumar <lalitkumar.meena.lk@gmail.com>
+Date:   Wed Mar 8 23:16:54 2017 +0530
+
+    Update README.md (#11)
+    
+    Adding some more useful resources for Algorithms Learning.
+
+ README.md | 2 [32m++[m
+ 1 file changed, 2 insertions(+)
+
+[33mcommit 7daca562c9b745affab8fe15a540ae2854da3531[m
+Author: Avi Aryan <avi.aryan123@gmail.com>
+Date:   Wed Mar 8 22:55:06 2017 +0530
+
+    chore: create a separate CONTRIBUTING file, keep README clean
+
+ CONTRIBUTING.md | 44 [32m++++++++++++++++++++++++++++++++++++++++++++[m
+ README.md       | 48 [32m++++++[m[31m------------------------------------------[m
+ 2 files changed, 50 insertions(+), 42 deletions(-)
+
+[33mcommit a475d3a4c022398450f0c92eb723db7608f78798[m
+Author: Avi Aryan <avi.aryan123@gmail.com>
+Date:   Wed Mar 8 22:47:05 2017 +0530
+
+    docs: improved contribution guidelines
+
+ README.md | 8 [32m+++++[m[31m---[m
+ 1 file changed, 5 insertions(+), 3 deletions(-)
+
+[33mcommit 85da010b79a58cecc9cd41369ffda24d8ca6df0e[m
+Author: Avi Aryan <avi.aryan123@gmail.com>
+Date:   Wed Mar 8 22:44:05 2017 +0530
+
+    docs: added resources
+
+ README.md | 5 [32m+++++[m
+ 1 file changed, 5 insertions(+)
+
+[33mcommit b5cd65c9cf37ca08a091a8161e973ba73b6d0236[m
+Author: Avi Aryan <avi.aryan123@gmail.com>
+Date:   Wed Mar 8 22:42:12 2017 +0530
+
+    docs: updated styleguide
+
+ README.md | 6 [32m+++++[m[31m-[m
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+
+[33mcommit 7ef3e09680dde8e1282ed63f96de316857d160f5[m
+Author: Avi Aryan <avi.aryan123@gmail.com>
+Date:   Wed Mar 8 22:33:34 2017 +0530
+
+    docs: added code style info
+
+ README.md | 43 [32m++++++++++++++++++++++++++++++++++++++++++[m[31m-[m
+ 1 file changed, 42 insertions(+), 1 deletion(-)
+
+[33mcommit 78c887ce2c3595c644ba34ebab888cf4b18c091f[m
+Author: Avi Aryan <avi.aryan123@gmail.com>
+Date:   Wed Mar 8 22:24:14 2017 +0530
+
+    docs: update README
+
+ README.md | 9 [32m++++++++[m[31m-[m
+ 1 file changed, 8 insertions(+), 1 deletion(-)
+
+[33mcommit 1d4bde610a2e5400b3e5fa0667f6a3162f435868[m
+Author: Avi Aryan <avi.aryan123@gmail.com>
+Date:   Wed Mar 8 22:19:57 2017 +0530
+
+    Initial commit
+
+ README.md | 1 [32m+[m
+ 1 file changed, 1 insertion(+)
