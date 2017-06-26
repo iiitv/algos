@@ -14,8 +14,8 @@ done
 echo ""
 echo "Testing C++ files..."
 for i in $(ls -1 **/*.cpp); do
-    echo "    Compiling $i - g++ $i -lm -std=c++11"
-    g++ $i -lm -std=c++11
+    echo "    Compiling $i - g++ $i -lm -pthread -std=c++11"
+    g++ $i -lm -pthread -std=c++11
     echo "    Running $i - ./a.out > /dev/null"
     ./a.out > /dev/null
     rm -f a.out
@@ -25,8 +25,8 @@ done
 echo ""
 echo "Testing Java files..."
 for i in $(ls -1 **/*.java); do
-    echo "    Compiling $i - javac $i -d ."
-    javac $i -d .
+    echo "    Compiling $i - javac -Werror -Xlint:all $i -d ."
+    javac -Werror -Xlint:all $i -d .
     filename="${i##*/}"
     classname="${filename%.*}"
     echo "    Running $i - java $classname > /dev/null"
