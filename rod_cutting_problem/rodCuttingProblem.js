@@ -18,9 +18,11 @@ function rodCuttingProblem (price) {
 		bestPrice[i] = price[i - 1];
 	}
 	for (let i = 1; i <= n; i++) {
-		for (let j = i; j <= n; j++) {
-			bestPrice[j] = Math.max(bestPrice[j], bestPrice[j - i] + bestPrice[i]);
+		tmax = Number.MIN_SAFE_INTEGER;
+		for (let j = 0; j < i; j++) {
+			tmax = Math.max(tmax, bestPrice[i - j - 1] + price[j]);
 		}
+		bestPrice[i] = tmax;
 	}
 	return bestPrice[n];
 }
