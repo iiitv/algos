@@ -24,7 +24,7 @@ void bucketSort(int array[], int n) {
 	int a, b, c;
 	for (a = 0; a < 3; a++) {
 		buckets[a].count = 0;
-		buckets[a].value = (int*)malloc(sizeof(int) * n);		
+		buckets[a].value = (int*)malloc(sizeof(int) * n);
 	}
 	for (a = 0; a < n; a++) {
 		if (array[a] < 0) {
@@ -35,7 +35,7 @@ void bucketSort(int array[], int n) {
 		}
 		else {
 			buckets[1].value[buckets[1].count++] = array[a];
-		}		
+		}
 	}
 	for (c = 0, a = 0; a < 3; a++) {
 		qsort(buckets[a].value, buckets[a].count, sizeof(int), &comparator);
@@ -43,8 +43,8 @@ void bucketSort(int array[], int n) {
 			array[c + b] = buckets[a].value[b];
 		}
 		c += buckets[a].count;
-		free(buckets[a].value);	
-	}	
+		free(buckets[a].value);
+	}
 }
 
 int main() {
