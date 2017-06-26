@@ -2,14 +2,14 @@ package main
 
 import "fmt"
 
-// EuclideanGCDIterative finds GCD of given numbers by iterative method
+// EuclideanGCD finds GCD of given numbers by iterative method
 // first : first number
 // second : second number
 // tmp : temporary variable which hold values
 // Time complexity :O(log min(first,second))
-func EuclideanGCDIterative(first int, second int) int {
+func EuclideanGCD(first int, second int) int {
 	for second != 0 {
-		tmp := first
+		tmp := second
 		second = first % second
 		first = tmp
 	}
@@ -32,6 +32,6 @@ func main() {
 	first := 90
 	second := 65
 	fmt.Println("GCD of numbers is :")
-	fmt.Println(EuclideanGCDIterative(first, second))
+	fmt.Println(EuclideanGCD(first, second))
 	fmt.Println(EuclideanGCDRecursive(first, second))
 }
