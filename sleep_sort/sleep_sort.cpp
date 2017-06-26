@@ -33,9 +33,9 @@ void sleep_sort(int ar[], vector<int> &ans) {
  */
 int main() {
 	int ar[] = {8, 4, 9, 1};
-	vector<int> sorted_number;
-	sleep_sort(ar, sorted_number);
-	for (auto& item : sorted_number) {
+	vector<int> sorted;
+	sleep_sort(ar, sorted);
+	for (auto& item : sorted) {
 		cout << item << endl;
 	}
 	return 0;
