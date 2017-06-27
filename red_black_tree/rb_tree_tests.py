@@ -1568,8 +1568,10 @@ class RbTreeTests(unittest.TestCase):
                        left=NIL_LEAF, right=NIL_LEAF)
         node_50.left = node_30
         node_50.right = node_70
-        node_15 = Node(value=15, color=BLACK, parent=node_30, left=NIL_LEAF, right=NIL_LEAF)
-        node_40 = Node(value=40, color=BLACK, parent=node_30, left=NIL_LEAF, right=NIL_LEAF)
+        node_15 = Node(value=15, color=BLACK, parent=node_30,
+                       left=NIL_LEAF, right=NIL_LEAF)
+        node_40 = Node(value=40, color=BLACK, parent=node_30,
+                       left=NIL_LEAF, right=NIL_LEAF)
         node_30.left = node_15
         node_30.right = node_40
 
