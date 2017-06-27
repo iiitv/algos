@@ -23,8 +23,7 @@ def _hypothesis_value(data, parameter_vector):
     :param parameter_vector: Weight vector
     :return: Vector of values of hypothesis function for given data matrix.
     """
-    hyp_val_matrix = numpy.asmatrix(numpy.dot(data, parameter_vector))
-    return hyp_val_matrix
+    return numpy.asmatrix(numpy.dot(data, parameter_vector))
 
 
 def summation_of_cost_derivative(input_data, output_data, parameter_vector):
@@ -36,8 +35,7 @@ def summation_of_cost_derivative(input_data, output_data, parameter_vector):
 
     :return: Returns the summation of cost derivative
     """
-    summation_value = numpy.dot(input_data.transpose(), _error(input_data, output_data, parameter_vector))
-    return summation_value
+    return numpy.dot(input_data.transpose(), _error(input_data, output_data, parameter_vector))
 
 
 def get_cost_derivative(train_data, train_output, parameter_vector):
@@ -49,9 +47,8 @@ def get_cost_derivative(train_data, train_output, parameter_vector):
     :return: derivative vector
     """
     train_data_size = len(train_data)
-    cost_derivative_value = summation_of_cost_derivative(train_data, train_output,
-                                                         parameter_vector)/train_data_size
-    return cost_derivative_value
+    return summation_of_cost_derivative(train_data, train_output,
+                                        parameter_vector)/train_data_size
 
 
 def run_gradient_descent(train_data, train_output, parameter_vector,
@@ -69,9 +66,7 @@ def run_gradient_descent(train_data, train_output, parameter_vector,
     :param relative_error_limit: Tolerance for error in training. It is relative to second parameter.
     :return: Optimized parameter vector.
     """
-    j = 0
     while True:
-        j += 1
         cost_derivative = get_cost_derivative(train_data, train_output, parameter_vector)
         temp_parameter_vector = parameter_vector - \
             learning_rate*cost_derivative
@@ -136,8 +131,9 @@ def main():
     learning_rate = 0.00015
     absolute_error_limit = 0.000015
     relative_error_limit = 0
-    parameter_vector = run_gradient_descent(train_data, train_output, parameter_vector, learning_rate,
-                                            absolute_error_limit, relative_error_limit)
+    parameter_vector = run_gradient_descent(train_data, train_output, parameter_vector,
+                                            learning_rate, absolute_error_limit,
+                                            relative_error_limit)
     test_data = numpy.loadtxt(home + '/Documents/rock_aquifer_test.dat', usecols=input_cols)
     num_data = len(test_data)
     biased_tuple = numpy.asmatrix(numpy.ones((1, num_data), dtype=float).transpose())
