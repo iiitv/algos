@@ -10,12 +10,17 @@ def count_occurences(array, c):
     Time Complexity: O(n)
 	"""
     for i in array:
-        c[array[i]] += 1
+        c[array] += 1
     for i in range(1, len(c)):
          c[i] += c[i - 1]
 
 
 def counting_sort(array, k):
+	"""
+    :param array: Iterable of elements
+    :param k: Max value
+    :return: Output array
+    """
     b = [0] * len(array)
     c = [0] * (k + 1)
     count_occurences(array, c)
