@@ -319,7 +319,7 @@ class RedBlackTree:
         """
         parent = node.parent
         if parent.color == RED:
-            sibling, direction = self._get_sibling(node)
+            sibling, _ = self._get_sibling(node)
             if sibling.color == BLACK and sibling.left.color != RED and sibling.right.color != RED:
                 parent.color, sibling.color = sibling.color, parent.color  # switch colors
                 return  # Terminating
