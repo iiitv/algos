@@ -2,120 +2,149 @@
 Implementation of gradient descent algorithm for minimizing cost of a linear hypothesis function.
 """
 import numpy
-
-# List of input, output pairs
-train_data = (((5, 2, 3), 15), ((6, 5, 9), 25),
-              ((11, 12, 13), 41), ((1, 1, 1), 8), ((11, 12, 13), 41))
-test_data = (((515, 22, 13), 555), ((61, 35, 49), 150))
-parameter_vector = [2, 4, 1, 5]
-m = len(train_data)
-LEARNING_RATE = 0.009
+from os.path import expanduser
+import matplotlib.pyplot as plt
 
 
-def _error(example_no, data_set='train'):
+def _error(input_data, output_data, parameter_vector):
     """
-    :param data_set: train data or test data
-    :param example_no: example number whose error has to be checked
-    :return: error in example pointed by example number.
+    :param input_data:  Data whose summation of cost derivative has to be calculated
+    :param output_data: Output corresponding to training data
+    :param parameter_vector: Weight vector
+    :return:
     """
-    return calculate_hypothesis_value(example_no, data_set) - output(example_no, data_set)
+    return _hypothesis_value(input_data, parameter_vector) - output_data
 
 
-def _hypothesis_value(data_input_tuple):
+def _hypothesis_value(data, parameter_vector):
     """
-    Calculates hypothesis function value for a given input
-    :param data_input_tuple: Input tuple of a particular example
-    :return: Value of hypothesis function at that point.
-    Note that there is an 'biased input' whose value is fixed as 1.
-    It is not explicitly mentioned in input data.. But, ML hypothesis functions use it.
-    So, we have to take care of it separately. Line 36 takes care of it.
+    Calculates hypothesis function value for a given data
+    :param data: Data whose hypothesis value has to be calculated
+    :param parameter_vector: Weight vector
+    :return: Vector of values of hypothesis function for given data matrix.
     """
-    hyp_val = 0
-    for i in range(len(parameter_vector) - 1):
-        hyp_val += data_input_tuple[i]*parameter_vector[i+1]
-    hyp_val += parameter_vector[0]
-    return hyp_val
+    hyp_val_matrix = numpy.asmatrix(numpy.dot(data, parameter_vector))
+    return hyp_val_matrix
 
 
-def output(example_no, data_set):
-    """
-    :param data_set: test data or train data
-    :param example_no: example whose output is to be fetched
-    :return: output for that example
-    """
-    if data_set == 'train':
-        return train_data[example_no][1]
-    elif data_set == 'test':
-        return test_data[example_no][1]
-
-
-def calculate_hypothesis_value(example_no, data_set):
-    """
-    Calculates hypothesis value for a given example
-    :param data_set: test data or train_data
-    :param example_no: example whose hypothesis value is to be calculated
-    :return: hypothesis value for that example
-    """
-    if data_set == "train":
-        return _hypothesis_value(train_data[example_no][0])
-    elif data_set == "test":
-        return _hypothesis_value(test_data[example_no][0])
-
-
-def summation_of_cost_derivative(index, end=m):
+def summation_of_cost_derivative(input_data, output_data, parameter_vector):
     """
     Calculates the sum of cost function derivative
-    :param index: index wrt derivative is being calculated
-    :param end: value where summation ends, default is m, number of examples
+    :param input_data:  Data whose summation of cost derivative has to be calculated
+    :param output_data: Output corresponding to training data
+    :param parameter_vector: Weight vector
+
     :return: Returns the summation of cost derivative
-    Note: If index is -1, this means we are calculating summation wrt to biased parameter.
     """
-    summation_value = 0
-    for i in range(end):
-        if index == -1:
-            summation_value += _error(i)
-        else:
-            summation_value += _error(i)*train_data[i][0][index]
+    summation_value = numpy.dot(input_data.transpose(), _error(input_data, output_data, parameter_vector))
     return summation_value
 
 
-def get_cost_derivative(index):
+def get_cost_derivative(train_data, train_output, parameter_vector):
     """
-    :param index: index of the parameter vector wrt to derivative is to be calculated
-    :return: derivative wrt to that index
-    Note: If index is -1, this means we are calculating summation wrt to biased parameter.
+
+    :param train_data: Training data
+    :param train_output: Output corresponding to training data
+    :param parameter_vector: Weight vector
+    :return: derivative vector
     """
-    cost_derivative_value = summation_of_cost_derivative(index, m)/m
+    train_data_size = len(train_data)
+    cost_derivative_value = summation_of_cost_derivative(train_data, train_output,
+                                                         parameter_vector)/train_data_size
     return cost_derivative_value
 
 
-def run_gradient_descent():
-    global parameter_vector
-    # Tune these values to set a tolerance value for predicted output
-    absolute_error_limit = 0.000002
-    relative_error_limit = 0
+def run_gradient_descent(train_data, train_output, parameter_vector,
+                         learning_rate, absolute_error_limit,
+                         relative_error_limit):
+    """
+    Runs gradient descent on given training data and optimizes
+    parameters
+    :param train_data: Training data. Type: Matrix.
+    :param train_output: Output corresponding to each training data. Type: Vector,
+    may be matrix
+    :param parameter_vector: Randomly initialized weight vector
+    :param learning_rate: Rate at which gradient descent learns
+    :param absolute_error_limit: Tolerance for error in training.
+    :param relative_error_limit: Tolerance for error in training. It is relative to second parameter.
+    :return: Optimized parameter vector.
+    """
     j = 0
     while True:
         j += 1
-        temp_parameter_vector = [0, 0, 0, 0]
-        for i in range(0, len(parameter_vector)):
-            cost_derivative = get_cost_derivative(i-1)
-            temp_parameter_vector[i] = parameter_vector[i] - \
-                LEARNING_RATE*cost_derivative
+        cost_derivative = get_cost_derivative(train_data, train_output, parameter_vector)
+        temp_parameter_vector = parameter_vector - \
+            learning_rate*cost_derivative
         if numpy.allclose(parameter_vector, temp_parameter_vector,
                           atol=absolute_error_limit, rtol=relative_error_limit):
             break
         parameter_vector = temp_parameter_vector
-    print("Number of iterations:", j)
+    return parameter_vector
 
 
-def test_gradient_descent():
-    for i in range(len(test_data)):
-        print("Actual output value:", output(i, 'test'))
-        print("Hypothesis output:", calculate_hypothesis_value(i, 'test'))
+def test_gradient_descent(test_data, test_output, parameter_vector):
+    """
+    :param test_data: Input data to be tested
+    :param test_output: Actual Output data for Input dataset
+    :param parameter_vector: Weight vector after optimized by using gradient descent
+    :return: None
+    """
+    actual_output = test_output
+    hypothesis_output = _hypothesis_value(test_data,
+                                          parameter_vector=parameter_vector)
+    num_examples = len(test_output)
+    plt.stem(range(num_examples), actual_output, markerfmt='go', label='Actual Output')
+    plt.stem(range(num_examples), hypothesis_output, label='Hypothesis Output')
+    plt.xlabel('Test case')
+    plt.ylabel('Output Values')
+    plt.xlim([-1, 7])
+    plt.legend()
+    plt.show()
+
+
+def download_data():
+    """
+    Downloads test and train data from GitHub repository
+    """
+    import requests
+    home = expanduser('~')
+    response = requests.get('https://github.com/iiitv/algos/blob/master/.datasets/'
+                            'linear_regression/rock_aquifer_train.dat')
+    if response:
+        with open(home+'/rock_aquifer_train.dat', 'wb') as f:
+            f.write(response.text)
+    response = requests.get('https://github.com/iiitv/algos/blob/master/.datasets/'
+                            'linear_regression/rock_aquifer_test.dat')
+    if response:
+        with open(home + '/rock_aquifer_test.dat', 'wb') as f:
+            f.write(response.text)
+
+
+def main():
+    download_data()
+    home = expanduser('~')
+    input_cols = list(range(11))
+    train_data = numpy.asmatrix(numpy.loadtxt(home + '/Documents/rock_aquifer_train.dat',
+                                              usecols=input_cols))
+    num_data = len(train_data)
+    biased_tuple = numpy.asmatrix(numpy.ones((1, num_data), dtype=float).transpose())
+    train_data = numpy.column_stack((biased_tuple, train_data))
+    output_cols = (11,)
+    train_output = numpy.asmatrix(numpy.loadtxt(home + '/Documents/rock_aquifer_train.dat',
+                                                usecols=output_cols)).transpose()
+    parameter_vector = numpy.asmatrix([2, 4, 1, 5, 4, 1, 2, 2, 3, 1, 1, 2]).transpose()
+    learning_rate = 0.00015
+    absolute_error_limit = 0.000015
+    relative_error_limit = 0
+    parameter_vector = run_gradient_descent(train_data, train_output, parameter_vector, learning_rate,
+                                            absolute_error_limit, relative_error_limit)
+    test_data = numpy.loadtxt(home + '/Documents/rock_aquifer_test.dat', usecols=input_cols)
+    num_data = len(test_data)
+    biased_tuple = numpy.asmatrix(numpy.ones((1, num_data), dtype=float).transpose())
+    test_data = numpy.column_stack((biased_tuple, test_data))
+    test_output = numpy.loadtxt(home + '/Documents/rock_aquifer_test.dat', usecols=output_cols)
+    test_gradient_descent(test_data, test_output, parameter_vector=parameter_vector)
 
 
 if __name__ == '__main__':
-    run_gradient_descent()
-    print("\nTesting gradient descent for a linear hypothesis function.\n")
-    test_gradient_descent()
+    main()
