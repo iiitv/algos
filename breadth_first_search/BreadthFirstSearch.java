@@ -12,7 +12,7 @@ public class BreadthFirstSearch<T> {
     public void addEdges (T source, T destination) {
         if (adj.containsKey(source)) {
             // update the adj-list
-            ArrayList<T> list = (ArrayList<T>)adj.get(source);
+            ArrayList<T> list = adj.get(source);
             list.add(destination);
             adj.put(source, list);
         } else {
