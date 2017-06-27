@@ -32,7 +32,7 @@ def counting_sort(array, k):
 
 def main():
     array = [3, 4, 5, 3, 6, 3, 3, 5, 5, 3, 2, 1, 5, 8]
-    k = max(array)
+    max_value = max(array)
     print(counting_sort(array, k))
 
 
