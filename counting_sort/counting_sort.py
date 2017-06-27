@@ -1,5 +1,14 @@
+#Running time Complexity: O(z) where z = max(len(array), max(array))
+#Auxillary Space: O(n)
+
 
 def count_occurences(array, c):
+	"""
+	:param array: iterable of elements
+	:param c: Intermediate variable
+    :return: No returns, counts occurrences
+    Time Complexity: O(n)
+	"""
     for i in array:
         c[array[i]] += 1
     for i in range(1, len(c)):
