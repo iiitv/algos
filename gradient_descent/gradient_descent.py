@@ -2,6 +2,7 @@
 Implementation of gradient descent algorithm for minimizing cost of a linear hypothesis function.
 """
 import numpy
+import requests
 import matplotlib.pyplot as plt
 
 
@@ -27,7 +28,6 @@ def _hypothesis_value(data, parameter_vector):
 
 def get_cost_derivative(input_data, output_data, parameter_vector):
     """
-
     :param input_data: Training or testing data
     :param output_data: Output corresponding to training data
     :param parameter_vector: Weight vector
@@ -89,7 +89,6 @@ def download_data():
     """
     Downloads test and train data from GitHub repository
     """
-    import requests
     response = requests.get('http://www.stat.ufl.edu/~winner/data/rock_aquifer.dat')
     train_data = []
     train_output = []
@@ -111,7 +110,7 @@ def main():
     train_output = train_output.transpose()
     parameter_vector = numpy.asmatrix([2, 4, 1, 5, 4, 1, 2, 2, 3, 1, 1, 2]).transpose()
     learning_rate = 0.00015
-    absolute_error_limit = 0.000015/4
+    absolute_error_limit = 0.000015
     relative_error_limit = 0
     parameter_vector = run_gradient_descent(train_data, train_output, parameter_vector,
                                             learning_rate, absolute_error_limit,
