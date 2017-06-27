@@ -1,3 +1,7 @@
+/* Following algorithm sorts the input array in ascending order
+ * Time Complexity O(n)-> avg case and O(n^2)-> Worst Case
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -6,7 +10,7 @@ struct bucket {
 	int* value;
 };
 
-int comparator(const void*first, const void* second) {
+int comparator(const void* first, const void* second) {
 	int a = *((int*)first), b = *((int*)second);
 	if (a == b) {
 		return 0;
@@ -19,7 +23,7 @@ int comparator(const void*first, const void* second) {
 	}
 }
 
-void bucketSort(int array[], int n) {
+void bucket_sort(int array[], int n) {
 	struct bucket buckets[3];
 	int a, b, c;
 	for (a = 0; a < 3; a++) {
@@ -48,11 +52,12 @@ void bucketSort(int array[], int n) {
 }
 
 int main() {
-	int array[12] = {-5, -9, 1000, 1, -10, 0, 2, 3, 5, 4, 1234, 7};
+	int array[] = {-5, -9, 1000, 1, -10, 0, 2, 3, 5, 4, 1234, 7};
 	int n = sizeof(array) / sizeof(array[0]);
 	int j;
-	bucketSort(array, n);
-	for (j = 0; j < n; j++)
+	bucket_sort(array, n);
+	for (j = 0; j < n; j++) {
 		printf("%d ", array[j]);
+	}
 	return 0;
 }
