@@ -52,9 +52,10 @@ class bst(object):
         Delete element from binary tree
         Time Complexity: O(Logn)average case and O(n) in worst case
         :param data: Node with value of data will delete from bst
-        Throws execption if node with value of data not found
+        Throws execption if node with value of data not exist
         """
-        if self.root.data == data:
+        parent_node = self.search_node(data)
+        if parent_node is None:
             node = self.root
             if node.right is None and node.left is None:
                 # if node has no child
@@ -81,91 +82,81 @@ class bst(object):
                     parent_to_replace.left = to_replace.right
                     self.root = node
         else:
-            iterator = self.root
-            while iterator is not None:
-                if iterator.data >= data:
-                    if iterator.left is None:
-                        raise KeyError('Node does not found')
-                    elif iterator.left.data == data:
-                        node = iterator.left
-                        parent_node = iterator
-                        if node.right is None and node.left is None:
-                            # if node  has no child
-                            parent_node.left = None
-                        elif node.right is None:
-                            # if node only has left child
-                            parent_node.left = node.left
-                        elif node.left is None:
-                            # if node only has right child
-                            parent_node.left = node.right
-                        else:
-                            # if node have both children
-                            if node.right.left is None:
-                                node.right.left = node.left
-                                parent_node.left = node.right
-                            else:
-                                to_replace = node.right
-                                parent_to_replace = node
-                                while to_replace.left is not None:
-                                    parent_to_replace = to_replace
-                                    to_replace = to_replace.left
-                                parent_node.left.data = to_replace.data
-                                parent_to_replace.left = to_replace.right
-                        return
-                    else:
-                        iterator = iterator.left
+            if parent_node.left is not None and parent_node.left.data == data:
+                node = parent_node.left
+                if node.right is None and node.left is None:
+                    # if node  has no child
+                    parent_node.left = None
+                elif node.right is None:
+                    # if node only has left child
+                    parent_node.left = node.left
+                elif node.left is None:
+                    # if node only has right child
+                    parent_node.left = node.right
                 else:
-                    if iterator.right is None:
-                        raise KeyError('Node does not found')
-                    elif iterator.right.data == data:
-                        node = iterator.right
-                        parent_node = iterator
-                        if node.right is None and node.left is None:
-                            # if node has no child
-                            parent_node.right = None
-                        elif node.right is None:
-                            # if node only has left child
-                            parent_node.right = node.left
-                        elif node.left is None:
-                            # if node only has right child
-                            parent_node.right = node.right
-                        else:
-                            # if node have both chidren
-                            if node.right.left is None:
-                                node.right.left = node.left
-                                parent_node.right = node.right
-                            else:
-                                to_replace = node.right
-                                parent_to_replace = node
-                                while to_replace.left is not None:
-                                    parent_to_replace = to_replace
-                                    to_replace = to_replace.left
-                                parent_node.right.data = to_replace.data
-                                parent_to_replace.left = to_replace.right
-                        return
+                    # if node have both children
+                    if node.right.left is None:
+                        node.right.left = node.left
+                        parent_node.left = node.right
                     else:
-                        iterator = iterator.right
-        return
+                        to_replace = node.right
+                        parent_to_replace = node
+                        while to_replace.left is not None:
+                            parent_to_replace = to_replace
+                            to_replace = to_replace.left
+                        parent_node.left.data = to_replace.data
+                        parent_to_replace.left = to_replace.right
+                return
+            else:
+                node = parent_node.right
+                if node.right is None and node.left is None:
+                    # if node has no child
+                    parent_node.right = None
+                elif node.right is None:
+                    # if node only has left child
+                    parent_node.right = node.left
+                elif node.left is None:
+                    # if node only has right child
+                    parent_node.right = node.right
+                else:
+                    # if node have both chidren
+                    if node.right.left is None:
+                        node.right.left = node.left
+                        parent_node.right = node.right
+                    else:
+                        to_replace = node.right
+                        parent_to_replace = node
+                        while to_replace.left is not None:
+                            parent_to_replace = to_replace
+                            to_replace = to_replace.left
+                        parent_node.right.data = to_replace.data
+                        parent_to_replace.left = to_replace.right
+                return
 
     def search_node(self, data):
         """
         search element in binary tree
         Time Complexity: O(Logn)average case and O(n) in worst case
-        :param data: search data in bst
-        :return : return True if node with value data exist else return False
+        :param data: search node of value data in bst
+        :return : parent of the node whose value is data or raise exception
         """
-        if self.root.data == data:
-            return True
+        parent_node = None
+        if self.root is None:
+            raise LookupError('Cannot delete anything, BST is empty')
+        elif self.root.data == data:
+            return parent_node
         else:
             iterator = self.root
             while iterator is not None:
                 if iterator.data == data:
-                    return True
+                    return parent_node
                 elif iterator.data > data:
+                    parent_node = iterator
                     iterator = iterator.left
                 else:
+                    parent_node = iterator
                     iterator = iterator.right
-            return False
+            raise LookupError('Node does not exist')
 
     def print_preorder(self, node):
         """
@@ -190,30 +181,11 @@ def main():
     inp.insert_node(8)
     inp.insert_node(6)
     inp.insert_node(5)
-    inp.insert_node(3)
-    inp.insert_node(7)
-    inp.insert_node(1)
-    inp.insert_node(0)
-    inp.insert_node(32)
-    inp.insert_node(21)
-    inp.insert_node(2312)
-    inp.insert_node(-1)
-    inp.insert_node(-2)
-    inp.insert_node(-3)
-    inp.insert_node(-4)
-    inp.insert_node(88)
-    inp.insert_node(9)
-    inp.insert_node(19)
-    inp.insert_node(28)
-    inp.insert_node(54)
     inp.insert_node(44)
     inp.insert_node(69)
-    print(inp.search_node(4))
-    print(inp.search_node(-1))
-    print(inp.search_node(10))
     inp.print_preorder(inp.root)
-    inp.delete_node(32)
-    inp.delete_node(-4)
+    inp.delete_node(69)
+    inp.delete_node(5)
     inp.delete_node(4)  # delete root
     inp.print_preorder(inp.root)
     print(inp.root.data)  # check value of root
