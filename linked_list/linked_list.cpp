@@ -21,14 +21,13 @@
     struct node
 
     {
-
         int info;
 
         struct node *next;
 
     }*start;
 
-     
+
 
     /*
 
@@ -44,25 +43,25 @@
 
             node* create_node(int);
 
-            void insert_begin();
+            void insert_begin(int);
 
-            void insert_pos();
+            void insert_pos(int, int);
 
-            void insert_last(); 
+            void insert_last(int);
 
-            void delete_pos();
+            void delete_pos(int);
 
             void sort();
 
-            void search();
+            void search(int);
 
-            void update();
+            void update(int, int);
 
             void reverse();
 
             void display();
 
-            single_llist() 
+            single_llist()
 
             {
 
@@ -86,7 +85,7 @@
 
         struct node *temp, *s;
 
-        temp = new(struct node); 
+        temp = new(struct node);
 
         if (temp == NULL)
 
@@ -104,7 +103,7 @@
 
             temp->info = value;
 
-            temp->next = NULL;     
+            temp->next = NULL;
 
             return temp;
 
@@ -112,7 +111,7 @@
 
     }
 
-     
+
 
     /*
 
@@ -120,15 +119,11 @@
 
      */
 
-    void single_llist::insert_begin()
+    void single_llist::insert_begin(int a)
 
     {
 
-        int value;
-
-        cout<<"Enter the value to be inserted: ";
-
-        cin>>value;
+        int value=a;
 
         struct node *temp, *p;
 
@@ -140,9 +135,9 @@
 
             start = temp;
 
-            start->next = NULL;          
+            start->next = NULL;
 
-        } 
+        }
 
         else
 
@@ -160,7 +155,7 @@
 
     }
 
-     
+
 
     /*
 
@@ -168,15 +163,11 @@
 
      */
 
-    void single_llist::insert_last()
+    void single_llist::insert_last(int c)
 
     {
 
-        int value;
-
-        cout<<"Enter the value to be inserted: ";
-
-        cin>>value;
+        int value=c;
 
         struct node *temp, *s;
 
@@ -186,9 +177,9 @@
 
         while (s->next != NULL)
 
-        {         
+        {
 
-            s = s->next;        
+            s = s->next;
 
         }
 
@@ -196,11 +187,11 @@
 
         s->next = temp;
 
-        cout<<"Element Inserted at last"<<endl;  
+        cout<<"Element Inserted at last"<<endl;
 
     }
 
-     
+
 
     /*
 
@@ -208,23 +199,15 @@
 
      */
 
-    void single_llist::insert_pos()
+    void single_llist::insert_pos(int d, int e)
 
     {
 
-        int value, pos, counter = 0; 
-
-        cout<<"Enter the value to be inserted: ";
-
-        cin>>value;
+        int value=e, pos=d, counter = 0;
 
         struct node *temp, *s, *ptr;
 
         temp = create_node(value);
-
-        cout<<"Enter the postion at which node to be inserted: ";
-
-        cin>>pos;
 
         int i;
 
@@ -300,7 +283,7 @@
 
     }
 
-     
+
 
     /*
 
@@ -356,7 +339,7 @@
 
     }
 
-     
+
 
     /*
 
@@ -364,11 +347,11 @@
 
      */
 
-    void single_llist::delete_pos()
+    void single_llist::delete_pos(int g)
 
     {
 
-        int pos, i, counter = 0;
+        int pos, counter = 0;
 
         if (start == NULL)
 
@@ -380,9 +363,7 @@
 
         }
 
-        cout<<"Enter the position of value to be deleted: ";
-
-        cin>>pos;
+        pos=g;
 
         struct node *s, *ptr;
 
@@ -406,7 +387,7 @@
 
                 s = s->next;
 
-                counter++;  
+                counter++;
 
             }
 
@@ -416,7 +397,7 @@
 
                 s = start;
 
-                for (i = 1;i < pos;i++)
+                for (int i = 1;i < pos;i++)
 
                 {
 
@@ -446,7 +427,7 @@
 
     }
 
-     
+
 
     /*
 
@@ -454,11 +435,11 @@
 
      */
 
-    void single_llist::update()
+    void single_llist::update(int h,int i)
 
     {
 
-        int value, pos, i;
+        int value=i, pos=h;
 
         if (start == NULL)
 
@@ -470,13 +451,6 @@
 
         }
 
-        cout<<"Enter the node postion to be updated: ";
-
-        cin>>pos;
-
-        cout<<"Enter the new value: ";
-
-        cin>>value;
 
         struct node *s, *ptr;
 
@@ -486,7 +460,7 @@
 
         {
 
-            start->info = value; 
+            start->info = value;
 
         }
 
@@ -494,7 +468,7 @@
 
         {
 
-            for (i = 0;i < pos - 1;i++)
+            for (int i = 0;i < pos - 1;i++)
 
             {
 
@@ -512,15 +486,15 @@
 
             }
 
-            s->info = value;  
+            s->info = value;
 
         }
 
         cout<<"Node Updated"<<endl;
 
-    } 
+    }
 
-     
+
 
     /*
 
@@ -528,11 +502,11 @@
 
      */
 
-    void single_llist::search()
+    void single_llist::search(int y)
 
     {
 
-        int value, pos = 0;
+        int value=y, pos = 0;
 
         bool flag = false;
 
@@ -545,10 +519,6 @@
             return;
 
         }
-
-        cout<<"Enter the value to be searched: ";
-
-        cin>>value;
 
         struct node *s;
 
@@ -576,11 +546,11 @@
 
         if (!flag)
 
-            cout<<"Element "<<value<<" not found in the list"<<endl;  
+            cout<<"Element "<<value<<" not found in the list"<<endl;
 
     }
 
-     
+
 
     /*
 
@@ -610,7 +580,7 @@
 
             return;
 
-        }  
+        }
 
         ptr1 = start;
 
@@ -632,7 +602,7 @@
 
             ptr3 = ptr3->next;
 
-            ptr2->next = ptr1;         
+            ptr2->next = ptr1;
 
         }
 
@@ -640,7 +610,7 @@
 
     }
 
-     
+
 
     /*
 
@@ -685,11 +655,11 @@
 
     /*
 
-     * Main 
+     * Main
 
      */
 
-    main()
+    int main()
 
     {
 
@@ -699,43 +669,43 @@
 
         start = NULL;
 
-        cout<<"Inserting Node at Beginning: "<<endl;
+        //"Inserting Node at Beginning: "
 
-        sl.insert_begin();
+        sl.insert_begin(5);
 
-        cout<<"Inserting Node at Last: "<<endl;
+        //"Inserting Node at Last: "
 
-        sl.insert_last();
+        sl.insert_last(7);
 
-        cout<<"Inserting Node at a given position:"<<endl;
+        //"Inserting Node at a given position:(pos,val)"
 
-        sl.insert_pos();
+        sl.insert_pos(1,4);
 
-        cout<<"Sort Link List: "<<endl;
+        //"Sort Link List: "
 
         sl.sort();
 
-        cout<<"Delete a particular node: "<<endl;
+        //"Delete a particular node: "
 
-        sl.delete_pos();
-        
-        cout<<"Update Node Value:"<<endl;  
+        sl.delete_pos(7);
 
-        sl.update();
+        //"Update Node Value:(pos,val)"
 
-        cout<<"Search element in Link List: "<<endl;
+        sl.update(1,4);
 
-        sl.search();
+        //"Search element in Link List: "
 
-        cout<<"Display elements of link list"<<endl;
+        sl.search(5);
+
+        //"Display elements of link list: "
 
         sl.display();
 
-        cout<<"Reverse elements of Link List"<<endl;
+        //"Reverse elements of Link List"
 
         sl.reverse();
 
-        
+        return 0;
+
 
     }
-
