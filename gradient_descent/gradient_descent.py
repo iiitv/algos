@@ -1,9 +1,12 @@
 """
+To view the plot, run as follows:
+python3 gradient_descent.py show-plot
 Implementation of gradient descent algorithm for minimizing cost of a linear hypothesis function.
 """
 import numpy
 import requests
 import matplotlib.pyplot as plt
+import sys
 
 
 def _error(input_data, output_data, parameter_vector):
@@ -74,15 +77,17 @@ def test_gradient_descent(input_data, output_data, parameter_vector):
     actual_output = output_data
     hypothesis_output = _hypothesis_value(input_data,
                                           parameter_vector=parameter_vector)
-    num_examples = len(output_data)
-    plt.plot(range(num_examples), actual_output, 'r', label='Actual Output')
-    plt.plot(range(num_examples), hypothesis_output, 'g', label='Hypothesis Output')
-    plt.xlabel('Test example')
-    plt.ylabel('Output Values')
-    plt.xlim([-1, len(input_data) + 2])
-    plt.ylim([-5, 200])
-    plt.legend()
-    plt.show()
+    if len(sys.argv) == 2:
+        if sys.argv[1] == 'show-plot':
+            num_examples = len(output_data)
+            plt.plot(range(num_examples), actual_output, 'r', label='Actual Output')
+            plt.plot(range(num_examples), hypothesis_output, 'g', label='Hypothesis Output')
+            plt.xlabel('Test example')
+            plt.ylabel('Output Values')
+            plt.xlim([-1, len(input_data) + 2])
+            plt.ylim([-5, 200])
+            plt.legend()
+            plt.show()
 
 
 def download_data():
