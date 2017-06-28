@@ -57,7 +57,8 @@ def run_gradient_descent(train_data, train_output, parameter_vector,
     :return: Optimized parameter vector.
     """
     while True:
-        cost_derivative = get_cost_derivative(train_data, train_output, parameter_vector)
+        cost_derivative = get_cost_derivative(
+            train_data, train_output, parameter_vector)
         temp_parameter_vector = parameter_vector - \
             learning_rate*cost_derivative
         if numpy.allclose(parameter_vector, temp_parameter_vector,
@@ -80,8 +81,10 @@ def test_gradient_descent(input_data, output_data, parameter_vector):
     if len(sys.argv) == 2:
         if sys.argv[1] == 'show-plot':
             num_examples = len(output_data)
-            plt.plot(range(num_examples), actual_output, 'r', label='Actual Output')
-            plt.plot(range(num_examples), hypothesis_output, 'g', label='Hypothesis Output')
+            plt.plot(range(num_examples), actual_output,
+                     'r', label='Actual Output')
+            plt.plot(range(num_examples), hypothesis_output,
+                     'g', label='Hypothesis Output')
             plt.xlabel('Test example')
             plt.ylabel('Output Values')
             plt.xlim([-1, len(input_data) + 2])
@@ -94,7 +97,8 @@ def download_data():
     """
     Downloads test and train data from GitHub repository
     """
-    response = requests.get('http://www.stat.ufl.edu/~winner/data/rock_aquifer.dat')
+    response = requests.get(
+        'http://www.stat.ufl.edu/~winner/data/rock_aquifer.dat')
     train_data = []
     train_output = []
     data_matrix = response.text.split('\n')
@@ -110,17 +114,20 @@ def download_data():
 def main():
     train_data, train_output = download_data()
     num_data = len(train_data)
-    biased_tuple = numpy.asmatrix(numpy.ones((1, num_data), dtype=float).transpose())
+    biased_tuple = numpy.asmatrix(numpy.ones(
+        (1, num_data), dtype=float).transpose())
     train_data = numpy.column_stack((biased_tuple, train_data))
     train_output = train_output.transpose()
-    parameter_vector = numpy.asmatrix([2, 4, 1, 5, 4, 1, 2, 2, 3, 1, 1, 2]).transpose()
+    parameter_vector = numpy.asmatrix(
+        [2, 4, 1, 5, 4, 1, 2, 2, 3, 1, 1, 2]).transpose()
     learning_rate = 0.00015
     absolute_error_limit = 0.000015
     relative_error_limit = 0
     parameter_vector = run_gradient_descent(train_data, train_output, parameter_vector,
                                             learning_rate, absolute_error_limit,
                                             relative_error_limit)
-    test_gradient_descent(train_data, train_output, parameter_vector=parameter_vector)
+    test_gradient_descent(train_data, train_output,
+                          parameter_vector=parameter_vector)
 
 
 if __name__ == '__main__':
