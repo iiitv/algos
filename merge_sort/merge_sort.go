@@ -3,6 +3,8 @@ package main
 import "fmt"
 
 // MergeSort divides the slice into two parts, sorts both the part of slice and then merge it
+// Time complexity : O(size(log(size)))
+// Space complexity : O(size)
 func MergeSort(slice []int) []int {
 	if len(slice) < 2 {
 		return slice
@@ -12,6 +14,8 @@ func MergeSort(slice []int) []int {
 }
 
 // Merge merges two sorted slice
+// Time complexity : O(size)
+// Space complexity : O(size)
 func Merge(left []int, right []int) []int {
 	i := 0
 	j := 0
