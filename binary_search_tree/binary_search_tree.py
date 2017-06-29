@@ -54,84 +54,88 @@ class bst(object):
         :param data: Node with value of data will delete from bst
         Throws execption if node with value of data not exist
         """
-        parent_node = self.search_node(data)
-        if parent_node is None:
-            node = self.root
-            if node.right is None and node.left is None:
-                # if node has no child
-                node = None
-            elif node.right is None:
-                # if node only has left child
-                node = node.left
-            elif node.left is None:
-                # if node only has right child
-                node = node.right
-            else:
-                # if node have both children
-                if node.right.left is None:
-                    node.right.left = node.left
-                    node = node.right
-                    self.root = node
-                else:
-                    to_replace = node.right
-                    parent_to_replace = node
-                    while to_replace.left is not None:
-                        parent_to_replace = to_replace
-                        to_replace = to_replace.left
-                    node.data = to_replace.data
-                    parent_to_replace.left = to_replace.right
-                    self.root = node
-        else:
-            if parent_node.left is not None and parent_node.left.data == data:
-                node = parent_node.left
+        try:
+            parent_node = self.search_node(data)
+            if parent_node is None:
+                node = self.root
                 if node.right is None and node.left is None:
-                    # if node  has no child
-                    parent_node.left = None
+                    # if node has no child
+                    node = None
                 elif node.right is None:
                     # if node only has left child
-                    parent_node.left = node.left
+                    node = node.left
                 elif node.left is None:
                     # if node only has right child
-                    parent_node.left = node.right
+                    node = node.right
                 else:
                     # if node have both children
                     if node.right.left is None:
                         node.right.left = node.left
+                        node = node.right
+                        self.root = node
+                    else:
+                        to_replace = node.right
+                        parent_to_replace = node
+                        while to_replace.left is not None:
+                            parent_to_replace = to_replace
+                            to_replace = to_replace.left
+                        node.data = to_replace.data
+                        parent_to_replace.left = to_replace.right
+                        self.root = node
+            else:
+                if (parent_node.left is not None and
+                        parent_node.left.data is data):
+                    node = parent_node.left
+                    if node.right is None and node.left is None:
+                        # if node  has no child
+                        parent_node.left = None
+                    elif node.right is None:
+                        # if node only has left child
+                        parent_node.left = node.left
+                    elif node.left is None:
+                        # if node only has right child
                         parent_node.left = node.right
                     else:
-                        to_replace = node.right
-                        parent_to_replace = node
-                        while to_replace.left is not None:
-                            parent_to_replace = to_replace
-                            to_replace = to_replace.left
-                        parent_node.left.data = to_replace.data
-                        parent_to_replace.left = to_replace.right
-                return
-            else:
-                node = parent_node.right
-                if node.right is None and node.left is None:
-                    # if node has no child
-                    parent_node.right = None
-                elif node.right is None:
-                    # if node only has left child
-                    parent_node.right = node.left
-                elif node.left is None:
-                    # if node only has right child
-                    parent_node.right = node.right
+                        # if node have both children
+                        if node.right.left is None:
+                            node.right.left = node.left
+                            parent_node.left = node.right
+                        else:
+                            to_replace = node.right
+                            parent_to_replace = node
+                            while to_replace.left is not None:
+                                parent_to_replace = to_replace
+                                to_replace = to_replace.left
+                            parent_node.left.data = to_replace.data
+                            parent_to_replace.left = to_replace.right
+                    return
                 else:
-                    # if node have both chidren
-                    if node.right.left is None:
-                        node.right.left = node.left
+                    node = parent_node.right
+                    if node.right is None and node.left is None:
+                        # if node has no child
+                        parent_node.right = None
+                    elif node.right is None:
+                        # if node only has left child
+                        parent_node.right = node.left
+                    elif node.left is None:
+                        # if node only has right child
                         parent_node.right = node.right
                     else:
-                        to_replace = node.right
-                        parent_to_replace = node
-                        while to_replace.left is not None:
-                            parent_to_replace = to_replace
-                            to_replace = to_replace.left
-                        parent_node.right.data = to_replace.data
-                        parent_to_replace.left = to_replace.right
-                return
+                        # if node have both chidren
+                        if node.right.left is None:
+                            node.right.left = node.left
+                            parent_node.right = node.right
+                        else:
+                            to_replace = node.right
+                            parent_to_replace = node
+                            while to_replace.left is not None:
+                                parent_to_replace = to_replace
+                                to_replace = to_replace.left
+                            parent_node.right.data = to_replace.data
+                            parent_to_replace.left = to_replace.right
+                    return
+        except LookupError as e:
+            print('sorry,%s' % (e))
 
     def search_node(self, data):
         """
@@ -177,6 +181,7 @@ class bst(object):
 
 def main():
     inp = bst()
+    inp.delete_node(2)  # try to delete node in empty try
     inp.insert_node(4)
     inp.insert_node(8)
     inp.insert_node(6)
