@@ -10,7 +10,7 @@ func MergeSort(slice []int) []int {
 		return slice
 	}
 	mid := (len(slice)) / 2
-	return Merge(MergeSort(slice[:mid]), MergeSort(slice[mid:]))
+	return merge(MergeSort(slice[:mid]), MergeSort(slice[mid:]))
 }
 
 // merge merges two sorted slice
