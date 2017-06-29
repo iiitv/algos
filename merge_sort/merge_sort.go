@@ -13,10 +13,10 @@ func MergeSort(slice []int) []int {
 	return Merge(MergeSort(slice[:mid]), MergeSort(slice[mid:]))
 }
 
-// Merge merges two sorted slice
+// merge merges two sorted slice
 // Time complexity : O(size)
 // Space complexity : O(size)
-func Merge(left []int, right []int) []int {
+func merge(left []int, right []int) []int {
 	i := 0
 	j := 0
 	size := len(left) + len(right)
