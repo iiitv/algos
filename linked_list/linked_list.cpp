@@ -13,7 +13,7 @@ class node
 {
 public:
 	int info;
-	struct node *next;
+	class node *next;
 }*start;
 /*
 * Class Declaration
@@ -26,8 +26,8 @@ public:
 	*/
 	node* create_node(int value)
 	{
-		struct node *temp, *s;
-		temp = new(struct node);
+		class node *temp, *s;
+		temp = new(class node);
 		if (temp == NULL)
 		{
 			cout<<"Memory not allocated "<<endl;
@@ -47,7 +47,7 @@ public:
 	void insert_begin(int a)
 	{
 		int value=a;
-		struct node *temp, *p;
+		class node *temp, *p;
 		temp = create_node(value);
 		if (start == NULL)
 		{
@@ -68,7 +68,7 @@ public:
 	void insert_pos(int d, int e)
 	{
 		int value=e, pos=d, counter = 0;
-		struct node *temp, *s, *ptr;
+		class node *temp, *s, *ptr;
 		temp = create_node(value);
 		int i;
 		s = start;
@@ -113,7 +113,7 @@ public:
 	void insert_last(int c)
 	{
 		int value=c;
-		struct node *temp, *s;
+		class node *temp, *s;
 		temp = create_node(value);
 		s = start;
 		while (s->next != NULL)
@@ -129,14 +129,14 @@ public:
 	*/
 	void delete_pos(int g)
 	{
-		int pos, counter = 0;
+		int pos;
 		if (start == NULL)
 		{
 			cout<<"List is empty"<<endl;
 			return;
 		}
 		pos=g;
-		struct node *s;
+		class node *s;
 		s = start;
 		if (pos == 1)
 		{
@@ -144,7 +144,7 @@ public:
 		}
 		else
 		{
-			struct node *ptr;
+			int counter=0;
 			while (s != NULL)
 			{
 				s = s->next;
@@ -152,6 +152,7 @@ public:
 			}
 			if (pos > 0 && pos <= counter)
 			{
+				class node *ptr;
 				s = start;
 				for (int i = 1;i < pos;i++)
 				{
@@ -173,7 +174,7 @@ public:
 	*/
 	void sort()
 	{
-		struct node *ptr, *s;
+		class node *ptr, *s;
 		int value;
 		if (start == NULL)
 		{
@@ -207,7 +208,7 @@ public:
 			cout<<"List is empty"<<endl;
 			return;
 		}
-		struct node *s;
+		class node *s;
 		s = start;
 		while (s != NULL)
 		{
@@ -233,7 +234,7 @@ public:
 			cout<<"List is empty"<<endl;
 			return;
 		}
-		struct node *s, *ptr;
+		class node *s, *ptr;
 		s = start;
 		if (pos == 1)
 		{
@@ -259,7 +260,7 @@ public:
 	*/
 	void reverse()
 	{
-		struct node *ptr1, *ptr2, *ptr3;
+		class node *ptr1, *ptr2, *ptr3;
 		if (start == NULL)
 		{
 			cout<<"List is empty"<<endl;
@@ -288,7 +289,7 @@ public:
 	*/
 	void display()
 	{
-		struct node *temp;
+		class node *temp;
 		if (start == NULL)
 		{
 			cout<<"The List is Empty"<<endl;
