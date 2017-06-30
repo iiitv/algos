@@ -1,9 +1,9 @@
 /*
 * C++ Program to Implement Linked List
 */
-#include<iostream>
-#include<cstdio>
-#include<cstdlib>
+#include <iostream>
+#include <cstdio>
+#include <cstdlib>
 
 using namespace std;
 /*
@@ -18,7 +18,7 @@ public:
 /*
 * Class Declaration
 */
-class single_llist
+class single_list
 {
 public:
 	/*
@@ -30,7 +30,7 @@ public:
 		temp = new(class node);
 		if (temp == NULL)
 		{
-			cout<<"Memory not allocated "<<endl;
+			cout << "Memory not allocated " << endl;
 			return 0;
 		}
 		else
@@ -46,7 +46,7 @@ public:
 	*/
 	void insert_begin(int a)
 	{
-		int value=a;
+		int value = a;
 		class node *temp, *p;
 		temp = create_node(value);
 		if (start == NULL)
@@ -60,14 +60,14 @@ public:
 			start = temp;
 			start->next = p;
 		}
-		cout<<"Element Inserted at beginning"<<endl;
+		cout << "Element Inserted at beginning" << endl;
 	}
 	/*
 	* Insertion of node at a given position
 	*/
 	void insert_pos(int d, int e)
 	{
-		int value=e, pos=d, counter = 0;
+		int value = e, pos = d, counter = 0;
 		class node *temp, *s, *ptr;
 		temp = create_node(value);
 		int i;
@@ -104,7 +104,7 @@ public:
 		}
 		else
 		{
-			cout<<"Positon out of range"<<endl;
+			cout << "Positon out of range" << endl;
 		}
 	}
 	/*
@@ -112,7 +112,7 @@ public:
 	*/
 	void insert_last(int c)
 	{
-		int value=c;
+		int value = c;
 		class node *temp, *s;
 		temp = create_node(value);
 		s = start;
@@ -122,7 +122,7 @@ public:
 		}
 		temp->next = NULL;
 		s->next = temp;
-		cout<<"Element Inserted at last"<<endl;
+		cout << "Element Inserted at last" << endl;
 	}
 	/*
 	* Delete element at a given position
@@ -132,10 +132,10 @@ public:
 		int pos;
 		if (start == NULL)
 		{
-			cout<<"List is empty"<<endl;
+			cout << "List is empty" << endl;
 			return;
 		}
-		pos=g;
+		pos = g;
 		class node *s;
 		s = start;
 		if (pos == 1)
@@ -144,7 +144,7 @@ public:
 		}
 		else
 		{
-			int counter=0;
+			int counter = 0;
 			while (s != NULL)
 			{
 				s = s->next;
@@ -163,10 +163,10 @@ public:
 			}
 			else
 			{
-				cout<<"Position out of range"<<endl;
+				cout << "Position out of range" << endl;
 			}
 			free(s);
-			cout<<"Element Deleted"<<endl;
+			cout << "Element Deleted" << endl;
 		}
 	}
 	/*
@@ -178,7 +178,7 @@ public:
 		int value;
 		if (start == NULL)
 		{
-			cout<<"The List is empty"<<endl;
+			cout << "The List is empty" << endl;
 			return;
 		}
 		ptr = start;
@@ -201,11 +201,11 @@ public:
 	*/
 	void search(int y)
 	{
-		int value=y, pos = 0;
+		int value = y, pos = 0;
 		bool flag = false;
 		if (start == NULL)
 		{
-			cout<<"List is empty"<<endl;
+			cout << "List is empty" << endl;
 			return;
 		}
 		class node *s;
@@ -216,22 +216,22 @@ public:
 			if (s->info == value)
 			{
 				flag = true;
-				cout<<"Element "<<value<<" is found at position "<<pos<<endl;
+				cout << "Element " << value << " is found at position " << pos << endl;
 			}
 			s = s->next;
 		}
 		if (!flag)
-		cout<<"Element "<<value<<" not found in the list"<<endl;
+		cout << "Element " << value << " not found in the list" << endl;
 	}
 	/*
 	* Update a given Node
 	*/
 	void update(int h,int i)
 	{
-		int value=i, pos=h;
+		int value = i, pos = h;
 		if (start == NULL)
 		{
-			cout<<"List is empty"<<endl;
+			cout << "List is empty" << endl;
 			return;
 		}
 		class node *s, *ptr;
@@ -246,14 +246,14 @@ public:
 			{
 				if (s == NULL)
 				{
-					cout<<"There are less than "<<pos<<" elements";
+					cout << "There are less than " << pos << " elements";
 					return;
 				}
 				s = s->next;
 			}
 			s->info = value;
 		}
-		cout<<"Node Updated"<<endl;
+		cout << "Node Updated" << endl;
 	}
 	/*
 	* Reverse Link List
@@ -263,7 +263,7 @@ public:
 		class node *ptr1, *ptr2, *ptr3;
 		if (start == NULL)
 		{
-			cout<<"List is empty"<<endl;
+			cout << "List is empty" << endl;
 			return;
 		}
 		if (start->next == NULL)
@@ -292,19 +292,19 @@ public:
 		class node *temp;
 		if (start == NULL)
 		{
-			cout<<"The List is Empty"<<endl;
+			cout << "The List is Empty" << endl;
 			return;
 		}
 		temp = start;
-		cout<<"Elements of list are: "<<endl;
+		cout << "Elements of list are: " << endl;
 		while (temp != NULL)
 		{
-			cout<<temp->info<<"->";
+			cout << temp->info << "->";
 			temp = temp->next;
 		}
-		cout<<"NULL"<<endl;
+		cout << "NULL" << endl;
 	}
-	single_llist()
+	single_list()
 	{
 		start = NULL;
 	}
@@ -315,14 +315,14 @@ public:
 int main()
 {
 	int choice, nodes, element, position, i;
-	single_llist sl;
+	single_list sl;
 	start = NULL;
 	sl.insert_begin(5);
 	sl.insert_last(7);
-	sl.insert_pos(1,4);
+	sl.insert_pos(1, 4);
 	sl.sort();
 	sl.delete_pos(7);
-	sl.update(1,4);
+	sl.update(1, 4);
 	sl.search(5);
 	sl.display();
 	sl.reverse();
