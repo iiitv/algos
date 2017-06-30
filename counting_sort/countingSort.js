@@ -8,8 +8,8 @@
 function countingSort (arr, max) {
 	/*
 	:param arr: Array to be sorted
-    :param max: Maximum value in array
-    :return: Sorted array
+	:param max: Maximum value in array
+	:return: Sorted array
 	*/
 	let i = 0;
 	let n = arr.length;
