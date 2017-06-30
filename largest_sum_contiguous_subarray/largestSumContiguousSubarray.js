@@ -4,13 +4,14 @@ function largestSumContiguousSubarray (arr) {
 	* :param arr: List of numbers to form subarray from.
 	* :return: The maximum sum in all subarrays.
 	*/
-	let max_prev = 0, max_now = 0;
-	for(let x = 0; x < arr.length; x++) {
-		max_now += arr[x];
-		max_prev = Math.max(max_prev, max_now);
-		max_now = Math.max(0, max_now);
+	let maxPrev = 0;
+	let maxNow = 0;
+	for (let x = 0; x < arr.length; x++) {
+		maxNow += arr[x];
+		maxPrev = Math.max(maxPrev, maxNow);
+		maxNow = Math.max(0, maxNow);
 	}
-	return max_prev;
+	return maxPrev;
 }
 
 function main () {
@@ -18,4 +19,4 @@ function main () {
 	console.log('Maximum contiguous sum is : ' + largestSumContiguousSubarray(arr));
 }
 
-main ();
+main();
