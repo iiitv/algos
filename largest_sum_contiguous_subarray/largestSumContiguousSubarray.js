@@ -18,4 +18,4 @@ function main () {
 	console.log('Maximum contiguous sum is : ' + largestSumContiguousSubarray(arr));
 }
 
-main();
+main ();
