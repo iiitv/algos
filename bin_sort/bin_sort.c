@@ -1,5 +1,5 @@
 /* Following algorithm sorts the input array in ascending order
- * Time Complexity O(n)-> avg case and O(n^2)-> Worst Case
+ * Time Complexity : O(n)-> Avg case and O(n^2)-> Worst Case
  */
 #include <stdio.h>
 #include <stdlib.h>
