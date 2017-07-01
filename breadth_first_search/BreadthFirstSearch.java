@@ -3,10 +3,10 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
 
-//Generic type BreadthFirstSearch implementation using the queue concept
-//Time Complexity: O(V+E) where V is number of vertices in the graph and E is number of edges
+// Generic type BreadthFirstSearch implementation using the queue concept
+// Time Complexity: O(V+E) where V is number of vertices in the graph and E is number of edges
 public class BreadthFirstSearch<T> {
-    // HasMap  of lists for Adjacency List Representation
+    // HashMap  of lists for Adjacency List Representation
     public HashMap<T, ArrayList<T>> adj = new HashMap<T, ArrayList<T>>();
 
     //Function to add an edge
@@ -60,11 +60,11 @@ public class BreadthFirstSearch<T> {
                 break;
             }
         }
-        // not find target node
+        // target node not found
         if (flag == 0) {
             return null;
         }
-        //return the list
+        // return the list
         return bfsPath;
     }
 
