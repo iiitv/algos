@@ -11,19 +11,18 @@ function countingSort (arr, max) {
 	:param max: Maximum value in array
 	:return: Sorted array
 	*/
-	let i = 0;
 	let n = arr.length;
 	console.log(max);
 	let count = new Array(max + 1);
 	let temp = new Array(n);
 	count.fill(0);
-	for (i = 0; i < n; i++) {
+	for (let i = 0; i < n; i++) {
 		count[arr[i]]++;
 	}
-	for (i = 1; i <= max; i++) {
+	for (let i = 1; i <= max; i++) {
 		count[i] += count[i - 1];
 	}
-	for (i = 0; i < n; ++i) {
+	for (let i = 0; i < n; ++i) {
 		temp[count[arr[i]] - 1] = arr[i];
 		count[arr[i]]--;
 	}
