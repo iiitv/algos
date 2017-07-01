@@ -23,11 +23,13 @@ string longest_palindromic_substring(string test) {
 	int len_pallindrome = 1;
 	int pallindrome_begin = 0;
 
-	for (int i = 0; i < n; ++i) {  // Substrings of length 1
+	// Substrings of length 1
+	for (int i = 0; i < n; ++i) {
 		substrings[i][i] = true;
 	}
 
-	for (int i = 0; i < n - 1; ++i) {  // Substrings of length 2
+	// Substrings of length 2
+	for (int i = 0; i < n - 1; ++i) {
 		if (test[i] == test[i + 1]) {
 			substrings[i][i + 1] = true;
 			pallindrome_begin = i;
@@ -35,7 +37,8 @@ string longest_palindromic_substring(string test) {
 		}
 	}
 
-	for (int i = 3; i <= n; ++i) {  // Substrings of length 3
+	// Substrings of length 3
+	for (int i = 3; i <= n; ++i) {
 		for (int j = 0; j < n - i + 1; ++j) {
 			int tmp = i + j - 1;
 			if (substrings[j + 1][tmp - 1] && test[j] == test[tmp]) {
@@ -49,7 +52,6 @@ string longest_palindromic_substring(string test) {
 	}
 	return test.substr(pallindrome_begin, pallindrome_begin + len_pallindrome);
 }
-
 
 int main() {
 	string test = "IIITV";
