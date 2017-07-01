@@ -37,7 +37,7 @@ string longest_palindromic_substring(string test) {
 		}
 	}
 
-	// Substrings of length 3
+	// Substrings of length > 3
 	for (int i = 3; i <= n; ++i) {
 		for (int j = 0; j < n - i + 1; ++j) {
 			int tmp = i + j - 1;
