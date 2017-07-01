@@ -12,7 +12,6 @@ function countingSort (arr, max) {
 	:return: Sorted array
 	*/
 	let n = arr.length;
-	console.log(max);
 	let count = new Array(max + 1);
 	let temp = new Array(n);
 	count.fill(0);
