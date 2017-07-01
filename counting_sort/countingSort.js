@@ -30,8 +30,9 @@ function countingSort (arr, max) {
 }
 
 function main () {
+	let max = 10;
 	let arr = [3, 7, 10, 3, 1, 9, 4, 9];
-	arr = countingSort(arr, Math.max(...arr));
+	arr = countingSort(arr, max);
 	console.log(arr);
 }
 
