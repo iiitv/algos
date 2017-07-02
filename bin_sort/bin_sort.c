@@ -11,15 +11,8 @@ struct bucket {
 
 int comparator(const int* first, const int* second) {
 	int a = *first, b = *second;
-	if (a == b) {
-		return 0;
-	}
-	else if (a < b) {
-		return -1;
-	}
-	else {
-		return 1;
-	}
+	int result = a - b;
+	return (0 < result) - (result < 0);
 }
 
 void bucket_sort(int array[], int n) {
@@ -51,7 +44,7 @@ void bucket_sort(int array[], int n) {
 }
 
 int main() {
-	int array[12] = {-5, -9, 1000, 1, -10, 0, 2, 3, 5, 4, 1234, 7};
+	int array[] = {-5, -9, 1000, 1, -10, 0, 2, 3, 5, 4, 1234, 7};
 	int n = sizeof(array) / sizeof(array[0]);
 	int j;
 	bucket_sort(array, n);
