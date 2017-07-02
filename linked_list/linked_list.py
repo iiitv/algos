@@ -5,7 +5,8 @@ class Node(object):
         self.next = next_
 
     def __str__(self):
-        return str(self.data)
+        return str(self.data) if self.next is None \
+            else '{0} -> {1}'.format(self.data, self.next)
 
 
 class Linked_list(object):
@@ -15,12 +16,7 @@ class Linked_list(object):
         self.size = 0
 
     def __str__(self):
-        list_ = []
-        head = self.head
-        while(head):
-            list_.append(head.data)
-            head = head.next
-        return str(list_)
+        return str(self.head)
 
     def __len__(self):
         return self.size
