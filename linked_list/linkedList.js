@@ -218,7 +218,6 @@ function main () {
 		console.log('Value not found');
 	}
 
-
 	linkedList.addLast(125);
 	linkedList.addLast(11);
 	console.log(linkedList.showList());
