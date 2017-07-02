@@ -65,6 +65,9 @@ class Linked_list(object):
             raise IndexError('List is empty')
         if index < 0 or index >= self.size:
             raise IndexError('Index out of bound')
+        if index is 0:
+            removed = self.head.data
+            self.head = self.head.next
         else:
             temp = self.head
             if temp.next is None:
@@ -75,8 +78,8 @@ class Linked_list(object):
                     temp = temp.next
                 removed = temp.next.data
                 temp.next = temp.next.next
-            self.size -= 1
-            return removed
+        self.size -= 1
+        return removed
 
     def search(self, inp):
         # Search for inp in Linked List and return it's index
@@ -132,7 +135,7 @@ class Linked_list(object):
         # Function to reverse Linked List
         prev = None
         current = self.head
-        while(current is not None):
+        while current is not None:
             next_ = current.next
             current.next = prev
             prev = current
