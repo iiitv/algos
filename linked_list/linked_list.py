@@ -81,6 +81,10 @@ class Linked_list(object):
         self.size -= 1
         return removed
 
+    def remove_by_value(self, value):
+        # Search and removes the value from Linked List.
+        self.remove(self.find_first(value))
+
     def search(self, inp):
         # Search for inp in Linked List and return it's index
         head = self.head
@@ -186,6 +190,11 @@ def main():
     except ValueError:
         print('Value not Found')
 
+    # Remove by Value
+    l_list.remove_by_value(5)
+    print(str(l_list))
+    print('Size:', len(l_list))
+
     # Reversing Linked List
     l_list.reverse()
     print('Reversed:', str(l_list))
@@ -222,7 +231,7 @@ def main():
     # Removes Element from Index
     try:
         l_list.remove(3)
-    except ValueError:
+    except IndexError:
         print('Value not found')
     print(str(l_list))
     print('Size:', len(l_list))
