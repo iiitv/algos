@@ -20,8 +20,8 @@ using namespace std;
 string longest_palindromic_substring(string test) {
 	int n = test.length();
 	vector< vector<bool> > substrings(n, vector<bool>(n, false));
-	int len_pallindrome = 1;
-	int pallindrome_begin = 0;
+	int len_palindrome = 1;
+	int palindrome_begin = 0;
 
 	// Substrings of length 1
 	for (int i = 0; i < n; ++i) {
@@ -32,8 +32,8 @@ string longest_palindromic_substring(string test) {
 	for (int i = 0; i < n - 1; ++i) {
 		if (test[i] == test[i + 1]) {
 			substrings[i][i + 1] = true;
-			pallindrome_begin = i;
-			len_pallindrome = 2;
+			palindrome_begin = i;
+			len_palindrome = 2;
 		}
 	}
 
@@ -43,18 +43,18 @@ string longest_palindromic_substring(string test) {
 			int tmp = i + j - 1;
 			if (substrings[j + 1][tmp - 1] && test[j] == test[tmp]) {
 				substrings[j][tmp] = true;
-				if (i > len_pallindrome) {
-					len_pallindrome = i;
-					pallindrome_begin = j;
+				if (i > len_palindrome) {
+					len_palindrome = i;
+					palindrome_begin = j;
 				}
 			}
 		}
 	}
-	return test.substr(pallindrome_begin, pallindrome_begin + len_pallindrome);
+	return test.substr(palindrome_begin, len_palindrome);
 }
 
 int main() {
-	string test = "IIITV";
+	string test = "geeksforgeeks";
 	cout << "Longest pallindromic substring is: " << longest_palindromic_substring(test) << endl;
 	return 0;
 }
