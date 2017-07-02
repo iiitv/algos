@@ -23,8 +23,7 @@ class LinkedList {
 			let n = new Node(value);
 			n.next = this.head;
 			this.head = n;
-		}
-		else {
+		} else {
 			for (let i = 0; i < index - 1; i++) {
 				temp = temp.next;
 			}
@@ -33,7 +32,7 @@ class LinkedList {
 			temp.next = n;
 		}
 		this._size++;
-		return ;
+		return;
 	}
 
 	// Adds value at front of Linked List
@@ -50,19 +49,15 @@ class LinkedList {
 	remove (index) {
 		if (this.isEmpty()) {
 			throw new Error('List is Empty');
-		}
-		else if (index < 0 || index >= this._size){
-			throw new Error("Index out of Bound");
-		}
-		else if (index === 0) {
+		} else if (index < 0 || index >= this._size) {
+			throw new Error('Index out of Bound');
+		} else if (index === 0) {
 			this.head = this.head.next;
-		}
-		else {
+		} else {
 			let temp = this.head;
 			if (temp.next == null) {
 				this.head = null;
-			}
-			else {
+			} else {
 				for (let i = 0; i < index - 1; i++) {
 					temp = temp.next;
 				}
@@ -70,7 +65,7 @@ class LinkedList {
 			}
 		}
 		this._size--;
-		return ;
+		return;
 	}
 
 	// Removes front element from Linked List
@@ -94,8 +89,7 @@ class LinkedList {
 		for (let i = 0; i < this._size; i++) {
 			if (head.data === input) {
 				return i;
-			}
-			else {
+			} else {
 				head = head.next;
 			}
 		}
@@ -120,8 +114,7 @@ class LinkedList {
 		// If index is >= size of Linked List, It adds the value.
 		if (index >= this._size) {
 			this.add(input, index);
-		}
-		else {
+		} else {
 			// If index already have some data it replaces it with input.
 			let head = this.head;
 			for (let i = 0; i < this._size; i++) {
@@ -173,7 +166,7 @@ class LinkedList {
 	showList () {
 		let list = [];
 		let head = this.head;
-		while(head) {
+		while (head) {
 			list.push(head.data);
 			head = head.next;
 		}
@@ -186,93 +179,86 @@ function main () {
 
 	linkedList.add(5, 0);
 	console.log(linkedList.showList());
-	console.log("Size : " + linkedList._size);
+	console.log('Size : ' + linkedList._size);
 
 	linkedList.addFirst(25);
 	linkedList.addFirst(251);
 	console.log(linkedList.showList());
-	console.log("Size : " + linkedList._size);
+	console.log('Size : ' + linkedList._size);
 
 	linkedList.addFirst(5);
 	console.log(linkedList.showList());
-	console.log("Size : " + linkedList._size);
+	console.log('Size : ' + linkedList._size);
 
 	try {
-		console.log("Fist Occurance at index: " + linkedList.findFirst(5));
-	}
-	catch (err) {
-		console.log("Value not found");
+		console.log('Fist Occurance at index: ' + linkedList.findFirst(5));
+	} catch (err) {
+		console.log('Value not found');
 	}
 
 	try {
-		console.log("Last Occurance at index: " + linkedList.findLast(5));
-	}
-	catch (err) {
-		console.log("Value not found");
+		console.log('Last Occurance at index: ' + linkedList.findLast(5));
+	} catch (err) {
+		console.log('Value not found');
 	}
 
 	try {
 		linkedList.setData(12325, 1);
 		console.log(linkedList.showList());
-		console.log("Size : " + linkedList._size);
-	}
-	catch (err) {
-		console.log("Index out of bound");
+		console.log('Size : ' + linkedList._size);
+	} catch (err) {
+		console.log('Index out of bound');
 	}
 
 	try {
 		linkedList.removeByValue(12325);
 		console.log(linkedList.showList());
-		console.log("Size : " + linkedList._size);
-	}
-	catch (err) {
-		console.log("Value not found");
+		console.log('Size : ' + linkedList._size);
+	} catch (err) {
+		console.log('Value not found');
 	}
 
 
 	linkedList.addLast(125);
 	linkedList.addLast(11);
 	console.log(linkedList.showList());
-	console.log("Size : " + linkedList._size);
+	console.log('Size : ' + linkedList._size);
 
 	try {
-		console.log("Element found at index: " + linkedList.search(1125));
-	}
-	catch (err) {
-		console.log("Value not found");
+		console.log('Element found at index: ' + linkedList.search(1125));
+	} catch (err) {
+		console.log('Value not found');
 	}
 
-	console.log("Cloned : ", linkedList.clone().showList());
+	console.log('Cloned : ', linkedList.clone().showList());
 
 	try {
 		linkedList.remove(6);
 		console.log(linkedList.showList());
-		console.log("Size : " + linkedList._size);
-	}
-	catch (err) {
-		console.log("Index Out of Bound");
+		console.log('Size : ' + linkedList._size);
+	} catch (err) {
+		console.log('Index Out of Bound');
 	}
 
 	try {
 		linkedList.remove(2);
-	}
-	catch (err) {
-		console.log("Index Out of Bound");
+	} catch (err) {
+		console.log('Index Out of Bound');
 	}
 	console.log(linkedList.showList());
-	console.log("Size : " + linkedList._size);
+	console.log('Size : ' + linkedList._size);
 
 	linkedList.removeFront();
 	console.log(linkedList.showList());
-	console.log("Size : " + linkedList._size);
+	console.log('Size : ' + linkedList._size);
 
 	linkedList.removeLast();
 	console.log(linkedList.showList());
-	console.log("Size : " + linkedList._size);
+	console.log('Size : ' + linkedList._size);
 
 	linkedList.clear();
 	console.log(linkedList.showList());
-	console.log("Size : " + linkedList._size);
+	console.log('Size : ' + linkedList._size);
 }
 
 main();
