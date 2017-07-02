@@ -99,7 +99,7 @@ class Linked_list(object):
         # Finds Last occurence of data in Linked List
         new_list = self.clone()
         new_list.reverse()
-        return new_list.search(inp) + 1
+        return self.size - new_list.search(inp) - 1
 
     def set(self, data, index):
         # Sets the data to index and replaces previously existing data.
