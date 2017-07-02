@@ -104,7 +104,7 @@ class Linked_list(object):
     def set(self, data, index):
         # Sets the data to index and replaces previously existing data.
         if index >= self.size:
-            add(data, index)
+            self.add(data, index)
         else:
             head = self.head
             for i in range(self.size):
