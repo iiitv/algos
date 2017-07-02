@@ -1,6 +1,3 @@
-from __future__ import print_function  # For Python 2
-
-
 class Node(object):
     def __init__(self, data=None, next_=None):
         # Initialises Node
@@ -206,8 +203,8 @@ def main():
     print(str(l_list))
     print('Size:', len(l_list))
 
-    print('Cloned :', end=" ")
-    l_list.clone().__str__()
+    # Cloning Linked List
+    print('Cloned :', str(l_list.clone()))
 
     # Removes Element from Front
     l_list.remove_front()
