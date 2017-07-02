@@ -13,13 +13,13 @@ class LinkedList {
 		this._size = size;
 	}
 
-	// Inserts Element with value at index 
+	// Inserts Element with value at index
 	add (value, index) {
 		if (index < 0 || index > this._size) {
 			throw new Error('Index Out of Bound');
 		}
 		let temp = this.head;
-		if (index == 0) {
+		if (index === 0) {
 			let n = new Node(value);
 			n.next = this.head;
 			this.head = n;
@@ -54,7 +54,7 @@ class LinkedList {
 		else if (index < 0 || index >= this._size){
 			throw new Error("Index out of Bound");
 		}
-		else if (index == 0) {
+		else if (index === 0) {
 			this.head = this.head.next;
 		}
 		else {
@@ -92,7 +92,7 @@ class LinkedList {
 	search (input) {
 		let head = this.head;
 		for (let i = 0; i < this._size; i++) {
-			if (head.data == input) {
+			if (head.data === input) {
 				return i;
 			}
 			else {
@@ -125,7 +125,7 @@ class LinkedList {
 			// If index already have some data it replaces it with input.
 			let head = this.head;
 			for (let i = 0; i < this._size; i++) {
-				if (i == index) {
+				if (i === index) {
 					head.data = input;
 				}
 				head = head.next;
@@ -160,7 +160,7 @@ class LinkedList {
 
 	// Checks if Linked List is empty.
 	isEmpty () {
-		return (this._size == 0);
+		return (this._size === 0);
 	}
 
 	// Clears the Linked List.
@@ -211,37 +211,37 @@ function main () {
 		console.log("Value not found");
 	}
 
-  try {
-  	linkedList.setData(12325, 1);
-  	console.log(linkedList.showList());
-  	console.log("Size : " + linkedList._size);
-  }
-  catch (err) {
-  	console.log("Index out of bound");
-  }
-	
 	try {
-  	linkedList.removeByValue(12325);
-  	console.log(linkedList.showList());
-  	console.log("Size : " + linkedList._size);
-  }
-  catch (err) {
-  	console.log("Value not found");
-  }
+		linkedList.setData(12325, 1);
+		console.log(linkedList.showList());
+		console.log("Size : " + linkedList._size);
+	}
+	catch (err) {
+		console.log("Index out of bound");
+	}
+
+	try {
+		linkedList.removeByValue(12325);
+		console.log(linkedList.showList());
+		console.log("Size : " + linkedList._size);
+	}
+	catch (err) {
+		console.log("Value not found");
+	}
 
 
 	linkedList.addLast(125);
 	linkedList.addLast(11);
 	console.log(linkedList.showList());
 	console.log("Size : " + linkedList._size);
-	
+
 	try {
 		console.log("Element found at index: " + linkedList.search(1125));
 	}
 	catch (err) {
 		console.log("Value not found");
 	}
-	
+
 	console.log("Cloned : ", linkedList.clone().showList());
 
 	try {
