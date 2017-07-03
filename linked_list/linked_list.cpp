@@ -9,20 +9,17 @@ using namespace std;
 /*
 * Node Declaration
 */
-struct node
-{
+struct node {
 	int info;
 	struct node *next;
 }*start;
 
-struct single_list
-{
+class single_list {
 public:
 	/*
 	* Creating Node
 	*/
-	node* create_node(int value)
-	{
+	node* create_node(int value) {
 		struct node *temp, *s;
 		temp = new(struct node);
 		if (temp == NULL)
@@ -41,8 +38,7 @@ public:
 	/*
 	* Inserting element in beginning
 	*/
-	void insert_begin(int a)
-	{
+	void insert_begin(int a) {
 		int value = a;
 		struct node *temp, *p;
 		temp = create_node(value);
@@ -62,8 +58,7 @@ public:
 	/*
 	* Insertion of node at a given position
 	*/
-	void insert_pos(int d, int e)
-	{
+	void insert_pos(int d, int e) {
 		int value = e, pos = d, counter = 0;
 		struct node *temp, *s, *ptr;
 		temp = create_node(value);
@@ -107,8 +102,7 @@ public:
 	/*
 	* Inserting Node at last
 	*/
-	void insert_last(int c)
-	{
+	void insert_last(int c) {
 		int value = c;
 		struct node *temp, *s;
 		temp = create_node(value);
@@ -124,8 +118,7 @@ public:
 	/*
 	* Delete element at a given position
 	*/
-	void delete_pos(int g)
-	{
+	void delete_pos(int g) {
 		int pos;
 		if (start == NULL)
 		{
@@ -169,8 +162,7 @@ public:
 	/*
 	* Sorting Link List
 	*/
-	void sort()
-	{
+	void sort() {
 		struct node *ptr, *s;
 		int value;
 		if (start == NULL)
@@ -196,8 +188,7 @@ public:
 	/*
 	* Searching an element
 	*/
-	void search(int y)
-	{
+	void search(int y) {
 		int value = y, pos = 0;
 		bool flag = false;
 		if (start == NULL)
@@ -223,8 +214,7 @@ public:
 	/*
 	* Update a given Node
 	*/
-	void update(int h,int i)
-	{
+	void update(int h,int i) {
 		int value = i, pos = h;
 		if (start == NULL)
 		{
@@ -255,8 +245,7 @@ public:
 	/*
 	* Reverse Link List
 	*/
-	void reverse()
-	{
+	void reverse() {
 		struct node *ptr1, *ptr2, *ptr3;
 		if (start == NULL)
 		{
@@ -284,8 +273,7 @@ public:
 	/*
 	* Display Elements of a link list
 	*/
-	void display()
-	{
+	void display() {
 		struct node *temp;
 		if (start == NULL)
 		{
@@ -307,8 +295,7 @@ public:
 	}
 };
 
-int main()
-{
+int main() {
 	int choice, nodes, element, position, i;
 	single_list sl;
 	start = NULL;
