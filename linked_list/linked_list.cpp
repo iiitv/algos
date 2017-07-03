@@ -9,16 +9,13 @@ using namespace std;
 /*
 * Node Declaration
 */
-class node
+struct node
 {
-public:
 	int info;
-	class node *next;
+	struct node *next;
 }*start;
-/*
-* Class Declaration
-*/
-class single_list
+
+struct single_list
 {
 public:
 	/*
@@ -26,8 +23,8 @@ public:
 	*/
 	node* create_node(int value)
 	{
-		class node *temp, *s;
-		temp = new(class node);
+		struct node *temp, *s;
+		temp = new(struct node);
 		if (temp == NULL)
 		{
 			cout << "Memory not allocated " << endl;
@@ -47,7 +44,7 @@ public:
 	void insert_begin(int a)
 	{
 		int value = a;
-		class node *temp, *p;
+		struct node *temp, *p;
 		temp = create_node(value);
 		if (start == NULL)
 		{
@@ -68,7 +65,7 @@ public:
 	void insert_pos(int d, int e)
 	{
 		int value = e, pos = d, counter = 0;
-		class node *temp, *s, *ptr;
+		struct node *temp, *s, *ptr;
 		temp = create_node(value);
 		int i;
 		s = start;
@@ -113,7 +110,7 @@ public:
 	void insert_last(int c)
 	{
 		int value = c;
-		class node *temp, *s;
+		struct node *temp, *s;
 		temp = create_node(value);
 		s = start;
 		while (s->next != NULL)
@@ -136,7 +133,7 @@ public:
 			return;
 		}
 		pos = g;
-		class node *s;
+		struct node *s;
 		s = start;
 		if (pos == 1)
 		{
@@ -152,7 +149,7 @@ public:
 			}
 			if (pos > 0 && pos <= counter)
 			{
-				class node *ptr;
+				struct node *ptr;
 				s = start;
 				for (int i = 1;i < pos;i++)
 				{
@@ -174,7 +171,7 @@ public:
 	*/
 	void sort()
 	{
-		class node *ptr, *s;
+		struct node *ptr, *s;
 		int value;
 		if (start == NULL)
 		{
@@ -208,7 +205,7 @@ public:
 			cout << "List is empty" << endl;
 			return;
 		}
-		class node *s;
+		struct node *s;
 		s = start;
 		while (s != NULL)
 		{
@@ -234,7 +231,7 @@ public:
 			cout << "List is empty" << endl;
 			return;
 		}
-		class node *s, *ptr;
+		struct node *s, *ptr;
 		s = start;
 		if (pos == 1)
 		{
@@ -260,7 +257,7 @@ public:
 	*/
 	void reverse()
 	{
-		class node *ptr1, *ptr2, *ptr3;
+		struct node *ptr1, *ptr2, *ptr3;
 		if (start == NULL)
 		{
 			cout << "List is empty" << endl;
@@ -289,7 +286,7 @@ public:
 	*/
 	void display()
 	{
-		class node *temp;
+		struct node *temp;
 		if (start == NULL)
 		{
 			cout << "The List is Empty" << endl;
@@ -309,9 +306,7 @@ public:
 		start = NULL;
 	}
 };
-/*
-* Main
-*/
+
 int main()
 {
 	int choice, nodes, element, position, i;
