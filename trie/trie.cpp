@@ -57,7 +57,7 @@ class TrieNode {
 
 /* Insert into the Trie
  * args :
- * 		key : String to insert into Trie
+ * key : String to insert into Trie
  * Time Complexity: O(len(key))
  */
 void TrieNode::insert(string key) {
