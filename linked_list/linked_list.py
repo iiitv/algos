@@ -9,7 +9,7 @@ class Node(object):
             else '{0} -> {1}'.format(self.data, self.next)
 
 
-class Linked_list(object):
+class LinkedList(object):
     def __init__(self):
         # Initialises Linked List.
         self.head = None
@@ -123,7 +123,7 @@ class Linked_list(object):
 
     def clone(self):
         # Clones the Linked List
-        new_list = Linked_list()
+        new_list = LinkedList()
         temp = self.head
         while temp.next:
             new_list.add_last(temp.data)
@@ -144,7 +144,7 @@ class Linked_list(object):
 
 
 def main():
-    l_list = Linked_list()
+    l_list = LinkedList()
 
     l_list.add_last(5)
     print(str(l_list))
