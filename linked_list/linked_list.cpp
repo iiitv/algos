@@ -22,13 +22,11 @@ public:
 	node* create_node(int value) {
 		struct node *temp, *s;
 		temp = new(struct node);
-		if (temp == NULL)
-		{
+		if (temp == NULL) {
 			cout << "Memory not allocated " << endl;
 			return 0;
 		}
-		else
-		{
+		else {
 			temp->info = value;
 			temp->next = NULL;
 			return temp;
@@ -42,13 +40,11 @@ public:
 		int value = a;
 		struct node *temp, *p;
 		temp = create_node(value);
-		if (start == NULL)
-		{
+		if (start == NULL) {
 			start = temp;
 			start->next = NULL;
 		}
-		else
-		{
+		else {
 			p = start;
 			start = temp;
 			start->next = p;
@@ -64,38 +60,31 @@ public:
 		temp = create_node(value);
 		int i;
 		s = start;
-		while (s != NULL)
-		{
+		while (s != NULL) {
 			s = s->next;
 			counter++;
 		}
-		if (pos == 1)
-		{
-			if (start == NULL)
-			{
+		if (pos == 1) {
+			if (start == NULL) {
 				start = temp;
 				start->next = NULL;
 			}
-			else
-			{
+			else {
 				ptr = start;
 				start = temp;
 				start->next = ptr;
 			}
 		}
-		else if (pos > 1  && pos <= counter)
-		{
+		else if (pos > 1  && pos <= counter) {
 			s = start;
-			for (i = 1; i < pos; i++)
-			{
+			for (i = 1; i < pos; i++) {
 				ptr = s;
 				s = s->next;
 			}
 			ptr->next = temp;
 			temp->next = s;
 		}
-		else
-		{
+		else {
 			cout << "Positon out of range" << endl;
 		}
 	}
@@ -107,8 +96,7 @@ public:
 		struct node *temp, *s;
 		temp = create_node(value);
 		s = start;
-		while (s->next != NULL)
-		{
+		while (s->next != NULL) {
 			s = s->next;
 		}
 		temp->next = NULL;
@@ -120,39 +108,32 @@ public:
 	*/
 	void delete_pos(int g) {
 		int pos;
-		if (start == NULL)
-		{
+		if (start == NULL) {
 			cout << "List is empty" << endl;
 			return;
 		}
 		pos = g;
 		struct node *s;
 		s = start;
-		if (pos == 1)
-		{
+		if (pos == 1) {
 			start = s->next;
 		}
-		else
-		{
+		else {
 			int counter = 0;
-			while (s != NULL)
-			{
+			while (s != NULL) {
 				s = s->next;
 				counter++;
 			}
-			if (pos > 0 && pos <= counter)
-			{
+			if (pos > 0 && pos <= counter) {
 				struct node *ptr;
 				s = start;
-				for (int i = 1;i < pos;i++)
-				{
+				for (int i = 1;i < pos;i++) {
 					ptr = s;
 					s = s->next;
 				}
 				ptr->next = s->next;
 			}
-			else
-			{
+			else {
 				cout << "Position out of range" << endl;
 			}
 			free(s);
@@ -165,18 +146,14 @@ public:
 	void sort() {
 		struct node *ptr, *s;
 		int value;
-		if (start == NULL)
-		{
+		if (start == NULL) {
 			cout << "The List is empty" << endl;
 			return;
 		}
 		ptr = start;
-		while (ptr != NULL)
-		{
-			for (s = ptr->next;s !=NULL;s = s->next)
-			{
-				if (ptr->info > s->info)
-				{
+		while (ptr != NULL) {
+			for (s = ptr->next;s !=NULL;s = s->next) {
+				if (ptr->info > s->info) {
 					value = ptr->info;
 					ptr->info = s->info;
 					s->info = value;
@@ -191,18 +168,15 @@ public:
 	void search(int y) {
 		int value = y, pos = 0;
 		bool flag = false;
-		if (start == NULL)
-		{
+		if (start == NULL) {
 			cout << "List is empty" << endl;
 			return;
 		}
 		struct node *s;
 		s = start;
-		while (s != NULL)
-		{
+		while (s != NULL) {
 			pos++;
-			if (s->info == value)
-			{
+			if (s->info == value) {
 				flag = true;
 				cout << "Element " << value << " is found at position " << pos << endl;
 			}
@@ -216,23 +190,18 @@ public:
 	*/
 	void update(int h,int i) {
 		int value = i, pos = h;
-		if (start == NULL)
-		{
+		if (start == NULL) {
 			cout << "List is empty" << endl;
 			return;
 		}
 		struct node *s, *ptr;
 		s = start;
-		if (pos == 1)
-		{
+		if (pos == 1) {
 			start->info = value;
 		}
-		else
-		{
-			for (int i = 0;i < pos - 1;i++)
-			{
-				if (s == NULL)
-				{
+		else {
+			for (int i = 0;i < pos - 1;i++) {
+				if (s == NULL) {
 					cout << "There are less than " << pos << " elements";
 					return;
 				}
@@ -247,13 +216,11 @@ public:
 	*/
 	void reverse() {
 		struct node *ptr1, *ptr2, *ptr3;
-		if (start == NULL)
-		{
+		if (start == NULL) {
 			cout << "List is empty" << endl;
 			return;
 		}
-		if (start->next == NULL)
-		{
+		if (start->next == NULL) {
 			return;
 		}
 		ptr1 = start;
@@ -261,8 +228,7 @@ public:
 		ptr3 = ptr2->next;
 		ptr1->next = NULL;
 		ptr2->next = ptr1;
-		while (ptr3 != NULL)
-		{
+		while (ptr3 != NULL) {
 			ptr1 = ptr2;
 			ptr2 = ptr3;
 			ptr3 = ptr3->next;
@@ -275,22 +241,19 @@ public:
 	*/
 	void display() {
 		struct node *temp;
-		if (start == NULL)
-		{
+		if (start == NULL) {
 			cout << "The List is Empty" << endl;
 			return;
 		}
 		temp = start;
 		cout << "Elements of list are: " << endl;
-		while (temp != NULL)
-		{
+		while (temp != NULL) {
 			cout << temp->info << "->";
 			temp = temp->next;
 		}
 		cout << "NULL" << endl;
 	}
-	single_list()
-	{
+	single_list() {
 		start = NULL;
 	}
 };
