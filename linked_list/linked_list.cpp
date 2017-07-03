@@ -31,7 +31,6 @@ public:
 			temp->next = NULL;
 			return temp;
 		}
-
 	}
 	/*
 	* Inserting element in beginning
