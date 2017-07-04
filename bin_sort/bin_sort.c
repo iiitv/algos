@@ -6,12 +6,12 @@
 
 struct bucket {
 	int count;
-	int* value;
+	float* value;
 };
 
-int comparator(const int* first, const int* second) {
-	int a = *first, b = *second;
-	int result = a - b;
+int comparator(const float* first, const float* second) {
+	float a = *first, b = *second;
+	float result = a - b;
 	return (0 < result) - (result < 0);
 }
 
@@ -44,12 +44,12 @@ void bucket_sort(int array[], int n) {
 }
 
 int main() {
-	int array[] = {-5, -9, 1000, 1, -10, 0, 2, 3, 5, 4, 1234, 7};
+	float array[] = {0.897, 0.565, 0.656, 0.1234, 0.665, 0.3434};
 	int n = sizeof(array) / sizeof(array[0]);
 	int j;
 	bucket_sort(array, n);
 	for (j = 0; j < n; j++) {
-		printf("%d ", array[j]);
+		printf("%f ", array[j]);
 	}
 	printf("\n");
 	return 0;
