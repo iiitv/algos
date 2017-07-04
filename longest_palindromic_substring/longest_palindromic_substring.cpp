@@ -55,7 +55,7 @@ string longest_palindromic_substring(string test) {
 
 int main() {
 	string test = "geeksforgeeks";
-	cout << "Longest pallindromic substring is: " << longest_palindromic_substring(test) << endl;
+	cout << "Longest palindromic substring is: " << longest_palindromic_substring(test) << endl;
 	return 0;
 }
 
