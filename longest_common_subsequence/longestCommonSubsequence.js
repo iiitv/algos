@@ -16,11 +16,9 @@ function longestCommonSubsequence (str1, str2) {
 		for (let j = 0; j <= len2; j++) {
 			if (i === 0 || j === 0) {
 				lcs[i][j] = 0;
-			}
-			else if (str1[i - 1] === str2[j - 1]) {
+			} else if (str1[i - 1] === str2[j - 1]) {
 				lcs[i][j] = lcs[i - 1][j - 1] + 1;
-			}
-			else {
+			} else {
 				lcs[i][j] = Math.max(lcs[i - 1][j], lcs[i][j - 1]);
 			}
 		}
@@ -33,11 +31,9 @@ function longestCommonSubsequence (str1, str2) {
 			res = str1[i - 1] + res;
 			i--;
 			j--;
-		}
-		else if (lcs[i - 1][j] > lcs[i][j - 1]) {
+		} else if (lcs[i - 1][j] > lcs[i][j - 1]) {
 			i--;
-		}
-		else {
+		} else {
 			j--;
 		}
 	}
