@@ -1,9 +1,9 @@
 function longestCommonSubsequence (str1, str2) {
 	let len1 = str1.length;
 	let len2 = str2.length;
-	let lcs = new Array(len1+1);
+	let lcs = new Array(len1 + 1);
 	for (let x = 0; x <= len1; x++)
-		lcs[x] = new Array(len2+1);
+		lcs[x] = new Array(len2 + 1);
 	for (let i = 0; i <= len1; i++) {
 		for (let j = 0; j <= len2; j++) {
 			if (i === 0 || j === 0) {
