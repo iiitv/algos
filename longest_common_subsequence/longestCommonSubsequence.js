@@ -1,11 +1,11 @@
 function longestCommonSubsequence (str1, str2) {
-    /*
-    * Time Complexity - O( len(str1) * len(str2) )
-    * Space Complexity - O( len(str1)*len(str2) )
-    * :param seq1: First sequence
-    * :param seq2: Second sequence
-    * :return: The longest common subsequence of two input sequences
-    */
+	/*
+	* Time Complexity - O( len(str1) * len(str2) )
+	* Space Complexity - O( len(str1)*len(str2) )
+	* :param seq1: First sequence
+	* :param seq2: Second sequence
+	* :return: The longest common subsequence of two input sequences
+	*/
 	let len1 = str1.length;
 	let len2 = str2.length;
 	let lcs = new Array(len1 + 1);
