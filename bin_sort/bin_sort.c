@@ -9,31 +9,24 @@ struct bucket {
 	float* value;
 };
 
-int comparator(const float* first, const float* second) {
+int comparator(const int* first, const int* second) {
 	float a = *first, b = *second;
-	float result = a - b;
+	int result = a - b;
 	return (0 < result) - (result < 0);
 }
 
-void bucket_sort(int array[], int n) {
-	struct bucket buckets[3];
-	int a, b, c;
-	for (a = 0; a < 3; a++) {
+void bucket_sort(float array[], int n) {
+	struct bucket buckets[n];
+	int a, b, c, bi;
+	for (a = 0; a < n; a++) {
 		buckets[a].count = 0;
 		buckets[a].value = malloc(sizeof(int) * n);
 	}
 	for (a = 0; a < n; a++) {
-		if (array[a] < 0) {
-			buckets[0].value[buckets[0].count++] = array[a];
-		}
-		else if (array[a] > 10) {
-			buckets[2].value[buckets[2].count++] = array[a];
-		}
-		else {
-			buckets[1].value[buckets[1].count++] = array[a];
-		}
+		bi = n * array[a];
+		buckets[bi].value[buckets[bi].count++] = array[a];
 	}
-	for (c = 0, a = 0; a < 3; a++) {
+	for (c = 0, a = 0; a < n; a++) {
 		qsort(buckets[a].value, buckets[a].count, sizeof(int), &comparator);
 		for (b = 0; b < buckets[a].count; b++) {
 			array[c + b] = buckets[a].value[b];
