@@ -17,12 +17,13 @@ int comparator(const int* first, const int* second) {
 
 void bucket_sort(float array[], int n) {
 	struct bucket buckets[n];
-	int a, b, c, bi;
+	int a, b, c;
 	for (a = 0; a < n; a++) {
 		buckets[a].count = 0;
 		buckets[a].value = malloc(sizeof(int) * n);
 	}
 	for (a = 0; a < n; a++) {
+		int bi;
 		bi = n * array[a];
 		buckets[bi].value[buckets[bi].count++] = array[a];
 	}
