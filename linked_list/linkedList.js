@@ -15,14 +15,13 @@ class LinkedList {
 
 	// Inserts Element with value at index
 	add (value, index) {
-		if (index < 0 || index > this._size) {
-			throw new Error('Index Out of Bound');
-		}
 		let temp = this.head;
 		if (index === 0) {
 			let n = new Node(value);
 			n.next = this.head;
 			this.head = n;
+		} else if (index < 0 || index >= this._size) {
+			throw new Error('Index Out of Bound');
 		} else {
 			for (let i = 0; i < index - 1; i++) {
 				temp = temp.next;
@@ -42,7 +41,17 @@ class LinkedList {
 
 	// Adds value at end of Linked List
 	addLast (value) {
-		return this.add(value, this._size);
+		if(this.head === null) {
+			this.addFirst(value);
+		} else {
+			let temp = this.head;
+			while(temp.next != null) {
+				temp = temp.next;
+			}
+			let n = new Node(value);
+			temp.next = n;
+			this._size++;
+		}
 	}
 
 	// Remove value from index in Linked List
