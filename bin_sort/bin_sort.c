@@ -38,9 +38,12 @@ void bucket_sort(float array[], int n) {
 }
 
 int main() {
-	float array[] = {0.897, 0.565, 0.656, 0.1234, 0.665, 0.3434};
-	int n = sizeof(array) / sizeof(array[0]);
-	int j;
+	float array[100];
+	int n = 100;
+	int j, k;
+	for (k = 0; k < n; k++) {
+		array[k] = (double)(rand() % 1000) / 1000;
+	}
 	bucket_sort(array, n);
 	for (j = 0; j < n; j++) {
 		printf("%f ", array[j]);
