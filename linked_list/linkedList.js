@@ -45,7 +45,7 @@ class LinkedList {
 			this.addFirst(value);
 		} else {
 			let temp = this.head;
-			while (temp.next != null) {
+			while (temp.next !== null) {
 				temp = temp.next;
 			}
 			let n = new Node(value);
