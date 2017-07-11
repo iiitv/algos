@@ -14,7 +14,7 @@ def radix_sort(arr, radix=10):
     where, k is the range of input.
     """
     max_length = False
-    tmp , digit = -1, 1
+    tmp, digit = -1, 1
 
     while not max_length:
         max_length = True
