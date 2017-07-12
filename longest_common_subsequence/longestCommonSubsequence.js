@@ -1,7 +1,7 @@
 function longestCommonSubsequence (str1, str2) {
 	/*
-	* Time Complexity - O( len(str1) * len(str2) )
-	* Space Complexity - O( len(str1)*len(str2) )
+	* Time Complexity - O(len(str1) * len(str2))
+	* Space Complexity - O(len(str1) * len(str2))
 	* :param seq1: First sequence
 	* :param seq2: Second sequence
 	* :return: The longest common subsequence of two input sequences
