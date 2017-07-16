@@ -10,7 +10,7 @@ class LinkedList {
 	// Initialises Linked List
 	constructor (size = 0) {
 		this.head = null;
-		this._size = size;
+		this.length = size;
 	}
 
 	// Inserts Element with value at index
@@ -20,7 +20,7 @@ class LinkedList {
 			let n = new Node(value);
 			n.next = this.head;
 			this.head = n;
-		} else if (index < 0 || index >= this._size) {
+		} else if (index < 0 || index >= this.length) {
 			throw new Error('Index Out of Bound');
 		} else {
 			for (let i = 0; i < index - 1; i++) {
@@ -30,7 +30,7 @@ class LinkedList {
 			n.next = temp.next;
 			temp.next = n;
 		}
-		this._size++;
+		this.length++;
 		return;
 	}
 
@@ -50,7 +50,7 @@ class LinkedList {
 			}
 			let n = new Node(value);
 			temp.next = n;
-			this._size++;
+			this.length++;
 		}
 	}
 
@@ -58,7 +58,7 @@ class LinkedList {
 	remove (index) {
 		if (this.isEmpty()) {
 			throw new Error('List is Empty');
-		} else if (index < 0 || index >= this._size) {
+		} else if (index < 0 || index >= this.length) {
 			throw new Error('Index out of Bound');
 		} else if (index === 0) {
 			this.head = this.head.next;
@@ -73,7 +73,7 @@ class LinkedList {
 				temp.next = temp.next.next;
 			}
 		}
-		this._size--;
+		this.length--;
 		return;
 	}
 
@@ -84,7 +84,7 @@ class LinkedList {
 
 	// Removes last element from Linked List
 	removeLast () {
-		this.remove(this._size - 1);
+		this.remove(this.length - 1);
 	}
 
 	// Searches and removes element with data = value.
@@ -95,7 +95,7 @@ class LinkedList {
 	// Search and returns index.
 	search (input) {
 		let head = this.head;
-		for (let i = 0; i < this._size; i++) {
+		for (let i = 0; i < this.length; i++) {
 			if (head.data === input) {
 				return i;
 			} else {
@@ -115,18 +115,18 @@ class LinkedList {
 		let newList = new LinkedList();
 		newList = this.clone();
 		newList.reverse();
-		return this._size - newList.search(input) - 1;
+		return this.length - newList.search(input) - 1;
 	}
 
 	// Sets Data of input at index.
 	setData (input, index) {
 		// If index is >= size of Linked List, It adds the value.
-		if (index >= this._size) {
+		if (index >= this.length) {
 			this.add(input, index);
 		} else {
 			// If index already have some data it replaces it with input.
 			let head = this.head;
-			for (let i = 0; i < this._size; i++) {
+			for (let i = 0; i < this.length; i++) {
 				if (i === index) {
 					head.data = input;
 				}
@@ -162,17 +162,17 @@ class LinkedList {
 
 	// Checks if Linked List is empty.
 	isEmpty () {
-		return (this._size === 0);
+		return (this.length === 0);
 	}
 
 	// Clears the Linked List.
 	clear () {
 		this.head = null;
-		this._size = 0;
+		this.length = 0;
 	}
 
 	// Returns the Linked List in List form.
-	showList () {
+	show () {
 		let list = [];
 		let head = this.head;
 		while (head) {
@@ -187,17 +187,17 @@ function main () {
 	let linkedList = new LinkedList();
 
 	linkedList.add(5, 0);
-	console.log(linkedList.showList());
-	console.log('Size : ' + linkedList._size);
+	console.log(linkedList.show());
+	console.log('Size : ' + linkedList.length);
 
 	linkedList.addFirst(25);
 	linkedList.addFirst(251);
-	console.log(linkedList.showList());
-	console.log('Size : ' + linkedList._size);
+	console.log(linkedList.show());
+	console.log('Size : ' + linkedList.length);
 
 	linkedList.addFirst(5);
-	console.log(linkedList.showList());
-	console.log('Size : ' + linkedList._size);
+	console.log(linkedList.show());
+	console.log('Size : ' + linkedList.length);
 
 	try {
 		console.log('Fist Occurance at index: ' + linkedList.findFirst(5));
@@ -213,24 +213,24 @@ function main () {
 
 	try {
 		linkedList.setData(12325, 1);
-		console.log(linkedList.showList());
-		console.log('Size : ' + linkedList._size);
+		console.log(linkedList.show());
+		console.log('Size : ' + linkedList.length);
 	} catch (err) {
 		console.log('Index out of bound');
 	}
 
 	try {
 		linkedList.removeByValue(12325);
-		console.log(linkedList.showList());
-		console.log('Size : ' + linkedList._size);
+		console.log(linkedList.show());
+		console.log('Size : ' + linkedList.length);
 	} catch (err) {
 		console.log('Value not found');
 	}
 
 	linkedList.addLast(125);
 	linkedList.addLast(11);
-	console.log(linkedList.showList());
-	console.log('Size : ' + linkedList._size);
+	console.log(linkedList.show());
+	console.log('Size : ' + linkedList.length);
 
 	try {
 		console.log('Element found at index: ' + linkedList.search(1125));
@@ -238,12 +238,12 @@ function main () {
 		console.log('Value not found');
 	}
 
-	console.log('Cloned : ', linkedList.clone().showList());
+	console.log('Cloned : ', linkedList.clone().show());
 
 	try {
 		linkedList.remove(6);
-		console.log(linkedList.showList());
-		console.log('Size : ' + linkedList._size);
+		console.log(linkedList.show());
+		console.log('Size : ' + linkedList.length);
 	} catch (err) {
 		console.log('Index Out of Bound');
 	}
@@ -253,20 +253,20 @@ function main () {
 	} catch (err) {
 		console.log('Index Out of Bound');
 	}
-	console.log(linkedList.showList());
-	console.log('Size : ' + linkedList._size);
+	console.log(linkedList.show());
+	console.log('Size : ' + linkedList.length);
 
 	linkedList.removeFront();
-	console.log(linkedList.showList());
-	console.log('Size : ' + linkedList._size);
+	console.log(linkedList.show());
+	console.log('Size : ' + linkedList.length);
 
 	linkedList.removeLast();
-	console.log(linkedList.showList());
-	console.log('Size : ' + linkedList._size);
+	console.log(linkedList.show());
+	console.log('Size : ' + linkedList.length);
 
 	linkedList.clear();
-	console.log(linkedList.showList());
-	console.log('Size : ' + linkedList._size);
+	console.log(linkedList.show());
+	console.log('Size : ' + linkedList.length);
 }
 
 main();
