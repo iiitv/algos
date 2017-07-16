@@ -22,7 +22,7 @@ public class ShellSort {
         }
         return data;
     }
-    
+
     // print function
     public static void print(int[]  data) {
         for (Integer item : data) {
