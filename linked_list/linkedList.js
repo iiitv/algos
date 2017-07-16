@@ -200,13 +200,13 @@ function main () {
 	console.log('Size : ' + linkedList.length);
 
 	try {
-		console.log('Fist Occurance at index: ' + linkedList.findFirst(5));
+		console.log('Fist Occurrence at index: ' + linkedList.findFirst(5));
 	} catch (err) {
 		console.log('Value not found');
 	}
 
 	try {
-		console.log('Last Occurance at index: ' + linkedList.findLast(5));
+		console.log('Last Occurrence at index: ' + linkedList.findLast(5));
 	} catch (err) {
 		console.log('Value not found');
 	}
