@@ -1,6 +1,7 @@
-// Worst case time complexity = O(n^2)
-// Best case complexity = O(nlog(n))
-// n is input size
+/*Shell Short function 
+Worst case time complexity = O(n^2)
+ Best case complexity = O(nlog(n))
+n is input size*/
 public class ShellSort {
     // sorting function
     public static int[] shellSort(int[] data) {
@@ -20,6 +21,7 @@ public class ShellSort {
         }
         return data;
     }
+    
     // print function
     public static void print(int[]  data) {
         for (Integer item : data) {
