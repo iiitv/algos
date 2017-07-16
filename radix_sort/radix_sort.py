@@ -8,8 +8,8 @@ def radix_sort(arr, radix=10):
     :return: Sorted list of input.
     Time complexity: O(d * (n + b))
     where, n is the size of input list.
-           b is base of representation
-           d is number of digits in largest number
+           b is base of representation.
+           d is number of digits in largest number in that base.
     Space complexity: O(n + k)
     where, k is the range of input.
     """
