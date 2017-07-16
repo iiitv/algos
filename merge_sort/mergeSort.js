@@ -28,7 +28,7 @@ function merge (left, right) {
 
 function mergeSort (arr) {
 	/*
-	*	:param arr: array to be sorted
+	:param arr: array to be sorted
 	*/
 	if (arr.length < 2) {
 		return arr;
