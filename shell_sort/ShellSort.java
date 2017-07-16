@@ -1,9 +1,12 @@
-/*Shell Short function 
-Worst case time complexity = O(n^2)
- Best case complexity = O(nlog(n))
-n is input size*/
-public class ShellSort {
-    // sorting function
+ 
+
+public class ShellSort { 
+/**
+ * sorting function
+ * Worst case time complexity = O(n^2)
+ * Best case complexity = O(nlog(n))
+ * n is input size
+ */
     public static int[] shellSort(int[] data) {
         for (int i = data.length / 2; i > 0; i /= 2) {
             for (int j = i; j < data.length; ++j) {
