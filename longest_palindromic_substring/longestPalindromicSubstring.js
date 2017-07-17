@@ -5,8 +5,8 @@ function expandAroundCenter (test, left, right) {
   :param right: Right end of result palindromic substring
   :return: Length of palindromic substring
 	*/
-	let n  = test.length;
-	while (left >= 0 && right < n  && test.charAt(left) === test.charAt(right)) {
+	let n = test.length;
+	while (left >= 0 && right < n && test.charAt(left) === test.charAt(right)) {
 		left--;
 		right++;
 	}
