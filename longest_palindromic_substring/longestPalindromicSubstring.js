@@ -1,4 +1,10 @@
 function expandAroundCenter (test, left, right) {
+	/*
+	:param test: Input string whose substrings are to be checked
+    :param left: Left end of result palindromic substring
+    :param right: Right end of result palindromic substring
+    :return: Length of palindromic substring
+	*/
 	let n  = test.length;
 	while (left >= 0 && right < n  && test.charAt(left) === test.charAt(right)) {
 		left--;
@@ -8,6 +14,15 @@ function expandAroundCenter (test, left, right) {
 }
 
 function longestPalindromicSubstring (test) {
+	/*
+	Function to find longest substring which is a palindrome
+
+    :param test: Input string whose substrings are to be checked
+    :return: Longest substring of input string which is a palindrome
+
+    Time complexity: O(n^2)
+    Space complexity: O(1)
+	*/
 	let start = 0;
 	let end = 0;
 
