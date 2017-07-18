@@ -9,8 +9,8 @@ struct bucket {
 	float* value;
 };
 
-int comparator(const int* first, const int* second) {
-	float a = *first, b = *second;
+int comparator(const void* first, const void* second) {
+	float a = *((int*)first), b = *((int*)second);
 	int result = a - b;
 	return (0 < result) - (result < 0);
 }
