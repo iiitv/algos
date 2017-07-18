@@ -5,9 +5,9 @@ import java.util.Map;
  * Implement a trie with insert, search, and starts with methods using hash map.
  */
 class TrieNode {
-    char ch;
+    private char ch;
     // has map store trie node
-    HashMap<Character, TrieNode> children = new HashMap<Character, TrieNode>();
+    public HashMap<Character, TrieNode> children = new HashMap<Character, TrieNode>();
     boolean isLeaf;
 
     public TrieNode() {
@@ -65,9 +65,7 @@ public class Trie {
         if (root != null && root.isLeaf) {
             return true;
         }
-        else {
-            return false;
-        }
+        return false;
     }
 
     /** Returns if there is any word in the trie
@@ -78,9 +76,7 @@ public class Trie {
         if (searchNode(prefix) == null) {
             return false;
         }
-        else {
-            return true;
-        }
+        return true;        
     }
 
     public TrieNode searchNode(String str) {
