@@ -5,10 +5,10 @@ import java.util.Map;
  * Implement a trie with insert, search, and starts with methods using hash map.
  */
 class TrieNode {
-    private char ch;
+    public char ch;
     // has map store trie node
     public HashMap<Character, TrieNode> children = new HashMap<Character, TrieNode>();
-    boolean isLeaf;
+    public boolean isLeaf;
 
     public TrieNode() {
     }
