@@ -27,8 +27,8 @@ function longestPalindromicSubstring (test) {
 	let end = 0;
 
 	for (let i = 0; i < test.length; i++) {
-		let length = Math.max(expandAroundCenter(test, i, i)
-													, expandAroundCenter(test, i, i + 1));
+		let length = Math.max(expandAroundCenter(test, i, i),
+													expandAroundCenter(test, i, i + 1));
 		if (length > end - start) {
 			start = i - Math.floor((length - 1) / 2);
 			end = i + Math.floor(length / 2);
@@ -39,8 +39,8 @@ function longestPalindromicSubstring (test) {
 
 function main () {
 	let test = 'geeksforgeeks';
-	console.log('Longest Palindromic Substring of'
-							, test, 'is', longestPalindromicSubstring(test));
+	console.log('Longest Palindromic Substring of',
+							test, 'is', longestPalindromicSubstring(test));
 }
 
 main();
