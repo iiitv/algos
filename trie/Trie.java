@@ -62,10 +62,7 @@ public class Trie {
     public boolean search(String word) {
         TrieNode root = searchNode(word);
         // if valid words return true
-        if (root != null && root.isLeaf) {
-            return true;
-        }
-        return false;
+        return root != null && root.isLeaf;             
     }
 
     /** Returns if there is any word in the trie
@@ -73,10 +70,7 @@ public class Trie {
      */
     public boolean startsWith(String prefix) {
         // words not start with prefix then return false
-        if (searchNode(prefix) == null) {
-            return false;
-        }
-        return true;        
+        return searchNode(prefix) == null;
     }
 
     public TrieNode searchNode(String str) {
