@@ -34,7 +34,7 @@ public class Trie {
         HashMap<Character, TrieNode> children = root.children;
         // insert word char by char
         for (int i = 0; i < word.length(); i++) {
-            char ch = word.charAt (i);
+            char ch = word.charAt(i);
             TrieNode root;
             /* Check status of that child node
              * If it is empty, them fill it
@@ -47,7 +47,6 @@ public class Trie {
                 children.put(ch, root);
             }
             children = root.children;
-
             //set leaf node
             if (i == word.length() - 1)
                 root.isLeaf = true;
@@ -62,7 +61,7 @@ public class Trie {
     public boolean search(String word) {
         TrieNode root = searchNode(word);
         // if valid words return true
-        return root != null && root.isLeaf;             
+        return root != null && root.isLeaf;
     }
 
     /** Returns if there is any word in the trie
