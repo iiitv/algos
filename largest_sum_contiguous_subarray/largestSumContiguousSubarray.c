@@ -7,12 +7,12 @@ int largestSumContinousSubArray(int arr[], int size) {
 	for (int i = 0; i < size; i++) {
 		max_int = max_int + arr[i];
 		max_int = max(max_int, arr[i]);
-		max_till = max(max_till, max_int);		
+		max_till = max(max_till, max_int);
 	}
 	return max_till;
 }
 
-int max(int first, int second) {	
+int max(int first, int second) {
 	if (first < second)	{
 		return second;
 	} else {

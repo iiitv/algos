@@ -16,7 +16,7 @@ public class LargestSumContiguousSubarray {
         for (i = 1; i < array.length; i++) {
             currentSum += array[i];			// add values in current sum
             currentSum = Math.max(currentSum, array[i]); // maximum from current sum and current array value
-            prevSum = Math.max(currentSum, prevSum);  // maximum from current sum and previous sum             
+            prevSum = Math.max(currentSum, prevSum);  // maximum from current sum and previous sum
         }
         return prevSum;
     }
