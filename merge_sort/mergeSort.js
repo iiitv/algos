@@ -26,10 +26,10 @@ function merge (left, right) {
 	return arr;
 }
 
+/*
+*	:param arr: array to be sorted
+*/
 function mergeSort (arr) {
-	/*
-	:param arr: array to be sorted
-	*/
 	if (arr.length < 2) {
 		return arr;
 	}
