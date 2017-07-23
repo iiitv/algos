@@ -25,11 +25,12 @@ public class LongestPalindromicSubstring {
     Space complexity: O(1)
     */
     public static String longestPalindromicSubstring(String test) {
+        String toTest = test.toLowerCase();
         int start = 0;
         int end = 0;
         int lengthOfString = test.length();
         for (int i = 0; i < lengthOfString; ++i) {
-            int length = Math.max(expandAroundCenter(test, i, i), expandAroundCenter(test, i, i + 1));
+            int length = Math.max(expandAroundCenter(toTest, i, i), expandAroundCenter(toTest, i, i + 1));
             if (length > end - start) {
                 start = i - (length - 1) / 2;
                 end = i + length / 2;
@@ -39,7 +40,7 @@ public class LongestPalindromicSubstring {
     }
 
     public static void main(String[] args) {
-        String test = "geek";
+        String test = "Nitin";
         System.out.println("Longest Palindromic Substring of " +
                             test + " is " +
                             longestPalindromicSubstring(test));
