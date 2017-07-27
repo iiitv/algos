@@ -9,7 +9,7 @@ public class LargestSumContiguousSubarray {
 
     public static int largestSumContiguousSubarray(int[] array) {   //  maximum sum method implemention
         int prevSum = array[0];  // initialize current sum amd previous sum
-        int currentSum = array[0]; 
+        int currentSum = array[0];
         for (int i = 1; i < array.length; i++) {
             currentSum += array[i];			// add values in current sum
             currentSum = Math.max(currentSum, array[i]); // maximum from current sum and current array value
