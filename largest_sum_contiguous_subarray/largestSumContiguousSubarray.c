@@ -22,6 +22,6 @@ int max(int first, int second) {
 
 int main() {
 	int array[] = {-2, 1, -3, 4, -1, 2, 1, -5, 4, 5};
-	int size = sizeof(array)/sizeof(array[0]);
+	int size = sizeof(array) / sizeof(array[0]);
 	printf("%d\n", largestSumContiguousSubArray(array, size));
 }
