@@ -54,10 +54,10 @@ int addFront(struct Node **start, struct Node* nw_node) {
 //  Adding at last
 int addLast(struct Node **start, struct Node* nw_node) {
 	struct Node* temp;		//  'temp' temporary node to traverse to last
-	int pos = 0;
 	if (*start == NULL) {
 	    return addAtPos(start, nw_node, 0);
 	} else {
+		int pos = 0;
 		temp = *start;
 		while (temp->next != NULL) {	// Loop until we get last node
 			temp = temp->next;
@@ -73,13 +73,13 @@ struct Node* deleteAtPos(struct Node **start, int pos) {
 		return NULL;
 	} else {
 		struct Node* temp = *start;		// temp node to go through each node
-		int i = 0;
 		if((*start)->next == NULL) {
 		    if(pos == 0) {
 		        *start = NULL;
 		        return temp;
 		    }
 		} else {
+			int i = 0;
 		    while (temp->next->next != NULL && i < pos-1) {	// until we reach to the position or last element of list is encountered
 		    temp = temp->next;
 		    i++;
