@@ -34,10 +34,10 @@ int addAtPos(struct Node **start, struct Node* nw_node, int pos) {
 		if (i != pos-1 && pos != 0) {
 			return 0;
 		} else if (pos == 0) {
-		    nw_node->next = *start;
-		    *start = nw_node;
-		    return 1;
-		} 
+			nw_node->next = *start;
+			*start = nw_node;
+			return 1;
+		}
 		else {
 			nw_node->next = temp->next;		// Placing address of next node to nw_node->next
 			temp->next = nw_node;		// Assiging address of nw_node in list after temp node.
@@ -55,7 +55,7 @@ int addFront(struct Node **start, struct Node* nw_node) {
 int addLast(struct Node **start, struct Node* nw_node) {
 	struct Node* temp;		//  'temp' temporary node to traverse to last
 	if (*start == NULL) {
-	    return addAtPos(start, nw_node, 0);
+		return addAtPos(start, nw_node, 0);
 	} else {
 		int pos = 0;
 		temp = *start;
@@ -74,40 +74,38 @@ struct Node* deleteAtPos(struct Node **start, int pos) {
 	} else {
 		struct Node* temp = *start;		// temp node to go through each node
 		if((*start)->next == NULL) {
-		    if(pos == 0) {
-		        *start = NULL;
-		        return temp;
-		    }
+			if(pos == 0) {
+				*start = NULL;
+				return temp;
+			}
 		} else {
 			int i = 0;
-		    while (temp->next->next != NULL && i < pos-1) {	// until we reach to the position or last element of list is encountered
-		    temp = temp->next;
-		    i++;
-		    }
-		    if (i != pos-1 && pos != 0) {
-		        printf("Invalid Index\n\n");
-		        return NULL;
-		    } else if (pos == 0) {
-		        *start = (*start)->next;
-		        return temp;
-		    } else {
-		        struct Node* tmp = temp->next;
-		        temp->next = temp->next->next;	// Replacing address of position 'pos' with  node next to 'pos'
-		        return tmp;
-		        
-		    }
+			while (temp->next->next != NULL && i < pos-1) {	// until we reach to the position or last element of list is encountered
+				temp = temp->next;
+				i++;
+			}
+			if (i != pos-1 && pos != 0) {
+				printf("Invalid Index\n\n");
+				return NULL;
+			} else if (pos == 0) {
+				*start = (*start)->next;
+				return temp;
+			} else {
+				struct Node* tmp = temp->next;
+				temp->next = temp->next->next;	// Replacing address of position 'pos' with  node next to 'pos'
+				return tmp;
+			}
 		}
 	}
 }
 
 //  Deleting first element
 struct Node* deleteFirst(struct Node **start) {
-    return deleteAtPos(start, 0);
+	return deleteAtPos(start, 0);
 }
 
 //  Deleting last element
 struct Node* deleteLast(struct Node **start) {
-    int pos = 0;
 	if (*start == NULL) {
 		return NULL;
 	} else {
@@ -115,9 +113,10 @@ struct Node* deleteLast(struct Node **start) {
 		if((*start)->next == NULL) {
 			return 	deleteAtPos(start, 0);
 		}
+		int pos = 0;
 		while (temp->next->next != NULL) {// Loop until second last element is encountered
-		    temp = temp->next;
-		    pos++;
+			temp = temp->next;
+			pos++;
 		}
 		return deleteAtPos(start, pos+1);
 	}
