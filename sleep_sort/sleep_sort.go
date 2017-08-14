@@ -5,6 +5,7 @@ import (
 	"time"
 )
 
+// SleepSort sorts an array using SleepSort algorithm
 func SleepSort(numbers []int) []int {
 
 	channel := make(chan int, len(numbers))
