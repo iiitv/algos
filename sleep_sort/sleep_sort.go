@@ -7,7 +7,6 @@ import (
 
 // SleepSort sorts an array using SleepSort algorithm
 func SleepSort(numbers []int) []int {
-
 	channel := make(chan int, len(numbers))
 
 	for _, n := range numbers {
@@ -16,18 +15,14 @@ func SleepSort(numbers []int) []int {
 			channel <- n
 
 		}(n)
-
 	}
 
-	sorted := make([]int, len(numbers))
-
 	//  Get the result
+	sorted := make([]int, len(numbers))
 	for i := 0; i < len(numbers); i++ {
 		sorted[i] = <-channel
 	}
-
 	return sorted
-
 }
 
 func main() {
