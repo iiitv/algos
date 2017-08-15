@@ -8,7 +8,7 @@ Community (college) maintained list of Algorithms and Data Structures implementa
 [![Build Status](https://travis-ci.org/iiitv/algos.svg?branch=master)](https://travis-ci.org/iiitv/algos)
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=102)](https://github.com/iiitv/algos/)
 [![LICENSE Love](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://github.com/iiitv/algos/blob/master/LICENSE)
-
+[![GitHub issues](https://img.shields.io/github/issues/iiitv/algos.svg)](https://github.com/iiitv/algos/issues)
 
 [![js-happiness-style](https://cdn.rawgit.com/JedWatson/happiness/master/badge.svg)](https://github.com/JedWatson/happiness)
 
