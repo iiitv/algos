@@ -77,7 +77,7 @@ function quickSort (arr, left = 0, right = arr.length - 1) {
 function main () {
 	let arr = [2, 1, 6, 44, 8, 9, 10];
 	quickSort(arr);
-	console.log('Sorted data is',arr);
+	console.log('Sorted data is', arr);
 }
 
 main();
