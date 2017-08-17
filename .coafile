@@ -38,3 +38,8 @@ bears = GhcModBear
 [happiness]
 files = **/*.js
 bears = HappinessLintBear
+
+# CSharp
+[csharp]
+files = **/*.cs
+bears = CSharpLintBear
