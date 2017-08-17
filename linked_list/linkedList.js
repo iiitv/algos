@@ -31,7 +31,6 @@ class LinkedList {
 			temp.next = n;
 		}
 		this.length++;
-		return;
 	}
 
 	// Adds value at front of Linked List
@@ -74,7 +73,6 @@ class LinkedList {
 			}
 		}
 		this.length--;
-		return;
 	}
 
 	// Removes front element from Linked List
