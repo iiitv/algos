@@ -4,6 +4,7 @@ BreadthFirstSearch implementation using the queue concept
 Time Complexity: O(V+E) where V is number of vertices in the graph and E is number of edges
 '''
 
+
 def bfs(vertex, graph):
     '''
     :param vertex: an element (text or number) representing a vertex
