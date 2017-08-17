@@ -5,7 +5,7 @@ import java.util.Map;
  * Implement a trie with insert, search, and starts with methods using hash map.
  */
 class TrieNode {
-    public char ch;
+    public char character ;
     // has map store trie node
     public HashMap<Character, TrieNode> children = new HashMap<Character, TrieNode>();
     public boolean isLeaf;
@@ -13,8 +13,8 @@ class TrieNode {
     public TrieNode() {
     }
 
-    public TrieNode(char ch) {
-        this.ch = ch;
+    public TrieNode(char character) {
+        this.character = character;
     }
 }
 
@@ -34,17 +34,17 @@ public class Trie {
         HashMap<Character, TrieNode> children = root.children;
         // insert word char by char
         for (int i = 0; i < word.length(); i++) {
-            char ch = word.charAt(i);
+            char character = word.charAt(i);
             TrieNode root;
             /* Check status of that child node
              * If it is empty, them fill it
              * If it is present, them use this as the next root
              */
-            if (children.containsKey(ch)) {
-                root = children.get(ch);
+            if (children.containsKey(character)) {
+                root = children.get(character);
             } else {
-                root = new TrieNode(ch);
-                children.put(ch, root);
+                root = new TrieNode(character);
+                children.put(character, root);
             }
             children = root.children;
             //set leaf node
@@ -77,9 +77,9 @@ public class Trie {
         TrieNode root = null;
         // validate the words
         for (int i = 0; i < str.length(); i++) {
-            char ch = str.charAt(i);
-            if (children.containsKey(ch)) {
-                root = children.get(ch);
+            char character = str.charAt(i);
+            if (children.containsKey(character)) {
+                root = children.get(character);
                 children = root.children;
             } else {
                 return null;
