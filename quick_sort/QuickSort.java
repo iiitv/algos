@@ -31,7 +31,7 @@ public class QuickSort {
     }
 
     private static int partition(int[] arr, int start, int end) {
-        int l = median(arr, start, end, (int)((start + end) / 2));
+        int l = median(arr, start, end, (start + end) / 2);
         int p_idx = start - 1;
         int tmp = arr[l];
         arr[l] = arr[end];
