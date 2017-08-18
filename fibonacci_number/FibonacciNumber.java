@@ -8,10 +8,10 @@ public class FibonacciNumber {
 		int sum = 0;
 		int b = 0;
 		int a = 1;		
-        if (n == 1){
+        if (n == 1) {
         	return 1;
         }
-		for (int i = 1;i < n;i++){
+		for (int i = 1;i < n;i++) {
 			sum = a + b;
 			b = a;
 			a = sum;	
@@ -21,7 +21,7 @@ public class FibonacciNumber {
 
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
-		int n = in.nextInt();
+		int n = 5;
 		System.out.println(fibonacciNumber(n));
 	}
 }
