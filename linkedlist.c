@@ -9,11 +9,14 @@ struct _Node {
 };
 typedef struct _Node Node;
 
+
 typedef struct {
 	Node* first;
 } LinkedList;
 
+
 LinkedList* newLinkedList();
+
 short isEmpty(LinkedList* list);
 
 LinkedList* newLinkedList()
@@ -44,69 +47,13 @@ void insertfront(LinkedList* list,int data) {
 	list->first = temp;
 	return;
 	}
-	
+
 	p = list->first;
        temp->next=p;
 
 	//p points to the node after which new node to be inserted
 	list->first=temp;
 }
-
-
-
-
-
-
-void insertlast(LinkedList* list,int data) {
-	Node *temp, *p;
-	int c;
-	//create room for new node and copy parameter data into it
-	temp = (Node *) malloc( sizeof(Node) );
-	(*temp).data = data;
-	//when empty list or insert in list->firsting
-	if (list->first == NULL) {
-	temp->next =list->first;
-	list->first = temp;
-	return;
-	}
-	//locate the position for insertion otherwise
-	p = list->first;
-       	while(p->next!=NULL)
-	p=p->next;
-	p->next=temp;
-
-	//p points to the node after which new node to be inserted
-	
-}
-
-
-void insertany(LinkedList* list,int pos,int data) {
-	Node *temp, *p,*prep;
-	int c;
-	//create room for new node and copy parameter data into it
-	temp = (Node *) malloc( sizeof(Node) );
-	(*temp).data = data;
-	//when empty list or insert in list->firsting
-	if (list->first == NULL) {
-	temp->next =list->first;
-	list->first = temp;
-	return;
-	}
-	//locate the position for insertion otherwise
-	p = list->first;
-	prep = list->first;
-       	while(pos-->0&&p->next!=NULL)
-	{
-		prep=p;
-		p=p->next;
-	}
-	prep->next=temp;
-	temp->next=p;
-
-	//p points to the node after which new node to be inserted
-	
-}
-
 
 
 
@@ -125,6 +72,74 @@ while ( p!= NULL )
 	}
 
 }
+
+
+
+
+void insertlast(LinkedList* list,int data) {
+	Node *temp, *p,*prep;
+	int c;
+	//create room for new node and copy parameter data into it
+	temp = (Node *) malloc( sizeof(Node) );
+	(*temp).data = data;
+
+	if (list->first == NULL) {
+	temp->next =list->first;
+	list->first = temp;
+	return;
+	}
+	
+	//when empty list or insert in list->firsting
+    temp->next=NULL;
+	//locate the position for insertion otherwise
+	p = list->first;
+p = list->first;
+       	while(p->next!=NULL)
+            p=p->next;
+            p->next=temp;
+        
+return;
+	
+
+}
+
+
+void insertany(LinkedList* list,int pos,int data) {
+	Node *temp, *p,*prep;
+	int c;
+	//create room for new node and copy parameter data into it
+	temp = (Node *) malloc( sizeof(Node) );
+	(*temp).data = data;
+	//when empty list or insert in list->firsting
+	if (list->first == NULL) {
+	temp->next =list->first;
+	list->first = temp;
+	return;
+	}
+	//locate the position for insertion otherwise
+	p = list->first;
+	prep = list->first;
+	if(pos==0){
+		temp->next=list->first;
+		list->first=temp;
+	}
+	else{
+
+       	while(pos-->0&&p!=NULL)
+	{
+		prep=p;
+		p=p->next;
+	}
+	prep->next=temp;
+	temp->next=p;
+}
+
+	
+
+}
+
+
+
 
 
 
@@ -150,9 +165,9 @@ void deletelast(LinkedList* list) {
 	}
 	else{
 		Node *p=list->first,*prep=list->first;
-	
+
 		while(p->next->next!=NULL)
-		{	
+		{
 			p=p->next;
 		}
 		p->next=NULL;
@@ -185,7 +200,7 @@ short isEmpty(LinkedList* list) {
 //returns true if list is empty, false otherwise
 	if(list->first==NULL)
 		return 0;
-	else	
+	else
 		return 1;
 }
 
@@ -194,8 +209,8 @@ short isEmpty(LinkedList* list) {
 
 
 
-int search(LinkedList* list, int x) 
-{	
+int search(LinkedList* list, int x)
+{
 	Node *p=list->first;
 	while(p->next!=NULL&&x!=p->data)
 		p=p->next;
@@ -224,51 +239,65 @@ void destroy(LinkedList* list){
 
 
 int main() {
-	
+
 
 	LinkedList* list;
 	list = newLinkedList();
 
-	deletefront(list);
+
 	insertfront(list, 11);
 	insertfront(list, 21);
 	insertfront(list, 31);
 	insertfront(list, 41);
 	Print(list);
 
-	
-	insertany(list,4,998);
+	printf("inser any\n");
+	insertany(list,0,998);
+	insertany(list,1,98);
+	insertany(list,5,100);
+	insertany(list,6,55);
 	Print(list);
 
-	insertlast(list, 99);
-	insertlast(list, 19798);
+    printf("insert last\n");
+	insertlast(list,3);
+	insertlast(list,333);
 	Print(list);
 
+
+
+	printf("delete front\n");
 	deletefront(list);
 	Print(list);
 
+	printf("delete last\n");
 	deletelast(list);
 	Print(list);
-	
+
+
+	printf("peek element\n");
 	int element=peek(list,3);
 	printf("element is %d\n",element);
+
+	printf("check list \n");
 	int empty=isEmpty(list);
 	if(empty==0)
 		printf("list is empty\n");
 	else
 		printf("list is not empty\n");
-	
 
 
 
+	printf("search element\n");
 	int f=search(list,41);
 	if(f)
-		printf("found\n");
-	else 
-		printf("not found\n");
+		printf("found\n\n");
+	else
+		printf("not found\n\n");
 
 
+
+	printf("destroy list\n");
 	destroy(list);
-	Print(list);
+		Print(list);
 	return 0;
 }
