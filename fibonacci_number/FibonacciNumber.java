@@ -4,6 +4,7 @@ import java.util.*;
  *Find the nth value of series.
  */
 public class FibonacciNumber {
+    
 	public static int fibonacciNumber(int n) {
 		int sum = 0;
 		int b = 0;
