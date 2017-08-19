@@ -14,12 +14,18 @@ public class ShellSort
 
     public static void Sort(int[] data)
     {
-        for (int i = data.Length / 2; i > 0; i /= 2) {
-            for (int j = i; j < data.Length; ++j) {
-                for (int k = j - i; k >= 0; k -= i) {
-                    if (data[k+i] >= data[k]) {
+        for (int i = data.Length / 2; i > 0; i /= 2)
+        {
+            for (int j = i; j < data.Length; ++j)
+            {
+                for (int k = j - i; k >= 0; k -= i)
+                {
+                    if (data[k+i] >= data[k]) 
+                    {
                         break;
-                    } else {
+                    }
+                    else
+                    {
                         int temp = data[k];
                         data[k] = data[k+i];
                         data[k+i] = temp;
