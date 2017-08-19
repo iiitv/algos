@@ -7,8 +7,8 @@ Community (college) maintained list of Algorithms and Data Structures implementa
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/c10c3fd13edb475ca1bf77d4291d54b4)](https://www.codacy.com/app/aviaryan/algos?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=iiitv/algos&amp;utm_campaign=Badge_Grade)
 [![Build Status](https://travis-ci.org/iiitv/algos.svg?branch=master)](https://travis-ci.org/iiitv/algos)
 [![GitHub issues](https://img.shields.io/github/issues/iiitv/algos.svg)](https://github.com/iiitv/algos/issues)
-[![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=102)](https://github.com/iiitv/algos/)
-[![LICENSE Love](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://github.com/iiitv/algos/blob/master/LICENSE)
+[![Open Source Love](https://badges.frapsoft.com/os/v3/open-source.svg?v=102)](https://github.com/iiitv/algos/)
+[![LICENSE Love](https://img.shields.io/npm/l/awesome-badges.svg)](https://github.com/iiitv/algos/blob/master/LICENSE)
 
 [![js-happiness-style](https://cdn.rawgit.com/JedWatson/happiness/master/badge.svg)](https://github.com/JedWatson/happiness)
 
@@ -41,7 +41,7 @@ Community (college) maintained list of Algorithms and Data Structures implementa
 | [Prime Factor](https://en.wikipedia.org/wiki/Prime_factor) | [:white_check_mark:](prime_factor/prime_factor.c) | | [:white_check_mark:](prime_factor/PrimeFactor.java) | [:white_check_mark:](prime_factor/prime_factor.py) | [:white_check_mark:](prime_factor/prime_factor.go) | [:white_check_mark:](prime_factor/primeFactor.js) |
 | [Prims](https://en.wikipedia.org/wiki/Prim%27s_algorithm) | [:white_check_mark:](prims/prims.c) | | [:white_check_mark:](prims/Prims.java) | | | |
 | [Quick Select](https://en.wikipedia.org/wiki/Quickselect) | [:white_check_mark:](quick_select/quick_select.c) | | [:white_check_mark:](quick_select/QuickSelect.java) | [:white_check_mark:](quick_select/quick_select.py) | | |
-| [Quicksort](https://en.wikipedia.org/wiki/Quicksort) | [:white_check_mark:](quick_sort/quicksort.c) | | [:white_check_mark:](quick_sort/QuickSort.java) | [:white_check_mark:](quick_sort/quick_sort.py) | [:white_check_mark:](quick_sort/quick_sort.go) | |
+| [Quicksort](https://en.wikipedia.org/wiki/Quicksort) | [:white_check_mark:](quick_sort/quicksort.c) | | [:white_check_mark:](quick_sort/QuickSort.java) | [:white_check_mark:](quick_sort/quick_sort.py) | [:white_check_mark:](quick_sort/quick_sort.go) | [:white_check_mark:](quick_sort/quickSort.js) |
 | [Radix Sort](http://www.geeksforgeeks.org/radix-sort/) | | | | [:white_check_mark:](radix_sort/radix_sort.py) | | |
 | [Rod Cutting Problem](http://www.geeksforgeeks.org/dynamic-programming-set-13-cutting-a-rod/) | [:white_check_mark:](rod_cutting_problem/rod_cutting.c) | | [:white_check_mark:](rod_cutting_problem/RodCutting.java) | [:white_check_mark:](rod_cutting_problem/rod_cutting.py) | [:white_check_mark:](rod_cutting_problem/rod_cutting.go) | [:white_check_mark:](rod_cutting_problem/rodCuttingProblem.js) |
 | [Shell Sort](https://en.wikipedia.org/wiki/Shellsort) | | [:white_check_mark:](shell_sort/ShellSort.cpp) | [:white_check_mark:](shell_sort/ShellSort.java) | [:white_check_mark:](/shell_sort/shell_sort.py) | [:white_check_mark:](shell_sort/shell_sort.go) | [:white_check_mark:](shell_sort/shellSort.js) |
