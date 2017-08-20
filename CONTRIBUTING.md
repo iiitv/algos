@@ -157,7 +157,7 @@ function main () {
 main();
 ```
 
-#### CSharp
+#### C#
 
 ```csharp
 using static System.Console;
