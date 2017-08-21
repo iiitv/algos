@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#define max(a,b) (((a)>(b)) ? (a) : (b))
 
 int largestSumContiguousSubarray(int arr[], int size) {
 	int max_till = 0;
@@ -10,14 +11,6 @@ int largestSumContiguousSubarray(int arr[], int size) {
 		max_till = max(max_till, max_int);
 	}
 	return max_till;
-}
-
-int max(int first, int second) {
-	if (first < second)	{
-		return second;
-	} else {
-		return first;
-	}
 }
 
 int main() {
