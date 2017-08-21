@@ -1,4 +1,3 @@
-import java.util.*;
 /*
  *Fibonacci series 1,1,2,3,5,8,13,21...
  *Find the nth value of series.
@@ -20,8 +19,7 @@ public class FibonacciNumber {
 		return sum;
 	}
 
-	public static void main(String[] args) {
-		Scanner in = new Scanner(System.in);
+	public static void main(String[] args) {		
 		int n = 5;
 		System.out.println(fibonacciNumber(n));
 	}
