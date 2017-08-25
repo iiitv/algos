@@ -6,6 +6,9 @@ Community (college) maintained list of Algorithms and Data Structures implementa
 [![Code Climate](https://codeclimate.com/github/iiitv/algos/badges/gpa.svg)](https://codeclimate.com/github/iiitv/algos)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/c10c3fd13edb475ca1bf77d4291d54b4)](https://www.codacy.com/app/aviaryan/algos?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=iiitv/algos&amp;utm_campaign=Badge_Grade)
 [![Build Status](https://travis-ci.org/iiitv/algos.svg?branch=master)](https://travis-ci.org/iiitv/algos)
+[![GitHub issues](https://img.shields.io/github/issues/iiitv/algos.svg)](https://github.com/iiitv/algos/issues)
+[![Open Source Love](https://badges.frapsoft.com/os/v3/open-source.svg?v=102)](https://github.com/iiitv/algos/)
+[![LICENSE Love](https://img.shields.io/npm/l/awesome-badges.svg)](https://github.com/iiitv/algos/blob/master/LICENSE)
 
 [![js-happiness-style](https://cdn.rawgit.com/JedWatson/happiness/master/badge.svg)](https://github.com/JedWatson/happiness)
 
@@ -38,12 +41,12 @@ Community (college) maintained list of Algorithms and Data Structures implementa
 | [Prime Factor](https://en.wikipedia.org/wiki/Prime_factor) | [:white_check_mark:](prime_factor/prime_factor.c) | | [:white_check_mark:](prime_factor/PrimeFactor.java) | [:white_check_mark:](prime_factor/prime_factor.py) | [:white_check_mark:](prime_factor/prime_factor.go) | [:white_check_mark:](prime_factor/primeFactor.js) |
 | [Prims](https://en.wikipedia.org/wiki/Prim%27s_algorithm) | [:white_check_mark:](prims/prims.c) | | [:white_check_mark:](prims/Prims.java) | | | |
 | [Quick Select](https://en.wikipedia.org/wiki/Quickselect) | [:white_check_mark:](quick_select/quick_select.c) | | [:white_check_mark:](quick_select/QuickSelect.java) | [:white_check_mark:](quick_select/quick_select.py) | | |
-| [Quicksort](https://en.wikipedia.org/wiki/Quicksort) | [:white_check_mark:](quick_sort/quicksort.c) | | [:white_check_mark:](quick_sort/QuickSort.java) | [:white_check_mark:](quick_sort/quick_sort.py) | [:white_check_mark:](quick_sort/quick_sort.go) | |
+| [Quicksort](https://en.wikipedia.org/wiki/Quicksort) | [:white_check_mark:](quick_sort/quicksort.c) | | [:white_check_mark:](quick_sort/QuickSort.java) | [:white_check_mark:](quick_sort/quick_sort.py) | [:white_check_mark:](quick_sort/quick_sort.go) | [:white_check_mark:](quick_sort/quickSort.js) |
 | [Radix Sort](http://www.geeksforgeeks.org/radix-sort/) | | | | [:white_check_mark:](radix_sort/radix_sort.py) | | |
 | [Rod Cutting Problem](http://www.geeksforgeeks.org/dynamic-programming-set-13-cutting-a-rod/) | [:white_check_mark:](rod_cutting_problem/rod_cutting.c) | | [:white_check_mark:](rod_cutting_problem/RodCutting.java) | [:white_check_mark:](rod_cutting_problem/rod_cutting.py) | [:white_check_mark:](rod_cutting_problem/rod_cutting.go) | [:white_check_mark:](rod_cutting_problem/rodCuttingProblem.js) |
 | [Shell Sort](https://en.wikipedia.org/wiki/Shellsort) | | [:white_check_mark:](shell_sort/ShellSort.cpp) | [:white_check_mark:](shell_sort/ShellSort.java) | [:white_check_mark:](/shell_sort/shell_sort.py) | [:white_check_mark:](shell_sort/shell_sort.go) | [:white_check_mark:](shell_sort/shellSort.js) |
 | [Sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes) | [:white_check_mark:](sieve_of_eratosthenes/sieveOfEratosthenes.c) | | [:white_check_mark:](sieve_of_eratosthenes/SieveOfEratosthenes.java) | [:white_check_mark:](sieve_of_eratosthenes/sieve_of_eratosthenes.py) | [:white_check_mark:](sieve_of_eratosthenes/sieve_of_eratosthenes.go) | [:white_check_mark:](sieve_of_eratosthenes/sieveOfEratosthenes.js) |
-| [Sleep Sort](http://www.geeksforgeeks.org/sleep-sort-king-laziness-sorting-sleeping/) | | [:white_check_mark:](sleep_sort/sleep_sort.cpp) | | [:white_check_mark:](sleep_sort/sleep_sort.py) | | |
+| [Sleep Sort](http://www.geeksforgeeks.org/sleep-sort-king-laziness-sorting-sleeping/) | | [:white_check_mark:](sleep_sort/sleep_sort.cpp) | | [:white_check_mark:](sleep_sort/sleep_sort.py) | [:white_check_mark:](sleep_sort/sleep_sort.go) | |
 
 
 ## Implemented Data Structures
@@ -54,7 +57,7 @@ Community (college) maintained list of Algorithms and Data Structures implementa
 | [Binary Search Tree](https://en.wikipedia.org/wiki/Binary_search_tree) | | | [:white_check_mark:](binary_search_tree/BinarySearchTree.java) | | | |
 | [Linked List](https://en.wikipedia.org/wiki/Linked_list) | [:white_check_mark:](linked_list/linkedList.c.c) | | [:white_check_mark:](linked_list/LinkedList.java) | [:white_check_mark:](linked_list/linked_list.py) | [:white_check_mark:](linked_list/linked_list.go) | [:white_check_mark:](linked_list/linkedList.js) |
 | [Stack](https://en.wikipedia.org/wiki/Stack_(abstract_data_type)) | [:white_check_mark:](stack/stack.c) | | [:white_check_mark:](stack/Stack.java) | [:white_check_mark:](stack/stack.py) | [:white_check_mark:](stack/stack.go) | [:white_check_mark:](stack/stack.js) |
-| [Trie](https://en.wikipedia.org/wiki/Trie) | | [:white_check_mark:](trie/trie.cpp) | | | | |
+| [Trie](https://en.wikipedia.org/wiki/Trie) | | [:white_check_mark:](trie/trie.cpp) | [:white_check_mark:](trie/Trie.java) | | | |
 
 
 ## How to run them
