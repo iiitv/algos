@@ -1,14 +1,14 @@
-using static System.Console;
+using System;
 
 public class ShellSort
 {
     public static void Main()
     {
         int[] data = new int[] {1000, 45, -45, 121, 47, 45, 65, 121, -1, 103, 45, 34};
-        WriteLine("Data to be sorted:");
+        Console.WriteLine("Data to be sorted:");
         Print(data);
         Sort(data);
-        WriteLine("Sorted data:");
+        Console.WriteLine("Sorted data:");
         Print(data);
     }
 
@@ -20,7 +20,7 @@ public class ShellSort
             {
                 for (int k = j - i; k >= 0; k -= i)
                 {
-                    if (data[k+i] >= data[k]) 
+                    if (data[k+i] >= data[k])
                     {
                         break;
                     }
@@ -39,8 +39,8 @@ public class ShellSort
     {
         foreach(int elem in data)
         {
-            Write(elem + " ");
+            Console.Write(elem + " ");
         }
-        WriteLine("");
+        Console.WriteLine("");
     }
 }
