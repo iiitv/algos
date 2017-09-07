@@ -70,6 +70,7 @@ Community (college) maintained list of Algorithms and Data Structures implementa
 | Python |<pre>python [filename.py]</pre>|
 | Golang |<pre>go run [filename.go]</pre>|
 | JavaScript |<pre>node [filename.js]</pre>|
+| C# |<pre>mcs [filename.cs]<br/>mono [filename.exe]</pre>|
 
 
 ## Resources
