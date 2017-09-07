@@ -65,8 +65,7 @@ echo "Running C# files..."
 for i in $(ls -1 **/*.cs); do
     echo "    Compiling $i - mcs $i"
     mcs $i
-    filename="${i##*/}"
-    excname="${filename%.*}".exe
+    excname="${i%.*}".exe
     echo "    Running $i - mono $excname > /dev/null"
     mono $excname > /dev/null
     echo ""
