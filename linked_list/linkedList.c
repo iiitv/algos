@@ -85,7 +85,6 @@ struct Node* deleteAtPos(struct Node **start, int pos) {
 				i++;
 			}
 			if (i != pos-1 && pos != 0) {
-				printf("Invalid Index\n\n");
 				return NULL;
 			} else if (pos == 0) {
 				*start = (*start)->next;
