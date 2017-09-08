@@ -12,10 +12,10 @@ install:
   - ./.bin/install_apt.sh
   - ./.bin/install_go.sh
   - ./.bin/install_npm.sh
-  - pip3 install -r pip3-requirements.txt
-  - pip2 install -r pip2-requirements.txt
+  - ./.bin/install_pip3.sh
+  - ./.bin/install_pip2.sh
 
 script:
   - ./.bin/test_running.sh
-  - coala --ci
+  - coala -v && coala --ci
   - eclint check "**/*.{java,c,cpp,js}"

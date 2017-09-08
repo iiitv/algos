@@ -10,3 +10,7 @@ python3-setuptools
 
 # CSharp Linting
 mono-mcs
+
+# tkinter
+python-tk
+python3-tk

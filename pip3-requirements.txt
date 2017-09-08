@@ -1,4 +1,4 @@
 coala-bears
 numpy
-requests
+requests~=2.12
 matplotlib
