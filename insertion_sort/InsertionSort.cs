@@ -1,17 +1,7 @@
-using System;
+using static System.;
 
 public class InsertionSort
 {
-    public static void Main() 
-    {
-        int[] arr = new int[] {1000, 45, -45, 121, 47, 45, 65, 121, -1, 103, 45, 34};
-        Sort(arr);
-        for(int i = 0; i < arr.Length; i++) 
-        {
-            System.Console.Write(arr[i] + " ");
-        }
-    }
-
     public static void Sort(int[] data)
     {
         int key;
@@ -26,5 +16,16 @@ public class InsertionSort
             }
             data[j + 1] = key;
         }
+    }
+	
+    public static void Main() 
+    {
+        int[] arr = new int[] {1000, 45, -45, 121, 47, 45, 65, 121, -1, 103, 45, 34};
+        Sort(arr);
+        for(int i = 0; i < arr.Length; i++) 
+        {
+            Write(arr[i] + " ");
+        }
+        WriteLine("");
     }
 }
