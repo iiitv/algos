@@ -160,7 +160,7 @@ main();
 #### C#
 
 ```csharp
-using static System.Console;
+using System.Console;
 
 public class QuickSort
 {  
