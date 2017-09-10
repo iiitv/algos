@@ -1,3 +1,4 @@
 coala-bears
-numpy
 requests
+numpy
+matplotlib

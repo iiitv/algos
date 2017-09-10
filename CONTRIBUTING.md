@@ -32,7 +32,7 @@
 * Filename should be derived from the folder name. (eg `longest_common_subsequence` becomes `longestCommonSubsequence.c` or `LongestCommonSubsequence.java`)
 * Name of master function of the code should be kept same as filename to the best extent possible.
 * Prefer classes instead of multiple helper functions (where applicable).
-* Currently we are accepting contributions in C, C++, Java, Python, Go and JavaScript but other languages may be considered after a discussion.
+* Currently we are accepting contributions in C, C++, C#, Java, Python, Go and JavaScript but other languages may be considered after a discussion.
 * Define `tester` code only in `main` routine.
 * Use meaningful variable, method and function names and comments.
 * No profanity.
@@ -52,7 +52,6 @@
 ## Improving an implementation
 
 * If you feel you can improve upon an implementation, feel free to open an issue discussing the improvements.
-* If you are confident enough, you may directly open a PR with the required changes.
 
 
 <a name="samples"></a>
@@ -156,4 +155,31 @@ function main () {
 }
 
 main();
+```
+
+#### C#
+
+```csharp
+using static System.Console;
+
+public class QuickSort
+{  
+    public static void QuickSort(int[] a)
+    {
+        /*
+            Your implementation here...
+        */
+    }
+    
+    public static void Main()
+    {
+        int[] arr = new int[] {2, 3, 0, 4};
+        QuickSort(arr);
+        foreach(int element in arr)
+        {
+            Write(element + " ");
+        }
+        WriteLine("");
+    }
+}
 ```
