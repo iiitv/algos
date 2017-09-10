@@ -42,7 +42,7 @@ int binary_search(const int *arr, int arr_size, int search_element) {
 	int left = 0, right = arr_size - 1;
 
 	while (left <= right) {
-		int mid = (left + right) / 2;
+		int mid = left + (right - left) / 2;
 
 		if (arr[mid] == search_element)	// Element found
 			return mid;
