@@ -179,7 +179,7 @@ public class QuickSort
         {
             Console.Write(element + " ");
         }
-        WriteLine("");
+        Console.WriteLine("");
     }
 }
 ```
