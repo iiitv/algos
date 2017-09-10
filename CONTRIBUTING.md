@@ -177,7 +177,7 @@ public class QuickSort
         QuickSort(arr);
         foreach(int element in arr)
         {
-            Write(element + " ");
+            Console.Write(element + " ");
         }
         WriteLine("");
     }
