@@ -1,7 +1,7 @@
 using System;
 
 public class EuclideanGCD
-{  
+{
     public static int euclidean_gcd(int a, int b)
     {
         if(a == 0)
@@ -10,10 +10,10 @@ public class EuclideanGCD
         }
         else
         {
-           return euclidean_gcd(b % a, a); 
+            return euclidean_gcd(b % a, a);
         }
     }
-    
+
     public static void Main()
     {
         int a = 9, b = 15;
