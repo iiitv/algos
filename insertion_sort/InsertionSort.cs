@@ -1,4 +1,4 @@
-using static System.;
+using System;
 
 public class InsertionSort
 {
@@ -24,8 +24,8 @@ public class InsertionSort
         Sort(arr);
         for(int i = 0; i < arr.Length; i++) 
         {
-            Write(arr[i] + " ");
+            Console.Write(arr[i] + " ");
         }
-        WriteLine("");
+        Console.WriteLine("");
     }
 }
