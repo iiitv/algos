@@ -18,4 +18,5 @@ install:
 script:
   - ./.bin/test_running.sh
   - coala --ci
+  - eclint check "**/*.{java,c,cpp,js,cs}"
   - eclint check "**/*.{java,c,cpp,js}"
