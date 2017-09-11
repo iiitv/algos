@@ -7,13 +7,14 @@ Community (college) maintained list of Algorithms and Data Structures implementa
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/c10c3fd13edb475ca1bf77d4291d54b4)](https://www.codacy.com/app/aviaryan/algos?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=iiitv/algos&amp;utm_campaign=Badge_Grade)
 [![Build Status](https://travis-ci.org/iiitv/algos.svg?branch=master)](https://travis-ci.org/iiitv/algos)
 [![GitHub issues](https://img.shields.io/github/issues/iiitv/algos.svg)](https://github.com/iiitv/algos/issues)
-[![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=102)](https://github.com/iiitv/algos/)
-[![LICENSE Love](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://github.com/iiitv/algos/blob/master/LICENSE)
+[![Open Source Love](https://badges.frapsoft.com/os/v3/open-source.svg?v=102)](https://github.com/iiitv/algos/)
+[![LICENSE Love](https://img.shields.io/npm/l/awesome-badges.svg)](https://github.com/iiitv/algos/blob/master/LICENSE)
 
 [![js-happiness-style](https://cdn.rawgit.com/JedWatson/happiness/master/badge.svg)](https://github.com/JedWatson/happiness)
 
 
 ## Implemented Algorithms
+
 
 
 | Algorithm | C | CPP | Java | Python | Golang | JavaScript |
@@ -50,15 +51,17 @@ Community (college) maintained list of Algorithms and Data Structures implementa
 | [Sleep Sort](http://www.geeksforgeeks.org/sleep-sort-king-laziness-sorting-sleeping/) | | [:white_check_mark:](sleep_sort/sleep_sort.cpp) | | [:white_check_mark:](sleep_sort/sleep_sort.py) | [:white_check_mark:](sleep_sort/sleep_sort.go) | |
 
 
+
 ## Implemented Data Structures
 
-| Data Structure | C | CPP | Java | Python | Golang | JavaScript |
-|:--------------|:----------------:|:----------------:|:----------------:|:-----------------:|:-----------------:|:-----------------:|
-| [AVL Tree](http://www.geeksforgeeks.org/avl-tree-set-1-insertion)| | |[:white_check_mark:](avl_tree/AvlTree.java) | | | |
-| [Binary Search Tree](https://en.wikipedia.org/wiki/Binary_search_tree) | | | [:white_check_mark:](binary_search_tree/BinarySearchTree.java) | | | |
-| [Linked List](https://en.wikipedia.org/wiki/Linked_list) | | | [:white_check_mark:](linked_list/LinkedList.java) | [:white_check_mark:](linked_list/linked_list.py) | [:white_check_mark:](linked_list/linked_list.go) | [:white_check_mark:](linked_list/linkedList.js) |
-| [Stack](https://en.wikipedia.org/wiki/Stack_(abstract_data_type)) | [:white_check_mark:](stack/stack.c) | | [:white_check_mark:](stack/Stack.java) | [:white_check_mark:](stack/stack.py) | [:white_check_mark:](stack/stack.go) | [:white_check_mark:](stack/stack.js) |
-| [Trie](https://en.wikipedia.org/wiki/Trie) | | [:white_check_mark:](trie/trie.cpp) | | | | |
+| Data Structure | C | CPP | Java | Python | Golang | JavaScript | C# |
+|:--------------|:----------------:|:----------------:|:----------------:|:-----------------:|:-----------------:|:-----------------:|:-----------------:|
+| [AVL Tree](http://www.geeksforgeeks.org/avl-tree-set-1-insertion)| | |[:white_check_mark:](avl_tree/AvlTree.java) | | | | |
+| [Binary Search Tree](https://en.wikipedia.org/wiki/Binary_search_tree) | | | [:white_check_mark:](binary_search_tree/BinarySearchTree.java) | | | | |
+| [Linked List](https://en.wikipedia.org/wiki/Linked_list) | [:white_check_mark:](linked_list/linkedList.c.c) | | [:white_check_mark:](linked_list/LinkedList.java) | [:white_check_mark:](linked_list/linked_list.py) | [:white_check_mark:](linked_list/linked_list.go) | [:white_check_mark:](linked_list/linkedList.js) | |
+| [Stack](https://en.wikipedia.org/wiki/Stack_(abstract_data_type)) | [:white_check_mark:](stack/stack.c) | | [:white_check_mark:](stack/Stack.java) | [:white_check_mark:](stack/stack.py) | [:white_check_mark:](stack/stack.go) | [:white_check_mark:](stack/stack.js) | |
+| [Trie](https://en.wikipedia.org/wiki/Trie) | | [:white_check_mark:](trie/trie.cpp) | [:white_check_mark:](trie/Trie.java) | | | | | |
+
 
 
 ## How to run them
@@ -71,6 +74,7 @@ Community (college) maintained list of Algorithms and Data Structures implementa
 | Python |<pre>python [filename.py]</pre>|
 | Golang |<pre>go run [filename.go]</pre>|
 | JavaScript |<pre>node [filename.js]</pre>|
+| C# |<pre>mcs [filename.cs]<br/>mono [filename.exe]</pre>|
 
 
 ## Resources
