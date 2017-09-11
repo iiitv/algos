@@ -2,7 +2,7 @@ import unittest
 import random
 from datetime import datetime
 
-from rb_tree import RedBlackTree, Node, BLACK, RED
+from ..rb_tree import RedBlackTree, Node, BLACK, RED
 NIL_LEAF = RedBlackTree.NIL_LEAF
 
 
