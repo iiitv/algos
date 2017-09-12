@@ -1,5 +1,13 @@
 public class QuickSort {
 
+    private static int compare(int[] arr, int i, int j) {
+        if (arr[i] > arr[j]) {
+            return i;
+        } else {
+            return j;
+        }
+    }
+
     /*
     This method returns the index of median of array at i, j, k.
     @param arr: Input array to be sorted.
@@ -10,23 +18,11 @@ public class QuickSort {
     */
     private static int median(int[] arr, int i, int j, int k) {
         if (arr[i] > arr[j] && arr[i] > arr[k]) {
-            if (arr[k] > arr[j]) {
-                return k;
-            } else {
-                return j;
-            }
+            return compare(arr, k, j);
         } else if (arr[j] > arr[i] && arr[j] > arr[k]) {
-            if (arr[k] > arr[i]) {
-                return k;
-            } else {
-                return i;
-            }
+            return compare(arr, k, i);
         } else {
-            if (arr[i] > arr[j]) {
-                return i;
-            } else {
-                return j;
-            }
+            return compare(arr, i, j);
         }
     }
 
