@@ -160,7 +160,7 @@ main();
 #### C#
 
 ```csharp
-using static System.Console;
+using System;
 
 public class QuickSort
 {  
@@ -177,9 +177,9 @@ public class QuickSort
         QuickSort(arr);
         foreach(int element in arr)
         {
-            Write(element + " ");
+            Console.Write(element + " ");
         }
-        WriteLine("");
+        Console.WriteLine("");
     }
 }
 ```
