@@ -1,7 +1,5 @@
-/*
- *  Linear Search algorithm searches for a given number in array
- *  Time complexity is O(n) , n is size of array
- */
+/*Linear Search algorithm searches for a given number in array
+ *Time complexity is O(n) , n is size of array*/
 
 using System;
 
