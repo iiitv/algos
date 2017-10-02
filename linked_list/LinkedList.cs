@@ -17,7 +17,7 @@ public class LinkedList<T>
 {
 
     private Node<T> head;
-    private int size = 0;
+    public int size = 0;
 
     public LinkedList()
     {
@@ -226,8 +226,6 @@ public class LinkedList<T>
         Console.WriteLine(list); // [5, 10]
 
         Console.WriteLine(list.isEmpty()); // False
-        
-        Console.WriteLine(list.size()); // 2
 
         while (!list.isEmpty())
         {
