@@ -226,6 +226,8 @@ public class LinkedList<T>
         Console.WriteLine(list); // [5, 10]
 
         Console.WriteLine(list.isEmpty()); // False
+        
+        Console.WriteLine(list.size()); // 2
 
         while (!list.isEmpty())
         {
