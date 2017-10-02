@@ -96,7 +96,7 @@ class Node():
 
     def preorder(self):
         if self:
-            print(str(self.data), " ", end='')
+            print(str(self.data))
             if self.left:
                 self.left.preorder()
             if self.right:
@@ -108,13 +108,13 @@ class Node():
                 self.right.postorder()
             if self.left:
                 self.left.postorder()
-            print(str(self.data), " ", end='')
+            print(str(self.data))
 
     def inorder(self):
         if self:
             if self.left:
                 self.left.inorder()
-            print(str(self.data), " ", end='')
+            print(str(self.data))
             if self.right:
                 self.right.inorder()
 
@@ -265,19 +265,16 @@ class BST:
         print("Pre-Order:")
         if self.root:
             self.root.preorder()
-        print()
 
     def postorder(self):
         print("Post-Order:")
         if self.root:
             self.root.postorder()
-        print()
 
     def inorder(self):
         print("In-Order:")
         if self.root:
             self.root.inorder()
-        print()
 
 
 def main():
@@ -287,6 +284,7 @@ def main():
 
     # invalid left and right node
     test1 = Node(0, 5, "anything")
+    print(test1)
 
     # invalid right node
     test2 = Node(0, None, None)
