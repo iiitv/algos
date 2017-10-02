@@ -1,20 +1,18 @@
 ﻿using System;
 
-public class Node<T>
-{
-    public T data;
-    public Node<T> next;
-
-    public Node(T obj)
-    {
-        this.data = obj;
-        this.next = null;
-    }
-}
-
-
 public class LinkedList<T>
 {
+    public class Node<T>
+    {
+        public T data;
+        public Node<T> next;
+
+        public Node(T obj)
+        {
+            this.data = obj;
+            this.next = null;
+        }
+    }
 
     private Node<T> head;
     public int size = 0;
