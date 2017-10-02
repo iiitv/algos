@@ -2,12 +2,12 @@
 
 public class LinkedList<T>
 {
-    public class Node<T>
+    public class Node<U>
     {
-        public T data;
-        public Node<T> next;
+        public U data;
+        public Node<U> next;
 
-        public Node(T obj)
+        public Node(U obj)
         {
             this.data = obj;
             this.next = null;
