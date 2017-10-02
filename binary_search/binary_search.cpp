@@ -32,7 +32,6 @@ int binary_search(vector<int> list, int target) {
 	return -1;
 }
 
-
 //------------------------------------------------
 // Test binary_search().
 //------------------------------------------------
