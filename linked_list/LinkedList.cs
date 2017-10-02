@@ -1,5 +1,54 @@
 ﻿using System;
 
+public class RunLinkedList
+{
+    public static void Main(string[] args)
+    {
+        LinkedList<int> list = new LinkedList<int>();
+
+        try
+        {
+            Console.WriteLine(list.removeLast());
+        }
+        catch (InvalidOperationException)
+        {
+            Console.WriteLine("The list is empty");
+        }
+
+        list.add(2, 0);
+        Console.WriteLine(list); // [2]
+
+        list.remove(0);
+        Console.WriteLine(list); // Empty
+
+        list.addFront(2);
+        list.add(5, 1);
+        list.add(10, 2);
+        list.addLast(3);
+        Console.WriteLine(list); // [2, 5, 10, 3]
+
+        Console.WriteLine(list.search(5)); // 1
+        Console.WriteLine(list.search(0)); // -1
+
+        list.removeLast();
+        Console.WriteLine(list); // [2, 5, 10]
+
+        list.removeFront();
+        Console.WriteLine(list); // [5, 10]
+
+        Console.WriteLine(list.isEmpty()); // False
+
+        while (!list.isEmpty())
+        {
+            list.removeLast();
+        }
+
+        Console.WriteLine(list.isEmpty()); // True
+
+        Console.ReadKey();
+    }
+}
+
 public class LinkedList<T>
 {
     public class Node<U>
@@ -187,51 +236,5 @@ public class LinkedList<T>
             return returnString;
         }
         return "[]";
-    }
-
-    public static void Main(string[] args)
-    {
-        LinkedList<int> list = new LinkedList<int>();
-
-        try
-        {
-            Console.WriteLine(list.removeLast());
-        }
-        catch (InvalidOperationException e)
-        {
-            Console.WriteLine("The list is empty");
-        }
-
-        list.add(2, 0);
-        Console.WriteLine(list); // [2]
-
-        list.remove(0);
-        Console.WriteLine(list); // Empty
-
-        list.addFront(2);
-        list.add(5, 1);
-        list.add(10, 2);
-        list.addLast(3);
-        Console.WriteLine(list); // [2, 5, 10, 3]
-
-        Console.WriteLine(list.search(5)); // 1
-        Console.WriteLine(list.search(0)); // -1
-
-        list.removeLast();
-        Console.WriteLine(list); // [2, 5, 10]
-
-        list.removeFront();
-        Console.WriteLine(list); // [5, 10]
-
-        Console.WriteLine(list.isEmpty()); // False
-
-        while (!list.isEmpty())
-        {
-            list.removeLast();
-        }
-
-        Console.WriteLine(list.isEmpty()); // True
-
-        Console.ReadKey();
     }
 }
