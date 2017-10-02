@@ -1,4 +1,5 @@
 class Node():
+    # This class holds an actual Node in our BST
 
     # the actual data which is stored in the node
     __data = None
@@ -14,14 +15,15 @@ class Node():
         self.left = left
         self.right = right
 
-    # adding @property makes this a getter and can be accessed by ObjectName.data
     @property
     def data(self):
+        # adding @property makes this a getter and can be accessed by ObjectName.data
+
         return self.__data
 
-    # we need setter for "data" since its a private variable
     @data.setter
     def data(self, value):
+        # we need setter for "__data" since its a private variable
         # Use of setters is to validate data or perform some action before assiging the data
         # we only want our data to be a number/int
         if isinstance(value, int):
@@ -50,7 +52,7 @@ class Node():
 
     @right.setter
     def right(self, value):
-        # since left is not just any variable but a node itself
+        # since right is not just any variable but a node itself
         if (isinstance(value, Node)) or (value is None):
             self.__right = value
         else:
@@ -124,7 +126,7 @@ class Node():
         return "No data in this node."
 
 
-class BST:
+class BST():
     def __init__(self):
         self.root = None
 
@@ -134,6 +136,26 @@ class BST:
         else:
             self.root = Node(value)
             return True
+
+    # the sole purpose of this method is to move the right sub-tree up
+    # however it does not need access to an instance "self" of class
+    # but it only makes sense if it is a part of the BST class
+    # hence its static in nature
+    @staticmethod
+    def moveRightTree(parentNode, nodeToDelete):
+        # it can't have left child so move the right sub-tree
+        if nodeToDelete.right:
+            if parentNode.data > nodeToDelete.data:
+                parentNode.left = nodeToDelete.right
+            elif parentNode.data < nodeToDelete.data:
+                parentNode.right = nodeToDelete.right
+        # it has no children
+        else:
+            if nodeToDelete.data < parentNode.data:
+                parentNode.left = None
+            else:
+                parentNode.right = None
+        del nodeToDelete
 
     def delete(self, value):
         # if tree is empty
@@ -161,21 +183,9 @@ class BST:
                     nodeToDelete = nodeToDelete.left
                 # copy the lowest value
                 self.root.data = nodeToDelete.data
-
                 # since it doesn't have any left child, it has right child only
                 # delete the "nodeToDelete" by moving the right sub-tree upwards
-                if nodeToDelete.right:
-                    if parentNode.data > nodeToDelete.data:
-                        parentNode.left = nodeToDelete.right
-                    elif parentNode.data < nodeToDelete.data:
-                        parentNode.right = nodeToDelete.right
-
-                # it has no children
-                else:
-                    if nodeToDelete.data < parentNode.data:
-                        parentNode.left = None
-                    else:
-                        parentNode.right = None
+                BST.moveRightTree(parentNode, nodeToDelete)
 
             print("Value: {} deleted.".format(value))
             return True
@@ -236,21 +246,12 @@ class BST:
                 parentNode = nodeToDelete
                 nodeToDelete = nodeToDelete.left
             # copy the lowest value
-            node.value = nodeToDelete.data
+            node.data = nodeToDelete.data
 
             # since the "nodeToDelete" does't have a left child , it has a right child only
-            if nodeToDelete.right:
-                if parentNode.data > nodeToDelete.data:
-                    parentNode.left = nodeToDelete.right
-                elif parentNode.data < nodeToDelete.data:
-                    parentNode.right = nodeToDelete.right
+            # we move the right sub-tree upwards thus deleting the "nodeToDelete"
+            BST.moveRightTree(parentNode, nodeToDelete)
 
-            # "nodeToDelete" doesn't have any child.
-            else:
-                if nodeToDelete.data < parentNode.data:
-                    parentNode.left = None
-                else:
-                    parentNode.right = None
             print("Value: {} deleted.".format(value))
 
     def find(self, value):
@@ -278,6 +279,7 @@ class BST:
 
 
 def main():
+    print("Start Program.")
 
     # this will output an error
     # we are using getters and setters to make sure the entered data is valid
@@ -325,7 +327,7 @@ def main():
     myBST.find(9)
     myBST.find(5)
     myBST.preorder()
-    print("End")
+    print("End Program.")
 
 
 if __name__ == '__main__':
