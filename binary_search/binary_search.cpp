@@ -6,7 +6,7 @@ using namespace std;
 // Performs a binary search.
 // Collection to be searched must be sorted.
 // Worst case complexity O(log n).
-// 
+//
 // INPUTS
 // vector<int> list: collection of elements.
 // int target: element to search for.
