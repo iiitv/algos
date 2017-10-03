@@ -23,7 +23,7 @@ void segmentedSieve(){
 			Prime.push_back(i);
 		}
 	}
-	int low = rootSegMax; 
+	int low = rootSegMax;
 	// ^^ lower end of current block we are finding primes for
 	int high = 2*rootSegMax;
 	// ^^ higher end of current block we are finding primes for
