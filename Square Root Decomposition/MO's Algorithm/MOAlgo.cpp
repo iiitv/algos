@@ -2,7 +2,7 @@
 //Time Complexity : O((n+q)*sqrt(n))
 
 #include <bits/stdc++.h>
- 
+
 #define ll long long int
 #define mod 1000000007
 #define show(a) for(i=0;i<a.size();i++) cout<<a[i]<<" ";
@@ -50,36 +50,37 @@ int main() {
     }
     int v[Q+4],ans=0;
     sort(q.begin(),q.end(),f);  //f is comparator
-	for(int i=0;i<Q;i++){
-	    l=q[i].se.fi;
-	    r=q[i].se.se;
-	    while(s<l){
-	        freq[a[s]]--;
-	        if(!freq[a[s]])
-	            ans--;
-	        s++;
-	    }
-	    while(s>l){
-	        freq[a[s-1]]++;
-	        if(freq[a[s-1]]==1)
-	            ans++;
-	        s--;
-	    }
-	    while(e<=r){
-	        freq[a[e]]++; // mantains frequency
-	        if(freq[a[e]]==1)
-	            ans++;
-	        e++;
-	    }
-	    while(e>r+1){
-	        freq[a[e-1]]--;
-	        if(freq[a[e-1]]==0)
-	            ans--;
-	        e--;
-	    }
-	    v[q[i].fi]=ans;
-	}
-	for(int i=0;i<Q;i++)
-	    printf("%d\n",v[i]);
-	return 0;
+    for(int i=0;i<Q;i++){
+        l=q[i].se.fi;
+        r=q[i].se.se;
+        while(s<l){
+            freq[a[s]]--;
+            if(!freq[a[s]])
+                ans--;
+            s++;
+        }
+        while(s>l){
+
+            freq[a[s-1]]++;
+            if(freq[a[s-1]]==1)
+                ans++;
+            s--;
+        }
+        while(e<=r){
+            freq[a[e]]++; // mantains frequency
+            if(freq[a[e]]==1)
+                ans++;
+            e++;
+        }
+        while(e>r+1){
+            freq[a[e-1]]--;
+            if(freq[a[e-1]]==0)
+                ans--;
+            e--;
+        }
+        v[q[i].fi]=ans;
+    }
+    for(int i=0;i<Q;i++)
+        printf("%d\n",v[i]);
+    return 0;
 }
