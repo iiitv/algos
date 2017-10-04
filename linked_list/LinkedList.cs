@@ -71,7 +71,7 @@ public class LinkedList<T>
         this.head = null;
     }
 
-    public void addFront(T obj)
+    public void AddFront(T obj)
     {
         Node<T> node = new Node<T>(obj);
         node.next = this.head;
@@ -79,7 +79,7 @@ public class LinkedList<T>
         this.size++;
     }
 
-    public void addLast(T obj)
+    public void AddLast(T obj)
     {
         if (this.head == null)
         {
@@ -100,7 +100,7 @@ public class LinkedList<T>
         }
     }
 
-    public void add(T obj, int index)
+    public void Add(T obj, int index)
     {
         if (index < 0 || index > this.size)
         {
@@ -124,9 +124,9 @@ public class LinkedList<T>
         }
     }
 
-    public T removeFront()
+    public T RemoveFront()
     {
-        if (isEmpty())
+        if (IsEmpty())
         {
             throw new InvalidOperationException();
         }
@@ -136,9 +136,9 @@ public class LinkedList<T>
         return objRemoved;
     }
 
-    public T remove(int index)
+    public T Remove(int index)
     {
-        if (isEmpty())
+        if (IsEmpty())
         {
             throw new InvalidOperationException();
         }
@@ -158,12 +158,12 @@ public class LinkedList<T>
             this.size--;
             return objRemoved;
         }
-        return removeFront();
+        return RemoveFront();
     }
 
-    public T removeLast()
+    public T RemoveLast()
     {
-        if (isEmpty())
+        if (IsEmpty())
         {
             throw new InvalidOperationException();
         }
@@ -187,7 +187,7 @@ public class LinkedList<T>
         return objRemoved;
     }
 
-    public int search(T obj)
+    public int Search(T obj)
     {
         Node<T> temp = this.head;
         for (int i = 0; i < this.size; i++)
@@ -204,12 +204,12 @@ public class LinkedList<T>
         return -1;
     }
 
-    public int getSize()
+    public int GetSize()
     {
         return this.size;
     }
 
-    public bool isEmpty()
+    public bool IsEmpty()
     {
         return size == 0;
     }
