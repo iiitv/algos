@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 public class RunLinkedList
 {
@@ -8,42 +8,42 @@ public class RunLinkedList
 
         try
         {
-            Console.WriteLine(list.removeLast());
+            Console.WriteLine(list.RemoveLast());
         }
         catch (InvalidOperationException)
         {
             Console.WriteLine("The list is empty");
         }
 
-        list.add(2, 0);
+        list.Add(2, 0);
         Console.WriteLine(list); // [2]
 
-        list.remove(0);
+        list.Remove(0);
         Console.WriteLine(list); // Empty
 
-        list.addFront(2);
-        list.add(5, 1);
-        list.add(10, 2);
-        list.addLast(3);
+        list.AddFront(2);
+        list.Add(5, 1);
+        list.Add(10, 2);
+        list.AddLast(3);
         Console.WriteLine(list); // [2, 5, 10, 3]
 
-        Console.WriteLine(list.search(5)); // 1
-        Console.WriteLine(list.search(0)); // -1
+        Console.WriteLine(list.Search(5)); // 1
+        Console.WriteLine(list.Search(0)); // -1
 
-        list.removeLast();
+        list.RemoveLast();
         Console.WriteLine(list); // [2, 5, 10]
 
-        list.removeFront();
+        list.RemoveFront();
         Console.WriteLine(list); // [5, 10]
 
-        Console.WriteLine(list.isEmpty()); // False
+        Console.WriteLine(list.IsEmpty()); // False
 
-        while (!list.isEmpty())
+        while (!list.IsEmpty())
         {
-            list.removeLast();
+            list.RemoveLast();
         }
 
-        Console.WriteLine(list.isEmpty()); // True
+        Console.WriteLine(list.IsEmpty()); // True
 
         Console.ReadKey();
     }
@@ -109,7 +109,7 @@ public class LinkedList<T>
         Node<T> temp = this.head;
         if (index == 0)
         {
-            addFront(obj);
+            AddFront(obj);
         }
         else
         {
