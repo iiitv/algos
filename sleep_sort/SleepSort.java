@@ -2,7 +2,7 @@ import java.util.Vector;
 
 /**
 * A Java implementation of sleep sort.
-* Time Complexity : O(max(input)) 
+* Time Complexity : O(max(input))
 * (Will work for integers and not real numbers)
 */
 public class SleepSort {
