@@ -1,8 +1,6 @@
 #include<iostream>
 using namespace std;
 
-#define max 100
-
 class stack
 {
     public:
@@ -10,7 +8,7 @@ class stack
         int top;
         stack()
         {
-            a = new int[max];
+            a = new int[100];
             top=-1;
         }
         
