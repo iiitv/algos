@@ -6,11 +6,17 @@ using namespace std;
 class stack
 {
     public:
-        int a[max];
+        int *a;
         int top;
         stack()
         {
+            a = new int[max];
             top=-1;
+        }
+        
+        ~stack()
+        {
+            delete[] a;
         }
     void push();
     void pop();
@@ -40,7 +46,6 @@ void stack:: push()
 
 void stack:: pop()
 {
-    int val;
     
     if(top==-1)
     {
@@ -48,7 +53,7 @@ void stack:: pop()
     }
     else
     {
-        val=a[top--];
+        int val=a[top--];
         cout<<val<<" is popped out of stack."<<endl;
     }
 }
@@ -77,7 +82,14 @@ void stack:: leftspace()
 
 void stack:: gettop()
 {
-    cout<<"top is : "<<top<<endl;
+    if(top == -1)
+    {
+        cout<<"Stack is Empty"<<endl;
+    }
+    else
+    {
+        cout<<"top is : "<<a[top]<<endl;
+    }
 }
 
 
