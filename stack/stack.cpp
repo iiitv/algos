@@ -1,14 +1,16 @@
 #include<iostream>
 using namespace std;
+#define max 100
 
 class stack
 {
-    public:
+    private:
         int *a;
         int top;
+    public:
         stack()
         {
-            a = new int[100];
+            a = new int[max];
             top=-1;
         }
         
