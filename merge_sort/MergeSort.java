@@ -1,6 +1,6 @@
 public class MergeSort {
 
-    static void merge(int[] a, int first, int mid, int last) {
+    private static void merge(int[] a, int first, int mid, int last) {
         int l = mid - first + 1;
         int r = last - mid;
         int[] left = new int[l];
@@ -37,7 +37,7 @@ public class MergeSort {
         }
     }
 
-    static void mergeSort(int[] a, int first, int last) {
+    private static void mergeSort(int[] a, int first, int last) {
         if (first < last) {
             int mid = (first + last) / 2;  //find the middle
             mergeSort(a, first, mid);  //sort left half

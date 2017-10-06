@@ -7,16 +7,13 @@ def median(a, i, j, k):
     :param k: middle element index
     :return: return median of values at indices i, j and k.
     """
-    if a[i] > a[j]:
-        if a[j] > a[k]:
-            return j
-        else:
-            return k
-    else:
-        if a[i] > a[k]:
-            return i
-        else:
-            return k
+    ai, aj, ak = a[i], a[j], a[k]
+    med_val = ai + aj + ak - max(ai, aj, ak) - min(ai, aj, ak)
+    if ai == med_val:
+        return i
+    elif aj == med_val:
+        return j
+    return k
 
 
 def partition(array, l, r):
