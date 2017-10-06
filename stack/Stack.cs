@@ -92,7 +92,7 @@ class Stack<T>
 
     /**
     * gets the n top elements and rotates them
-    * 
+    *
     * if left == false then it will move the last element to behind the nth element(from the top)
     *
     * if left == true it will move the nth element(from the top) last
