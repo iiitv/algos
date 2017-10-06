@@ -1,4 +1,3 @@
-//Code Copyright: Manish Kumar, E&C, IIT Roorkee
 #include <iostream>
 #include <cmath>
 #include <cstring>
