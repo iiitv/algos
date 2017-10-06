@@ -1,10 +1,39 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-/**
-* Stack implementation using a LinkedList
-*/
+
+class MainClass
+{
+    public static void Main()
+    {
+        Stack<string> test = new Stack<string>();
+
+        test.Push("123");
+        test.Push("test");
+        test.Push("rawr");
+        test.Push("Pancake");
+        test.Push("Yummy");
+        test.Push("321");
+        test.Push(":thinking:");
+
+        test.Swap();
+
+        test.Rotate(4, true);
+
+        test.Duplicate();
+
+        test.Peek();
+
+        while(!(test.IsEmpty()))
+        {
+            test.Pop();
+        }
+    }
+}
+
 class Stack<T>
 {
     private LinkedList<T> stack;
@@ -138,30 +167,5 @@ class Stack<T>
             stack.AddBefore(node.Next, last);
         }
     }
-
-    public static void Main()
-    {
-        Stack<string> test = new Stack<string>();
-
-        test.Push("123");
-        test.Push("test");
-        test.Push("rawr");
-        test.Push("Pancake");
-        test.Push("Yummy");
-        test.Push("321");
-        test.Push(":thinking:");
-
-        test.Swap();
-
-        test.Rotate(4, true);
-
-        test.Duplicate();
-
-        test.Peek();
-
-        while(!(test.IsEmpty()))
-        {
-            test.Pop();
-        }
-    }
 }
+
