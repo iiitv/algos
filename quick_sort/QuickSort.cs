@@ -1,7 +1,7 @@
 /*
 Time Complexity: Best: O(n log(n)), Average: O(n log(n)), Worst: O(n^2)
 Space Complexity: O(log(n))
- */
+*/
 
 using System;
 
@@ -62,15 +62,15 @@ public class QuickSort
     {
         if(end - start == 2)
         {
-          if(a[start] > a[end - 1])
-            Swap(a, start, end - 1);
+            if(a[start] > a[end - 1])
+                Swap(a, start, end - 1);
         }
         else if(end - start > 1)
         {
-          ChoosePivot(a, start, end);
-          int pivotPos = Partition(a, start, end);
-          DoQuickSort(a, start, pivotPos);
-          DoQuickSort(a, pivotPos + 1, end);
+            ChoosePivot(a, start, end);
+            int pivotPos = Partition(a, start, end);
+            DoQuickSort(a, start, pivotPos);
+            DoQuickSort(a, pivotPos + 1, end);
         }
     }
 
