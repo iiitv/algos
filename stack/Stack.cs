@@ -19,15 +19,11 @@ class MainClass
         test.Push("321");
         test.Push(":thinking:");
 
-        test.Swap();
-
-        test.Rotate(4, true);
-
-        test.Duplicate();
+        test.Rotate(3, false);
 
         test.Peek();
 
-        while(!(test.IsEmpty()))
+        while (!(test.IsEmpty()))
         {
             test.Pop();
         }
@@ -73,24 +69,6 @@ class Stack<T>
         return (!stack.Any());
     }
 
-    /**
-    * Swaps places between the last and second last element of the stack
-    */
-    public void Swap()
-    {
-        if (IsEmpty())
-            return;
-
-        T last = stack.Last();
-
-        T secondLast = stack.ElementAt(stack.Count() - 2);
-
-        Pop();
-        Pop();
-
-        Push(last);
-        Push(secondLast);
-    }
 
     /**
     * Returms the last element of the stack
@@ -104,34 +82,18 @@ class Stack<T>
     }
 
     /**
-    * pops and pushes the same element twice
-    */
-    public void Duplicate()
-    {
-        if (IsEmpty())
-            return;
-
-        T duplicate = stack.Last();
-
-        Pop();
-
-        Push(duplicate);
-        Push(duplicate);
-    }
-
-    /**
     * gets the n top elements and rotates them
     *
     * if left == false then it will move the last element to behind the nth element(from the top)
     *
-    * if left == true it will move the nth element(from the top) last
+    * if left == true it will move the nth element(from the top) to the top
     */
     public void Rotate(int n, bool left)
     {
         if (n <= 1)
             return;
 
-        if (stack.Count <= 2)
+        if (stack.Count < 2)
             return;
 
         n -= 1;
@@ -145,7 +107,7 @@ class Stack<T>
                 node = node.Previous;
             }
 
-            T value = node.Next.Value;
+            T value = node.Value;
 
             stack.Remove(value);
 
