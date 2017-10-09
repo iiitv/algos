@@ -36,7 +36,6 @@ class MainClass
             test.Pop();
             Console.WriteLine(test.ToString());
         }
-        
     }
 }
 
@@ -44,23 +43,19 @@ class Stack<T>
 {
     private LinkedList<T> stack;
 
-    // Constructs en empty stack
+    // Constructs an empty stack
     public Stack()
     {
         stack = new LinkedList<T>();
     }
 
-    /**
-    * Adds element at the top of the stack
-    */
+    // Adds element at the top of the stack
     public void Push(T data)
     {
         stack.AddLast(data);
     }
 
-    /**
-    * Removes the element at the top of the stack
-    */
+    // Removes the element at the top of the stack
     public T Pop()
     {
         if (IsEmpty())
@@ -73,18 +68,14 @@ class Stack<T>
         return element;
     }
 
-    /**
-    * Returns true if the stack is empty
-    */
+    // Returns true if the stack is empty
     public bool IsEmpty()
     {
         return (!stack.Any());
     }
 
 
-    /**
-    * Returns the last element of the stack
-    */
+    // Returns the last element of the stack
     public T Peek()
     {
         if (IsEmpty())
@@ -156,4 +147,3 @@ class Stack<T>
         return s;
     }
 }
-
