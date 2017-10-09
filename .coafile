@@ -43,3 +43,8 @@ bears = HappinessLintBear
 [csharp]
 files = **/*.cs
 bears = CSharpLintBear
+
+# Ruby
+[ruby]
+files = **/*.rb
+bears = RuboCopBear,RubySmellBear,RubySyntaxBear
