@@ -25,6 +25,10 @@ class MainClass
 
         Console.WriteLine(test.ToString());
 
+        test.Rotate(5, false);
+
+        Console.WriteLine(test.ToString());
+
         Console.WriteLine(test.Peek() + "\n");
 
         while (!(test.IsEmpty()))
@@ -144,7 +148,7 @@ class Stack<T>
 
         foreach(T t in stack)
         {
-            s += t + " | ";
+            s += t.ToString() + " | ";
         }
 
         s += "\n";
