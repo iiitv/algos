@@ -18,11 +18,6 @@ public class Queuet<T> implements Queue<T>  {
     }
 
     /**
-     * Constructor
-     */
-    public QueueLinkedList(){}
-
-    /**
      * Inserts the specified element into this queue if it is possible to do so immediately without violating capacity
      * restrictions, returning true upon success and throwing an IllegalStateException if no space is currently available.
      * @param element the element to add
