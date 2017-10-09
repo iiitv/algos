@@ -19,14 +19,20 @@ class MainClass
         test.Push("321");
         test.Push(":thinking:");
 
-        test.Rotate(3, false);
+        Console.WriteLine(test.ToString());
 
-        test.Peek();
+        test.Rotate(4, true);
+
+        Console.WriteLine(test.ToString());
+
+        Console.WriteLine(test.Peek() + "\n");
 
         while (!(test.IsEmpty()))
         {
             test.Pop();
+            Console.WriteLine(test.ToString());
         }
+        
     }
 }
 
@@ -34,9 +40,7 @@ class Stack<T>
 {
     private LinkedList<T> stack;
 
-    /**
-    * Constructs an empty stack
-    */
+    // Constructs en empty stack
     public Stack()
     {
         stack = new LinkedList<T>();
@@ -53,12 +57,16 @@ class Stack<T>
     /**
     * Removes the element at the top of the stack
     */
-    public void Pop()
+    public T Pop()
     {
         if (IsEmpty())
-            return;
+            return default(T);
+
+        T element = stack.Last();
 
         stack.RemoveLast();
+
+        return element;
     }
 
     /**
@@ -71,7 +79,7 @@ class Stack<T>
 
 
     /**
-    * Returms the last element of the stack
+    * Returns the last element of the stack
     */
     public T Peek()
     {
@@ -128,6 +136,20 @@ class Stack<T>
 
             stack.AddBefore(node.Next, last);
         }
+    }
+
+    public override string ToString()
+    {
+        string s = "Stack: ";
+
+        foreach(T t in stack)
+        {
+            s += t + " | ";
+        }
+
+        s += "\n";
+
+        return s;
     }
 }
 
