@@ -3,7 +3,7 @@ import java.util.NoSuchElementException;
 /**
  * Implements https://docs.oracle.com/javase/8/docs/api/java/util/Queue.html
  */
-public class Queuet<T> implements Queue<T>  {
+public class Queuet<T> {
     private int total;
     // Linked Lists used to store the data
     private Node first, last;
