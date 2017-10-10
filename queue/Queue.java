@@ -112,4 +112,19 @@ public class Queue<T> {
         }
         return sb.toString();
     }
+
+    public static void main(String[] args) {
+        Queue<Integer> queue = new Queue<>();
+        for(int i=1; i<=10; i++) // Creates a dummy queue which contains integers from 1-10
+        {
+            queue.add(i);
+        }
+
+        System.out.println("QUEUE :");
+
+        while (queue.peek != null)
+        {
+            System.out.println(queue.poll());
+        }
+    }
 }
