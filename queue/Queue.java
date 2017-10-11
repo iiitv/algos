@@ -120,9 +120,9 @@ public class Queue<T> {
             queue.add(i);
         }
 
-        System.out.println("QUEUE :");
+        System.out.println("Queue :");
 
-        while (queue.peek != null)
+        while (queue.peek() != null)
         {
             System.out.println(queue.poll());
         }
