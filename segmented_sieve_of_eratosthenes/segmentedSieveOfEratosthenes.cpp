@@ -4,8 +4,8 @@
 #include <vector>
 using namespace std;
 
-vector<int> Prime; //contains prime numbers uptop segMax
-void segmentedSieve(){
+vector<int> segmentedSieve(){
+	vector<int> Prime; //contains prime numbers uptop segMax
 	#define segMax 1000000 //till point you want to find Primes. Preferebly pow(10,x)
 	#define rootSegMax 1000 //root of segMax
 	bool prime[rootSegMax];
@@ -44,9 +44,10 @@ void segmentedSieve(){
 		low += rootSegMax;
 		high += rootSegMax;
 	}
+	return Prime;
 }
 int main(){
-	segmentedSieve(); //run it to find primes..
+	vector<int> Prime=segmentedSieve(); //run it to find primes..
 	//Now Prime contains all the prime numbers upto segMax defined in function
 	for(int i = 0; i < Prime.size(); i++){
 		cout << Prime[i] <<" ";
