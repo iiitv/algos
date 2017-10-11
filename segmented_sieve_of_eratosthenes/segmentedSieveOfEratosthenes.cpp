@@ -4,10 +4,10 @@
 #include <vector>
 using namespace std;
 
-vector<int> segmentedSieve(){
+vector<int> segmentedSieve(int segMax){
 	vector<int> Prime; //contains prime numbers uptop segMax
-	#define segMax 1000000 //till point you want to find Primes. Preferebly pow(10,x)
-	#define rootSegMax 1000 //root of segMax
+	//segMax is point till you want to find Primes. ALWAYS pow(10,x)
+	int rootSegMax = sqrt(segMax); //root of segMax
 	bool prime[rootSegMax];
 	memset(prime, true, sizeof(prime));
 	for(int i = 2; i*i <= rootSegMax; i++){
@@ -47,7 +47,7 @@ vector<int> segmentedSieve(){
 	return Prime;
 }
 int main(){
-	vector<int> Prime=segmentedSieve(); //run it to find primes..
+	vector<int> Prime=segmentedSieve(1000000); //run it to find primes..
 	//Now Prime contains all the prime numbers upto segMax defined in function
 	for(int i = 0; i < Prime.size(); i++){
 		cout << Prime[i] <<" ";
