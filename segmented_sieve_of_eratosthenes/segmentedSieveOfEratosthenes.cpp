@@ -51,7 +51,7 @@ int main() {
 	vector<int> Prime=segmentedSieve(1000000); //run it to find primes..
 	//Now Prime contains all the prime numbers upto segMax defined in function
 	for(int i = 0; i < Prime.size(); i++){
-		cout << Prime[i] <<" ";
+		cout << Prime[i] << " ";
 	}
 	//^^ Prints all the prime numbers
 	return 0;
