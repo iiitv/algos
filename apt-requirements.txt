@@ -20,4 +20,4 @@ python-tk
 python3-tk
 
 # ruby
-ruby2.3
+ruby-full
