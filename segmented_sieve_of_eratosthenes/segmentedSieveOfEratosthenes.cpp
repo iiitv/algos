@@ -46,6 +46,7 @@ vector<int> segmentedSieve(int segMax){
 	}
 	return Prime;
 }
+
 int main(){
 	vector<int> Prime=segmentedSieve(1000000); //run it to find primes..
 	//Now Prime contains all the prime numbers upto segMax defined in function
