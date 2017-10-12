@@ -40,6 +40,8 @@ public class RadixSort {
         radixSort(test);
 
         System.out.println("Sorted array:");
+        
+        // sort through array
 
         for(int i: test) {
             System.out.println(i + " ");
