@@ -1,0 +1,66 @@
+#include <cstdio>
+#include <cstring>
+#include <cctype>
+#include <cmath>
+#include <iostream>
+#include <sstream>
+#include <iomanip>
+#include <functional>
+#include <algorithm>
+#include <climits>
+#include <string>
+#include <vector>
+#include <utility>
+#include <map>
+#include <bitset>
+#include <stack>
+#include <queue>
+#include <set>
+#include <time.h>
+#define reset(a) memset(a,0,sizeof(a))
+#define upf(i,m,n) for (int i=m;i<=n;i++)
+#define tc() int tc; cin >> tc; for(int _tc=0;_tc<tc;_tc++)
+using namespace std;
+typedef long long int ll;
+typedef unsigned long long int ull;
+typedef long double lf;
+typedef pair<int,int>pii;
+typedef pair<ll,ll>pll;
+typedef vector<int> vi;
+typedef vector<ll> vll;
+
+using namespace std;
+const int si=1e5;
+int n,a[si];
+int LIS_opt(){
+    int DP[si];
+    reset(DP);
+    DP[0]=-1e8;
+    int maxi=0;
+    long int tmp;
+    upf(i,1,n){
+        tmp=lower_bound(DP,DP+maxi+1,a[i])-DP-1;
+        if (tmp==maxi){
+            maxi++;
+            DP[maxi]=a[i];
+        }
+        else{
+            DP[tmp+1]=a[i];
+        }
+    }
+    return maxi;
+}
+int main()
+{
+    ios_base::sync_with_stdio(0);
+//    tc(){
+        cin>>n;
+        upf(i,1,n){
+            cin>>a[i];
+        }
+        cout<<LIS_opt()<<endl;
+//    }
+}
+
+
+
