@@ -18,8 +18,7 @@ public class RadixSort {
                 m = array[i];
         }
 
-
-        while (m / ex > 0) {
+            while (m / ex > 0) {
             // declare and initialize bucket
             int[] bucket = new int[10];
 
