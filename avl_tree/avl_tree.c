@@ -29,7 +29,7 @@ void adjust_height(AVLNode* avln) {
 		avln->height = 1 + avln->left->height;
 	} else {
 		avln->height = 1 + max(avln->left->height, avln->right->height);
-	}	
+	}
 }
 
 // Performs a left rotation on the given node in the given tree
@@ -175,7 +175,7 @@ void traverse_in_order(AVLNode* avln) {
 	if (avln != NULL) {
 		// traverse the left sub-tree first
 		traverse_in_order(avln->left);
-		
+
 		// print the current node's value
 		printf("%d ", avln->value);
 
