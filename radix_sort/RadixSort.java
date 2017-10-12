@@ -15,7 +15,7 @@ public class RadixSort {
         // second element and compare with m
         for (i = 1; i < n; i++) {
             if (array[i] > m)
-                m = array[i]; 
+                m = array[i];
         }
 
 
