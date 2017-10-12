@@ -5,9 +5,9 @@
 #include <stdio.h>
 
 void insertion_sort(int *arr, int arr_size) {
-	int i, key, j;
+	int i, j;
 	for (i = 1; i < arr_size; i++) {
-		key = arr[i];
+		int key = arr[i];
 		j = i - 1;
 		/* Move elements of arr[0...i-1], that are
 			greater than key, to one position ahead
