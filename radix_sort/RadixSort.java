@@ -12,7 +12,7 @@ public class RadixSort {
         int n = array.length;
         int[] b = new int[10]; // first bucket
         // loop through array from
-        // second element and do comparison
+        // second element and compare with m
         for (i = 1; i < n; i++) {
             if (array[i] > m)
                 m = array[i]; }
