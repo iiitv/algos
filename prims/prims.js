@@ -1,3 +1,18 @@
+function minKey (key, visited) {
+	let min = Number.MAX_VALUE;
+	let minIdx = -1;
+	let length = key.length;
+
+	for (let i = 0; i < length; i++) {
+		if (!visited[i] && key[i] < min) {
+			min = key[i];
+			minIdx = i;
+		}
+	}
+
+	return minIdx;
+}
+
 function generate (graph) {
 	/*
 	* Get the parent nodes in the MST
@@ -41,21 +56,6 @@ function generate (graph) {
 	return parent;
 }
 
-function minKey (key, visited) {
-	let min = Number.MAX_VALUE;
-	let minIdx = -1;
-	let length = key.length;
-
-	for (let i = 0; i < length; i++) {
-		if (!visited[i] && key[i] < min) {
-			min = key[i];
-			minIdx = i;
-		}
-	}
-
-	return minIdx;
-}
-
 function main () {
 	// given graph
 	let graph = [
@@ -70,7 +70,7 @@ function main () {
 	let parent = generate(graph);
 	let length = graph.length;
 
-    // print the MST
+	// print the MST
 	console.log('Edge : Weight');
 	for (let i = 1; i < length; i++) {
 		console.log(parent[i] + ' - ' + i + ' : ' + graph[i][parent[i]]);
