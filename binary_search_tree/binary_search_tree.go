@@ -65,10 +65,14 @@ func (n *node) Delete(key int, node *node) {
 	switch {
 	case key < n.Key:
 		// if key is lower call delete on left node
-		n.Left.Delete(key, n)
+		if n.Left != nil {
+			n.Left.Delete(key, n)
+		}
 	case key > n.Key:
 		// if key is higher call delete on right node
-		n.Right.Delete(key, n)
+		if n.Right != nil {
+			n.Right.Delete(key, n)
+		}
 	default:
 		// if keys are equal
 		if n.Left == nil && n.Right == nil {
@@ -194,6 +198,6 @@ func main() {
 	if ok {
 		fmt.Println("This shouldn't happen, since key should have been deleted")
 	} else {
-		fmt.Printf("Key %d was not found :)", searchKey)
+		fmt.Printf("Key %d was not found :)\n", searchKey)
 	}
 }
