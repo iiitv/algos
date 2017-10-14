@@ -9,18 +9,18 @@ package main
 import "fmt"
 
 func main() {
-	n := 8 // size of chess board (n x n)
+	boardSize := 8 // size of chess board (8 x 8)
 
 	// make board
-	b := make([][]int, n)
-	for i := range b {
-		b[i] = make([]int, n)
+	board := make([][]int, boardSize)
+	for i := range board {
+		board[i] = make([]int, boardSize)
 	}
 
-	if placeQueen(&b, n) {
-		for i := 0; i < n; i++ {
-			for j := 0; j < n; j++ {
-				fmt.Printf("%d ", b[i][j])
+	if PlaceQueen(&board, boardSize) {
+		for i := 0; i < boardSize; i++ {
+			for j := 0; j < boardSize; j++ {
+				fmt.Printf("%d ", board[i][j])
 			}
 			fmt.Print("\n")
 		}
@@ -29,17 +29,17 @@ func main() {
 	}
 }
 
-func isAttacked(b *[][]int, x, y, n int) bool {
-	for i := 0; i < n; i++ {
-		if (*b)[x][i] == 1 {
+func isAttacked(board *[][]int, x, y, boardSize int) bool {
+	for i := 0; i < boardSize; i++ {
+		if (*board)[x][i] == 1 {
 			return true
 		}
-		if (*b)[i][y] == 1 {
+		if (*board)[i][y] == 1 {
 			return true
 		}
-		for j := 0; j < n; j++ {
+		for j := 0; j < boardSize; j++ {
 			if (i-j == x-y) || (i+j == x+y) {
-				if (*b)[i][j] == 1 {
+				if (*board)[i][j] == 1 {
 					return true
 				}
 			}
@@ -48,18 +48,19 @@ func isAttacked(b *[][]int, x, y, n int) bool {
 	return false
 }
 
-func placeQueen(b *[][]int, n int) bool {
-	if n == 0 {
+// PlaceQueen place queens on the board and will return true if it is possible to place all the queens else false
+func PlaceQueen(board *[][]int, boardSize int) bool {
+	if boardSize == 0 {
 		return true
 	}
-	for i := 0; i < len(*b); i++ {
-		for j := 0; j < len(*b); j++ {
-			if !(isAttacked(b, i, j, len(*b))) {
-				(*b)[i][j] = 1
-				if placeQueen(b, n-1) {
+	for i := 0; i < len(*board); i++ {
+		for j := 0; j < len(*board); j++ {
+			if !(isAttacked(board, i, j, len(*board))) {
+				(*board)[i][j] = 1
+				if PlaceQueen(board, boardSize-1) {
 					return true
 				}
-				(*b)[i][j] = 0
+				(*board)[i][j] = 0
 			}
 		}
 	}
