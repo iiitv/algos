@@ -181,18 +181,19 @@ func main() {
 	})
 
 	// Searching for a key. Should return value and whether key was found or not
-	value, ok := bst.Search(12)
+	searchKey := 12
+	value, ok := bst.Search(searchKey)
 	if ok {
-		fmt.Printf("Key 12 was found! It's value is %d\n", value)
+		fmt.Printf("Key %d was found! It's value is %d\n", searchKey, value)
 	}
 
-	// Delet a key
-	bst.Delete(12)
+	// Delete a key
+	bst.Delete(searchKey)
 	// Search for same key again
-	_, ok = bst.Search(12)
+	_, ok = bst.Search(searchKey)
 	if ok {
 		fmt.Println("This shouldn't happen, since key should have been deleted")
 	} else {
-		fmt.Println("12 was not found :)")
+		fmt.Printf("Key %d was not found :)", searchKey)
 	}
 }
