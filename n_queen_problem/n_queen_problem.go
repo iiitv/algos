@@ -9,9 +9,7 @@ package main
 import "fmt"
 
 func main() {
-	var n int
-	print("Enter the value of 'N' ")
-	fmt.Scanf("%d", &n)
+	n := 8 // size of chess board (n x n)
 
 	// make board
 	b := make([][]int, n)
