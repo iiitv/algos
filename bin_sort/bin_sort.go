@@ -6,6 +6,7 @@ import (
 	"sort"
 )
 
+// Bucket is used to store elements in BucketSort
 type Bucket []float32
 
 // Methods required to allow sorting bucket's content
