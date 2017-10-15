@@ -6,7 +6,12 @@ import (
 	"sort"
 )
 
-type bucket []float32
+type Bucket []float32
+
+// Methods required to allow sorting bucket's content
+func (b Bucket) Len() int           { return len(b) }
+func (b Bucket) Swap(i, j int)      { b[i], b[j] = b[j], b[i] }
+func (b Bucket) Less(i, j int) bool { return b[i] < b[j] }
 
 // BucketSort sorts provided slice of floats using Bucket Sort algorithm
 // Time Complexity: O(n)-> Avg case and O(n^2)-> Worst Case
@@ -15,7 +20,7 @@ func BucketSort(arr []float32) []float32 {
 	n := len(arr)
 
 	// Create n empty buckets, each can hold up to n elements
-	buckets := make([]bucket, n)
+	buckets := make([]Bucket, n)
 	for i := 0; i < n; i++ {
 		// Set length to 0, but allocate memory for n elements
 		buckets[i] = make([]float32, 0, n)
@@ -29,8 +34,7 @@ func BucketSort(arr []float32) []float32 {
 
 	// Sort elements in each bucket
 	for i := 0; i < n; i++ {
-		b := buckets[i]
-		sort.Slice(b, func(j, k int) bool { return b[j] < b[k] })
+		sort.Sort(buckets[i])
 	}
 
 	// Put sorted elements into the resulting array
