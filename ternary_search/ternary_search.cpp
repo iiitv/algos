@@ -13,7 +13,7 @@ using namespace std;
  */  
 int ternary_search (int ar[],int n, int left, int right, int x){
 
-    if(left < 0 || right > n-1 || left > right){
+    if(left < 0 || right > n - 1 || left > right){
         return -1;
     }
     
