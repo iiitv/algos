@@ -29,15 +29,15 @@ int ternary_search (int ar[],int n, int left, int right, int x){
 
 
     if(x < ar[left]){
-        return ternary_search(ar,n,left-1,right,x);
+        return ternary_search(ar,n,left - 1,right,x);
     }
 
     if (x > ar[left] && x < ar[right]){
-        return ternary_search(ar,n,left+1,right-1,x);
+        return ternary_search(ar,n,left + 1,right - 1,x);
     }
 
     if(x > ar[right]){
-        return ternary_search(ar,n,left,right+1,x);
+        return ternary_search(ar,n,left,right + 1,x);
     }
 }
 
@@ -47,18 +47,18 @@ int main(){
     int ar[space];
     short x;
     for(int i = 1; i <= space; i++){
-        ar[i-1] = i;
+        ar[i - 1] = i;
     }
     cout << "Enter number for research:\n";
     cin >> x;
 
-    int left = space/3;
-    int right = (space/3)*2;
+    int left = space / 3;
+    int right = (space / 3) * 2;
 
-    if(ternary_search(ar,space,left-1,right-1,x) == -1){
+    if(ternary_search(ar,space,left - 1,right - 1,x) == -1){
         cout << "Number does not exist in array.\n";
     }else{
-        cout << "The index is:"<<ternary_search(ar,space,left-1,right-1,x) << "\n";
+        cout << "The index is:" << ternary_search(ar,space,left - 1,right - 1,x) << "\n";
     }
     return 0;
 }
