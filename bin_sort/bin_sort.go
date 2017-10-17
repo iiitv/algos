@@ -6,13 +6,22 @@ import (
 	"sort"
 )
 
-// Bucket is used to store elements in BucketSort
+// Bucket is a type alias of []float32. It is used in BucketSort() to represent
+// individual buckets.
 type Bucket []float32
 
-// Methods required to allow sorting bucket's content
-func (b Bucket) Len() int           { return len(b) }
-func (b Bucket) Swap(i, j int)      { b[i], b[j] = b[j], b[i] }
-func (b Bucket) Less(i, j int) bool { return b[i] < b[j] }
+// Methods required for sort.Sort()
+func (b Bucket) Len() int {
+	return len(b)
+}
+
+func (b Bucket) Swap(i, j int) {
+	b[i], b[j] = b[j], b[i]
+}
+
+func (b Bucket) Less(i, j int) bool {
+	return b[i] < b[j]
+}
 
 // BucketSort sorts provided slice of floats using Bucket Sort algorithm
 // Time Complexity: O(n)-> Avg case and O(n^2)-> Worst Case
