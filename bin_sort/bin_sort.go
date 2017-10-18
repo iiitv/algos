@@ -54,7 +54,6 @@ func BucketSort(arr []float32) []float32 {
 			sorted = append(sorted, buckets[i][j])
 		}
 	}
-
 	return sorted
 }
 
@@ -63,7 +62,6 @@ func makeRandomNumbers(n int) []float32 {
 	for i := range arr {
 		arr[i] = rand.Float32()
 	}
-
 	return arr
 }
 
