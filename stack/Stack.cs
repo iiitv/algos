@@ -11,6 +11,7 @@ class MainClass
     {
         Stack<string> test = new Stack<string>();
 
+        Console.WriteLine("Pushing to the stack.")
         test.Push("123");
         test.Push("test");
         test.Push("rawr");
@@ -19,22 +20,18 @@ class MainClass
         test.Push("321");
         test.Push(":thinking:");
 
-        Console.WriteLine(test.ToString());
-
-        test.Rotate(4, true);
-
-        Console.WriteLine(test.ToString());
-
-        test.Rotate(5, false);
-
-        Console.WriteLine(test.ToString());
-
-        Console.WriteLine(test.Peek() + "\n");
-
-        while (!(test.IsEmpty()))
+        Console.WriteLine("Popping off the stack.")
+        try
         {
-            test.Pop();
-            Console.WriteLine(test.ToString());
+            while (true)
+            {
+                string ele = test.Pop();
+                Console.WriteLine("The stack had '{0}' in it", ele);
+            }
+        }
+        catch (InvalidOperationException ex)
+        {
+            Console.WriteLine("Stack is empty!");
         }
     }
 }
@@ -58,92 +55,6 @@ class Stack<T>
     // Removes the element at the top of the stack
     public T Pop()
     {
-        if (IsEmpty())
-            return default(T);
-
-        T element = stack.Last();
-
-        stack.RemoveLast();
-
-        return element;
-    }
-
-    // Returns true if the stack is empty
-    public bool IsEmpty()
-    {
-        return (!stack.Any());
-    }
-
-
-    // Returns the last element of the stack
-    public T Peek()
-    {
-        if (IsEmpty())
-            return default(T);
-
-        return stack.Last();
-    }
-
-    /**
-    * gets the n top elements and rotates them
-    *
-    * if left == false then it will move the last element to behind the nth element(from the top)
-    *
-    * if left == true it will move the nth element(from the top) to the top
-    */
-    public void Rotate(int n, bool left)
-    {
-        if (n <= 1)
-            return;
-
-        if (stack.Count < 2)
-            return;
-
-        n -= 1;
-
-        if (left)
-        {
-            LinkedListNode<T> node = stack.Last;
-
-            for (int i = 1; i <= n; ++i)
-            {
-                node = node.Previous;
-            }
-
-            T value = node.Value;
-
-            stack.Remove(value);
-
-            Push(value);
-        }
-        else
-        {
-            T last = stack.Last();
-
-            Pop();
-
-            LinkedListNode<T> node = stack.Last;
-
-            for (int i = 0; i < n; i++)
-            {
-                node = node.Previous;
-            }
-
-            stack.AddBefore(node.Next, last);
-        }
-    }
-
-    public override string ToString()
-    {
-        string s = "Stack: ";
-
-        foreach(T t in stack)
-        {
-            s += t.ToString() + " | ";
-        }
-
-        s += "\n";
-
-        return s;
+        return stack.RemoveLast();
     }
 }
