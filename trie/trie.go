@@ -4,6 +4,11 @@ import (
 	"fmt"
 )
 
+// AlphabetSize is the size of the alphabet used.
+// All nodes will have an array of pointers to other nodes,
+// and this array will have the size of the alphabet.
+// Setting to a smaller size (in allowed alphabet) will
+// lower the space needed for the trie
 const AlphabetSize int = 256 // bytesize
 
 // inner node of trie
