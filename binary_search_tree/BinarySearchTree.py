@@ -18,14 +18,14 @@ class bst:#bst class for implement method
 
     def search(node,data):#seraching data
         if node is None:#if data not present
-            return None     
+            return None
         if data < node.data:#go to the left if data is lesser from root
             node = bst.search(node.left,data)
         elif data > node.data:#go to the right if data is greater from root
             node = bst.search(node.right,data)
-        elif data == node.data:# data found 
-            return node  
-        return node  
+        elif data == node.data:# data found
+            return node
+        return node
 
     def min_right(node):#geeting the minimum
         if node.left is None:#found minimum
@@ -36,7 +36,7 @@ class bst:#bst class for implement method
 
     def delete(root,data):#delete a node
         if root is None:
-            return root   
+            return root
         if data < root.data:#go to the left
             root.left = bst.delete(root.left,data)
         elif data > root.data:#goto right
@@ -52,27 +52,28 @@ class bst:#bst class for implement method
                 return temp
             #if left or right child is Not None
             temp = bst.min_right(root.right)#find the the minimum node in right child
-            root.data = temp.data#delete the data 
+            root.data = temp.data#delete the data
             root.right = bst.delete(root.right,temp.data)#recursive delete the minimum node in right child
-        return root    
+        return root
 
     def inOrder(root):#print inorder
         if root is not None:
             bst.inOrder(root.left)
             print(root.data)
             bst.inOrder(root.right)
-   
+
     def preOrder(root):#print preorder
         if root is not None:
             print(root.data)
             bst.preOrder(root.left)
             bst.preOrder(root.right)
-           
-    def postOrder(root):#print postorder
-        if root is not None:       
+
+   def postOrder(root):#print postorder
+        if root is not None:
             bst.preOrder(root.left)
             bst.preOrder(root.right)
             print(root.data)
+
 def main():#check the method
     root = None
     root = bst.insert(root,5)
@@ -95,6 +96,6 @@ def main():#check the method
     print("***** delete Node ******")
     root = bst.delete(root,11)
     bst.inOrder(root)
-    
+
 if __name__ == '__main__':
     main()
