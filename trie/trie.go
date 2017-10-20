@@ -9,7 +9,7 @@ import (
 // and this array will have the size of the alphabet.
 // Setting to a smaller size (in allowed alphabet) will
 // lower the space needed for the trie
-const AlphabetSize int = 256 // bytesize
+const AlphabetSize int = 256
 
 // inner node of trie
 type node struct {
