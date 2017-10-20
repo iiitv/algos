@@ -12,27 +12,21 @@ class MainClass
         Stack<string> test = new Stack<string>();
 
         Console.WriteLine("Pushing to the stack.");
-        test.Push("123");
-        test.Push("test");
-        test.Push("rawr");
-        test.Push("Pancake");
-        test.Push("Yummy");
-        test.Push("321");
-        test.Push(":thinking:");
+        int max_size = 10;
+        for (int i = 1; i <= max_size; i++)
+        {
+            string ele = String.Format("{0} duck", i);
+            Console.WriteLine("Pushing {0} to the stack", ele);
+            test.Push(ele);
+        }
 
         Console.WriteLine("Popping off the stack.");
-        try
+        for (int i = 1; i <= max_size; i++)
         {
-            while (true)
-            {
-                string ele = test.Pop();
-                Console.WriteLine("The stack had '{0}' in it", ele);
-            }
+            string ele = test.Pop();
+            Console.WriteLine("The stack had '{0}' in it", ele);
         }
-        catch (InvalidOperationException ex)
-        {
-            Console.WriteLine("Stack is empty!");
-        }
+        Console.WriteLine("Stack is empty!");
     }
 }
 
@@ -55,7 +49,7 @@ class Stack<T>
     // Removes the element at the top of the stack
     public T Pop()
     {
-        T t =  stack.Last();
+        T t = stack.Last();
         stack.RemoveLast();
         return t;
     }
