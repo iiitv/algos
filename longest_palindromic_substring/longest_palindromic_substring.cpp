@@ -5,56 +5,52 @@
 #include <vector>
 
 using namespace std;
+/*
+	Returns the length of palindromic substring
+
+	@param test: input string whose substrings are to be checked
+	@param left: Left end of result palindromic substring
+	@param right: Right end of result palindromic substring
+	@return: Length of palindromic substring
+*/
+
+int expand_around_center(string test, int left, int right) {
+	int n = test.length();
+
+	while (left >= 0 && right < n && test[left] == test[right]) {
+		left -= 1;
+		right += 1;
+	}
+	return right - left - 1;
+}
 
 /*
 	Returns the longest substring which is a pallindrome
 
-	@param test input string whose substrings are to be checked
+	@param test: input string whose substrings are to be checked
 	@return longest substring of input string which is a pallindrome
 
 	Time complexity: O(n^2)
-	Space complexity: O(n^2)
+	Space complexity: O(1)
 	n is size of input string
 */
 
 string longest_palindromic_substring(string test) {
+	int start = 0, end = 0;
 	int n = test.length();
-	vector< vector<bool> > substrings(n, vector<bool>(n, false));
-	int len_palindrome = 1;
-	int palindrome_begin = 0;
 
-	// Substrings of length 1
 	for (int i = 0; i < n; ++i) {
-		substrings[i][i] = true;
-	}
-
-	// Substrings of length 2
-	for (int i = 0; i < n - 1; ++i) {
-		if (test[i] == test[i + 1]) {
-			substrings[i][i + 1] = true;
-			palindrome_begin = i;
-			len_palindrome = 2;
+		int length = max(expand_around_center(test, i, i), expand_around_center(test, i, i + 1));
+		if (length > end - start) {
+			start = i - (int)((length - 1) / 2);
+			end = i + (int)(length / 2);
 		}
 	}
-
-	// Substrings of length > 3
-	for (int i = 3; i <= n; ++i) {
-		for (int j = 0; j < n - i + 1; ++j) {
-			int tmp = i + j - 1;
-			if (substrings[j + 1][tmp - 1] && test[j] == test[tmp]) {
-				substrings[j][tmp] = true;
-				if (i > len_palindrome) {
-					len_palindrome = i;
-					palindrome_begin = j;
-				}
-			}
-		}
-	}
-	return test.substr(palindrome_begin, len_palindrome);
+	return test.substr(start, end - start + 1);
 }
 
 int main() {
-	string test = "geeksforgeeks";
+	string test = "iiit";
 	cout << "Longest palindromic substring is: " << longest_palindromic_substring(test) << endl;
 	return 0;
 }
