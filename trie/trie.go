@@ -21,42 +21,42 @@ type node struct {
 
 // get traverses the trie byte by byte. returns a pointer
 // to the final node (nil if key does not exist in trie)
-func get(node *node, key []byte, d int) *node {
-	if node == nil {
+func get(currentNode *node, key []byte, keyIndex int) *node {
+	if currentNode == nil {
 		return nil
 	}
-	if d == len(key) {
+	if keyIndex == len(key) {
 		// we've looked at each byte of the key
 		// and must be at final node. return it
-		return node
+		return currentNode
 	}
 	// we still got bytes left in the key.
 	// pick the next byte from the key
-	c := key[d]
+	c := key[keyIndex]
 	// and get the next node at position c
-	// also increment d.
-	return get(node.next[c], key, d+1)
+	// also increment keyIndex.
+	return get(currentNode.next[c], key, keyIndex+1)
 }
 
 // put returns a pointer to a node (representing a subtrie)
-func put(nnode *node, key []byte, value string, d int) *node {
-	if nnode == nil {
+func put(currentNode *node, key []byte, value string, keyIndex int) *node {
+	if currentNode == nil {
 		// if given node is nil, create a new node
-		nnode = &node{}
+		currentNode = &node{}
 	}
-	if d == len(key) {
+	if keyIndex == len(key) {
 		// if we're at the end of the key bytes, set
 		// the current node's value to the given value
 		// and return it.
-		nnode.value = value
-		return nnode
+		currentNode.value = value
+		return currentNode
 	}
 	// we still got bytes left in the key.
 	// pick the next byte from the key
-	c := key[d]
+	c := key[keyIndex]
 	// Set the next node at position c
-	nnode.next[c] = put(nnode.next[c], key, value, d+1)
-	return nnode
+	currentNode.next[c] = put(currentNode.next[c], key, value, keyIndex+1)
+	return currentNode
 }
 
 // Trie is a wrapper around the the node struct
