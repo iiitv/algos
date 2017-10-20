@@ -11,7 +11,7 @@ class MainClass
     {
         Stack<string> test = new Stack<string>();
 
-        Console.WriteLine("Pushing to the stack.")
+        Console.WriteLine("Pushing to the stack.");
         test.Push("123");
         test.Push("test");
         test.Push("rawr");
@@ -20,7 +20,7 @@ class MainClass
         test.Push("321");
         test.Push(":thinking:");
 
-        Console.WriteLine("Popping off the stack.")
+        Console.WriteLine("Popping off the stack.");
         try
         {
             while (true)
@@ -55,6 +55,8 @@ class Stack<T>
     // Removes the element at the top of the stack
     public T Pop()
     {
-        return stack.RemoveLast();
+        T t =  stack.Last();
+        stack.RemoveLast();
+        return t;
     }
 }
