@@ -68,7 +68,7 @@ class bst:#bst class for implement method
             bst.preOrder(root.left)
             bst.preOrder(root.right)
 
-   def postOrder(root):#print postorder
+    def postOrder(root):#print postorder
         if root is not None:
             bst.preOrder(root.left)
             bst.preOrder(root.right)
