@@ -11,6 +11,7 @@ def breadthFirstSearch(graph, first_node):
                     next_nodes.append(child)
     return visited
 
+
 def main():
     graph = {'A': ['B', 'C', 'E'],
              'B': ['D', 'F'],
@@ -22,6 +23,7 @@ def main():
     result = breadthFirstSearch(graph, 'A')
     for node in result:
         print node
+
 
 if __name__ == '__main__':
     main()
