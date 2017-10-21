@@ -22,7 +22,7 @@ def main():
              'G': []}
     result = breadthFirstSearch(graph, 'A')
     for node in result:
-        print node
+        print(node)
 
 
 if __name__ == '__main__':
