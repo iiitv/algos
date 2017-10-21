@@ -164,7 +164,7 @@ using System;
 
 public class QuickSort
 {  
-    public static void QuickSort(int[] a)
+    public static void DoQuickSort(int[] a)
     {
         /*
             Your implementation here...
@@ -174,7 +174,7 @@ public class QuickSort
     public static void Main()
     {
         int[] arr = new int[] {2, 3, 0, 4};
-        QuickSort(arr);
+        DoQuickSort(arr);
         foreach(int element in arr)
         {
             Console.Write(element + " ");
