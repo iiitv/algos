@@ -1,12 +1,17 @@
+/**
+ * This Java program implements the Radix sort algorithm
+ * It's a non-comparative based sorting algorithm, hence its worse case time
+ * complexity is O(kn), and space is O(k + n) where k is the bucket size
+ */
 
 public class RadixSort {
 
     private static void radixSort(int[] array) {
-        int i;
-        int m = array[0];
-        int ex = 1;
-        int n = array.length;
-        int[] b = new int[10]; // initial bucket
+        private int i;
+        private int m = array[0];
+        private int ex = 1;
+        private int n = array.length;
+        private int[] b = new int[10]; // initial bucket
 
         // loop through the array
         // find the max element
@@ -17,7 +22,7 @@ public class RadixSort {
 
         while(m / ex > 0) {
 
-            int[] bucket = new int[10];
+            private int[] bucket = new int[10];
 
             for(i = 0; i < n; i++)
                 bucket[(array[i] / ex) % 10]++;
