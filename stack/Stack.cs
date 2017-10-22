@@ -69,12 +69,12 @@ class Stack<T>
     }
 
     /*
-     * Gets the top n elements and rotates them
-     *
-     * If left == false then it will move the last element to behind the nth element (from the top)
-     *
-     * If left == true it will move the nth element(from the top) to the top
-     */
+    * Gets the top n elements and rotates them
+    *
+    * If left == false then it will move the last element to behind the nth element (from the top)
+    *
+    * If left == true it will move the nth element(from the top) to the top
+    */
     public void Rotate(int n, bool left)
     {
         Stack<T> tmp = new Stack<T>();
