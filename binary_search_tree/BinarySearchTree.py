@@ -1,10 +1,10 @@
 # Node for Binary Search Tree
 class Node:
-
     def __init__(self, data):
         self.data = data
         self.left = None
         self.right = None
+
 
 # function for find the left side right most node in binary search tree
 def find_leftside_rightmost(node):
@@ -17,15 +17,14 @@ def find_leftside_rightmost(node):
 
 
 class BST:
-
     def __init__(self):
 
-        self.root = None    # Root for Binary Search Tree
-        self.count = None   # Size of Binary Search Tree
+        self.root = None  # Root for Binary Search Tree
+        self.count = None  # Size of Binary Search Tree
 
     def insert(self, data):
 
-        new_node = Node(data)   # Create a node for the new entry
+        new_node = Node(data)  # Create a node for the new entry
 
         if self.root is None:
             self.root = new_node
@@ -48,7 +47,8 @@ class BST:
             else:
                 prev_node.right = new_node
 
-    def search(self, data):    # Print a statement according to the search result
+    # Print a statement according to the search result
+    def search(self, data):
 
         cur_node = self.root
         while cur_node is not None and data != cur_node.data:
@@ -66,9 +66,10 @@ class BST:
     # Function for deleting node using parent node
     def delete_node(self, del_node, parent_node):
 
-        isLeft = False    # True if node is in left side of the parent, else it's in right side
+        # True if node is in left side of the parent, else it's in right side
+        isLeft = False
 
-        if parent_node is None:   # For root node deleting
+        if parent_node is None:  # For root node deleting
 
             # Root hasn't children
             if del_node.left is None and del_node.right is None:
@@ -83,14 +84,14 @@ class BST:
 
             # Root has 2 children
             else:
-                left_side_rightmost, prev_node = find_leftside_rightmost(del_node)
-                self.root.data = left_side_rightmost.data
+                LHS_rightmost, prev_node = find_leftside_rightmost(del_node)
+                self.root.data = LHS_rightmost.data
                 if del_node == prev_node:
                     prev_node.left = None
                 else:
                     prev_node.right = None
 
-        else:   # For deleting a node except root
+        else:  # For deleting a node except root
 
             if del_node.data <= parent_node.data:
                 isLeft = True
@@ -99,7 +100,7 @@ class BST:
             if del_node.left is None and del_node.right is None:
                 if isLeft:
                     parent_node.left = None
-                else:       # isLeft is False
+                else:  # isLeft is False
                     parent_node.right = None
 
             # Deleting node has a child
@@ -111,8 +112,8 @@ class BST:
 
             # Deleting node has 2 children
             else:
-                left_side_rightmost, prev_node = find_leftside_rightmost(del_node)
-                del_node.data = left_side_rightmost.data
+                LHS_rightmost, prev_node = find_leftside_rightmost(del_node)
+                del_node.data = LHS_rightmost.data
                 if del_node == prev_node:
                     prev_node.left = None
                 else:
@@ -122,7 +123,7 @@ class BST:
     def delete(self, data):
 
         cur_node = self.root
-        parent = None   # Parent node to the deleting node
+        parent = None  # Parent node to the deleting node
         while cur_node is not None and data != cur_node.data:
             parent = cur_node
             if data < cur_node.data:
