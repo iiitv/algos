@@ -7,11 +7,11 @@ package com.gfred;
 public class RadixSort {
 
     private static void radixSort(int[] array) {
-        protected int i;
-        protected int m = array[0];
-        protected int ex = 1;
-        protected int n = array.length;
-        protected int[] b = new int[10]; // initial bucket
+        int i;
+        int m = array[0];
+        int ex = 1;
+        int n = array.length;
+        int[] b = new int[10]; // initial bucket
 
         // loop through the array
         // find the max element
