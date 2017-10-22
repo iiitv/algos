@@ -2,15 +2,14 @@ package main
 
 import "fmt"
 
-// ExpandAroundCenter returns length of palindromic substring
-func ExpandAroundCenter(runes []rune, left int, right int) int {
+// expandAroundCenter returns length of palindromic substring
+func expandAroundCenter(runes []rune, left int, right int) int {
 	n := len(runes)
 
 	for left >= 0 && right < n && runes[left] == runes[right] {
 		left--
 		right++
 	}
-
 	return right - left - 1
 }
 
@@ -23,8 +22,8 @@ func LongestPalindromicSubstring(str string) string {
 	runes := []rune(str)
 
 	for i := 0; i < len(runes); i++ {
-		a := ExpandAroundCenter(runes, i, i)
-		b := ExpandAroundCenter(runes, i, i+1)
+		a := expandAroundCenter(runes, i, i)
+		b := expandAroundCenter(runes, i, i+1)
 
 		length := 0
 		if a > b {
