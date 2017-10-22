@@ -28,7 +28,7 @@ public class CoinChangeProblem {
                 possibilities[j] += possibilities[j - coins[i]];
             }
         }
-        return possibilities[n];
+        return possibilities[value];
     }
 
     public static void main(String[] args) {
