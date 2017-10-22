@@ -7,7 +7,7 @@
 public class RadixSort {
 
     private static void radixSort(int[] array) {
-        int i;
+
         int m = array[0];
         int ex = 1;
         int n = array.length;
@@ -15,23 +15,23 @@ public class RadixSort {
 
         // loop through the array
         // find the max element
-        for(i = 1; i < n; i++) {
+        for(int i = 1; i < n; i++) {
             if(array[i] > m)
                 m = array[i];
         }
 
         while(m / ex > 0) {
 
-            protected int[] bucket = new int[10];
+            int[] bucket = new int[10];
 
-            for(i = 0; i < n; i++)
+            for(int i = 0; i < n; i++)
                 bucket[(array[i] / ex) % 10]++;
-            for(i = 1; i < 10; i++)
+            for(int i = 1; i < 10; i++)
                 bucket[i] += bucket[i - 1];
-            for(i = n - 1; i >= 0; i--)
+            for(int i = n - 1; i >= 0; i--)
                 b[--bucket[(array[i] / ex) % 10]] = array[i];
 
-            for(i = 0; i < n; i++)
+            for(int i = 0; i < n; i++)
                 array[i] = b[i];
             ex *= 10;
         }
