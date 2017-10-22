@@ -3,7 +3,7 @@
  * It's a non-comparative based sorting algorithm, hence its worse case time
  * complexity is O(kn), and space is O(k + n) where k is the bucket size
  */
-package com.gfred;
+
 public class RadixSort {
 
     private static void radixSort(int[] array) {
