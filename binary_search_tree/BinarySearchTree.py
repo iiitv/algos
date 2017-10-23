@@ -47,7 +47,7 @@ class Bst(object):
         return node
 
     # delete a node
-    def delete(root,data):
+    def delete(root, data):
         if root is None:
             return root
         if data < root.data:
@@ -89,6 +89,8 @@ class Bst(object):
             print(root.data)
 
 # check the method
+
+
 def main():
     root = None
     root = Bst.insert(root, 5)
