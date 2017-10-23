@@ -38,7 +38,7 @@ def search(node, data):
     # data found
     elif data == node.data:
         return node
-        return node
+    return node
 
 # find the minimum
 
