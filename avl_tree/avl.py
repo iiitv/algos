@@ -42,7 +42,7 @@ class tree:
     def search(self, root, value):
         if root.data == value:
             return root
-        elif root.left is not None and root.right not None:
+        elif root.left is not None and root.right is not None:
             self.search(root.left, value)
             self.search(root.right, value)
         elif root.left is not None:
