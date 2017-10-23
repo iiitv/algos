@@ -6,6 +6,8 @@ class Node(object):
         self.right = None
 
 # insert data in tree
+
+
 def insert(node, data):
     if node is None:
         # create a new node
@@ -21,6 +23,8 @@ def insert(node, data):
     return node
 
 # seraching data
+
+
 def search(node, data):
     # if data not present
     if node is None:
@@ -37,6 +41,8 @@ def search(node, data):
         return node
 
 # find the minimum
+
+
 def minright(node):
     if node.left is None:
         return node
@@ -45,6 +51,8 @@ def minright(node):
     return node
 
 # delete a node
+
+
 def delete(root, data):
     if root is None:
         return root
@@ -66,6 +74,8 @@ def delete(root, data):
     return root
 
 # print inorder
+
+
 def inorder(root):
     if root is not None:
         inorder(root.left)
@@ -73,6 +83,8 @@ def inorder(root):
         inorder(root.right)
 
 # print preorder
+
+
 def preorder(root):
     if root is not None:
         print(root.data)
@@ -80,6 +92,8 @@ def preorder(root):
         preorder(root.right)
 
 # print postorder
+
+
 def postorder(root):
     if root is not None:
         preorder(root.left)
