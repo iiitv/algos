@@ -19,7 +19,7 @@ class tree:
 
     def insert(self, root, key):
         if root.data < key:
-            if root.right not None:
+            if root.right is not None:
                 self.insert(root.right, key)
             else:
                 root.right = node(key, root)
@@ -27,7 +27,7 @@ class tree:
                 self.count += 1
                 self.updatebal(root.right)
         else:
-            if root.left not None:
+            if root.left is not None:
                 self.insert(root.left, key)
             else:
                 root.left = node(key, root)
@@ -42,12 +42,12 @@ class tree:
     def search(self, root, value):
         if root.data == value:
             return root
-        elif root.left not None and root.right not None:
+        elif root.left is not None and root.right not None:
             self.search(root.left, value)
             self.search(root.right, value)
-        elif root.left not None:
+        elif root.left is not None:
             self.search(root.left, value)
-        elif root.right not None:
+        elif root.right is not None:
             self.search(root.right, value)
 
     # def height(self,root): #root is a node
@@ -72,13 +72,13 @@ class tree:
     def rotateleft(self, rotroot):
         new = rotroot.right
         rotroot.right = new.left
-        if new.left not None:
+        if new.left is not None:
             new.left.parent = rotroot
         new.parent = rotroot.parent
         if rotroot.parent is None:
             self.head = new
         else:
-            if rotroot.left not None:
+            if rotroot.left is not None:
                 rotroot.parent.left = new
             else:
                 rotroot.parent.right = new
@@ -88,13 +88,13 @@ class tree:
     def rotateright(self, rotroot):
         new = rotroot.left
         rotroot.left = new.right
-        if new.right not None:
+        if new.right is not None:
             new.right.parent = rotroot
         new.parent = rotroot.parent
         if rotroot.parent is None:
             self.head = new
         else:
-            if rotroot.right not None:
+            if rotroot.right is not None:
                 rotroot.parent.right = new
             else:
                 rotroot.parent.left = new
@@ -102,7 +102,7 @@ class tree:
         rotroot.parent = new
 
     def printme(self, root):
-        if root not None:
+        if root is not None:
             print (root.data)
             self.printme(root.left)
             self.printme(root.right)
@@ -134,8 +134,8 @@ class tree:
 
     def updatebal(self, root):
         temp = root
-        while temp not None:
-            if temp not None:
+        while temp is not None:
+            if temp is not None:
                 if temp.balance() > 1 or temp.balance < -1:
                     self.rebalance(temp)
             temp = temp.parent
