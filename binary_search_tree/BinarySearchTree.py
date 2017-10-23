@@ -1,101 +1,127 @@
-class bst_node:#Node for Binary search Tree
-    def __init__(self,data):#set the Node
+class Node(object):
+    #Node for Binary search Tree and set the Node
+    def __init__(self,data):
         self.data = data
         self.left = None
         self.right = None
 
-class bst:#bst class for implement method
-    def insert(node,data):#insert data in tree
+
+class Bst(object):
+    #insert data in tree
+    def insert(node,data):
         if node is None:
-            node = bst_node(data)#create a new node
+            #create a new node
+            node = Node(data)
             return node
         else:
-            if data <= node.data:#go to the left child
-                node.left = bst.insert(node.left,data)
-            else:#got to the right child
-                node.right = bst.insert(node.right,data)
+            #go to the left child
+            if data <= node.data:
+                node.left = Bst.insert(node.left,data)
+            #got to the right child
+            else:
+                node.right = Bst.insert(node.right,data)
         return node
 
-    def search(node,data):#seraching data
-        if node is None:#if data not present
+
+    #seraching data
+    def search(node,data):
+        #if data not present
+        if node is None:
             return None
-        if data < node.data:#go to the left if data is lesser from root
-            node = bst.search(node.left,data)
-        elif data > node.data:#go to the right if data is greater from root
-            node = bst.search(node.right,data)
-        elif data == node.data:# data found
+        #go to the left if data is lesser from root
+        if data < node.data:
+            node = Bst.search(node.left,data)
+        #go to the right if data is greater from root
+        elif data > node.data:
+            node = Bst.search(node.right,data)
+        # data found
+        elif data == node.data:
             return node
         return node
 
-    def min_right(node):#geeting the minimum
-        if node.left is None:#found minimum
+
+    #find the minimum
+    def minright(node):
+        if node.left is None:
             return node
-        else:#go to the left
-            node = bst.min_right(node.left)
+        else:
+            node = Bst.min_right(node.left)
         return node
 
-    def delete(root,data):#delete a node
+
+    #delete a node
+    def delete(root,data):
         if root is None:
             return root
-        if data < root.data:#go to the left
-            root.left = bst.delete(root.left,data)
-        elif data > root.data:#goto right
-            root.right = bst.delete(root.right,data)
-        else:#data node node is found
-            if root.left is None:#left child is None
-                temp = root.right
-                root = None
-                return temp
-            elif root.right is None:#right child is None
-                temp = root.left
-                root = None
-                return temp
-            #if left or right child is Not None
-            temp = bst.min_right(root.right)#find the the minimum node in right child
-            root.data = temp.data#delete the data
-            root.right = bst.delete(root.right,temp.data)#recursive delete the minimum node in right child
+        if data < root.data:
+            root.left = Bst.delete(root.left,data)
+        elif data > root.data:
+            root.right = Bst.delete(root.right,data)
+        #data node is found
+        else:
+            if root.left is None:
+                return root.right
+            elif root.right is None:
+                return root.left
+            #if left or right child is Not None find the the minimum node in right child
+            temp = Bst.minright(root.right)
+            root.data = temp.data
+            #recursive delete the minimum node in right child
+            root.right = Bst.delete(root.right,temp.data)
         return root
 
-    def inOrder(root):#print inorder
-        if root is not None:
-            bst.inOrder(root.left)
-            print(root.data)
-            bst.inOrder(root.right)
 
-    def preOrder(root):#print preorder
+    #print inorder
+    def inorder(root):
+        if root is not None:
+            Bst.inorder(root.left)
+            print(root.data)
+            Bst.inorder(root.right)
+
+
+    #print preorder
+    def preorder(root):
         if root is not None:
             print(root.data)
-            bst.preOrder(root.left)
-            bst.preOrder(root.right)
+            Bst.preorder(root.left)
+            Bst.preorder(root.right)
 
-    def postOrder(root):#print postorder
+
+    #print postorder
+    def postorder(root):
         if root is not None:
-            bst.preOrder(root.left)
-            bst.preOrder(root.right)
+            Bst.preorder(root.left)
+            Bst.preorder(root.right)
             print(root.data)
 
-def main():#check the method
+
+#check the method
+def main():
     root = None
-    root = bst.insert(root,5)
-    root = bst.insert(root,11)
-    root = bst.insert(root,3)
-    root = bst.insert(root,1)
-    root = bst.insert(root,6)
+    root = Bst.insert(root,5)
+    root = Bst.insert(root,11)
+    root = Bst.insert(root,3)
+    root = Bst.insert(root,1)
+    root = Bst.insert(root,50)
+    root = Bst.insert(root,45)
+    root = Bst.insert(root,30)
+    root = Bst.insert(root,35)
     print("****** InOrder ******")
-    bst.inOrder(root)
+    Bst.inorder(root)
     print("****** PreOrder ******")
-    bst.preOrder(root)
+    Bst.preorder(root)
     print("****** PostOrder ******")
-    bst.postOrder(root)
+    Bst.postorder(root)
     print("***** search Node ******")
-    temo = bst.search(root,28)
+    temo = Bst.search(root,28)
     if temo is not None:
         print("node search==> ",temo.data )
     else:
         print("node is not present")
     print("***** delete Node ******")
-    root = bst.delete(root,11)
-    bst.inOrder(root)
+    root = Bst.delete(root,11)
+    Bst.inorder(root)
+
 
 if __name__ == '__main__':
     main()
