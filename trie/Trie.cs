@@ -12,7 +12,8 @@ class TrieNode
         children = new Dictionary<char, TrieNode>();
     }
 
-    public TrieNode(char c) {
+    public TrieNode(char c)
+    {
         this.c = c;
         children = new Dictionary<char, TrieNode>();
     }
