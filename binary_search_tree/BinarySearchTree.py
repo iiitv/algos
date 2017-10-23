@@ -6,7 +6,7 @@ class Node:
         self.right = None
 
 
-# function for find the left side right most node in binary search tree
+# Function for find the left side right most node in binary search tree
 def find_leftside_rightmost(node):
     left_side_rightmost = node.left
     prev_node = node
@@ -15,7 +15,7 @@ def find_leftside_rightmost(node):
         left_side_rightmost = left_side_rightmost.right
     return left_side_rightmost, prev_node
 
-
+# Binary Search Tree declaration
 class BST:
     def __init__(self):
 
@@ -25,10 +25,12 @@ class BST:
     def insert(self, data):
 
         new_node = Node(data)  # Create a node for the new entry
-
+        
+        # Insert a node to empty BST
         if self.root is None:
             self.root = new_node
 
+        # Insert a node to non-empty BST
         else:
 
             cur_node = self.root
