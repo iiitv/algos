@@ -1,5 +1,5 @@
 class Node(object):
-# Node for Binary search Tree and set the Node
+    # Node for Binary search Tree and set the Node
     def __init__(self, data):
         self.data = data
         self.left = None
@@ -46,7 +46,6 @@ class Bst(object):
             node = Bst.min_right(node.left)
         return node
 
-
     # delete a node
     def delete(root,data):
         if root is None:
@@ -68,14 +67,12 @@ class Bst(object):
             root.right = Bst.delete(root.right, temp.data)
         return root
 
-
     # print inorder
     def inorder(root):
         if root is not None:
             Bst.inorder(root.left)
             print(root.data)
             Bst.inorder(root.right)
-
 
     # print preorder
     def preorder(root):
@@ -84,14 +81,12 @@ class Bst(object):
             Bst.preorder(root.left)
             Bst.preorder(root.right)
 
-
     # print postorder
     def postorder(root):
         if root is not None:
             Bst.preorder(root.left)
             Bst.preorder(root.right)
             print(root.data)
-
 
 # check the method
 def main():
@@ -113,7 +108,7 @@ def main():
     print("***** search Node ******")
     temo = Bst.search(root, 28)
     if temo is not None:
-        print("node search==> ", temo.data )
+        print("node search==> ", temo.data)
     else:
         print("node is not present")
     print("***** delete Node ******")
