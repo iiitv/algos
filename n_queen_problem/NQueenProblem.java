@@ -15,7 +15,7 @@ import java.util.List;
  *
  * @see <a href="https://en.wikipedia.org/wiki/Eight_queens_puzzle">N Queens Problem</a>
  */
-public class NQueens implements Iterable<NQueens.Solution> {
+public class NQueenProblem implements Iterable<NQueenProblem.Solution> {
 
     private final int size;
 
@@ -24,7 +24,7 @@ public class NQueens implements Iterable<NQueens.Solution> {
      *
      * @param n
      */
-    public NQueens(final int n) {
+    public NQueenProblem(final int n) {
         this.size = n;
     }
 
@@ -79,16 +79,16 @@ public class NQueens implements Iterable<NQueens.Solution> {
         /**
          * Queue to store the intermediate boards necessary to build all solutions.
          */
-        private final Deque<List<Integer>> queue;
+        final Deque<List<Integer>> queue;
         /**
          * Next solution to be returned.
          */
-        private Solution next;
+        Solution next;
 
         /**
          * Initializes the queue and adds an empty board to it.
          */
-        private NQueenIterator() {
+        NQueenIterator() {
             this.queue = new ArrayDeque<>();
             queue.add(new ArrayList<>(size));
         }
@@ -163,7 +163,7 @@ public class NQueens implements Iterable<NQueens.Solution> {
     }
 
     public static void main(String[] args) {
-        NQueens queens = new NQueens(5);
+        NQueenProblem queens = new NQueenProblem(5);
         for (Solution s : queens) {
             System.out.println(s);
         }
