@@ -14,6 +14,7 @@ install:
   - ./.bin/install_npm.sh
   - ./.bin/install_pip2.sh
   - ./.bin/install_pip3.sh
+  - chmod +x .bin/install_gem.sh
   - ./.bin/install_gem.sh
 
 script:
