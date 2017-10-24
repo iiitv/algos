@@ -7,10 +7,7 @@ class Queue(object):
         return len(self._list)
 
     def is_empty(self):
-        if self.count() == 0:
-            return True
-        else:
-            return False
+        return self.count() == 0
 
     def enqueue(self, item):
         self._list.append(item)
@@ -36,7 +33,7 @@ def main():
     print('Number of items: {0}'.format(queue.count()))
     print('Empty queue: {0}'.format(queue.is_empty()))
 
-    while queue.count() >= -20:
+    while True:
         try:
             print('Removing element: {0}'.format(queue.dequeue()))
         except Exception as e:
