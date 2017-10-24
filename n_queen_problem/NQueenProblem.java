@@ -79,16 +79,16 @@ public class NQueenProblem implements Iterable<NQueenProblem.Solution> {
         /**
          * Queue to store the intermediate boards necessary to build all solutions.
          */
-        final Deque<List<Integer>> queue;
+        private final Deque<List<Integer>> queue;
         /**
          * Next solution to be returned.
          */
-        Solution next;
+        private Solution next;
 
         /**
          * Initializes the queue and adds an empty board to it.
          */
-        NQueenIterator() {
+        private NQueenIterator() {
             this.queue = new ArrayDeque<>();
             queue.add(new ArrayList<>(size));
         }
