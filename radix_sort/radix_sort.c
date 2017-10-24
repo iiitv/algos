@@ -31,7 +31,7 @@ void radix_sort(int * a, int n) {
 
 		for (int i = 0; i < n; i++)
 			bucket[(a[i] / exp) % 10]++;
-		for (int i = 0; i < n; i++)
+		for (int i = 1; i < n; i++)
 			bucket[i] += bucket[i - 1];
 		for (int i = n - 1; i >= 0; i--)
 			b[--bucket[(a[i] / exp) % 10]] = a[i];
