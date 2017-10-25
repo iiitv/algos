@@ -34,5 +34,5 @@ int main()
 	int end = sizeof(array)/sizeof(array[0]);
 	cout<<binarySearchIterative(array,0,end,1)<<'\n'<<binarySearchRecursive(array,0,end,1)<<'\n';
 	cout<<binarySearchIterative(array,0,end,0)<<'\n'<<binarySearchRecursive(array,0,end,0)<<'\n';
-	return 1;
+	return 0;
 }
