@@ -36,7 +36,7 @@ def main():
              'F': ['C'],
              'G': []}
 
-    print "Recusrive:"
+    print("Recusrive:")
     result = depthFirstTraversalRecursive(graph, 'A', [])
     for node in result:
         print(node)
