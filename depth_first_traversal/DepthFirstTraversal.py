@@ -41,7 +41,7 @@ def main():
     for node in result:
         print(node)
 
-    print "Iterative:"
+    print("Iterative:")
     result2 = depthFirstTraversalIterative(graph, 'A')
     for node in result2:
         print(node)
