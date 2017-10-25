@@ -6,7 +6,7 @@ def permute_my_string(str):
     """
     #Base Case
     if len(str) == 1:
-        output_string = [str]       
+        output_string = [str]
     else:
         #For every letter in String
         for i, letter in enumerate(str):
