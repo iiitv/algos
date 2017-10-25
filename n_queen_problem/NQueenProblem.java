@@ -48,7 +48,7 @@ public class NQueenProblem implements Iterable<NQueenProblem.Solution> {
         private final List<Integer> board;
         private static char QUEEN = 'Q';
         private static char EMPTY_SQUARE = '.';
-        private static String NEW_LINE = String.format("%n");
+        private static String NEW_LINE = String.format("%n"); // platform independent new line character.
 
         public Solution(final List<Integer> board) {
             this.board = board;
@@ -110,7 +110,7 @@ public class NQueenProblem implements Iterable<NQueenProblem.Solution> {
                 }
                 int column = current.size();
                 for (int row = 0; row < size; ++row) {
-                    if (valid(current, column, row)) {
+                    if (isValid(current, column, row)) {
                         List<Integer> next = new ArrayList<>(current);
                         next.add(row);
                         queue.addLast(next);
@@ -126,17 +126,17 @@ public class NQueenProblem implements Iterable<NQueenProblem.Solution> {
         }
 
         /**
-         * <p>Returns true if is valid to place a queen on the square (column, row)</p>
+         * <p>Returns true if is isValid to place a queen on the square (column, row)</p>
          *
          * <p>A queen can be placed if it doesn't attack any of the already placed queens: there can't be a queen
          * already in the same row, and the queen can't be collinear with any other.</p>
          *
-         * @param board
-         * @param column
-         * @param row
-         * @return
+         * @param board a representation of the current board as explained in {@link Solution}
+         * @param column the column we want to test to see if a queen can be placed without attacking any existing one
+         * @param row the row we want to test to see if a queen can be placed without attacking any existing one
+         * @return true if a queen can be placed on (column, row) without attacking any queens already in board
          */
-        private boolean valid(List<Integer> board, int column, int row) {
+        private boolean isValid(List<Integer> board, int column, int row) {
             for (int j = 0; j < column; ++j) {
                 if (board.get(j) == row) {
                     return false;
