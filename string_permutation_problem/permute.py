@@ -11,7 +11,7 @@ def permute_my_string(str):
         # For every letter in String
         for i, letter in enumerate(str):
             # for every permutation resulting from Step 2 and 3 described above
-            for perm in permute(str[:i] + str[i+1:]):
+            for perm in permute_my_string(str[:i] + str[i+1:]):
                 # Add it to output
                 output_string += [letter + perm]
     return output_string
