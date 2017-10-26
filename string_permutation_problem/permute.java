@@ -1,7 +1,7 @@
 public class Permute{
 
     /* A recursive solution to a classic problem to print all the permutations
-      in a string. */
+            in a string. */
 
     public static void permutation(String str) {
         permutation("", str);
@@ -16,7 +16,7 @@ public class Permute{
             }
         }
 
- public static void main(String[] args) {
+public static void main(String[] args) {
         permutation("abc");
         }
 
