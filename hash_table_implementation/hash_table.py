@@ -19,7 +19,7 @@ class HashTable(object):
         else:
             # If key already exists, replace old value
             if self.slots[hashvalue] == key:
-                self.data[hashvalue] = data  
+                self.data[hashvalue] = data
             # Otherwise, find the next available slot
             else:
                 nextslot = self.rehash(hashvalue,len(self.slots))
@@ -34,7 +34,7 @@ class HashTable(object):
 
                 # Otherwise replace old value
                 else:
-                    self.data[nextslot] = data 
+                    self.data[nextslot] = data
 
     def hashfunction(self,key,size):
         # Remainder Method
