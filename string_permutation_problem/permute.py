@@ -1,16 +1,16 @@
 
-def permute_my_string(str):
+def permute_my_string(my_str):
     output_string = []
     # This is a recursive solution to the string permutation problem.
     # The user is supposed to return all the permutations for a given string.
     # Base Case
-    if len(str) == 1:
-        output_string = [str]
+    if len(my_str) == 1:
+        output_string = [my_str]
     else:
         # For every letter in String
-        for i, letter in enumerate(str):
+        for i, letter in enumerate(my_str):
             # for every permutation resulting from Step 2 and 3 described above
-            for perm in permute_my_string(str[:i] + str[i+1:]):
+            for perm in permute_my_string(my_str[:i] + my_str[i+1:]):
                 # Add it to output
                 output_string += [letter + perm]
     return output_string
