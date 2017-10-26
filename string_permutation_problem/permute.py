@@ -14,6 +14,7 @@ def permute_string(my_str):
                 string_list += [letter + perm]
     return string_list
 
+
 def main():
     print(permute_string("abc"))
 
