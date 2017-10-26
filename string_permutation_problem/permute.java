@@ -1,4 +1,4 @@
-public class permute{
+public class Permute{
 
     /* A recursive solution to a classic problem to print all the permutations 
       in a string. */
