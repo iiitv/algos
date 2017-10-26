@@ -34,6 +34,7 @@ class HashTable(object):
                 # Otherwise replace old value
                 else:
                     self.data[nslt] = data
+
     @classmethod
     def hashfunction(self, key, size):
         # Remainder Method
