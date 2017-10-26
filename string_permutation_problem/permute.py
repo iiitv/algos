@@ -1,10 +1,8 @@
 
 def permute_my_string(str):
     output_string = []
-    '''
-        This is a recursive solution to the string permutation problem.
-        The user is supposed to return all the permutations for a given string.
-    '''
+    # This is a recursive solution to the string permutation problem.
+    # The user is supposed to return all the permutations for a given string.
     # Base Case
     if len(str) == 1:
         output_string = [str]
