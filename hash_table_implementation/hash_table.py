@@ -38,6 +38,7 @@ class HashTable(object):
     def hashfunction(self, key, size):
         # Remainder Method
         return key % size
+
     @classmethod
     def rehash(self, oldhash, size):
         # For finding next possible positions
@@ -79,7 +80,7 @@ def main():
     print(h[1])
     print(h[2])
     h[1] = 'new_one'
-    h[1]
+    print(h[1])
 
 
 if __name__ == '__main__':
