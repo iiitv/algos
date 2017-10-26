@@ -1,9 +1,10 @@
+
 def permute_my_string(str):
     output_string = []
-    """
+    '''
         This is a recursive solution to the string permutation problem.
         The user is supposed to return all the permutations for a given string.
-    """
+    '''
     # Base Case
     if len(str) == 1:
         output_string = [str]
@@ -18,7 +19,7 @@ def permute_my_string(str):
 
 
 def main():
-    print(permute_my_string('abc'))
+    print(permute_my_string("abc"))
 
 
 if __name__ == '__main__':
