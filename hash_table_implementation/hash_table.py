@@ -34,11 +34,11 @@ class HashTable(object):
                 # Otherwise replace old value
                 else:
                     self.data[nslt] = data
-
+    @classmethod
     def hashfunction(self, key, size):
         # Remainder Method
         return key % size
-
+    @classmethod
     def rehash(self, oldhash, size):
         # For finding next possible positions
         return (oldhash+1) % size
@@ -76,8 +76,8 @@ def main():
     h[1] = 'one'
     h[2] = 'two'
     h[3] = 'three'
-    h[1]
-    h[2]
+    print(h[1])
+    print(h[2])
     h[1] = 'new_one'
     h[1]
 
