@@ -1,6 +1,6 @@
 public class BubbleSort {
 
-    private static void sort(int[] list) {
+    public static void sort(int[] list) {
         // if the list is null or has zero/one element, we are ready
         if (list == null || list.length == 0 || list.length == 1) {
             return;
