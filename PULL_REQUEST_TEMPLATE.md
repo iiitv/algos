@@ -17,3 +17,5 @@ Fixes #{ISSUE_NUMBER}
 - [ ] My code follows the [skeleton code structure](https://github.com/iiitv/algos/blob/master/CONTRIBUTING.md#sample).
 - [ ] This pull request has a descriptive title. For example, `Added {Algorithm/DS name} [{Language}]`, not `Update README.md` or `Added new code`.
 - [ ] This pull request will be closed if I fail to update it even once in a continuous time span of 7 days.
+- [ ] This pull request shall only be reviewed and merged once the Travis build passes. No maintainer or supporter shall be obliged to review it before this condition is met.
+- [ ] I have mentioned the issue number correctly (with hyperlink) in this pull request description.
