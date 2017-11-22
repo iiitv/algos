@@ -120,9 +120,9 @@ def main():
     print("****** PostOrder ******")
     postorder(root)
     print("***** search Node ******")
-    temo = search(root, 28)
-    if temo is not None:
-        print("node search==> ", temo.data)
+    temp = search(root, 28)
+    if temp is not None:
+        print("node search==> ", temp.data)
     else:
         print("node is not present")
     print("***** delete Node ******")
