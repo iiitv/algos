@@ -2,13 +2,12 @@ using System;
 
 public class CountingSort
 {
-    /// <summary>
-    /// Sorts the array using counting sort
-    /// Time Complexity: O(n + k) where n is the number of elements in the array and k is the range of input
-    /// Space Complexity: O(n + k)
-    /// </summary>
-    /// <param name="arr">The original unsorted array</param>
-    /// <returns>The sorted array</returns>
+
+    /**
+     * Sorts the array using counting sort
+     * Time Complexity: O(n + k) where n is the number of elements in the array and k is the range of input
+     * Space Complexity: O(n + k)
+     */
     public static int[] DoCountingSort(int[] arr)
     {
         // finding the maximum value in the array
@@ -31,17 +30,12 @@ public class CountingSort
             sortedArr[frequency[arr[i]] - 1] = arr[i];
             frequency[arr[i]]--;
         }
-
         return sortedArr;
     }
 
     public static void Main()
     {
-        int[] arr = new int[10000];
-        Random rand = new Random();
-        for (int i = 0; i < arr.Length; i++)
-            arr[i] = rand.Next(100);
-
+        int[] arr = new int[] {10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
         int[] sortedArr = DoCountingSort(arr);
         foreach (int num in sortedArr)
             Console.WriteLine(num);
