@@ -4,10 +4,10 @@ public class CountingSort
 {
 
     /**
-     * Sorts the array using counting sort
-     * Time Complexity: O(n + k) where n is the number of elements in the array and k is the range of input
-     * Space Complexity: O(n + k)
-     */
+    * Sorts the array using counting sort
+    * Time Complexity: O(n + k) where n is the number of elements in the array and k is the range of input
+    * Space Complexity: O(n + k)
+    */
     public static int[] DoCountingSort(int[] arr)
     {
         // finding the maximum value in the array
