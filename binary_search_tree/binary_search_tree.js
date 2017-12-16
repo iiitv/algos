@@ -87,7 +87,7 @@ class BST {
       if (node == null) {
         return null;
       }
-      if (data == node.data) {
+      if (data === node.data) {
         // node has no children 
         if (node.left == null && node.right == null) {
           return null;
@@ -115,23 +115,23 @@ class BST {
         node.right = removeNode(node.right, data);
         return node;
       }
-    }
+    };
     this.root = removeNode(this.root, data);
   }
   isBalanced() {
-    return (this.findMinHeight() >= this.findMaxHeight() - 1)
+    return (this.findMinHeight() >= this.findMaxHeight() - 1);
   }
   findMinHeight(node = this.root) {
       if (node == null) {
           return -1;
-      };
+      }
       let left = this.findMinHeight(node.left);
       let right = this.findMinHeight(node.right);
-      if (left < right) {
+      if (left <= right) {
           return left + 1;
       } else {
           return right + 1;
-      };
+      }
   }
   findMaxHeight(node = this.root) {
       if (node == null) {
@@ -150,12 +150,13 @@ class BST {
       return null;
     } else {
       var result = new Array();
-      function traverseInOrder(node) {       
+			var fn;
+      fn = function traverseInOrder(node) {       
         node.left && traverseInOrder(node.left);
         result.push(node.data);
         node.right && traverseInOrder(node.right);
       }
-      traverseInOrder(this.root);
+      fn(this.root);
       return result;
     };
   }
@@ -164,12 +165,13 @@ class BST {
       return null;
     } else {
       var result = new Array();
-      function traversePreOrder(node) {
+			var fn;
+      fn = function traversePreOrder(node) {
         result.push(node.data);
         node.left && traversePreOrder(node.left);
         node.right && traversePreOrder(node.right);
-      };
-      traversePreOrder(this.root);
+      }
+      fn(this.root);
       return result;
     };
   }
@@ -178,12 +180,13 @@ class BST {
       return null;
     } else {
       var result = new Array();
-      function traversePostOrder(node) {
+			var fn;
+      fn = function traversePostOrder(node) {
         node.left && traversePostOrder(node.left);
         node.right && traversePostOrder(node.right);
         result.push(node.data);
-      };
-      traversePostOrder(this.root);
+      }
+      fn(this.root);
       return result;
     }
   }
