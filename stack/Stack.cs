@@ -11,31 +11,31 @@ class MainClass
     {
         Stack<string> test = new Stack<string>();
 
-        test.Push("123");
-        test.Push("test");
-        test.Push("rawr");
-        test.Push("Pancake");
-        test.Push("Yummy");
-        test.Push("321");
-        test.Push(":thinking:");
+        Console.WriteLine("Pushing to the stack.");
+        int max_size = 10;
+        for (int i = 1; i <= max_size; i++)
+        {
+            string ele = String.Format("{0} duck", max_size + 1 - i);
+            Console.WriteLine("Pushing {0} to the stack", ele);
+            test.Push(ele);
+        }
 
-        Console.WriteLine(test.ToString());
+        Console.WriteLine("Currently in the stack: %n {0}", test.ToString());
 
+        Console.WriteLine("Rotating");
         test.Rotate(4, true);
-
         Console.WriteLine(test.ToString());
 
         test.Rotate(5, false);
-
         Console.WriteLine(test.ToString());
 
-        Console.WriteLine(test.Peek() + "\n");
-
-        while (!(test.IsEmpty()))
+        Console.WriteLine("Popping off the stack.");
+        for (int i = 1; i <= max_size; i++)
         {
-            test.Pop();
-            Console.WriteLine(test.ToString());
+            string ele = test.Pop();
+            Console.WriteLine("The stack had '{0}' in it", ele);
         }
+        Console.WriteLine("Stack is empty!");
     }
 }
 
@@ -58,92 +58,69 @@ class Stack<T>
     // Removes the element at the top of the stack
     public T Pop()
     {
-        if (IsEmpty())
-            return default(T);
-
-        T element = stack.Last();
-
+        T t = stack.Last();
         stack.RemoveLast();
-
-        return element;
+        return t;
     }
 
-    // Returns true if the stack is empty
-    public bool IsEmpty()
+    public Boolean isEmpty()
     {
-        return (!stack.Any());
+        return !stack.Any();
     }
 
-
-    // Returns the last element of the stack
-    public T Peek()
-    {
-        if (IsEmpty())
-            return default(T);
-
-        return stack.Last();
-    }
-
-    /**
-    * gets the n top elements and rotates them
+    /*
+    * Gets the top n elements and rotates them
     *
-    * if left == false then it will move the last element to behind the nth element(from the top)
+    * If left == false then it will move the last element to behind the nth element (from the top)
     *
-    * if left == true it will move the nth element(from the top) to the top
+    * If left == true it will move the nth element(from the top) to the top
     */
     public void Rotate(int n, bool left)
     {
-        if (n <= 1)
-            return;
-
-        if (stack.Count < 2)
-            return;
-
-        n -= 1;
-
+        Stack<T> tmp = new Stack<T>();
+        T ele;
         if (left)
         {
-            LinkedListNode<T> node = stack.Last;
-
-            for (int i = 1; i <= n; ++i)
+            for (int i = 0; i < n; i++)
             {
-                node = node.Previous;
+                tmp.Push(this.Pop());
             }
-
-            T value = node.Value;
-
-            stack.Remove(value);
-
-            Push(value);
+            ele = tmp.Pop();
         }
         else
         {
-            T last = stack.Last();
-
-            Pop();
-
-            LinkedListNode<T> node = stack.Last;
-
-            for (int i = 0; i < n; i++)
+            ele = this.Pop();
+            for (int i = 0; i < n - 1; i++)
             {
-                node = node.Previous;
+                tmp.Push(this.Pop());
             }
-
-            stack.AddBefore(node.Next, last);
+            tmp.Push(ele);
+        }
+        while(!tmp.isEmpty())
+        {
+            this.Push(tmp.Pop());
+        }
+        if(left)
+        {
+            this.Push(ele);
         }
     }
 
     public override string ToString()
     {
+        Stack<T> tmp = new Stack<T>();
         string s = "Stack: ";
-
-        foreach(T t in stack)
+        while (!this.isEmpty())
         {
-            s += t.ToString() + " | ";
+            T ele = this.Pop();
+            s += String.Format("{0} | ", ele.ToString());
+            tmp.Push(ele);
         }
-
-        s += "\n";
-
+        while (!tmp.isEmpty())
+        {
+            this.Push(tmp.Pop());
+        }
         return s;
     }
 }
+
