@@ -1,14 +1,15 @@
 """
-Breadth-first search (BFS) is an algorithm for traversing or searching tree or
-graph data structures. Starting at the tree root (or some arbitrary node of a
-graph, sometimes referred to as a 'search key'[1]) and explores the neighbor
-nodes first, before moving to the next level neighbours.
+Breadth-first search (BFS) is an algorithm for searching tree or
+graph data structures. It produces a set of actions to be follwed to reach a
+target state from the start state. Starting at the initial state (often the
+root node for a tree) it explores all neighbor nodes at each level
+before moving to the next level.
 """
 
-from collections import deque
+from collections import deque, namedtuple
 
 
-def breadth_first_search(graph, source):
+def breadth_first_search(graph, start, target):
     """ Performs a breadth-first search on a graph
 
     Args:
@@ -16,25 +17,42 @@ def breadth_first_search(graph, source):
         source (int): Index of source vertex to begin search from
 
     Returns:
-        list of dicts describing each vertex in the searched graph
-            -> [{distance: _, predecessor: _ }]
+        tuple (path, distance): path traversed from start to target, total
+            distance of path
+        None,None if target not found
     """
-    vertex_info = []
-    for i in range(len(graph)):
-        vertex_info.append({"distance": None, "predecessor": None})
-    vertex_info[source]["distance"] = 0
+    vertex_info = {}
+    VistitedVertex = namedtuple("VisitedVertex", "parent distance")
+    vertex_info[start] = VistitedVertex(None, 0)
 
     search_queue = deque()
-    search_queue.append(source)
+    visited = set()
+    search_queue.append(start)
 
     while search_queue:
         u = search_queue.popleft()
+        if u == target:
+            return construct_path(u, vertex_info)
         for v in graph[u]:
-            if vertex_info[v]["distance"] is None:
-                vertex_info[v]["distance"] = vertex_info[u]["distance"] + 1
-                vertex_info[v]["predecessor"] = u
-                search_queue.append(v)
-    return vertex_info
+            if v not in visited:
+                if v not in search_queue:
+                    vertex_info[v] = VistitedVertex(
+                        u, vertex_info[u].distance + 1)
+                    search_queue.append(v)
+        visited.add(u)
+    return None, None
+
+
+def construct_path(vertex, vertex_info):
+    path = []
+    distance = vertex_info[vertex].distance
+    while True:
+        path.append(vertex)
+        if vertex_info[vertex].parent is not None:
+            vertex = vertex_info[vertex].parent
+        else:
+            break
+    return path[::-1], distance
 
 
 def main():
@@ -48,44 +66,12 @@ def main():
         [3, 5],
         []
     ]
-    vertex_info = breadth_first_search(graph_adj_list, 3)
 
-    for i in range(len(graph_adj_list)):
-        print("vertex %s : distance = %s, predecessor = %s" %
-              (i, vertex_info[i]["distance"], vertex_info[i]["predecessor"]))
-
-    assert(vertex_info[0] == {
-        "distance": 4,
-        "predecessor": 1
-    })
-    assert(vertex_info[1] == {
-        "distance": 3,
-        "predecessor": 4
-    })
-    assert(vertex_info[2] == {
-        "distance": 1,
-        "predecessor": 3
-    })
-    assert(vertex_info[3] == {
-        "distance": 0,
-        "predecessor": None
-    })
-    assert(vertex_info[4] == {
-        "distance": 2,
-        "predecessor": 2
-    })
-    assert(vertex_info[5] == {
-        "distance": 2,
-        "predecessor": 2
-    })
-    assert(vertex_info[6] == {
-        "distance": 1,
-        "predecessor": 3
-    })
-    assert(vertex_info[7] == {
-        "distance": None,
-        "predecessor": None
-    })
+    start = 0
+    target = 10
+    path, distance = breadth_first_search(graph_adj_list, start, target)
+    print('Path from vertex {} to vertex {}: {}'.format(start, target, path))
+    print('Path distance: {}'.format(distance))
 
 
 if __name__ == '__main__':
