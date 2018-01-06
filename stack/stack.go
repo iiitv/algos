@@ -1,39 +1,91 @@
 package main
 
+//Imported Libraries
 import (
-	"errors"
 	"fmt"
 )
 
-// Stack implements stack DS
-type Stack struct {
-	list []int
-}
+//Constants
+const x  = 10
 
-// Push pushes to stack
-func (s *Stack) Push(data int) error {
-	s.list = append(s.list, data)
-	return nil
+//Implementation of the stack structure
+type stack struct {
+	items [x] string
 }
-
-// Pop pops from stack
-func (s *Stack) Pop() (int, error) {
-	if len(s.list) == 0 {
-		return -1, errors.New("pop from empty stack")
+//pop from the stack
+func (a *stack) push (value string){
+	var found bool = false
+	for index,valuea := range a.items{
+		if valuea == "" {
+			a.items[index]=value
+			found=true
+			break
+		}
 	}
-	last := s.list[len(s.list)-1]
-	s.list = s.list[:len(s.list)-1]
-	return last, nil
-}
-
-func main() {
-	var s Stack
-	s.Push(2)
-	s.Push(3)
-	s.Push(5)
-	last, err := s.Pop()
-	for err == nil {
-		fmt.Println(last)
-		last, err = s.Pop()
+	if found == false{
+		fmt.Printf("Stack is full, Try on PUSH something outside\n")
 	}
 }
+
+//pop form the stack
+func (a *stack) pop()  {
+	var empty bool = true
+	for index := range a.items{
+		if a.items[x-index-1]!="" {
+			a.items[x-index-1]=""
+			empty= false
+			break
+		}
+	}
+	if empty==true{
+		fmt.Printf("Stack is empty! Cannot pop! Try on push in something\n")
+	}
+}
+
+//print the stack
+func (a *stack) printstack()  {
+	fmt.Printf("(")
+	for index := range a.items{
+		value := "None"
+		if a.items[index]!=""{
+			value=a.items[index]
+		}
+		fmt.Printf("%s,",value)
+	}
+	fmt.Println(")")
+}
+
+//peek for the last value of the stack
+func (a *stack) peek()  {
+	var empty bool = true
+	for index := range a.items{
+		if a.items[x-index-1] != ""{
+			fmt.Println(a.items[x-index-1])
+			empty = false
+			break
+		}
+	}
+	if empty == true {
+		fmt.Println("The Stack is Empty. Can't print for a last value")
+	}
+}
+
+//End of Implementation of the Stack
+
+//Start of the Main programme
+func main(){
+	mydata := new(stack)
+	mydata.push("Kamal")
+	mydata.push("Saman")
+	mydata.push("Nimal")
+	mydata.push("Ruwan")
+	mydata.push("Kumara")
+	mydata.printstack()
+	mydata.peek()
+	mydata.pop()
+	mydata.peek()
+	mydata.pop()
+	mydata.peek()
+	mydata.printstack()
+}
+//End of the Main programme
