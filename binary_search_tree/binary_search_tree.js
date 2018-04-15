@@ -16,20 +16,20 @@ class BST {
     const node = this.root;
     if (node === null) {
       this.root = new Node(data);
-      return;
+      return null;
     } else {
       const searchTree = function(node) {
         if (data < node.data) {
           if (node.left === null) {
             node.left = new Node(data);
-            return;
+            return null;
           } else if (node.left !== null) {
             return searchTree(node.left);
           }
         } else if (data > node.data) {
           if (node.right === null) {
             node.right = new Node(data);
-            return;
+            return null;
           } else if (node.right !== null) {
             return searchTree(node.right);
           }
@@ -93,21 +93,22 @@ class BST {
           return null;
         }
         // node has no left child 
-        if (node.left == null) {
+        else if (node.left == null) {
           return node.right;
         }
         // node has no right child 
-        if (node.right == null) {
+        else if (node.right == null) {
           return node.left;
-        }
-        // node has two children 
-        var tempNode = node.right;
-        while (tempNode.left !== null) {
-          tempNode = tempNode.left;
-        }
-        node.data = tempNode.data;
-        node.right = removeNode(node.right, tempNode.data);
-        return node;
+        } else{
+					// node has two children 
+					var tempNode = node.right;
+					while (tempNode.left !== null) {
+						tempNode = tempNode.left;
+					}
+					node.data = tempNode.data;
+					node.right = removeNode(node.right, tempNode.data);
+					return node;
+				}
       } else if (data < node.data) {
         node.left = removeNode(node.left, data);
         return node;
@@ -170,7 +171,7 @@ class BST {
         result.push(node.data);
         node.left && traversePreOrder(node.left);
         node.right && traversePreOrder(node.right);
-      }
+      };
       fn(this.root);
       return result;
     };
@@ -185,7 +186,7 @@ class BST {
         node.left && traversePostOrder(node.left);
         node.right && traversePostOrder(node.right);
         result.push(node.data);
-      }
+      };
       fn(this.root);
       return result;
     }
@@ -194,17 +195,17 @@ class BST {
   levelOrder() {
       let result = [];
       let Q = []; 
-      if (this.root != null) {
+      if (this.root !== null) {
           Q.push(this.root);
           while(Q.length > 0) {
               let node = Q.shift();
               result.push(node.data);
-              if (node.left != null) {
+              if (node.left !== null) {
                   Q.push(node.left);
-              };
-              if (node.right != null) {
+              }
+              if (node.right !== null) {
                   Q.push(node.right);
-              };
+              }
           };
           return result;
       } else {
