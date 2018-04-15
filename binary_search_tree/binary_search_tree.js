@@ -18,19 +18,19 @@ class BST {
       this.root = new Node(data);
       return null;
     } else {
-      const searchTree = function(node) {
+      const searchTree = (node) => {
         if (data < node.data) {
           if (node.left === null) {
             node.left = new Node(data);
             return null;
-          } else if (node.left !== null) {
+          } else{
             return searchTree(node.left);
           }
         } else if (data > node.data) {
           if (node.right === null) {
             node.right = new Node(data);
             return null;
-          } else if (node.right !== null) {
+          } else{
             return searchTree(node.right);
           }
         } else {
