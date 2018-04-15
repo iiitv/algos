@@ -136,7 +136,7 @@ class BST {
   findMaxHeight(node = this.root) {
       if (node == null) {
           return -1;
-      };
+      }
       let left = this.findMaxHeight(node.left);
       let right = this.findMaxHeight(node.right);
       if (left > right) {
@@ -155,7 +155,7 @@ class BST {
         node.left && traverseInOrder(node.left);
         result.push(node.data);
         node.right && traverseInOrder(node.right);
-      }
+      };
       fn(this.root);
       return result;
     };
