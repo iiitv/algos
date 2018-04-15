@@ -135,16 +135,16 @@ class BST {
       }
   }
   findMaxHeight(node = this.root) {
+		 	let left = this.findMaxHeight(node.left);
+      let right = this.findMaxHeight(node.right);
       if (node == null) {
           return -1;
       }
-      let left = this.findMaxHeight(node.left);
-      let right = this.findMaxHeight(node.right);
-      if (left > right) {
+      else if (left > right) {
           return left + 1;
       } else {
           return right + 1;
-      };
+      }
   }
   inOrder() {
     if (this.root == null) {
