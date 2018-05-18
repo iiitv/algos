@@ -200,7 +200,7 @@ return root;
         }
 
     }
-        int ty;
+        int ty = 0;
         if(temp1->left == NULL && temp1->right == NULL)
             ty=0;                                           // node has no children
         else if(temp1->left != NULL && temp1->right == NULL)
