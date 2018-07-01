@@ -1,3 +1,3 @@
 #!/bin/bash
-sudo -H pip3 install --upgrade pip
-sudo -H pip3 install -Ur pip3-requirements.txt
+sudo -H python3 -m pip install --upgrade pip
+sudo -H python3 -m pip install -Ur pip3-requirements.txt
