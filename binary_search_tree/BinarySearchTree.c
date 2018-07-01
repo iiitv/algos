@@ -33,24 +33,28 @@ node * insert_node(node * root, int a)
         while(1)
         {
             int key = temp1->data;
-            if(key<=a){
-                if(temp1->right==NULL){
+            if(key <= a)
+            {
+                if(temp1->right == NULL)
+                {
                     temp1->right = temp;
                     break;
                 }
                 else
                 {
-                    temp1=temp1->right;
+                    temp1 = temp1->right;
                 }
             }
-            else{
-                if(temp1->left==NULL){
+            else
+            {
+                if(temp1->left == NULL)
+                {
                     temp1->left = temp;
                     break;
                 }
                 else
                 {
-                    temp1=temp1->left;
+                    temp1 = temp1->left;
                 }
 
             }
@@ -65,7 +69,8 @@ node * insert_node(node * root, int a)
 }
 
 // Function for swapping node values
-void swap(node *a, node *b){
+void swap(node *a, node *b)
+{
     int temp1 = a->data;
     a->data = b->data;
     b->data = temp1;
@@ -76,13 +81,13 @@ node * successor(node * temp, node * temp1)
 {
     node * tmp = temp1;
     temp = tmp;
-    if(tmp->right!=NULL)
+    if(tmp->right != NULL)
     {
-        tmp=tmp->right;
-        while(tmp->left!=NULL)
+        tmp = tmp->right;
+        while(tmp->left != NULL)
         {
-            temp=tmp;
-            tmp=tmp->left;
+            temp = tmp;
+            tmp = tmp->left;
         }
 
     }
@@ -93,27 +98,28 @@ node * successor(node * temp, node * temp1)
     return tmp;
 }
 
-// Funtion for finding the parent of node with smallest value in the right subtree.
+// Function for finding the parent of node with smallest value in the right subtree.
 node * parent_of_successor(node * temp, node * temp1)
 {
     node * tmp = temp1;
     temp = tmp;
-    tmp=tmp->right;
-    while(tmp->left!=NULL)
+    tmp = tmp->right;
+    while(tmp->left != NULL)
     {
-        temp=tmp;
-        tmp=tmp->left;
+        temp = tmp;
+        tmp = tmp->left;
     }
     return temp;
 }
 
 
 // Function for deleting a node with no children
-node * delzero(node * root, node * pretemp, node * temp){
+node * delzero(node * root, node * pretemp, node * temp)
+{
     if(temp == root)
         root = NULL;
     else
-     {
+    {
         if (temp == pretemp->left)
             pretemp->left = NULL;
         else
@@ -126,31 +132,37 @@ node * delzero(node * root, node * pretemp, node * temp){
 
 
 // Function for deleting a node with one child
-node * delone(node * root, node * temp, node * temp1, int ty){
-
-
+node * delone(node * root, node * temp, node * temp1, int ty)
+{
     switch(ty) 
     {
         case 1:
            
-            if(temp1==root){
+            if(temp1 == root)
+            {
                 root = root->left;
             }
-            else if (temp1 == temp->left) {
+            else if (temp1 == temp->left)
+            {
                 temp->left = temp1->left;
-            } else {
+            } 
+            else
+            {
                 temp->right = temp1->left;
             }
             free(temp1);
             break;
         case 2:
             
-            if(temp1==root){
+            if(temp1 == root)
+            {
                 root = root->right;
             }
-            else if (temp1 == temp->left) {
+            else if (temp1 == temp->left)
+            {
                 temp->left = temp1->right;
-            } else {
+            } else
+            {
                 temp->right = temp1->right;
             }
            
@@ -161,45 +173,47 @@ node * delone(node * root, node * temp, node * temp1, int ty){
 return root;
 }
 
- node * delete_node(node * root, int a){
+ node * delete_node(node * root, int a)
+ {
     node * temp1 = root; // temp1 will store the value of node
     node * temp = root; // It will store the previous value of temp1
 
 
     // Traversing the tree ...
-    while(1)
-    {
-        int key = temp1->data;
-        if(key==a)
-            break;
-
-        else if(key<a)
+        while(1)
         {
-            if(temp1->right==NULL)
-                return root;
+            int key = temp1->data;
+            if(key == a)
+                break;
+
+            else if(key < a)
+            {
+                if(temp1->right == NULL)
+                    return root;
 
 
+                else
+                {
+                    temp = temp1;
+                    temp1 = temp1->right;
+                }
+            }
             else
             {
-                temp =  temp1;
-                temp1=temp1->right;
-            }
-        }
-        else
-        {
-            if(temp1->left==NULL)
-                return root;
+                if(temp1->left == NULL)
+                    return root;
 
 
-            else
-            {
-                temp = temp1;
-                temp1=temp1->left;
+                else
+                {
+                    temp = temp1;
+                    temp1 = temp1->left;
+                }
+
             }
 
         }
 
-    }
         int ty = 0;
         if(temp1->left == NULL && temp1->right == NULL)
             ty=0;                                           // node has no children
@@ -211,8 +225,9 @@ return root;
             ty=3;                                           // node has two children
     
     
-        node * tmp;
-        switch(ty){
+        
+        switch(ty)
+        {
             case 0:
                 root = delzero(root, temp,temp1);
                 break;
@@ -223,6 +238,7 @@ return root;
                 root = delone(root, temp,temp1,ty);
                 break;
             case 3:
+                node * tmp;
                 tmp = successor(temp,temp1);
                 swap(tmp,temp1);
                 temp = parent_of_successor(temp,temp1);
@@ -232,7 +248,7 @@ return root;
                 else
                    root = delzero(root, temp,temp1);
 
-    }
+        }
 
     return root;
 }
@@ -240,50 +256,56 @@ return root;
 // Function for searching a node
 // It will return 1 if a node is found
 // It will return 0 if node is not found
-int search(node * root, int a){
+int search(node * root, int a)
+{
     node * temp1 = root; // temp1 will traverse through the tree
     while(1)
     {
         int key = temp1->data;
-        if(key==a){         // Node is found
+        if(key == a)
+        {         // Node is found
             return 1;
         }
-        else if(key<a)
+        else if(key < a)
         {
-            if(temp1->right==NULL){
+            if(temp1->right == NULL)
+            {
 
                 return 0;       //Node is not found
             }
             else
             {
-                temp1=temp1->right;
+                temp1 = temp1->right;
             }
         }
-        else{
-            if(temp1->left==NULL){
-
+        else
+        {
+            if(temp1->left == NULL)
+            {
                 return 0;      //Node is not found
-
             }
             else
             {
-                temp1=temp1->left;
+                temp1 = temp1->left;
             }
 
         }
 
     }
 
+    return 0;
 
 }
 
 
 // Inorder printing of the tree
-void print_inorder(node * root){
+void print_inorder(node * root)
+{
     node * temp = root;
-    if(temp==NULL)
+    if(temp == NULL)
         return;
-    else {
+    else 
+    {
         print_inorder(temp->left);
         printf("%d ", temp->data);
         print_inorder(temp->right);
@@ -292,7 +314,8 @@ void print_inorder(node * root){
 
 
 
-int main(){
+int main()
+{
     node * root = NULL;
 
     // Inserting values in Binary Search Tree
