@@ -1,4 +1,5 @@
 #!/bin/bash
+rmdir -r $GOPATH/src/golang.org/x
 mkdir -p $GOPATH/src/golang.org/x \
   && git clone https://github.com/golang/lint.git $GOPATH/src/golang.org/x/lint \
   && go get -u golang.org/x/lint/golint
