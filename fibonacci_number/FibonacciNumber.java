@@ -8,7 +8,7 @@ public class FibonacciNumber {
       int a = 0;     // Store second last fibonacci number
       int b = 1;    // Store last fibonacci number
       int fib = 0;  // Store current fibonacci number which is sum of last and second last fibonacci no
-      for(int i = 2;i < n;i++) {
+      for(int i = 2; i < n; i++) {
         fib = a + b;
         a = b;
         b = fib;
