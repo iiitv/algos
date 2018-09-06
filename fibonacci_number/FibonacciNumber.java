@@ -25,7 +25,7 @@ public class FibonacciNumber {
           if(n < 0) {
             System.out.println("n cannot be less than 0");
             return ;
-      }
+          }
           fibonacci(n);
     }
 }
