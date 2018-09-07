@@ -4,7 +4,7 @@ Community (college) maintained list of Algorithms and Data Structures implementa
 
 [![Join the chat at https://gitter.im/iiitv/algos](https://badges.gitter.im/iiitv/algos.svg)](https://gitter.im/iiitv/algos?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![Code Climate](https://codeclimate.com/github/iiitv/algos/badges/gpa.svg)](https://codeclimate.com/github/iiitv/algos)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/c10c3fd13edb475ca1bf77d4291d54b4)](https://www.codacy.com/app/aviaryan/algos?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=iiitv/algos&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/13cadeaa842b4cd3b7dd545f434e620e)](https://www.codacy.com/app/aashutoshrathi/algos?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=iiitv/algos&amp;utm_campaign=Badge_Grade)
 [![Build Status](https://travis-ci.org/iiitv/algos.svg?branch=master)](https://travis-ci.org/iiitv/algos)
 [![GitHub issues](https://img.shields.io/github/issues/iiitv/algos.svg)](https://github.com/iiitv/algos/issues)
 [![Open Source Love](https://badges.frapsoft.com/os/v3/open-source.svg?v=102)](https://github.com/iiitv/algos/)
@@ -20,7 +20,8 @@ Community (college) maintained list of Algorithms and Data Structures implementa
 |:--------------|:----------------:|:----------------:|:----------------:|:-----------------:|:-----------------:|:-----------------:| :-----------------:|
 | [Bin Sort](http://www.cdn.geeksforgeeks.org/bucket-sort-2/)| [:white_check_mark:](bin_sort/bin_sort.c) | |[:white_check_mark:](bin_sort/BinSort.java) | [:white_check_mark:](bin_sort/bin_sort.py) | [:white_check_mark:](bin_sort/bin_sort.go) | | |
 | [Binary Search](https://en.wikipedia.org/wiki/Binary_search_algorithm) | [:white_check_mark:](binary_search/binary_search.c) | | [:white_check_mark:](binary_search/BinarySearch.java) | [:white_check_mark:](binary_search/binary_search.py) | [:white_check_mark:](binary_search/binary_search.go) | [:white_check_mark:](binary_search/binarySearch.js) | [:white_check_mark:](binary_search/BinarySearch.cs) |
-| [Breadth First Search](https://en.wikipedia.org/wiki/Breadth-first_search) | | | [:white_check_mark:](breadth_first_search/BreadthFirstSearch.java) | | | | |
+| [Breadth First Search](https://en.wikipedia.org/wiki/Breadth-first_search) | | | [:white_check_mark:](breadth_first_search/BreadthFirstSearch.java) |[:white_check_mark:](breadth_first_search/breadth_first_search.py) | | | |
+| [Breadth First Traversal](https://www.cs.bu.edu/teaching/c/tree/breadth-first/) | | |  |[:white_check_mark:](breadth_first_traversal/breadth_first_traversal.py) | | | |
 | [Coin Change Problem](http://www.algorithmist.com/index.php/Coin_Change) | [:white_check_mark:](coin_change_problem/coin_change_problem.c) | | [:white_check_mark:](coin_change_problem/CoinChangeProblem.java) | [:white_check_mark:](coin_change_problem/coin_change_problem.py) | [:white_check_mark:](coin_change_problem/coin_change_problem.go) | [:white_check_mark:](coin_change_problem/coinChangeProblem.js) | |
 | [Counting Sort](http://www.geeksforgeeks.org/counting-sort/)| [:white_check_mark:](counting_sort/counting_sort.c) | | [:white_check_mark:](counting_sort/CountingSort.java) | [:white_check_mark:](counting_sort/counting_sort.py) | [:white_check_mark:](counting_sort/counting_sort.go) | [:white_check_mark:](counting_sort/countingSort.js) | [:white_check_mark:](counting_sort/CountingSort.cs) |
 | [Depth First Traversal](http://www.geeksforgeeks.org/depth-first-traversal-for-a-graph/) | | | [:white_check_mark:](depth_first_traversal/DepthFirstTraversal.java) | [:white_check_mark:](depth_first_traversal/DepthFirstTraversal.py) | | | |
