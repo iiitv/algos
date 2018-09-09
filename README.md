@@ -36,6 +36,7 @@ Community (college) maintained list of Algorithms and Data Structures implementa
 | [Longest Palindromic Substring](http://www.geeksforgeeks.org/longest-palindrome-substring-set-1/) | | [:white_check_mark:](longest_palindromic_substring/longest_palindromic_substring.cpp) | [:white_check_mark:](longest_palindromic_substring/LongestPalindromicSubstring.java) | [:white_check_mark:](longest_palindromic_substring/longest_palindromic_substring.py) | [:white_check_mark:](longest_palindromic_substring/longest_palindromic_substring.go) | [:white_check_mark:](longest_palindromic_substring/longestPalindromicSubstring.js) | |
 | [Merge Sort](https://www.khanacademy.org/computing/computer-science/algorithms/merge-sort/a/overview-of-merge-sort) | [:white_check_mark:](merge_sort/merge_sort.c) | | [:white_check_mark:](merge_sort/MergeSort.java) | [:white_check_mark:](merge_sort/merge_sort.py) | [:white_check_mark:](merge_sort/merge_sort.go) | [:white_check_mark:](merge_sort/mergeSort.js) | [:white_check_mark:](merge_sort/MergeSort.cs) |
 | [Modular Exponential](http://www.geeksforgeeks.org/modular-exponentiation-power-in-modular-arithmetic/) | [:white_check_mark:](modular_exponential/modular_exponential.c) | | [:white_check_mark:](modular_exponential/ModularExponential.java) | [:white_check_mark:](modular_exponential/modular_exponential.py) | [:white_check_mark:](modular_exponential/modular_exponential.go) | [:white_check_mark:](modular_exponential/modularExponential.js) | |
+| [Nth Fibonacci Number](https://en.wikipedia.org/wiki/Fibonacci_number) | | | [:white_check_mark:](fibonacci_number/FibonacciNumber.java) | | | | |
 | [N-Queen Problem](https://en.wikipedia.org/wiki/Eight_queens_puzzle) | | [:white_check_mark:](n_queen_problem/NQueenProblem.cpp) | [:white_check_mark:](n_queen_problem/NQueenProblem.java) | [:white_check_mark:](n_queen_problem/n_queen_problem.py) | [:white_check_mark:](n_queen_problem/n_queen_problem.go) | | |
 | [Prime Factor](https://en.wikipedia.org/wiki/Prime_factor) | [:white_check_mark:](prime_factor/prime_factor.c) | | [:white_check_mark:](prime_factor/PrimeFactor.java) | [:white_check_mark:](prime_factor/prime_factor.py) | [:white_check_mark:](prime_factor/prime_factor.go) | [:white_check_mark:](prime_factor/primeFactor.js) | |
 | [Prims](https://en.wikipedia.org/wiki/Prim%27s_algorithm) | [:white_check_mark:](prims/prims.c) | | [:white_check_mark:](prims/Prims.java) | | [:white_check_mark:](prims/prims.go) | [:white_check_mark:](prims/prims.js) | |
@@ -83,7 +84,7 @@ Community (college) maintained list of Algorithms and Data Structures implementa
 * [Intro to Algorithms - Khan Academy](https://www.khanacademy.org/computing/computer-science/algorithms)
 * [Popular Data Structures and Algorithms - Codechef](https://discuss.codechef.com/questions/48877/data-structures-and-algorithms)
 * [Stanford-ACM-Codes](https://github.com/jaehyunp/stanfordacm) - A list of codes written by previous Stanford ACM team members and coaches.
-* [Data Structures and Algorithms](https://hackr.io/tutorials/learn-data-structures-algorithms) - A user ranked list of online tutorials to learn Data Structures and Algorithms online. 
+* [Data Structures and Algorithms](https://hackr.io/tutorials/learn-data-structures-algorithms) - A user ranked list of online tutorials to learn Data Structures and Algorithms online.
 
 
 
