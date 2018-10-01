@@ -10,9 +10,9 @@ bears = SpaceConsistencyBear
 use_spaces = True
 
 # golint
-[Golint]
-files = **/*.go
-bears = GoLintBear
+# [Golint]
+# files = **/*.go
+# bears = GoLintBear
 
 # gofmt
 [Gofmt]

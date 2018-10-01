@@ -1,4 +1,4 @@
 #!/bin/bash
-go get -u github.com/golang/lint/golint
-cd $GOPATH/src/github.com/golang/lint
+go get -u golang.org/x/lint/golint
+cd $GOPATH/src/golang.org/x/lint
 go install .
