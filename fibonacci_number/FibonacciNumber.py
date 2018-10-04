@@ -39,7 +39,7 @@ def n_fib(n):
 
 
 def main():
-    n = int(input())
+    n = 10
 
     result = series(n)
     if result is None:
