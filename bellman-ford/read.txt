@@ -1,0 +1,11 @@
+Bellman ford helps one to find the shortest distance from one point in a graph to all other points. This might be
+same as Dijkstra’s algorithm but BellmanFord works for negative edges as well.
+
+Initially all the nodes connected directly ( although this might depend on order of insertion ) to the source get
+updated with the distance. Then in the second iteration all 2-edge long vertices get updated. This continues till
+every node gets updated.
+
+The Bellman-Ford algorithm propagates correct distance estimates to all nodes in a graph in V-1 steps, unless there
+is a negative weight cycle. If there is a negative weight cycle, you can go on relaxing its nodes indefinitely.
+
+source: https://www.geeksforgeeks.org/bellman-ford-algorithm-dp-23/
