@@ -42,7 +42,7 @@ def add(root, word):
     node.word_finished = True
 
 
-def find_prefix(root, prefix) -> Tuple[bool, int]:
+def find_prefix(root, prefix):
     """
     Check and return 
       1. If the prefix exsists in any of the words we added so far
