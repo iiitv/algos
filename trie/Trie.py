@@ -6,7 +6,7 @@ class TrieNode(object):
     Our trie node implementation. Very basic. but does the job
     """
     
-    def __init__(self, char: str):
+    def __init__(self, char):
         self.char = char
         self.children = []
         # Is it the last character of the word.`
@@ -42,7 +42,7 @@ def add(root, word):
     node.word_finished = True
 
 
-def find_prefix(root, prefix: str) -> Tuple[bool, int]:
+def find_prefix(root, prefix) -> Tuple[bool, int]:
     """
     Check and return 
       1. If the prefix exsists in any of the words we added so far
