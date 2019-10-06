@@ -1,4 +1,3 @@
-from typing import Tuple
 
 
 class TrieNode(object):
