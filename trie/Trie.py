@@ -9,7 +9,8 @@ class TrieNode(object):
         self.word_finished = False
         # How many times this character appeared in the addition process
         self.counter = 1
-    
+
+
 def add(root, word):
     node = root
     for char in word:
@@ -17,7 +18,8 @@ def add(root, word):
         # Search for the character in the children of the present `node`
         for child in node.children:
             if child.char == char:
-                # We found it, increase the counter by 1 to keep track that another
+                # We found it, increase the counter
+                # by 1 to keep track that another
                 # word has it as well
                 child.counter += 1
                 # And point the node to the child that contains this char
@@ -32,6 +34,7 @@ def add(root, word):
             node = new_node
     # Everything finished. Mark it as the end of a word.
     node.word_finished = True
+
 
 def find_prefix(root, prefix):
     node = root
@@ -52,9 +55,10 @@ def find_prefix(root, prefix):
         # Return False anyway when we did not find a char.
         if char_not_found:
             return False, 0
-    # Well, we are here means we have found the prefix. Return true to indicate that
-    # And also the counter of the last node. This indicates how many words have this
-    # prefix
+    # Well, we are here means we have found the prefix.
+    # Return true to indicate that
+    # And also the counter of the last node.
+    # This indicates how many words have this prefix
     return True, node.counter
 
 if __name__ == "__main__":
