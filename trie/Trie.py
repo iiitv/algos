@@ -4,8 +4,7 @@ from typing import Tuple
 class TrieNode(object):
     """
     Our trie node implementation. Very basic. but does the job
-    """
-    
+    """  
     def __init__(self, char):
         self.char = char
         self.children = []
@@ -14,7 +13,6 @@ class TrieNode(object):
         # How many times this character appeared in the addition process
         self.counter = 1
     
-
 def add(root, word):
     """
     Adding a word in the trie structure
@@ -40,7 +38,6 @@ def add(root, word):
             node = new_node
     # Everything finished. Mark it as the end of a word.
     node.word_finished = True
-
 
 def find_prefix(root, prefix):
     """
