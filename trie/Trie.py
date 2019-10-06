@@ -15,7 +15,7 @@ class TrieNode(object):
         self.counter = 1
     
 
-def add(root, word: str):
+def add(root, word):
     """
     Adding a word in the trie structure
     """
