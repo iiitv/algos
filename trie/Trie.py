@@ -2,9 +2,6 @@ from typing import Tuple
 
 
 class TrieNode(object):
-    """
-    Our trie node implementation. Very basic. but does the job
-    """  
     def __init__(self, char):
         self.char = char
         self.children = []
@@ -14,9 +11,6 @@ class TrieNode(object):
         self.counter = 1
     
 def add(root, word):
-    """
-    Adding a word in the trie structure
-    """
     node = root
     for char in word:
         found_in_child = False
@@ -40,11 +34,6 @@ def add(root, word):
     node.word_finished = True
 
 def find_prefix(root, prefix):
-    """
-    Check and return 
-      1. If the prefix exsists in any of the words we added so far
-      2. If yes then how may words actually have the prefix
-    """
     node = root
     # If the root node has no children, then return False.
     # Because it means we are trying to search in an empty trie
