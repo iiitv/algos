@@ -61,6 +61,7 @@ def find_prefix(root, prefix):
     # This indicates how many words have this prefix
     return True, node.counter
 
+
 if __name__ == "__main__":
     root = TrieNode('*')
     add(root, "hacktoberfest")
