@@ -1,5 +1,5 @@
 function fibonacci (num, memo) {
-	memo = memo || { 1:0, 2:1 };
+	memo = memo || { 1: 0, 2: 1 };
 
 	if (memo[num] || memo[num] === 0) {
 		return memo[num];
@@ -13,7 +13,7 @@ function fibonacci (num, memo) {
 function main () {
 	console.log('result => ' + fibonacci(5));
 	// result => 3
-	console.log('result => '  + fibonacci(45));
+	console.log('result => ' + fibonacci(45));
 	// result => 89
 	console.log('result => ' + fibonacci(50));
 	// result => 7778742049
