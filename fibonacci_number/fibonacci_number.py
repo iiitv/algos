@@ -13,11 +13,12 @@ def fibonacci(n):
         return b
 
 def main():
-    n=int(input())
-    if n<=0: # input must be greater than or equal to 1
-        print("Enter a valid number")
-    else:
-        print(fibonacci(n)) # Output of fibonacci
+    L=[1,2,5,10,15]
+    for n in L:
+        if n<=0: # input must be greater than or equal to 1
+            print("Enter a valid number")
+        else:
+            print(fibonacci(n)) # Output of fibonacci
 
 if __name__ == "__main__":
     main()
