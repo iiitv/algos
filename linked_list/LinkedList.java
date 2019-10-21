@@ -56,7 +56,7 @@ class LinkedList<T> {
     // Method to add an element at a given index
     public void add(T input, int index) {
         if (index < 0 || index > sizeOfList)
-            throw new IndexOutOfBoundsException("Invalid Index");
+            throw new IndexOutOfBoundsException("Index not valid");
         Node<T> temp = head;
         if (index == 0)
             addFront(input);
