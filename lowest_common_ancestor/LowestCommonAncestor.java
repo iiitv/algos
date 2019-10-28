@@ -23,7 +23,7 @@ class LowestCommonAncestor {
     public static int findLowestCommonAncestor(int node1, int node2, int[] parent) {
         HashSet<Integer> path1 = new HashSet<>();	//Set stores the path from node1 to the root of tree in bottom-up manner
 
-        //Storing the path from node1 to the root of tree	  
+        //Storing the path from node1 to the root of tree
         path1.add(node1);
         while(parent[node1]!=0) {
             int parentNode = parent[node1];
@@ -31,9 +31,9 @@ class LowestCommonAncestor {
             node1 = parent[node1];
         }
 
-        /*   Traverse the path from node2 to the root of the tree in bottom up fashion
-             If a node is found which is present in path1 then return
-             it as an LCA of node1 and node2
+        /*  Traverse the path from node2 to the root of the tree in bottom up fashion
+            If a node is found which is present in path1 then return
+            it as an LCA of node1 and node2
         */
         if(path1.contains(node2)) {
             return node2;
@@ -58,10 +58,10 @@ class LowestCommonAncestor {
         //Building tree
         root.left = new Node(5);
         parent[5] = 1;
-		root.right = new Node(7);
+        root.right = new Node(7);
         parent[7] = 1;
         root.left.left = new Node(2);
-        parent[2] = 5; 
+        parent[2] = 5;
         root.left.right = new Node(3);
         parent[3] = 5;
         root.right.left = new Node(8);
