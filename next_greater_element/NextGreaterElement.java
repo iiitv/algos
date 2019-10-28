@@ -1,7 +1,7 @@
 /*
-  The Program evaluates the Next Greater Element in an array
-  The algorithm has O(N) Time Complexity and O(N) Space Complexity
-  It uses Stack to compute the next greater element of every element in an array
+    The Program evaluates the Next Greater Element in an array
+    The algorithm has O(N) Time Complexity and O(N) Space Complexity
+    It uses Stack to compute the next greater element of every element in an array
 */
 
 import java.util.Stack;
@@ -33,9 +33,7 @@ class NextGreaterElement {
             stack.push(element);  //After processing, push the element of the list into the stack
         }
 
-        /*For the rest elements in the stack, there was no NGE
-          Hence we pop those elements with NGE value as -1
-        */
+        //For the rest elements in the stack, there was no NGE, Hence we pop those elements with NGE value as -1
         while(!stack.isEmpty()) {
             int topElement = stack.pop();
             System.out.println("Element: "+topElement+" || Next Greater Element: -1");
