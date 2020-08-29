@@ -72,11 +72,11 @@ int main()
         build(0, n - 1, tree, arr, 0); //to construct segment tree in O(n)
 
         ll l = 1, r = 5;
-        printf("the min value in the range 1 to 5 inclusive is:%ld\n", ans(l - 1, r - 1, 0, n - 1, tree, arr, 0));
+        printf("the min value in the range 1 to 5 inclusive is:%lld\n", ans(l - 1, r - 1, 0, n - 1, tree, arr, 0));
 
         ll ind = 3, value = -20;
         update(0, n - 1, tree, arr, 0, ind - 1, value); //to update the value at index ind in array,thereby updating whole tree
 
-        printf("the new min value in the range 1 to 5 inclusive is:%ld\n", ans(l - 1, r - 1, 0, n - 1, tree, arr, 0));
+        printf("the new min value in the range 1 to 5 inclusive is:%lld\n", ans(l - 1, r - 1, 0, n - 1, tree, arr, 0));
     }
 }
