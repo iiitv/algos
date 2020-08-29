@@ -1,4 +1,3 @@
-package bellman_ford;
 
 class BellmanFord {
     // A nested edge class to declare source destination and weight of an edge
@@ -56,7 +55,6 @@ class BellmanFord {
                 if (distanceFromSrc[currentEdgeSrc] != Integer.MAX_VALUE
                         && (distanceFromSrc[currentEdgeSrc] + currentEdgeWeight) < distanceFromSrc[currentEdgeDest]) {
                     distanceFromSrc[currentEdgeDest] = distanceFromSrc[currentEdgeSrc] + currentEdgeWeight;// Relaxing
-                                                                                                           // an edge
 
                 }
             }
