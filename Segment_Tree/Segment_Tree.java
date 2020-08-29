@@ -1,6 +1,5 @@
-// implementation of segment tree in java
+// implementation of segment tree in java 
 //package algos.segment_tree;
-//implementation of code with proper identation
 
 public class Segment_Tree {
     int min(int a, int b)// min function to compute minimum of 2 values
@@ -19,16 +18,14 @@ public class Segment_Tree {
             int mid = (left + right) / 2;
             build(left, mid, tree, arr, 2 * index + 1);// to build the left subtree
             build(mid + 1, right, tree, arr, 2 * index + 2);// to build the right subtree
-            tree[index] = min(tree[2 * index + 1], tree[2 * index + 2]);// to build the parent node of left and right
-                                                                        // subtree.
+            tree[index] = min(tree[2 * index + 1], tree[2 * index + 2]);
             return;
         }
 
     }
 
-    void update(int left, int right, int tree[], int arr[], int index, int ind, int value)// to update a given value at
-                                                                                          // a particular index in
-                                                                                          // O(logn)
+    void update(int left, int right, int tree[], int arr[], int index, int ind, int value)// to update a value at an index
+
     {
         if (right < ind || left > ind)
             return;
@@ -46,8 +43,6 @@ public class Segment_Tree {
     }
 
     int ans(int left, int right, int initial, int last, int tree[], int arr[], int index)// to provide the minimum value
-                                                                                         // within a given range in
-                                                                                         // O(logn)
     {
         if (left <= initial && right >= last)
             return tree[index];
@@ -77,9 +72,7 @@ public class Segment_Tree {
                     "the min value in the range 1 to 5 inclusive is:\n" + sg.ans(l - 1, r - 1, 0, n - 1, tree, arr, 0));
 
             int ind = 3, value = -20;
-            sg.update(0, n - 1, tree, arr, 0, ind - 1, value);// to update the value at index ind in array,thereby
-                                                              // updating whole tree
-
+            sg.update(0, n - 1, tree, arr, 0, ind - 1, value);// to update the value at index ind in array
             System.out.println("the new min value in the range 1 to 5 inclusive is:\n"
                     + sg.ans(l - 1, r - 1, 0, n - 1, tree, arr, 0));
 
