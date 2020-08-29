@@ -1,6 +1,6 @@
 #include<stdio.h>
 
-long long int fibonacci(long long int n)
+long long int FibonacciNumber(long long int n)
 {
 	//Because first fibonacci number is 0 and second fibonacci number is 1.
 	if(n==1 || n==2)
@@ -36,7 +36,7 @@ int main()
 	}
 	else
 	{
-		long long int nth_Fib = fibonacci(n);
+		long long int nth_Fib = FibonacciNumber(n);
 		printf("Fibonacci Number is %lli",nth_Fib);
 	}
 	return 0;
