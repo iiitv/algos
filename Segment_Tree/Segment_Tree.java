@@ -1,4 +1,3 @@
-// implementation of segment tree in java 
 //package algos.segment_tree;
 
 public class Segment_Tree {
