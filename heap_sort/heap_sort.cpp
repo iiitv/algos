@@ -5,10 +5,8 @@
  *  Space complexity in the belom implementation of heap sort algorithm is O(1)
  * 
  */
-
 #include<bits/stdc++.h>
 using namespace std;
-
 // swapping function wihout using third variable
 void swap(int array[] , int index1, int index2)
 { 
@@ -16,20 +14,17 @@ void swap(int array[] , int index1, int index2)
     array[index2] = array[index1] - array[index2];
     array[index1] = array[index1] - array[index2];
 }
-
 void heapify(int array[], int size, int index) 
 { 
     int largest = index; // considering largest as root 
     int left = 2*index + 1; 
     int right = 2*index + 2;
-
    // left child is larger then root
     if (left < size && array[left] > array[largest]) 
         largest = left; 
   // right child is larger then root
     if (right < size && array[right] > array[largest]) 
         largest = right; 
-  
     //condition if largest is not root 
     if (largest != index) 
     { 
@@ -50,8 +45,7 @@ void heapsort(int array[], int size)
         //excecuting heapify to bring all elements in correct position again 
         heapify(array, i, 0); 
     } 
-} 
-  
+}   
 void display(int array[], int size)
 {
     int i=0;
@@ -59,7 +53,6 @@ void display(int array[], int size)
     cout<<array[i]<<" ";
     cout<<endl;
 }
-
 int main()
 {
     int array[] = {6,3,6,343,42,1,43,35,34,43};
@@ -79,5 +72,4 @@ int main()
    sorted array is :
    1 3 6 6 34 35 42 43 43 343
    */
-
 }
