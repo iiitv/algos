@@ -1,8 +1,3 @@
-/*
-Double Ended Deque, also known as Deque, is a type of a queue which enables users to add and rmeove element from both front and end of the queue.
-In this program, deque is implemented using linked list. 
-*/
-
 #include <stdlib.h>
 #include <stdio.h>
 
