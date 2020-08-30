@@ -1,5 +1,6 @@
-// A Java program to check if a given Euler_Path_And_Cycle is Eulerian graph or not
 
+// A Java program to check if a given Euler_Path_And_Cycle is Eulerian graph or not
+//
 import java.util.*;
 
 public class Euler_Path_And_Cycle {
