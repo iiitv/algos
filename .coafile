@@ -1,0 +1,45 @@
+# coafile for this project
+# please add more settings beneath
+# Local fixing
+# coala --apply-patches -n
+
+# python files should only use spaces
+[Python Spacing]
+files = **/*.py
+bears = SpaceConsistencyBear
+use_spaces = True
+
+# golint
+# [Golint]
+# files = **/*.go
+# bears = GoLintBear
+
+# gofmt
+[Gofmt]
+files = **/*.go
+bears = GofmtBear
+
+# python lint
+[pep8]
+files = **/*.py
+bears = PEP8Bear
+
+# Haskell
+[haskell]
+files = **/*.hs
+bears = HaskellLintBear
+
+# hlint
+[hlint]
+files = **/*.hs
+bears = GhcModBear
+
+# JavaScript
+[happiness]
+files = **/*.js
+bears = HappinessLintBear
+
+# CSharp
+[csharp]
+files = **/*.cs
+bears = CSharpLintBear

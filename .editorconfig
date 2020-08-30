@@ -1,0 +1,31 @@
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+
+[*.{go,c,cpp}]
+indent_style = tab
+tab_width = 4
+trim_trailing_whitespace = true
+
+[*.js]
+indent_style = tab
+tab_width = 2
+trim_trailing_whitespace = true
+
+[*.{py,java,cs}]
+indent_style = space
+indent_size = 4
+trim_trailing_whitespace = true
+
+[*.{c,cpp,java,js}]
+block_comment_start = /*
+block_comment = *
+block_comment_end = */
+
+[*.yml]
+indent_style = space
+indent_size = 2
+trim_trailing_whitespace = true

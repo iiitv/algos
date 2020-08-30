@@ -1,0 +1,20 @@
+# Go linting
+golang-go
+ghc-mod
+hlint
+
+# Python 3
+python3-dev
+python3-pip
+python3-setuptools
+
+# More python 2
+python-setuptools
+python-dev
+
+# CSharp Linting
+mono-mcs
+
+# tkinter
+python-tk
+python3-tk

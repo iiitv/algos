@@ -1,0 +1,23 @@
+---
+engines:
+  duplication:
+    enabled: true
+    checks:
+      Similar code:
+        enabled: false  # matches in different files
+    config:
+      languages:
+        - javascript
+        - python
+  fixme:
+    enabled: true
+  radon:
+    enabled: true
+    checks:
+      Complexity:
+        enabled: false
+ratings:
+  paths:
+    - "**.js"
+    - "**.py"
+exclude_paths: []

@@ -1,0 +1,16 @@
+# python
+*.pyc
+# C/CPP
+*.exe
+*.out
+# Java
+*.class
+# MacOS
+.DS_Store
+# coala
+*.orig
+
+# Jetbrains
+.idea/
+# vscode project files
+.vscode/
