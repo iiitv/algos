@@ -23,7 +23,6 @@ struct Deque *createDeque(struct Deque *root, int key) //Function to create dequ
     last = root;
     return head;
 }
-//creating Deque takes O(1) time
 
 struct Deque *push_front(struct Deque *root, int key) //Function to push element on the front of deque
 {
@@ -31,7 +30,6 @@ struct Deque *push_front(struct Deque *root, int key) //Function to push element
     {
         return createDeque(root, key);
     }
-   
     struct Deque *temp;
     temp = (struct Deque *)malloc(sizeof(struct Deque));
     temp->data = key;
@@ -39,7 +37,6 @@ struct Deque *push_front(struct Deque *root, int key) //Function to push element
     head = temp;
     return head;
 }
-//Adding element on the front takes O(1) time
 
 struct Deque *push_back(struct Deque *root, int key) //Function to push element to the back of deque
 {
@@ -47,7 +44,7 @@ struct Deque *push_back(struct Deque *root, int key) //Function to push element 
     {
         return createDeque(root, key);
     }
-    
+
     struct Deque *temp;
     temp = (struct Deque *)malloc(sizeof(struct Deque));
     temp->data = key;
@@ -56,7 +53,6 @@ struct Deque *push_back(struct Deque *root, int key) //Function to push element 
     last = temp;
     return last;
 }
-//Dding element on the back takes O(1) time
 
 struct Deque *pop_front() //Function to remove or pop the front element
 {
@@ -65,14 +61,12 @@ struct Deque *pop_front() //Function to remove or pop the front element
         printf("Deque is empty.\n");
         return head;
     }
-    
     struct Deque *temp;
     temp = head;
     head = head->next;
     free(temp); //free the unwanted space
     return head;
 }
-//Removing element from front takes O(1) time
 
 struct Deque *pop_back() //Function to remove element from back of deque
 {
@@ -81,7 +75,6 @@ struct Deque *pop_back() //Function to remove element from back of deque
         printf("Deque is empty\n");
         return head;
     }
-    
     struct Deque *temp, *temp2;
     temp = head;
     while (temp->next != last)
@@ -94,7 +87,6 @@ struct Deque *pop_back() //Function to remove element from back of deque
     free(temp2); //free the unwanted space
     return head;
 }
-//Removing element from back takes O(1) time
 
 void front() //Function to give the front element of deque
 {
@@ -149,27 +141,21 @@ int main()
 {
     struct Deque *root = NULL;
     root = createDeque(root, 4); //creating Deque
-
-    push_front(root, 6); //pushing data on the front
-    push_back(root, 5);  //pushing data on the back
+    push_front(root, 6);         //pushing data on the front
+    push_back(root, 5);          //pushing data on the back
     push_front(root, 61);
     push_front(root, 6);
     push_front(root, 12);
     push_front(root, 60);
     push_back(root, 68);
-
     displayTheDeque(); //Displaying the deque
-
-    pop_front(); //removing front element
+    pop_front();       //removing front element
     printf("After removing from front, ");
     displayTheDeque();
-
     pop_back(); //removing back element
     printf("After removing from back, ");
     displayTheDeque();
-
-    front(); //Getting value of front element of deque
-    back();  //Getting value of back element of deque
-
+    front();   //Getting value of front element of deque
+    back();    //Getting value of back element of deque
     isEmpty(); //Checking if deque is empty or not
 }
