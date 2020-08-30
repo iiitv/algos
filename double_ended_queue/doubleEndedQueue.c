@@ -78,7 +78,7 @@ struct Deque *pop_back()	//Function to remove element from back of deque
 	temp2 = temp->next;
 	temp->next = NULL;
 	last = temp;
-	free(temp2);	//free the unwanted space
+	free(temp2);//free the unwanted space
 	return head;
 }
 
