@@ -39,7 +39,6 @@ struct Deque *push_back(struct Deque *root, int key) //Function to push element 
     {
         return createDeque(root, key);
     }
-
     struct Deque *temp;
     temp = (struct Deque *)malloc(sizeof(struct Deque));
     temp->data = key;
