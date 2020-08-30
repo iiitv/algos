@@ -5,7 +5,6 @@
 */
 #include<bits/stdc++.h>
 using namespace std;
-
 void insertionSort(int array[], int size)
 {
     int i=0,j=0,tempElement=0,tempIndex=0,flag=0;
@@ -49,7 +48,6 @@ int main()
     display(array,size); //display the sorted array
     /*
     for input : 5,4,233,32,1,4,34,3,23
-
     output is :
     unsorted array is :
     5 4 233 32 1 4 34 3 23
