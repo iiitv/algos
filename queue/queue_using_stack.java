@@ -1,5 +1,4 @@
-//Qs class for implementing queue using two stack with costly dequeue() 
-import java.util.Scanner;
+//QueueUsingStack class for implementing queue using two stack with costly dequeue() 
 class QueueUsingStack {
     int s1[]; //First stack
     int s2[]; //Second stack
@@ -79,45 +78,23 @@ class QueueUsingStack {
         }
         return dq;
     }
-    public void display() {
-        int i;
-        for (i = 0; i < count; i++) {
-            System.out.print(s1[i] + " ");
-        }
-    }
 }
 
 //queue_using_stack class with main function to operate QueueUsingStack
 public class queue_using_stack {
     public static void main(String args[]) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the size of Queue");
-        int s = sc.nextInt();
+        int s = 5;
         QueueUsingStack obq = new QueueUsingStack(s);
-        System.out.println("Enter 1 for Enqueue");
-        System.out.println("Enter 2 for Dequeue");
-        System.out.println("Enter 3 to display Queue");
-        System.out.println("Enter 4 to exit");
-        while (true) {
-            int ch = sc.nextInt();
-            switch (ch) {
-                case 1:
-                    System.out.println("Enter the number to enqueue");
-                    int d = sc.nextInt();
-                    obq.enqueue(d);
-                    System.out.println("Number enqueued successfully");
-                    break;
-                case 2:
-                    int temp = obq.dequeue();
-                    System.out.println(temp + " is dequeued");
-                    break;
-                case 3:
-                    obq.display();
-                    break;
-                case 4:
-                    System.exit(0);
-            }
-        }
+        obq.enqueue(1);
+        obq.enqueue(2);
+        obq.enqueue(3);
+        obq.enqueue(4);
+        obq.enqueue(5);
+        System.out.print(obq.dequeue() + " ");
+        System.out.print(obq.dequeue() + " ");
+        System.out.print(obq.dequeue() + " ");
+        System.out.print(obq.dequeue() + " ");
+        System.out.print(obq.dequeue() + " ");
     }
 }
 
@@ -125,30 +102,5 @@ public class queue_using_stack {
 
 /*Output:
 
-
-Enter 1 for implementing Queue using Stack
-Enter 2 for implementing Stack using Queue
-1
-Enter the size of Queue
-3
-Enter 1 for Enqueue
-Enter 2 for Dequeue
-Enter 3 to display Queue
-Enter 4 to exit
-1
-Enter the number to enqueue
-1
-Number enqueued successfully
-1
-Enter the number to enqueue
-2
-Number enqueued successfully
-1
-Enter the number to enqueue
-3
-Number enqueued successfully
-2
-1 is dequeued
-3
-2 3 
+1 2 3 4 5
 */
