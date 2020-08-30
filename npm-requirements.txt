@@ -1,2 +1,0 @@
-happiness
-eclint@2.2.0

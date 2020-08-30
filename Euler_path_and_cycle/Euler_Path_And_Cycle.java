@@ -1,5 +1,4 @@
-// A Java program to check if a given Euler_Path_And_Cycle is Eulerian or not
-package algos.Euler_path_and_cycle;
+// A Java program to check if a given Euler_Path_And_Cycle is Eulerian graph or not
 
 import java.util.*;
 
