@@ -1,0 +1,44 @@
+public class PascalTriangle
+{
+static int factorial(int n)
+{
+int fact=1;
+int i;
+for(i=1;i<n;i++)
+{
+fact*=i;
+}
+return i;
+}
+static void display(int n)
+{
+int i;
+int coeff;
+int row;
+for(row=1;row<=n;row++)
+{
+for(i=0;i<=row;i++)
+{
+System.out.print((factorial)(row)/factorial(row-i)*factorial(i))+"");
+}
+System.out.println();
+}
+}
+public static void main (String[] args)
+{
+BufferedReader br=new BufferedReader(new InputStreamReader (System.in));
+int n;
+System.out.println("enter the size");
+try
+{
+n= Integer .parseInt(br .readLine());
+}
+catch(Exception e)
+{
+System.out.println("invalid input");
+return;
+}
+System.out.println("the pascal's triangle is");
+display(n);
+}
+}
