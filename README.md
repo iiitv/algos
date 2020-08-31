@@ -59,7 +59,7 @@ Community (college) maintained list of Algorithms and Data Structures implementa
 | [Queue](https://en.wikipedia.org/wiki/Queue_(abstract_data_type)) | | | | [:white_check_mark:](queue/queue.py) | | | |
 | [Stack](https://en.wikipedia.org/wiki/Stack_(abstract_data_type)) | [:white_check_mark:](stack/stack.c) | | [:white_check_mark:](stack/Stack.java) | [:white_check_mark:](stack/stack.py) | [:white_check_mark:](stack/stack.go) | [:white_check_mark:](stack/stack.js) | [:white_check_mark:](stack/Stack.cs) |
 | [Trie](https://en.wikipedia.org/wiki/Trie) | | [:white_check_mark:](trie/trie.cpp) | [:white_check_mark:](trie/Trie.java) | | [:white_check_mark:](trie/trie.go) | | [:white_check_mark:](trie/Trie.cs) | |
-| [Queue](https://en.wikipedia.org/wiki/Queue_(abstract_data_type)) | | | [:white_check_mark:](queue/Queue.java) | | | | | |
+| [Queue](https://en.wikipedia.org/wiki/Queue_(abstract_data_type)) |[:white_check_mark:](queue/Queue.c) | | [:white_check_mark:](queue/Queue.java) | | | | | |
 
 
 
