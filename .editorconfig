@@ -20,6 +20,11 @@ indent_style = space
 indent_size = 4
 trim_trailing_whitespace = true
 
+[*.rb]
+indent_style = space
+indent_size = 2
+trim_trailing_whitespace = true
+
 [*.{c,cpp,java,js}]
 block_comment_start = /*
 block_comment = *
