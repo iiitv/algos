@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
-// swapping function wihout using third variable
-void swap(int array[], int index1, int index2)
+
+void swap(int array[], int index1, int index2) //swapping function wihout using third variable
 {
 	array[index1] = array[index1] + array[index2];
 	array[index2] = array[index1] - array[index2];
@@ -9,17 +9,17 @@ void swap(int array[], int index1, int index2)
 }
 void heapify(int array[], int size, int index)
 {
-	int largest = index; // considering largest as root
+	int largest = index; //considering largest as root
 	int left = 2 * index + 1;
 	int right = 2 * index + 2;
-	// left child is larger then root
-	if (left < size && array[left] > array[largest])
+
+	if (left < size && array[left] > array[largest]) //left child is larger then root
 		largest = left;
-	// right child is larger then root
-	if (right < size && array[right] > array[largest])
+
+	if (right < size && array[right] > array[largest]) //right child is larger then root
 		largest = right;
-	//condition if largest is not root
-	if (largest != index)
+
+	if (largest != index) //condition if largest is not root
 	{
 		swap(array, index, largest);
 		heapify(array, size, largest);
@@ -27,16 +27,16 @@ void heapify(int array[], int size, int index)
 }
 void heapsort(int array[], int size)
 {
-	//Create heap from array rearrangement
-	for (int i = size / 2 - 1; i >= 0; i--)
+
+	for (int i = size / 2 - 1; i >= 0; i--) //Create heap from array rearrangement
 		heapify(array, size, i);
-	// move current root to end a step for Extract min process
-	for (int i = size - 1; i > 0; i--)
+
+	for (int i = size - 1; i > 0; i--) //move current root to end a step for Extract min process
 	{
-		//swap element
-		swap(array, 0, i);
-		//excecuting heapify to bring all elements in correct position again
-		heapify(array, i, 0);
+
+		swap(array, 0, i); //swap element
+
+		heapify(array, i, 0); //excecuting heapify to bring all elements in correct position again
 	}
 }
 void display(int array[], int size)
@@ -54,5 +54,5 @@ int main()
 	display(array, size); //display the unsorted array
 	heapsort(array, size);
 	cout << "sorted array is :" << endl;
-	display(array, size); // display the sorted array
+	display(array, size); //display the sorted array
 }
