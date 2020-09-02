@@ -22,7 +22,6 @@ void insertionSort(int array[], int size)
 		}
 	}
 }
-
 void display(int array[], int size)
 {
 	int i = 0;
@@ -30,7 +29,6 @@ void display(int array[], int size)
 		cout << array[i] << " ";
 	cout << endl;
 }
-
 int main()
 {
 	int array[] = {5, 4, 233, 32, 1, 4, 34, 3, 23};
@@ -40,5 +38,4 @@ int main()
 	insertionSort(array, size);
 	cout << "sorted array is :" << endl;
 	display(array, size); //display the sorted array
-	return 0;
 }
