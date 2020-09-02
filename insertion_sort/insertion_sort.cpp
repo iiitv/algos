@@ -40,4 +40,5 @@ int main()
 	insertionSort(array, size);
 	cout << "sorted array is :" << endl;
 	display(array, size); //display the sorted array
+	return 0;
 }
