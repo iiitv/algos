@@ -1,10 +1,3 @@
-/*
- * The below code is for the implementation of Heap sort algorithm in CPP
- *  time comeplexity for sorting will be O(n*logn)
- *  n being the size of array.
- *  Space complexity in the belom implementation of heap sort algorithm is O(1)
- *
- */
 #include <bits/stdc++.h>
 using namespace std;
 // swapping function wihout using third variable
