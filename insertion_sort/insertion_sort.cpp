@@ -1,8 +1,3 @@
-/*
-* Below code is for implementation of insertion algorithm in CPP
-* Time complexity by below implementation fo insertion sort is O(n^2)
-* Space complexity for below implementation is O(1)
-*/
 #include <bits/stdc++.h>
 using namespace std;
 void insertionSort(int array[], int size)
@@ -14,14 +9,10 @@ void insertionSort(int array[], int size)
 		for (j = i - 1; j >= 0; j--)
 		{
 			if (array[j] > tempElement)
-			{
 				array[j + 1] = array[j];
-			}
 			else
-			{
 				flag = 1; //checking if we got the correct position of tempElement
-				break;
-			}
+			break;
 		}
 		if (flag == 1 || j == -1) //condition checking if we got correct position of tempElement or not
 		{
@@ -46,12 +37,4 @@ int main()
 	insertionSort(array, size); //calling insertion sort
 	cout << "sorted array is :" << endl;
 	display(array, size); //display the sorted array
-						  /*
-    for input : 5,4,233,32,1,4,34,3,23
-    output is :
-    unsorted array is :
-    5 4 233 32 1 4 34 3 23
-    sorted array is :
-    1 3 4 4 5 23 32 34 233
-    */
 }
