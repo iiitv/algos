@@ -63,13 +63,14 @@ int main()
 	cout << "sorted array is :" << endl;
 	display(array, size); // display the sorted array
 						  /*
-   for given input array
-
-   output :
-
-   Unsorted array is :
-   6 3 6 343 42 1 43 35 34 43
-   sorted array is :
-   1 3 6 6 34 35 42 43 43 343
-   */
+ *  for given input array
+ *
+ * output :
+ *
+ *  Unsorted array is :
+ *  6 3 6 343 42 1 43 35 34 43
+ *  sorted array is :
+ *  1 3 6 6 34 35 42 43 43 343
+ *
+ */
 }
