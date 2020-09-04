@@ -1,10 +1,6 @@
-package soundex;
-
-import java.util.Scanner;
-
 public class Soundex {
 
-	public static String soundex(String str) {
+	public static void soundex(String str) {
 
 		char[] s = str.toUpperCase().toCharArray();
 		//retaining first letter
@@ -30,7 +26,7 @@ public class Soundex {
 				case 'Z':
 					s[i] = '2';
 					break;
-				
+
 				case 'D':
 				case 'T':
 					s[i] = '3';
@@ -64,15 +60,18 @@ public class Soundex {
 
 		// right padding with zeroes or truncating
 		output = output + "0000";
-		return output.substring(0, 4);
+		System.out.println(str + " : " + output.substring(0, 4));
 	}
 
 	public static void main(String[] args) {
 
-		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter the string");
-		String str = sc.nextLine();
-		String str_output = soundex(str);
-		System.out.println(str_output);
+		String str1 = "Dear";
+		String str2 = "Deer";
+		String str3 = "Ashcraft";
+		String str4 = "Ashcroft";
+		soundex(str1);
+		soundex(str2);
+		soundex(str3);
+		soundex(str4);
 	}
 }
