@@ -1,6 +1,12 @@
 /*fibonacci function is going to take a number "num"
 and going to show the "num" th Fibonacci number on the console*/
 function fibonacci(num){
+	
+	if (num===0){
+    console.log("Number should be greater than 0");
+    return;
+  }
+	
 	/*declaring an array*/
 var arr=[];
 	/*array's num+1 th position will contain fibonacci number at num th position*/
