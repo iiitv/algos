@@ -47,7 +47,7 @@ Community (college) maintained list of Algorithms and Data Structures implementa
 | [Shell Sort](https://en.wikipedia.org/wiki/Shellsort) | | [:white_check_mark:](shell_sort/ShellSort.cpp) | [:white_check_mark:](shell_sort/ShellSort.java) | [:white_check_mark:](/shell_sort/shell_sort.py) | [:white_check_mark:](shell_sort/shell_sort.go) | [:white_check_mark:](shell_sort/shellSort.js) | [:white_check_mark:](shell_sort/ShellSort.cs) |
 | [Sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes) | [:white_check_mark:](sieve_of_eratosthenes/sieveOfEratosthenes.c) | | [:white_check_mark:](sieve_of_eratosthenes/SieveOfEratosthenes.java) | [:white_check_mark:](sieve_of_eratosthenes/sieve_of_eratosthenes.py) | [:white_check_mark:](sieve_of_eratosthenes/sieve_of_eratosthenes.go) | [:white_check_mark:](sieve_of_eratosthenes/sieveOfEratosthenes.js) | |
 | [Sleep Sort](http://www.geeksforgeeks.org/sleep-sort-king-laziness-sorting-sleeping/) | | [:white_check_mark:](sleep_sort/sleep_sort.cpp) | [:white_check_mark:](sleep_sort/SleepSort.java) | [:white_check_mark:](sleep_sort/sleep_sort.py) | [:white_check_mark:](sleep_sort/sleep_sort.go) | | | |
-
+| [Soundex Algorithm](https://en.wikipedia.org/wiki/Soundex/)| | |[:white_check_mark:](soundex_algo/SoundexCode.java) | | | | |
 
 ## Implemented Data Structures
 
