@@ -24,8 +24,13 @@ void display(int array[], int size)
 }
 int main()
 {
-	int array[] = {5, 4, 233, 32, 1, 4, 34, 3, 23};
-	int size = sizeof(array) / sizeof(array[0]);
+	int size;
+	cout<<"Enter the size of the array :"<<endl;
+	cin>>size; //size of the array
+	int array[size];
+	cout<<"Enter array elements"<<endl;
+	for(int i=0;i<size;i++)
+	cin>>array[i]; //taking input
 	cout << "unsorted array is :" << endl;
 	display(array, size); //display unsorted array
 	insertionSort(array, size);
