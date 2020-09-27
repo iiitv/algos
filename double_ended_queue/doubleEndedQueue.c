@@ -17,7 +17,7 @@ struct Deque *createDeque(struct Deque *root, int key)	//Function to create dequ
 	head = root;
 	last = root;
 	return head;
-}
+}	//O(1) time complexity
 
 struct Deque *push_front(struct Deque *root, int key)	//Function to push element on the front of deque
 {
@@ -31,7 +31,7 @@ struct Deque *push_front(struct Deque *root, int key)	//Function to push element
 	temp->next = head;
 	head = temp;
 	return head;
-}
+}	//O(1) time complexity
 
 struct Deque *push_back(struct Deque *root, int key)	//Function to push element to the back of deque
 {
@@ -46,7 +46,7 @@ struct Deque *push_back(struct Deque *root, int key)	//Function to push element 
 	last->next = temp;
 	last = temp;
 	return last;
-}
+}	//O(1) time complexity
 
 struct Deque *pop_front()	//Function to remove or pop the front element
 {
@@ -60,7 +60,7 @@ struct Deque *pop_front()	//Function to remove or pop the front element
 	head = head->next;
 	free(temp);	//free the unwanted space
 	return head;
-}
+}	//O(1) time complexity
 
 struct Deque *pop_back()	//Function to remove element from back of deque
 {
@@ -80,7 +80,7 @@ struct Deque *pop_back()	//Function to remove element from back of deque
 	last = temp;
 	free(temp2);//free the unwanted space
 	return head;
-}
+}	//O(n) time complexity
 
 void front()	//Function to give the front element of deque
 {
@@ -89,7 +89,7 @@ void front()	//Function to give the front element of deque
 		printf("Deque is empty.\n\n");
 	}
 	printf("The element at the front of deque is %d.\n\n", head->data);
-}
+}	//O(1) time complexity
 
 void back()	//Function to give the back of deque
 {
@@ -98,7 +98,7 @@ void back()	//Function to give the back of deque
 		printf("Deque is empty\n");
 	}
 	printf("The element at the last of deque is %d.\n\n", last->data);
-}
+}	//O(1) time complexity
 
 void isEmpty()	//Function to know whether deque is empty or not
 {
@@ -110,7 +110,7 @@ void isEmpty()	//Function to know whether deque is empty or not
 	{
 		printf("No, list is not empty.\n\n");
 	}
-}
+}	//O(1) time complexity
 
 void displayTheDeque()	//Function to print the whole deque
 {
@@ -130,7 +130,8 @@ void displayTheDeque()	//Function to print the whole deque
 		}
 		printf(" <-----End\n\n");
 	}
-}
+}	//O(n) time complexity
+
 int main()
 {
 	struct Deque *root = NULL;
