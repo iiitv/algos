@@ -1,5 +1,9 @@
 // A Stack based C program to find next greater element
 // for all array elements.
+
+//Time Complexity : O(n)
+//Space Complexity : O(n)
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
