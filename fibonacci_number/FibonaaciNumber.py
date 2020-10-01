@@ -1,5 +1,8 @@
 #This program uses Dynamic Programming and has space optimisation
 #We keep changing the values of x and y
+
+# Time Complexity:O(n)
+
 def fibonaaci(n): 
     x = 0 #0th fibonaaci number is 0
     y = 1 #1st fibonaaci number is 1
