@@ -43,19 +43,22 @@ void find_bridges(int n){
 }
 
 void bridge_found(int a,int b){
-    cout<<" The Bridge is found between "<<a<<" "<<b<<"\n";
+    cout<<" The Bridge is found between nodes "<<a<<" "<<b<<"\n";
 }
 
 int main(){
-    int n,q; // n is number of nodes ,q is number of edges in a graph
+     // n is number of nodes ,q is number of edges in a graph
+	int n,q;
     cin>>n>>q;
     while(q--){
-    	int u,v;
-    	cin>>u>>v;
+    	int u,v; 
+		//edge betweeen nodes u and v
+    	cin>>u>>v; 
     	g[u].push_back(v);
     	g[v].push_back(u);
     }
   
     find_bridges(n);
+	cout<<endl;
     return 0;
 }
