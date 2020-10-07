@@ -21,7 +21,7 @@ struct Graph *createGraph(int Vertices, int Edges)
     return graph;
 };
 
-// To print the minimum distances from the source
+// To print the minimum distances from the src
 void printArray(int distanceFromSrc[], int Vertices, int Source)
 {
     cout << "Minimum Distance from the node " << (Source + 1) << " is: -" << endl;
