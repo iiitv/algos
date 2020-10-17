@@ -1,0 +1,304 @@
+
+
+
+
+
+
+
+
+
+ans 1.
+
+class matrixMult
+
+{  
+
+    public static void main(String args[])
+
+    {  
+
+        int a[][]={{1,2,3},{4,5,6},{7,8,9}};    
+
+        int b[][]={{10,11,12},{13,14,0},{5,2,1}};    
+
+        int c[][]=new int[3][3];  //3d matrix/array 
+
+    
+
+        for(int i=0;i<3;i++)
+
+        {    
+
+            for(int j=0;j<3;j++)
+
+            {    
+
+                c[i][j]=0;      
+
+                for(int k=0;k<3;k++)      
+
+                {      
+
+                    c[i][j]+=a[i][k]*b[k][j];      
+
+                }
+
+                System.out.print(c[i][j]+" "); 
+
+            }
+
+            System.out.println();
+
+        }    
+
+    }
+
+}
+
+ans2.
+
+import java.util.Scanner;
+
+class Reverse{
+
+    public static void main(String []args){
+
+        int array[]=new int[10];
+
+        Scanner newScan=new Scanner(System.in);
+
+        System.out.println("ENter numbers");
+
+        for(int i=0;i<10;i++){
+
+            array[i]=newScan.nextInt();
+
+        }
+
+        System.out.println("REversed array id   ");
+
+        for(int i=9;i>=0;i--){
+
+            System.out.println(array[i]);
+
+        }
+
+    }
+
+}
+
+ans 3.
+
+import java.util.Scanner;
+
+class Split{
+
+    public static void main(String []args){
+
+        int array[]=new int[10];
+
+        int array2[]=new int[5];
+
+        int array3[]=new int[5];
+
+        Scanner newScan=new Scanner(System.in);
+
+        System.out.println("ENter numbers");
+
+        for(int i=0;i<10;i++){
+
+            array[i]=newScan.nextInt();
+
+        }
+
+        for(int i=0;i<5;i++){
+
+            array2[i]=array[i];
+
+        }
+
+        for(int i=0;i<5;i++){
+
+            array3[i]=array[5+i];
+
+        }
+
+        for(int i=0;i<5;i++){
+
+            System.out.printf("%d  ",array2[i]);
+
+        }
+
+        System.out.printf("\n");
+
+        for(int i=0;i<5;i++){
+
+            System.out.printf("%d  ",array3[i]);
+
+        }
+
+    }
+
+}
+
+ans4.
+
+import java.util.*;
+
+class difference
+
+{
+
+    static int dif(int a, int b)
+
+    {
+
+        if(a>b)
+
+        {
+
+            return a-b;
+
+        }
+
+        else
+
+        {
+
+            return b-a;
+
+        }
+
+    }
+
+    public static void main(String[] args) 
+
+    {
+
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+
+        int [] arr = new int[n];
+
+        for(int i = 0; i < arr.length; i++) 
+
+        {
+
+            arr[i] = sc.nextInt();
+
+        }
+
+        int diff = dif(arr[0],arr[1]);
+
+        int a=0,b=1;
+
+        for(int i=0;i<n-1;i++)
+
+        {
+
+            for(int j=i+1;j<n;j++)
+
+            {
+
+                if(diff > dif(arr[i],arr[j]))
+
+                {
+
+                    diff = dif(arr[i],arr[j]);
+
+                    a=i;
+
+                    b=j;
+
+                }
+
+            }
+
+        }
+
+        System.out.println("Minimum difference is "+diff+" between "+arr[a]+" and "+arr[b]);
+
+        diff = dif(arr[0],arr[1]);
+
+        a=0;
+
+        b=1;
+
+        for(int i=0;i<n-1;i++)
+
+        {
+
+            for(int j=i+1;j<n;j++)
+
+            {
+
+                if(diff < dif(arr[i],arr[j]))
+
+                {
+
+                    diff = dif(arr[i],arr[j]);
+
+                    a=i;
+
+                    b=j;
+
+                }
+
+            }
+
+        }
+
+        System.out.println("Maximum difference is "+diff+" between "+arr[a]+" and "+arr[b]);
+
+    }
+
+}
+
+ans 5.
+
+class matrixMult
+
+{  
+
+    public static void main(String args[])
+
+    {  
+
+        int a[][]={{1,2,3},{4,5,6},{7,8,9}};    
+
+        int b[][]={{10,11,12},{13,14,0},{5,2,1}};    
+
+        int c[][]=new int[3][3];  //3d matrix/array 
+
+    
+
+        for(int i=0;i<3;i++)
+
+        {    
+
+            for(int j=0;j<3;j++)
+
+            {    
+
+                c[i][j]=0;      
+
+                for(int k=0;k<3;k++)      
+
+                {      
+
+                    c[i][j]+=a[i][k]*b[k][j];      
+
+                }
+
+                System.out.print(c[i][j]+" "); 
+
+            }
+
+            System.out.println();
+
+        }    
+
+    }
+
+}
