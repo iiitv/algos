@@ -1,0 +1,221 @@
+1.a.
+
+class Rectangle {
+
+    public int length, breadth;
+
+    Rectangle(int l, int b) {
+
+        length = l;
+
+        breadth = b;
+
+    }
+
+    int findArea() {
+
+        return length * breadth;
+
+    }
+
+}
+
+class Solution {
+
+    public static void main(final String[] args) {
+
+        System.out.printf("Area of the rectangle is : %d\n", new Rectangle(4, 5).findArea());
+
+    }
+
+}
+
+1.b.
+
+class Rectangle {
+
+    private int length, breadth;
+
+Rectangle(int l, int b) {
+
+        length = l;
+
+        breadth = b;
+
+    }
+
+int findArea() {
+
+        return length * breadth;
+
+    }
+
+}
+
+class Solution {
+
+    public static void main(final String[] args) 
+
+ System.out.printf("Area of the rectangle is : %d\n",  new Rectangle(4, 5).getArea());
+
+    }
+
+}
+
+1.c.
+
+class Rectangle {
+
+    private int length, breadth;
+
+    Rectangle(int length, int breadth) {
+
+        this.length = length;
+
+        this.breadth = breadth;
+
+    }
+
+    int findArea() {
+
+        return length * breadth;
+
+    }
+
+}
+
+class Solution {
+
+    public static void main(final String[] args) {
+
+        System.out.printf("Area of the rectangle is : %d\n",  new Rectangle(4, 5).getArea());
+
+    }
+
+}
+
+2.
+
+import java.util.Scanner;
+
+class Calculate{
+
+    private int a, b;
+
+    private char op;
+
+    Calculate() {
+
+        Scanner sc = new Scanner(System.in);
+
+        a = sc.nextInt();
+
+        op = sc.next().charAt(0);
+
+        b = sc.nextInt();
+
+        sc.close();
+
+    }
+
+    int findSolution() {
+
+        switch (op) {
+
+            case '+':
+
+                return a + b;
+
+            case '-':
+
+                return a - b;
+
+            case '*':
+
+                return a * b;
+
+            case '/':
+
+                return a / b;
+
+            case '%':
+
+                return a % b;
+
+            default:
+
+                System.out.printf("oops!! Your maths is weak kindly write correct expression");
+
+                return -1;
+
+        }
+
+    }
+
+}
+
+class Solution {
+
+    public static void main(final String[] args) {
+
+        Calculate calc = new Calculate();
+
+        System.out.printf("%d", calc.findSolution());
+
+    }
+
+}
+
+4.a.
+
+class Areaoftriangle {
+
+    public static void main(final String[] args) {
+
+        int b = 5, h = 6;
+
+        int area = (b * h) / 2;
+
+        System.out.printf("Area of the triangle is : %d", area);
+
+    }
+
+}
+
+4.b.
+
+class Areaoftriangle {
+
+    public static void main(final String[] args) {
+
+        System.out.printf("Area of the triangle is : %d", area(5, 6));
+
+    }
+
+    static int area(int b, int h) {
+
+        return (b * h) / 2;
+
+    }
+
+}
+
+5.
+
+import java.util.Scanner;
+
+class Solution {
+
+    public static void main(final String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        String n = sc.next();
+
+        System.out.printf("%d", Integer.parseInt(n, 8));
+
+        sc.close();
+
+    }
+
+}
