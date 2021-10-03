@@ -1,6 +1,5 @@
 package Binarytree;
 
-import javafx.scene.control.SelectionMode;
 
 import java.util.Scanner;
 
