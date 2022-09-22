@@ -13,7 +13,4 @@ def fibonacciNumber(n):
 #Main
 
 n = 5
-if n<=0:
-    print("%d must be greater than 0"%n)
-    quit()
 print(fibonacciNumber(10))
