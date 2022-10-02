@@ -6,7 +6,7 @@
 */
 
 import java.util.*;
-public class breadth_first_traversal {
+public class breadthFirstTraversal {
 
     public static void main(String[] args) {
         Graph g=new Graph(7);
@@ -20,7 +20,7 @@ public class breadth_first_traversal {
         g.addEdge(5, 4);
         g.addEdge(3, 4);
         System.out.println("BFS Traversal of the given graph is -");
-        g.breadthFirstTraversal(1);
+        g.breadthFirstTraverse(1);
     }
     
 }
@@ -46,7 +46,7 @@ class Graph
     }
     // prints BFS traversal from s
 
-    public void breadthFirstTraversal(int s)
+    public void breadthFirstTraverse(int s)
     {
         // Mark all the vertices as not visited(By default
         // set as false)
