@@ -1,11 +1,15 @@
-import java.util.*;
+/*
+    *Implementation of Breadth First Traversal in Graph
+    *Time Complexity => O(v+e) v is no. of vertex and e is no. of edges
+    *Space Complexity => O(v)
+    *Adjacency List representation is used here    
+*/
 
-class breadth_first_traversal {
-    
-    
+import java.util.*;
+public class breadth_first_traversal {
+
     public static void main(String[] args) {
         Graph g=new Graph(7);
-
         //1 Based indexing 
         g.addEdge(1, 2);
         g.addEdge(1, 6);
@@ -16,50 +20,47 @@ class breadth_first_traversal {
         g.addEdge(5, 4);
         g.addEdge(3, 4);
         System.out.println("BFS Traversal of the given graph is -");
-        g.BFS(1);
-
+        g.breadthFirstTraversal(1);
     }
+    
 }
+
+
 class Graph
 {
-    int V;   // No. of vertices
-    LinkedList<Integer> adj[]; //Adjacency Lists
- 
+    private int V;   // No. of vertices
+    private LinkedList<Integer> adj[]; //Adjacency Lists
     // Constructor
-    Graph(int v)
+    public Graph(int v)
     {
         V = v;
         adj = new LinkedList[v];
         for (int i=0; i<v; ++i)
             adj[i] = new LinkedList();
     }
- 
     // Function to add an edge into the graph
-    void addEdge(int v,int w)
+
+    public void addEdge(int v,int w)
     {
         adj[v].add(w);
     }
- 
     // prints BFS traversal from s
-    void BFS(int s)
+
+    public void breadthFirstTraversal(int s)
     {
         // Mark all the vertices as not visited(By default
         // set as false)
         boolean visited[] = new boolean[V];
- 
         // Creates a queue for BFS
         LinkedList<Integer> queue = new LinkedList<Integer>();
- 
         // Mark the current node as visited and enqueue it
         visited[s]=true;
         queue.add(s);
- 
         while (queue.size() != 0)
         {
             // Dequeue a vertex from queue and print it
             s = queue.poll();
             System.out.print(s+" ");
- 
             // Get all adjacent vertices of the dequeued vertex s
             // If a adjacent has not been visited, then mark it
             // visited and enqueue it
