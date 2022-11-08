@@ -84,6 +84,7 @@ Community (college) maintained list of Algorithms and Data Structures implementa
 * [Popular Data Structures and Algorithms - Codechef](https://discuss.codechef.com/questions/48877/data-structures-and-algorithms)
 * [Stanford-ACM-Codes](https://github.com/jaehyunp/stanfordacm) - A list of codes written by previous Stanford ACM team members and coaches.
 * [Data Structures and Algorithms](https://hackr.io/tutorials/learn-data-structures-algorithms) - A user ranked list of online tutorials to learn Data Structures and Algorithms online.
+* [Introduction of Data Structure and algorithm](https://www.scaler.com/topics/data-structures/) -  Learn in-depth about the need & applications of data structures, along with complexity analysis, sorting and searching algorithms.
 
 
 
