@@ -48,16 +48,19 @@ public class Dijkstra {
         for(int i = 0; i < dijkstra.nodes.length; i++)
             dijkstra.nodes[i] = new Node(null, Integer.MAX_VALUE, i);
         int source = 0;
-        int destination = 4;
-        dijkstra.shortestPath(source, destination);
-        System.out.println("Shortest Distance from " + source + " to " + destination + "  is " + dijkstra.nodes[destination].cost);
-        Node temp = dijkstra.nodes[destination];
-        System.out.println("Path is ");
-        while(temp.parent != null) {
-            System.out.print(temp.id + " <--- ");
-            temp = temp.parent;
+        int destination = 1;
+        for(destination = 1;destination<8;destination++)
+        {
+            dijkstra.shortestPath(source, destination);
+            System.out.println("Shortest Distance from " + source + " to " + destination + "  is " + dijkstra.nodes[destination].cost);
+            Node temp = dijkstra.nodes[destination];
+            System.out.println("Path is ");
+            while(temp.parent != null) {
+                System.out.print(temp.id + " <--- ");
+                temp = temp.parent;
+            }
+            System.out.println(temp.id);
         }
-        System.out.println(temp.id);
     }
 
     public void shortestPath(int source, int destination) {
