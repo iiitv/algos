@@ -1,0 +1,39 @@
+#include <bits/stdc++.h>
+using namespace std;
+int max(int a, int b)   //this function returns the maximum of two given integers.
+{
+    if (a >= b)
+        return a;
+    else
+        return b;
+}
+int lcs(char str1[], char str2[], int a, int b)   // this function returns the length of the largest common subsequence of the two given strings.
+{
+    //creating a 2D array of dimensions one more than the length of each string.
+    int arr[a + 1][b + 1];      
+    for (int i = 0; i < a + 1; i++)
+        for (int j = 0; j < b + 1; j++)
+        {
+            //first row and first column of the array is assigned zero.
+            if (i == 0 || j == 0)
+                arr[i][j] = 0;
+            else if (str1[i - 1] == str2[j - 1])
+                arr[i][j] = 1 + arr[i - 1][j - 1];
+            else
+                arr[i][j] = max(arr[i - 1][j], arr[i][j - 1]);
+        }
+    return arr[a][b];
+}
+int main()
+{
+    int a, b;
+    // a=length of first string,b=length of second string.
+    cin >> a >> b;
+    char s1[a], s2[b];
+    for (int i = 0; i < a; i++)
+        cin >> s1[i];
+    for (int j = 0; j < b; j++)
+        cin >> s2[j];
+        
+    cout << lcs(s1, s2, a, b);
+}
