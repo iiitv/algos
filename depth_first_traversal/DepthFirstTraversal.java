@@ -30,6 +30,10 @@ public class DepthFirstTraversal {
     }
 
     public static void dfs(int v) {
+        if (v < 0 || v >= adj.size()) {
+            throw new IllegalArgumentException("Invalid vertex: " + v);
+        }
+
         // false by default in java)
         Set<Integer> visited = new HashSet<Integer>();
         // Call the recursive helper function to print DFS traversal
@@ -37,6 +41,10 @@ public class DepthFirstTraversal {
     }
 
     public static void initEdges(int n) {
+        if (n <= 0) {
+            throw new IllegalArgumentException("Number of vertices must be greater than 0");
+        }
+        
         adj = new ArrayList<LinkedList<Integer>>();
         for (int i = 0; i < n; ++i) {
             adj.add(new LinkedList<Integer>());
@@ -51,7 +59,13 @@ public class DepthFirstTraversal {
         addEdge(2, 0);
         addEdge(2, 3);
         addEdge(3, 0);
-        System.out.println("Depth First Traversal starting from vertex 2");
-        dfs(2);
+
+        int startingVertex = 2;
+        try {
+            System.out.println("Depth First Traversal starting from vertex " + startingVertex);
+            dfs(startingVertex);
+        } catch (IllegalArgumentException e) {
+            System.out.println("Invalid input: " + e.getMessage());
+        }
     }
 }
