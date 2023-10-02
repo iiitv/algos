@@ -16,6 +16,10 @@ public class BinarySearch {
      * @return
      */
     public static int binarySearch(int[] arr, int searchElement) {
+        if (arr == null) {
+            throw new IllegalArgumentException("Input array cannot be null.");
+        }
+        
         int left = 0;
         int right = arr.length - 1;
         while (left <= right) {
@@ -38,11 +42,15 @@ public class BinarySearch {
         int[] searchArr = new int[] {1, 35, 112, 324, 67};
         int pos;
         for (int i = 0; i < searchArr.length; i++) {
-            pos = binarySearch(arr, searchArr[i]);  //search key and get poistion
-            if (pos >= 0) {
-                System.out.println(searchArr[i] + "-> found at index : " + pos);
-            } else {
-                System.out.println(searchArr[i] + "-> not found");
+            try {
+                pos = binarySearch(arr, searchArr[i]);  // Search key and get position
+                if (pos >= 0) {
+                    System.out.println(searchArr[i] + "-> found at index : " + pos);
+                } else {
+                    System.out.println(searchArr[i] + "-> not found");
+                }
+            } catch (IllegalArgumentException e) {
+                System.out.println("Invalid input: " + e.getMessage());
             }
         }
     }
