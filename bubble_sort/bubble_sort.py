@@ -1,7 +1,7 @@
 def bubble_sort(arr):
     """
     Performs a bubble sort
-    :type arr: int
+    : type arr: int
     """
     for index_1 in range(len(arr)):
         for index_2 in range(0,len(arr)-index_1-1):
@@ -16,7 +16,6 @@ def main():
     print("Before Sorting")
     bubble_sort(arr)
     print(arr)
-
     
 if __name__ == '__main__':
     main()
